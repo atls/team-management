@@ -1,0 +1,7 @@
+name: Checks
+
+on: [pull_request]
+
+jobs:
+  checks:
+    uses: atls/shared/.github/workflows/checks.yaml@master
