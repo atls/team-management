@@ -1,5 +1,0 @@
-export * from './thumb.component'
-export * from './thumb.element'
-export * from './thumb.motion'
-export * from './thumb.styles'
-export * from './thumb.interfaces'

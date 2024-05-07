@@ -1,5 +1,0 @@
-export * from './switch.component'
-export * from './switch.interfaces'
-export * from './handle'
-export * from './hooks'
-export * from './thumb'

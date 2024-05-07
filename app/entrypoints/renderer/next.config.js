@@ -8,10 +8,10 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 export default {
-    experimental: {
-        externalDir: true,
-        outputFileTracingRoot: join(__dirname, './'),
-        esmExternals: 'loose',
-    },
-    output: 'standalone',
+  experimental: {
+    externalDir: true,
+    outputFileTracingRoot: join(__dirname, './'),
+    esmExternals: 'loose',
+  },
+  output: 'standalone',
 }
