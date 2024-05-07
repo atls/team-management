@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react'
 
-export default function Page() {
-    return <h1>Team management</h1>
-}
+const Page = () => <h1>Team management</h1>
+
+export default Page
