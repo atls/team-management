@@ -1,9 +1,5 @@
 import React from 'react'
-import {Card} from '@ui/card'
 
-export default function Page() {
-  return <>
-    <Card/>
-    <h1>Team management</h1></>
+const Page = () => <h1>Team management</h1>
 
-}
+export default Page

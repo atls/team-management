@@ -13,5 +13,19 @@ export default {
     outputFileTracingRoot: join(__dirname, './'),
     esmExternals: 'loose',
   },
+  compiler: {
+    styledComponents: true,
+  },
+  webpack: (webpackConfig, { webpack }) => {
+    webpackConfig.plugins.push(
+      new webpack.NormalModuleReplacementPlugin(new RegExp(/\.js$/), function (
+        /** @type {{ request: string }} */
+        resource
+      ) {
+        resource.request = resource.request.replace('.js', '')
+      })
+    )
+    return webpackConfig
+  },
   output: 'standalone',
 }
