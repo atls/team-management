@@ -166,6 +166,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@app/renderer-entrypoint@workspace:app/entrypoints/renderer":
+  version: 0.0.0-use.local
+  resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
+  dependencies:
+    "@types/node": "npm:20.11.5"
+    "@types/react": "npm:18.3.1"
+    "@types/react-dom": "npm:18.3.0"
+    next: "npm:14.1.0"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
 "@arcanis/slice-ansi@npm:^1.1.1":
   version: 1.1.1
   resolution: "@arcanis/slice-ansi@npm:1.1.1"
@@ -904,20 +918,6 @@ __metadata:
   checksum: 10/05bb99ed06c16408a45a833f03a732f59bf6184795d4efadd33238ff8699190a8c871ad1121241bb6501589a9598dc83bf25b99dcbcf41e155cdf36e35e937a3
   languageName: node
   linkType: hard
-
-"@identity/renderer-entrypoint@workspace:app/entrypoints/renderer":
-  version: 0.0.0-use.local
-  resolution: "@identity/renderer-entrypoint@workspace:app/entrypoints/renderer"
-  dependencies:
-    "@types/node": "npm:20.11.5"
-    "@types/react": "npm:18.3.1"
-    "@types/react-dom": "npm:18.3.0"
-    next: "npm:14.1.0"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
-    typescript: "npm:5.2.2"
-  languageName: unknown
-  linkType: soft
 
 "@isaacs/cliui@npm:^8.0.2":
   version: 8.0.2

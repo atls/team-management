@@ -1,0 +1,16 @@
+services:
+  yarn:
+    image: node:18
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+
+  app:
+    image: node:18
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn workspace @app/renderer-entrypoint dev
+    ports:
+      - '3000:3000'
