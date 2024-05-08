@@ -1,15 +1,13 @@
-version: '3.8'
-
 services:
   yarn:
-    image: node:18.18
+    image: node:18
     working_dir: /workspace
     volumes:
       - ./:/workspace
     entrypoint: yarn
 
-  identity:
-    image: node:18.18
+  app:
+    image: node:18
     working_dir: /workspace
     volumes:
       - ./:/workspace
@@ -17,8 +15,8 @@ services:
     ports:
       - '3000:3000'
 
-  identity-build:
-    image: node:18.18
+  app-build:
+    image: node:18
     working_dir: /workspace
     volumes:
       - ./:/workspace
@@ -26,8 +24,8 @@ services:
     ports:
       - '3000:3000'
 
-  identity-start:
-    image: node:18.18
+  app-start:
+    image: node:18
     working_dir: /workspace
     volumes:
       - ./:/workspace
