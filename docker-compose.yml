@@ -14,21 +14,3 @@ services:
     entrypoint: yarn workspace @identity/renderer-entrypoint dev
     ports:
       - '3000:3000'
-
-  app-build:
-    image: node:18
-    working_dir: /workspace
-    volumes:
-      - ./:/workspace
-    entrypoint: yarn workspace @identity/renderer-entrypoint build
-    ports:
-      - '3000:3000'
-
-  app-start:
-    image: node:18
-    working_dir: /workspace
-    volumes:
-      - ./:/workspace
-    entrypoint: yarn workspace @identity/renderer-entrypoint start
-    ports:
-      - '3000:3000'
