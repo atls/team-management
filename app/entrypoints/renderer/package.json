@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ui/checkbox": "workspace:*",
+    "@ui/divider": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/progress": "workspace:*",
     "next": "14.1.0",

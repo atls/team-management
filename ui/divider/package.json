@@ -1,14 +1,15 @@
 {
-  "name": "@ui/layout",
+  "name": "@ui/divider",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/layout": "0.1.1"
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
