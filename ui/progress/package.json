@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "main": "src/index.ts",
   "files": [
     "dist"
   ],

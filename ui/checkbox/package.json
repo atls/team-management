@@ -3,12 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
+  "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
   },
-  "files": [
-    "dist"
-  ],
+  "type": "module",
   "dependencies": {
     "@atls-ui-parts/checkbox": "0.1.1"
   },

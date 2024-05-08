@@ -1,5 +1,20 @@
+"use client"
+
 import React from 'react'
 
-const Page = () => <h1>Team management</h1>
+import {Layout} from '@ui/layout'
+import {Box} from '@ui/layout'
+import {Circle} from '@ui/progress'
+
+const Page = () => {
+    return <>
+        <Circle percent={25}/>
+        <Layout>
+            <Box>
+                <p>Hello</p>
+            </Box>
+        </Layout>
+    </>
+}
 
 export default Page

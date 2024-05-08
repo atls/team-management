@@ -173,6 +173,9 @@ __metadata:
     "@types/node": "npm:20.11.5"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/checkbox": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/progress": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -2187,7 +2190,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/checkbox@workspace:ui/checkbox":
+"@ui/checkbox@workspace:*, @ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
@@ -2205,7 +2208,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace:ui/layout":
+"@ui/layout@workspace:*, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
@@ -2223,7 +2226,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/progress@workspace:ui/progress":
+"@ui/progress@workspace:*, @ui/progress@workspace:ui/progress":
   version: 0.0.0-use.local
   resolution: "@ui/progress@workspace:ui/progress"
   dependencies:
