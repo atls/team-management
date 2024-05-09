@@ -1,16 +1,18 @@
 'use client'
 
-import React            from 'react'
+import React from 'react'
 
-import { Input }         from '@ui/input'
-import { ThemeProvider } from '@ui/theme'
+import {ThemeProvider} from '@ui/theme'
+import {Input} from '@ui/input'
+import {Switch} from '@ui/switch'
 
 const Page = () => {
-  return (
-    <ThemeProvider>
-      <Input placeholder='input-placeholder' />
-    </ThemeProvider>
-  )
+	return (
+		<ThemeProvider>
+			<Input placeholder='input-placeholder' />
+			<Switch />
+		</ThemeProvider>
+	)
 }
 
 export default Page
