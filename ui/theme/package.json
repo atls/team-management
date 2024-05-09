@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "main": "src/index.ts",
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@types/react": "18.3.1",
