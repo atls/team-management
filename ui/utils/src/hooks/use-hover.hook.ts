@@ -1,1 +1,1 @@
-export {useHover} from 'react-laag'
+export { useHover } from 'react-laag'
