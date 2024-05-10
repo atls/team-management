@@ -106,4 +106,29 @@ export const colors = {
   marshland: 'rgb(12, 12, 12)',
   cherrywood: 'rgba(97, 32, 19, 0.20)',
   dune: 'rgba(37, 37, 37, 0.20)',
+
+  button: {
+    transparentBackgroundTestButton: {
+      default: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'transparent',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'transparent',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
+  },
 }

@@ -3,11 +3,19 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
+  "scripts": {
+    "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
+  },
   "dependencies": {
+    "@atls-ui-generators/button": "0.0.22",
     "@atls-ui-parts/button": "0.1.1",
+    "@atls-ui-parts/conditional-render": "0.0.7",
     "@atls-ui-parts/styles": "0.1.1",
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
+    "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*",
+    "@ui/utils": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "5.1.5",

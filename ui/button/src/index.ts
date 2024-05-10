@@ -1,1 +1,2 @@
-export * from '@atls-ui-parts/button'
+export * from './button.component'
+export * from './button.interfaces'

@@ -175,6 +175,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-generators/button@npm:0.0.22":
+  version: 0.0.22
+  resolution: "@atls-ui-generators/button@npm:0.0.22"
+  dependencies:
+    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls/config-prettier": "npm:0.0.5"
+    "@atls/prettier-plugin": "npm:0.0.7"
+    "@babel/standalone": "npm:7.22.20"
+    camelcase: "npm:6.3.0"
+    commander: "npm:9.5.0"
+    prettier: "npm:2.8.8"
+  bin:
+    generate-styles: dist/generator.js
+  checksum: 10/e9db43a758c28ff1cc5d70227486474244e9310f38cc7477019f04ceed48866b8b2bc243054e81d178ed782493e8c965784b0ea773c595b8756846338a7b3201
+  languageName: node
+  linkType: hard
+
+"@atls-ui-generators/utils@npm:0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-generators/utils@npm:0.0.6"
+  dependencies:
+    "@atls/config-prettier": "npm:0.0.5"
+    "@atls/prettier-plugin": "npm:0.0.7"
+    camelcase: "npm:6.3.0"
+    prettier: "npm:2.8.8"
+  checksum: 10/5d462ebb355479eaf6a5bcee632f65b0bc68596db4f18bea68cd976fcb17dd0f362b1e648ec71a6714c725d5451885371e404b7d2c6ce6379afbcdd6a9239dbe
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/avatar@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/avatar@npm:0.1.1"
@@ -201,6 +230,15 @@ __metadata:
     styled-system: 5.1.5
     styled-tools: 1.7.2
   checksum: 10/d48ffa07e5d136ba3cfdf7e67a5c6ce8ef59b522cddea2211b51f7e10946bc4f7b9e928dd19aaad3d84c2ef4b91b300c3c63bf78045431e6310b65e2157ad14e
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/conditional-render@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-parts/conditional-render@npm:0.0.7"
+  peerDependencies:
+    react: 18.2.0
+  checksum: 10/5d49ce1aff9a729f706ad7b6ffe2b2e5ac36fc6db8af64aa5ef4b658850399ecf7bb99fe9c7f1137dc112ec6043976c8dacf530010adf6e214ea1803a4378dd5
   languageName: node
   linkType: hard
 
@@ -383,6 +421,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/config-prettier@npm:0.0.5":
+  version: 0.0.5
+  resolution: "@atls/config-prettier@npm:0.0.5"
+  dependencies:
+    prettier: "npm:^2.6.2"
+  checksum: 10/f501e0d241c344ea52660d3521b785ce92594a969e04ecd829ef63b535acc6385182c5c87ba6bc92cf6e67569bf5f7dc88908b148e74230e4824ffbcc656c69f
+  languageName: node
+  linkType: hard
+
 "@atls/config-typescript@npm:0.0.11":
   version: 0.0.11
   resolution: "@atls/config-typescript@npm:0.0.11"
@@ -394,6 +441,21 @@ __metadata:
   version: 0.0.3
   resolution: "@atls/jest-static-stubs@npm:0.0.3"
   checksum: 10/4f6cbbad99e780d79f565ec411308092d663c73412140df53d544856aa9eecbf4357e628a18319272930693936ae5732e86028593b591d8b556dd08c927dde58
+  languageName: node
+  linkType: hard
+
+"@atls/prettier-plugin@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls/prettier-plugin@npm:0.0.7"
+  dependencies:
+    globby: "npm:^11.0.4"
+    import-sort: "npm:^6.0.0"
+    import-sort-parser: "npm:^6.0.0"
+    import-sort-parser-typescript: "npm:^6.0.0"
+    import-sort-style: "npm:^6.0.0"
+    prettier: "npm:^2.6.2"
+    sort-package-json: "npm:^1.57.0"
+  checksum: 10/a39abff6c36ba748e7c66d54dcff966543310a0a4a93b581701d1daea8a717d74451a751c587fa2b189fd8f42d4434789e513523b7ad35a4f3773f74f756f817
   languageName: node
   linkType: hard
 
@@ -785,6 +847,13 @@ __metadata:
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
   checksum: 10/e0f4f4d4503f7338749d1dd92361ad132d683bde64e6b61d6c855e100dcd01592295fcfdcc960c946b85ef7908dc2f501080da58447c05812cf3cd80c599bb62
+  languageName: node
+  linkType: hard
+
+"@babel/standalone@npm:7.22.20":
+  version: 7.22.20
+  resolution: "@babel/standalone@npm:7.22.20"
+  checksum: 10/accf19752fe94d24dddc9b7c3c7b800d83d49713c5116323c22a8f13bb136408274ae6c93a0304a29a5c42eef15d244da96f11a8cfbfb06d02055556efbcac45
   languageName: node
   linkType: hard
 
@@ -2130,6 +2199,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:17.0.20":
+  version: 17.0.20
+  resolution: "@types/react-dom@npm:17.0.20"
+  dependencies:
+    "@types/react": "npm:^17"
+  checksum: 10/0dcbd6171e781aafba3a7a2dcb98b2f7ef9130c31a13c5fc4293c7bc2d281cd3f94e278275ae477b341cf1148f9eb220cebf97febd1508ef553e814bc1be08df
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:18.2.18":
   version: 18.2.18
   resolution: "@types/react-dom@npm:18.2.18"
@@ -2169,6 +2247,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^17":
+  version: 17.0.80
+  resolution: "@types/react@npm:17.0.80"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:^0.16"
+    csstype: "npm:^3.0.2"
+  checksum: 10/f5dce5825e693313bb7f8db0199299a25be21d58a7f6eedea9dacd593d2b4013d664ed3d54e5fb241a43c7ebbdfeee41d5a500ed2979cc772a89d460aa40d8f4
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:^1.0.0":
   version: 1.0.3
   resolution: "@types/responselike@npm:1.0.3"
@@ -2182,6 +2271,13 @@ __metadata:
   version: 0.23.0
   resolution: "@types/scheduler@npm:0.23.0"
   checksum: 10/874d753aa65c17760dfc460a91e6df24009bde37bfd427a031577b30262f7770c1b8f71a21366c7dbc76111967384cf4090a31d65315155180ef14bd7acccb32
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:^0.16":
+  version: 0.16.8
+  resolution: "@types/scheduler@npm:0.16.8"
+  checksum: 10/6c091b096daa490093bf30dd7947cd28e5b2cd612ec93448432b33f724b162587fed9309a0acc104d97b69b1d49a0f3fc755a62282054d62975d53d7fd13472d
   languageName: node
   linkType: hard
 
@@ -2385,13 +2481,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
+    "@atls-ui-generators/button": "npm:0.0.22"
     "@atls-ui-parts/button": "npm:0.1.1"
+    "@atls-ui-parts/conditional-render": "npm:0.0.7"
     "@atls-ui-parts/styles": "npm:0.1.1"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
@@ -2501,6 +2602,20 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/utils@workspace:*, @ui/utils@workspace:ui/utils":
+  version: 0.0.0-use.local
+  resolution: "@ui/utils@workspace:ui/utils"
+  dependencies:
+    "@types/react-dom": "npm:17.0.20"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -3844,17 +3959,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"camelcase@npm:6.3.0, camelcase@npm:^6.2.0":
+  version: 6.3.0
+  resolution: "camelcase@npm:6.3.0"
+  checksum: 10/8c96818a9076434998511251dcb2761a94817ea17dbdc37f47ac080bd088fc62c7369429a19e2178b993497132c8cbcf5cc1f44ba963e76782ba469c0474938d
+  languageName: node
+  linkType: hard
+
 "camelcase@npm:^5.3.1":
   version: 5.3.1
   resolution: "camelcase@npm:5.3.1"
   checksum: 10/e6effce26b9404e3c0f301498184f243811c30dfe6d0b9051863bd8e4034d09c8c2923794f280d6827e5aa055f6c434115ff97864a16a963366fb35fd673024b
-  languageName: node
-  linkType: hard
-
-"camelcase@npm:^6.2.0":
-  version: 6.3.0
-  resolution: "camelcase@npm:6.3.0"
-  checksum: 10/8c96818a9076434998511251dcb2761a94817ea17dbdc37f47ac080bd088fc62c7369429a19e2178b993497132c8cbcf5cc1f44ba963e76782ba469c0474938d
   languageName: node
   linkType: hard
 
@@ -4071,6 +4186,13 @@ __metadata:
   version: 7.2.0
   resolution: "commander@npm:7.2.0"
   checksum: 10/9973af10727ad4b44f26703bf3e9fdc323528660a7590efe3aa9ad5042b4584c0deed84ba443f61c9d6f02dade54a5a5d3c95e306a1e1630f8374ae6db16c06d
+  languageName: node
+  linkType: hard
+
+"commander@npm:9.5.0":
+  version: 9.5.0
+  resolution: "commander@npm:9.5.0"
+  checksum: 10/41c49b3d0f94a1fbeb0463c85b13f15aa15a9e0b4d5e10a49c0a1d58d4489b549d62262b052ae0aa6cfda53299bee487bfe337825df15e342114dde543f82906
   languageName: node
   linkType: hard
 
@@ -5475,7 +5597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:11.1.0, globby@npm:^11.1.0":
+"globby@npm:11.1.0, globby@npm:^11.0.4, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -5732,7 +5854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-sort-parser-typescript@npm:6.0.0":
+"import-sort-parser-typescript@npm:6.0.0, import-sort-parser-typescript@npm:^6.0.0":
   version: 6.0.0
   resolution: "import-sort-parser-typescript@npm:6.0.0"
   dependencies:
@@ -5755,7 +5877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-sort@npm:6.0.0":
+"import-sort@npm:6.0.0, import-sort@npm:^6.0.0":
   version: 6.0.0
   resolution: "import-sort@npm:6.0.0"
   dependencies:
@@ -7762,6 +7884,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:2.8.8, prettier@npm:^2.6.2":
+  version: 2.8.8
+  resolution: "prettier@npm:2.8.8"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 10/00cdb6ab0281f98306cd1847425c24cbaaa48a5ff03633945ab4c701901b8e96ad558eb0777364ffc312f437af9b5a07d0f45346266e8245beaf6247b9c62b24
+  languageName: node
+  linkType: hard
+
 "prettier@npm:3.1.1":
   version: 3.1.1
   resolution: "prettier@npm:3.1.1"
@@ -7924,6 +8055,18 @@ __metadata:
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
   checksum: 10/d5f60c87d285af24b1e1e7eaeb123ec256c3c8bdea7061ab3932e3e14685708221bf234ec50b21e10dd07f008f1b966a2730a0ce4ff67905b3872ff2042aec22
+  languageName: node
+  linkType: hard
+
+"react-laag@npm:2.0.5":
+  version: 2.0.5
+  resolution: "react-laag@npm:2.0.5"
+  dependencies:
+    tiny-warning: "npm:^1.0.3"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/b47abb66d64291f9af5a151b6ab335a1500187a2ac03231bf35c2e50bb0dbe7508d8a16b1a50234166866ce8ef8ef42a57b6551139f49f62573a6b33408deffe
   languageName: node
   linkType: hard
 
@@ -8376,7 +8519,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:1.57.0":
+"sort-package-json@npm:1.57.0, sort-package-json@npm:^1.57.0":
   version: 1.57.0
   resolution: "sort-package-json@npm:1.57.0"
   dependencies:
@@ -8900,6 +9043,13 @@ __metadata:
     globalyzer: "npm:0.1.0"
     globrex: "npm:^0.1.2"
   checksum: 10/5fb773747f6a8fcae4b8884642901fa7b884879695186c422eb24b2213dfe90645f34225ced586329b3080d850472ea938646ab1c8b3a2989f9fa038fef8eee3
+  languageName: node
+  linkType: hard
+
+"tiny-warning@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-warning@npm:1.0.3"
+  checksum: 10/da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
   languageName: node
   linkType: hard
 
