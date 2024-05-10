@@ -1,38 +1,31 @@
 {
-	"name": "@ui/switch",
+	"name": "@ui/dropdown",
 	"version": "0.1.1",
-	"private": true,
 	"license": "BSD-3-Clause",
-	"exports": {
-		".": "./src/index.ts"
-	},
 	"main": "src/index.ts",
+	"files": [
+		"dist"
+	],
 	"dependencies": {
-		"@atls-ui-parts/switch": "0.1.1"
+		"@atls-ui-parts/dropdown": "0.1.1"
 	},
 	"devDependencies": {
-		"@emotion/css": "11.11.2",
+		"@atls-ui-parts/datepicker": "workspace:*",
+		"@atls-ui-parts/layout": "workspace:*",
+		"@atls-ui-proto/input": "workspace:*",
 		"@emotion/react": "11.11.3",
 		"@emotion/styled": "11.11.0",
 		"@types/react": "18.2.48",
 		"@types/react-dom": "18.2.18",
 		"@types/styled-system": "5.1.22",
-		"@ui/switch": "workspace:*",
-		"framer-motion": "10.16.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"react-laag": "2.0.5",
-		"styled-system": "5.1.5",
-		"styled-tools": "1.7.2"
+		"styled-system": "5.1.5"
 	},
 	"peerDependencies": {
-		"@emotion/css": "11.11.2",
-		"@emotion/react": "11.11.3",
 		"@emotion/styled": "11.11.0",
-		"framer-motion": "10.16.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"styled-system": "5.1.5",
-		"styled-tools": "1.7.2"
+		"styled-system": "5.1.5"
 	}
 }

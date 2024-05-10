@@ -1,1 +1,1 @@
-export * from './switch.component'
+export * from '@atls-ui-parts/switch'
