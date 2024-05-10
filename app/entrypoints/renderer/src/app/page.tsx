@@ -1,5 +1,26 @@
-import React from 'react'
+'use client'
 
-const Page = () => <h1>Team management</h1>
+import React             from 'react'
+
+import { Avatar }        from '@ui/avatar'
+import { GhostButton }   from '@ui/button'
+import { Card }          from '@ui/card'
+import { Sidebar }       from '@ui/sidebar'
+import { ThemeProvider } from '@ui/theme'
+
+const Page = () => (
+  <ThemeProvider>
+    <>
+      <h1>Team management</h1>
+      <Sidebar />
+      <GhostButton />
+      <Avatar size={150} shape={'circle'} text={'Avatar'} />
+      <Card>
+        <p>Children/progressbar</p>
+        <p>Children/switch</p>
+      </Card>
+    </>
+  </ThemeProvider>
+)
 
 export default Page
