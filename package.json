@@ -16,6 +16,7 @@
     "@types/jest": "29.5.12",
     "@types/node": "20.12.8",
     "@types/react": "^18",
+    "@types/styled-system": "5.1.22",
     "eslint": "8.57.0",
     "husky": "9.0.11",
     "prettier": "3.1.1",
@@ -28,5 +29,11 @@
   "skipLibCheck": true,
   "typecheckIgnorePatterns": [
     "**/next-env.d.ts"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
+    "react": "18.2.0",
+    "styled-system": "5.1.5"
+  }
 }

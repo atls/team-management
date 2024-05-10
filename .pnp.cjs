@@ -18,6 +18,38 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:app/entrypoints/renderer"\
     },\
     {\
+      "name": "@ui/avatar",\
+      "reference": "workspace:ui/avatar"\
+    },\
+    {\
+      "name": "@ui/button",\
+      "reference": "workspace:ui/button"\
+    },\
+    {\
+      "name": "@ui/card",\
+      "reference": "workspace:ui/card"\
+    },\
+    {\
+      "name": "@ui/image",\
+      "reference": "workspace:ui/image"\
+    },\
+    {\
+      "name": "@ui/layout",\
+      "reference": "workspace:ui/layout"\
+    },\
+    {\
+      "name": "@ui/sidebar",\
+      "reference": "workspace:ui/sidebar"\
+    },\
+    {\
+      "name": "@ui/tag",\
+      "reference": "workspace:ui/tag"\
+    },\
+    {\
+      "name": "@ui/text",\
+      "reference": "workspace:ui/text"\
+    },\
+    {\
       "name": "@ui/theme",\
       "reference": "workspace:ui/theme"\
     }\
@@ -26,7 +58,15 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@identity/renderer-entrypoint", ["workspace:app/entrypoints/renderer"]],\
-    ["@ui/theme", ["workspace:ui/theme"]],\
+    ["@ui/avatar", ["workspace:ui/avatar"]],\
+    ["@ui/button", ["workspace:ui/button"]],\
+    ["@ui/card", ["workspace:ui/card"]],\
+    ["@ui/image", ["workspace:ui/image"]],\
+    ["@ui/layout", ["workspace:ui/layout"]],\
+    ["@ui/sidebar", ["workspace:ui/sidebar"]],\
+    ["@ui/tag", ["workspace:ui/tag"]],\
+    ["@ui/text", ["workspace:ui/text"]],\
+    ["@ui/theme", ["virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/theme", "workspace:ui/theme"]],\
     ["team-management", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -40,14 +80,19 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.12.8"],\
           ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
           ["eslint", "npm:8.57.0"],\
           ["husky", "npm:9.0.11"],\
           ["prettier", "npm:3.1.1"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -239,6 +284,392 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@arcanis/slice-ansi", "npm:1.1.1"],\
           ["grapheme-splitter", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/avatar", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-avatar-npm-0.1.1-6a95b69e22-ae68f810ee.zip/node_modules/@atls-ui-parts/avatar/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/avatar", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-avatar-virtual-ae4fe36d1d/0/cache/@atls-ui-parts-avatar-npm-0.1.1-6a95b69e22-ae68f810ee.zip/node_modules/@atls-ui-parts/avatar/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/avatar", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1"],\
+          ["@atls-ui-parts/styles", "virtual:ae4fe36d1df6cb9ed8971134a77f4950fdc2d6fcdcf909174c5bcc20b075639f2c79d89e65cdcfeac0036dfe649eb1d1425c0d3c3288019c37848aaf3fcb3b68#npm:0.1.1"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["@types/styled-tools", null],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/react-dom",\
+          "@types/react",\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "react-dom",\
+          "react",\
+          "styled-system",\
+          "styled-tools"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/button", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-button-npm-0.1.1-42445eebf1-d48ffa07e5.zip/node_modules/@atls-ui-parts/button/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/button", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-button-virtual-40502ff845/0/cache/@atls-ui-parts-button-npm-0.1.1-42445eebf1-d48ffa07e5.zip/node_modules/@atls-ui-parts/button/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.1.1"],\
+          ["@atls-ui-parts/styles", "virtual:ae4fe36d1df6cb9ed8971134a77f4950fdc2d6fcdcf909174c5bcc20b075639f2c79d89e65cdcfeac0036dfe649eb1d1425c0d3c3288019c37848aaf3fcb3b68#npm:0.1.1"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["@types/styled-tools", null],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/react",\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "react",\
+          "styled-system",\
+          "styled-tools"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/dom", [\
+      ["npm:0.0.7", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-dom-npm-0.0.7-562a4dffc2-15f9765c2c.zip/node_modules/@atls-ui-parts/dom/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/dom", "npm:0.0.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:a0da079e8c005d8303e5fbf240a123988f844bc1b435f5bb1029f2fa068587930b694a16b0eda200b070a01c22f2944c790f325f656fd90ba1e241156133f618#npm:0.0.7", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-dom-virtual-4372547011/0/cache/@atls-ui-parts-dom-npm-0.0.7-562a4dffc2-15f9765c2c.zip/node_modules/@atls-ui-parts/dom/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/dom", "virtual:a0da079e8c005d8303e5fbf240a123988f844bc1b435f5bb1029f2fa068587930b694a16b0eda200b070a01c22f2944c790f325f656fd90ba1e241156133f618#npm:0.0.7"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/image", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-image-npm-0.1.1-fc6b2b3a42-bb6e9e0ced.zip/node_modules/@atls-ui-parts/image/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/image", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-image-virtual-5491edb9a6/0/cache/@atls-ui-parts-image-npm-0.1.1-fc6b2b3a42-bb6e9e0ced.zip/node_modules/@atls-ui-parts/image/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/image", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.1"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/react",\
+          "@types/styled-system",\
+          "react",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/layout", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-layout-npm-0.1.1-7a12afdae4-69596f6b40.zip/node_modules/@atls-ui-parts/layout/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/layout", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-layout-virtual-52d92e7766/0/cache/@atls-ui-parts-layout-npm-0.1.1-7a12afdae4-69596f6b40.zip/node_modules/@atls-ui-parts/layout/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/layout", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:0.1.1"],\
+          ["@emotion/is-prop-valid", "npm:1.2.1"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["csstype", "npm:3.1.3"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@emotion/styled",\
+          "@types/emotion__react",\
+          "@types/emotion__styled",\
+          "@types/react",\
+          "@types/styled-system",\
+          "react",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/next-image", [\
+      ["npm:0.1.2", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-next-image-npm-0.1.2-a5133d3e9d-d1ff119ef8.zip/node_modules/@atls-ui-parts/next-image/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/next-image", "npm:0.1.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.2", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-next-image-virtual-559c84a96e/0/cache/@atls-ui-parts-next-image-npm-0.1.2-a5133d3e9d-d1ff119ef8.zip/node_modules/@atls-ui-parts/next-image/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/next-image", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.2"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/next", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["next", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:14.1.0"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/next",\
+          "@types/react",\
+          "@types/styled-system",\
+          "next",\
+          "react",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/scalable-content", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-scalable-content-npm-0.1.1-f50b3d6ec2-92b1264dbe.zip/node_modules/@atls-ui-parts/scalable-content/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/scalable-content", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-scalable-content-virtual-a0da079e8c/0/cache/@atls-ui-parts-scalable-content-npm-0.1.1-f50b3d6ec2-92b1264dbe.zip/node_modules/@atls-ui-parts/scalable-content/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/scalable-content", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1"],\
+          ["@atls-ui-parts/dom", "virtual:a0da079e8c005d8303e5fbf240a123988f844bc1b435f5bb1029f2fa068587930b694a16b0eda200b070a01c22f2944c790f325f656fd90ba1e241156133f618#npm:0.0.7"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/react",\
+          "@types/styled-system",\
+          "react",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/sidebar", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-sidebar-npm-0.1.1-6904bb3aec-08c50fd6d8.zip/node_modules/@atls-ui-parts/sidebar/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/sidebar", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-sidebar-virtual-1799fe2727/0/cache/@atls-ui-parts-sidebar-npm-0.1.1-6904bb3aec-08c50fd6d8.zip/node_modules/@atls-ui-parts/sidebar/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/sidebar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__styled", null],\
+          ["@types/framer-motion", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["@types/styled-tools", null],\
+          ["framer-motion", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:11.1.9"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/styled",\
+          "@types/emotion__styled",\
+          "@types/framer-motion",\
+          "@types/react",\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "framer-motion",\
+          "react",\
+          "styled-system",\
+          "styled-tools"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/styles", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-styles-npm-0.1.1-81e56174aa-a275b47e18.zip/node_modules/@atls-ui-parts/styles/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/styles", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:ae4fe36d1df6cb9ed8971134a77f4950fdc2d6fcdcf909174c5bcc20b075639f2c79d89e65cdcfeac0036dfe649eb1d1425c0d3c3288019c37848aaf3fcb3b68#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-styles-virtual-37a972e24a/0/cache/@atls-ui-parts-styles-npm-0.1.1-81e56174aa-a275b47e18.zip/node_modules/@atls-ui-parts/styles/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/styles", "virtual:ae4fe36d1df6cb9ed8971134a77f4950fdc2d6fcdcf909174c5bcc20b075639f2c79d89e65cdcfeac0036dfe649eb1d1425c0d3c3288019c37848aaf3fcb3b68#npm:0.1.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/styled-system",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/switch", [\
+      ["npm:0.1.1", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-switch-npm-0.1.1-8284bcc81f-af1c1b0781.zip/node_modules/@atls-ui-parts/switch/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/switch", "npm:0.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-switch-virtual-fb5cdda74d/0/cache/@atls-ui-parts-switch-npm-0.1.1-8284bcc81f-af1c1b0781.zip/node_modules/@atls-ui-parts/switch/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/switch", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
+          ["@types/emotion__styled", null],\
+          ["@types/framer-motion", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["@types/styled-tools", null],\
+          ["framer-motion", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:11.1.9"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@emotion/styled",\
+          "@types/emotion__react",\
+          "@types/emotion__styled",\
+          "@types/framer-motion",\
+          "@types/react",\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "framer-motion",\
+          "react",\
+          "styled-system",\
+          "styled-tools"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/text", [\
+      ["npm:0.1.3", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-text-npm-0.1.3-1ea8428ff9-ddcbdcf03e.zip/node_modules/@atls-ui-parts/text/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/text", "npm:0.1.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:59c0e4b05210872ec6d6436536e5afcd8da95a2b3c2ebfdac70d49a46d55072979067e807b3ba8d05446bf35dc05d494f5733115fa0bd40b8bc50357eabbd9a0#npm:0.1.3", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-virtual-17a915e477/0/cache/@atls-ui-parts-text-npm-0.1.3-1ea8428ff9-ddcbdcf03e.zip/node_modules/@atls-ui-parts/text/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/text", "virtual:59c0e4b05210872ec6d6436536e5afcd8da95a2b3c2ebfdac70d49a46d55072979067e807b3ba8d05446bf35dc05d494f5733115fa0bd40b8bc50357eabbd9a0#npm:0.1.3"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/emotion__react", null],\
+          ["@types/emotion__styled", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["csstype", "npm:3.1.3"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@emotion/styled",\
+          "@types/emotion__react",\
+          "@types/emotion__styled",\
+          "@types/react",\
+          "@types/styled-system",\
+          "react",\
+          "styled-system"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls-ui-parts/text-transform", [\
+      ["npm:0.0.8", {\
+        "packageLocation": "./.yarn/cache/@atls-ui-parts-text-transform-npm-0.0.8-689dccfa82-b88f18eede.zip/node_modules/@atls-ui-parts/text-transform/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/text-transform", "npm:0.0.8"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.0.8", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-text-transform-virtual-6807d8f6ea/0/cache/@atls-ui-parts-text-transform-npm-0.0.8-689dccfa82-b88f18eede.zip/node_modules/@atls-ui-parts/text-transform/",\
+        "packageDependencies": [\
+          ["@atls-ui-parts/text-transform", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.0.8"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1193,6 +1624,24 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@emotion/is-prop-valid", [\
+      ["npm:1.2.1", {\
+        "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-1.2.1-794afe6a94-fe231c472d.zip/node_modules/@emotion/is-prop-valid/",\
+        "packageDependencies": [\
+          ["@emotion/is-prop-valid", "npm:1.2.1"],\
+          ["@emotion/memoize", "npm:0.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.2.2", {\
+        "packageLocation": "./.yarn/cache/@emotion-is-prop-valid-npm-1.2.2-53f93f2b2d-0fa3960abf.zip/node_modules/@emotion/is-prop-valid/",\
+        "packageDependencies": [\
+          ["@emotion/is-prop-valid", "npm:1.2.2"],\
+          ["@emotion/memoize", "npm:0.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@emotion/jest", [\
       ["npm:11.11.0", {\
         "packageLocation": "./.yarn/cache/@emotion-jest-npm-11.11.0-c473c4e800-75a4f780c7.zip/node_modules/@emotion/jest/",\
@@ -1232,12 +1681,61 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@emotion/react", [\
+      ["npm:11.11.3", {\
+        "packageLocation": "./.yarn/cache/@emotion-react-npm-11.11.3-5802f4fe7f-f7b98557b7.zip/node_modules/@emotion/react/",\
+        "packageDependencies": [\
+          ["@emotion/react", "npm:11.11.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["npm:11.11.4", {\
         "packageLocation": "./.yarn/cache/@emotion-react-npm-11.11.4-52eda8b8fe-e7da3a1ddc.zip/node_modules/@emotion/react/",\
         "packageDependencies": [\
           ["@emotion/react", "npm:11.11.4"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.3", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-react-virtual-fe56bed141/0/cache/@emotion-react-npm-11.11.3-5802f4fe7f-f7b98557b7.zip/node_modules/@emotion/react/",\
+        "packageDependencies": [\
+          ["@emotion/react", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.3"],\
+          ["@babel/runtime", "npm:7.24.5"],\
+          ["@emotion/babel-plugin", "npm:11.11.0"],\
+          ["@emotion/cache", "npm:11.11.0"],\
+          ["@emotion/serialize", "npm:1.1.4"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:fe56bed141b7777debc12042a0b235bfb9b10f45dc00c3ece97733aab629a9d479c82224becf70a67e53ecf97c1fca903d601e4c0f0b0b0dff80cd07b55c3425#npm:1.0.1"],\
+          ["@emotion/utils", "npm:1.2.1"],\
+          ["@emotion/weak-memoize", "npm:0.3.1"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-react-virtual-b2d278b418/0/cache/@emotion-react-npm-11.11.3-5802f4fe7f-f7b98557b7.zip/node_modules/@emotion/react/",\
+        "packageDependencies": [\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@babel/runtime", "npm:7.24.5"],\
+          ["@emotion/babel-plugin", "npm:11.11.0"],\
+          ["@emotion/cache", "npm:11.11.0"],\
+          ["@emotion/serialize", "npm:1.1.4"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:b2d278b418dc4d4f4dec7584c809dd02d151684aa70aaeb02336916a1582a236d2a76c222c916438a412591707e77e2d07f9fc5e74d40e6614524f060c0e2092#npm:1.0.1"],\
+          ["@emotion/utils", "npm:1.2.1"],\
+          ["@emotion/weak-memoize", "npm:0.3.1"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:c9b800cb507603f3efdaa11083cbb0612f1bd0ede10f5179cd2139f3a92404f0b603369c718f89a95ef9d26b7dc888e52ac6e3472cb93361a730a7d40a207ea0#npm:11.11.4", {\
         "packageLocation": "./.yarn/__virtual__/@emotion-react-virtual-3767bb48a9/0/cache/@emotion-react-npm-11.11.4-52eda8b8fe-e7da3a1ddc.zip/node_modules/@emotion/react/",\
@@ -1247,7 +1745,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/babel-plugin", "npm:11.11.0"],\
           ["@emotion/cache", "npm:11.11.0"],\
           ["@emotion/serialize", "npm:1.1.4"],\
-          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:3767bb48a9ebac1fbf7f6e66bae6867caf0e0076be602dc028ad495ce3384f1859e37ffc6abd0499d35638cd8bca1fba8f1a6f1ad0bbf189d6719d5714b706c6#npm:1.0.1"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:b2d278b418dc4d4f4dec7584c809dd02d151684aa70aaeb02336916a1582a236d2a76c222c916438a412591707e77e2d07f9fc5e74d40e6614524f060c0e2092#npm:1.0.1"],\
           ["@emotion/utils", "npm:1.2.1"],\
           ["@emotion/weak-memoize", "npm:0.3.1"],\
           ["@types/react", "npm:18.3.1"],\
@@ -1284,6 +1782,61 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@emotion/styled", [\
+      ["npm:11.11.0", {\
+        "packageLocation": "./.yarn/cache/@emotion-styled-npm-11.11.0-9a95c8527d-ac471a4064.zip/node_modules/@emotion/styled/",\
+        "packageDependencies": [\
+          ["@emotion/styled", "npm:11.11.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-styled-virtual-11e78a155f/0/cache/@emotion-styled-npm-11.11.0-9a95c8527d-ac471a4064.zip/node_modules/@emotion/styled/",\
+        "packageDependencies": [\
+          ["@emotion/styled", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.0"],\
+          ["@babel/runtime", "npm:7.24.5"],\
+          ["@emotion/babel-plugin", "npm:11.11.0"],\
+          ["@emotion/is-prop-valid", "npm:1.2.2"],\
+          ["@emotion/react", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.3"],\
+          ["@emotion/serialize", "npm:1.1.4"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:fe56bed141b7777debc12042a0b235bfb9b10f45dc00c3ece97733aab629a9d479c82224becf70a67e53ecf97c1fca903d601e4c0f0b0b0dff80cd07b55c3425#npm:1.0.1"],\
+          ["@emotion/utils", "npm:1.2.1"],\
+          ["@types/emotion__react", null],\
+          ["@types/react", "npm:18.2.48"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@types/emotion__react",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-styled-virtual-5e5062c4b5/0/cache/@emotion-styled-npm-11.11.0-9a95c8527d-ac471a4064.zip/node_modules/@emotion/styled/",\
+        "packageDependencies": [\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@babel/runtime", "npm:7.24.5"],\
+          ["@emotion/babel-plugin", "npm:11.11.0"],\
+          ["@emotion/is-prop-valid", "npm:1.2.2"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/serialize", "npm:1.1.4"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:b2d278b418dc4d4f4dec7584c809dd02d151684aa70aaeb02336916a1582a236d2a76c222c916438a412591707e77e2d07f9fc5e74d40e6614524f060c0e2092#npm:1.0.1"],\
+          ["@emotion/utils", "npm:1.2.1"],\
+          ["@types/emotion__react", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@types/emotion__react",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@emotion/unitless", [\
       ["npm:0.8.1", {\
         "packageLocation": "./.yarn/cache/@emotion-unitless-npm-0.8.1-bcf0a8f565-918f73c46a.zip/node_modules/@emotion/unitless/",\
@@ -1301,11 +1854,24 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:3767bb48a9ebac1fbf7f6e66bae6867caf0e0076be602dc028ad495ce3384f1859e37ffc6abd0499d35638cd8bca1fba8f1a6f1ad0bbf189d6719d5714b706c6#npm:1.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@emotion-use-insertion-effect-with-fallbacks-virtual-dc2a3b1748/0/cache/@emotion-use-insertion-effect-with-fallbacks-npm-1.0.1-730758c66c-7d7ead9ba3.zip/node_modules/@emotion/use-insertion-effect-with-fallbacks/",\
+      ["virtual:b2d278b418dc4d4f4dec7584c809dd02d151684aa70aaeb02336916a1582a236d2a76c222c916438a412591707e77e2d07f9fc5e74d40e6614524f060c0e2092#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-use-insertion-effect-with-fallbacks-virtual-e6278c1d5d/0/cache/@emotion-use-insertion-effect-with-fallbacks-npm-1.0.1-730758c66c-7d7ead9ba3.zip/node_modules/@emotion/use-insertion-effect-with-fallbacks/",\
         "packageDependencies": [\
-          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:3767bb48a9ebac1fbf7f6e66bae6867caf0e0076be602dc028ad495ce3384f1859e37ffc6abd0499d35638cd8bca1fba8f1a6f1ad0bbf189d6719d5714b706c6#npm:1.0.1"],\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:b2d278b418dc4d4f4dec7584c809dd02d151684aa70aaeb02336916a1582a236d2a76c222c916438a412591707e77e2d07f9fc5e74d40e6614524f060c0e2092#npm:1.0.1"],\
           ["@types/react", "npm:18.3.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:fe56bed141b7777debc12042a0b235bfb9b10f45dc00c3ece97733aab629a9d479c82224becf70a67e53ecf97c1fca903d601e4c0f0b0b0dff80cd07b55c3425#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@emotion-use-insertion-effect-with-fallbacks-virtual-1a087d7f03/0/cache/@emotion-use-insertion-effect-with-fallbacks-npm-1.0.1-730758c66c-7d7ead9ba3.zip/node_modules/@emotion/use-insertion-effect-with-fallbacks/",\
+        "packageDependencies": [\
+          ["@emotion/use-insertion-effect-with-fallbacks", "virtual:fe56bed141b7777debc12042a0b235bfb9b10f45dc00c3ece97733aab629a9d479c82224becf70a67e53ecf97c1fca903d601e4c0f0b0b0dff80cd07b55c3425#npm:1.0.1"],\
+          ["@types/react", "npm:18.2.48"],\
           ["react", "npm:18.2.0"]\
         ],\
         "packagePeers": [\
@@ -1448,12 +2014,21 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./app/entrypoints/renderer/",\
         "packageDependencies": [\
           ["@identity/renderer-entrypoint", "workspace:app/entrypoints/renderer"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
           ["@types/node", "npm:20.11.5"],\
           ["@types/react", "npm:18.3.1"],\
           ["@types/react-dom", "npm:18.3.0"],\
-          ["next", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:14.1.0"],\
+          ["@ui/avatar", "workspace:ui/avatar"],\
+          ["@ui/button", "workspace:ui/button"],\
+          ["@ui/card", "workspace:ui/card"],\
+          ["@ui/image", "workspace:ui/image"],\
+          ["@ui/layout", "workspace:ui/layout"],\
+          ["@ui/sidebar", "workspace:ui/sidebar"],\
+          ["@ui/theme", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/theme"],\
+          ["next", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:14.1.0"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
+          ["styled-tools", "npm:1.7.2"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -2028,6 +2603,136 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@styled-system/background", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-background-npm-5.1.2-0b07cb6c1a-8874bc2f99.zip/node_modules/@styled-system/background/",\
+        "packageDependencies": [\
+          ["@styled-system/background", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/border", [\
+      ["npm:5.1.5", {\
+        "packageLocation": "./.yarn/cache/@styled-system-border-npm-5.1.5-1e220a39fb-6070fbe468.zip/node_modules/@styled-system/border/",\
+        "packageDependencies": [\
+          ["@styled-system/border", "npm:5.1.5"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/color", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-color-npm-5.1.2-5d4b83b046-16750fbc9e.zip/node_modules/@styled-system/color/",\
+        "packageDependencies": [\
+          ["@styled-system/color", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/core", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-core-npm-5.1.2-5088b617ae-8c08abc753.zip/node_modules/@styled-system/core/",\
+        "packageDependencies": [\
+          ["@styled-system/core", "npm:5.1.2"],\
+          ["object-assign", "npm:4.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/css", [\
+      ["npm:5.1.5", {\
+        "packageLocation": "./.yarn/cache/@styled-system-css-npm-5.1.5-3e0767f483-df37fcf058.zip/node_modules/@styled-system/css/",\
+        "packageDependencies": [\
+          ["@styled-system/css", "npm:5.1.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/flexbox", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-flexbox-npm-5.1.2-9832e992b1-43c357b845.zip/node_modules/@styled-system/flexbox/",\
+        "packageDependencies": [\
+          ["@styled-system/flexbox", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/grid", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-grid-npm-5.1.2-167dfa8f2b-09d3317cf6.zip/node_modules/@styled-system/grid/",\
+        "packageDependencies": [\
+          ["@styled-system/grid", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/layout", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-layout-npm-5.1.2-ea143a71e4-0ffbc1cf32.zip/node_modules/@styled-system/layout/",\
+        "packageDependencies": [\
+          ["@styled-system/layout", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/position", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-position-npm-5.1.2-ce38b58782-bf659a45fd.zip/node_modules/@styled-system/position/",\
+        "packageDependencies": [\
+          ["@styled-system/position", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/shadow", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-shadow-npm-5.1.2-3ca697965a-6b13e35f7d.zip/node_modules/@styled-system/shadow/",\
+        "packageDependencies": [\
+          ["@styled-system/shadow", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/space", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-space-npm-5.1.2-b01a8feb6a-8946919fd9.zip/node_modules/@styled-system/space/",\
+        "packageDependencies": [\
+          ["@styled-system/space", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/typography", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@styled-system-typography-npm-5.1.2-5987b8ad66-fc931c8a01.zip/node_modules/@styled-system/typography/",\
+        "packageDependencies": [\
+          ["@styled-system/typography", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@styled-system/variant", [\
+      ["npm:5.1.5", {\
+        "packageLocation": "./.yarn/cache/@styled-system-variant-npm-5.1.5-b63323f6f9-170b7dd0ab.zip/node_modules/@styled-system/variant/",\
+        "packageDependencies": [\
+          ["@styled-system/variant", "npm:5.1.5"],\
+          ["@styled-system/core", "npm:5.1.2"],\
+          ["@styled-system/css", "npm:5.1.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@swc/core", [\
       ["npm:1.4.11", {\
         "packageLocation": "./.yarn/unplugged/@swc-core-virtual-3fa0303a43/node_modules/@swc/core/",\
@@ -2449,6 +3154,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react", [\
+      ["npm:18.2.48", {\
+        "packageLocation": "./.yarn/cache/@types-react-npm-18.2.48-3bda252d86-2e56ea6bd8.zip/node_modules/@types/react/",\
+        "packageDependencies": [\
+          ["@types/react", "npm:18.2.48"],\
+          ["@types/prop-types", "npm:15.7.12"],\
+          ["@types/scheduler", "npm:0.23.0"],\
+          ["csstype", "npm:3.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:18.3.1", {\
         "packageLocation": "./.yarn/cache/@types-react-npm-18.3.1-5744cb1fe5-baa6b8a75c.zip/node_modules/@types/react/",\
         "packageDependencies": [\
@@ -2460,6 +3175,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-dom", [\
+      ["npm:18.2.18", {\
+        "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.2.18-b316a8af22-4ef7725b4c.zip/node_modules/@types/react-dom/",\
+        "packageDependencies": [\
+          ["@types/react-dom", "npm:18.2.18"],\
+          ["@types/react", "npm:18.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:18.3.0", {\
         "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.3.0-111444d3eb-6ff53f5a7b.zip/node_modules/@types/react-dom/",\
         "packageDependencies": [\
@@ -2479,6 +3202,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/scheduler", [\
+      ["npm:0.23.0", {\
+        "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.23.0-a698c23f51-874d753aa6.zip/node_modules/@types/scheduler/",\
+        "packageDependencies": [\
+          ["@types/scheduler", "npm:0.23.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/semver", [\
       ["npm:7.5.8", {\
         "packageLocation": "./.yarn/cache/@types-semver-npm-7.5.8-26073743d7-3496808818.zip/node_modules/@types/semver/",\
@@ -2493,6 +3225,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-stack-utils-npm-2.0.3-48a0a03262-72576cc152.zip/node_modules/@types/stack-utils/",\
         "packageDependencies": [\
           ["@types/stack-utils", "npm:2.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/styled-system", [\
+      ["npm:5.1.22", {\
+        "packageLocation": "./.yarn/cache/@types-styled-system-npm-5.1.22-5df778941b-61aa4d7ffa.zip/node_modules/@types/styled-system/",\
+        "packageDependencies": [\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["csstype", "npm:3.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2725,7 +3467,171 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@ui/avatar", [\
+      ["workspace:ui/avatar", {\
+        "packageLocation": "./ui/avatar/",\
+        "packageDependencies": [\
+          ["@ui/avatar", "workspace:ui/avatar"],\
+          ["@atls-ui-parts/avatar", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1"],\
+          ["@atls-ui-parts/scalable-content", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.1.1"],\
+          ["@atls-ui-parts/text-transform", "virtual:59afff51b205bf3460b9798828a745573b09e56d451faedf3eb789ec2971612a7b56479a8f9a3912867c9afdcb70d1c1290983f867d4bb56012e00970749ca6c#npm:0.0.8"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["@ui/image", "workspace:ui/image"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
+          ["string-to-color", "npm:2.2.2"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/button", [\
+      ["workspace:ui/button", {\
+        "packageLocation": "./ui/button/",\
+        "packageDependencies": [\
+          ["@ui/button", "workspace:ui/button"],\
+          ["@atls-ui-parts/button", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:0.1.1"],\
+          ["@atls-ui-parts/styles", "virtual:ae4fe36d1df6cb9ed8971134a77f4950fdc2d6fcdcf909174c5bcc20b075639f2c79d89e65cdcfeac0036dfe649eb1d1425c0d3c3288019c37848aaf3fcb3b68#npm:0.1.1"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/card", [\
+      ["workspace:ui/card", {\
+        "packageLocation": "./ui/card/",\
+        "packageDependencies": [\
+          ["@ui/card", "workspace:ui/card"],\
+          ["@emotion/react", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:11.11.0"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["@types/react-dom", "npm:18.2.18"],\
+          ["@ui/image", "workspace:ui/image"],\
+          ["@ui/layout", "workspace:ui/layout"],\
+          ["@ui/tag", "workspace:ui/tag"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:18.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/image", [\
+      ["workspace:ui/image", {\
+        "packageLocation": "./ui/image/",\
+        "packageDependencies": [\
+          ["@ui/image", "workspace:ui/image"],\
+          ["@atls-ui-parts/image", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.1"],\
+          ["@atls-ui-parts/next-image", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:0.1.2"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["next", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:14.1.0"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/layout", [\
+      ["workspace:ui/layout", {\
+        "packageLocation": "./ui/layout/",\
+        "packageDependencies": [\
+          ["@ui/layout", "workspace:ui/layout"],\
+          ["@atls-ui-parts/layout", "virtual:1b33f65f04270d2b09e1102083b17c087dfd9010df63688a0756798677e98eef84c9a9939ffb950b0c63d69d314baea3daf1af079e5b4d1e3f6dc3c7cc52ac9c#npm:0.1.1"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/sidebar", [\
+      ["workspace:ui/sidebar", {\
+        "packageLocation": "./ui/sidebar/",\
+        "packageDependencies": [\
+          ["@ui/sidebar", "workspace:ui/sidebar"],\
+          ["@atls-ui-parts/sidebar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
+          ["@atls-ui-parts/switch", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["framer-motion", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:11.1.9"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
+          ["styled-tools", "npm:1.7.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/tag", [\
+      ["workspace:ui/tag", {\
+        "packageLocation": "./ui/tag/",\
+        "packageDependencies": [\
+          ["@ui/tag", "workspace:ui/tag"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@ui/layout", "workspace:ui/layout"],\
+          ["@ui/text", "workspace:ui/text"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@ui/text", [\
+      ["workspace:ui/text", {\
+        "packageLocation": "./ui/text/",\
+        "packageDependencies": [\
+          ["@ui/text", "workspace:ui/text"],\
+          ["@atls-ui-parts/text", "virtual:59c0e4b05210872ec6d6436536e5afcd8da95a2b3c2ebfdac70d49a46d55072979067e807b3ba8d05446bf35dc05d494f5733115fa0bd40b8bc50357eabbd9a0#npm:0.1.3"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@ui/theme", [\
+      ["virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/theme", {\
+        "packageLocation": "./.yarn/__virtual__/@ui-theme-virtual-6966707c3e/1/ui/theme/",\
+        "packageDependencies": [\
+          ["@ui/theme", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/theme"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@types/emotion__react", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/react",\
+          "@types/emotion__react",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["workspace:ui/theme", {\
         "packageLocation": "./ui/theme/",\
         "packageDependencies": [\
@@ -4919,6 +5825,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["colornames", [\
+      ["npm:1.1.1", {\
+        "packageLocation": "./.yarn/cache/colornames-npm-1.1.1-7336d028e4-04df188a7b.zip/node_modules/colornames/",\
+        "packageDependencies": [\
+          ["colornames", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["commander", [\
       ["npm:2.20.3", {\
         "packageLocation": "./.yarn/cache/commander-npm-2.20.3-d8dcbaa39b-90c5b68986.zip/node_modules/commander/",\
@@ -6298,6 +7213,37 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["framer-motion", [\
+      ["npm:11.1.9", {\
+        "packageLocation": "./.yarn/cache/framer-motion-npm-11.1.9-dd53bf76d6-fadd08af08.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:11.1.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:11.1.9", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-fa690a8cf0/0/cache/framer-motion-npm-11.1.9-dd53bf76d6-fadd08af08.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:11.1.9"],\
+          ["@emotion/is-prop-valid", null],\
+          ["@types/emotion__is-prop-valid", null],\
+          ["@types/react", "npm:18.3.1"],\
+          ["@types/react-dom", null],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", null],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/is-prop-valid",\
+          "@types/emotion__is-prop-valid",\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["fs-constants", [\
       ["npm:1.0.0", {\
         "packageLocation": "./.yarn/cache/fs-constants-npm-1.0.0-59576b2177-18f5b71837.zip/node_modules/fs-constants/",\
@@ -6731,6 +7677,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hasown", "npm:2.0.2"],\
           ["function-bind", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["hex-rgb", [\
+      ["npm:4.3.0", {\
+        "packageLocation": "./.yarn/cache/hex-rgb-npm-4.3.0-5f12201aeb-c0d59346b6.zip/node_modules/hex-rgb/",\
+        "packageDependencies": [\
+          ["hex-rgb", "npm:4.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8208,6 +9163,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["lodash.padend", [\
+      ["npm:4.6.1", {\
+        "packageLocation": "./.yarn/cache/lodash.padend-npm-4.6.1-6a28392d72-9553cdc2ca.zip/node_modules/lodash.padend/",\
+        "packageDependencies": [\
+          ["lodash.padend", "npm:4.6.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.trimstart", [\
+      ["npm:4.5.1", {\
+        "packageLocation": "./.yarn/cache/lodash.trimstart-npm-4.5.1-ad539ab14e-66280d921c.zip/node_modules/lodash.trimstart/",\
+        "packageDependencies": [\
+          ["lodash.trimstart", "npm:4.5.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["lodash.words", [\
+      ["npm:4.2.0", {\
+        "packageLocation": "./.yarn/cache/lodash.words-npm-4.2.0-ff45c1e566-bc15cd6d31.zip/node_modules/lodash.words/",\
+        "packageDependencies": [\
+          ["lodash.words", "npm:4.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["loose-envify", [\
       ["npm:1.4.0", {\
         "packageLocation": "./.yarn/cache/loose-envify-npm-1.4.0-6307b72ccf-6517e24e0c.zip/node_modules/loose-envify/",\
@@ -8566,10 +9548,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:14.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/next-virtual-b6ad55729f/0/cache/next-npm-14.1.0-a62036d298-1db512c5c8.zip/node_modules/next/",\
+      ["virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:14.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/next-virtual-55a77ca017/0/cache/next-npm-14.1.0-a62036d298-1db512c5c8.zip/node_modules/next/",\
         "packageDependencies": [\
-          ["next", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:14.1.0"],\
+          ["next", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:14.1.0"],\
           ["@next/env", "npm:14.1.0"],\
           ["@next/swc-darwin-arm64", "npm:14.1.0"],\
           ["@next/swc-darwin-x64", "npm:14.1.0"],\
@@ -8591,9 +9573,9 @@ const RAW_RUNTIME_STATE =
           ["graceful-fs", "npm:4.2.11"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.2.0"],\
-          ["react-dom", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
           ["sass", null],\
-          ["styled-jsx", "virtual:b6ad55729f22d05a223fa60af59846bcf7d562db6fdc604558eeb8b36e86df2d94b238be44ec6fd9807332dd54b1dcdd80ec8563abb4e66f6d0aa01e485f4b40#npm:5.1.1"]\
+          ["styled-jsx", "virtual:55a77ca01742e667ce0db87eeba955b4ab8dc2a01fb3606d0ced6e77d238c3be714b8d330a99a9e00e6c8bddbfc3299c01a4f02eb63a1e401d5e0d525ca7ff56#npm:5.1.1"]\
         ],\
         "packagePeers": [\
           "@opentelemetry/api",\
@@ -9364,11 +10346,26 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/react-dom-virtual-c74d5e1579/0/cache/react-dom-npm-18.2.0-dd675bca1c-ca5e7762ec.zip/node_modules/react-dom/",\
+      ["virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-dom-virtual-432c20dd5d/0/cache/react-dom-npm-18.2.0-dd675bca1c-ca5e7762ec.zip/node_modules/react-dom/",\
         "packageDependencies": [\
-          ["react-dom", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0"],\
+          ["react-dom", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:18.2.0"],\
           ["@types/react", "npm:18.3.1"],\
+          ["loose-envify", "npm:1.4.0"],\
+          ["react", "npm:18.2.0"],\
+          ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:18.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-dom-virtual-0c83dfbbe1/0/cache/react-dom-npm-18.2.0-dd675bca1c-ca5e7762ec.zip/node_modules/react-dom/",\
+        "packageDependencies": [\
+          ["react-dom", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:18.2.0"],\
+          ["@types/react", "npm:18.2.48"],\
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.2.0"],\
           ["scheduler", "npm:0.23.2"]\
@@ -9571,6 +10568,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/reusify-npm-1.0.4-95ac4aec11-14222c9e1d.zip/node_modules/reusify/",\
         "packageDependencies": [\
           ["reusify", "npm:1.0.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["rgb-hex", [\
+      ["npm:3.0.0", {\
+        "packageLocation": "./.yarn/cache/rgb-hex-npm-3.0.0-3ae567c8ec-45959f777c.zip/node_modules/rgb-hex/",\
+        "packageDependencies": [\
+          ["rgb-hex", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10007,6 +11013,21 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["string-to-color", [\
+      ["npm:2.2.2", {\
+        "packageLocation": "./.yarn/cache/string-to-color-npm-2.2.2-d9e25dc808-d906d505e6.zip/node_modules/string-to-color/",\
+        "packageDependencies": [\
+          ["string-to-color", "npm:2.2.2"],\
+          ["colornames", "npm:1.1.1"],\
+          ["hex-rgb", "npm:4.3.0"],\
+          ["lodash.padend", "npm:4.6.1"],\
+          ["lodash.trimstart", "npm:4.5.1"],\
+          ["lodash.words", "npm:4.2.0"],\
+          ["rgb-hex", "npm:3.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["string-width", [\
       ["npm:4.2.3", {\
         "packageLocation": "./.yarn/cache/string-width-npm-4.2.3-2c27177bae-e52c10dc3f.zip/node_modules/string-width/",\
@@ -10179,10 +11200,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:b6ad55729f22d05a223fa60af59846bcf7d562db6fdc604558eeb8b36e86df2d94b238be44ec6fd9807332dd54b1dcdd80ec8563abb4e66f6d0aa01e485f4b40#npm:5.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-1af9a068ae/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\
+      ["virtual:55a77ca01742e667ce0db87eeba955b4ab8dc2a01fb3606d0ced6e77d238c3be714b8d330a99a9e00e6c8bddbfc3299c01a4f02eb63a1e401d5e0d525ca7ff56#npm:5.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-f2f12c2291/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\
         "packageDependencies": [\
-          ["styled-jsx", "virtual:b6ad55729f22d05a223fa60af59846bcf7d562db6fdc604558eeb8b36e86df2d94b238be44ec6fd9807332dd54b1dcdd80ec8563abb4e66f6d0aa01e485f4b40#npm:5.1.1"],\
+          ["styled-jsx", "virtual:55a77ca01742e667ce0db87eeba955b4ab8dc2a01fb3606d0ced6e77d238c3be714b8d330a99a9e00e6c8bddbfc3299c01a4f02eb63a1e401d5e0d525ca7ff56#npm:5.1.1"],\
           ["@babel/core", null],\
           ["@types/babel-plugin-macros", null],\
           ["@types/babel__core", null],\
@@ -10198,6 +11219,37 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "babel-plugin-macros",\
           "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["styled-system", [\
+      ["npm:5.1.5", {\
+        "packageLocation": "./.yarn/cache/styled-system-npm-5.1.5-64d59c22e4-2d4df92d78.zip/node_modules/styled-system/",\
+        "packageDependencies": [\
+          ["styled-system", "npm:5.1.5"],\
+          ["@styled-system/background", "npm:5.1.2"],\
+          ["@styled-system/border", "npm:5.1.5"],\
+          ["@styled-system/color", "npm:5.1.2"],\
+          ["@styled-system/core", "npm:5.1.2"],\
+          ["@styled-system/flexbox", "npm:5.1.2"],\
+          ["@styled-system/grid", "npm:5.1.2"],\
+          ["@styled-system/layout", "npm:5.1.2"],\
+          ["@styled-system/position", "npm:5.1.2"],\
+          ["@styled-system/shadow", "npm:5.1.2"],\
+          ["@styled-system/space", "npm:5.1.2"],\
+          ["@styled-system/typography", "npm:5.1.2"],\
+          ["@styled-system/variant", "npm:5.1.5"],\
+          ["object-assign", "npm:4.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["styled-tools", [\
+      ["npm:1.7.2", {\
+        "packageLocation": "./.yarn/cache/styled-tools-npm-1.7.2-97a33384f1-d9d74e1450.zip/node_modules/styled-tools/",\
+        "packageDependencies": [\
+          ["styled-tools", "npm:1.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -10331,14 +11383,19 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
+          ["@emotion/react", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.3"],\
+          ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:20.12.8"],\
           ["@types/react", "npm:18.3.1"],\
+          ["@types/styled-system", "npm:5.1.22"],\
           ["eslint", "npm:8.57.0"],\
           ["husky", "npm:9.0.11"],\
           ["prettier", "npm:3.1.1"],\
+          ["react", "npm:18.2.0"],\
+          ["styled-system", "npm:5.1.5"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\

@@ -1,0 +1,16 @@
+{
+  "name": "@ui/tag",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0"
+  }
+}
