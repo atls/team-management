@@ -583,7 +583,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@atls-ui-parts-sidebar-virtual-1799fe2727/0/cache/@atls-ui-parts-sidebar-npm-0.1.1-6904bb3aec-08c50fd6d8.zip/node_modules/@atls-ui-parts/sidebar/",\
         "packageDependencies": [\
           ["@atls-ui-parts/sidebar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
+          ["@atls-ui-parts/switch", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#npm:0.1.1"],\
           ["@emotion/styled", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:11.11.0"],\
+          ["@types/atls-ui-parts__switch", null],\
           ["@types/emotion__styled", null],\
           ["@types/framer-motion", null],\
           ["@types/react", "npm:18.3.1"],\
@@ -595,7 +597,9 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@atls-ui-parts/switch",\
           "@emotion/styled",\
+          "@types/atls-ui-parts__switch",\
           "@types/emotion__styled",\
           "@types/framer-motion",\
           "@types/react",\
