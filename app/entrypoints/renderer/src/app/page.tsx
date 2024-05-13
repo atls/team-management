@@ -2,12 +2,12 @@
 
 import React             from 'react'
 
+import { Input }         from '@ui/input'
 import { ThemeProvider } from '@ui/theme'
-import {Input}  from '@ui/input'
 
 const Page = () => (
   <ThemeProvider>
-	<Input placeholder='placeholder'/>
+    <Input placeholder='placeholder' />
   </ThemeProvider>
 )
 

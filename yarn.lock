@@ -2213,6 +2213,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.0"
     "@types/styled-system": "npm:^5"
     "@ui/utils": "workspace:*"
+    react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:

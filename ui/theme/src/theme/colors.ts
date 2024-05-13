@@ -1,18 +1,7 @@
 export const colors = {
-  input: {
-    font: 'rgb(128, 127, 127)',
-  },
-  switch: {
-    default: {
-      background: 'rgb(128, 127, 127)',
-      hover: {
-        background: 'rgb(128, 127, 127)',
-      },
-    },
-    checked: {
-      hover: {
-        background: 'rgb(128, 127, 127)',
-      },
-    },
-  },
+  white: '#FFFFFF',
+  gray_200: '#E4E4E4',
+  gray_800: '#949494',
+  gray_1400: '#434343',
+  gray_1600: '#282828',
 }

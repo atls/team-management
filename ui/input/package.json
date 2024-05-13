@@ -1,12 +1,10 @@
 {
   "name": "@ui/input",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
-    "@ui/utils": "workspace:*"
+    "@ui/utils": "workspace:*",
+    "react": "18.2.0"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
