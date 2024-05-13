@@ -1,7 +1,36 @@
+const white = '#FFFFFF'
+const gray100 = '#F2F2F2'
+const gray200 = '#E4E4E4'
+const gray400 = '#C9C9C9'
+const gray800 = '#949494'
+const gray1400 = '#434343'
+const gray1600 = '#282828'
+
+const blue400 = '#508EE9'
+
 export const colors = {
-  white: '#FFFFFF',
-  gray_200: '#E4E4E4',
-  gray_800: '#949494',
-  gray_1400: '#434343',
-  gray_1600: '#282828',
+  white,
+  gray100,
+  gray200,
+  gray800,
+  gray1400,
+  gray1600,
+  switch: {
+    default: {
+      background: gray100,
+      hover: {
+        background: gray100,
+      },
+    },
+    checked: {
+      background: gray100,
+      hover: {
+        background: gray100,
+      },
+    },
+    thumb: {
+      default: gray400,
+      checked: blue400,
+    },
+  },
 }
