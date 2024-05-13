@@ -5,7 +5,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "scripts": {
-    "build": "generate-icons src/ -i /ui/icons/icons"
+    "build": "generate-icons src/ -i /icons"
   },
   "dependencies": {
     "@ui/icons": "workspace:*"
@@ -17,7 +17,6 @@
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
     "@types/styled-system": "^5",
-    "glob": "10.3.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "5.1.5",
