@@ -1,0 +1,1 @@
+import { getColorReplacement } from '@atls-ui-generators/icons'
