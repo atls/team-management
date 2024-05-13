@@ -1,7 +1,6 @@
 import { SwitchProps } from '@atls-ui-parts/switch'
 
-type ToggleType = 'base' | 'icon' | 'mode'
-
-export interface ToggleProps extends SwitchProps {
-	type?: ToggleType
+export interface IconSwitchProps extends SwitchProps {
+	// TODO make it icon props
+	icon?: any
 }

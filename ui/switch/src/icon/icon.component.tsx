@@ -9,8 +9,10 @@ import React                       from 'react'
 import { useRef }                  from 'react'
 import { useHover }                from 'react-laag'
 
-import { ToggleProps }             from './icon.interfaces'
+import { IconProps }             from './icon.interfaces'
+
 import { ThumbElement }            from './thumb/thumb.element'
+
 import { appearanceHandleStyles }  from './icon.styles'
 import { appearanceThumbStyles }   from './icon.styles'
 import { shapeThumbStyles }        from './icon.styles'
@@ -25,16 +27,16 @@ const Thumb = styled(ThumbElement)<any>(
 
 const thumbMotionVariants = {
   visible: {
-    left: 0,
+    left: 2,
   },
   checked: {
-    left: 16,
+    left: 44,
   },
 }
 
 const Element = styled(HandleElement)(baseHandleStyles, appearanceHandleStyles, shapeHandleStyles)
 
-const IconSwitch = ({ disabled, checked: defaultValue, onChange }: ToggleProps) => {
+const IconSwitch = ({ disabled, checked: defaultValue, onChange }: IconProps) => {
   const node = useRef<HTMLButtonElement>(null)
   const [hover, hoverProps] = useHover()
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)

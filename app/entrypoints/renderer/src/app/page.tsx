@@ -13,7 +13,6 @@ const Page = () => (
     <Input placeholder='placeholder' />
     <BaseSwitch />
     <IconSwitch />
-    <ModeSwitch />
   </ThemeProvider>
 )
 
