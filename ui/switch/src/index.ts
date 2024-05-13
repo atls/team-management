@@ -1,1 +1,3 @@
-export * from './switch.component'
+export * from './base'
+export * from './icon'
+export * from './mode'

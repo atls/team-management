@@ -9,12 +9,12 @@ import React                       from 'react'
 import { useRef }                  from 'react'
 import { useHover }                from 'react-laag'
 
-import { SwitchProps }             from './switch.interfaces'
+import { ToggleProps }             from './icon.interfaces'
 import { ThumbElement }            from './thumb/thumb.element'
-import { appearanceHandleStyles }  from './switch.styles'
-import { appearanceThumbStyles }   from './switch.styles'
-import { shapeThumbStyles }        from './switch.styles'
-import { shapeHandleStyles }       from './switch.styles'
+import { appearanceHandleStyles }  from './mode.styles'
+import { appearanceThumbStyles }   from './mode.styles'
+import { shapeThumbStyles }        from './mode.styles'
+import { shapeHandleStyles }       from './mode.styles'
 
 const Thumb = styled(ThumbElement)<any>(
   baseThumbStyles,
@@ -23,7 +23,7 @@ const Thumb = styled(ThumbElement)<any>(
   ifDisabledThumbModifier()
 )
 
-export const thumbMotionVariants = {
+const thumbMotionVariants = {
   visible: {
     left: 0,
   },
@@ -34,7 +34,7 @@ export const thumbMotionVariants = {
 
 const Element = styled(HandleElement)(baseHandleStyles, appearanceHandleStyles, shapeHandleStyles)
 
-const Switch = ({ disabled, checked: defaultValue, onChange }: SwitchProps) => {
+const ModeSwitch = ({ disabled, checked: defaultValue, onChange }: ToggleProps) => {
   const node = useRef<HTMLButtonElement>(null)
   const [hover, hoverProps] = useHover()
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
@@ -52,4 +52,4 @@ const Switch = ({ disabled, checked: defaultValue, onChange }: SwitchProps) => {
   )
 }
 
-export { Switch }
+export { ModeSwitch }
