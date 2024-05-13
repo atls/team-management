@@ -1,0 +1,14 @@
+{
+  "name": "@ui/utils",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@atls-utils/use-hover": "0.0.2",
+    "react-laag": "2.0.5"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}
