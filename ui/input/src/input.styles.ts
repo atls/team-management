@@ -18,13 +18,13 @@ export const shapeStyles = createShapeStyles({
 })
 
 const lightAppearanceStyles = createAppearanceStyles({
-  backgroundColor: prop('theme.colors.gray_200'),
-  fontColor: prop('theme.colors.gray_1600'),
+  backgroundColor: prop('theme.colors.gray200'),
+  fontColor: prop('theme.colors.gray1600'),
   // borderColor: '#DADEED',
 })
 
 const darkAppearanceStyles = createAppearanceStyles({
-  backgroundColor: prop('theme.colors.gray_1400'),
+  backgroundColor: prop('theme.colors.gray1400'),
   fontColor: prop('theme.colors.white'),
   // borderColor: '#DADEED',
 })
