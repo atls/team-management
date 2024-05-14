@@ -1,5 +1,5 @@
 interface ScrollProps {
-    children: React.ReactNode;
-    height?: number
+  children: React.ReactNode
+  height?: number
 }
-export default ScrollProps;
+export default ScrollProps

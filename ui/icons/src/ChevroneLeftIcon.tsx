@@ -4,6 +4,7 @@ import { useTheme }  from '@emotion/react'
 import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
+
 export const ChevroneLeftIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (

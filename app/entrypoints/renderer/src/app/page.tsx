@@ -1,29 +1,42 @@
 'use client'
 
-import React             from 'react'
+import React            from 'react'
 
 import { Divider }       from '@ui/divider'
-import { Layout }        from '@ui/layout'
 import { Box }           from '@ui/layout'
-import { Circle }        from '@ui/progress'
+import { Line }          from '@ui/progress'
+import { Scroll }        from '@ui/scroll'
 import { ThemeProvider } from '@ui/theme'
 
 const Page = () => (
   <ThemeProvider>
-    <Circle percent={25} />
-    <Layout>
+    <Line percent={25} />
+    <Scroll height={20}>
       <Box flexDirection='column'>
-        <div>
-          <p>Apple</p>
-        </div>
-        <Divider weight={10} color='gray_200' />
+        <Divider width={10} color='gray' />
         <p>Banana</p>
         <Divider width={10} height={10} backgroundColor='gray' />
         <p>Grapefruit</p>
         <Divider width={10} height={10} backgroundColor='gray' />
         <p>Peach</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Grapefruit</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Peach</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Grapefruit</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Peach</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Grapefruit</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Peach</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Grapefruit</p>
+        <Divider width={10} height={10} backgroundColor='gray' />
+        <p>Peach</p>
       </Box>
-    </Layout>
+    </Scroll>
   </ThemeProvider>
 )
 

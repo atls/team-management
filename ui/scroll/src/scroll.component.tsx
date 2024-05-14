@@ -1,6 +1,8 @@
-import React from 'react';
-import  ScrollProps  from './scroll.interface';
-import styled from '@emotion/styled';
+import styled       from '@emotion/styled'
+
+import React        from 'react'
+
+import ScrollProps from './scroll.interface'
 
 const ScrollContainer = styled.div`
   width: 100%;
@@ -14,10 +16,10 @@ const ScrollContainer = styled.div`
     border-radius: 20px;
     border: 3px solid transparent;
   }
-`;
+`
 
 const Scroll: React.FC<ScrollProps> = ({ children }) => {
-    return <ScrollContainer>{children}</ScrollContainer>;
-};
+  return <ScrollContainer>{children}</ScrollContainer>
+}
 
-export { Scroll } ;
+export { Scroll }
