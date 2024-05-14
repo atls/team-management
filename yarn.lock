@@ -178,6 +178,7 @@ __metadata:
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/progress": "workspace:*"
+    "@ui/scroll": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.2.0"
@@ -2502,6 +2503,29 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/react": 18.3.1
+    "@types/react-dom": 18.3.0
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/scroll@workspace:*, @ui/scroll@workspace:ui/scroll":
+  version: 0.0.0-use.local
+  resolution: "@ui/scroll@workspace:ui/scroll"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:^18"
+    "@types/styled-system": "npm:^5"
+    "@ui/scroll": "workspace:*"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
