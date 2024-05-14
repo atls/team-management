@@ -1,13 +1,11 @@
-import { Tag }        from '@ui/tag'
-
 import React          from 'react'
-import { FC }         from 'react'
 
 import { ImageBlock } from '@ui/image'
-import { NextImage }  from '@ui/image'
+// import { NextImage }  from '@ui/image'
 import { Box }        from '@ui/layout'
+import { Tag }        from '@ui/tag'
 
-import profile        from '../assets/profile.png'
+// import profile        from '../assets/profile.png'
 
 export const Card = ({ children }) => {
   return (
@@ -29,8 +27,8 @@ export const Card = ({ children }) => {
         boxShadow={'0px 4px 20px 0px #00000040'}
         backgroundColor={'black'}
       >
-        <NextImage width={407} height={380} alt={'alt'} borderRadius={24} src={profile} />
-        {/*<ImageBlock src='https://www.figma.com/file/2vNHefkDcMKAFSnw69RbMM/image/efb6f62056dfdd8faea9ed52a81fbdcd844baa28' />*/}
+        {/*<NextImage width={407} height={380} alt={'alt'} src={profile} />*/}
+        <ImageBlock src='https://www.figma.com/file/2vNHefkDcMKAFSnw69RbMM/image/efb6f62056dfdd8faea9ed52a81fbdcd844baa28' />
         <Box
           position={'absolute'}
           justifyContent={'space-between'}

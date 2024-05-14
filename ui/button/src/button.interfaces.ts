@@ -1,6 +1,8 @@
 import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 
 export type ButtonVariant =
+  | 'blackBackgroundButton'
+  | 'whiteBackgroundButton'
   | 'transparentBackground'
   | 'transparentBackgroundPurpleText'
   | 'darkToPurpleBackground'
@@ -35,6 +37,7 @@ export type ButtonSize =
   | 'middlingPaddingSemiBigHeight'
   | 'semiLittlePaddingMicroHeight'
   | 'semiLittlePaddingSemiMediumHeight'
+  | 'middlingRoundedPaddingtStyles'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
@@ -47,4 +50,5 @@ export interface ButtonProps extends BaseButtonProps {
   valueHeight?: string | object
   valueBackground?: string | object
   horizontalLocation?: 'left' | 'right'
+  boxShadow?: string
 }

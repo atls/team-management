@@ -6,6 +6,7 @@ import React                from 'react'
 import { FC }               from 'react'
 import { forwardRef }       from 'react'
 import { useState }         from 'react'
+import { boxShadow }        from 'styled-system'
 
 import { ButtonProps }      from './button.interfaces'
 import { IconAttachment }   from './icon-attachment'
@@ -30,6 +31,7 @@ export const Button: FC<ButtonProps> = forwardRef(({ children, active, ...props 
   if (props.horizontalLocation === 'right') {
     return (
       <ButtonElement
+        boxShadow={' 0px 4px 9px 0px rgba(0, 0, 0, 0.2)'}
         hover={hover}
         pressed={pressed || active}
         onMouseDown={() => setPressed(true)}

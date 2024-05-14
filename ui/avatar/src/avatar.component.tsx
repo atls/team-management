@@ -7,10 +7,13 @@ import { createAppearanceStyles } from '@atls-ui-parts/avatar'
 
 import React                      from 'react'
 import stringToColor              from 'string-to-color'
+import { FC }                      from 'react'
 
 import { ImageBlock }             from '@ui/image'
 
-export const Avatar = ({
+import { AvatarProps }             from './avatar.interfaces'
+
+export const Avatar: FC<AvatarProps> = ({
   backgroundColor,
   borderWidth,
   borderColor,

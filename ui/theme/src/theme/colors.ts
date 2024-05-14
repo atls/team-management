@@ -130,5 +130,50 @@ export const colors = {
         border: 'transparent',
       },
     },
+    blackBackgroundButton: {
+      default: {
+        background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'transparent',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
+    whiteBackgroundButton: {
+      default: {
+        background: 'rgba(255, 255, 255, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+        boxShadow: '2 2 ',
+      },
+      hover: {
+        background: 'rgba(255, 255, 255, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'transparent',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
   },
 }
