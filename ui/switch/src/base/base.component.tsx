@@ -9,7 +9,7 @@ import React                       from 'react'
 import { useRef }                  from 'react'
 import { useHover }                from 'react-laag'
 
-import { ToggleProps }             from './base.interfaces'
+import { BaseSwitchProps }         from './base.interfaces'
 import { ThumbElement }            from './thumb/thumb.element'
 import { appearanceHandleStyles }  from './base.styles'
 import { appearanceThumbStyles }   from './base.styles'
@@ -34,7 +34,7 @@ const thumbMotionVariants = {
 
 const Element = styled(HandleElement)(baseHandleStyles, appearanceHandleStyles, shapeHandleStyles)
 
-const BaseSwitch = ({ disabled, checked: defaultValue, onChange }: ToggleProps) => {
+const BaseSwitch = ({ disabled, checked: defaultValue, onChange }: BaseSwitchProps) => {
   const node = useRef<HTMLButtonElement>(null)
   const [hover, hoverProps] = useHover()
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)

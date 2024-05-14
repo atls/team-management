@@ -1,1 +1,1 @@
-export * from './TelegramIcon'
+export * from './TestIcon'

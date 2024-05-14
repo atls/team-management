@@ -2,20 +2,21 @@
 
 import React             from 'react'
 
-import { ThemeProvider } from '@ui/theme'
+import { TestIcon }      from '@ui/icons-test'
 import { Input }         from '@ui/input'
-import { BaseSwitch }        from '@ui/switch'
-import { IconSwitch }        from '@ui/switch'
-import { ThemeSwitch }        from '@ui/switch'
-import { TelegramIcon }      from '@ui/icons-test'
+import { BaseSwitch }    from '@ui/switch'
+import { IconSwitch }    from '@ui/switch'
+import { ThemeSwitch }   from '@ui/switch'
+import { ThemeProvider } from '@ui/theme'
 
 const Page = () => (
   <ThemeProvider>
     <Input placeholder='placeholder' />
     <BaseSwitch />
     <IconSwitch>
-			<TelegramIcon width={16} height={16} />
-		</IconSwitch>
+      <TestIcon width={16} height={16} color='white' />
+    </IconSwitch>
+    <ThemeSwitch />
   </ThemeProvider>
 )
 

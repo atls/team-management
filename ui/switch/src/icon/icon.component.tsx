@@ -8,16 +8,13 @@ import React                       from 'react'
 import { useRef }                  from 'react'
 import { useHover }                from 'react-laag'
 
-import { IconSwitchProps }             from './icon.interfaces'
-
+import { IconSwitchProps }         from './icon.interfaces'
 import { ThumbElement }            from './thumb/thumb.element'
-
 import { appearanceHandleStyles }  from './icon.styles'
 import { shapeHandleStyles }       from './icon.styles'
-import { baseThumbStyles }        from './icon.styles'
+import { baseThumbStyles }         from './icon.styles'
 import { shapeThumbStyles }        from './icon.styles'
 import { appearanceThumbStyles }   from './icon.styles'
-
 
 const Thumb = styled(ThumbElement)<any>(
   baseThumbStyles,
@@ -51,8 +48,8 @@ const IconSwitch = ({ disabled, checked: defaultValue, onChange, children }: Ico
           ...thumbMotionVariants,
         }}
       >
-			{children}
-			</Thumb>
+        {children}
+      </Thumb>
     </Element>
   )
 }

@@ -1,8 +1,9 @@
-import { styleFn }    from 'styled-system'
-import { ifProp }     from 'styled-tools'
-import { switchProp } from 'styled-tools'
-import { prop }       from 'styled-tools'
-import { baseThumbStyles as hyperionBaseThumbStyles }         from '@atls-ui-parts/switch'
+import { baseThumbStyles as hyperionBaseThumbStyles } from '@atls-ui-parts/switch'
+
+import { styleFn }                                    from 'styled-system'
+import { ifProp }                                     from 'styled-tools'
+import { switchProp }                                 from 'styled-tools'
+import { prop }                                       from 'styled-tools'
 
 export const appearanceDefaultHandleStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.switch.icon.default.background,
@@ -41,9 +42,9 @@ export const shapeNormalSizeHandleStyles: styleFn = () => ({
 
 export const baseThumbStyles: styleFn = () => ({
   display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'center',
-	...hyperionBaseThumbStyles
+  alignItems: 'center',
+  justifyContent: 'center',
+  ...hyperionBaseThumbStyles,
 })
 
 export const shapeNormalSizeThumbStyles: styleFn = () => ({
@@ -66,11 +67,11 @@ export const appearanceHandleStyles = ifProp(
 )
 
 const defaultAppearanceThumbStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.thumb.default,
+  backgroundColor: theme.colors.switch.icon.default.thumb,
 })
 
 const checkedAppearanceThumbStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.thumb.checked,
+  backgroundColor: theme.colors.switch.icon.checked.thumb,
 })
 
 export const appearanceThumbStyles = ifProp(

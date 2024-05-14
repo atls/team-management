@@ -1,5 +1,4 @@
 const white = '#FFFFFF'
-const black = '#000000'
 const gray100 = '#F2F2F2'
 const gray200 = '#E4E4E4'
 const gray400 = '#C9C9C9'
@@ -18,17 +17,17 @@ export const colors = {
   gray1400,
   gray1600,
   switch: {
-		base: {},
-		icon: {
-			default: {
-      	background: gray100,
-				thumb: gray400
-			},
-			checked: {
-      	background: blue100,
-				thumb: blue400
-			}
-		},
+    base: {},
+    icon: {
+      default: {
+        background: gray100,
+        thumb: gray1600,
+      },
+      checked: {
+        background: blue100,
+        thumb: blue400,
+      },
+    },
     default: {
       background: gray100,
       hover: {
