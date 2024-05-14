@@ -5,19 +5,17 @@ import { FunctionComponent } from 'react'
 import { motion }            from 'framer-motion'
 import { useMemo }           from 'react'
 
-export const thumbMotionVariants = {
-  visible: {
-    left: 0,
-  },
-  checked: {
-    left: 16,
-  },
-}
-
-const ThumbElement: FunctionComponent<ThumbElementProps> = ({ checked, ...props }) => {
+const ThumbElement: FunctionComponent<ThumbElementProps> = ({ checked, children, ...props }) => {
   const initial = useMemo(() => (checked ? 'checked' : 'visible'), [checked])
 
-  return <motion.span initial={initial} animate={checked ? 'checked' : 'visible'} {...props} />
+	// TODO уточни этот момент
+
+	const color = checked ? 'white' : 'black'
+  return (
+	<motion.span initial={initial} animate={checked ? 'checked' : 'visible'} {...props} >
+		{children}
+	</motion.span>
+	)
 }
 
 export { ThumbElement }

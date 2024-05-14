@@ -11,10 +11,10 @@ import { useHover }                from 'react-laag'
 
 import { ToggleProps }             from './icon.interfaces'
 import { ThumbElement }            from './thumb/thumb.element'
-import { appearanceHandleStyles }  from './mode.styles'
-import { appearanceThumbStyles }   from './mode.styles'
-import { shapeThumbStyles }        from './mode.styles'
-import { shapeHandleStyles }       from './mode.styles'
+import { appearanceHandleStyles }  from './theme.styles'
+import { appearanceThumbStyles }   from './theme.styles'
+import { shapeThumbStyles }        from './theme.styles'
+import { shapeHandleStyles }       from './theme.styles'
 
 const Thumb = styled(ThumbElement)<any>(
   baseThumbStyles,

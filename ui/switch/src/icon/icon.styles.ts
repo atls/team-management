@@ -2,6 +2,7 @@ import { styleFn }    from 'styled-system'
 import { ifProp }     from 'styled-tools'
 import { switchProp } from 'styled-tools'
 import { prop }       from 'styled-tools'
+import { baseThumbStyles as hyperionBaseThumbStyles }         from '@atls-ui-parts/switch'
 
 export const appearanceDefaultHandleStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.switch.icon.default.background,
@@ -36,6 +37,13 @@ export const appearanceCheckedDisabledHandleStyles: styleFn = ({ theme }) => ({
 export const shapeNormalSizeHandleStyles: styleFn = () => ({
   width: 70,
   height: 28,
+})
+
+export const baseThumbStyles: styleFn = () => ({
+  display: 'flex',
+	alignItems: 'center',
+	justifyContent: 'center',
+	...hyperionBaseThumbStyles
 })
 
 export const shapeNormalSizeThumbStyles: styleFn = () => ({
