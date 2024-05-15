@@ -218,6 +218,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/layout@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/layout@npm:0.1.1"
+  dependencies:
+    "@emotion/is-prop-valid": "npm:1.2.1"
+    csstype: "npm:3.1.3"
+  peerDependencies:
+    "@emotion/react": 11.11.3
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+  checksum: 10/69596f6b403524a2eb4f6dcef023204d06c8dd8d175216352768bc7e9ec832e1bd8f98af30eb6d4359ff0665bf158fccfb6ad1eef2247797ccb6459ee351f988
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/styles@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/styles@npm:0.1.1"
@@ -807,6 +822,15 @@ __metadata:
   version: 0.9.1
   resolution: "@emotion/hash@npm:0.9.1"
   checksum: 10/716e17e48bf9047bf9383982c071de49f2615310fb4e986738931776f5a823bc1f29c84501abe0d3df91a3803c80122d24e28b57351bca9e01356ebb33d89876
+  languageName: node
+  linkType: hard
+
+"@emotion/is-prop-valid@npm:1.2.1":
+  version: 1.2.1
+  resolution: "@emotion/is-prop-valid@npm:1.2.1"
+  dependencies:
+    "@emotion/memoize": "npm:^0.8.1"
+  checksum: 10/fe231c472d38b3bbe519bcc9a5585cd41c45604147f3a065e333caf0f695d668aa21bc4229e657c1b6ea7398e096899e6ad54662548c73f11f6ba594aebd76a1
   languageName: node
   linkType: hard
 
@@ -2322,10 +2346,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:
+    "@atls-ui-parts/layout": "npm:0.1.1"
     "@atls-ui-parts/switch": "npm:0.1.1"
     "@emotion/react": "npm:11.11.3"
     "@emotion/styled": "npm:11.11.0"
     "@types/styled-system": "npm:^5"
+    "@ui/icons-test": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-laag: "npm:2.0.5"
@@ -4017,7 +4043,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
+"csstype@npm:3.1.3, csstype@npm:^3.0.2":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade

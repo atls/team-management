@@ -28,6 +28,18 @@ export const colors = {
         thumb: blue400,
       },
     },
+    theme: {
+      default: {
+        background: white,
+        thumb: gray1600,
+      },
+      checked: {
+        thumb: blue400,
+      },
+      hover: {
+        thumb: gray100,
+      },
+    },
     default: {
       background: gray100,
       hover: {

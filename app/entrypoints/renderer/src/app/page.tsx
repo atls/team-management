@@ -10,6 +10,7 @@ import { ThemeSwitch }   from '@ui/switch'
 import { ThemeProvider } from '@ui/theme'
 
 const Page = () => (
+  // TODO экспорт белых иконок с прозрачным фоном
   <ThemeProvider>
     <Input placeholder='placeholder' />
     <BaseSwitch />

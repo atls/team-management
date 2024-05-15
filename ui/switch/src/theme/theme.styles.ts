@@ -4,27 +4,13 @@ import { switchProp } from 'styled-tools'
 import { prop }       from 'styled-tools'
 
 export const appearanceDefaultHandleStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.default.background,
+  backgroundColor: theme.colors.switch.theme.default.background,
   borderColor: 'transparent',
-})
-
-export const appearanceDefaultHoverHandleStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.default.hover.background,
-  borderColor: 'transparent',
+  boxShadow: '0px 4px 9px 0px #00000033',
 })
 
 export const appearanceDefaultDisabledHandleStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.switch.default.disabled.background,
-  borderColor: 'transparent',
-})
-
-export const appearanceCheckedHandleStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.checked.background,
-  borderColor: 'transparent',
-})
-
-export const appearanceCheckedHoverHandleStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.switch.checked.hover.background,
   borderColor: 'transparent',
 })
 
@@ -34,8 +20,8 @@ export const appearanceCheckedDisabledHandleStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeNormalSizeHandleStyles: styleFn = () => ({
-  width: 28,
-  height: 12,
+  width: 92,
+  height: 42,
 })
 
 export const shapeNormalSizeThumbStyles: styleFn = () => ({
@@ -48,12 +34,12 @@ export const appearanceHandleStyles = ifProp(
   ifProp(
     prop('disabled', false),
     appearanceCheckedDisabledHandleStyles,
-    ifProp(prop('hover', false), appearanceCheckedHoverHandleStyles, appearanceCheckedHandleStyles)
+    appearanceDefaultHandleStyles
   ),
   ifProp(
     prop('disabled', false),
     appearanceDefaultDisabledHandleStyles,
-    ifProp(prop('hover', false), appearanceDefaultHoverHandleStyles, appearanceDefaultHandleStyles)
+    appearanceDefaultHandleStyles
   )
 )
 
