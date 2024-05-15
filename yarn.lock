@@ -2491,6 +2491,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:
+    "@atls-ui-parts/layout": "npm:0.1.1"
     "@atls-ui-parts/portal": "npm:0.0.7"
     "@emotion/css": "npm:11.11.2"
     "@emotion/react": "npm:11.11.3"
@@ -2500,6 +2501,7 @@ __metadata:
     framer-motion: "npm:10.16.1"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
+    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/css": 11.11.2
     "@emotion/react": 11.11.3
@@ -2507,6 +2509,7 @@ __metadata:
     framer-motion: 10.16.1
     react: 18.2.0
     react-dom: 18.2.0
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 

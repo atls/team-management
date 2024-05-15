@@ -30,19 +30,10 @@ const Page = () => {
 			<ThemeSwitch />
 			<Dropdown onChange={placeholder} items={['first item', 'second item', 'third item']} />
 			<div onClick={modalClick} style={{width: 400, height: 300, backgroundColor: 'red'}}>
+				<h1>click to show modal</h1>
 				<Modal open={modal}>
-					<div
-						style={{
-							position: 'absolute',
-							padding: 40,
-							left: '50%',
-							top: '50%',
-							transform: 'translate(-50%, -50%)',
-							background: '#ffffff',
-						}}
-					>
-						Content in a modal
-					</div>
+					<h1>content in modal</h1>
+					<Input placeholder='placeholder' />
 				</Modal>
 			</div>
 		</ThemeProvider>

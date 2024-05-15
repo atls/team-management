@@ -8,6 +8,7 @@ import {Portal} from '@atls-ui-parts/portal'
 
 import {Backdrop} from './backdrop'
 import {Container} from './container'
+import {ChildContainer} from './child-container'
 import {ModalProps} from './modal.interfaces'
 
 const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({children, open, onClose}) => {
@@ -18,7 +19,9 @@ const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({children, open
 			<Portal>
 				<Container>
 					<Backdrop onClick={onClose} />
-					{children}
+					<ChildContainer>
+						{children}
+					</ChildContainer>
 				</Container>
 			</Portal>
 		)
