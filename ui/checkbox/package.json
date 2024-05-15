@@ -11,8 +11,12 @@
     "@atls-ui-parts/checkbox": "0.1.1"
   },
   "devDependencies": {
+    "@atls-ui-parts/conditional-render": "0.0.7",
+    "@atls-ui-parts/hidden-input": "0.1.1",
+    "@atls-ui-parts/layout": "0.1.1",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
+    "@types/react": "^18",
     "@types/styled-system": "^5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -20,8 +24,11 @@
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
+    "@atls-ui-parts/conditional-render": "*",
+    "@atls-ui-parts/hidden-input": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@types/react": "18.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "*",

@@ -242,6 +242,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/conditional-render@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-parts/conditional-render@npm:0.0.7"
+  peerDependencies:
+    react: 18.2.0
+  checksum: 10/5d49ce1aff9a729f706ad7b6ffe2b2e5ac36fc6db8af64aa5ef4b658850399ecf7bb99fe9c7f1137dc112ec6043976c8dacf530010adf6e214ea1803a4378dd5
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/hidden-input@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/hidden-input@npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+  checksum: 10/f54f8d9ee3f2cb4eb3189796202c6d82a6593a6d42e18050c7266688b600c921ded0745bd47a90b6f13393f16b0df6037f6c7cd8cf51659224894129de19d537
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/layout@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/layout@npm:0.1.1"
@@ -2407,16 +2426,23 @@ __metadata:
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
     "@atls-ui-parts/checkbox": "npm:0.1.1"
+    "@atls-ui-parts/conditional-render": "npm:0.0.7"
+    "@atls-ui-parts/hidden-input": "npm:0.1.1"
+    "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:^18"
     "@types/styled-system": "npm:^5"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
+    "@atls-ui-parts/conditional-render": "*"
+    "@atls-ui-parts/hidden-input": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@types/react": 18.3.1
     react: 18.2.0
     react-dom: 18.2.0
     styled-system: "*"

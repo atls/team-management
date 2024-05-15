@@ -1,7 +1,8 @@
 'use client'
 
-import React            from 'react'
+import React             from 'react'
 
+import { Checkbox }      from '@ui/checkbox'
 import { Divider }       from '@ui/divider'
 import { Box }           from '@ui/layout'
 import { Line }          from '@ui/progress'
@@ -14,6 +15,7 @@ const Page = () => (
     <Scroll height={20}>
       <Box flexDirection='column'>
         <Divider width={10} color='gray' />
+        <Checkbox/>
         <p>Banana</p>
         <Divider width={10} height={10} backgroundColor='gray' />
         <p>Grapefruit</p>
