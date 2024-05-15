@@ -174,6 +174,7 @@ __metadata:
     "@types/node": "npm:20.11.5"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/dropdown": "workspace:*"
     "@ui/icons-test": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/switch": "workspace:*"
@@ -191,6 +192,20 @@ __metadata:
   dependencies:
     grapheme-splitter: "npm:^1.0.4"
   checksum: 10/14ed60cb45750d386c64229ac7bab20e10eedc193503fa4decff764162d329d6d3363ed2cd3debec833186ee54affe4f824f6e8eff531295117fd1ebda200270
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/button@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/button@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/styles": "npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/d48ffa07e5d136ba3cfdf7e67a5c6ce8ef59b522cddea2211b51f7e10946bc4f7b9e928dd19aaad3d84c2ef4b91b300c3c63bf78045431e6310b65e2157ad14e
   languageName: node
   linkType: hard
 
@@ -218,7 +233,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/layout@npm:0.1.1":
+"@atls-ui-parts/layout@npm:*, @atls-ui-parts/layout@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/layout@npm:0.1.1"
   dependencies:
@@ -230,6 +245,25 @@ __metadata:
     react: 18.2.0
     styled-system: 5.1.5
   checksum: 10/69596f6b403524a2eb4f6dcef023204d06c8dd8d175216352768bc7e9ec832e1bd8f98af30eb6d4359ff0665bf158fccfb6ad1eef2247797ccb6459ee351f988
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/select@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/select@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/styles": "npm:0.1.1"
+    downshift: "npm:7.6.2"
+  peerDependencies:
+    "@emotion/react": 11.11.3
+    "@emotion/styled": 11.11.0
+    framer-motion: 10.16.1
+    react: 18.2.0
+    react-dom: 18.2.0
+    react-laag: 2.0.5
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/6fa43c5b56b4152d9117f3c475599c6be52ee5df4223e2f0f56450931cfcd2753175a7d3db7099c2e1176a92682a908a2c4c44c13b67831f0fd95656b1949a41
   languageName: node
   linkType: hard
 
@@ -253,6 +287,34 @@ __metadata:
     styled-system: 5.1.5
     styled-tools: 1.7.2
   checksum: 10/af1c1b0781138d610ec5858e74fa1826579b08bedde09e6b6dcf18f9ce7a038e9127c67bb4646b514d1e3992092982bb5aaf52cddeaff9f338a2be7f74af861a
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/text@npm:0.1.1"
+  dependencies:
+    csstype: "npm:3.1.3"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+  checksum: 10/591c404778acd968a9fd03f3de1a797d0f256d9e89dfd7b596fb9751403e6a5f7ffbb263cb74d9d3a7be2f7c2476162cf656a41d5063bb6666f475c72d466298
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/button@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-proto/button@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/button": "npm:0.1.1"
+    "@emotion/is-prop-valid": "npm:1.2.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/adecff7f76146d3798d8146543ab9faad6a38d33bc005627bfff33c5968722c621a2e12594b748ae700ac60aabd87dc5a69e9655dd106ddd11cc1a7aa6da1ff3
   languageName: node
   linkType: hard
 
@@ -720,7 +782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.8, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.23.2":
   version: 7.24.5
   resolution: "@babel/runtime@npm:7.24.5"
   dependencies:
@@ -815,6 +877,19 @@ __metadata:
     "@emotion/memoize": "npm:^0.8.1"
     stylis: "npm:4.2.0"
   checksum: 10/082e27ea5ace0a54080a1073fdabc62711cbc94e4d966a4fc67aded9148c39a8c07f2757d26a32bddced94794433ee4555bea8471fe6c0eb2409698e12582e7b
+  languageName: node
+  linkType: hard
+
+"@emotion/css@npm:11.11.2":
+  version: 11.11.2
+  resolution: "@emotion/css@npm:11.11.2"
+  dependencies:
+    "@emotion/babel-plugin": "npm:^11.11.0"
+    "@emotion/cache": "npm:^11.11.0"
+    "@emotion/serialize": "npm:^1.1.2"
+    "@emotion/sheet": "npm:^1.2.2"
+    "@emotion/utils": "npm:^1.2.1"
+  checksum: 10/718f758575f05e3610cdef9bdcfcdf17eae1992616c7cc85e29a24ff3b4d3da9968cc1c253a510874c056c22dc73b6b12bd759be9943e20141e0603a3cb35630
   languageName: node
   linkType: hard
 
@@ -2100,6 +2175,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:18.2.18":
+  version: 18.2.18
+  resolution: "@types/react-dom@npm:18.2.18"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10/4ef7725b4cebd4a32e049097ddfdfd855a178e63ead97ab6d3084872e7d6c1acd71aa923488123cd1015f0e0b11489d2b44f674a1df8fe82d7827eabbec6dbf1
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:18.3.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
@@ -2119,12 +2203,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:18.2.48":
+  version: 18.2.48
+  resolution: "@types/react@npm:18.2.48"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10/2e56ea6bd821ae96bd943f727a59d85384eaf5f8a3e6fce4fa1d34453e32d8eedda742432b3857fa0de7a4214bf84ce4239757eb52918e76452c00384731e585
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:^1.0.0":
   version: 1.0.3
   resolution: "@types/responselike@npm:1.0.3"
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/6ac4b35723429b11b117e813c7acc42c3af8b5554caaf1fc750404c1ae59f9b7376bc69b9e9e194a5a97357a597c2228b7173d317320f0360d617b6425212f58
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.23.0
+  resolution: "@types/scheduler@npm:0.23.0"
+  checksum: 10/874d753aa65c17760dfc460a91e6df24009bde37bfd427a031577b30262f7770c1b8f71a21366c7dbc76111967384cf4090a31d65315155180ef14bd7acccb32
   languageName: node
   linkType: hard
 
@@ -2142,7 +2244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-system@npm:^5":
+"@types/styled-system@npm:5.1.22, @types/styled-system@npm:^5":
   version: 5.1.22
   resolution: "@types/styled-system@npm:5.1.22"
   dependencies:
@@ -2302,6 +2404,38 @@ __metadata:
   checksum: 10/4641a829485f67a5d9d3558aa0d152e5ab57b468cfd9653168ce9a141e1f051730669a024505183b64f7a7e5d8f62533af4ebd4ad7366b551390461e9c45ec18
   languageName: node
   linkType: hard
+
+"@ui/dropdown@workspace:*, @ui/dropdown@workspace:ui/dropdown":
+  version: 0.0.0-use.local
+  resolution: "@ui/dropdown@workspace:ui/dropdown"
+  dependencies:
+    "@atls-ui-parts/layout": "npm:*"
+    "@atls-ui-parts/select": "npm:0.1.1"
+    "@atls-ui-parts/text": "npm:0.1.1"
+    "@atls-ui-proto/button": "npm:0.1.1"
+    "@emotion/css": "npm:11.11.2"
+    "@emotion/react": "npm:11.11.3"
+    "@emotion/styled": "npm:11.11.0"
+    "@types/react": "npm:18.2.48"
+    "@types/react-dom": "npm:18.2.18"
+    "@types/styled-system": "npm:5.1.22"
+    framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/css": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": 11.11.0
+    framer-motion: 10.16.1
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
 
 "@ui/icons-test@workspace:*, @ui/icons-test@workspace:ui/icons":
   version: 0.0.0-use.local
@@ -3964,6 +4098,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"compute-scroll-into-view@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "compute-scroll-into-view@npm:2.0.4"
+  checksum: 10/a9015cbf464ed852d3c459c1777d5890e26925dd2e99ad438dc8cb6a0154f33f0ce6856f6c50de9dd176168d315e7223d08c4bae1e5dbe82b056dd5216c0bcc6
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -4257,6 +4398,21 @@ __metadata:
   version: 16.4.5
   resolution: "dotenv@npm:16.4.5"
   checksum: 10/55a3134601115194ae0f924e54473459ed0d9fc340ae610b676e248cca45aa7c680d86365318ea964e6da4e2ea80c4514c1adab5adb43d6867fb57ff068f95c8
+  languageName: node
+  linkType: hard
+
+"downshift@npm:7.6.2":
+  version: 7.6.2
+  resolution: "downshift@npm:7.6.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.14.8"
+    compute-scroll-into-view: "npm:^2.0.4"
+    prop-types: "npm:^15.7.2"
+    react-is: "npm:^17.0.2"
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    react: ">=16.12.0"
+  checksum: 10/4ffca012d185a6eb57d5543650401323c932ae5f7227f92419aba4f04d5de2ca4f0270aa398caa289622f60ebb5f831fddf11e5d6d56981a89f7fbd7ed0a1f48
   languageName: node
   linkType: hard
 
@@ -7641,7 +7797,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -7765,6 +7921,13 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10/5aa564a1cde7d391ac980bedee21202fc90bdea3b399952117f54fb71a932af1e5902020144fb354b4690b2414a0c7aafe798eb617b76a3d441d956db7726fdf
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-is@npm:17.0.2"
+  checksum: 10/73b36281e58eeb27c9cc6031301b6ae19ecdc9f18ae2d518bdb39b0ac564e65c5779405d623f1df9abf378a13858b79442480244bd579968afc1faf9a2ce5e05
   languageName: node
   linkType: hard
 
@@ -8861,7 +9024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.6.2, tslib@npm:^2.4.0":
+"tslib@npm:2.6.2, tslib@npm:^2.3.0, tslib@npm:^2.4.0":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10/bd26c22d36736513980091a1e356378e8b662ded04204453d353a7f34a4c21ed0afc59b5f90719d4ba756e581a162ecbf93118dc9c6be5acf70aa309188166ca

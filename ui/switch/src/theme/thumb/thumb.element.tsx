@@ -1,7 +1,7 @@
-import styled                   from '@emotion/styled'
+import styled                    from '@emotion/styled'
 import { Box }                   from '@atls-ui-parts/layout'
 
-import React                    from 'react'
+import React                     from 'react'
 import { FunctionComponent }     from 'react'
 
 import { TestIcon }              from '@ui/icons-test'

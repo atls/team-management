@@ -1,11 +1,11 @@
-import styled                     from '@emotion/styled'
+import styled                      from '@emotion/styled'
 import { HandleElement }           from '@atls-ui-parts/switch'
 import { baseHandleStyles }        from '@atls-ui-parts/switch'
 import { useSwitch }               from '@atls-ui-parts/switch'
 import { baseThumbStyles }         from '@atls-ui-parts/switch'
 import { ifDisabledThumbModifier } from '@atls-ui-parts/switch'
 
-import React                      from 'react'
+import React                       from 'react'
 import { useRef }                  from 'react'
 import { useHover }                from 'react-laag'
 
