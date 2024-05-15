@@ -6,16 +6,18 @@ import {ReactElement} from 'react'
 
 import {Portal} from '@atls-ui-parts/portal'
 
+import {useState} from 'react'
+
 import {Backdrop} from './backdrop'
 import {Container} from './container'
 import {ChildContainer} from './child-container'
 import {ModalProps} from './modal.interfaces'
 
 const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({children, open, onClose}) => {
-	let content: ReactElement | null = null
+	// let content: ReactElement | null = null
 
 	if (open) {
-		content = (
+		return (
 			<Portal>
 				<Container>
 					<Backdrop onClick={onClose} />
@@ -23,11 +25,9 @@ const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({children, open
 						{children}
 					</ChildContainer>
 				</Container>
-			</Portal>
+			</Portal >
 		)
 	}
-
-	return <AnimatePresence>{content}</AnimatePresence>
 }
 
 export {Modal}

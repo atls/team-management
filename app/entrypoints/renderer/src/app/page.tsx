@@ -16,9 +16,11 @@ import {Modal} from '@ui/modal'
 const placeholder = () => console.log('placeholder')
 const Page = () => {
 	const [modal, setModal] = useState(false)
-	const modalClick = () => {
+	const modalClickHandler = () => {
+		console.log('modalClick')
 		setModal(!modal)
 	}
+
 	return (
 		// TODO экспорт белых иконок с прозрачным фоном
 		<ThemeProvider>
@@ -29,13 +31,13 @@ const Page = () => {
 			</IconSwitch>
 			<ThemeSwitch />
 			<Dropdown onChange={placeholder} items={['first item', 'second item', 'third item']} />
-			<div onClick={modalClick} style={{width: 400, height: 300, backgroundColor: 'red'}}>
+			<div onClick={modalClickHandler} style={{width: 400, height: 300, backgroundColor: 'red'}}>
 				<h1>click to show modal</h1>
-				<Modal open={modal}>
-					<h1>content in modal</h1>
-					<Input placeholder='placeholder' />
-				</Modal>
 			</div>
+			<Modal open={modal} onClose={modalClickHandler}>
+				<h1>content in modal</h1>
+				<Input placeholder='placeholder' />
+			</Modal>
 		</ThemeProvider>
 	)
 }
