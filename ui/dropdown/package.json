@@ -5,7 +5,7 @@
 		"@atls-ui-parts/layout": "*",
 		"@atls-ui-parts/select": "0.1.1",
 		"@atls-ui-parts/text": "0.1.1",
-		"@atls-ui-proto/button": "0.1.1",
+		"@atls-ui-proto/button": "0.1.1"
 	},
 	"devDependencies": {
 		"@atls-ui-parts/layout": "*",

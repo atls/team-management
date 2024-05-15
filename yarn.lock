@@ -177,6 +177,7 @@ __metadata:
     "@ui/dropdown": "workspace:*"
     "@ui/icons-test": "workspace:*"
     "@ui/input": "workspace:*"
+    "@ui/modal": "workspace:*"
     "@ui/switch": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.1.0"
@@ -245,6 +246,16 @@ __metadata:
     react: 18.2.0
     styled-system: 5.1.5
   checksum: 10/69596f6b403524a2eb4f6dcef023204d06c8dd8d175216352768bc7e9ec832e1bd8f98af30eb6d4359ff0665bf158fccfb6ad1eef2247797ccb6459ee351f988
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/portal@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-parts/portal@npm:0.0.7"
+  peerDependencies:
+    react: 18.2.0
+    react-dom: 18.2.0
+  checksum: 10/a43c325f09638270d086375520b39d10297db5e00146edd56108a2b5e6a0411bbc9437482f89498fe6a91520ea8df6391033abc566df32113e7456fa35147016
   languageName: node
   linkType: hard
 
@@ -2476,6 +2487,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/modal@workspace:*, @ui/modal@workspace:ui/modal":
+  version: 0.0.0-use.local
+  resolution: "@ui/modal@workspace:ui/modal"
+  dependencies:
+    "@atls-ui-parts/portal": "npm:0.0.7"
+    "@emotion/css": "npm:11.11.2"
+    "@emotion/react": "npm:11.11.3"
+    "@emotion/styled": "npm:11.11.0"
+    "@types/react": "npm:18.2.48"
+    "@types/react-dom": "npm:18.2.18"
+    framer-motion: "npm:10.16.1"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+  peerDependencies:
+    "@emotion/css": 11.11.2
+    "@emotion/react": 11.11.3
+    "@emotion/styled": 11.11.0
+    framer-motion: 10.16.1
+    react: 18.2.0
+    react-dom: 18.2.0
+  languageName: unknown
+  linkType: soft
+
 "@ui/switch@workspace:*, @ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
@@ -2492,7 +2526,7 @@ __metadata:
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": 11.11.3
+    "@emotion/react": "*"
     "@emotion/styled": "*"
     framer-motion: 10.16.1
     react: 18.2.0
