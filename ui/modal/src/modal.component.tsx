@@ -14,14 +14,13 @@ import {ChildContainer} from './child-container'
 import {ModalProps} from './modal.interfaces'
 
 const Modal: FunctionComponent<PropsWithChildren<ModalProps>> = ({children, open, onClose}) => {
-	// let content: ReactElement | null = null
 
 	if (open) {
 		return (
 			<Portal>
 				<Container>
-					<Backdrop onClick={onClose} />
-					<ChildContainer>
+					<Backdrop />
+					<ChildContainer onClick={e => e.stopPropagation()}>
 						{children}
 					</ChildContainer>
 				</Container>

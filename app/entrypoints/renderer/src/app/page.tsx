@@ -16,9 +16,16 @@ import {Modal} from '@ui/modal'
 const placeholder = () => console.log('placeholder')
 const Page = () => {
 	const [modal, setModal] = useState(false)
-	const modalClickHandler = () => {
+
+	const modalClickHandler = (e) => {
+		e.stopPropagation();
 		console.log('modalClick')
 		setModal(!modal)
+	}
+
+	const handler = (e) => {
+		e.stopPropagation();
+		console.log('handler')
 	}
 
 	return (
@@ -31,13 +38,13 @@ const Page = () => {
 			</IconSwitch>
 			<ThemeSwitch />
 			<Dropdown onChange={placeholder} items={['first item', 'second item', 'third item']} />
-			<div onClick={modalClickHandler} style={{width: 400, height: 300, backgroundColor: 'red'}}>
+			<div onClick={modalClickHandler} style={{width: 400, border: '1px solid black'}}>
 				<h1>click to show modal</h1>
+				<Modal open={modal} onClose={modalClickHandler}>
+					<h1>content in modal</h1>
+					<Input placeholder='placeholder' />
+				</Modal>
 			</div>
-			<Modal open={modal} onClose={modalClickHandler}>
-				<h1>content in modal</h1>
-				<Input placeholder='placeholder' />
-			</Modal>
 		</ThemeProvider>
 	)
 }
