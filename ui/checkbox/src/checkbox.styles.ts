@@ -16,9 +16,9 @@ import { prop }                          from 'styled-tools'
 export const boxBaseStyles = createBoxBaseStyles()
 
 export const boxNormalShapeStyles = createBoxShapeStyles({
-  size: 30,
+  size: 24,
   borderWidth: 1,
-  borderRadius: 7,
+  borderRadius: 6,
 })
 export const boxLargeShapeStyles = createBoxShapeStyles({
   size: 40,
@@ -27,7 +27,7 @@ export const boxLargeShapeStyles = createBoxShapeStyles({
 })
 
 export const boxPrimaryAppearanceStyles = createBoxAppearanceStyles({
-  borderColor: 'blue',
+  borderColor: '#A5A5A5',
   backgroundColor: 'white',
 })
 export const boxSecondaryAppearanceStyles = createBoxAppearanceStyles({
@@ -80,9 +80,9 @@ export const labelPositionStyles = createLabelPositionStyles({
   margin: '7px',
 })
 export const labelShapeStyles = createLabelShapeStyles({
-  fontSize: 14,
+  fontSize: 20,
   fontWeight: 400,
-  fontFamily: 'Gordita, sans-serif',
+  fontFamily: 'Helvetica',
 })
 export const labelAppearanceStyles = createLabelAppearanceStyles({
   fontColor: 'black',

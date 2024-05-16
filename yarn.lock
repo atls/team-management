@@ -180,6 +180,7 @@ __metadata:
     "@ui/progress": "workspace:*"
     "@ui/scroll": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -2218,6 +2219,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:17.0.20":
+  version: 17.0.20
+  resolution: "@types/react-dom@npm:17.0.20"
+  dependencies:
+    "@types/react": "npm:^17"
+  checksum: 10/0dcbd6171e781aafba3a7a2dcb98b2f7ef9130c31a13c5fc4293c7bc2d281cd3f94e278275ae477b341cf1148f9eb220cebf97febd1508ef553e814bc1be08df
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:18.3.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
@@ -2237,12 +2247,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:^17":
+  version: 17.0.80
+  resolution: "@types/react@npm:17.0.80"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:^0.16"
+    csstype: "npm:^3.0.2"
+  checksum: 10/f5dce5825e693313bb7f8db0199299a25be21d58a7f6eedea9dacd593d2b4013d664ed3d54e5fb241a43c7ebbdfeee41d5a500ed2979cc772a89d460aa40d8f4
+  languageName: node
+  linkType: hard
+
 "@types/responselike@npm:^1.0.0":
   version: 1.0.3
   resolution: "@types/responselike@npm:1.0.3"
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/6ac4b35723429b11b117e813c7acc42c3af8b5554caaf1fc750404c1ae59f9b7376bc69b9e9e194a5a97357a597c2228b7173d317320f0360d617b6425212f58
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:^0.16":
+  version: 0.16.8
+  resolution: "@types/scheduler@npm:0.16.8"
+  checksum: 10/6c091b096daa490093bf30dd7947cd28e5b2cd612ec93448432b33f724b162587fed9309a0acc104d97b69b1d49a0f3fc755a62282054d62975d53d7fd13472d
   languageName: node
   linkType: hard
 
@@ -2273,6 +2301,13 @@ __metadata:
   version: 1.0.3
   resolution: "@types/treeify@npm:1.0.3"
   checksum: 10/777e579b30a916a781e7cbad2b7a76bc5473ff7bfe7167dd6de47f80f4386df5bf3d0dc34170afb75d52e75f6ed61cc109abf2324e093c1f9ecd4e79fec58d0c
+  languageName: node
+  linkType: hard
+
+"@types/uniqid@npm:5.3.2":
+  version: 5.3.2
+  resolution: "@types/uniqid@npm:5.3.2"
+  checksum: 10/001e0b03f29ee2e25729451a0012707e929a01ee06b092d23d1219d083dfeed556d2e119442f9e996414a77cdf99021230eb318ab4ed7f3bc5db46077cb54ff7
   languageName: node
   linkType: hard
 
@@ -2433,8 +2468,11 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:^18"
     "@types/styled-system": "npm:^5"
+    "@ui/icons": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
@@ -2443,6 +2481,7 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     "@types/react": 18.3.1
+    "@ui/icons": "workspace:*"
     react: 18.2.0
     react-dom: 18.2.0
     styled-system: "*"
@@ -2576,6 +2615,22 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/utils@workspace:*, @ui/utils@workspace:ui/utils":
+  version: 0.0.0-use.local
+  resolution: "@ui/utils@workspace:ui/utils"
+  dependencies:
+    "@types/react-dom": "npm:17.0.20"
+    "@types/uniqid": "npm:5.3.2"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+    uniqid: "npm:5.4.0"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -10382,6 +10437,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-laag@npm:2.0.5":
+  version: 2.0.5
+  resolution: "react-laag@npm:2.0.5"
+  dependencies:
+    tiny-warning: "npm:^1.0.3"
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/b47abb66d64291f9af5a151b6ab335a1500187a2ac03231bf35c2e50bb0dbe7508d8a16b1a50234166866ce8ef8ef42a57b6551139f49f62573a6b33408deffe
+  languageName: node
+  linkType: hard
+
 "react-reconciler@npm:^0.26.2":
   version: 0.26.2
   resolution: "react-reconciler@npm:0.26.2"
@@ -11880,6 +11947,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tiny-warning@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tiny-warning@npm:1.0.3"
+  checksum: 10/da62c4acac565902f0624b123eed6dd3509bc9a8d30c06e017104bedcf5d35810da8ff72864400ad19c5c7806fc0a8323c68baf3e326af7cb7d969f846100d71
+  languageName: node
+  linkType: hard
+
 "tinylogic@npm:^2.0.0":
   version: 2.0.0
   resolution: "tinylogic@npm:2.0.0"
@@ -12207,6 +12281,13 @@ __metadata:
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
   checksum: 10/0097779d94bc0fd26f0418b3a05472410408877279141ded2bd449167be1aed7ea5b76f756562cb3586a07f251b90799bab22d9019ceba49c037c76445f7cddd
+  languageName: node
+  linkType: hard
+
+"uniqid@npm:5.4.0":
+  version: 5.4.0
+  resolution: "uniqid@npm:5.4.0"
+  checksum: 10/69fc28e7b2b5b24227b4295e51aa7c1d4085a60655ad071db8fc350876cc9044d68ee0781c0d27c2c98691380aa418970e0d1b02a1e4564480f9d19b0dc1707b
   languageName: node
   linkType: hard
 

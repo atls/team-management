@@ -3,10 +3,10 @@ import { ConditionalRender }       from '@atls-ui-parts/conditional-render'
 import { HiddenInput }             from '@atls-ui-parts/hidden-input'
 
 import React                       from 'react'
-import { useMemo }                 from 'react'
-import { forwardRef }              from 'react'
-import { styleFn }                 from 'styled-system'
-import { ifProp }                  from 'styled-tools'
+import { FC }                      from 'react'
+import { useHover }                from 'react-laag'
+
+import { CheckIcon }               from '@ui/icons'
 
 import CheckboxProps               from './checkbox.interface'
 import { boxBaseStyles }           from './checkbox.styles'
@@ -21,58 +21,50 @@ import { labelPositionStyles }     from './checkbox.styles'
 import { containerPositionStyles } from './checkbox.styles'
 import { containerBaseStyles }     from './checkbox.styles'
 
-const CheckboxWithoutRef = (
-  { onCheck, children, active, labelPosition = 'end', ...props },
-  ref
-) => {
-  const createCheckCheckedStyles = (): styleFn =>
-    ifProp(
-      'active',
-      {
-        display: 'block',
-      },
-      { display: 'none' }
-    )
+const doNothing = () => {
+  // do nothing
+}
 
-  const Box = useMemo(() => styled.div(boxBaseStyles, boxShapeStyles, boxAppearanceStyles), [])
+const Container = styled.div<{ labelPosition?: string; fill?: boolean }>(
+  containerBaseStyles,
+  containerPositionStyles
+)
 
-  const Check = useMemo(
-    () =>
-      styled.div(
-        checkBaseStyles,
-        checkShapeStyles,
-        checkAppearanceStyles,
-        createCheckCheckedStyles()
-      ),
-    []
-  )
+const Box = styled.div(boxBaseStyles, boxAppearanceStyles, boxShapeStyles)
 
-  const Label = useMemo(
-    () => styled(ConditionalRender())(labelPositionStyles, labelShapeStyles, labelAppearanceStyles),
-    []
-  )
-  const Container = styled.div<{ labelPosition?: string; fill?: boolean }>(
-    containerBaseStyles,
-    containerPositionStyles
-  )
+const Label = styled(ConditionalRender())(
+  labelShapeStyles,
+  labelAppearanceStyles,
+  labelPositionStyles
+)
 
+const Check = styled.div<{ checked: boolean }>(
+  checkBaseStyles,
+  checkAppearanceStyles,
+  checkShapeStyles
+)
 
+export const Checkbox: FC<CheckboxProps> = ({
+  children,
+  checked,
+  onCheck = (newState) => doNothing(),
+  ...props
+}) => {
+  const [hover, hoverProps] = useHover()
 
   return (
-    <Container labelPosition={labelPosition} onClick={() => onCheck(!active)} {...props}>
+    <Container labelPosition='end' onClick={() => onCheck(!checked)} {...hoverProps} {...props}>
       <HiddenInput
-        checked={active}
         type='checkbox'
+        checked={checked}
         onChange={(event) => onCheck(event.currentTarget.checked)}
       />
-      <Box>
-        <Check></Check>
+      <Box checked={checked} hover={hover}>
+        <Check checked={checked}>
+          <CheckIcon width={20} height={20} />
+        </Check>
       </Box>
-      <Label position={labelPosition}>{children}</Label>
+      <Label position='end'>{children}</Label>
     </Container>
   )
 }
-
-const Checkbox = forwardRef(CheckboxWithoutRef)
-
-export { Checkbox }

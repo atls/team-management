@@ -5,38 +5,39 @@ import React             from 'react'
 import { Checkbox }      from '@ui/checkbox'
 import { Divider }       from '@ui/divider'
 import { Box }           from '@ui/layout'
-import { Line }          from '@ui/progress'
+
 import { Scroll }        from '@ui/scroll'
 import { ThemeProvider } from '@ui/theme'
 
+const doNothing = () => {
+  // do nothing
+}
+
 const Page = () => (
   <ThemeProvider>
-    <Line percent={25} />
+
     <Scroll height={20}>
       <Box flexDirection='column'>
+        <Box flexDirection='row'>
+          <Checkbox checked>Option</Checkbox>
+        </Box>
         <Divider width={10} color='gray' />
-        <Checkbox/>
-        <p>Banana</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Grapefruit</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Peach</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Grapefruit</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Peach</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Grapefruit</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Peach</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Grapefruit</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Peach</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Grapefruit</p>
-        <Divider width={10} height={10} backgroundColor='gray' />
-        <p>Peach</p>
+        <Box flexDirection='row'>
+          <p>Banana</p>
+        </Box>
+        <Divider width={10} color='gray' />
+        <Box flexDirection='row'>
+          <p>Banana</p>
+        </Box>
+        <Divider width={10} color='gray' />
+        <Box flexDirection='row'>
+          <p>Banana</p>
+        </Box>
+        <Divider width={10} color='gray' />
+        <Box flexDirection='row'>
+          <p>Banana</p>
+        </Box>
+        <Divider width={10} color='gray' />
       </Box>
     </Scroll>
   </ThemeProvider>
