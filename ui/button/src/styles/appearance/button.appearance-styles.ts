@@ -3,28 +3,28 @@ import { ifProp } from 'styled-tools'
 import { switchProp } from 'styled-tools'
 import { prop } from 'styled-tools'
 
-const appearanceTransparentBackgroundTestButtonDefaultStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundTestButton.default.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundTestButton.default.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundTestButton.default.border'),
+const appearanceTransparentBackgroundButtonDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentBackgroundButton.default.font'),
+  backgroundColor: prop('theme.colors.button.transparentBackgroundButton.default.background'),
+  borderColor: prop('theme.colors.button.transparentBackgroundButton.default.border'),
 })
 
-const appearanceTransparentBackgroundTestButtonHoverStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundTestButton.hover.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundTestButton.hover.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundTestButton.hover.border'),
+const appearanceTransparentBackgroundButtonHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentBackgroundButton.hover.font'),
+  backgroundColor: prop('theme.colors.button.transparentBackgroundButton.hover.background'),
+  borderColor: prop('theme.colors.button.transparentBackgroundButton.hover.border'),
 })
 
-const appearanceTransparentBackgroundTestButtonPressedStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundTestButton.pressed.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundTestButton.pressed.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundTestButton.pressed.border'),
+const appearanceTransparentBackgroundButtonPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentBackgroundButton.pressed.font'),
+  backgroundColor: prop('theme.colors.button.transparentBackgroundButton.pressed.background'),
+  borderColor: prop('theme.colors.button.transparentBackgroundButton.pressed.border'),
 })
 
-const appearanceTransparentBackgroundTestButtonDisabledStyles = createAppearanceStyles({
-  fontColor: prop('theme.colors.button.transparentBackgroundTestButton.disabled.font'),
-  backgroundColor: prop('theme.colors.button.transparentBackgroundTestButton.disabled.background'),
-  borderColor: prop('theme.colors.button.transparentBackgroundTestButton.disabled.border'),
+const appearanceTransparentBackgroundButtonDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.transparentBackgroundButton.disabled.font'),
+  backgroundColor: prop('theme.colors.button.transparentBackgroundButton.disabled.background'),
+  borderColor: prop('theme.colors.button.transparentBackgroundButton.disabled.border'),
 })
 
 const appearanceBlackBackgroundButtonDefaultStyles = createAppearanceStyles({
@@ -75,17 +75,89 @@ const appearanceWhiteBackgroundButtonDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.whiteBackgroundButton.disabled.border'),
 })
 
+const appearanceBlueBackgroundButtonDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueBackgroundButton.default.font'),
+  backgroundColor: prop('theme.colors.button.blueBackgroundButton.default.background'),
+  borderColor: prop('theme.colors.button.blueBackgroundButton.default.border'),
+})
+
+const appearanceBlueBackgroundButtonHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueBackgroundButton.hover.font'),
+  backgroundColor: prop('theme.colors.button.blueBackgroundButton.hover.background'),
+  borderColor: prop('theme.colors.button.blueBackgroundButton.hover.border'),
+})
+
+const appearanceBlueBackgroundButtonPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueBackgroundButton.pressed.font'),
+  backgroundColor: prop('theme.colors.button.blueBackgroundButton.pressed.background'),
+  borderColor: prop('theme.colors.button.blueBackgroundButton.pressed.border'),
+})
+
+const appearanceBlueBackgroundButtonDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueBackgroundButton.disabled.font'),
+  backgroundColor: prop('theme.colors.button.blueBackgroundButton.disabled.background'),
+  borderColor: prop('theme.colors.button.blueBackgroundButton.disabled.border'),
+})
+
+const appearanceLightBlueBackgroundButtonDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundButton.default.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundButton.default.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundButton.default.border'),
+})
+
+const appearanceLightBlueBackgroundButtonHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundButton.hover.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundButton.hover.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundButton.hover.border'),
+})
+
+const appearanceLightBlueBackgroundButtonPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundButton.pressed.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundButton.pressed.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundButton.pressed.border'),
+})
+
+const appearanceLightBlueBackgroundButtonDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundButton.disabled.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundButton.disabled.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundButton.disabled.border'),
+})
+
+const appearanceLightBlueBackgroundDottedButtonDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.default.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.default.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.default.border'),
+})
+
+const appearanceLightBlueBackgroundDottedButtonHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.hover.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.hover.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.hover.border'),
+})
+
+const appearanceLightBlueBackgroundDottedButtonPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.pressed.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.pressed.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.pressed.border'),
+})
+
+const appearanceLightBlueBackgroundDottedButtonDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.disabled.font'),
+  backgroundColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.disabled.background'),
+  borderColor: prop('theme.colors.button.lightBlueBackgroundDottedButton.disabled.border'),
+})
+
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
-  transparentBackgroundTestButton: ifProp(
+  transparentBackgroundButton: ifProp(
     prop('disabled', false),
-    appearanceTransparentBackgroundTestButtonDisabledStyles,
+    appearanceTransparentBackgroundButtonDisabledStyles,
     ifProp(
       prop('pressed', false),
-      appearanceTransparentBackgroundTestButtonPressedStyles,
+      appearanceTransparentBackgroundButtonPressedStyles,
       ifProp(
         prop('hover', false),
-        appearanceTransparentBackgroundTestButtonHoverStyles,
-        appearanceTransparentBackgroundTestButtonDefaultStyles
+        appearanceTransparentBackgroundButtonHoverStyles,
+        appearanceTransparentBackgroundButtonDefaultStyles
       )
     )
   ),
@@ -112,6 +184,45 @@ const appearanceStyles = switchProp(prop('variant', 'primary'), {
         prop('hover', false),
         appearanceWhiteBackgroundButtonHoverStyles,
         appearanceWhiteBackgroundButtonDefaultStyles
+      )
+    )
+  ),
+  blueBackgroundButton: ifProp(
+    prop('disabled', false),
+    appearanceBlueBackgroundButtonDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceBlueBackgroundButtonPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceBlueBackgroundButtonHoverStyles,
+        appearanceBlueBackgroundButtonDefaultStyles
+      )
+    )
+  ),
+  lightBlueBackgroundButton: ifProp(
+    prop('disabled', false),
+    appearanceLightBlueBackgroundButtonDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceLightBlueBackgroundButtonPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceLightBlueBackgroundButtonHoverStyles,
+        appearanceLightBlueBackgroundButtonDefaultStyles
+      )
+    )
+  ),
+  lightBlueBackgroundDottedButton: ifProp(
+    prop('disabled', false),
+    appearanceLightBlueBackgroundDottedButtonDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceLightBlueBackgroundDottedButtonPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceLightBlueBackgroundDottedButtonHoverStyles,
+        appearanceLightBlueBackgroundDottedButtonDefaultStyles
       )
     )
   ),

@@ -1,20 +1,16 @@
-import styled                     from '@emotion/styled'
-import { ScalableContent }        from '@atls-ui-parts/scalable-content'
-import { TextTransform }          from '@atls-ui-parts/text-transform'
-import { createBaseStyles }       from '@atls-ui-parts/avatar'
-import { createShapeStyles }      from '@atls-ui-parts/avatar'
-import { createAppearanceStyles } from '@atls-ui-parts/avatar'
+import styled                from '@emotion/styled'
+import { ScalableContent }   from '@atls-ui-parts/scalable-content'
+import { createBaseStyles }  from '@atls-ui-parts/avatar'
+import { createShapeStyles } from '@atls-ui-parts/avatar'
 
-import React                      from 'react'
-import stringToColor              from 'string-to-color'
-import { FC }                      from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { ImageBlock }             from '@ui/image'
+import { ImageBlock }        from '@ui/image'
 
-import { AvatarProps }             from './avatar.interfaces'
+import { AvatarProps }       from './avatar.interfaces'
 
 export const Avatar: FC<AvatarProps> = ({
-  backgroundColor,
   borderWidth,
   borderColor,
   size,
@@ -25,14 +21,14 @@ export const Avatar: FC<AvatarProps> = ({
   fontWeight,
   shape,
   fontFamily,
-  textBasedBackground,
   contentType,
   src,
   icon,
   text,
   alt,
+  notification,
 }) => {
-  const StoryAvatar = styled.div(
+  const Container = styled.div(
     createBaseStyles(),
     createShapeStyles({
       size,
@@ -42,24 +38,13 @@ export const Avatar: FC<AvatarProps> = ({
       fontSize,
       fontWeight,
       fontFamily,
-    }),
-    createAppearanceStyles({
-      backgroundColor,
-      borderColor,
-      fontColor,
     })
   )
-
   return (
-    <StoryAvatar shape={shape} background={textBasedBackground ? stringToColor(text) : null}>
+    <Container shape={shape}>
       {(contentType === 'image' && <ImageBlock src={src} alt={alt} />) ||
         (contentType === 'scalable-text' && <ScalableContent>{text}</ScalableContent>) ||
-        (contentType === 'first-letter-text' && (
-          <TextTransform firstLetter upperCase>
-            {text}
-          </TextTransform>
-        )) ||
         (contentType === 'icon' && icon)}
-    </StoryAvatar>
+    </Container>
   )
 }

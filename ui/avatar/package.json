@@ -7,18 +7,24 @@
     "@atls-ui-parts/avatar": "0.1.1",
     "@atls-ui-parts/scalable-content": "0.1.1",
     "@atls-ui-parts/text-transform": "0.0.8",
-    "@emotion/react": "11.11.3",
-    "@emotion/styled": "11.11.0",
     "@ui/image": "workspace:*",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "string-to-color": "2.2.2",
-    "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
   "devDependencies": {
+    "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
-    "@types/styled-system": "5.1.22"
+    "@types/styled-system": "5.1.22",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
   }
 }

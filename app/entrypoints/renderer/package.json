@@ -4,29 +4,30 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "scripts": {
-    "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
+    "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/public/ ./dist/src/public && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
     "dev": "yarn next dev src",
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
     "@emotion/react": "11.11.3",
+    "@emotion/styled": "11.11.0",
+    "next": "14.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.5",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
     "@ui/avatar": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/sidebar": "workspace:*",
+    "@ui/text": "workspace:0.0.1",
     "@ui/theme": "workspace:*",
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-tools": "1.7.2"
-  },
-  "devDependencies": {
-    "@types/node": "20.11.5",
-    "@types/react": "18.3.1",
-    "@types/react-dom": "18.3.0",
     "typescript": "5.2.2"
   }
 }

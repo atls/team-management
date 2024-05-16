@@ -10,32 +10,31 @@ import { getBaseStyles }       from './styles'
 
 export const fillStyles: styleFn = ifProp(prop('fill', false), { width: '100%' })
 
-const middlingRoundedPaddingtStyles = createShapeStyles({
+const middlingRoundedPadding = createShapeStyles({
   size: 42,
   rounding: prop('theme.radii.f24') as unknown as number,
   paddingLeft: 12,
   paddingRight: 12,
 })
+const bigRoundedPadding = createShapeStyles({
+  size: 96.91,
+  rounding: prop('theme.radii.f50') as unknown as number,
+  paddingLeft: 24,
+  paddingRight: 24,
+})
 //
-// const withoutPaddingMicroHeightStyles = createShapeStyles({
-//   size: 'auto',
-//   rounding: prop('theme.radii.zero') as unknown as number,
-//   paddingLeft: 0,
-//   paddingRight: 0,
-// })
-//
-// const middlingPaddingSemiBigHeightStyles = createShapeStyles({
-//   size: 53,
-//   rounding: prop('theme.radii.medium') as unknown as number,
-//   paddingLeft: 17,
-//   paddingRight: 17,
-// })
-//
+const smallRoundedPadding = createShapeStyles({
+  size: 42,
+  rounding: prop('theme.radii.f12') as unknown as number,
+  paddingLeft: 12,
+  paddingRight: 12,
+})
 
 export const baseStyles = getBaseStyles()
 export const contentStyles = createContentStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
-  middlingRoundedPaddingtStyles: middlingRoundedPaddingtStyles,
-  // withoutPaddingMicroHeight: withoutPaddingMicroHeightStyles,
+  middlingRoundedPadding: middlingRoundedPadding,
+  smallRoundedPadding: smallRoundedPadding,
+  bigRoundedPadding: bigRoundedPadding,
 })

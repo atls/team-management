@@ -108,7 +108,7 @@ export const colors = {
   dune: 'rgba(37, 37, 37, 0.20)',
 
   button: {
-    transparentBackgroundTestButton: {
+    transparentBackgroundButton: {
       default: {
         background: 'transparent',
         font: 'rgb(242,242,242)',
@@ -142,8 +142,8 @@ export const colors = {
         border: 'transparent',
       },
       pressed: {
-        background: 'transparent',
-        font: 'rgb(154,101,242)',
+        background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(255,255,255,1)',
         border: 'transparent',
       },
       disabled: {
@@ -155,23 +155,88 @@ export const colors = {
     whiteBackgroundButton: {
       default: {
         background: 'rgba(255, 255, 255, 1)',
-        font: 'rgb(255,255,255,1)',
+        font: 'rgb(0,0,0,1)',
         border: 'transparent',
-        boxShadow: '2 2 ',
       },
       hover: {
         background: 'rgba(255, 255, 255, 1)',
-        font: 'rgb(255,255,255,1)',
+        font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },
       pressed: {
         background: 'transparent',
-        font: 'rgb(154,101,242)',
+        font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },
       disabled: {
         background: 'rgba(23, 24, 28, 0.9)',
+        font: 'rgb(0,0,0,1)',
+        border: 'transparent',
+      },
+    },
+    blueBackgroundButton: {
+      default: {
+        background: 'rgba(56, 122, 221, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(56, 122, 221, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(56, 122, 221, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(225, 225, 225, 1)',
         font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
+    lightBlueBackgroundButton: {
+      default: {
+        background: 'rgba(80, 142, 233, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(80, 142, 233, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(80, 142, 233, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(228, 228, 228, 1)',
+        font: 'rgba(148, 148, 148, 1)',
+        border: 'transparent',
+      },
+    },
+    lightBlueBackgroundDottedButton: {
+      default: {
+        background: 'transparent',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'transparent',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(197, 220, 253, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(228, 228, 228, 1)',
+        font: 'rgba(148, 148, 148, 1)',
         border: 'transparent',
       },
     },

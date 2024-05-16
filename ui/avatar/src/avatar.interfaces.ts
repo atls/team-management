@@ -1,4 +1,4 @@
-import { ReactFragment } from 'react'
+import React from 'react'
 
 export interface AvatarProps {
   backgroundColor?: string
@@ -15,7 +15,8 @@ export interface AvatarProps {
   textBasedBackground?: string
   contentType: string
   src?: string
-  icon?: any
+  icon?: React.ReactElement
   text?: string
   alt: string
+  notification?: boolean
 }

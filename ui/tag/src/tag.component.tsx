@@ -1,9 +1,8 @@
-import { Text }     from '@ui/text'
-
 import React        from 'react'
 import { FC }       from 'react'
 
 import { Box }      from '@ui/layout'
+import { Text }     from '@ui/text'
 
 import { TagProps } from './tag.interfaces'
 

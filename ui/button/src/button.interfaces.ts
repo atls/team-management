@@ -3,41 +3,11 @@ import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 export type ButtonVariant =
   | 'blackBackgroundButton'
   | 'whiteBackgroundButton'
-  | 'transparentBackground'
-  | 'transparentBackgroundPurpleText'
-  | 'darkToPurpleBackground'
-  | 'purpleBackground'
-  | 'whiteBackground'
-  | 'transparentWhiteToPurpleBackground'
-  | 'transparentWhiteToGrayBackground'
-  | 'borderWhiteToWhiteBackground'
-  | 'transparentWhiteBackgroundWhiteBorder'
-  | 'darkToPurpleBackgroundWithWhiteBorder'
-  | 'smokyWhiteBackground'
-  | 'transparentWhiteBackground'
-  | 'veryTransparentSmokyWhiteBackground'
+  | 'blueBackgroundButton'
+  | 'transparentBackgroundButton'
+  | 'lightBlueBackgroundButton'
 
-export type ButtonSize =
-  | 'withoutPaddingMicroHeight'
-  | 'mediumPaddingNormalHeight'
-  | 'withoutPaddingBigHeight'
-  | 'withoutPaddingMediumHeight'
-  | 'mediumPaddingBigHeight'
-  | 'middlingPaddingNormalHeight'
-  | 'middlingPaddingMediumHeight'
-  | 'littlePaddingMediumHeight'
-  | 'littlePaddingSemiMediumHeight'
-  | 'massivePaddingGiantHeight'
-  | 'semiMediumPaddingHugeHeight'
-  | 'littlePaddingSemiRegularHeight'
-  | 'withoutPaddingSemiGiantHeight'
-  | 'withoutPaddingSemiRegularHeight'
-  | 'withoutPaddingSemiBigHeight'
-  | 'littlePaddingMicroHeight'
-  | 'middlingPaddingSemiBigHeight'
-  | 'semiLittlePaddingMicroHeight'
-  | 'semiLittlePaddingSemiMediumHeight'
-  | 'middlingRoundedPaddingtStyles'
+export type ButtonSize = 'middlingRoundedPadding' | 'smallRoundedPadding' | 'bigRoundedPadding'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
@@ -50,5 +20,4 @@ export interface ButtonProps extends BaseButtonProps {
   valueHeight?: string | object
   valueBackground?: string | object
   horizontalLocation?: 'left' | 'right'
-  boxShadow?: string
 }
