@@ -18,8 +18,8 @@ const ScrollContainer = styled.div`
   }
 `
 
-const Scroll: React.FC<ScrollProps> = ({ children }) => {
-  return <ScrollContainer>{children}</ScrollContainer>
-}
+const Scroll: React.FC<ScrollProps> = ({ children }) => (
+  <ScrollContainer>{children}</ScrollContainer>
+)
 
 export { Scroll }
