@@ -4,7 +4,6 @@ import { HiddenInput }             from '@atls-ui-parts/hidden-input'
 
 import React                       from 'react'
 import { FC }                      from 'react'
-import { useHover }                from 'react-laag'
 
 import { CheckIcon }               from '@ui/icons'
 
@@ -49,20 +48,16 @@ export const Checkbox: FC<CheckboxProps> = ({
   checked = false,
   onCheck = (newState) => doNothing(),
   ...props
-}) => {
-  const [hover, hoverProps] = useHover()
-
-  return (
-    <Container labelPosition='end' onClick={() => onCheck(!checked)} {...hoverProps} {...props}>
-      <HiddenInput
-        type='checkbox'
-        checked={checked}
-        onChange={(event) => onCheck(event.currentTarget.checked)}
-      />
-      <Box>
-        <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
-      </Box>
-      <Label position='end'>{children}</Label>
-    </Container>
-  )
-}
+}) => (
+  <Container labelPosition='end' onClick={() => onCheck(!checked)} {...props}>
+    <HiddenInput
+      type='checkbox'
+      checked={checked}
+      onChange={(event) => onCheck(event.currentTarget.checked)}
+    />
+    <Box>
+      <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
+    </Box>
+    <Label position='end'>{children}</Label>
+  </Container>
+)
