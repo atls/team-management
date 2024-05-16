@@ -6,6 +6,9 @@
     "app/**/*",
     "ui/**/*"
   ],
+  "resolutions": {
+    "@types/react": "18.3.1"
+  },
   "devDependencies": {
     "@atls/code-service": "0.1.4",
     "@atls/config-eslint": "0.0.12",
