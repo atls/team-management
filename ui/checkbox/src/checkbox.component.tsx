@@ -1,6 +1,7 @@
 import styled                      from '@emotion/styled'
 import { ConditionalRender }       from '@atls-ui-parts/conditional-render'
 import { HiddenInput }             from '@atls-ui-parts/hidden-input'
+import { useState }                from 'react'
 
 import React                       from 'react'
 import { FC }                      from 'react'
@@ -46,11 +47,13 @@ const Check = styled.div<{ checked: boolean }>(
 
 export const Checkbox: FC<CheckboxProps> = ({
   children,
-  checked,
+  checked= false,
   onCheck = (newState) => doNothing(),
   ...props
 }) => {
   const [hover, hoverProps] = useHover()
+
+  console.log(checked)
 
   return (
     <Container labelPosition='end' onClick={() => onCheck(!checked)} {...hoverProps} {...props}>
@@ -59,9 +62,9 @@ export const Checkbox: FC<CheckboxProps> = ({
         checked={checked}
         onChange={(event) => onCheck(event.currentTarget.checked)}
       />
-      <Box checked={checked} hover={hover}>
+      <Box>
         <Check checked={checked}>
-          <CheckIcon width={20} height={20} />
+          {checked && <CheckIcon width={20} height={20} />}
         </Check>
       </Box>
       <Label position='end'>{children}</Label>
