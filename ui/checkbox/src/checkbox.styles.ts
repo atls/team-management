@@ -18,12 +18,12 @@ export const boxBaseStyles = createBoxBaseStyles()
 export const boxNormalShapeStyles = createBoxShapeStyles({
   size: 24,
   borderWidth: 1,
-  borderRadius: 6,
+  borderRadius: 100,
 })
 export const boxLargeShapeStyles = createBoxShapeStyles({
   size: 40,
   borderWidth: 1,
-  borderRadius: 10,
+  borderRadius: 100,
 })
 
 export const boxPrimaryAppearanceStyles = createBoxAppearanceStyles({
@@ -31,8 +31,8 @@ export const boxPrimaryAppearanceStyles = createBoxAppearanceStyles({
   backgroundColor: 'white',
 })
 export const boxSecondaryAppearanceStyles = createBoxAppearanceStyles({
-  borderColor: 'red',
-  backgroundColor: 'black',
+  borderColor: '#508EE9',
+  backgroundColor: '#508EE9',
 })
 
 export const boxAppearanceStyles = switchProp(prop('variant', 'primary'), {

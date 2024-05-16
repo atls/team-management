@@ -9,7 +9,6 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/checkbox": "0.1.1",
-    "@ui/utils": "workspace:*",
     "react-laag": "2.0.5"
   },
   "devDependencies": {
