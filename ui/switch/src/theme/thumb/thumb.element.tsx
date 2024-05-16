@@ -19,7 +19,7 @@ const DarkThemeThumb = styled(TestIcon)<any>(appearanceThumbStyles)
 
 const ThumbContainer = styled(Box)<any>(appearanceBoxStyles, sizeBoxStyles)
 
-const ThumbElement: FunctionComponent<ThumbElementProps> = ({ checked, hover, ...props }) => {
+const ThumbElement: FunctionComponent<ThumbElementProps> = ({ checked, hover }) => {
   const theme = checked ? 'dark' : 'light'
   return (
     <Box width='100%' alignItems='center' justifyContent='center'>

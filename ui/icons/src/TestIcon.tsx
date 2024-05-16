@@ -4,7 +4,7 @@ import { useTheme } from '@emotion/react'
 import React        from 'react'
 
 export const TestIcon = (props: any) => {
-  const theme: any = useTheme()
+  useTheme()
   return (
     <svg
       width='1em'
