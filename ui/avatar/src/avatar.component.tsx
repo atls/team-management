@@ -9,6 +9,7 @@ import { FC }                from 'react'
 import { ImageBlock }        from '@ui/image'
 
 import { AvatarProps }       from './avatar.interfaces'
+import { Container }         from './container'
 
 export const Avatar: FC<AvatarProps> = ({
   borderWidth,
@@ -28,20 +29,20 @@ export const Avatar: FC<AvatarProps> = ({
   alt,
   notification,
 }) => {
-  const Container = styled.div(
-    createBaseStyles(),
-    createShapeStyles({
-      size,
-      borderRadius,
-      borderWidth,
-      padding,
-      fontSize,
-      fontWeight,
-      fontFamily,
-    })
-  )
+  // const Container = styled.div(
+  //   createBaseStyles(),
+  //   createShapeStyles({
+  //     size,
+  //     borderRadius,
+  //     borderWidth,
+  //     padding,
+  //     fontSize,
+  //     fontWeight,
+  //     fontFamily,
+  //   })
+  // )
   return (
-    <Container shape={shape}>
+    <Container shape={shape} size={size} borderRadius={borderRadius}>
       {(contentType === 'image' && <ImageBlock src={src} alt={alt} />) ||
         (contentType === 'scalable-text' && <ScalableContent>{text}</ScalableContent>) ||
         (contentType === 'icon' && icon)}

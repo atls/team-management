@@ -5,5 +5,6 @@ export const basePinnerStyles: CSSObject = {
   height: 56,
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: 'flex-end',
+  position: 'absolute',
 }

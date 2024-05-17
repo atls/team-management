@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "devDependencies": {
     "@emotion/css": "11.11.2",
     "@emotion/react": "11.11.3",
@@ -28,6 +31,7 @@
     "@ui/avatar": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/logo": "workspace:*",
+    "@ui/text": "workspace:0.0.1",
     "framer-motion": "11.1.9"
   }
 }

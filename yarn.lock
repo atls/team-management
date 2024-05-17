@@ -2488,6 +2488,13 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -2502,6 +2509,10 @@ __metadata:
     "@types/styled-system": "npm:5.1.22"
     react: "npm:18.2.0"
     styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -2533,6 +2544,7 @@ __metadata:
     "@ui/avatar": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/logo": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
     framer-motion: "npm:11.1.9"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"

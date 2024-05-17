@@ -34,4 +34,7 @@ export const shadows = {
   crowshead: '0px 3.1399998664855957px 7.064999580383301px rgba(0, 0, 0, 0.20)',
   bluecharcoal: '0px 2.9710144996643066px 5.942028999328613px rgba(0, 0, 0, 0.15)',
   vulcan: '0px 4px 8px rgba(0, 0, 0, 0.20)',
+  card: '0px 4px 20px 0px #00000040',
+  tag: '0px 4px 8px 0px #00000026',
+  button: '0px 4px 9px 0px rgba(0, 0, 0, 0.2)  ',
 }

@@ -3,6 +3,7 @@ import { FunctionComponent }      from 'react'
 import { motion }                 from 'framer-motion'
 import { useMemo }                from 'react'
 
+import { Pinner }                 from '../pinner'
 import { ExpanderElementProps }   from './expander.interfaces'
 import { expanderMotionVariants } from './expander.motion'
 

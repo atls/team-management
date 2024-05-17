@@ -9,5 +9,4 @@ export const baseContainerStyles: CSSObject = {
   boxSizing: 'border-box',
   outline: 'none',
   backgroundColor: '#FFFFFF',
-  boxShadow: '-1px 4px 20px 0px rgba(0, 0, 0, 0.25)',
 }
