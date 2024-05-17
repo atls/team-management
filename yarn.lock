@@ -2440,12 +2440,6 @@ __metadata:
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@atls-ui-parts/conditional-render": "*"
-    "@atls-ui-parts/hidden-input": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/react": 18.3.1
-    "@ui/icons": "workspace:*"
     react: 18.2.0
     react-dom: 18.2.0
     styled-system: "*"

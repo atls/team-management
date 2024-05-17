@@ -9,9 +9,6 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/checkbox": "0.1.1",
-    "react-laag": "2.0.5"
-  },
-  "devDependencies": {
     "@atls-ui-parts/conditional-render": "0.0.7",
     "@atls-ui-parts/hidden-input": "0.1.1",
     "@atls-ui-parts/layout": "0.1.1",
@@ -20,18 +17,15 @@
     "@types/react": "^18",
     "@types/styled-system": "^5",
     "@ui/icons": "workspace:*",
+    "react-laag": "2.0.5"
+  },
+  "devDependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@atls-ui-parts/conditional-render": "*",
-    "@atls-ui-parts/hidden-input": "*",
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "@types/react": "18.3.1",
-    "@ui/icons": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "*",

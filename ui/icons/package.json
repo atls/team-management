@@ -8,10 +8,10 @@
     "build": "generate-icons src/ -i /icons"
   },
   "dependencies": {
+    "@atls-ui-generators/icons": "0.0.2",
     "@ui/icons": "workspace:*"
   },
   "devDependencies": {
-    "@atls-ui-generators/icons": "0.0.2",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
     "@types/react": "18.3.1",
