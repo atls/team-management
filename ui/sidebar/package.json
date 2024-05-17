@@ -2,9 +2,17 @@
   "name": "@ui/sidebar",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@atls-ui-proto/divider": "0.1.1",
+    "@ui/avatar": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/logo": "workspace:*",
+    "@ui/text": "workspace:0.0.1",
+    "framer-motion": "11.1.9"
   },
   "devDependencies": {
     "@emotion/css": "11.11.2",
@@ -25,13 +33,5 @@
     "react-dom": "*",
     "styled-system": "*",
     "styled-tools": "*"
-  },
-  "dependencies": {
-    "@atls-ui-proto/divider": "0.1.1",
-    "@ui/avatar": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/logo": "workspace:*",
-    "@ui/text": "workspace:0.0.1",
-    "framer-motion": "11.1.9"
   }
 }

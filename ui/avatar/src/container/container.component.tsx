@@ -1,15 +1,17 @@
-import styled               from '@emotion/styled'
+import styled                from '@emotion/styled'
+import { createBaseStyles }  from '@atls-ui-parts/avatar'
 
-import { ContainerElement } from './container.element'
+import React                 from 'react'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
 
-const Container = styled(ContainerElement)({
-  size,
-  // borderRadius,
-  // borderWidth,
-  // padding,
-  // fontSize,
-  // fontWeight,
-  // fontFamily,
-})
+import { getShapeStyles }    from './shape.styles'
 
-export { Container }
+const Container = styled.div<{ size?: number; fontWeight?: number }>(
+  createBaseStyles(),
+  getShapeStyles
+)
+
+export const ContainerWrapper: FC<PropsWithChildren> = ({ children }) => (
+  <Container fontWeight={100}>{children}</Container>
+)

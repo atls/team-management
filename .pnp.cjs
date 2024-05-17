@@ -3477,6 +3477,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/image", "virtual:685986c6e8a391f2f3cb490d95e97456f840197dbbdce70d08139ec8e6e3f4abd69d1fbf6dbed052c6aea6ddd38922ddd3677f84098a37a6bdc75fe832e76f0c#workspace:ui/image"],\
+          ["@ui/layout", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/layout"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\
@@ -3507,6 +3508,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/image", "virtual:685986c6e8a391f2f3cb490d95e97456f840197dbbdce70d08139ec8e6e3f4abd69d1fbf6dbed052c6aea6ddd38922ddd3677f84098a37a6bdc75fe832e76f0c#workspace:ui/image"],\
+          ["@ui/layout", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#workspace:ui/layout"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:1ef91848f904a972838dfe09dc0d578ffb951aded18f621f552dff0206edd3988dbee691acfdcd152e78a8d49c50158d7c4f5a0f0d08d89d6428322cb264f7b7#npm:18.2.0"],\
           ["styled-system", "npm:5.1.5"],\

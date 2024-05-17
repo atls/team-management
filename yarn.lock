@@ -2411,6 +2411,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
     "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     styled-system: "npm:5.1.5"
