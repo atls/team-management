@@ -1,5 +1,12 @@
 import { ThumbElementProps as BaseThumbElementProps } from '@atls-ui-parts/switch'
 
 export interface ThumbElementProps extends BaseThumbElementProps {
+  active: boolean
+  hover: boolean
+  children: JSX.Element
+}
+
+export interface ThumbComponentProps extends BaseThumbElementProps {
+  checked: boolean
   hover: boolean
 }

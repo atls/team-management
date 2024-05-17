@@ -1,14 +1,7 @@
 import { styleFn } from 'styled-system'
 
-export const baseChildContainerStyles: styleFn = () => ({
-  position: 'fixed',
-  display: 'flex',
-  flexDirection: 'column',
-  zIndex: 1400,
-  bottom: 0,
-  top: 0,
-  left: 0,
-  right: 0,
+export const baseChildContainerStyles: styleFn = ({ theme }) => ({
+  ...theme.spaces.modal.childContainer,
   WebkitTapHighlightColor: 'transparent',
 })
 
@@ -24,5 +17,5 @@ export const sizeChildContainerStyles: styleFn = () => ({
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({
   boxShadow: theme.shadows.black,
   borderRadius: theme.radii.f24,
-  backgroundColor: 'rgba(255, 255, 255, 1)',
+  backgroundColor: theme.colors.modal.childContainer,
 })

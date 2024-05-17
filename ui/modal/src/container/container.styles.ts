@@ -1,10 +1,5 @@
-import { CSSObject } from '@emotion/css'
+import { styleFn } from 'styled-system'
 
-export const baseContainerStyles: CSSObject = {
-  position: 'fixed',
-  zIndex: 1300,
-  bottom: 0,
-  top: 0,
-  left: 0,
-  right: 0,
-}
+export const baseContainerStyles: styleFn = ({ theme }) => ({
+  ...theme.spaces.modal.container,
+})

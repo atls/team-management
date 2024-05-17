@@ -11,9 +11,9 @@ export const baseButtonStyles: styleFn = ({ theme }) => ({
   gap: 3,
 })
 
-export const sizeButtonStyles: styleFn = () => ({
-  width: 40,
-  height: 28,
+export const sizeButtonStyles: styleFn = ({ theme }) => ({
+  width: theme.spaces.dropdown.button.width,
+  height: theme.spaces.dropdown.button.height,
 })
 
 const defaultAppearanceButtonStyles: styleFn = ({ theme }) => ({
@@ -29,8 +29,6 @@ const pressedAppearanceButtonStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.dropdown.button.pressed,
   boxShadow: theme.shadows.dropdownButton,
 })
-
-// export const appearanceButtonStyles = ifProp({hover:true}, hoveredAppearanceButtonStyles, defaultAppearanceButtonStyles)
 
 export const appearanceButtonStyles = ifProp(
   prop('pressed', false),

@@ -1,5 +1,8 @@
 {
   "name": "@ui/switch",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/layout": "0.1.1",
@@ -19,10 +22,10 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "framer-motion": "10.16.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-laag": "2.0.5",
+    "framer-motion": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-laag": "*",
     "styled-system": "*",
     "styled-tools": "*"
   }

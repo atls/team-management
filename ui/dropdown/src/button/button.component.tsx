@@ -1,29 +1,31 @@
-import styled                     from '@emotion/styled'
-import { Box }                    from '@atls-ui-parts/layout'
+import styled                           from '@emotion/styled'
+import { Box }                          from '@atls-ui-parts/layout'
 
-import React                      from 'react'
-import { FunctionComponent }      from 'react'
-import { useHover }               from 'react-laag'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useHover }                     from 'react-laag'
 
-import { ButtonProps }            from './button.interfaces'
-import { baseButtonStyles }       from './button.styles'
-import { sizeButtonStyles }       from './button.styles'
-import { appearanceButtonStyles } from './button.styles'
+import { DropdownButtonProps }          from './button.interfaces'
+import { DropdownButtonContainerProps } from './button.interfaces'
+import { DotComponent }                 from './dot'
+import { baseButtonStyles }             from './button.styles'
+import { sizeButtonStyles }             from './button.styles'
+import { appearanceButtonStyles }       from './button.styles'
 
-const DropdownButtonContainer = styled(Box)<any>(
+const DropdownButtonContainer = styled(Box)<DropdownButtonContainerProps>(
   baseButtonStyles,
   sizeButtonStyles,
   appearanceButtonStyles
 )
 
-const Dot = () => <div style={{ backgroundColor: '#508EE9', width: 3, height: 3 }} />
-
-export const DropdownButton: FunctionComponent<ButtonProps> = ({
+export const DropdownButton: FC<DropdownButtonProps> = ({
   triggerProps,
   onClick,
   isOpen,
+  children,
 }) => {
   const [hover, hoverProps] = useHover()
+
   return (
     <DropdownButtonContainer
       {...triggerProps}
@@ -32,9 +34,8 @@ export const DropdownButton: FunctionComponent<ButtonProps> = ({
       hover={hover}
       {...hoverProps}
     >
-      <Dot />
-      <Dot />
-      <Dot />
+      <DotComponent />
+      {children}
     </DropdownButtonContainer>
   )
 }

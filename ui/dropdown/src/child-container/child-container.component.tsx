@@ -2,14 +2,12 @@ import styled                             from '@emotion/styled'
 import { Box }                            from '@atls-ui-parts/layout'
 
 import React                              from 'react'
-import { FunctionComponent }              from 'react'
+import { FC }                             from 'react'
 
 import { ChildContainerProps }            from './child-container.interfaces'
 import { baseChildContainerStyles }       from './child-container.styles'
 import { shapeChildContainerStyles }      from './child-container.styles'
 import { appearanceChildContainerStyles } from './child-container.styles'
-
-// TODO import themes
 
 const StyledBox = styled(Box)<any>(
   baseChildContainerStyles,
@@ -17,7 +15,14 @@ const StyledBox = styled(Box)<any>(
   appearanceChildContainerStyles
 )
 
-export const ChildContainer: FunctionComponent<ChildContainerProps> = ({
-  layerProps,
-  children,
-}) => <StyledBox {...layerProps}>{children}</StyledBox>
+export const ChildContainer: FC<ChildContainerProps> = ({ layerProps, children }) => {
+  const childrenContainerHandler = (e) => {
+    e.stopPropagation()
+  }
+
+  return (
+    <StyledBox {...layerProps} onClick={childrenContainerHandler}>
+      {children}
+    </StyledBox>
+  )
+}

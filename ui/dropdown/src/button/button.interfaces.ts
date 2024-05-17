@@ -1,7 +1,15 @@
-import { InputHTMLAttributes } from 'react'
+import { BoxProps } from '@atls-ui-parts/layout'
 
-export interface ButtonProps extends InputHTMLAttributes<any> {
+import { JSX }      from 'react'
+
+export interface DropdownButtonProps extends BoxProps {
+  children?: JSX.Element | string
   triggerProps: object
-  onClick: () => void
+  onClick: VoidFunction
   isOpen: boolean
+}
+
+export interface DropdownButtonContainerProps extends BoxProps {
+  pressed: boolean
+  hover: boolean
 }

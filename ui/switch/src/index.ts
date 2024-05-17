@@ -1,3 +1,3 @@
-export * from './base'
-export * from './icon'
-export * from './theme'
+export * from './base-switch'
+export * from './icon-switch'
+export * from './theme-switch'

@@ -12,16 +12,16 @@ import { DropdownProps }  from './dropdown.interface'
 export const Dropdown: FC<DropdownProps> = ({ children }) => {
   const [isOpen, setOpen] = useState(false)
 
-  const close = () => {
-    setOpen(false)
-  }
+  const buttonClickHandler = () => setOpen(!isOpen)
+  const buttonCloseClickHandler = () => setOpen(false)
+
   const { renderLayer, triggerProps, layerProps } = useLayer({
     isOpen,
-    onOutsideClick: close,
-    onDisappear: close,
+    onOutsideClick: buttonCloseClickHandler,
+    onDisappear: buttonCloseClickHandler,
+    placement: 'bottom-start',
     overflowContainer: false,
     auto: true,
-    placement: 'top-end',
     triggerOffset: 12,
     containerOffset: 16,
     arrowOffset: 16,
@@ -29,11 +29,7 @@ export const Dropdown: FC<DropdownProps> = ({ children }) => {
 
   return (
     <>
-      <DropdownButton
-        triggerProps={triggerProps}
-        isOpen={isOpen}
-        onClick={() => setOpen(!isOpen)}
-      />
+      <DropdownButton triggerProps={triggerProps} isOpen={isOpen} onClick={buttonClickHandler} />
       {renderLayer(
         <Box>{isOpen && <ChildContainer layerProps={layerProps}>{children}</ChildContainer>}</Box>
       )}

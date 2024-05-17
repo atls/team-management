@@ -1,12 +1,7 @@
-import { CSSObject } from '@emotion/css'
+import { styleFn } from 'styled-system'
 
-export const baseBackdropStyles: CSSObject = {
-  position: 'fixed',
-  zIndex: -1,
-  bottom: 0,
-  top: 0,
-  left: 0,
-  right: 0,
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+export const baseBackdropStyles: styleFn = ({ theme }) => ({
+  ...theme.spaces.modal.backdrop,
+  backgroundColor: theme.colors.modal.backdrop,
   WebkitTapHighlightColor: 'transparent',
-}
+})

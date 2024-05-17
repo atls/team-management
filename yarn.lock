@@ -210,6 +210,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/condition@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/condition@npm:0.1.1"
+  dependencies:
+    framer-motion: "npm:10.15.2"
+  peerDependencies:
+    "@emotion/react": 11.11.3
+    "@emotion/styled": 11.11.0
+    framer-motion: 10.15.2
+    react: 18.2.0
+  checksum: 10/5a6acd6014e2f4827555041729837fc0b5e060571990235ada9541607a13f6f97a0970317bbfe9510901a6a976bebd189b9e41f69068062542f8e9bc64e4847e
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/events-state@npm:0.0.6":
   version: 0.0.6
   resolution: "@atls-ui-parts/events-state@npm:0.0.6"
@@ -2105,7 +2119,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:18.3.2, @types/react@npm:^18.3.2":
+"@types/react@npm:*, @types/react@npm:18.3.2":
   version: 18.3.2
   resolution: "@types/react@npm:18.3.2"
   dependencies:
@@ -2322,11 +2336,11 @@ __metadata:
   peerDependencies:
     "@emotion/css": "*"
     "@emotion/react": "*"
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
+    "@emotion/styled": "*"
+    framer-motion: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
     styled-tools: "*"
   languageName: unknown
   linkType: soft
@@ -2352,6 +2366,7 @@ __metadata:
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
     "@atls-ui-parts/input": "npm:0.1.1"
+    "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
@@ -2363,8 +2378,8 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: "*"
+    react-dom: "*"
     styled-system: "*"
     styled-tools: "*"
   languageName: unknown
@@ -2374,6 +2389,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:
+    "@atls-ui-parts/condition": "npm:0.1.1"
     "@atls-ui-parts/layout": "npm:0.1.1"
     "@atls-ui-parts/portal": "npm:0.0.7"
     "@emotion/css": "npm:11.11.2"
@@ -2386,12 +2402,12 @@ __metadata:
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
+    "@emotion/css": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    framer-motion: "*"
+    react: "*"
+    react-dom: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -2414,10 +2430,10 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    react-laag: 2.0.5
+    framer-motion: "*"
+    react: "*"
+    react-dom: "*"
+    react-laag: "*"
     styled-system: "*"
     styled-tools: "*"
   languageName: unknown
@@ -2443,8 +2459,8 @@ __metadata:
     "@atls-utils/use-hover": "npm:0.0.2"
     react-laag: "npm:2.0.5"
   peerDependencies:
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -5130,6 +5146,27 @@ __metadata:
     cross-spawn: "npm:^7.0.0"
     signal-exit: "npm:^4.0.1"
   checksum: 10/087edd44857d258c4f73ad84cb8df980826569656f2550c341b27adf5335354393eec24ea2fabd43a253233fb27cee177ebe46bd0b7ea129c77e87cb1e9936fb
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:10.15.2":
+  version: 10.15.2
+  resolution: "framer-motion@npm:10.15.2"
+  dependencies:
+    "@emotion/is-prop-valid": "npm:^0.8.2"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  dependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/0cbbe691961e523b21002bd85cd759f451434bdd91c65055503863a820137d9e1c2d92daf4a4e2e3289c5f59a52a87d6af0e31f5585ec1299659ee1b13da476b
   languageName: node
   linkType: hard
 
@@ -8733,7 +8770,6 @@ __metadata:
     "@types/eslint": "npm:^8.56.10"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:20.12.12"
-    "@types/react": "npm:^18.3.2"
     eslint: "npm:8.57.0"
     husky: "npm:9.0.11"
     prettier: "npm:3.1.1"

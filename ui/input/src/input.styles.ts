@@ -1,32 +1,24 @@
-import { createBaseStyles }       from '@atls-ui-parts/input'
-import { createShapeStyles }      from '@atls-ui-parts/input'
-import { createAppearanceStyles } from '@atls-ui-parts/input'
+import { styleFn }    from 'styled-system'
+import { prop }       from 'styled-tools'
+import { switchProp } from 'styled-tools'
 
-import { prop }                   from 'styled-tools'
-import { switchProp }             from 'styled-tools'
-
-export const baseStyles = createBaseStyles()
-
-export const shapeStyles = createShapeStyles({
-  fontFamily: prop('theme.fonts.primary'),
+export const shapeStyles: styleFn = ({ theme }) => ({
+  fontFamily: theme.fonts.primary,
   size: 52,
   fontWeight: 400,
-  fontSize: 13,
-  rounding: 9,
-  paddingLeft: 18,
-  paddingRight: 18,
+  fontSize: theme.fontSizes.small.semiLarge,
+  borderRadius: theme.radii.f9,
+  padding: theme.spaces.input.padding,
 })
 
-const lightAppearanceStyles = createAppearanceStyles({
-  backgroundColor: prop('theme.colors.gray200'),
-  fontColor: prop('theme.colors.gray1600'),
-  // borderColor: '#DADEED',
+const lightAppearanceStyles: styleFn = ({ theme }) => ({
+  backgroundColor: theme.colors.input.light.backgroundColor,
+  color: theme.colors.input.light.fontColor,
 })
 
-const darkAppearanceStyles = createAppearanceStyles({
-  backgroundColor: prop('theme.colors.gray1400'),
-  fontColor: prop('theme.colors.white'),
-  // borderColor: '#DADEED',
+const darkAppearanceStyles: styleFn = ({ theme }) => ({
+  backgroundColor: theme.colors.input.dark.backgroundColor,
+  color: theme.colors.input.dark.fontColor,
 })
 
 export const appearanceStyles = switchProp(prop('mode', 'light'), {

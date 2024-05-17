@@ -1,68 +1,70 @@
-const white = '#FFFFFF'
-const gray100 = '#F2F2F2'
-const gray200 = '#E4E4E4'
-const gray400 = '#C9C9C9'
-const gray800 = '#949494'
-const gray1400 = '#434343'
-const gray1600 = '#282828'
+const WHITE = '#FFFFFF'
+const GRAY_100 = '#F2F2F2'
+const GRAY_200 = '#E4E4E4'
+const GRAY_400 = '#C9C9C9'
+const GRAY_1400 = '#434343'
+const GRAY_1600 = '#282828'
 
-const blue0 = '#F5F9FF'
-const blue100 = '#C5DCFD'
-const blue400 = '#508EE9'
+const BLUE_0 = '#F5F9FF'
+const BLUE_100 = '#C5DCFD'
+const BLUE_400 = '#508EE9'
+
+const BLACK_50 = '00000080'
 
 export const colors = {
-  white,
-  gray100,
-  gray200,
-  gray800,
-  gray1400,
-  gray1600,
+  input: {
+    light: {
+      backgroundColor: GRAY_200,
+      fontColor: GRAY_1600,
+    },
+    dark: {
+      backgroundColor: GRAY_1400,
+      fontColor: WHITE,
+    },
+  },
+  modal: {
+    childContainer: WHITE,
+    backdrop: BLACK_50,
+  },
   dropdown: {
     button: {
-      default: white,
-      hover: blue0,
-      pressed: blue100,
+      default: WHITE,
+      hover: BLUE_0,
+      pressed: BLUE_100,
+    },
+    dot: {
+      background: BLUE_400,
     },
   },
   switch: {
-    base: {},
-    icon: {
-      default: {
-        background: gray100,
-        thumb: gray1600,
+    baseSwitch: {
+      handle: {
+        default: GRAY_100,
       },
-      checked: {
-        background: blue100,
-        thumb: blue400,
+      thumb: {
+        default: GRAY_400,
+        checked: BLUE_400,
       },
     },
-    theme: {
-      default: {
-        background: white,
-        thumb: gray1600,
+    iconSwitch: {
+      handle: {
+        default: GRAY_100,
+        checked: BLUE_100,
       },
-      checked: {
-        thumb: blue400,
-      },
-      hover: {
-        thumb: gray100,
+      thumb: {
+        default: GRAY_1600,
+        checked: BLUE_400,
       },
     },
-    default: {
-      background: gray100,
-      hover: {
-        background: gray100,
+    themeSwitch: {
+      handle: {
+        background: WHITE,
       },
-    },
-    checked: {
-      background: gray100,
-      hover: {
-        background: gray100,
+      thumb: {
+        default: GRAY_1600,
+        hover: GRAY_100,
+        checked: BLUE_400,
       },
-    },
-    thumb: {
-      default: gray400,
-      checked: blue400,
     },
   },
 }

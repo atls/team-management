@@ -1,5 +1,6 @@
-import styled from '@emotion/styled'
+import styled  from '@emotion/styled'
+import { Box } from '@atls-ui-parts/layout'
 
-const ContainerElement = styled.div()
+const ContainerElement = styled(Box)()
 
 export { ContainerElement }

@@ -1,8 +1,12 @@
 {
   "name": "@ui/input",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
+    "@atls-ui-parts/layout": "0.1.1",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
@@ -17,8 +21,8 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "*",
+    "react-dom": "*",
     "styled-system": "*",
     "styled-tools": "*"
   }

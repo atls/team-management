@@ -1,10 +1,10 @@
 import { styleFn } from 'styled-system'
 
-export const baseChildContainerStyles: styleFn = () => ({
+export const baseChildContainerStyles: styleFn = ({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   boxSizing: 'border-box',
-  padding: 10,
+  padding: theme.spaces.dropdown.childContainer.padding,
 })
 
 export const shapeChildContainerStyles: styleFn = ({ theme }) => ({
