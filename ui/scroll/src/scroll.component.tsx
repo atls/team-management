@@ -2,7 +2,7 @@ import styled      from '@emotion/styled'
 
 import React       from 'react'
 
-import ScrollProps from './scroll.interface'
+import {ScrollProps} from './scroll.interface'
 
 const ScrollContainer = styled.div`
   width: 100%;
