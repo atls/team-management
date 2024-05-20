@@ -30,9 +30,11 @@ const Checkbox: FC<CheckboxProps> = ({
       onChange={(event) => onCheck(event.currentTarget.checked)}
     />
     <Box>
-      <Condition match={checked} smoothOptions={{ duration: 0.3, pattern: 'in' }}>
-        <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
-      </Condition>
+      <Check checked={checked}>
+        <Condition match={checked} smoothOptions={{ duration: 10, pattern: 'in-and-out'}}>
+          <CheckIcon width={20} height={20} />
+        </Condition>
+      </Check>
     </Box>
     <Label position='end'>{children}</Label>
   </Container>
