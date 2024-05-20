@@ -6,13 +6,13 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/layout": "0.1.1",
-    "@atls-ui-parts/switch": "0.1.1",
-    "@ui/icons-test": "workspace:*"
+    "@atls-ui-parts/switch": "0.1.1"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
     "@types/styled-system": "^5.1.22",
+    "@ui/icons": "workspace:*",
     "framer-motion": "10.16.1",
     "react": "18.3.1",
     "react-laag": "2.0.5",

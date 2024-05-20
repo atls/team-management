@@ -1,1 +1,2 @@
-export * from './TestIcon'
+export * from './DarkThemeIcon'
+export * from './LightThemeIcon'
