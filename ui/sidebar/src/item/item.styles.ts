@@ -9,7 +9,7 @@ export const baseItemStyles: CSSObject = {
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  margin: '8px 0',
+  marginTop: '8px',
   textDecoration: 'none',
   boxSizing: 'border-box',
   color: 'black',
@@ -18,13 +18,13 @@ export const baseItemStyles: CSSObject = {
 
 export const activeItemStyles: CSSObject = {
   '&:after': {
-    content: '" ddfg"',
+    content: '""',
     width: 2,
     backgroundColor: '#F5F9FF',
-    // position: 'absolute',
     right: 1,
     top: 1,
     bottom: 0,
+    zIndex: 1,
   },
 }
 

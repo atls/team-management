@@ -1,11 +1,13 @@
-import React          from 'react'
-import { FC }         from 'react'
+import React                      from 'react'
+import { FC }                     from 'react'
 
-import { ImageBlock } from '@ui/image'
-import { Box }        from '@ui/layout'
-import { Tag }        from '@ui/tag'
+import { OrgWhiteIcon }            from '@ui/icons'
+import { TimerIcon } from '@ui/icons'
+import { ImageBlock }             from '@ui/image'
+import { Box }                    from '@ui/layout'
+import { Tag }                    from '@ui/tag'
 
-import { CardProps }  from './card.interfaces'
+import { CardProps }              from './card.interfaces'
 
 export const Card: FC<CardProps> = ({ children, theme }) => {
   return (
@@ -39,7 +41,9 @@ export const Card: FC<CardProps> = ({ children, theme }) => {
             backgroundColor={theme.backgrounds.tagBlack}
             color={theme.colors.white}
             borderRadius={theme.radii.f7}
-          />
+          >
+            <OrgWhiteIcon />
+          </Tag>
           <Tag
             width={theme.space.tagWhiteWidth}
             height={theme.space.tagHeight}
@@ -48,7 +52,9 @@ export const Card: FC<CardProps> = ({ children, theme }) => {
             backgroundColor={theme.backgrounds.white}
             color={theme.colors.black}
             borderRadius={theme.radii.f19}
-          />
+          >
+            <TimerIcon width={20} height={15.75} />
+          </Tag>
         </Box>
       </Box>
       {children}

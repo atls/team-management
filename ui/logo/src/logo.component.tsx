@@ -1,9 +1,9 @@
-import React    from 'react'
-import { FC }   from 'react'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { Icon } from './icon.component'
+import { AtlantisIcon } from '@ui/icons'
 
 const Logo: FC = ({ ...props }) => {
-  return <Icon />
+  return <AtlantisIcon width={190} height={24} />
 }
 export { Logo }

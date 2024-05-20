@@ -15,5 +15,8 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
+  },
+  "dependencies": {
+    "@ui/icons": "workspace:*"
   }
 }

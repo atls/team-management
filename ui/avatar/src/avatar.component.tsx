@@ -1,39 +1,38 @@
-import styled                from '@emotion/styled'
-import { ScalableContent }   from '@atls-ui-parts/scalable-content'
-import { createBaseStyles }  from '@atls-ui-parts/avatar'
-import { createShapeStyles } from '@atls-ui-parts/avatar'
+import React                from 'react'
+import { FC }               from 'react'
 
-import React                 from 'react'
-import { FC }                from 'react'
+import { Condition }        from '@ui/condition'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
 
-import { ImageBlock }        from '@ui/image'
-
-import { AvatarProps }       from './avatar.interfaces'
-import { ContainerWrapper }  from './container'
+import { AvatarProps }      from './avatar.interfaces'
+import { ContainerWrapper } from './container'
+import { Notification }     from './notification/notification.component'
 
 export const Avatar: FC<AvatarProps> = ({
   borderWidth,
-  borderColor,
   size,
   borderRadius,
   padding,
-  fontColor,
-  fontSize,
-  fontWeight,
-  shape,
-  fontFamily,
-  contentType,
+  image,
   src,
-  icon,
-  text,
   alt,
   notification,
 }) => {
   return (
-    <ContainerWrapper shape={shape} size={size} borderRadius={borderRadius}>
-      {(contentType === 'image' && <ImageBlock src={src} alt={alt} />) ||
-        (contentType === 'scalable-text' && <ScalableContent>{text}</ScalableContent>) ||
-        (contentType === 'icon' && icon)}
-    </ContainerWrapper>
+    <Box position='relative'>
+      {notification && <Notification />}
+
+      <ContainerWrapper
+        size={size}
+        borderRadius={borderRadius}
+        borderWidth={borderWidth}
+        padding={padding}
+      >
+        <Condition match={image}>
+          <ImageBlock src={src} alt={alt} />
+        </Condition>
+      </ContainerWrapper>
+    </Box>
   )
 }

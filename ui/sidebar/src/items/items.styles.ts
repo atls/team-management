@@ -5,4 +5,5 @@ export const baseItemsStyles: CSSObject = {
   flexGrow: 1,
   flexDirection: 'column',
   height: '100%',
+  marginTop: '40px',
 }

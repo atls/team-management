@@ -1,8 +1,8 @@
 import * as React from 'react'
 export interface TagProps {
-  padding?: object
-  fontSize?: object
-  fontFamily?: object | string
+  padding?: Record<string, string>
+  fontSize?: Record<string, number>
+  fontFamily?: Record<string, string> | string
   backgroundColor?: string
   text?: string | null
   children?: React.ReactNode

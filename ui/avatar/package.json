@@ -8,12 +8,14 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/avatar": "0.1.1",
-    "@atls-ui-parts/scalable-content": "0.1.1",
-    "@atls-ui-parts/text-transform": "0.0.8",
+    "@atls-ui-parts/styles": "0.1.1",
+    "@ui/condition": "workspace:*",
     "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
     "styled-tools": "1.7.2"
   },
   "devDependencies": {
+    "@emotion/css": "11.11.2",
     "@emotion/react": "11.11.3",
     "@emotion/styled": "11.11.0",
     "@types/react": "18.3.1",
@@ -24,6 +26,7 @@
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
+    "@emotion/css": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",

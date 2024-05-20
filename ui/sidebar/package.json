@@ -9,6 +9,7 @@
   "dependencies": {
     "@atls-ui-proto/divider": "0.1.1",
     "@ui/avatar": "workspace:*",
+    "@ui/icons": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/logo": "workspace:*",
     "@ui/text": "workspace:0.0.1",

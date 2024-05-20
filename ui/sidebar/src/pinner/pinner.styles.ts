@@ -1,10 +1,10 @@
 import { CSSObject } from '@emotion/css'
 
 export const basePinnerStyles: CSSObject = {
-  width: 80,
-  height: 56,
   display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
+  flexDirection: 'column',
+  boxSizing: 'border-box',
+  zIndex: '999',
   position: 'absolute',
+  top: '400px',
 }
