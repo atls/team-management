@@ -7,5 +7,5 @@ export interface ConditionProps {
   match: boolean
   smooth?: boolean
   smoothOptions?: SmoothOptions
-  children?: any
+  children?: React.ReactNode
 }

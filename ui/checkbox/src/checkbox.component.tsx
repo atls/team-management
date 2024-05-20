@@ -5,6 +5,7 @@ import { HiddenInput }             from '@atls-ui-parts/hidden-input'
 import React                       from 'react'
 import { FC }                      from 'react'
 
+import { Condition }               from '@ui/condition'
 import { CheckIcon }               from '@ui/icons'
 
 import CheckboxProps               from './checkbox.interface'
@@ -56,7 +57,9 @@ export const Checkbox: FC<CheckboxProps> = ({
       onChange={(event) => onCheck(event.currentTarget.checked)}
     />
     <Box>
-      <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
+      <Condition match={checked} smooth={true} smoothOptions={{ duration: 0.3, pattern: 'in' }}>
+        <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
+      </Condition>
     </Box>
     <Label position='end'>{children}</Label>
   </Container>
