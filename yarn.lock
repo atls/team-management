@@ -174,11 +174,6 @@ __metadata:
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/dropdown": "workspace:*"
-    "@ui/icons-test": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.3.1"
@@ -2313,7 +2308,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/dropdown@workspace:*, @ui/dropdown@workspace:ui/dropdown":
+"@ui/dropdown@workspace:ui/dropdown":
   version: 0.0.0-use.local
   resolution: "@ui/dropdown@workspace:ui/dropdown"
   dependencies:
@@ -2361,7 +2356,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/input@workspace:*, @ui/input@workspace:ui/input":
+"@ui/input@workspace:ui/input":
   version: 0.0.0-use.local
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
@@ -2385,7 +2380,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/modal@workspace:*, @ui/modal@workspace:ui/modal":
+"@ui/modal@workspace:ui/modal":
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:
@@ -2412,7 +2407,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/switch@workspace:*, @ui/switch@workspace:ui/switch":
+"@ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:

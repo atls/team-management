@@ -3,17 +3,17 @@ import { prop }    from 'styled-tools'
 import { ifProp }  from 'styled-tools'
 
 export const baseButtonStyles: styleFn = ({ theme }) => ({
-  cursor: 'pointer',
+  cursor: theme.spaces.pointer,
+  display: theme.spaces.flex,
+  justifyContent: theme.spaces.center,
+  alignItems: theme.spaces.center,
   borderRadius: theme.radii.f9,
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  gap: theme.spaces.dropdown.button.gap,
+  gap: theme.spaces.s3,
 })
 
 export const sizeButtonStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.dropdown.button.width,
-  height: theme.spaces.dropdown.button.height,
+  width: theme.spaces.sizes.dropdownButtonWidth,
+  height: theme.spaces.sizes.dropdownButtonHeight,
 })
 
 const defaultAppearanceButtonStyles: styleFn = ({ theme }) => ({

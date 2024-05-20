@@ -6,6 +6,6 @@ export const appearanceHandleStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeHandleStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.switch.baseSwitch.handle.width,
-  height: theme.spaces.switch.baseSwitch.handle.height,
+  width: theme.spaces.sizes.baseSwitchHandleWidth,
+  height: theme.spaces.sizes.baseSwitchHandleHeight,
 })

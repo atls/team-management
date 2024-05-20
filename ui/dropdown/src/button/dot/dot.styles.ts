@@ -5,6 +5,6 @@ export const appearanceDotStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeDotStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.dropdown.dot,
-  height: theme.spaces.dropdown.dot,
+  width: theme.spaces.sizes.dot,
+  height: theme.spaces.sizes.dot,
 })

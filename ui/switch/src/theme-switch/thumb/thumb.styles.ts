@@ -2,9 +2,9 @@ import { styleFn } from 'styled-system'
 import { ifProp }  from 'styled-tools'
 
 export const baseThumbStyles: styleFn = ({ theme }) => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  display: theme.spaces.flex,
+  alignItems: theme.spaces.center,
+  justifyContent: theme.spaces.center,
 })
 
 export const shapeThumbStyles: styleFn = ({ theme }) => ({
@@ -12,8 +12,8 @@ export const shapeThumbStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeThumbStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.switch.themeSwitch.thumb.width,
-  height: theme.spaces.switch.themeSwitch.thumb.height,
+  width: theme.spaces.sizes.themeSwitchThumbWidth,
+  height: theme.spaces.sizes.themeSwitchThumbHeight,
 })
 
 const defaultAppearanceThumbStyles: styleFn = ({ theme }) => ({
@@ -40,21 +40,3 @@ export const appearanceThumbStyles = ifProp(
   checkedAppearanceThumbStyles,
   ifProp('hover', hoverAppearanceThumbStyles, defaultAppearanceThumbStyles)
 )
-
-// const defaultAppearanceThumbStyles: styleFn = ({theme}) => ({
-// 	backgroundColor: theme.colors.switch.thumb.default,
-// })
-//
-// const checkedAppearanceThumbStyles: styleFn = ({theme}) => ({
-// 	backgroundColor: theme.colors.switch.thumb.checked,
-// })
-//
-// export const appearanceThumbStyles = ifProp(
-// 	'checked',
-// 	checkedAppearanceThumbStyles,
-// 	defaultAppearanceThumbStyles
-// )
-//
-// export const shapeThumbStyles = switchProp(prop('size', 'normal'), {
-// 	normal: shapeNormalSizeThumbStyles,
-// })

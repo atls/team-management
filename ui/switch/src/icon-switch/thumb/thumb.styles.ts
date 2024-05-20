@@ -3,16 +3,16 @@ import { baseThumbStyles as hyperionBaseThumbStyles } from '@atls-ui-parts/switc
 import { styleFn }                                    from 'styled-system'
 import { ifProp }                                     from 'styled-tools'
 
-export const baseThumbStyles: styleFn = () => ({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+export const baseThumbStyles: styleFn = ({ theme }) => ({
+  display: theme.spaces.flex,
+  alignItems: theme.spaces.center,
+  justifyContent: theme.spaces.center,
   ...hyperionBaseThumbStyles,
 })
 
 export const shapeThumbStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.switch.iconSwitch.thumb,
-  height: theme.spaces.switch.iconSwitch.thumb,
+  width: theme.spaces.sizes.iconSwitchThumb,
+  height: theme.spaces.sizes.iconSwitchThumb,
 })
 
 const defaultAppearanceThumbStyles: styleFn = ({ theme }) => ({

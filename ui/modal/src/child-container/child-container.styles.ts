@@ -1,21 +1,24 @@
 import { styleFn } from 'styled-system'
 
 export const baseChildContainerStyles: styleFn = ({ theme }) => ({
-  ...theme.spaces.modal.childContainer,
+  position: theme.spaces.fixed,
+  display: theme.spaces.flex,
+  flexDirection: theme.spaces.column,
+  zIndex: theme.spaces.s1400,
+  bottom: theme.spaces.s0,
+  top: theme.spaces.s0,
+  left: theme.spaces.s0,
+  right: theme.spaces.s0,
   WebkitTapHighlightColor: 'transparent',
 })
 
-const WIDTH = '486px'
-const HEIGHT = 'min-content'
-const MAX_WIDTH = 'calc(100% - 24px)'
-const MAX_HEIGHT = 'calc(100% - 24px)'
 export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
-  width: WIDTH,
-  height: HEIGHT,
-  maxWidth: MAX_WIDTH,
-  maxHeight: MAX_HEIGHT,
-  margin: theme.spaces.modal.childContainer.margin,
-  padding: theme.spaces.modal.childContainer.padding,
+  width: theme.spaces.sizes.modalChildContainerWidth,
+  height: theme.spaces.sizes.modalChildContainerHeight,
+  maxWidth: theme.spaces.sizes.modalChildContainerMaxWidth,
+  maxHeight: theme.spaces.sizes.modalChildContainerMaxHeight,
+  margin: theme.spaces.auto,
+  padding: theme.spaces.defaultPadding,
 })
 
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({

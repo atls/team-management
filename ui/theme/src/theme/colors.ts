@@ -35,6 +35,7 @@ export const colors = {
     dot: {
       background: BLUE_400,
     },
+    childContainer: WHITE,
   },
   switch: {
     baseSwitch: {
