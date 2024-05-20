@@ -1,4 +1,4 @@
-import styled         from '@emotion/styled'
+import styled from '@emotion/styled'
 
 const ScrollContainer = styled.div`
   width: 100%;
@@ -14,4 +14,4 @@ const ScrollContainer = styled.div`
   }
 `
 
-export {ScrollContainer}
+export { ScrollContainer }
