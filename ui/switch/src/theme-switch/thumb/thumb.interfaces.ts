@@ -3,7 +3,6 @@ import { ThumbElementProps as BaseThumbElementProps } from '@atls-ui-parts/switc
 export interface ThumbElementProps extends BaseThumbElementProps {
   active: boolean
   hover: boolean
-  children: JSX.Element
 }
 
 export interface ThumbComponentProps extends BaseThumbElementProps {

@@ -5,13 +5,17 @@ export const baseChildContainerStyles: styleFn = ({ theme }) => ({
   WebkitTapHighlightColor: 'transparent',
 })
 
-export const sizeChildContainerStyles: styleFn = () => ({
-  width: '486px',
-  height: 'min-content',
-  maxWidth: 'calc(100% - 24px)',
-  maxHeight: 'calc(100% - 24px)',
-  margin: 'auto',
-  padding: '12px 24px',
+const WIDTH = '486px'
+const HEIGHT = 'min-content'
+const MAX_WIDTH = 'calc(100% - 24px)'
+const MAX_HEIGHT = 'calc(100% - 24px)'
+export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
+  width: WIDTH,
+  height: HEIGHT,
+  maxWidth: MAX_WIDTH,
+  maxHeight: MAX_HEIGHT,
+  margin: theme.spaces.modal.childContainer.margin,
+  padding: theme.spaces.modal.childContainer.padding,
 })
 
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({

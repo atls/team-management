@@ -1,10 +1,9 @@
-import { BoxProps } from '@atls-ui-parts/layout'
+import { BoxProps }     from '@atls-ui-parts/layout'
 
-import { JSX }      from 'react'
+import { TriggerProps } from 'react-laag'
 
 export interface DropdownButtonProps extends BoxProps {
-  children?: JSX.Element | string
-  triggerProps: object
+  triggerProps: TriggerProps
   onClick: VoidFunction
   isOpen: boolean
 }

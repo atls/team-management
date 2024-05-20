@@ -3,6 +3,7 @@ import { Box }                            from '@atls-ui-parts/layout'
 
 import React                              from 'react'
 import { FC }                             from 'react'
+import { PropsWithChildren }              from 'react'
 
 import { ChildContainerProps }            from './child-container.interfaces'
 import { baseChildContainerStyles }       from './child-container.styles'
@@ -15,8 +16,11 @@ const StyledBox = styled(Box)<any>(
   appearanceChildContainerStyles
 )
 
-export const ChildContainer: FC<ChildContainerProps> = ({ layerProps, children }) => {
-  const childrenContainerHandler = (e) => {
+export const ChildContainer: FC<PropsWithChildren<ChildContainerProps>> = ({
+  layerProps,
+  children,
+}) => {
+  const childrenContainerHandler = (e: Event): void => {
     e.stopPropagation()
   }
 

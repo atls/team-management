@@ -12,13 +12,14 @@ export const spaces = {
     button: {
       width: 40,
       height: 28,
+      gap: 3,
     },
   },
   input: {
     padding: 18,
   },
   modal: {
-    constainer: {
+    container: {
       position: 'fixed',
       zIndex: 1300,
       bottom: 0,
@@ -35,6 +36,8 @@ export const spaces = {
       right: 0,
     },
     childContainer: {
+      margin: 'auto',
+      padding: '12px 24px',
       position: 'fixed',
       display: 'flex',
       flexDirection: 'column',

@@ -3,6 +3,7 @@ import { Box }                   from '@atls-ui-parts/layout'
 
 import React                     from 'react'
 import { FC }                    from 'react'
+import { PropsWithChildren }     from 'react'
 
 import { ThumbElementProps }     from './thumb.interfaces'
 import { baseThumbStyles }       from './thumb.styles'
@@ -17,7 +18,7 @@ const ThumbElementContainer = styled(Box)<any>(
   appearanceThumbStyles
 )
 
-const ThumbElement: FC<ThumbElementProps> = ({ checked, hover, children }) => (
+const ThumbElement: FC<PropsWithChildren<ThumbElementProps>> = ({ checked, hover, children }) => (
   <ThumbElementContainer checked={checked} hover={hover}>
     {children}
   </ThumbElementContainer>

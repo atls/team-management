@@ -3,6 +3,7 @@ import { Box }                          from '@atls-ui-parts/layout'
 
 import React                            from 'react'
 import { FC }                           from 'react'
+import { PropsWithChildren }            from 'react'
 import { useHover }                     from 'react-laag'
 
 import { DropdownButtonProps }          from './button.interfaces'
@@ -18,7 +19,7 @@ const DropdownButtonContainer = styled(Box)<DropdownButtonContainerProps>(
   appearanceButtonStyles
 )
 
-export const DropdownButton: FC<DropdownButtonProps> = ({
+export const DropdownButton: FC<PropsWithChildren<DropdownButtonProps>> = ({
   triggerProps,
   onClick,
   isOpen,
@@ -34,7 +35,7 @@ export const DropdownButton: FC<DropdownButtonProps> = ({
       hover={hover}
       {...hoverProps}
     >
-      <DotComponent />
+      <DotComponent count={3} />
       {children}
     </DropdownButtonContainer>
   )

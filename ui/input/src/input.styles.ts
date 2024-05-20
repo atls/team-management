@@ -5,7 +5,7 @@ import { switchProp } from 'styled-tools'
 export const shapeStyles: styleFn = ({ theme }) => ({
   fontFamily: theme.fonts.primary,
   size: 52,
-  fontWeight: 400,
+  fontWeight: theme.fontWeight.normal,
   fontSize: theme.fontSizes.small.semiLarge,
   borderRadius: theme.radii.f9,
   padding: theme.spaces.input.padding,

@@ -1,5 +1,3 @@
 import { SwitchProps } from '@atls-ui-parts/switch'
 
-export interface IconSwitchProps extends SwitchProps {
-  children: JSX.Element
-}
+export interface IconSwitchProps extends SwitchProps {}

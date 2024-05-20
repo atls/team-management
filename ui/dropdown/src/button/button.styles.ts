@@ -8,7 +8,7 @@ export const baseButtonStyles: styleFn = ({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: 3,
+  gap: theme.spaces.dropdown.button.gap,
 })
 
 export const sizeButtonStyles: styleFn = ({ theme }) => ({

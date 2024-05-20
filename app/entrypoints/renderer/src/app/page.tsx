@@ -1,9 +1,7 @@
 'use client'
 
-import React             from 'react'
+import React from 'react'
 
-import { ThemeProvider } from '@ui/theme'
-
-const Page = () => <ThemeProvider>page</ThemeProvider>
+const Page = () => <>page</>
 
 export default Page

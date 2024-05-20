@@ -5,6 +5,7 @@ import { useSwitch }              from '@atls-ui-parts/switch'
 
 import React                      from 'react'
 import { FC }                     from 'react'
+import { PropsWithChildren }      from 'react'
 import { useRef }                 from 'react'
 
 import { IconSwitchProps }        from './icon-switch.interfaces'
@@ -18,7 +19,7 @@ const IconSwitchContainer = styled(HandleElement)(
   shapeHandleStyles
 )
 
-const IconSwitch: FC<IconSwitchProps> = ({
+const IconSwitch: FC<PropsWithChildren<IconSwitchProps>> = ({
   disabled = false,
   checked: defaultValue,
   onChange,

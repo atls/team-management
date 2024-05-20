@@ -1,6 +1,5 @@
-import { JSX } from 'react'
+import { LayerProps } from 'react-laag'
 
 export interface ChildContainerProps {
-  layerProps: object
-  children: JSX.Element
+  layerProps: LayerProps
 }

@@ -1,6 +1,1 @@
-import { InputHTMLAttributes } from 'react'
-import { JSX }                 from 'react'
-
-export interface DropdownProps extends Omit<InputHTMLAttributes<any>, 'onChange'> {
-  children: JSX.Element
-}
+export interface DropdownProps {}
