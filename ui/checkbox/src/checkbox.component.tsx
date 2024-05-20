@@ -1,66 +1,41 @@
-import styled                      from '@emotion/styled'
-import { ConditionalRender }       from '@atls-ui-parts/conditional-render'
-import { HiddenInput }             from '@atls-ui-parts/hidden-input'
+import { HiddenInput } from '@atls-ui-parts/hidden-input'
 
-import React                       from 'react'
-import { FC }                      from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import { Condition }               from '@ui/condition'
-import { CheckIcon }               from '@ui/icons'
+import { Condition }   from '@ui/condition'
+import { CheckIcon }   from '@ui/icons'
 
-import CheckboxProps               from './checkbox.interface'
-import { boxBaseStyles }           from './checkbox.styles'
-import { boxShapeStyles }          from './checkbox.styles'
-import { boxAppearanceStyles }     from './checkbox.styles'
-import { checkAppearanceStyles }   from './checkbox.styles'
-import { checkShapeStyles }        from './checkbox.styles'
-import { checkBaseStyles }         from './checkbox.styles'
-import { labelAppearanceStyles }   from './checkbox.styles'
-import { labelShapeStyles }        from './checkbox.styles'
-import { labelPositionStyles }     from './checkbox.styles'
-import { containerPositionStyles } from './checkbox.styles'
-import { containerBaseStyles }     from './checkbox.styles'
+import CheckboxProps   from './checkbox.interface'
+import { Box }         from './box'
+import { Check }       from './check'
+import { Container }   from './container'
+import { Label }       from './label'
 
 const doNothing = () => {
   // do nothing
 }
 
-const Container = styled.div<{ labelPosition?: string; fill?: boolean }>(
-  containerBaseStyles,
-  containerPositionStyles
-)
-
-const Box = styled.div(boxBaseStyles, boxAppearanceStyles, boxShapeStyles)
-
-const Label = styled(ConditionalRender())(
-  labelShapeStyles,
-  labelAppearanceStyles,
-  labelPositionStyles
-)
-
-const Check = styled.div<{ checked: boolean }>(
-  checkBaseStyles,
-  checkAppearanceStyles,
-  checkShapeStyles
-)
-
-export const Checkbox: FC<CheckboxProps> = ({
+const Checkbox: FC<CheckboxProps> = ({
   children,
   checked = false,
-  onCheck = (newState) => doNothing(),
+  onCheck = doNothing,
+  labelPosition = 'end',
   ...props
 }) => (
-  <Container labelPosition='end' onClick={() => onCheck(!checked)} {...props}>
+  <Container labelPosition={labelPosition} onClick={() => onCheck(!checked)} {...props}>
     <HiddenInput
       type='checkbox'
       checked={checked}
       onChange={(event) => onCheck(event.currentTarget.checked)}
     />
     <Box>
-      <Condition match={checked} smooth={true} smoothOptions={{ duration: 0.3, pattern: 'in' }}>
+      <Condition match={checked} smoothOptions={{ duration: 0.3, pattern: 'in' }}>
         <Check checked={checked}>{checked && <CheckIcon width={20} height={20} />}</Check>
       </Condition>
     </Box>
     <Label position='end'>{children}</Label>
   </Container>
 )
+
+export { Checkbox }
