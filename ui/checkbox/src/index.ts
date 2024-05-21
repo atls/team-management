@@ -1,2 +1,6 @@
 export * from '@atls-ui-parts/checkbox'
 export * from './checkbox.component'
+export * from './box'
+export * from './check'
+export * from './container'
+export * from './label'

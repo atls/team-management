@@ -4,7 +4,7 @@ import { motion }          from 'framer-motion'
 
 import { ConditionProps }  from './condition.interface'
 
-const Condition = ({
+const Condition: React.FC<ConditionProps> = ({
   match,
   smooth = false,
   smoothOptions = {
@@ -12,13 +12,14 @@ const Condition = ({
     pattern: 'in-and-out',
   },
   children,
-}: ConditionProps) => {
+}) => {
   if (smooth) {
     if (smoothOptions.pattern === 'in-and-out') {
       return (
         <AnimatePresence>
           {match && (
             <motion.div
+              key='condition-motion-in-and-out'
               style={{ display: 'flex', width: '100%', height: '100%' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -36,6 +37,7 @@ const Condition = ({
       return (
         match && (
           <motion.div
+            key='condition-motion-in'
             style={{ display: 'flex', width: '100%', height: '100%' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -53,6 +55,7 @@ const Condition = ({
         <AnimatePresence>
           {match && (
             <motion.div
+              key='condition-motion-out'
               style={{ display: 'flex', width: '100%', height: '100%' }}
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
@@ -67,7 +70,9 @@ const Condition = ({
     }
   }
 
-  if (match) return children
+  if (match) {
+    return <>{children}</>
+  }
 
   return null
 }
