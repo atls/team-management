@@ -8,7 +8,7 @@ export const shapeStyles: styleFn = ({ theme }) => ({
   fontWeight: theme.fontWeights.normal,
   fontSize: theme.fontSizes.small.semiLarge,
   borderRadius: theme.radii.f9,
-  padding: theme.spaces.s18,
+  padding: theme.spaces.semiRegular,
 })
 
 const lightAppearanceStyles: styleFn = ({ theme }) => ({

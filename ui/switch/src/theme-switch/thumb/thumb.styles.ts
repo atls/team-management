@@ -2,9 +2,9 @@ import { styleFn } from 'styled-system'
 import { ifProp }  from 'styled-tools'
 
 export const baseThumbStyles: styleFn = ({ theme }) => ({
-  display: theme.spaces.flex,
-  alignItems: theme.spaces.center,
-  justifyContent: theme.spaces.center,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 })
 
 export const shapeThumbStyles: styleFn = ({ theme }) => ({

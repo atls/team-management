@@ -1,9 +1,9 @@
 import { styleFn } from 'styled-system'
 
 export const baseChildContainerStyles: styleFn = ({ theme }) => ({
-  position: theme.spaces.fixed,
-  display: theme.spaces.flex,
-  flexDirection: theme.spaces.column,
+  position: 'fixed',
+  display: 'flex',
+  flexDirection: 'column',
   zIndex: theme.spaces.s1400,
   bottom: theme.spaces.zero,
   top: theme.spaces.zero,
@@ -14,10 +14,10 @@ export const baseChildContainerStyles: styleFn = ({ theme }) => ({
 
 export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
   width: theme.spaces.superExtra,
-  height: theme.spaces.minContent,
+  height: 'min-content',
   maxWidth: theme.spaces.fullWidthWithPaddingNormal,
   maxHeight: theme.spaces.fullWidthWithPaddingNormal,
-  margin: theme.spaces.auto,
+  margin: 'auto',
   padding: theme.spaces.paddingsNormal,
 })
 

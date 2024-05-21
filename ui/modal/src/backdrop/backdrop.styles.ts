@@ -1,8 +1,8 @@
 import { styleFn } from 'styled-system'
 
 export const baseBackdropStyles: styleFn = ({ theme }) => ({
-  position: theme.spaces.fixed,
-  zIndex: -1,
+  position: 'fixed',
+  zIndex: theme.spaces.minus,
   bottom: theme.spaces.zero,
   top: theme.spaces.zero,
   left: theme.spaces.zero,

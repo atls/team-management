@@ -3,12 +3,12 @@ import { prop }    from 'styled-tools'
 import { ifProp }  from 'styled-tools'
 
 export const baseButtonStyles: styleFn = ({ theme }) => ({
-  cursor: theme.spaces.pointer,
-  display: theme.spaces.flex,
-  justifyContent: theme.spaces.center,
-  alignItems: theme.spaces.center,
+  cursor: 'pointer',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   borderRadius: theme.radii.f9,
-  gap: theme.spaces.s3,
+  gap: theme.spaces.semiTiny,
 })
 
 export const sizeButtonStyles: styleFn = ({ theme }) => ({
