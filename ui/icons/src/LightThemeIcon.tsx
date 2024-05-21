@@ -5,7 +5,7 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
 
-export const LightThemeIcon = (props: IconProps) => {
+export const LightThemeIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -22,4 +22,4 @@ export const LightThemeIcon = (props: IconProps) => {
       />
     </svg>
   )
-}
+})

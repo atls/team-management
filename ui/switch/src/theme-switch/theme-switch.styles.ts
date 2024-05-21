@@ -16,8 +16,8 @@ export const appearanceHandleStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeHandleStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.sizes.themeSwitchHandleWidht,
-  height: theme.spaces.sizes.themeSwitchHandleHeight,
+  width: theme.spaces.semiGiant,
+  height: theme.spaces.semiBig,
 })
 
 export const shapeHandleStyles: styleFn = ({ theme }) => ({

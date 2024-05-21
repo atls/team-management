@@ -8,8 +8,8 @@ export const baseThumbStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeThumbStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.sizes.baseSwitchThumb,
-  height: theme.spaces.sizes.baseSwitchThumb,
+  width: theme.spaces.micro,
+  height: theme.spaces.micro,
 })
 
 const defaultAppearanceThumbStyles: styleFn = ({ theme }) => ({

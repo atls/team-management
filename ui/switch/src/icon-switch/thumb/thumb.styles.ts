@@ -11,8 +11,8 @@ export const baseThumbStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeThumbStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.sizes.iconSwitchThumb,
-  height: theme.spaces.sizes.iconSwitchThumb,
+  width: theme.spaces.large,
+  height: theme.spaces.large,
 })
 
 const defaultAppearanceThumbStyles: styleFn = ({ theme }) => ({

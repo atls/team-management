@@ -18,6 +18,6 @@ export const appearanceHandleStyles = ifProp(
 )
 
 export const shapeHandleStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.sizes.iconSwitchHandleWidth,
-  height: theme.spaces.sizes.iconSwitchHandleHeight,
+  width: theme.spaces.godzilla,
+  height: theme.spaces.semiModerate,
 })

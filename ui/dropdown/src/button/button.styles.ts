@@ -12,8 +12,8 @@ export const baseButtonStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeButtonStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.sizes.dropdownButtonWidth,
-  height: theme.spaces.sizes.dropdownButtonHeight,
+  width: theme.spaces.increased,
+  height: theme.spaces.semiModerate,
 })
 
 const defaultAppearanceButtonStyles: styleFn = ({ theme }) => ({
