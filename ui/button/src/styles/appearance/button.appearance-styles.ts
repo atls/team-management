@@ -1,8 +1,7 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
-
-import { ifProp }                 from 'styled-tools'
-import { switchProp }             from 'styled-tools'
-import { prop }                   from 'styled-tools'
+import { ifProp } from 'styled-tools'
+import { switchProp } from 'styled-tools'
+import { prop } from 'styled-tools'
 
 const appearanceTransparentBackgroundButtonDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.transparentBackgroundButton.default.font'),

@@ -1,9 +1,11 @@
 import { CSSObject } from '@emotion/css'
 
+import { theme }     from '@ui/theme'
+
 export const baseItemsStyles: CSSObject = {
   display: 'flex',
   flexGrow: 1,
   flexDirection: 'column',
-  height: '100%',
-  marginTop: '40px',
+  height: theme.space.full,
+  marginTop: theme.space.margin.big,
 }

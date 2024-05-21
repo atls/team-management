@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
 
 export interface SidebarProps {
-  children?: ReactNode
+  src?: string
+  name?: string
+  email?: string
 }

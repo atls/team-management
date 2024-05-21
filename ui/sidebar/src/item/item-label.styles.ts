@@ -1,8 +1,11 @@
 import { CSSObject } from '@emotion/css'
 
+import { theme }     from '@ui/theme'
+
 export const baseItemLabelStyles: CSSObject = {
   textOverflow: 'ellipsis',
   overflow: 'hidden',
-  padding: '0 8px',
+  padding: theme.space.padding.tb0lr8,
   whiteSpace: 'nowrap',
+  fontFamily: theme.fonts.primary,
 }

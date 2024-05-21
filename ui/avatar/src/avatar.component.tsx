@@ -1,7 +1,8 @@
+import { Condition }        from '@atls-ui-parts/condition'
+
 import React                from 'react'
 import { FC }               from 'react'
 
-import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 

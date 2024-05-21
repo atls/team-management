@@ -1,7 +1,7 @@
 export interface IconAttachmentProps {
-  iconSvg?: object
-  valueRadius?: string | object
-  valueWidth?: string | object
-  valueHeight?: string | object
-  valueBackground?: string | object
+  iconSvg?: React.ReactNode
+  valueRadius?: string | Record<string, string>
+  valueWidth?: string | Record<string, string>
+  valueHeight?: string | Record<string, string>
+  valueBackground?: string | Record<string, string>
 }

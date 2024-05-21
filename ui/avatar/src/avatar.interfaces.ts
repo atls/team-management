@@ -1,6 +1,6 @@
 export interface AvatarProps {
   backgroundColor?: string
-  borderWidth: number
+  borderWidth?: number
   size: number
   image: boolean
   borderRadius?: number

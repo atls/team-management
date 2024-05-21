@@ -4,7 +4,7 @@ import { useTheme }  from '@emotion/react'
 import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
-export const TimerIcon = (props: IconProps) => {
+export const TimerIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -21,4 +21,4 @@ export const TimerIcon = (props: IconProps) => {
       />
     </svg>
   )
-}
+})

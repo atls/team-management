@@ -11,21 +11,20 @@
     "build": "generate-icons src/ -i /icons"
   },
   "devDependencies": {
-    "@atls-ui-generators/icons": "0.0.2",
+    "@atls-ui-generators/icons": "0.0.16",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
     "@types/styled-system": "^5",
-    "glob": "10.3.15",
-    "glob-promise": "6.0.5",
+    "glob": "8.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
   "peerDependencies": {
-    "@atls-ui-generators/icons": "0.0.2",
+    "@atls-ui-generators/icons": "0.0.16",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@types/react": "18.3.1",

@@ -7,10 +7,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/icons": "workspace:*",
-    "@ui/image": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/tag": "workspace:*"
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.3",

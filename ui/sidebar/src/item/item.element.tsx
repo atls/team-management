@@ -1,11 +1,6 @@
-import styled from '@emotion/styled'
+import styled           from '@emotion/styled'
 
-export interface BaseItemProps {
-  active?: boolean
-  href: string
-  title?: string
-  target?: string
-}
+import { BaseItemProps } from './item.element.interface.'
 
 const ItemElement = styled.a<BaseItemProps>()
 

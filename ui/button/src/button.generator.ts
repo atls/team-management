@@ -4,5 +4,5 @@ import { theme }                    from '@ui/theme'
 
 const generator = new AppearanceStyleGenerator(theme.colors.button)
 
-const __dirname = 'folder path'
+const __dirname = 'path'
 generator.generateFile(__dirname)

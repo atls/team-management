@@ -8,10 +8,11 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/avatar": "0.1.1",
+    "@atls-ui-parts/condition": "0.1.1",
     "@atls-ui-parts/styles": "0.1.1",
-    "@ui/condition": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*",
     "styled-tools": "1.7.2"
   },
   "devDependencies": {

@@ -1,13 +1,15 @@
 import { CSSObject } from '@emotion/css'
 
+import { theme }     from '@ui/theme'
+
 export const baseSwitchStyles: CSSObject = {
-  height: '32px',
-  width: '32px',
+  height: theme.space.sidebarSwitch,
+  width: theme.space.sidebarSwitch,
   justifyContent: 'center',
   alignItems: 'center',
   display: 'flex',
   zIndex: '9999',
-  boxShadow: '0px 2px 4px 0px #00000033',
-  borderRadius: '5px',
-  backgroundColor: 'white',
+  boxShadow: theme.shadows.switch,
+  borderRadius: theme.radii.f5,
+  backgroundColor: theme.backgrounds.white,
 }

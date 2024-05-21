@@ -1,21 +1,21 @@
-import styled               from '@emotion/styled'
-import { Content }          from '@atls-ui-parts/button'
+import styled                from '@emotion/styled'
+import { Content }           from '@atls-ui-parts/button'
 
-import React                from 'react'
-import { FC }               from 'react'
-import { forwardRef }       from 'react'
-import { useState }         from 'react'
-import { boxShadow }        from 'styled-system'
+import React                 from 'react'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
+import { forwardRef }        from 'react'
+import { useState }          from 'react'
 
-import { useHover }         from '@ui/utils'
+import { useHover }          from '@ui/utils'
 
-import { ButtonProps }      from './button.interfaces'
-import { IconAttachment }   from './icon-attachment'
-import { baseStyles }       from './button.styles'
-import { shapeStyles }      from './button.styles'
-import { contentStyles }    from './button.styles'
-import { fillStyles }       from './button.styles'
-import { appearanceStyles } from './styles'
+import { ButtonProps }       from './button.interfaces'
+import { IconAttachment }    from './icon-attachment'
+import { baseStyles }        from './button.styles'
+import { shapeStyles }       from './button.styles'
+import { contentStyles }     from './button.styles'
+import { fillStyles }        from './button.styles'
+import { appearanceStyles }  from './styles'
 
 export const ButtonElement = styled('button')<any>(
   baseStyles,
@@ -25,7 +25,10 @@ export const ButtonElement = styled('button')<any>(
   fillStyles
 )
 
-export const Button: FC<ButtonProps> = forwardRef(({ children, active, ...props }, ref) => {
+export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
+  { children, active, ...props },
+  ref
+) => {
   const [hover, hoverProps] = useHover()
   const [pressed, setPressed] = useState<boolean>(false)
 

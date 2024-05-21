@@ -1,3 +1,4 @@
+export * from './ArrowChevronIcon'
 export * from './AtlantisIcon'
 export * from './DashboardIcon'
 export * from './LogoutIcon'

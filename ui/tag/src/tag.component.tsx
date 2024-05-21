@@ -1,12 +1,14 @@
-import React        from 'react'
-import { FC }       from 'react'
+import React                 from 'react'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
 
-import { Box }      from '@ui/layout'
-import { Text }     from '@ui/text'
+import { Box }               from '@ui/layout'
+import { Text }              from '@ui/text'
+import { theme }             from '@ui/theme'
 
-import { TagProps } from './tag.interfaces'
+import { TagProps }          from './tag.interfaces'
 
-const Tag: FC<TagProps> = ({
+const Tag: FC<PropsWithChildren<TagProps>> = ({
   children,
   width,
   height,
@@ -32,9 +34,9 @@ const Tag: FC<TagProps> = ({
     {children}
     <Text
       fontFamily={fontFamily}
-      fontWeight='medium'
+      fontWeight={theme.fontWeights.medium}
       fontSize={fontSize}
-      lineHeight='default'
+      lineHeight={theme.lineHeights.default}
       color={color}
     >
       {text}
