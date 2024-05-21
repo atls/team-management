@@ -1,4 +1,3 @@
-import { createBoxBaseStyles }           from '@atls-ui-parts/checkbox'
 import { createBoxShapeStyles }          from '@atls-ui-parts/checkbox'
 import { createBoxAppearanceStyles }     from '@atls-ui-parts/checkbox'
 import { createCheckBaseStyles }         from '@atls-ui-parts/checkbox'
@@ -10,17 +9,28 @@ import { createLabelAppearanceStyles }   from '@atls-ui-parts/checkbox'
 import { createLabelShapeStyles }        from '@atls-ui-parts/checkbox'
 import { createLabelPositionStyles }     from '@atls-ui-parts/checkbox'
 
+import { styleFn }                       from 'styled-system'
 import { ifProp }                        from 'styled-tools'
 import { prop }                          from 'styled-tools'
 
 import { theme }                         from '@ui/theme'
 
-export const boxBaseStyles = createBoxBaseStyles()
+export const boxBaseStyles: styleFn = ({ theme: checkboxTheme }) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  border: '1px solid',
+  width: 20,
+  height: 20,
+  borderRadius: checkboxTheme.radii.extra,
+})
+
 export const boxShapeStyles = createBoxShapeStyles({
   size: 20,
   borderWidth: 1,
   borderRadius: theme.radii.extra,
 })
+
 export const boxDefaultAppearanceStyles = createBoxAppearanceStyles({
   borderColor: theme.colors.checkbox.default.border,
   backgroundColor: theme.colors.checkbox.default.background,
