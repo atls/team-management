@@ -2503,6 +2503,7 @@ __metadata:
     "@types/styled-system": "npm:^5"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
+    "@ui/theme": "workspace:*"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-laag: "npm:2.0.5"
