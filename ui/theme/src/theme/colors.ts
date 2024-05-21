@@ -1,7 +1,9 @@
 const colors = {
+  black: 'rgba(15, 12, 12, 1)',
   checkbox: {
     default: {
       background: 'transparent',
+      color: 'red',
       border: 'rgba(165, 165, 165, 1)',
     },
     hover: {
@@ -23,4 +25,4 @@ const colors = {
   },
 }
 
-export {colors}
+export { colors }

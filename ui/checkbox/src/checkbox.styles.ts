@@ -10,80 +10,74 @@ import { createLabelAppearanceStyles }   from '@atls-ui-parts/checkbox'
 import { createLabelShapeStyles }        from '@atls-ui-parts/checkbox'
 import { createLabelPositionStyles }     from '@atls-ui-parts/checkbox'
 
-import { switchProp }                    from 'styled-tools'
+import { ifProp }                        from 'styled-tools'
 import { prop }                          from 'styled-tools'
 
+import { theme }                         from '@ui/theme'
+import {display} from "styled-system";
+
 export const boxBaseStyles = createBoxBaseStyles()
-
-export const boxNormalShapeStyles = createBoxShapeStyles({
-  size: 24,
+export const boxShapeStyles = createBoxShapeStyles({
+  size: 20,
   borderWidth: 1,
-  borderRadius: 100,
+  borderRadius: theme.radii.extra,
 })
-export const boxLargeShapeStyles = createBoxShapeStyles({
-  size: 40,
-  borderWidth: 1,
-  borderRadius: 100,
+export const boxDefaultAppearanceStyles = createBoxAppearanceStyles({
+  borderColor: theme.colors.checkbox.default.border,
+  backgroundColor: theme.colors.checkbox.default.background,
+})
+export const boxHoverAppearanceStyles = createBoxAppearanceStyles({
+  borderColor: theme.colors.checkbox.hover.border,
+  backgroundColor: theme.colors.checkbox.hover.background,
+})
+export const boxCheckedAppearanceStyles = createBoxAppearanceStyles({
+  borderColor: theme.colors.checkbox.checked.border,
+  backgroundColor: theme.colors.checkbox.checked.background,
+})
+export const boxCheckedHoverAppearanceStyles = createBoxAppearanceStyles({
+  borderColor: theme.colors.checkbox.checkedHover.border,
+  backgroundColor: theme.colors.checkbox.checkedHover.background,
+})
+export const boxDisabledAppearanceStyles = createBoxAppearanceStyles({
+  borderColor: theme.colors.checkbox.disabled.border,
+  backgroundColor: theme.colors.checkbox.disabled.background,
+})
+export const boxAppearanceStyles = ifProp(
+  prop('disabled', false),
+  boxDisabledAppearanceStyles,
+  ifProp(
+    prop('checked', false),
+    ifProp(prop('hover', false), boxCheckedHoverAppearanceStyles, boxCheckedAppearanceStyles),
+    ifProp(prop('hover', false), boxHoverAppearanceStyles, boxDefaultAppearanceStyles)
+  )
+)
+
+export const containerBaseStyles = createContainerBaseStyles()
+export const containerPositionStyles = createContainerPositionStyles()
+
+export const labelShapeStyles = createLabelShapeStyles({
+  fontFamily: theme.fonts.primary,
 })
 
-export const boxPrimaryAppearanceStyles = createBoxAppearanceStyles({
-  borderColor: '#A5A5A5',
-  backgroundColor: 'white',
+export const labelAppearanceStyles = createLabelAppearanceStyles({
+  fontColor: theme.colors.black,
 })
-export const boxSecondaryAppearanceStyles = createBoxAppearanceStyles({
-  borderColor: '#508EE9',
-  backgroundColor: '#508EE9',
-})
-
-export const boxAppearanceStyles = switchProp(prop('variant', 'primary'), {
-  primary: boxPrimaryAppearanceStyles,
-  secondary: boxSecondaryAppearanceStyles,
-})
-export const boxShapeStyles = switchProp(prop('size', 'normal'), {
-  normal: boxNormalShapeStyles,
-  large: boxLargeShapeStyles,
+export const labelPositionStyles = createLabelPositionStyles({
+  margin: '10px',
 })
 
 export const checkBaseStyles = createCheckBaseStyles()
-
-export const checkNormalShapeStyles = createCheckShapeStyles({
+export const checkAppearanceStyles = createCheckAppearanceStyles({
+  color: theme.colors.checkbox.checked.background,
+})
+export const checkmarkShapeStyles = createCheckShapeStyles({
   size: 20,
-  borderRadius: 10,
+  borderRadius: theme.radii.zero
 })
-export const checkLargeShapeStyles = createCheckShapeStyles({
-  size: 30,
-  borderRadius: 15,
-})
-
-export const checkPrimaryAppearanceStyles = createCheckAppearanceStyles({
-  color: 'black',
-  backgroundColor: 'white',
-})
-export const checkSecondaryAppearanceStyles = createCheckAppearanceStyles({
-  color: 'white',
-  backgroundColor: 'black',
-})
-
-export const checkAppearanceStyles = switchProp(prop('variant', 'primary'), {
-  primary: checkPrimaryAppearanceStyles,
-  secondary: checkSecondaryAppearanceStyles,
-})
-export const checkShapeStyles = switchProp(prop('size', 'normal'), {
-  normal: checkNormalShapeStyles,
-  large: checkLargeShapeStyles,
-})
-
-export const containerPositionStyles = createContainerPositionStyles()
-export const containerBaseStyles = createContainerBaseStyles()
-
-export const labelPositionStyles = createLabelPositionStyles({
-  margin: '7px',
-})
-export const labelShapeStyles = createLabelShapeStyles({
-  fontSize: 20,
-  fontWeight: 400,
-  fontFamily: 'Helvetica',
-})
-export const labelAppearanceStyles = createLabelAppearanceStyles({
-  fontColor: 'black',
-})
+export const checkmarkCheckStyles = ifProp(
+  'checked',
+  {
+    display: 'flex',
+  },
+  { display: 'none' }
+)
