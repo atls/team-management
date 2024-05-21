@@ -14,7 +14,6 @@ import { ifProp }                        from 'styled-tools'
 import { prop }                          from 'styled-tools'
 
 import { theme }                         from '@ui/theme'
-import {display} from "styled-system";
 
 export const boxBaseStyles = createBoxBaseStyles()
 export const boxShapeStyles = createBoxShapeStyles({
@@ -72,7 +71,7 @@ export const checkAppearanceStyles = createCheckAppearanceStyles({
 })
 export const checkmarkShapeStyles = createCheckShapeStyles({
   size: 20,
-  borderRadius: theme.radii.zero
+  borderRadius: theme.radii.zero,
 })
 export const checkmarkCheckStyles = ifProp(
   'checked',
