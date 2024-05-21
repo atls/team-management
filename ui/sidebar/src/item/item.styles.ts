@@ -7,15 +7,15 @@ import { theme }     from '@ui/theme'
 
 export const baseItemStyles: CSSObject = {
   width: theme.space.full,
-  height: theme.space.itemHeight,
+  height: theme.space.mediumSemiDefault,
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
-  marginTop: theme.space.margin.small,
+  marginTop: theme.space.miniReduced,
   textDecoration: 'none',
   boxSizing: 'border-box',
   color: theme.colors.black,
-  padding: theme.space.padding.tb4lr40,
+  padding: theme.space.tb4lr40,
 }
 
 export const activeItemStyles: CSSObject = {

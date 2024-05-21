@@ -8,5 +8,5 @@ export const basePinnerStyles: CSSObject = {
   boxSizing: 'border-box',
   zIndex: '999',
   position: 'absolute',
-  top: '80%',
+  top: theme.space.fullSemiReduced,
 }

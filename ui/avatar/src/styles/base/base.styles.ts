@@ -1,12 +1,14 @@
 import { styleFn } from 'styled-system'
 
+import { theme }   from '@ui/theme'
+
 export const createBaseStyles: styleFn = () => () => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   outline: 'none',
-  padding: 0,
-  margin: 0,
+  padding: theme.space.none,
+  margin: theme.space.none,
   position: 'relative',
   overflow: 'hidden',
   borderStyle: 'solid',

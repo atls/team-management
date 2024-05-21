@@ -7,5 +7,5 @@ export const baseItemsStyles: CSSObject = {
   flexGrow: 1,
   flexDirection: 'column',
   height: theme.space.full,
-  marginTop: theme.space.margin.big,
+  marginTop: theme.space.largeSemiReduced,
 }

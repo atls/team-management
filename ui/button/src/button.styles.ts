@@ -22,7 +22,7 @@ const bigRoundedPadding = createShapeStyles({
   paddingLeft: 24,
   paddingRight: 24,
 })
-//
+
 const smallRoundedPadding = createShapeStyles({
   size: 42,
   rounding: prop('theme.radii.f12') as unknown as number,

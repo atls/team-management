@@ -7,8 +7,8 @@ export const baseStyles: CSSObject = {
   zIndex: '1',
   top: '0',
   left: '0',
-  width: theme.space.notification,
-  height: theme.space.notification,
+  width: theme.space.miniIncreased,
+  height: theme.space.miniIncreased,
   borderRadius: theme.radii.f12,
   backgroundColor: theme.backgrounds.notification,
 }

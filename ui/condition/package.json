@@ -1,0 +1,12 @@
+{
+  "name": "@ui/condition",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@atls-ui-parts/condition": "0.1.1"
+  }
+}

@@ -2542,7 +2542,6 @@ __metadata:
   resolution: "@ui/avatar@workspace:ui/avatar"
   dependencies:
     "@atls-ui-parts/avatar": "npm:0.1.1"
-    "@atls-ui-parts/condition": "npm:0.1.1"
     "@atls-ui-parts/styles": "npm:0.1.1"
     "@emotion/css": "npm:11.11.2"
     "@emotion/react": "npm:11.11.3"
@@ -2550,6 +2549,7 @@ __metadata:
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/condition": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
@@ -2612,6 +2612,14 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/condition@workspace:*, @ui/condition@workspace:ui/condition":
+  version: 0.0.0-use.local
+  resolution: "@ui/condition@workspace:ui/condition"
+  dependencies:
+    "@atls-ui-parts/condition": "npm:0.1.1"
   languageName: unknown
   linkType: soft
 

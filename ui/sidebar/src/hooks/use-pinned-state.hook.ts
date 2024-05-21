@@ -1,9 +1,9 @@
 import { useState }             from 'react'
 import { useCallback }          from 'react'
 
-import { UsePinnedStateResult } from './interfaces'
+import { UsePinnedStateResult } from './use-pinned-state.interfaces'
 
-export const usePinnedState = (): UsePinnedStateResult => {
+export const usePinnedStateHook = (): UsePinnedStateResult => {
   const [pinned, setPinned] = useState<boolean>(false)
 
   const change = useCallback(

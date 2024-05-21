@@ -9,7 +9,7 @@ export const baseWrapperStyles: CSSObject = {
   position: 'relative',
   display: 'flex',
   height: theme.space.full,
-  width: theme.space.sidebarSmall,
+  width: theme.space.mediumIncreased,
 }
 
 export const pinnedWrapperStyles: CSSObject = {

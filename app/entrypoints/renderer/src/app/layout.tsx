@@ -5,11 +5,11 @@ import React             from 'react'
 import { ThemeProvider } from '@ui/theme'
 
 const RootLayout = ({ children }) => (
-  <ThemeProvider>
-    <html>
-      <body>{children}</body>
-    </html>
-  </ThemeProvider>
+  <html>
+    <body>
+      <ThemeProvider>{children}</ThemeProvider>
+    </body>
+  </html>
 )
 
 export default RootLayout

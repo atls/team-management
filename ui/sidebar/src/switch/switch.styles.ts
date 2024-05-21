@@ -3,8 +3,8 @@ import { CSSObject } from '@emotion/css'
 import { theme }     from '@ui/theme'
 
 export const baseSwitchStyles: CSSObject = {
-  height: theme.space.sidebarSwitch,
-  width: theme.space.sidebarSwitch,
+  height: theme.space.mediumReduced,
+  width: theme.space.mediumReduced,
   justifyContent: 'center',
   alignItems: 'center',
   display: 'flex',
