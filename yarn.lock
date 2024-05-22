@@ -247,6 +247,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/condition@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/condition@npm:0.1.1"
+  dependencies:
+    framer-motion: "npm:10.15.2"
+  peerDependencies:
+    "@emotion/react": 11.11.3
+    "@emotion/styled": 11.11.0
+    framer-motion: 10.15.2
+    react: 18.2.0
+  checksum: 10/5a6acd6014e2f4827555041729837fc0b5e060571990235ada9541607a13f6f97a0970317bbfe9510901a6a976bebd189b9e41f69068062542f8e9bc64e4847e
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/conditional-render@npm:0.0.7":
   version: 0.0.7
   resolution: "@atls-ui-parts/conditional-render@npm:0.0.7"
@@ -301,6 +315,20 @@ __metadata:
   peerDependencies:
     styled-system: 5.1.5
   checksum: 10/a275b47e183ea7cdde78fa4bf2f42787b8e256a02ed3ab13c8bbb685e70349c7522d1b2042ea9bc72918a0b3e4360025de769441f07c67a9fa0ab917b3a6e2e7
+  languageName: node
+  linkType: hard
+
+"@atls-ui-proto/divider@npm:*":
+  version: 0.1.1
+  resolution: "@atls-ui-proto/divider@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/layout": "npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/4ed530fdd19a85c973cedbe8eb3001264283ec7c30425823ca11e1ac9e7346dd6c52a35811c9c5657b6c62d48992edcd3b74ecba305244a7cbae523efc56b4a9
   languageName: node
   linkType: hard
 
@@ -2475,17 +2503,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:^18"
-    framer-motion: "npm:10.12.10"
-    react: "npm:18.2.0"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/react": "*"
-    "@types/react-dom": "*"
-    react: "*"
+    "@atls-ui-parts/condition": "npm:0.1.1"
   languageName: unknown
   linkType: soft
 
@@ -2493,6 +2511,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/divider@workspace:ui/divider"
   dependencies:
+    "@atls-ui-proto/divider": "npm:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5"
@@ -5295,9 +5314,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.12.10":
-  version: 10.12.10
-  resolution: "framer-motion@npm:10.12.10"
+"framer-motion@npm:10.15.2":
+  version: 10.15.2
+  resolution: "framer-motion@npm:10.15.2"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     tslib: "npm:^2.4.0"
@@ -5312,7 +5331,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 10/34ca875f74427d5d29b710e17e74b9ad84f192520426f14b974d7a2bc613d1c3b8d0cb25a29e501a1da71181cdb53df1975cc7918070871084aba5eabf31a0b9
+  checksum: 10/0cbbe691961e523b21002bd85cd759f451434bdd91c65055503863a820137d9e1c2d92daf4a4e2e3289c5f59a52a87d6af0e31f5585ec1299659ee1b13da476b
   languageName: node
   linkType: hard
 

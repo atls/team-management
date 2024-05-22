@@ -1,1 +1,1 @@
-export * from './divider.component'
+export * from '@atls-ui-proto/divider'

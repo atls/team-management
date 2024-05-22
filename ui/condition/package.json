@@ -7,19 +7,6 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "framer-motion": "10.12.10"
-  },
-  "devDependencies": {
-    "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
-    "@types/react": "^18",
-    "react": "18.2.0"
-  },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "react": "*"
+    "@atls-ui-parts/condition": "0.1.1"
   }
 }
