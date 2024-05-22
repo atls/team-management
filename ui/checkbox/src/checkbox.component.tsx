@@ -31,7 +31,7 @@ const Checkbox: FC<CheckboxProps> = ({
     />
     <Box>
       <Check checked={checked}>
-        <Condition match={checked} smooth smoothOptions={{ duration: 0.3, pattern: 'in-and-out' }}>
+        <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
           <CheckIcon width={20} height={20} />
         </Condition>
       </Check>
