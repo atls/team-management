@@ -173,12 +173,6 @@ __metadata:
     "@types/node": "npm:20.11.5"
     "@types/react": "npm:18.3.1"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/checkbox": "workspace:*"
-    "@ui/divider": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/progress": "workspace:*"
-    "@ui/scroll": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.2.0"
@@ -2470,7 +2464,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/checkbox@workspace:*, @ui/checkbox@workspace:ui/checkbox":
+"@ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
@@ -2504,10 +2498,20 @@ __metadata:
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
     "@atls-ui-parts/condition": "npm:0.1.1"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:^18"
+    react: "npm:18.2.0"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
-"@ui/divider@workspace:*, @ui/divider@workspace:ui/divider":
+"@ui/divider@workspace:ui/divider":
   version: 0.0.0-use.local
   resolution: "@ui/divider@workspace:ui/divider"
   dependencies:
@@ -2578,7 +2582,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/progress@workspace:*, @ui/progress@workspace:ui/progress":
+"@ui/progress@workspace:ui/progress":
   version: 0.0.0-use.local
   resolution: "@ui/progress@workspace:ui/progress"
   dependencies:
