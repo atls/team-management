@@ -3,6 +3,7 @@ export const spaces = {
   minus: -1,
   normalCount: 3,
   paddingsNormal: '12px 24px',
+  fullWidth: '100%',
   fullWidthWithPaddingNormal: 'calc(100% - 24px)',
   semiTiny: 3,
   s4: 4,
