@@ -24,6 +24,6 @@
     "target": "ES2022",
     "jsx": "react"
   },
-  "include": ["app/**/*", "ui/**/**/**/**/*", "fragments/**/*"],
+  "include": ["app/**/*", "ui/**/*", "fragments/**/*"],
   "exclude": [".idea"]
 }
