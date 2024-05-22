@@ -20,7 +20,7 @@ export const baseItemStyles: CSSObject = {
 
 export const activeItemStyles: CSSObject = {
   borderLeft: '3px solid #387ADD',
-  backgroundColor: theme.backgrounds.itemSelected,
+  backgroundColor: theme.backgrounds.ghostWhite,
 }
 
 export const ifActiveItemModifier = (styles?: CSSObject | styleFn) =>

@@ -2823,7 +2823,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace:*, @ui/layout@workspace:0.0.1, @ui/layout@workspace:ui/layout":
+"@ui/layout@workspace:*, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
@@ -2946,20 +2946,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/tag@workspace:ui/tag"
   dependencies:
+    "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
+    "@emotion/react": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
   linkType: soft
 
-"@ui/text@workspace:0.0.1, @ui/text@workspace:ui/text":
+"@ui/text@workspace:*, @ui/text@workspace:0.0.1, @ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
   dependencies:

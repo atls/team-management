@@ -22,12 +22,12 @@ const defaultAppearanceButtonStyles: styleFn = ({ theme }) => ({
 
 const hoveredAppearanceButtonStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.dropdown.button.hover,
-  boxShadow: theme.shadows.dropdownButton,
+  boxShadow: theme.shadows.blackCat,
 })
 
 const pressedAppearanceButtonStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.dropdown.button.pressed,
-  boxShadow: theme.shadows.dropdownButton,
+  boxShadow: theme.shadows.blackCat,
 })
 
 export const appearanceButtonStyles = ifProp(

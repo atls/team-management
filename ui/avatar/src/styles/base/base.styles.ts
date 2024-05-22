@@ -1,8 +1,6 @@
 import { styleFn } from 'styled-system'
 
-import { theme }   from '@ui/theme'
-
-export const createBaseStyles: styleFn = () => () => ({
+export const createBaseStyles: styleFn = ({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',

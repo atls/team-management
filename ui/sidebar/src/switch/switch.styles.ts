@@ -9,7 +9,7 @@ export const baseSwitchStyles: CSSObject = {
   alignItems: 'center',
   display: 'flex',
   zIndex: '9999',
-  boxShadow: theme.shadows.switch,
+  boxShadow: theme.shadows.moorena,
   borderRadius: theme.radii.f5,
   backgroundColor: theme.backgrounds.white,
 }

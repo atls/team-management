@@ -10,5 +10,5 @@ export const baseStyles: CSSObject = {
   width: theme.space.miniIncreased,
   height: theme.space.miniIncreased,
   borderRadius: theme.radii.f12,
-  backgroundColor: theme.backgrounds.notification,
+  backgroundColor: theme.backgrounds.darkSkyBlue,
 }

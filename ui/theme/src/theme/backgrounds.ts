@@ -3,10 +3,9 @@ const backgrounds = {
   main: '#F8F8F8',
   violet: '#ECECF5',
   tagBlack: '#282828',
-  notification: '#508EE9',
+  darkSkyBlue: '#508EE9',
   white: 'white',
-  divider: '#D7D7D7',
-  itemSelected: '#F5F9FF',
+  ghostWhite: '#F5F9FF',
 }
 
 export { backgrounds }

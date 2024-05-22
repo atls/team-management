@@ -1,4 +1,5 @@
 import { Divider }            from '@atls-ui-proto/divider'
+import { useTheme }           from '@emotion/react'
 
 import React                  from 'react'
 import { FC }                 from 'react'
@@ -12,7 +13,6 @@ import { LogoutIcon }         from '@ui/icons'
 import { Box }                from '@ui/layout'
 import { Logo }               from '@ui/logo'
 import { Text }               from '@ui/text'
-import { theme }              from '@ui/theme'
 
 import { Container }          from './container'
 import { Expander }           from './expander'
@@ -21,6 +21,7 @@ import { ItemIcon }           from './item/icon'
 import { ItemLabel }          from './item/label'
 import { Items }              from './items-list'
 import { Pinner }             from './pinner'
+import { SidebarTheme }       from './sidebar.interfaces'
 import { SidebarProps }       from './sidebar.interfaces'
 import { SwitchWrapper }      from './switch'
 import { Wrapper }            from './wrapper'
@@ -32,6 +33,8 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
   const handleClick = () => {
     setPinned((prev) => !prev)
   }
+
+  const theme: SidebarTheme = useTheme()
 
   return (
     <>
@@ -47,10 +50,10 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               display='flex'
               flexDirection='column'
               justifyContent='space-between'
-              height={theme.space.full}
-              marginTop={theme.space.mediumSemiReduced}
+              height={theme.space?.full}
+              marginTop={theme.space?.mediumSemiReduced}
             >
-              <Box margin={theme.space.t20autob0}>
+              <Box margin={theme.space?.t20autob0}>
                 <Logo />
               </Box>
 
@@ -58,8 +61,8 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 <Item active={false} href='/'>
                   <ItemIcon>
                     <DashboardIcon
-                      height={theme.space.normalSemiDefault}
-                      width={theme.space.normalSemiDefault}
+                      height={theme.space?.normalSemiDefault}
+                      width={theme.space?.normalSemiDefault}
                     />
                   </ItemIcon>
                   <ItemLabel>Dashboard</ItemLabel>
@@ -67,8 +70,8 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 <Item active href='/'>
                   <ItemIcon>
                     <OrgamizationsIcon
-                      height={theme.space.normalSemiDefault}
-                      width={theme.space.normalSemiDefault}
+                      height={theme.space?.normalSemiDefault}
+                      width={theme.space?.normalSemiDefault}
                     />
                   </ItemIcon>
                   <ItemLabel>Organizations</ItemLabel>
@@ -79,33 +82,33 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
             <Box display='flex' flexDirection='column' alignItems='center'>
               <Divider
                 weight={1}
-                backgroundColor={theme.backgrounds.divider}
-                maxWidth={theme.space.largeSemiDefault}
+                backgroundColor={theme.backgrounds?.divider}
+                maxWidth={theme.space?.largeSemiDefault}
                 margin='auto'
               />
               <Box
                 display='flex'
                 flexDirection='row'
                 alignItems='center'
-                minWidth={theme.space.largeSemiDefault}
-                margin={theme.space.miniReduced}
+                minWidth={theme.space?.largeSemiDefault}
+                margin={theme.space?.miniReduced}
                 justifyContent='space-between'
               >
                 <Avatar
-                  size={theme.space.mediumSemiDefault}
+                  size={theme.space?.mediumSemiDefault}
                   image
                   notification={false}
                   src={src}
                   alt='avatar'
                 />
                 <Box display='flex' flexDirection='column'>
-                  <Text style={{ fontSize: theme.fontSizes.small.semiLarge }}>{name}</Text>
-                  <Text style={{ fontSize: theme.fontSizes.small.default }}>{email}</Text>
+                  <Text style={{ fontSize: theme.fontSizes?.small.semiLarge }}>{name}</Text>
+                  <Text style={{ fontSize: theme.fontSizes?.small.default }}>{email}</Text>
                 </Box>
                 <Box>
                   <LogoutIcon
-                    height={theme.space.normalSemiIncreased}
-                    width={theme.space.normalSemiIncreased}
+                    height={theme.space?.normalSemiIncreased}
+                    width={theme.space?.normalSemiIncreased}
                   />
                 </Box>
               </Box>

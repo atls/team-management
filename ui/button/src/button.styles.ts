@@ -13,8 +13,8 @@ export const fillStyles: styleFn = ifProp(prop('fill', false), { width: '100%' }
 const middlingRoundedPadding = createShapeStyles({
   size: 42,
   rounding: prop('theme.radii.f24') as unknown as number,
-  paddingLeft: 12,
-  paddingRight: 12,
+  paddingLeft: prop('theme.spaces.micro') as unknown as number,
+  paddingRight: prop('theme.spaces.micro') as unknown as number,
 })
 const bigRoundedPadding = createShapeStyles({
   size: 96.91,
@@ -26,8 +26,8 @@ const bigRoundedPadding = createShapeStyles({
 const smallRoundedPadding = createShapeStyles({
   size: 42,
   rounding: prop('theme.radii.f12') as unknown as number,
-  paddingLeft: 12,
-  paddingRight: 12,
+  paddingLeft: prop('theme.spaces.micro') as unknown as number,
+  paddingRight: prop('theme.spaces.micro') as unknown as number,
 })
 
 export const baseStyles = getBaseStyles()
