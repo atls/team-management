@@ -26,5 +26,8 @@
     "@ui/scroll": "workspace:*",
     "@ui/theme": "workspace:*",
     "typescript": "5.2.2"
+  },
+  "peerDependencies": {
+    "glob": "*"
   }
 }

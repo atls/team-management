@@ -8,7 +8,7 @@
     "build": "generate-icons src/ -i /icons"
   },
   "dependencies": {
-    "@atls-ui-generators/icons": "0.0.9",
+    "@atls-ui-generators/icons": "0.0.16",
     "@ui/icons": "workspace:*"
   },
   "devDependencies": {
