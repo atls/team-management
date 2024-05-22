@@ -1,3 +1,5 @@
+export * from './DarkThemeIcon'
+export * from './LightThemeIcon'
 export * from './ArrowChevronIcon'
 export * from './AtlantisIcon'
 export * from './DashboardIcon'

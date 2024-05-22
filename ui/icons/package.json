@@ -5,7 +5,7 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "scripts": {
-    "build": "generate-icons src/ -i /icons"
+    "build": "generate-icons src/ -i ./icons"
   },
   "devDependencies": {
     "@atls-ui-generators/icons": "0.0.16",
