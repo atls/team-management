@@ -7,5 +7,5 @@ export interface AvatarProps {
   padding?: number
   src?: string
   alt?: string
-  notification?: boolean
+  notification: boolean
 }

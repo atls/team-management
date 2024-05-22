@@ -2,21 +2,18 @@
   "name": "@ui/logo",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
+  "dependencies": {
+    "@ui/icons": "workspace:*"
+  },
   "devDependencies": {
-    "@types/react": "18.3.1",
+    "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "react": "*",
     "react-dom": "*"
-  },
-  "dependencies": {
-    "@ui/icons": "workspace:*"
   }
 }

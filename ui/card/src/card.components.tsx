@@ -15,19 +15,17 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
   backgroundColor,
   alignItems,
   justifyContent,
-}) => {
-  return (
-    <Box
-      boxShadow={boxShadow}
-      width={width}
-      height={height}
-      borderRadius={borderRadius}
-      display='flex'
-      backgroundColor={backgroundColor}
-      alignItems={alignItems}
-      justifyContent={justifyContent}
-    >
-      {children}
-    </Box>
-  )
-}
+}) => (
+  <Box
+    boxShadow={boxShadow}
+    width={width}
+    height={height}
+    borderRadius={borderRadius}
+    display='flex'
+    backgroundColor={backgroundColor}
+    alignItems={alignItems}
+    justifyContent={justifyContent}
+  >
+    {children}
+  </Box>
+)

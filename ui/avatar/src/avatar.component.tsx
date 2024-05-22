@@ -17,24 +17,22 @@ export const Avatar: FC<AvatarProps> = ({
   image,
   src,
   alt,
-  notification,
-}) => {
-  return (
-    <Box position='relative'>
-      <Condition match={notification}>
-        <Notification />
-      </Condition>
+  notification = false,
+}) => (
+  <Box position='relative'>
+    <Condition match={notification}>
+      <Notification />
+    </Condition>
 
-      <ContainerWrapper
-        size={size}
-        borderRadius={borderRadius}
-        borderWidth={borderWidth}
-        padding={padding}
-      >
-        <Condition match={image}>
-          <ImageBlock src={src} alt={alt} />
-        </Condition>
-      </ContainerWrapper>
-    </Box>
-  )
-}
+    <ContainerWrapper
+      size={size}
+      borderRadius={borderRadius}
+      borderWidth={borderWidth}
+      padding={padding}
+    >
+      <Condition match={image}>
+        <ImageBlock src={src} alt={alt} />
+      </Condition>
+    </ContainerWrapper>
+  </Box>
+)

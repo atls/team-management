@@ -91,7 +91,13 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 margin={theme.space.miniReduced}
                 justifyContent='space-between'
               >
-                <Avatar size={theme.space.mediumSemiDefault} image src={src} alt='avatar' />
+                <Avatar
+                  size={theme.space.mediumSemiDefault}
+                  image
+                  notification={false}
+                  src={src}
+                  alt='avatar'
+                />
                 <Box display='flex' flexDirection='column'>
                   <Text style={{ fontSize: theme.fontSizes.small.semiLarge }}>{name}</Text>
                   <Text style={{ fontSize: theme.fontSizes.small.default }}>{email}</Text>

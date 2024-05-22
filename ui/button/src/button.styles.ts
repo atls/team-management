@@ -34,7 +34,7 @@ export const baseStyles = getBaseStyles()
 export const contentStyles = createContentStyles()
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
-  middlingRoundedPadding: middlingRoundedPadding,
-  smallRoundedPadding: smallRoundedPadding,
-  bigRoundedPadding: bigRoundedPadding,
+  middlingRoundedPadding,
+  smallRoundedPadding,
+  bigRoundedPadding,
 })
