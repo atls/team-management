@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'
 
-const Page = () => <h1>Team management</h1>
+const Page = () => <>page</>
 
 export default Page
