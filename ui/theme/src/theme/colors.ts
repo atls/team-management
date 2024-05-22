@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   black: 'rgba(15, 12, 12, 1)',
   checkbox: {
     default: {
@@ -23,6 +23,10 @@ const colors = {
       border: 'rgba(80, 142, 233, 1)',
     },
   },
-}
 
-export { colors }
+  scroll: {
+    default: {
+      scrollbarColor: 'rgba(152, 190, 249, 1) transparent',
+    },
+  },
+}

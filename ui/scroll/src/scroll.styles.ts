@@ -1,17 +1,23 @@
-import styled from '@emotion/styled'
+import styled      from '@emotion/styled'
 
-const ScrollContainer = styled.div`
-  width: 100%;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-width: auto;
-  scrollbar-color: #C5DCFD transparent;
-  
-  &::-webkit-scrollbar-thumb {
-    background-color: #C5DCFD;
-    border-radius: 20px;
-    border: 3px solid transparent;
-  }
-`
+import { styleFn } from 'styled-system'
+
+export const scrollContainerBaseStyles: styleFn = ({ theme }) => ({
+  width: theme.spaces.fullWidth,
+  height: theme.spaces.gigantic,
+  overflowY: 'scroll',
+  scrollbarWidth: 'auto',
+  scrollbarColor: theme.colors.scroll.default.scrollbarColor,
+})
+
+export const scrollContainerWebkitStyles: styleFn = ({ theme }) => ({
+  '&::-webkit-scrollbar-thumb': {
+    backgroundColor: theme.colors.scroll.default.scrollbarColor,
+    borderRadius: theme.radii.extra,
+    border: theme.borders.medium,
+  },
+})
+
+const ScrollContainer = styled.div(scrollContainerBaseStyles, scrollContainerWebkitStyles)
 
 export { ScrollContainer }
