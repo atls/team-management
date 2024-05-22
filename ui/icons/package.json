@@ -1,34 +1,21 @@
 {
   "name": "@ui/icons",
   "version": "0.0.1",
-  "private": true,
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "scripts": {
-    "build": "generate-icons src/ -i /icons"
-  },
-  "dependencies": {
-    "@atls-ui-generators/icons": "0.0.16",
-    "@ui/icons": "workspace:*"
+    "build": "generate-icons src/ -i ./icons"
   },
   "devDependencies": {
+    "@atls-ui-generators/icons": "0.0.16",
     "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
-    "@types/react": "18.3.2",
-    "@types/react-dom": "18.3.0",
-    "@types/styled-system": "^5.1.22",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "styled-system": "5.1.5",
-    "styled-tools": "1.7.2"
+    "@types/glob": "8.1.0",
+    "glob": "8.0.3",
+    "glob-promise": "5.0.0",
+    "react": "18.2.0"
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*",
-    "glob": "*",
-    "styled-system": "*",
-    "styled-tools": "*"
+    "react": "*"
   }
 }
