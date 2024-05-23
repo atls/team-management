@@ -12,6 +12,7 @@ const BLUE_400 = '#508EE9'
 const BLACK_50 = '00000080'
 
 export const colors = {
+  black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',
   zircon: 'rgb(245, 249, 255)',
@@ -101,7 +102,7 @@ export const colors = {
   burntorange: 'rgba(255, 130, 77, 0.30)',
   shark: 'rgb(43, 45, 50)',
   coral: 'rgba(255, 130, 77, 0.26)',
-  black: 'rgb(40, 40, 40)',
+  charcoalGrey: 'rgb(40, 40, 40)',
   bigstone: 'rgb(23, 38, 58)',
   ebonyclay: 'rgb(23, 38, 57)',
   thunder: 'rgb(37, 37, 37)',
@@ -307,6 +308,35 @@ export const colors = {
         font: 'rgba(148, 148, 148, 1)',
         border: 'transparent',
       },
+    },
+  },
+  checkbox: {
+    default: {
+      background: 'transparent',
+      color: 'red',
+      border: 'rgba(165, 165, 165, 1)',
+    },
+    hover: {
+      background: 'transparent',
+      border: 'rgb(242, 242, 242)',
+    },
+    disabled: {
+      background: 'transparent',
+      border: 'rgba(15, 12, 12, 0.12)',
+    },
+    checked: {
+      background: 'rgba(80, 142, 233, 1)',
+      border: 'rgba(80, 142, 233, 1)',
+    },
+    checkedHover: {
+      background: 'rgba(80, 142, 233, 1)',
+      border: 'rgba(80, 142, 233, 1)',
+    },
+  },
+
+  scroll: {
+    default: {
+      scrollbarColor: 'rgba(152, 190, 249, 1) transparent',
     },
   },
 }
