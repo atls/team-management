@@ -4530,6 +4530,7 @@ const RAW_RUNTIME_STATE =
           ["styled-tools", "npm:1.7.2"]\
         ],\
         "packagePeers": [\
+          "@emotion/react",\
           "@types/atls-ui-generators__icons",\
           "@types/emotion__react",\
           "@types/emotion__styled",\
@@ -4711,6 +4712,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ui-logo-virtual-fe4426ce0e/1/ui/logo/",\
         "packageDependencies": [\
           ["@ui/logo", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#workspace:ui/logo"],\
+          ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.2"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/icons", "virtual:c07b5cc00f758ae53b55fe9e75ab8d6f414cbd9552c463f8d2f507bb8a2346434582115960744a348d26c0dc464b18b7927e46a8395ec61bff9b23bdff4a384e#workspace:ui/icons"],\
@@ -4718,6 +4721,8 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"]\
         ],\
         "packagePeers": [\
+          "@emotion/react",\
+          "@types/emotion__react",\
           "@types/react-dom",\
           "@types/react",\
           "react-dom",\
@@ -4729,6 +4734,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui/logo/",\
         "packageDependencies": [\
           ["@ui/logo", "workspace:ui/logo"],\
+          ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@types/react", "npm:18.3.2"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/icons", "virtual:c07b5cc00f758ae53b55fe9e75ab8d6f414cbd9552c463f8d2f507bb8a2346434582115960744a348d26c0dc464b18b7927e46a8395ec61bff9b23bdff4a384e#workspace:ui/icons"],\
