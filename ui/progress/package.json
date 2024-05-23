@@ -1,0 +1,33 @@
+{
+  "name": "@ui/progress",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@atls-ui-parts/progress": "0.1.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@types/styled-system": "^5.1.22",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "styled-system": "*",
+    "styled-tools": "*"
+  }
+}

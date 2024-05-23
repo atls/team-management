@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "devDependencies": {
     "@emotion/react": "11.11.4",
