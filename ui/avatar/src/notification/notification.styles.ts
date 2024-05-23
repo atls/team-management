@@ -9,6 +9,6 @@ export const baseStyles: CSSObject = {
   left: '0',
   width: theme.space.miniIncreased,
   height: theme.space.miniIncreased,
-  borderRadius: theme.radii.f12,
+  borderRadius: theme.radii.medium,
   backgroundColor: theme.backgrounds.darkSkyBlue,
 }

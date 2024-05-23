@@ -10,6 +10,6 @@ export const baseSwitchStyles: CSSObject = {
   display: 'flex',
   zIndex: '9999',
   boxShadow: theme.shadows.moorena,
-  borderRadius: theme.radii.f5,
+  borderRadius: theme.radii.micro,
   backgroundColor: theme.backgrounds.white,
 }
