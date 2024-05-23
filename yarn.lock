@@ -191,6 +191,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-generators/button@npm:0.0.22":
+  version: 0.0.22
+  resolution: "@atls-ui-generators/button@npm:0.0.22"
+  dependencies:
+    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls/config-prettier": "npm:0.0.5"
+    "@atls/prettier-plugin": "npm:0.0.7"
+    "@babel/standalone": "npm:7.22.20"
+    camelcase: "npm:6.3.0"
+    commander: "npm:9.5.0"
+    prettier: "npm:2.8.8"
+  bin:
+    generate-styles: dist/generator.js
+  checksum: 10/e9db43a758c28ff1cc5d70227486474244e9310f38cc7477019f04ceed48866b8b2bc243054e81d178ed782493e8c965784b0ea773c595b8756846338a7b3201
+  languageName: node
+  linkType: hard
+
 "@atls-ui-generators/icons@npm:0.0.16":
   version: 0.0.16
   resolution: "@atls-ui-generators/icons@npm:0.0.16"
@@ -223,6 +240,21 @@ __metadata:
     camelcase: "npm:6.3.0"
     prettier: "npm:2.8.8"
   checksum: 10/5d462ebb355479eaf6a5bcee632f65b0bc68596db4f18bea68cd976fcb17dd0f362b1e648ec71a6714c725d5451885371e404b7d2c6ce6379afbcdd6a9239dbe
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/avatar@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/avatar@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/styles": "npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    react-dom: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/ae68f810ee213c8a4f9a2c821a598fdf8bb6305b0994fef101154009a75a2f7a5b414f3aada0182dca13dbd4f1b19210acb13695b35f9508600fff6b127accf1
   languageName: node
   linkType: hard
 
@@ -293,6 +325,17 @@ __metadata:
     "@emotion/styled": 11.11.0
     react: 18.2.0
   checksum: 10/f54f8d9ee3f2cb4eb3189796202c6d82a6593a6d42e18050c7266688b600c921ded0745bd47a90b6f13393f16b0df6037f6c7cd8cf51659224894129de19d537
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/image@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/image@npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+  checksum: 10/bb6e9e0ced6d5c318a7d5733950611968613db53cbc98d36bbcb52ccbd38aa9d1596afb7ad827f569cfb96af44e303817f56f5fddf5a79ed437938323d6df89d
   languageName: node
   linkType: hard
 
@@ -1605,9 +1648,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/env@npm:14.2.3"
+  checksum: 10/82b445331d46b4896dc86c0e33a7eaaa6f6abfd2408d49e1cb90fbfd6b26c698ea8e69c911ffe597e30fd8294db4e3445cde44b0771eabbfcd13663a9832a397
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:14.1.0":
   version: 14.1.0
   resolution: "@next/swc-darwin-arm64@npm:14.1.0"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-arm64@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-darwin-arm64@npm:14.2.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -1619,9 +1676,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-darwin-x64@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-darwin-x64@npm:14.2.3"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-arm64-gnu@npm:14.1.0":
   version: 14.1.0
   resolution: "@next/swc-linux-arm64-gnu@npm:14.1.0"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-gnu@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.3"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -1633,9 +1704,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-arm64-musl@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-linux-arm64-musl@npm:14.2.3"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-x64-gnu@npm:14.1.0":
   version: 14.1.0
   resolution: "@next/swc-linux-x64-gnu@npm:14.1.0"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-gnu@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.3"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -1647,9 +1732,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-x64-musl@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-linux-x64-musl@npm:14.2.3"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-arm64-msvc@npm:14.1.0":
   version: 14.1.0
   resolution: "@next/swc-win32-arm64-msvc@npm:14.1.0"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-arm64-msvc@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -1661,9 +1760,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-ia32-msvc@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.3"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-x64-msvc@npm:14.1.0":
   version: 14.1.0
   resolution: "@next/swc-win32-x64-msvc@npm:14.1.0"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:14.2.3":
+  version: 14.2.3
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2108,6 +2221,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/helpers@npm:0.5.5":
+  version: 0.5.5
+  resolution: "@swc/helpers@npm:0.5.5"
+  dependencies:
+    "@swc/counter": "npm:^0.1.3"
+    tslib: "npm:^2.4.0"
+  checksum: 10/1c5ef04f642542212df28c669438f3e0f459dcde7b448a5b1fcafb2e9e4f13e76d8428535a270e91ed123dd2a21189dbed34086b88a8cf68baf84984d6d0e39b
+  languageName: node
+  linkType: hard
+
 "@swc/types@npm:^0.1.5":
   version: 0.1.7
   resolution: "@swc/types@npm:0.1.7"
@@ -2213,16 +2336,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:8.1.0":
-  version: 8.1.0
-  resolution: "@types/glob@npm:8.1.0"
-  dependencies:
-    "@types/minimatch": "npm:^5.1.2"
-    "@types/node": "npm:*"
-  checksum: 10/9101f3a9061e40137190f70626aa0e202369b5ec4012c3fabe6f5d229cce04772db9a94fa5a0eb39655e2e4ad105c38afbb4af56a56c0996a8c7d4fc72350e3d
-  languageName: node
-  linkType: hard
-
 "@types/glob@npm:^7.1.1, @types/glob@npm:^7.2.0":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
@@ -2307,7 +2420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*, @types/minimatch@npm:^5.1.2":
+"@types/minimatch@npm:*":
   version: 5.1.2
   resolution: "@types/minimatch@npm:5.1.2"
   checksum: 10/94db5060d20df2b80d77b74dd384df3115f01889b5b6c40fa2dfa27cfc03a68fb0ff7c1f2a0366070263eb2e9d6bfd8c87111d4bc3ae93c3f291297c1bf56c85
@@ -2549,6 +2662,84 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ui/avatar@workspace:*, @ui/avatar@workspace:ui/avatar":
+  version: 0.0.0-use.local
+  resolution: "@ui/avatar@workspace:ui/avatar"
+  dependencies:
+    "@atls-ui-parts/avatar": "npm:0.1.1"
+    "@atls-ui-parts/styles": "npm:0.1.1"
+    "@emotion/css": "npm:11.11.2"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/condition": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/css": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/button@workspace:ui/button":
+  version: 0.0.0-use.local
+  resolution: "@ui/button@workspace:ui/button"
+  dependencies:
+    "@atls-ui-generators/button": "npm:0.0.22"
+    "@atls-ui-parts/button": "npm:0.1.1"
+    "@atls-ui-parts/conditional-render": "npm:0.0.7"
+    "@atls-ui-parts/styles": "npm:0.1.1"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/card@workspace:ui/card":
+  version: 0.0.0-use.local
+  resolution: "@ui/card@workspace:ui/card"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
@@ -2655,13 +2846,47 @@ __metadata:
   dependencies:
     "@atls-ui-generators/icons": "npm:0.0.16"
     "@emotion/react": "npm:11.11.4"
-    "@types/glob": "npm:8.1.0"
-    glob: "npm:8.0.3"
-    glob-promise: "npm:5.0.0"
-    react: "npm:18.2.0"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:^5.1.22"
+    glob: "npm:8.1.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@atls-ui-generators/icons": 0.0.16
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/react": 18.3.1
+    "@types/react-dom": 18.3.0
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/image@workspace:*, @ui/image@workspace:ui/image":
+  version: 0.0.0-use.local
+  resolution: "@ui/image@workspace:ui/image"
+  dependencies:
+    "@atls-ui-parts/image": "npm:0.1.1"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    next: "npm:14.2.3"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
     react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -2708,6 +2933,23 @@ __metadata:
     "@types/react-dom": "*"
     styled-system: "*"
     styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/logo@workspace:*, @ui/logo@workspace:ui/logo":
+  version: 0.0.0-use.local
+  resolution: "@ui/logo@workspace:ui/logo"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/icons": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2784,6 +3026,38 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/sidebar@workspace:ui/sidebar":
+  version: 0.0.0-use.local
+  resolution: "@ui/sidebar@workspace:ui/sidebar"
+  dependencies:
+    "@atls-ui-proto/divider": "npm:0.1.1"
+    "@emotion/css": "npm:11.11.2"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/avatar": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/logo": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
+    framer-motion: "npm:11.2.6"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
@@ -2808,6 +3082,47 @@ __metadata:
     react-laag: "*"
     styled-system: "*"
     styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/tag@workspace:ui/tag":
+  version: 0.0.0-use.local
+  resolution: "@ui/tag@workspace:ui/tag"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/text@workspace:*, @ui/text@workspace:0.0.1, @ui/text@workspace:ui/text":
+  version: 0.0.0-use.local
+  resolution: "@ui/text@workspace:ui/text"
+  dependencies:
+    "@atls-ui-parts/text": "npm:0.1.3"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -5577,6 +5892,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:11.2.6":
+  version: 11.2.6
+  resolution: "framer-motion@npm:11.2.6"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/ae3c55a55b113018be4e45345e94cc65db2f4b03861bd6809cca282518e05b6ef458af1368b0321dc5b12f4fcb8c4fc8c433e5398b10066145ab75c6249493ea
+  languageName: node
+  linkType: hard
+
 "fs-constants@npm:^1.0.0":
   version: 1.0.0
   resolution: "fs-constants@npm:1.0.0"
@@ -5814,6 +6149,19 @@ __metadata:
     minimatch: "npm:^5.0.1"
     once: "npm:^1.3.0"
   checksum: 10/cd002c04010ffddba426376c3046466b923b5450f89a434e6a9df6bfec369a4e907afc436303d7fbc34366dcf37056dcc3bec41e41ce983ed8d78b6035ecc317
+  languageName: node
+  linkType: hard
+
+"glob@npm:8.1.0":
+  version: 8.1.0
+  resolution: "glob@npm:8.1.0"
+  dependencies:
+    fs.realpath: "npm:^1.0.0"
+    inflight: "npm:^1.0.4"
+    inherits: "npm:2"
+    minimatch: "npm:^5.0.1"
+    once: "npm:^1.3.0"
+  checksum: 10/9aab1c75eb087c35dbc41d1f742e51d0507aa2b14c910d96fb8287107a10a22f4bbdce26fc0a3da4c69a20f7b26d62f1640b346a4f6e6becfff47f335bb1dc5e
   languageName: node
   linkType: hard
 
@@ -7687,6 +8035,64 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: 10/1db512c5c82f7ea423a2651a28950d398f49f03df6213630aefdf083d5260edeeed8d995b90c3c8742c0a2346025e748d28078a6261d316fcdade4c5c788e986
+  languageName: node
+  linkType: hard
+
+"next@npm:14.2.3":
+  version: 14.2.3
+  resolution: "next@npm:14.2.3"
+  dependencies:
+    "@next/env": "npm:14.2.3"
+    "@next/swc-darwin-arm64": "npm:14.2.3"
+    "@next/swc-darwin-x64": "npm:14.2.3"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.3"
+    "@next/swc-linux-arm64-musl": "npm:14.2.3"
+    "@next/swc-linux-x64-gnu": "npm:14.2.3"
+    "@next/swc-linux-x64-musl": "npm:14.2.3"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.3"
+    "@next/swc-win32-ia32-msvc": "npm:14.2.3"
+    "@next/swc-win32-x64-msvc": "npm:14.2.3"
+    "@swc/helpers": "npm:0.5.5"
+    busboy: "npm:1.6.0"
+    caniuse-lite: "npm:^1.0.30001579"
+    graceful-fs: "npm:^4.2.11"
+    postcss: "npm:8.4.31"
+    styled-jsx: "npm:5.1.1"
+  peerDependencies:
+    "@opentelemetry/api": ^1.1.0
+    "@playwright/test": ^1.41.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-arm64-gnu":
+      optional: true
+    "@next/swc-linux-arm64-musl":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-linux-x64-musl":
+      optional: true
+    "@next/swc-win32-arm64-msvc":
+      optional: true
+    "@next/swc-win32-ia32-msvc":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@opentelemetry/api":
+      optional: true
+    "@playwright/test":
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: 10/666c9770206ce693732a6d772297f1ddb3ce72f59862fa4cd104c5536da596026f758c4c9256ea790cf22d1bb8a15e27e5ea9455c948f72a9e3ca61fb745b0f5
   languageName: node
   linkType: hard
 
