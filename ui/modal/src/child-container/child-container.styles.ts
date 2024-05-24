@@ -23,6 +23,6 @@ export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
 
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({
   boxShadow: theme.shadows.black,
-  borderRadius: theme.radii.f24,
+  borderRadius: theme.radii.bigger,
   backgroundColor: theme.colors.modal.childContainer,
 })
