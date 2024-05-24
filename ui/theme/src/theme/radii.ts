@@ -4,6 +4,7 @@ const radii = {
   semiMicro: 4,
   micro: 6,
   semiMedium: 8,
+  miniMedium: 9,
   medium: 12,
   big: 16,
   extra: 20,
