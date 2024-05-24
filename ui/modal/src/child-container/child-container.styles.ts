@@ -13,7 +13,6 @@ export const baseChildContainerStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.superExtra,
   height: 'min-content',
   maxWidth: theme.spaces.fullWidthWithPaddingNormal,
   maxHeight: theme.spaces.fullWidthWithPaddingNormal,
