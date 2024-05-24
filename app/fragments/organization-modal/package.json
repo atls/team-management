@@ -1,0 +1,13 @@
+{
+  "name": "@fragments/organization-modal",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

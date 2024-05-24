@@ -1,7 +1,9 @@
 'use client'
 
-import React from 'react'
+import React                 from 'react'
 
-const Page = () => <>page</>
+import { OrganizationModal } from '@fragments/organization-modal'
+
+const Page = () => <OrganizationModal />
 
 export default Page
