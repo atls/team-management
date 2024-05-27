@@ -1,6 +1,5 @@
 import React                      from 'react'
 import { FC }                     from 'react'
-import { PropsWithChildren }      from 'react'
 
 import { Button }                 from '@ui/button'
 import { Input }                  from '@ui/input'
@@ -12,7 +11,7 @@ import { Text }                   from '@ui/text'
 import { OrganizationModalProps } from './organization-modal.interfaces'
 import { TeamSwitch }             from './team-switch'
 
-export const OrganizationModal: FC<PropsWithChildren<OrganizationModalProps>> = ({ open }) => (
+export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => (
   <Modal open={open} width={578}>
     <Column flexDirection='column' gap={24}>
       <Text fontSize='medium.semiReduced' fontWeight='normal' padding={12}>
