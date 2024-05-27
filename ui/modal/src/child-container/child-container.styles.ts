@@ -17,7 +17,7 @@ export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
   maxWidth: theme.spaces.fullWidthWithPaddingNormal,
   maxHeight: theme.spaces.fullWidthWithPaddingNormal,
   margin: 'auto',
-  padding: theme.spaces.paddingsNormal,
+  // padding: theme.spaces.paddingsNormal,
 })
 
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({

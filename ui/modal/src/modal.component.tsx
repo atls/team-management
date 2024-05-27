@@ -12,7 +12,7 @@ import { ChildContainer }    from './child-container'
 import { Container }         from './container'
 import { ModalProps }        from './modal.interfaces'
 
-const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, open, width }) => {
+const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, open, width, padding }) => {
   const childrenContainerHandler: MouseEventHandler<HTMLDivElement> = (e) => {
     e.stopPropagation()
   }
@@ -26,6 +26,7 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, open, width }) => 
           <ChildContainer
             onClick={childrenContainerHandler}
             width={width || theme.spaces.superExtra}
+            padding={padding || theme.spaces.paddingsNormal}
           >
             {children}
           </ChildContainer>
