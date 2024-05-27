@@ -8,5 +8,5 @@ export interface IconThumbElementProps extends ThumbElementProps {
 
 export interface ThumbProps {
   checked: boolean
-  children: JSX.Element
+  children: JSX.Element | React.ReactNode
 }
