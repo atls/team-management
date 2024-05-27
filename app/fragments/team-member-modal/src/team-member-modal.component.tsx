@@ -1,10 +1,10 @@
-import { IconButton }           from '@ui/icon-button'
 import { useTheme }             from '@emotion/react'
 
 import React                    from 'react'
 import { FC }                   from 'react'
 
 import { Button }               from '@ui/button'
+import { IconButton }           from '@ui/icon-button'
 import { AddIcon }              from '@ui/icons'
 import { GitHubIcon }           from '@ui/icons'
 import { FigmaIcon }            from '@ui/icons'
@@ -20,18 +20,18 @@ import { Text }                 from '@ui/text'
 import { TeamMemberModalProps } from './team-member-modal.interfaces'
 
 export const TeamMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
+  const theme: any = useTheme()
+
   const ICON_PROPS = {
-    width: 24,
-    height: 24,
+    width: theme.spaces.large,
+    height: theme.spaces.large,
     color: 'none',
   }
 
-  const theme: any = useTheme()
-
   return (
-    <Modal open={open} padding={40}>
-      <Column gap={26}>
-        <Column gap={32}>
+    <Modal open={open} padding={theme.spaces.increased}>
+      <Column gap={theme.spaces.largest}>
+        <Column gap={theme.spaces.moderate}>
           <Text fontSize='normal.increased'>Добавление участника команды</Text>
           <Input placeholder='me@torinasakura.name' />
           <Row justifyContent='center'>

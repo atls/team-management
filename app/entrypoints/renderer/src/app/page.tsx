@@ -1,8 +1,8 @@
 'use client'
 
-import { TeamMemberModal } from '@fragments/team-member-modal'
-
 import React               from 'react'
+
+import { TeamMemberModal } from '@fragments/team-member-modal'
 
 const Page = () => <TeamMemberModal open />
 

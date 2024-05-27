@@ -1299,6 +1299,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/organization-modal@workspace:app/fragments/organization-modal"
   dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -1306,8 +1309,10 @@ __metadata:
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
     react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -1316,6 +1321,8 @@ __metadata:
   resolution: "@fragments/team-member-modal@workspace:app/fragments/team-member-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/icon-button": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -1325,8 +1332,10 @@ __metadata:
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
     react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
