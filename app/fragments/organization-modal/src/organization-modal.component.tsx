@@ -12,8 +12,8 @@ import { Text }                   from '@ui/text'
 import { OrganizationModalProps } from './organization-modal.interfaces'
 import { TeamSwitch }             from './team-switch'
 
-export const OrganizationModal: FC<PropsWithChildren<OrganizationModalProps>> = () => (
-  <Modal open width={578}>
+export const OrganizationModal: FC<PropsWithChildren<OrganizationModalProps>> = ({ open }) => (
+  <Modal open={open} width={578}>
     <Column flexDirection='column' gap={24}>
       <Text fontSize='medium.semiReduced' fontWeight='normal' padding={12}>
         Добавить сотрудника в организацию

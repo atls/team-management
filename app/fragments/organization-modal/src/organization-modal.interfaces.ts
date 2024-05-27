@@ -1,1 +1,3 @@
-export interface OrganizationModalProps {}
+export interface OrganizationModalProps {
+  open: boolean
+}
