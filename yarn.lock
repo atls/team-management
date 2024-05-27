@@ -171,6 +171,7 @@ __metadata:
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@fragments/organization-modal": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -1292,6 +1293,22 @@ __metadata:
   checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
   languageName: node
   linkType: hard
+
+"@fragments/organization-modal@workspace:*, @fragments/organization-modal@workspace:app/fragments/organization-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/organization-modal@workspace:app/fragments/organization-modal"
+  dependencies:
+    "@ui/button": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
 
 "@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
@@ -2692,7 +2709,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/button@workspace:ui/button":
+"@ui/button@workspace:*, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
@@ -2890,7 +2907,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/input@workspace:ui/input":
+"@ui/input@workspace:*, @ui/input@workspace:ui/input":
   version: 0.0.0-use.local
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
@@ -2953,7 +2970,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/modal@workspace:ui/modal":
+"@ui/modal@workspace:*, @ui/modal@workspace:ui/modal":
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:
@@ -3058,7 +3075,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/switch@workspace:ui/switch":
+"@ui/switch@workspace:*, @ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:
