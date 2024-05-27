@@ -17,6 +17,7 @@ export const spaces = {
   regular: 20,
   semiLarge: 22,
   large: 24,
+  largest: 26,
   semiModerate: 28,
   small: 30,
   moderate: 32,
@@ -40,6 +41,7 @@ export const spaces = {
   biggest: 148,
   semiSuperExtra: 190,
   superExtra: 486,
+  superPuperExtra: 578,
   s1300: 1300,
   s1400: 1400,
 }
