@@ -1,0 +1,21 @@
+{
+  "name": "@fragments/organisation-card",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/avatar": "workspace:*",
+    "@ui/button": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*"
+  },
+  "devDependencies": {
+    "react": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

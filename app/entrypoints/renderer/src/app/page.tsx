@@ -1,7 +1,9 @@
 'use client'
 
-import React from 'react'
+import React               from 'react'
 
-const Page = () => <>page</>
+import { OrganisationCard } from '@fragments/organisation-card'
+
+const Page = () => <OrganisationCard />
 
 export default Page
