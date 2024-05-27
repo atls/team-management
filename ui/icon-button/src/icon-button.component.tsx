@@ -16,7 +16,6 @@ export const IconButton: FC<any> = ({ children }) => {
       justifyContent='center'
       alignItems='center'
       boxShadow={theme.shadows.black}
-      cursor='pointer'
     >
       {children}
     </Box>
