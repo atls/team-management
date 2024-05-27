@@ -36,6 +36,7 @@ export const OrganizationModal: FC<PropsWithChildren<OrganizationModalProps>> = 
       </Row>
       <Row justifyContent='end'>
         <Button
+          disabled
           horizontalLocation='right'
           variant='blueBackgroundButton'
           size='middlingRoundedPadding'
