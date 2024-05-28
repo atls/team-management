@@ -35,9 +35,14 @@ export const TeamMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
           <Text fontSize='normal.increased'>Добавление участника команды</Text>
           <Input placeholder='me@torinasakura.name' />
           <Row justifyContent='center'>
-            <IconButton Self='center'>
+            <Button
+              shape='circle'
+              size='middlingRoundedPadding'
+              style={{ boxShadow: theme.shadows.black }}
+              variant='whiteBackgroundButton'
+            >
               <AddIcon />
-            </IconButton>
+            </Button>
           </Row>
           <Row justifyContent='space-between'>
             <IconSwitch>
