@@ -1,0 +1,30 @@
+{
+  "name": "@fragments/team-member-modal",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/button": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/input": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/modal": "workspace:*",
+    "@ui/switch": "workspace:*",
+    "@ui/text": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@types/react": "18.3.2",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
