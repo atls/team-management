@@ -2,6 +2,7 @@ import { useTheme }             from '@emotion/react'
 
 import React                    from 'react'
 import { FC }                   from 'react'
+import { useState }             from 'react'
 
 import { Button }               from '@ui/button'
 import { AddIcon }              from '@ui/icons'
@@ -21,43 +22,54 @@ import { TeamMemberModalProps } from './team-member-modal.interfaces'
 export const TeamMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
   const theme: any = useTheme()
 
+  const INPUT_PROPS = {
+    placeholder: 'me@torinasakura.name',
+  }
   const ICON_PROPS = {
     width: theme.spaces.large,
     height: theme.spaces.large,
     color: 'none',
   }
 
+  const AdditionalInput = () => <Input {...INPUT_PROPS} />
+
+  const [additionalInputList, setAdditionalInputList] = useState([])
+
+  const handleAddInputClick = () => {
+    setAdditionalInputList(additionalInputList.concat(<AdditionalInput />))
+  }
+
   return (
     <Modal open={open} padding={theme.spaces.increased}>
-      <Column gap={theme.spaces.largest}>
-        <Column gap={theme.spaces.moderate}>
-          <Text fontSize='normal.increased'>Добавление участника команды</Text>
-          <Input placeholder='me@torinasakura.name' />
-          <Row justifyContent='center'>
-            <Button
-              shape='circle'
-              size='middlingRoundedPadding'
-              style={{ boxShadow: theme.shadows.black }}
-              variant='whiteBackgroundButton'
-            >
-              <AddIcon />
-            </Button>
-          </Row>
-          <Row justifyContent='space-between'>
-            <IconSwitch>
-              <GitHubIcon {...ICON_PROPS} />
-            </IconSwitch>
-            <IconSwitch>
-              <FigmaIcon {...ICON_PROPS} />
-            </IconSwitch>
-            <IconSwitch>
-              <DiscordIcon {...ICON_PROPS} />
-            </IconSwitch>
-            <IconSwitch>
-              <TelegramIcon {...ICON_PROPS} />
-            </IconSwitch>
-          </Row>
-        </Column>
+      <Column gap={theme.spaces.moderate}>
+        <Text fontSize='normal.increased'>Добавление участника команды</Text>
+        <Input {...INPUT_PROPS} />
+        {additionalInputList}
+        <Row justifyContent='center'>
+          <Button
+            onClick={handleAddInputClick}
+            shape='circle'
+            size='middlingRoundedPadding'
+            style={{ boxShadow: theme.shadows.black }}
+            variant='whiteBackgroundButton'
+          >
+            <AddIcon />
+          </Button>
+        </Row>
+        <Row justifyContent='space-between'>
+          <IconSwitch>
+            <GitHubIcon {...ICON_PROPS} />
+          </IconSwitch>
+          <IconSwitch>
+            <FigmaIcon {...ICON_PROPS} />
+          </IconSwitch>
+          <IconSwitch>
+            <DiscordIcon {...ICON_PROPS} />
+          </IconSwitch>
+          <IconSwitch>
+            <TelegramIcon {...ICON_PROPS} />
+          </IconSwitch>
+        </Row>
         <Row justifyContent='end'>
           <Button disabled variant='blueBackgroundButton' size='middlingRoundedPadding'>
             <Text fontSize='normal.semiDefault' fontWeight='normal'>
