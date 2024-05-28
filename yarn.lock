@@ -1298,6 +1298,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/organization-modal@workspace:app/fragments/organization-modal"
   dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -1305,8 +1308,35 @@ __metadata:
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
     react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/team-member-modal@workspace:app/fragments/team-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/team-member-modal@workspace:app/fragments/team-member-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2852,6 +2882,7 @@ __metadata:
     framer-motion: "*"
     react: "*"
     react-dom: "*"
+    react-laag: "*"
     styled-system: "*"
     styled-tools: "*"
   languageName: unknown
@@ -2916,6 +2947,8 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
