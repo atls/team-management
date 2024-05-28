@@ -1298,6 +1298,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
   dependencies:
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
