@@ -31,9 +31,9 @@ export const TeamMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
     color: 'none',
   }
 
-  const AdditionalInput = () => <Input {...INPUT_PROPS} />
+  const AdditionalInput = () => <Input {...INPUT_PROPS} deleteButton />
 
-  const [additionalInputList, setAdditionalInputList] = useState([])
+  const [additionalInputList, setAdditionalInputList] = useState(Array<JSX.Element>)
 
   const handleAddInputClick = () => {
     setAdditionalInputList(additionalInputList.concat(<AdditionalInput />))
