@@ -4,7 +4,6 @@ import React                    from 'react'
 import { FC }                   from 'react'
 
 import { Button }               from '@ui/button'
-import { IconButton }           from '@ui/icon-button'
 import { AddIcon }              from '@ui/icons'
 import { GitHubIcon }           from '@ui/icons'
 import { FigmaIcon }            from '@ui/icons'
