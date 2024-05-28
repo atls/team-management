@@ -44,4 +44,5 @@ export const spaces = {
   superPuperExtra: 578,
   s1300: 1300,
   s1400: 1400,
+  s1500: 1500,
 }
