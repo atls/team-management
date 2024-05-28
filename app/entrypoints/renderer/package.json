@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@fragments/organization-modal": "workspace:*",
+    "@fragments/organization-card": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.2",
     "@types/react-dom": "18.3.0",
