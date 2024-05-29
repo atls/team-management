@@ -1,0 +1,24 @@
+{
+  "name": "@fragments/organization-card-grid",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@ui/layout": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
+  }
+}
