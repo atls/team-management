@@ -2814,13 +2814,15 @@ const RAW_RUNTIME_STATE =
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.2"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/button", "virtual:b1842c049ba3b2a3d47adf2894abf415deeadb593dd1778bc70a28f6426ea6713d990594ca10e7099a5fee364fe2e62675a09ceef2401175838786d0f45cd259#workspace:ui/button"],\
           ["@ui/icons", "virtual:b1842c049ba3b2a3d47adf2894abf415deeadb593dd1778bc70a28f6426ea6713d990594ca10e7099a5fee364fe2e62675a09ceef2401175838786d0f45cd259#workspace:ui/icons"],\
           ["@ui/image", "virtual:b1842c049ba3b2a3d47adf2894abf415deeadb593dd1778bc70a28f6426ea6713d990594ca10e7099a5fee364fe2e62675a09ceef2401175838786d0f45cd259#workspace:ui/image"],\
           ["@ui/layout", "virtual:b1842c049ba3b2a3d47adf2894abf415deeadb593dd1778bc70a28f6426ea6713d990594ca10e7099a5fee364fe2e62675a09ceef2401175838786d0f45cd259#workspace:ui/layout"],\
           ["@ui/text", "virtual:b1842c049ba3b2a3d47adf2894abf415deeadb593dd1778bc70a28f6426ea6713d990594ca10e7099a5fee364fe2e62675a09ceef2401175838786d0f45cd259#workspace:ui/text"],\
           ["react", "npm:18.3.1"],\
-          ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"]\
+          ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
@@ -2839,13 +2841,15 @@ const RAW_RUNTIME_STATE =
           ["@fragments/organization-card", "workspace:app/fragments/organization-card"],\
           ["@emotion/react", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#npm:11.11.4"],\
           ["@emotion/styled", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#npm:11.11.5"],\
+          ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/button", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#workspace:ui/button"],\
           ["@ui/icons", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#workspace:ui/icons"],\
           ["@ui/image", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#workspace:ui/image"],\
           ["@ui/layout", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#workspace:ui/layout"],\
           ["@ui/text", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#workspace:ui/text"],\
           ["react", "npm:18.3.1"],\
-          ["react-dom", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#npm:18.3.1"]\
+          ["react-dom", "virtual:8955bb54a6a8fdf3447cd861b49743494a1044d2e06790ad6873c83c1c9c3e348e135759659f20c8eb960ac448b428572009fb968452cbd0fc403e8a40387b94#npm:18.3.1"],\
+          ["styled-system", "npm:5.1.5"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4643,8 +4647,10 @@ const RAW_RUNTIME_STATE =
           "@emotion/styled",\
           "@types/emotion__react",\
           "@types/emotion__styled",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -4678,8 +4684,10 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__styled",\
           "@types/react-dom",\
           "@types/react",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -4875,7 +4883,9 @@ const RAW_RUNTIME_STATE =
           "@types/atls-ui-generators__icons",\
           "@types/emotion__react",\
           "@types/emotion__styled",\
-          "@types/styled-tools"\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -4907,7 +4917,9 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__styled",\
           "@types/react-dom",\
           "@types/react",\
-          "@types/styled-tools"\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -4986,8 +4998,10 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__react",\
           "@types/emotion__styled",\
           "@types/next",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5017,8 +5031,10 @@ const RAW_RUNTIME_STATE =
           "@types/next",\
           "@types/react-dom",\
           "@types/react",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5216,7 +5232,9 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__styled",\
           "@types/react-dom",\
           "@types/react",\
-          "@types/styled-tools"\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5245,7 +5263,9 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__styled",\
           "@types/react-dom",\
           "@types/react",\
-          "@types/styled-tools"\
+          "@types/styled-system",\
+          "@types/styled-tools",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5653,8 +5673,10 @@ const RAW_RUNTIME_STATE =
           "@emotion/styled",\
           "@types/emotion__react",\
           "@types/emotion__styled",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -5681,8 +5703,10 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__styled",\
           "@types/react-dom",\
           "@types/react",\
+          "@types/styled-system",\
           "react-dom",\
-          "react"\
+          "react",\
+          "styled-system"\
         ],\
         "linkType": "SOFT"\
       }],\

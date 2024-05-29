@@ -24,7 +24,9 @@ const OrganizationCardContentContainer = styled(Column)(baseContentStyles, shape
 
 const Members: FC<any> = ({ quantity }) => {
   let memberString: string
-  quantity === 1 ? (memberString = 'member') : (memberString = 'members')
+  if (quantity === 1) memberString = 'member'
+  else memberString = 'members'
+
   return (
     <>
       <TeamIcon color='white' />
@@ -40,45 +42,43 @@ export const OrganizationCard: FC<OrganizationCardProps> = ({
   description,
   membersQuantity,
   organizationCoverSrc,
-}) => {
-  return (
-    <OrganizationCardWrapper>
-      <Box minWidth={150}>
-        <ImageBlock src={organizationCoverSrc} />
-      </Box>
-      <OrganizationCardContentContainer>
-        <Column gap={3}>
-          <Text fontSize='normal.semiDefault' color='white'>
-            {title}
+}) => (
+  <OrganizationCardWrapper>
+    <Box minWidth={150}>
+      <ImageBlock src={organizationCoverSrc} />
+    </Box>
+    <OrganizationCardContentContainer>
+      <Column gap={3}>
+        <Text fontSize='normal.semiDefault' color='white'>
+          {title}
+        </Text>
+        {description && (
+          <Text fontSize='small.default' color='white'>
+            {description}
           </Text>
-          {description && (
-            <Text fontSize='small.default' color='white'>
-              {description}
-            </Text>
-          )}
-          <Row gap={3} alignItems='center'>
-            <Members quantity={membersQuantity} />
-          </Row>
-        </Column>
-        <Row gap={12} justifyContent='end'>
-          <Button
-            shape='circle'
-            size='middlingRoundedPadding'
-            // style={{ boxShadow: theme.shadows.black }}
-            variant='blueBackgroundButton'
-          >
-            <TeamIcon color='white' width={18} height={18} />
-          </Button>
-          <Button
-            shape='circle'
-            size='middlingRoundedPadding'
-            // style={{ boxShadow: theme.shadows.black }}
-            variant='blueBackgroundButton'
-          >
-            <AddIcon color='white' width={18} height={18} />
-          </Button>
+        )}
+        <Row gap={3} alignItems='center'>
+          <Members quantity={membersQuantity} />
         </Row>
-      </OrganizationCardContentContainer>
-    </OrganizationCardWrapper>
-  )
-}
+      </Column>
+      <Row gap={12} justifyContent='end'>
+        <Button
+          shape='circle'
+          size='middlingRoundedPadding'
+          // style={{ boxShadow: theme.shadows.black }}
+          variant='blueBackgroundButton'
+        >
+          <TeamIcon color='white' width={18} height={18} />
+        </Button>
+        <Button
+          shape='circle'
+          size='middlingRoundedPadding'
+          // style={{ boxShadow: theme.shadows.black }}
+          variant='blueBackgroundButton'
+        >
+          <AddIcon color='white' width={18} height={18} />
+        </Button>
+      </Row>
+    </OrganizationCardContentContainer>
+  </OrganizationCardWrapper>
+)

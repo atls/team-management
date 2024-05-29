@@ -15,6 +15,6 @@ export const baseContentStyles: styleFn = ({ theme }) => ({
   padding: theme.spaces.v14h12,
 })
 
-export const shapeContentStyles: styleFn = ({ theme }) => ({
+export const shapeContentStyles: styleFn = () => ({
   width: '100%',
 })
