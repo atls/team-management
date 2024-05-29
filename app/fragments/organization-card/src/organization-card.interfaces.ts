@@ -1,1 +1,5 @@
-export interface OrganizationCardProps {}
+export interface OrganizationCardProps {
+  title: string
+  description?: string
+  membersQuantity: number
+}
