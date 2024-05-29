@@ -39,10 +39,12 @@ export const spaces = {
   giant: 110,
   gigantic: 120,
   biggest: 148,
+  superBiggest: 150,
   semiSuperExtra: 190,
   superExtra: 486,
   superPuperExtra: 578,
   s1300: 1300,
   s1400: 1400,
   s1500: 1500,
+  v14h12: '14px 12px',
 }
