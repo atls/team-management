@@ -1298,13 +1298,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
   dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
