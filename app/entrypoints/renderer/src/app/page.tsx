@@ -1,8 +1,6 @@
 'use client'
 
-import React                from 'react'
-
-import { OrganizationCard } from '@fragments/organization-card'
+import React from 'react'
 
 const Page = () => <>page</>
 

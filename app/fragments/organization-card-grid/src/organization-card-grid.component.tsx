@@ -1,16 +1,16 @@
-import styled                       from '@emotion/styled'
+import styled                        from '@emotion/styled'
 
-import React                        from 'react'
-import { FC }                       from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
 
-import { Box }                      from '@ui/layout'
+import { Box }                       from '@ui/layout'
 
-import { OrganizationCardProps }    from './organization-card-grid.interfaces'
-import { baseGridContainerStyles }  from './organization-card-grid.styles'
-import { shapeGridContainerStyles } from './organization-card-grid.styles'
+import { OrganizationCardGridProps } from './organization-card-grid.interfaces'
+import { baseGridContainerStyles }   from './organization-card-grid.styles'
+import { shapeGridContainerStyles }  from './organization-card-grid.styles'
 
 const GridContainer = styled(Box)(baseGridContainerStyles, shapeGridContainerStyles)
 
-export const OrganizationCardGrid: FC<OrganizationCardGridProps> = ({ children }) => {
-  return <GridContainer>{children}</GridContainer>
-}
+export const OrganizationCardGrid: FC<OrganizationCardGridProps> = ({ children }) => (
+  <GridContainer>{children}</GridContainer>
+)
