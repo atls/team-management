@@ -39,7 +39,7 @@ export const spaces = {
   giant: 110,
   gigantic: 120,
   biggest: 148,
-  superBiggest: 148,
+  superBiggest: 150,
   semiSuperExtra: 190,
   superExtra: 486,
   superPuperExtra: 578,
