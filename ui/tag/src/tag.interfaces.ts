@@ -4,13 +4,14 @@ export interface TagProps {
   padding?: Record<string, string>
   fontSize?: Record<string, number>
   fontFamily?: Record<string, string> | string
-  backgroundColor: string
+  backgroundColor: string | undefined
   text?: string | null
-  width: string
-  height: string
+  width: number | undefined
+  height: number | undefined
   boxShadow?: string
   color?: string
   borderRadius?: string
+  flexDirection?: string
 }
 
 export interface TagTextTheme extends Theme {

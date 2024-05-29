@@ -1,7 +1,16 @@
 'use client'
 
-import React from 'react'
+import React         from 'react'
 
-const Page = () => <>page</>
+import { UserCard }  from '@app/user-card'
+import { UsersGrid } from '@app/users-grid'
+import { Button }    from '@ui/button'
+
+const Page = () => (
+  <>
+    <UsersGrid></UsersGrid>
+    {/*<UserCard />*/}
+  </>
+)
 
 export default Page

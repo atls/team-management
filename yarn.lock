@@ -170,15 +170,54 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/user-card": "workspace:*"
+    "@app/users-grid": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.1.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@app/user-card@workspace:*, @app/user-card@workspace:app/fragments/app-user-card":
+  version: 0.0.0-use.local
+  resolution: "@app/user-card@workspace:app/fragments/app-user-card"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/card": "workspace:*"
+    "@ui/checkbox": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/progress": "workspace:*"
+    "@ui/scroll": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/tag": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/users-grid@workspace:*, @app/users-grid@workspace:app/fragments/app-users-grid":
+  version: 0.0.0-use.local
+  resolution: "@app/users-grid@workspace:app/fragments/app-users-grid"
+  dependencies:
+    "@app/user-card": "workspace:*"
+    "@types/react": "npm:^18.3.2"
+    "@ui/layout": "workspace:*"
+  peerDependencies:
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -2692,7 +2731,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/button@workspace:ui/button":
+"@ui/button@workspace:*, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
@@ -2721,7 +2760,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/card@workspace:ui/card":
+"@ui/card@workspace:*, @ui/card@workspace:ui/card":
   version: 0.0.0-use.local
   resolution: "@ui/card@workspace:ui/card"
   dependencies:
@@ -2740,7 +2779,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/checkbox@workspace:ui/checkbox":
+"@ui/checkbox@workspace:*, @ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
@@ -2784,7 +2823,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/divider@workspace:ui/divider":
+"@ui/divider@workspace:*, @ui/divider@workspace:ui/divider":
   version: 0.0.0-use.local
   resolution: "@ui/divider@workspace:ui/divider"
   dependencies:
@@ -2980,7 +3019,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/progress@workspace:ui/progress":
+"@ui/progress@workspace:*, @ui/progress@workspace:ui/progress":
   version: 0.0.0-use.local
   resolution: "@ui/progress@workspace:ui/progress"
   dependencies:
@@ -3058,7 +3097,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/switch@workspace:ui/switch":
+"@ui/switch@workspace:*, @ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:
@@ -3085,7 +3124,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/tag@workspace:ui/tag":
+"@ui/tag@workspace:*, @ui/tag@workspace:ui/tag":
   version: 0.0.0-use.local
   resolution: "@ui/tag@workspace:ui/tag"
   dependencies:

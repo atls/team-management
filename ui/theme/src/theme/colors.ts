@@ -314,7 +314,7 @@ export const colors = {
     default: {
       background: 'transparent',
       color: 'red',
-      border: 'rgba(165, 165, 165, 1)',
+      border: 'rgba(165, 165, 165, 0)',
     },
     hover: {
       background: 'transparent',
@@ -336,7 +336,7 @@ export const colors = {
 
   scroll: {
     default: {
-      scrollbarColor: 'rgba(152, 190, 249, 1) transparent',
+      scrollbarColor: 'rgba(197, 220, 253, 1) transparent',
     },
   },
 }

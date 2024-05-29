@@ -1,0 +1,29 @@
+{
+  "name": "@app/user-card",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ui/card": "workspace:*",
+    "@ui/checkbox": "workspace:*",
+    "@ui/divider": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/progress": "workspace:*",
+    "@ui/scroll": "workspace:*",
+    "@ui/switch": "workspace:*",
+    "@ui/tag": "workspace:*",
+    "@ui/text": "workspace:0.0.1"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@types/react": "^18.3.2"
+  }
+}

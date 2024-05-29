@@ -7,6 +7,7 @@ import { FC }                from 'react'
 import { forwardRef }        from 'react'
 import { useState }          from 'react'
 
+import { Box }               from '@ui/layout'
 import { useHover }          from '@ui/utils'
 
 import { ButtonProps }       from './button.interfaces'

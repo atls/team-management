@@ -32,7 +32,7 @@ const Checkbox: FC<CheckboxProps> = ({
     <Box>
       <Check checked={checked}>
         <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
-          <CheckIcon width={20} height={20} />
+          <CheckIcon width={14} height={14} />
         </Condition>
       </Check>
     </Box>

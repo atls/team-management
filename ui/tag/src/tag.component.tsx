@@ -22,6 +22,7 @@ const Tag: FC<PropsWithChildren<TagProps>> = ({
   boxShadow,
   color,
   borderRadius,
+  flexDirection,
 }) => {
   const theme: TagTextTheme = useTheme()
 
@@ -29,6 +30,7 @@ const Tag: FC<PropsWithChildren<TagProps>> = ({
     <Box
       justifyContent='center'
       alignItems='center'
+      flexDirection={flexDirection}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       padding={padding}

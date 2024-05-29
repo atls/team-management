@@ -20,13 +20,13 @@ export const boxBaseStyles: styleFn = ({ theme: checkboxTheme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   border: '1px solid',
-  width: 20,
-  height: 20,
+  width: 14,
+  height: 14,
   borderRadius: checkboxTheme.radii.extra,
 })
 
 export const boxShapeStyles = createBoxShapeStyles({
-  size: 20,
+  size: 14,
   borderWidth: 1,
   borderRadius: theme.radii.extra,
 })
@@ -72,7 +72,7 @@ export const labelAppearanceStyles = createLabelAppearanceStyles({
   fontColor: theme.colors.black,
 })
 export const labelPositionStyles = createLabelPositionStyles({
-  margin: '10px',
+  margin: '0',
 })
 
 export const checkBaseStyles = createCheckBaseStyles()
