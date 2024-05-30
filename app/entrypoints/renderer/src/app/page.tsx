@@ -1,13 +1,7 @@
 'use client'
 
-import React         from 'react'
+import React from 'react'
 
-import { UsersGrid } from '@app/users-grid'
-
-const Page = () => (
-  <>
-    <UsersGrid></UsersGrid>
-  </>
-)
+const Page = () => <></>
 
 export default Page
