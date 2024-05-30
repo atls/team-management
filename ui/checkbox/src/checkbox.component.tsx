@@ -1,16 +1,17 @@
-import { HiddenInput } from '@atls-ui-parts/hidden-input'
+import { HiddenInput }    from '@atls-ui-parts/hidden-input'
 
-import React           from 'react'
-import { FC }          from 'react'
+import React              from 'react'
+import { FC }             from 'react'
+import { justifyContent } from 'styled-system'
 
-import { Condition }   from '@ui/condition'
-import { CheckIcon }   from '@ui/icons'
+import { Condition }      from '@ui/condition'
+import { CheckIcon }      from '@ui/icons'
 
-import CheckboxProps   from './checkbox.interface'
-import { Box }         from './box'
-import { Check }       from './check'
-import { Container }   from './container'
-import { Label }       from './label'
+import CheckboxProps      from './checkbox.interface'
+import { Box }            from './box'
+import { Check }          from './check'
+import { Container }      from './container'
+import { Label }          from './label'
 
 const doNothing = () => {
   // do nothing

@@ -1,6 +1,7 @@
 import { useTheme }      from '@emotion/react'
 
 import React             from 'react'
+import { FC }            from 'react'
 
 import { Card }          from '@ui/card'
 import { Checkbox }      from '@ui/checkbox'
@@ -13,366 +14,245 @@ import { TimerIcon }     from '@ui/icons'
 import { TelegramIcon }  from '@ui/icons'
 import { ImageBlock }    from '@ui/image'
 import { Box }           from '@ui/layout'
-import { Layout }        from '@ui/layout'
 import { Row }           from '@ui/layout'
+import { Column }        from '@ui/layout'
 import { Line }          from '@ui/progress'
 import { Scroll }        from '@ui/scroll'
 import { Tag }           from '@ui/tag'
 import { Text }          from '@ui/text'
 
+import { UserCardProps } from './user-card.interface'
 import { UserCardTheme } from './user-card.interface'
 
-const UserCard = ({ src, name, position, time }) => {
+const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar }) => {
   const theme: UserCardTheme = useTheme()
   return (
     <Card
       width={theme.space?.largeSemiIncreased}
       height={theme.space?.largeIncreased}
       boxShadow={theme.shadows?.nero}
-      borderRadius={theme.radii.f24}
+      borderRadius={theme.radii?.f24}
       alignItems='flex-start'
     >
-      <Box flexDirection='column'>
-        <Box
-          display='flex'
-          flexDirection='column'
+      <Column>
+        <Column
           position='relative'
           width={theme.space?.largeSemiIncreased}
           height={theme.space?.largeDefault}
         >
-          {' '}
           <ImageBlock
-            src='/profile.png'
+            src={avatar ? avatar : '/profile.png'}
             alt='avatar'
-            style={{ borderRadius: theme.radii.tl24tr24 }}
+            style={{ borderRadius: theme.radii?.tl24tr24 }}
           />
-          <Box
+          <Column
             position='absolute'
-            color='white'
-            marginTop='240px'
-            flexDirection='column'
+            marginTop={theme.space?.largeSemiDecreased}
             alignItems='flex-start'
-            width='100%'
-            height='100%'
+            width={theme.space?.full}
+            height={theme.space?.full}
             margin='auto'
-            padding='241px 12px 12px 12px'
+            padding={theme.space?.t241rl12b12}
           >
-            <Box flexDirection='column' alignItems='flex-start' padding='12px' width='100%'>
-              <Text fontWeight={400} fontSize='31px'>
+            <Column
+              alignItems='flex-start'
+              padding={theme.space?.miniIncreased}
+              width={theme.space?.full}
+            >
+              <Text color={theme.colors?.white} fontSize='medium.semiDefault'>
                 {name ? name : 'Gay Hawkins'}
               </Text>
-              <Text fontWeight={400} fontSize='16px'>
+              <Text color={theme.colors?.white} fontSize='normal.semiDefault'>
                 {position ? position : 'DevOps'}
               </Text>
-            </Box>
-            <Box
-              // position='absolute'
+            </Column>
+            <Row
               justifyContent='space-between'
-              width={theme.space.full}
-              // marginTop={300}
-              padding='0 12px 12px 12px'
+              width={theme.space?.full}
+              padding={theme.space?.t0rbl12}
             >
               <Tag
                 height={theme.space?.mediumReduced}
                 width={theme.space?.mediumSemiIncreased}
                 backgroundColor={theme.backgrounds?.darkGray}
-                borderRadius={theme.radii.f7}
-                text='6'
-                color='white'
-                flexDirection='row-reverse'
+                borderRadius={theme.radii?.f7}
+                color={theme.colors?.white}
               >
-                <OrgWhiteIcon width='12px' style={{ marginLeft: '6px' }} />
+                <Text margin={theme.space?.t0r6lb0} color={theme.colors?.white}>
+                  {organizations ? organizations : '6'}
+                </Text>
+                <OrgWhiteIcon width={theme.space?.micro} />
               </Tag>
               <Tag
-                padding='8px'
+                padding={theme.space?.miniReduced}
                 height={theme.space?.mediumReduced}
                 width={theme.space?.largeReduced}
                 backgroundColor={theme.backgrounds?.white}
-                borderRadius={theme.radii.f19}
+                borderRadius={theme.radii?.f19}
               >
-                <TimerIcon width='20px' height='15.75px' />
-                <Text fontSize='13px' lineHeight='15.75' fontWeight={400} color='black'>
+                <TimerIcon
+                  width={theme.space?.normalDefault}
+                  height={theme.space?.normalIncreased}
+                />
+                <Text fontSize='small.semiLarge' color={theme.colors?.GRAY_1600}>
                   {time ? time : '10:10:33'}
                 </Text>
               </Tag>
-            </Box>
-          </Box>
-        </Box>
-        <Box>
+            </Row>
+          </Column>
+        </Column>
+        <Row>
           <Line
             percent={20}
             strokeColor={[{ direction: 'to left', from: '#005ACF', to: '#D2DAFF' }]}
-            strokeWeight={16}
-            trailColor='#F5F9FF'
+            strokeWeight={theme.space?.normalIncreased}
+            trailColor={theme.colors?.BLUE_0}
           />
           <Text
-            style={{ position: 'absolute', marginTop: '2px', marginLeft: '23.5px' }}
-            fontSize='10px'
-            color='white'
+            margin={theme.space?.t2l0b23r0}
+            style={{ position: 'absolute' }}
+            fontSize='small.default'
+            color={theme.colors?.white}
           >
             20% done
           </Text>
-        </Box>
+        </Row>
+
         <Scroll>
-          <Box display='flex' maxHeight={139}>
-            <Box flexBasis='50%' margin='8px 2px 6px 12px'>
-              <Layout flexDirection='column' width='100%'>
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  maxHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='100%'
-                      justifyContent='space-between'
-                    >
-                      <GitHubIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Git
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
+          <Box maxHeight={theme.space?.largeSemiNormal}>
+            <Column
+              width={theme.space?.full}
+              flexBasis={theme.space?.fullHalfReduced}
+              margin={theme.space?.t8r2b6l12}
+            >
+              <Column
+                maxWidth={theme.space?.largeSemi}
+                padding={theme.space?.t1r5b2l5}
+                maxHeight={theme.space?.mediumSemiReduced}
+              >
+                <Checkbox labelPosition='start' checked={true}>
+                  <Row marginRight='auto'>
+                    <GitHubIcon
+                      width={theme.space?.normalReduced}
+                      height={theme.space?.normalReduced}
+                    />
+                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                      Git
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                  <Divider
+                    weight={theme.space?.nano}
+                    backgroundColor={theme.backgrounds?.lightGray}
+                  />
+                </Box>
+              </Column>
 
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  maxHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='100%'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
+              <Column
+                maxWidth={theme.space?.largeSemi}
+                padding={theme.space?.t1r5b2l5}
+                maxHeight={theme.space?.mediumSemiReduced}
+              >
+                <Checkbox labelPosition='start' checked={true}>
+                  <Row marginRight='auto'>
+                    <DiscordIcon
+                      width={theme.space?.normalReduced}
+                      height={theme.space?.normalReduced}
+                    />
+                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                      Discord
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                  <Divider
+                    weight={theme.space?.nano}
+                    backgroundColor={theme.backgrounds?.lightGray}
+                  />
+                </Box>
+              </Column>
 
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  maxHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  maxHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-              </Layout>
-            </Box>
-            <Box flexBasis='50%' margin='8px 12px 6px 2px'>
-              <Layout flexDirection='column' width='100%'>
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  minHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
+              <Column
+                maxWidth={theme.space?.largeSemi}
+                padding={theme.space?.t1r5b2l5}
+                maxHeight={theme.space?.mediumSemiReduced}
+              >
+                <Checkbox labelPosition='start' checked={true}>
+                  <Row marginRight='auto'>
+                    <TelegramIcon
+                      width={theme.space?.normalReduced}
+                      height={theme.space?.normalReduced}
+                    />
+                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                      Telegram
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                  <Divider
+                    weight={theme.space?.nano}
+                    backgroundColor={theme.backgrounds?.lightGray}
+                  />
+                </Box>
+              </Column>
+              <Column
+                maxWidth={theme.space?.largeSemi}
+                padding={theme.space?.t1r5b2l5}
+                maxHeight={theme.space?.mediumSemiReduced}
+              >
+                <Checkbox labelPosition='start' checked={true}>
+                  <Row marginRight='auto'>
+                    <FigmaIcon
+                      width={theme.space?.normalReduced}
+                      height={theme.space?.normalReduced}
+                    />
+                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                      Figma
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                  <Divider
+                    weight={theme.space?.nano}
+                    backgroundColor={theme.backgrounds?.lightGray}
+                  />
+                </Box>
+              </Column>
+            </Column>
 
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  minHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  minHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  minHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-                <Row
-                  maxWidth='185px'
-                  flexDirection='column'
-                  padding='1px 5px 2px 5px'
-                  minHeight={30}
-                >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={true}
-                    style={{ justifyContent: 'space-between', height: '25px' }}
-                  >
-                    <Box
-                      display='flex'
-                      flexDirection='row'
-                      maxWidth='56px'
-                      justifyContent='space-between'
-                    >
-                      <DiscordIcon width='14px' height='14px' />{' '}
-                      <Text fontSize='10px' style={{ marginLeft: '11px' }}>
-                        Discord
-                      </Text>
-                    </Box>
-                  </Checkbox>
-                  <Box padding='3px 0 3px 0' marginTop='2px'>
-                    <Divider weight={1} backgroundColor='#F2F2F2' />
-                  </Box>
-                </Row>
-              </Layout>
-            </Box>
+            <Column
+              width={theme.space?.full}
+              flexBasis={theme.space?.fullHalfReduced}
+              margin={theme.space?.t8r2b6l12}
+            >
+              <Column
+                maxWidth={theme.space?.largeSemi}
+                padding={theme.space?.t1r5b2l5}
+                maxHeight={theme.space?.mediumSemiReduced}
+              >
+                <Checkbox labelPosition='start' checked={true}>
+                  <Row marginRight='auto'>
+                    <GitHubIcon
+                      width={theme.space?.normalReduced}
+                      height={theme.space?.normalReduced}
+                    />
+                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                      Git
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                  <Divider
+                    weight={theme.space?.nano}
+                    backgroundColor={theme.backgrounds?.lightGray}
+                  />
+                </Box>
+              </Column>
+            </Column>
           </Box>
         </Scroll>
-      </Box>
+      </Column>
     </Card>
   )
 }

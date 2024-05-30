@@ -1,10 +1,19 @@
 const space = {
   none: 0,
+  nano: 1,
+  nanoIncreased: 2,
   tb20lr0: '20px 0 20px 0',
   tb4lr40: '4px 40px 4px 40px',
   tb0lr8: '0 8px',
   t20autob0: '20px auto 0',
-
+  t241rl12b12: '241px 12px 12px 12px',
+  t0rbl12: '0 12px 12px 12px',
+  t1r5b2l5: '1px 5px 2px 5px',
+  tb3rl0: '3px 0 3px 0',
+  t8r2b6l12: '8px 2px 6px 12px',
+  t2l0b23r0: '2px 0 0 23.5px',
+  tlb0r11: '0 0 0 11px',
+  t0r6lb0: '0 6px 0 0',
   miniSemiReduced: 7,
   miniReduced: 8,
   minniSemiDefault: 9,
@@ -13,7 +22,8 @@ const space = {
   miniIncreased: 12,
   miniSemiLarge: 13,
 
-  normalReduced: 12,
+  normalReduced: 14,
+  normalIncreased: 16,
   normalSemiDefault: 18,
   normalDefault: 20,
   normalSemiIncreased: 24,
@@ -27,11 +37,14 @@ const space = {
 
   largeReduced: 93,
   largeSemiReduced: 100,
+  largeSemiNormal: 139,
+  largeSemi: 185,
   largeSemiDefault: 200,
+  largeSemiDecreased: 240,
   largeDefault: 380,
   largeSemiIncreased: 407,
   largeIncreased: 535,
-
+  fullHalfReduced: '50%',
   fullSemiReduced: '80%',
   full: '100%',
 }

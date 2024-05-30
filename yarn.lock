@@ -173,6 +173,7 @@ __metadata:
     "@app/user-card": "workspace:*"
     "@app/users-grid": "workspace:*"
     "@emotion/react": "npm:11.11.4"
+    "@fragments/organization-card": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -1331,6 +1332,77 @@ __metadata:
   checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
   languageName: node
   linkType: hard
+
+"@fragments/organization-card@workspace:*, @fragments/organization-card@workspace:app/fragments/organization-card":
+  version: 0.0.0-use.local
+  resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/organization-modal@workspace:app/fragments/organization-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/organization-modal@workspace:app/fragments/organization-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/team-member-modal@workspace:app/fragments/team-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/team-member-modal@workspace:app/fragments/team-member-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
 
 "@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
@@ -2787,6 +2859,7 @@ __metadata:
     "@atls-ui-parts/conditional-render": "npm:0.0.7"
     "@atls-ui-parts/hidden-input": "npm:0.1.1"
     "@atls-ui-parts/layout": "npm:0.1.1"
+    "@emotion/css": "npm:11.11.2"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:^18.3.2"
@@ -2874,6 +2947,7 @@ __metadata:
     framer-motion: "*"
     react: "*"
     react-dom: "*"
+    react-laag: "*"
     styled-system: "*"
     styled-tools: "*"
   languageName: unknown
@@ -2929,7 +3003,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/input@workspace:ui/input":
+"@ui/input@workspace:*, @ui/input@workspace:ui/input":
   version: 0.0.0-use.local
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
@@ -2938,6 +3012,8 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -2992,7 +3068,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/modal@workspace:ui/modal":
+"@ui/modal@workspace:*, @ui/modal@workspace:ui/modal":
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:

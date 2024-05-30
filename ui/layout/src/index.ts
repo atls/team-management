@@ -1,1 +1,1 @@
-export * from '@atls-ui-parts/layout'
+export * from './layout.component'
