@@ -1,14 +1,7 @@
-import { CSSProperties } from 'react'
-import { Config }        from 'styled-system'
-import { system }        from 'styled-system'
+import { Config } from 'styled-system'
+import { system } from 'styled-system'
 
-export interface LayoutWithGap {
-  gap?: CSSProperties['gap']
-  rowGap?: CSSProperties['rowGap']
-  columnGap?: CSSProperties['columnGap']
-}
-
-const gapConfig: Config = {
+const flexConfig: Config = {
   gap: {
     property: 'gap',
     transform: (value) => (typeof value === 'number' ? `${value}px` : value),
@@ -23,4 +16,4 @@ const gapConfig: Config = {
   },
 }
 
-export const gapStyles = system(gapConfig)
+export const flexStyles = system(flexConfig)
