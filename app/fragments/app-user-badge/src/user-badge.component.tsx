@@ -1,0 +1,44 @@
+import { useTheme }       from '@emotion/react'
+
+import React              from 'react'
+import { FC }             from 'react'
+
+import { Avatar }         from '@ui/avatar'
+import { Card }           from '@ui/card'
+import { Row }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Text }           from '@ui/text'
+
+import { UserBadgeProps } from './user-badge.interfaces'
+import { UserBadgeTheme } from './user-badge.interfaces'
+
+const UserBadge: FC<UserBadgeProps> = ({ avatar, name, email }) => {
+  const theme: UserBadgeTheme = useTheme()
+  return (
+    <Card
+      height={theme.space?.medium}
+      width={theme.space?.largeSemiNormalIncreased}
+      borderRadius={theme.space?.miniIncreased}
+      backgroundColor={theme.colors?.white}
+      alignItems='center'
+    >
+      <Row alignItems='center' margin={theme.space?.miniReduced} justifyContent='space-between'>
+        <Avatar
+          size={theme.space?.mediumSemiDefault}
+          image
+          notification={false}
+          src={avatar}
+          alt='avatar'
+        />
+        <Column>
+          <Text fontSize='small.semiLarge'>{name}</Text>
+          <Text fontSize='small.default' color='GRAY_1000'>
+            {email}
+          </Text>
+        </Column>
+      </Row>
+    </Card>
+  )
+}
+
+export { UserBadge }

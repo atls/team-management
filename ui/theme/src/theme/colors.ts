@@ -15,6 +15,7 @@ export const colors = {
   gradientLigthBlue: '#005ACF',
   BLUE_0: '#F5F9FF',
   GRAY_1600: '#282828',
+  GRAY_1000: '#797979',
   black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',

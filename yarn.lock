@@ -170,6 +170,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/user-badge": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
@@ -179,6 +180,22 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@app/user-badge@workspace:*, @app/user-badge@workspace:app/fragments/app-user-badge":
+  version: 0.0.0-use.local
+  resolution: "@app/user-badge@workspace:app/fragments/app-user-badge"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/avatar": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -212,6 +229,20 @@ __metadata:
     "@app/user-card": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@ui/layout": "workspace:*"
+  peerDependencies:
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/users-title@workspace:app/fragments/app-users-title":
+  version: 0.0.0-use.local
+  resolution: "@app/users-title@workspace:app/fragments/app-users-title"
+  dependencies:
+    "@types/react": "npm:^18.3.2"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
   peerDependencies:
     react: "*"
   languageName: unknown
@@ -2727,7 +2758,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/button@workspace:ui/button":
+"@ui/button@workspace:*, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:

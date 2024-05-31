@@ -33,11 +33,13 @@ const space = {
   mediumSemiDefault: 40,
   mediumDefault: 50,
   mediumSemiIncreased: 52,
+  medium: 56,
   mediumIncreased: 80,
 
   largeReduced: 93,
   largeSemiReduced: 100,
   largeSemiNormal: 139,
+  largeSemiNormalIncreased: 160,
   largeSemi: 185,
   largeSemiDefault: 200,
   largeSemiDecreased: 240,
