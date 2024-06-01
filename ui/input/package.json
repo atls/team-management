@@ -6,9 +6,11 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
-    "@atls-ui-parts/layout": "0.1.1",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
@@ -17,6 +19,7 @@
     "@types/styled-system": "^5.1.22",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-laag": "2.0.5",
     "styled-system": "5.1.5",
     "styled-tools": "1.7.2"
   },
@@ -25,6 +28,7 @@
     "@emotion/styled": "*",
     "react": "*",
     "react-dom": "*",
+    "react-laag": "*",
     "styled-system": "*",
     "styled-tools": "*"
   }

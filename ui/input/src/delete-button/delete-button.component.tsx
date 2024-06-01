@@ -1,12 +1,12 @@
 import styled                     from '@emotion/styled'
-import { Box }                    from '@atls-ui-parts/layout'
-import { BoxProps }               from '@atls-ui-parts/layout'
 
 import React                      from 'react'
 import { FC }                     from 'react'
 
 import { Condition }              from '@ui/condition'
 import { RemoveIcon }             from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { BoxProps }               from '@ui/layout'
 
 import { DeleteButtonProps }      from './delete-button.interfaces'
 import { baseDeleteButtonStyles } from './delete-button.styles'
