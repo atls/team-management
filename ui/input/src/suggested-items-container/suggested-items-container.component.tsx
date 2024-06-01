@@ -1,27 +1,40 @@
-import React                            from 'react'
-import { FC }                           from 'react'
+import styled                                         from '@emotion/styled'
 
-import { Box }                          from '@ui/layout'
+import React                                          from 'react'
+import { FC }                                         from 'react'
 
-import { SuggestedItemsContainerProps } from './suggested-items-container.interfaces'
+import { Condition }                                  from '@ui/condition'
+import { Box }                                        from '@ui/layout'
+
+import { SuggestedItem }                              from '../suggested-item'
+import { SuggestedItemsContainerProps }               from './suggested-items-container.interfaces'
+import { baseSuggestedItemsContainerBoxStyles }       from './suggested-items-container.styles'
+import { shapeSuggestedItemsContainerBoxStyles }      from './suggested-items-container.styles'
+import { appearanceSuggestedItemsContainerBoxStyles } from './suggested-items-container.styles'
+
+const SuggestedItemsContainerBox = styled(Box)(
+  baseSuggestedItemsContainerBoxStyles,
+  shapeSuggestedItemsContainerBoxStyles,
+  appearanceSuggestedItemsContainerBoxStyles
+)
 
 export const SuggestedItemsContainer: FC<SuggestedItemsContainerProps> = ({
-  children,
+  suggestedItems,
+  renderLayer,
   width,
   layerProps,
-}) => {
-  return (
-    <Box
-      zIndex={1500}
-      width={width}
-      backgroundColor='#F5F9FF'
-      borderRadius='0 0 9px 9px'
-      padding={18}
-      gap={10}
-      flexWrap='wrap'
-      {...layerProps}
-    >
-      {children}
-    </Box>
-  )
-}
+  onSuggestedItemClick,
+}) => (
+  <Condition match={suggestedItems.length}>
+    {renderLayer(
+      <SuggestedItemsContainerBox width={width} {...layerProps}>
+        {suggestedItems.map((searchItemData) => (
+          <SuggestedItem
+            {...searchItemData}
+            onClick={(e) => onSuggestedItemClick(e, searchItemData)}
+          />
+        ))}
+      </SuggestedItemsContainerBox>
+    )}
+  </Condition>
+)
