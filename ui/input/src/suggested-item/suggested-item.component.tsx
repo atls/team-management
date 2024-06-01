@@ -1,15 +1,15 @@
-import React               from 'react'
-import { FC }              from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Text }            from '@ui/text'
+import { ImageBlock }         from '@ui/image'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Text }               from '@ui/text'
 
-import { SearchItemProps } from './search-item.interfaces'
+import { SuggestedItemProps } from './suggested-item.interfaces'
 
-export const SearchItem: FC<SearchItemProps> = ({
+export const SuggestedItem: FC<SuggestedItemProps> = ({
   firstName,
   lastName,
   email,

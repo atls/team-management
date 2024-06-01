@@ -15,9 +15,9 @@ import { Box }                      from '@ui/layout'
 import { DeleteButton }             from './delete-button'
 import { InputProps }               from './input.interfaces'
 import { InputContainerProps }      from './input.interfaces'
-import { SearchItem }               from './search-item'
-import { SearchItemsContainer }     from './search-items-container'
 import { SelectedItem }             from './selected-item'
+import { SuggestedItem }            from './suggested-item'
+import { SuggestedItemsContainer }  from './suggested-items-container'
 import { shapeStyles }              from './input.styles'
 import { appearanceStyles }         from './input.styles'
 
@@ -36,18 +36,16 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   const inputRef = useRef(null)
   const changeValue = useChangeValue(disabled, onChange, onChangeNative)
 
-  const [visibleState, setVisibleInputState] = useState(true)
-  const handleDeleteButton = () => {
+  const [visibleInputState, setVisibleInputState] = useState(true)
+  const handleDeleteInputButtonClick = () => {
     setVisibleInputState(false)
   }
 
   const [selectedItems, setSelectedItems] = useState([])
   const [inputValue, setInputValue] = useState(value)
-  const [matchedSearchItems, setMatchedSearchItems] = useState([])
+  const [suggestedItems, setSuggestedItems] = useState([])
 
-  const handlerClickContainer = (e) => {
-    inputRef.current.focus()
-  }
+  const handlerClickContainer = () => inputRef.current.focus()
 
   const handleChange = (e) => {
     const inputString = e.target.value
@@ -63,14 +61,14 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
           return searchItem
       })
 
-      setMatchedSearchItems(matched)
-    } else setMatchedSearchItems([])
+      setSuggestedItems(matched)
+    } else setSuggestedItems([])
 
     changeValue(e)
   }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
-    isOpen: matchedSearchItems.length,
+    isOpen: suggestedItems.length,
     placement: 'bottom-start',
     overflowContainer: false,
     auto: true,
@@ -79,22 +77,21 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
     arrowOffset: 16,
   })
 
-  const handleClickSearchItem = (e, data) => {
+  const handleSuggestedItemClick = (e, data) => {
     setSelectedItems(selectedItems.concat(data))
-    setMatchedSearchItems([])
+    setSuggestedItems([])
     inputRef.current.focus()
     setInputValue('')
   }
 
-  const handleDeleteClickSearchItem = (deleteItemData) => {
+  const handleSelectedItemDeleteClick = (deleteItemData) => {
     setSelectedItems(selectedItems.filter((selectedItem) => selectedItem !== deleteItemData))
     inputRef.current.focus()
   }
 
   return (
-    <Condition match={visibleState}>
+    <Condition match={visibleInputState}>
       <InputContainer
-        id='input-id'
         {...props}
         {...triggerProps}
         onClick={handlerClickContainer}
@@ -105,7 +102,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
             return (
               <SelectedItem
                 {...selectedItemData}
-                onDeleteClick={() => handleDeleteClickSearchItem(selectedItemData)}
+                onDeleteClick={() => handleSelectedItemDeleteClick(selectedItemData)}
               />
             )
           })}
@@ -120,19 +117,19 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
             onChange={handleChange}
           />
         </Box>
-        <DeleteButton deleteButton={deleteButton} onClick={handleDeleteButton} />
-        <Condition match={matchedSearchItems.length}>
+        <DeleteButton deleteButton={deleteButton} onClick={handleDeleteInputButtonClick} />
+        <Condition match={suggestedItems.length}>
           {renderLayer(
-            <SearchItemsContainer layerProps={layerProps}>
-              {matchedSearchItems.map((searchItemData) => {
+            <SuggestedItemsContainer layerProps={layerProps}>
+              {suggestedItems.map((searchItemData) => {
                 return (
-                  <SearchItem
+                  <SuggestedItem
                     {...searchItemData}
-                    onClick={(e) => handleClickSearchItem(e, searchItemData)}
+                    onClick={(e) => handleSuggestedItemClick(e, searchItemData)}
                   />
                 )
               })}
-            </SearchItemsContainer>
+            </SuggestedItemsContainer>
           )}
         </Condition>
       </InputContainer>

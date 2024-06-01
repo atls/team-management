@@ -7,7 +7,7 @@ export const shapeStyles: styleFn = ({ theme }) => ({
   flexWrap: 'wrap',
   gap: theme.spaces.tiny,
   fontFamily: theme.fonts.primary,
-  height: theme.spaces.extra,
+  minHeight: theme.spaces.extra,
   size: theme.spaces.extra,
   fontWeight: theme.fontWeights.normal,
   fontSize: theme.fontSizes.small.semiLarge,
