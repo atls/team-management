@@ -19,7 +19,7 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
 
   const [isButtonActive, setButtonActive] = useState(false)
   const [checkedSwitches, setCheckedSwitches] = useState(0)
-  const [selectedMembers, setSelectedMembers] = useState(0)
+  // const [selectedMembers, setSelectedMembers] = useState([])
 
   const handlerSwitch = (switchState: boolean) => {
     if (switchState) setCheckedSwitches(checkedSwitches + 1)
@@ -28,18 +28,21 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
 
   const testUsersData = [
     {
+      id: 1,
       firstName: 'test',
       lastName: 'user1',
       email: 'testmail1@mail.ru',
       avatarSrc: 'https://placehold.co/400',
     },
     {
+      id: 2,
       firstName: 'test',
       lastName: 'user2',
       email: 'testmail2@mail.ru',
       avatarSrc: 'https://placehold.co/400',
     },
     {
+      id: 3,
       firstName: 'Nikita',
       lastName: 'user3',
       email: 'testmail3@mail.ru',
