@@ -2,10 +2,12 @@ import { useTheme }               from '@emotion/react'
 
 import React                      from 'react'
 import { FC }                     from 'react'
+import { useContext }             from 'react'
 import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
 import { Input }                  from '@ui/input'
+import { SelectedItemsContext }   from '@ui/input'
 import { Row }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Modal }                  from '@ui/modal'
@@ -19,9 +21,11 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
 
   const [isButtonActive, setButtonActive] = useState(false)
   const [checkedSwitches, setCheckedSwitches] = useState(0)
-  // const [selectedMembers, setSelectedMembers] = useState([])
+  const selectedItems = useContext(SelectedItemsContext)
 
   const handlerSwitch = (switchState: boolean) => {
+    console.log(selectedItems)
+
     if (switchState) setCheckedSwitches(checkedSwitches + 1)
     else setCheckedSwitches(checkedSwitches - 1)
   }
