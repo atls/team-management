@@ -9,6 +9,7 @@ import { useReducer }                    from 'react'
 import { forwardRef }                    from 'react'
 import { useState }                      from 'react'
 import { useRef }                        from 'react'
+import { useEffect }                     from 'react'
 import { useLayer }                      from 'react-laag'
 
 import { Condition }                     from '@ui/condition'
@@ -41,6 +42,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   deleteButton = false,
   errorText,
   searchItems,
+  parentHook,
   ...props
 }) => {
   const theme: any = useTheme()
@@ -90,6 +92,10 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
       })
     }
   }
+
+  useEffect(() => {
+    parentHook(selectedItems)
+  }, [selectedItems])
 
   return (
     <SuggestedItemsContext.Provider value={suggestedItems}>
