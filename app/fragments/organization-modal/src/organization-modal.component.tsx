@@ -2,12 +2,11 @@ import { useTheme }               from '@emotion/react'
 
 import React                      from 'react'
 import { FC }                     from 'react'
-import { useContext }             from 'react'
 import { useState }               from 'react'
+import { useEffect }              from 'react'
 
 import { Button }                 from '@ui/button'
 import { Input }                  from '@ui/input'
-import { SelectedItemsContext }   from '@ui/input'
 import { Row }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Modal }                  from '@ui/modal'
@@ -20,15 +19,22 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
   const theme: any = useTheme()
 
   const [isButtonActive, setButtonActive] = useState(false)
-  const [checkedSwitches, setCheckedSwitches] = useState(0)
-  const selectedItems = useContext(SelectedItemsContext)
+  const [checkedSwitches, setCheckedSwitches] = useState([])
+  const [selectedUsers, setSelectedUsers] = useState([])
 
-  const handlerSwitch = (switchState: boolean) => {
-    console.log(selectedItems)
-
-    if (switchState) setCheckedSwitches(checkedSwitches + 1)
-    else setCheckedSwitches(checkedSwitches - 1)
+  const handlerSwitch = (e, category) => {
+    if (checkedSwitches.includes(category)) {
+      setCheckedSwitches(checkedSwitches.filter((c) => c != category))
+    } else {
+      setCheckedSwitches(checkedSwitches.concat([category]))
+    }
   }
+
+  useEffect(() => {
+    console.log(selectedUsers)
+    if (selectedUsers.length && checkedSwitches.length) setButtonActive(true)
+    else setButtonActive(false)
+  }, [selectedUsers, checkedSwitches])
 
   const testUsersData = [
     {
@@ -60,7 +66,11 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
           Добавить сотрудника в организацию
         </Text>
-        <Input placeholder='Team member' searchItems={testUsersData} />
+        <Input
+          placeholder='Team member'
+          searchItems={testUsersData}
+          parentHook={setSelectedUsers}
+        />
         <Row
           flexDirection='row'
           flexWrap='wrap'
@@ -71,7 +81,7 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
           <Text fontSize='normal.semiIncreased' width='100%'>
             Команды организации
           </Text>
-          <TeamSwitch teamName='Design' onChange={handlerSwitch} />
+          <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
           <TeamSwitch teamName='Frontend' onChange={handlerSwitch} />
           <TeamSwitch teamName='Backend' onChange={handlerSwitch} />
           <TeamSwitch teamName={`Guest's`} onChange={handlerSwitch} />
