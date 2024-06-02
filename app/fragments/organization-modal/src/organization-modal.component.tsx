@@ -31,7 +31,6 @@ export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
   }
 
   useEffect(() => {
-    console.log(selectedUsers)
     if (selectedUsers.length && checkedSwitches.length) setButtonActive(true)
     else setButtonActive(false)
   }, [selectedUsers, checkedSwitches])
