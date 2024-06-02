@@ -1,7 +1,9 @@
 const WHITE = '#FFFFFF'
 const GRAY_100 = '#F2F2F2'
 const GRAY_200 = '#E4E4E4'
+const GRAY_300 = '#D7D7D7'
 const GRAY_400 = '#C9C9C9'
+const GRAY_1000 = '#797979'
 const GRAY_1400 = '#434343'
 const GRAY_1600 = '#282828'
 
@@ -12,6 +14,10 @@ const BLUE_400 = '#508EE9'
 const BLACK_50 = '00000080'
 
 export const colors = {
+  BLUE_0,
+  GRAY_300,
+  GRAY_1000,
+  GRAY_1600,
   black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',
@@ -333,7 +339,6 @@ export const colors = {
       border: 'rgba(80, 142, 233, 1)',
     },
   },
-
   scroll: {
     default: {
       scrollbarColor: 'rgba(152, 190, 249, 1) transparent',

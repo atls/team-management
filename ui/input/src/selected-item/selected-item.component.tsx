@@ -1,27 +1,44 @@
-import React          from 'react'
-import { FC }         from 'react'
+import styled                              from '@emotion/styled'
+import { useTheme }                        from '@emotion/react'
 
-import { RemoveIcon } from '@ui/icons'
-import { Box }        from '@ui/layout'
-import { Text }       from '@ui/text'
+import React                               from 'react'
+import { FC }                              from 'react'
+import { useContext }                      from 'react'
 
-export const SelectedItem: FC<SelectedItemProps> = ({ firstName, lastName, onDeleteClick }) => {
+import { RemoveIcon }                      from '@ui/icons'
+import { Box }                             from '@ui/layout'
+import { Text }                            from '@ui/text'
+
+import { SelectedItemsDispatchContext }    from '../selected-items'
+import { SelectedItemProps }               from './selected-item.interface'
+import { baseSelectedItemBoxStyles }       from './selected-item.styles'
+import { shapeSelectedItemBoxStyles }      from './selected-item.styles'
+import { appearanceSelectedItemBoxStyles } from './selected-item.styles'
+
+const SelectedItemBox = styled(Box)(
+  baseSelectedItemBoxStyles,
+  shapeSelectedItemBoxStyles,
+  appearanceSelectedItemBoxStyles
+)
+
+export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
+  const { firstName, lastName } = selectedItemData
+  const theme: any = useTheme()
+  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
+
+  function handleDeleteSelectedItem(e, selectedItemData) {
+    selectedItemsDispatch({
+      type: 'deleted',
+      itemData: selectedItemData,
+    })
+  }
+
   return (
-    <Box
-      cursor='pointer'
-      flexDirection='row'
-      alignItems='center'
-      width='auto'
-      gap={8}
-      borderRadius={4}
-      padding={4}
-      backgroundColor='#D7D7D7'
-      onClick={onDeleteClick}
-    >
-      <RemoveIcon cursor='pointer' width={12} />
-      <Text fontSize='small.semiLarge' style={{ 'text-wrap': 'nowrap' }}>
+    <SelectedItemBox onClick={(e) => handleDeleteSelectedItem(e, selectedItemData)}>
+      <RemoveIcon cursor='pointer' width={theme.spaces.micro} />
+      <Text fontSize='small.semiLarge' wordBreak='keep-all'>
         {firstName} {lastName}
       </Text>
-    </Box>
+    </SelectedItemBox>
   )
 }

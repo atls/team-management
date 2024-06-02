@@ -2,6 +2,7 @@ import { InputProps as BaseInputProps } from '@atls-ui-parts/input'
 import { BoxProps }                     from '@atls-ui-parts/layout'
 
 export interface InputProps extends BaseInputProps {
+  searchItems: Record<string, string>
   errorText?: string
   deleteButton?: boolean
 }
