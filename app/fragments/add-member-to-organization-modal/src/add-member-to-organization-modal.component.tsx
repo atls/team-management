@@ -6,7 +6,7 @@ import { useState }                          from 'react'
 import { useEffect }                         from 'react'
 
 import { Button }                            from '@ui/button'
-import { Input }                             from '@ui/input'
+import { SelectInput }                       from '@ui/input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
@@ -38,24 +38,19 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const testUsersData = [
     {
       id: 1,
-      firstName: 'test',
-      lastName: 'user1',
-      email: 'testmail1@mail.ru',
-      avatarSrc: 'https://placehold.co/400',
+      primaryInfo: 'test user1',
+      secondaryInfo: 'testmail1@mail.ru',
+      imageSrc: 'https://placehold.co/400',
     },
     {
       id: 2,
-      firstName: 'test',
-      lastName: 'user2',
-      email: 'testmail2@mail.ru',
-      avatarSrc: 'https://placehold.co/400',
+      primaryInfo: 'test user2',
+      secondaryInfo: 'testmail2@mail.ru',
+      imageSrc: 'https://placehold.co/400',
     },
     {
       id: 3,
-      firstName: 'Nikita',
-      lastName: 'user3',
-      email: 'testmail3@mail.ru',
-      avatarSrc: 'https://placehold.co/400',
+      primaryInfo: 'test user3',
     },
   ]
 
@@ -65,7 +60,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
           Добавить сотрудника в организацию
         </Text>
-        <Input
+        <SelectInput
           placeholder='Team member'
           searchItems={testUsersData}
           parentHook={setSelectedUsers}
@@ -81,9 +76,9 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             Команды организации
           </Text>
           <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
-          <TeamSwitch teamName='Frontend' onChange={handlerSwitch} />
-          <TeamSwitch teamName='Backend' onChange={handlerSwitch} />
-          <TeamSwitch teamName={`Guest's`} onChange={handlerSwitch} />
+          <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
+          <TeamSwitch teamName='Backend' onChange={(e) => handlerSwitch(e, 'backend')} />
+          <TeamSwitch teamName={`Guest's`} onChange={(e) => handlerSwitch(e, 'guests')} />
         </Row>
         <Row justifyContent='end'>
           <Button
