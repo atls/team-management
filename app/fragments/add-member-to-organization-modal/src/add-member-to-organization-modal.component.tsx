@@ -1,21 +1,21 @@
-import { useTheme }               from '@emotion/react'
+import { useTheme }                          from '@emotion/react'
 
-import React                      from 'react'
-import { FC }                     from 'react'
-import { useState }               from 'react'
-import { useEffect }              from 'react'
+import React                                 from 'react'
+import { FC }                                from 'react'
+import { useState }                          from 'react'
+import { useEffect }                         from 'react'
 
-import { Button }                 from '@ui/button'
-import { Input }                  from '@ui/input'
-import { Row }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Modal }                  from '@ui/modal'
-import { Text }                   from '@ui/text'
+import { Button }                            from '@ui/button'
+import { Input }                             from '@ui/input'
+import { Row }                               from '@ui/layout'
+import { Column }                            from '@ui/layout'
+import { Modal }                             from '@ui/modal'
+import { Text }                              from '@ui/text'
 
-import { OrganizationModalProps } from './organization-modal.interfaces'
-import { TeamSwitch }             from './team-switch'
+import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces'
+import { TeamSwitch }                        from './team-switch'
 
-export const OrganizationModal: FC<OrganizationModalProps> = ({ open }) => {
+export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = ({ open }) => {
   const theme: any = useTheme()
 
   const [isButtonActive, setButtonActive] = useState(false)
