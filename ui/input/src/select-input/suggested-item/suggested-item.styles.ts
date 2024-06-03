@@ -8,7 +8,7 @@ export const baseSuggestedItemBoxStyles: styleFn = ({ theme }) => ({
 })
 
 export const shapeSuggestedItemBoxStyles: styleFn = ({ theme }) => ({
-  width: 'min-content',
+  width: 'fit-content',
   height: 'min-content',
   padding: theme.spaces.miniTiny,
   borderRadius: theme.spaces.micro,

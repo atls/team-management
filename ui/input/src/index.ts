@@ -1,2 +1,2 @@
-export * from './input.component'
-export * from './input.interfaces'
+export * from './base-input'
+export * from './select-input'

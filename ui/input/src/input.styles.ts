@@ -5,6 +5,7 @@ import { switchProp } from 'styled-tools'
 export const shapeStyles: styleFn = ({ theme }) => ({
   cursor: 'text',
   flexWrap: 'wrap',
+  alignItems: 'center',
   gap: theme.spaces.tiny,
   fontFamily: theme.fonts.primary,
   minHeight: theme.spaces.extra,

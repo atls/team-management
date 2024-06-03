@@ -22,7 +22,8 @@ const SelectedItemBox = styled(Box)(
 )
 
 export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
-  const { firstName, lastName } = selectedItemData
+  const { primaryInfo } = selectedItemData
+
   const theme: any = useTheme()
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
 
@@ -37,7 +38,7 @@ export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
     <SelectedItemBox onClick={(e) => handleDeleteSelectedItem(e, selectedItemData)}>
       <RemoveIcon cursor='pointer' width={theme.spaces.micro} />
       <Text fontSize='small.semiLarge' wordBreak='keep-all'>
-        {firstName} {lastName}
+        {primaryInfo}
       </Text>
     </SelectedItemBox>
   )

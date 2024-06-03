@@ -23,16 +23,12 @@ export const SuggestedItemsContainer: FC<SuggestedItemsContainerProps> = ({
   renderLayer,
   width,
   layerProps,
-  onSuggestedItemClick,
 }) => (
   <Condition match={suggestedItems.length}>
     {renderLayer(
       <SuggestedItemsContainerBox width={width} {...layerProps}>
-        {suggestedItems.map((searchItemData) => (
-          <SuggestedItem
-            {...searchItemData}
-            onClick={(e) => onSuggestedItemClick(e, searchItemData)}
-          />
+        {suggestedItems.map((suggestedItemData) => (
+          <SuggestedItem {...suggestedItemData} />
         ))}
       </SuggestedItemsContainerBox>
     )}

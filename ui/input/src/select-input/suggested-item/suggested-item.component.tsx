@@ -10,7 +10,7 @@ import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 
-import { InputValueDispatchContext }        from '../input.context'
+import { InputValueDispatchContext }        from '../select-input.context'
 import { SelectedItemsDispatchContext }     from '../selected-items'
 import { SuggestedItemsDispatchContext }    from '../suggested-items'
 import { SuggestedItemProps }               from './suggested-item.interfaces'
@@ -25,8 +25,10 @@ const SuggestedItemBox = styled(Box)(
 )
 
 export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
-  const { firstName, lastName, email, avatarSrc } = suggestedItemData
+  const { id, primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
+
   const theme: any = useTheme()
+
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
   const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext)
   const inputValueDispatch = useContext(InputValueDispatchContext)
@@ -46,21 +48,25 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
 
   return (
     <SuggestedItemBox onClick={(e) => handleAddSelectedItem(e, suggestedItemData)}>
-      <Box
-        width={theme.spaces.increased}
-        height={theme.spaces.increased}
-        borderRadius={theme.radii.f24}
-        overflow='hidden'
-      >
-        <ImageBlock src={avatarSrc} />
-      </Box>
+      {imageSrc && (
+        <Box
+          width={theme.spaces.increased}
+          height={theme.spaces.increased}
+          borderRadius={theme.radii.f24}
+          overflow='hidden'
+        >
+          <ImageBlock src={imageSrc} />
+        </Box>
+      )}
       <Column gap={theme.spaces.zero}>
         <Text fontSize='small.semiLarge' color={theme.colors.GRAY_1600}>
-          {firstName} {lastName}
+          {primaryInfo}
         </Text>
-        <Text fontSize='small.default' color={theme.colors.GRAY_1000}>
-          {email}
-        </Text>
+        {secondaryInfo && (
+          <Text fontSize='small.default' color={theme.colors.GRAY_1000}>
+            {secondaryInfo}
+          </Text>
+        )}
       </Column>
     </SuggestedItemBox>
   )

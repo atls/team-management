@@ -12,34 +12,30 @@ import { useRef }                        from 'react'
 import { useEffect }                     from 'react'
 import { useLayer }                      from 'react-laag'
 
-import { Condition }                     from '@ui/condition'
 import { Box }                           from '@ui/layout'
 
-import { DeleteButton }                  from './delete-button'
-import { InputValueContext }             from './input.context'
-import { InputValueDispatchContext }     from './input.context'
-import { InputProps }                    from './input.interfaces'
-import { InputContainerProps }           from './input.interfaces'
+import { InputValueContext }             from './select-input.context'
+import { InputValueDispatchContext }     from './select-input.context'
+import { InputProps }                    from './select-input.interfaces'
 import { SelectedItemsDispatchContext }  from './selected-items'
 import { SelectedItems }                 from './selected-items'
 import { SelectedItemsContext }          from './selected-items'
 import { SuggestedItemsContext }         from './suggested-items'
 import { SuggestedItemsDispatchContext } from './suggested-items'
 import { SuggestedItemsContainer }       from './suggested-items-container'
-import { inputValueReducer }             from './input.reducer'
-import { shapeStyles }                   from './input.styles'
-import { appearanceStyles }              from './input.styles'
+import { shapeStyles }                   from '../input.styles'
+import { appearanceStyles }              from '../input.styles'
+import { inputValueReducer }             from './select-input.reducer'
 import { selectedItemsReducer }          from './selected-items'
 import { suggestedItemsReducer }         from './suggested-items'
 
-const InputContainer = styled(Box)<InputContainerProps>(shapeStyles, appearanceStyles)
+const InputBox = styled(Box)(shapeStyles, appearanceStyles)
 
-export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputProps> = ({
+const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputProps> = ({
   value,
   disabled,
   onChange,
   onChangeNative,
-  deleteButton = false,
   errorText,
   searchItems,
   parentHook,
@@ -53,9 +49,6 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   const [suggestedItems, suggestedItemsDispatch] = useReducer(suggestedItemsReducer, [])
   const [inputValue, inputValueDispatch] = useReducer(inputValueReducer, '')
 
-  const [visibleInputState, setVisibleInputState] = useState(true)
-
-  const handleDeleteInputButtonClick = () => setVisibleInputState(false)
   const handlerClickContainer = () => inputRef.current.focus()
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
@@ -77,11 +70,14 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
     if (inputValueString) {
       const compare = (string) => !!string.match(inputValueString)
       const matched = searchItems.filter((searchItem) => {
-        const { firstName, lastName, email } = searchItem
-        const compareString = `${firstName} ${lastName} ${email}`
-        if (compare(compareString) && !selectedItems.some((item) => item.email === email))
+        const { id, primaryInfo, secondaryInfo } = searchItem
+        let compareString = primaryInfo
+        if (secondaryInfo) compareString += secondaryInfo
+
+        if (compare(compareString) && !selectedItems.some((item) => item.id === id))
           return searchItem
       })
+
       suggestedItemsDispatch({
         type: 'change',
         suggestedItems: matched,
@@ -104,34 +100,28 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
           <SelectedItemsDispatchContext.Provider value={selectedItemsDispatch}>
             <InputValueContext.Provider value={inputValue}>
               <InputValueDispatchContext.Provider value={inputValueDispatch}>
-                <Condition match={visibleInputState}>
-                  <InputContainer
-                    {...props}
-                    {...triggerProps}
-                    onClick={handlerClickContainer}
-                    position='relative'
-                  >
-                    <SelectedItems />
-                    <Box width='max-content' minWidth={theme.spaces.semiSuperExtra}>
-                      <RawInput
-                        ref={inputRef}
-                        {...props}
-                        disabled={disabled}
-                        value={inputValue}
-                        onChange={handleInputChange}
-                      />
-                    </Box>
-                    <DeleteButton
-                      deleteButton={deleteButton}
-                      onClick={handleDeleteInputButtonClick}
+                <InputBox
+                  {...props}
+                  {...triggerProps}
+                  onClick={handlerClickContainer}
+                  position='relative'
+                >
+                  <SelectedItems />
+                  <Box width='max-content' minWidth={theme.spaces.semiSuperExtra}>
+                    <RawInput
+                      ref={inputRef}
+                      {...props}
+                      disabled={disabled}
+                      value={inputValue}
+                      onChange={handleInputChange}
                     />
-                    <SuggestedItemsContainer
-                      layerProps={layerProps}
-                      renderLayer={renderLayer}
-                      suggestedItems={suggestedItems}
-                    />
-                  </InputContainer>
-                </Condition>
+                  </Box>
+                  <SuggestedItemsContainer
+                    layerProps={layerProps}
+                    renderLayer={renderLayer}
+                    suggestedItems={suggestedItems}
+                  />
+                </InputBox>
               </InputValueDispatchContext.Provider>
             </InputValueContext.Provider>
           </SelectedItemsDispatchContext.Provider>
@@ -141,4 +131,4 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   )
 }
 
-export const Input = forwardRef<HTMLInputElement, InputProps>(InputWithoutRef)
+export const SelectInput = forwardRef<HTMLInputElement, InputProps>(InputWithoutRef)
