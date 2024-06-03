@@ -171,9 +171,10 @@ __metadata:
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@fragments/add-member-modal": "workspace:*"
+    "@fragments/add-member-to-organization-modal": "workspace:*"
     "@fragments/organization-card": "workspace:*"
     "@fragments/organization-card-grid": "workspace:*"
-    "@fragments/organization-modal": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -1296,6 +1297,52 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fragments/add-member-modal@workspace:*, @fragments/add-member-modal@workspace:app/fragments/add-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/add-member-modal@workspace:app/fragments/add-member-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/add-member-to-organization-modal@workspace:*, @fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal":
+  version: 0.0.0-use.local
+  resolution: "@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/organization-card-grid@workspace:*, @fragments/organization-card-grid@workspace:app/fragments/organization-card-grid":
   version: 0.0.0-use.local
   resolution: "@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid"
@@ -1337,52 +1384,6 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/organization-modal@workspace:*, @fragments/organization-modal@workspace:app/fragments/organization-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/organization-modal@workspace:app/fragments/organization-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:18.3.2"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/team-member-modal@workspace:app/fragments/team-member-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/team-member-modal@workspace:app/fragments/team-member-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.2"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
   languageName: unknown
   linkType: soft
 

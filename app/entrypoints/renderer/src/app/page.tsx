@@ -1,9 +1,10 @@
 'use client'
 
-import React                 from 'react'
+import { AddMemberModal }               from '@fragments/add-member-modal'
+import { AddMemberToOrganizationModal } from '@fragments/add-member-to-organization-modal'
 
-import { OrganizationModal } from '@fragments/organization-modal'
+import React                            from 'react'
 
-const Page = () => <OrganizationModal open={true} />
+const Page = () => <AddMemberModal open={true} />
 
 export default Page
