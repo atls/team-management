@@ -12,9 +12,11 @@
     "@ui/text": "workspace:0.0.1"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react": "*"
   },
   "devDependencies": {
+    "@emotion/react": "11.11.4",
     "@types/react": "^18.3.2"
   }
 }

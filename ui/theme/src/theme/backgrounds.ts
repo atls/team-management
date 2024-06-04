@@ -7,6 +7,7 @@ const backgrounds = {
   white: 'white',
   ghostWhite: '#F5F9FF',
   lightGray: '#F2F2F2',
+  gray: '#D7D7D7',
 }
 
 export { backgrounds }

@@ -203,6 +203,28 @@ export const colors = {
         border: 'transparent',
       },
     },
+    transparentBlueBackgroundButton: {
+      default: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgb(197, 220, 253)',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgb(197, 220, 253)',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
     blackBackgroundButton: {
       default: {
         background: 'rgba(23, 24, 28, 0.9)',
@@ -232,12 +254,12 @@ export const colors = {
         border: 'transparent',
       },
       hover: {
-        background: 'rgba(255, 255, 255, 1)',
+        background: 'rgba(242, 242, 242, 1)',
         font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },
       pressed: {
-        background: 'transparent',
+        background: 'rgba(80, 142, 233, 1)',
         font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },

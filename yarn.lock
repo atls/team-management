@@ -166,11 +166,88 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@app/animated-card@workspace:*, @app/animated-card@workspace:app/fragments/app-animated-card":
+  version: 0.0.0-use.local
+  resolution: "@app/animated-card@workspace:app/fragments/app-animated-card"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/button": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+    framer-motion: "npm:10.16.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/main-logo@workspace:*, @app/main-logo@workspace:app/fragments/app-main-logo":
+  version: 0.0.0-use.local
+  resolution: "@app/main-logo@workspace:app/fragments/app-main-logo"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/notifications-modal@workspace:*, @app/notifications-modal@workspace:app/fragments/app-notifications-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/notifications-modal@workspace:app/fragments/app-notifications-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/avatar": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/scroll": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/organizations-modal@workspace:*, @app/organizations-modal@workspace:app/fragments/app-organizations-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
+  dependencies:
+    "@app/animated-card": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/button": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+    framer-motion: "npm:10.16.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/renderer-entrypoint@workspace:app/entrypoints/renderer":
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/main-logo": "workspace:*"
+    "@app/notifications-modal": "workspace:*"
+    "@app/organizations-modal": "workspace:*"
+    "@app/theme-selector": "workspace:*"
     "@app/user-badge": "workspace:*"
+    "@app/users-modal": "workspace:*"
+    "@app/users-title": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
@@ -180,6 +257,22 @@ __metadata:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@app/theme-selector@workspace:*, @app/theme-selector@workspace:app/fragments/app-theme-selector":
+  version: 0.0.0-use.local
+  resolution: "@app/theme-selector@workspace:app/fragments/app-theme-selector"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/switch": "workspace:*"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -213,7 +306,6 @@ __metadata:
     "@ui/layout": "workspace:*"
     "@ui/progress": "workspace:*"
     "@ui/scroll": "workspace:*"
-    "@ui/switch": "workspace:*"
     "@ui/tag": "workspace:*"
     "@ui/text": "workspace:0.0.1"
   peerDependencies:
@@ -234,16 +326,39 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/users-title@workspace:app/fragments/app-users-title":
+"@app/users-modal@workspace:*, @app/users-modal@workspace:app/fragments/app-users-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@ui/avatar": "workspace:*"
+    "@ui/button": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/scroll": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/users-title@workspace:*, @app/users-title@workspace:app/fragments/app-users-title":
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
+    "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
   peerDependencies:
+    "@emotion/react": "*"
     react: "*"
   languageName: unknown
   linkType: soft
@@ -3023,7 +3138,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/modal@workspace:ui/modal":
+"@ui/modal@workspace:*, @ui/modal@workspace:ui/modal":
   version: 0.0.0-use.local
   resolution: "@ui/modal@workspace:ui/modal"
   dependencies:

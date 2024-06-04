@@ -1,0 +1,80 @@
+import { useTheme }          from '@emotion/react'
+
+import React                 from 'react'
+import { FC }                from 'react'
+import { motion }            from 'framer-motion'
+
+import { Button }            from '@ui/button'
+import { RemoveIcon }        from '@ui/icons'
+import { ImageBlock }        from '@ui/image'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Text }              from '@ui/text'
+
+import { AnimatedCardProps } from './animated-card.interfaces'
+import { AnimatedCardTheme } from './animated-card.interfaces'
+
+const AnimatedCard: FC<AnimatedCardProps> = ({ img }) => {
+  const theme: AnimatedCardTheme = useTheme()
+  const [openMenu, setOpenMenu] = React.useState<boolean>(false)
+  const handleDelete = () => {
+    setOpenMenu(!openMenu)
+  }
+  const removeOrganization = () => {}
+  return (
+    <motion.div
+      animate={openMenu ? { height: '116px' } : { height: '64px' }}
+      style={{
+        boxSizing: 'border-box',
+        display: 'flex',
+        marginBottom: '12px',
+        backgroundColor: '#F2F2F2',
+        borderRadius: '20px',
+        height: '64px',
+        width: '452px',
+        padding: '12px',
+        flexDirection: 'row',
+        overflow: 'hidden',
+      }}
+    >
+      <Column width={theme.spaces?.superExtraReduced}>
+        <Box alignItems='center' justifyContent='space-between'>
+          <Box alignItems='center'>
+            <Box width={theme.spaces?.increased} height={theme.spaces?.increased}>
+              <ImageBlock src={img} borderRadius={theme.spaces?.miniReduced} />
+            </Box>
+            <Text fontSize='normal.semiDefault' marginLeft={theme.spaces?.tiny}>
+              Atls
+            </Text>
+          </Box>
+          <RemoveIcon onClick={handleDelete} />
+        </Box>
+
+        <Box marginTop={theme.spaces?.medium} justifyContent='space-between'>
+          <Text maxWidth={theme.spaces?.largeDecreased} fontSize='small.semilarge'>
+            Вы уверены, что хотите исключить пользователя из данной организации?
+          </Text>
+          <Button
+            onClick={removeOrganization}
+            shape='rectangle'
+            size='middlingRoundedPadding'
+            variant='lightBlueBackgroundButton'
+          >
+            Да
+          </Button>
+          <Button
+            onClick={() => {
+              setOpenMenu(false)
+            }}
+            size='middlingRoundedPadding'
+            variant='lightBlueBackgroundButton'
+          >
+            Нет
+          </Button>
+        </Box>
+      </Column>
+    </motion.div>
+  )
+}
+
+export { AnimatedCard }

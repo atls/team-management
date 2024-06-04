@@ -1,0 +1,22 @@
+{
+  "name": "@app/theme-selector",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ui/button": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/switch": "workspace:*"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@types/react": "^18.3.2"
+  }
+}

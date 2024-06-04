@@ -9,7 +9,7 @@ import { Avatar }             from '@ui/avatar'
 import { ArrowChevronIcon }   from '@ui/icons'
 import { DashboardIcon }      from '@ui/icons'
 import { OrgamizationsIcon }  from '@ui/icons'
-import { LogoutIcon }         from '@ui/icons'
+import { LogOutIcon }         from '@ui/icons'
 import { Box }                from '@ui/layout'
 import { Logo }               from '@ui/logo'
 import { Text }               from '@ui/text'
@@ -106,7 +106,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                   <Text style={{ fontSize: theme.fontSizes?.small.default }}>{email}</Text>
                 </Box>
                 <Box>
-                  <LogoutIcon
+                  <LogOutIcon
                     height={theme.space?.normalSemiIncreased}
                     width={theme.space?.normalSemiIncreased}
                   />

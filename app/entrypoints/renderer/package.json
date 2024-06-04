@@ -21,6 +21,12 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "@app/user-badge": "workspace:*"
+    "@app/main-logo": "workspace:*",
+    "@app/notifications-modal": "workspace:*",
+    "@app/organizations-modal": "workspace:*",
+    "@app/theme-selector": "workspace:*",
+    "@app/user-badge": "workspace:*",
+    "@app/users-modal": "workspace:*",
+    "@app/users-title": "workspace:*"
   }
 }

@@ -12,6 +12,7 @@ import { useHover }          from '@ui/utils'
 
 import { ButtonProps }       from './button.interfaces'
 import { IconAttachment }    from './icon-attachment'
+import { ButtonShadow }       from './styles/shadow'
 import { baseStyles }        from './button.styles'
 import { shapeStyles }       from './button.styles'
 import { contentStyles }     from './button.styles'
@@ -23,7 +24,8 @@ export const ButtonElement = styled('button')<any>(
   contentStyles,
   shapeStyles,
   appearanceStyles,
-  fillStyles
+  fillStyles,
+  ButtonShadow
 )
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((

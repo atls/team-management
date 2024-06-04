@@ -30,6 +30,14 @@ const smallRoundedPadding = createShapeStyles({
   paddingRight: prop('theme.spaces.micro') as unknown as number,
 })
 
+const microRoundedPadding = createShapeStyles({
+  size: prop('theme.spaces.largest') as unknown as number,
+  rounding: prop('theme.radii.f12') as unknown as number,
+  paddingLeft: prop('theme.spaces.micro') as unknown as number,
+  paddingRight: prop('theme.spaces.micro') as unknown as number,
+  paddingRatio: 12,
+})
+
 export const baseStyles = getBaseStyles()
 export const contentStyles = createContentStyles()
 
@@ -37,4 +45,5 @@ export const shapeStyles = switchProp(prop('size', 'normal'), {
   middlingRoundedPadding,
   smallRoundedPadding,
   bigRoundedPadding,
+  microRoundedPadding,
 })

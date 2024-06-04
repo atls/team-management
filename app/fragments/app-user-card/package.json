@@ -14,7 +14,6 @@
     "@ui/layout": "workspace:*",
     "@ui/progress": "workspace:*",
     "@ui/scroll": "workspace:*",
-    "@ui/switch": "workspace:*",
     "@ui/tag": "workspace:*",
     "@ui/text": "workspace:0.0.1"
   },

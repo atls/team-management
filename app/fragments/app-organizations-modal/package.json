@@ -1,0 +1,25 @@
+{
+  "name": "@app/organizations-modal",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@types/react": "^18.3.2"
+  },
+  "dependencies": {
+    "@app/animated-card": "workspace:*",
+    "@ui/button": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/modal": "workspace:*",
+    "@ui/text": "workspace:0.0.1",
+    "framer-motion": "10.16.1"
+  }
+}
