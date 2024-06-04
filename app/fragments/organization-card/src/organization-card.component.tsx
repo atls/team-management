@@ -1,7 +1,10 @@
-import styled                    from '@emotion/styled'
+import { useTheme }              from '@emotion/react'
 
 import React                     from 'react'
 import { FC }                    from 'react'
+import { FormattedPlural }       from 'react-intl'
+import { memo }                  from 'react'
+import { useIntl }               from 'react-intl'
 
 import { Button }                from '@ui/button'
 import { TeamIcon }              from '@ui/icons'
@@ -11,74 +14,80 @@ import { Row }                   from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Box }                   from '@ui/layout'
 import { Text }                  from '@ui/text'
+import { Space }                 from '@ui/text'
 
 import { OrganizationCardProps } from './organization-card.interfaces'
-import { appearanceStyles }      from './organization-card.styles'
-import { shapeStyles }           from './organization-card.styles'
-import { baseContentStyles }     from './organization-card.styles'
-import { shapeContentStyles }    from './organization-card.styles'
-
-const OrganizationCardWrapper = styled(Row)(appearanceStyles, shapeStyles)
-
-const OrganizationCardContentContainer = styled(Column)(baseContentStyles, shapeContentStyles)
 
 const Members: FC<any> = ({ quantity }) => {
-  let memberString: string
-  if (quantity === 1) memberString = 'member'
-  else memberString = 'members'
-
+  const { formatMessage } = useIntl()
   return (
     <>
       <TeamIcon color='white' />
       <Text fontSize='small.default' color='white'>
-        {quantity} {memberString}
+        {quantity}
+        <Space />
+        <FormattedPlural
+          value={quantity}
+          one={formatMessage({ id: 'organization-card_member.one' })}
+          other={formatMessage({ id: 'organization-card_member.many' })}
+        />
       </Text>
     </>
   )
 }
 
-export const OrganizationCard: FC<OrganizationCardProps> = ({
+export const OrganizationCard: FC<OrganizationCardProps> = memo(({
   title,
   description,
   membersQuantity,
   organizationCoverSrc,
-}) => (
-  <OrganizationCardWrapper>
-    <Box minWidth={150}>
-      <ImageBlock src={organizationCoverSrc} />
-    </Box>
-    <OrganizationCardContentContainer>
-      <Column gap={3}>
-        <Text fontSize='normal.semiDefault' color='white'>
-          {title}
-        </Text>
-        {description && (
-          <Text fontSize='small.default' color='white'>
-            {description}
-          </Text>
-        )}
-        <Row gap={3} alignItems='center'>
-          <Members quantity={membersQuantity} />
-        </Row>
-      </Column>
-      <Row gap={12} justifyContent='end'>
-        <Button
-          shape='circle'
-          size='middlingRoundedPadding'
-          // style={{ boxShadow: theme.shadows.black }}
-          variant='blueBackgroundButton'
-        >
-          <TeamIcon color='white' width={18} height={18} />
-        </Button>
-        <Button
-          shape='circle'
-          size='middlingRoundedPadding'
-          // style={{ boxShadow: theme.shadows.black }}
-          variant='blueBackgroundButton'
-        >
-          <AddIcon color='white' width={18} height={18} />
-        </Button>
+}) => {
+  const theme: any = useTheme()
+
+  return (
+    <Box
+      overflow='hidden'
+      height={theme.spaces.superBiggest}
+      borderRadius={theme.radii.f10}
+      background={theme.backgrounds.darkBlueGradient}
+      boxShadow={theme.shadows.diesel}
+    >
+      <Row>
+        <Box minWidth={theme.spaces.superBiggest}>
+          <ImageBlock src={organizationCoverSrc} />
+        </Box>
+        <Column padding={theme.spaces.v14h12} width='100%'>
+          <Column gap={theme.spaces.semiTiny}>
+            <Text fontSize='normal.semiDefault' color='white'>
+              {title}
+            </Text>
+            {description && (
+              <Text fontSize='small.default' color='white'>
+                {description}
+              </Text>
+            )}
+            <Row gap={theme.spaces.semiTiny} alignItems='center'>
+              <Members quantity={12} />
+            </Row>
+          </Column>
+          <Row gap={theme.spaces.micro} justifyContent='end'>
+            <Button shape='circle' size='middlingRoundedPadding' variant='blueBackgroundButton'>
+              <TeamIcon
+                color='white'
+                width={theme.spaces.semiRegular}
+                height={theme.spaces.semiRegular}
+              />
+            </Button>
+            <Button shape='circle' size='middlingRoundedPadding' variant='blueBackgroundButton'>
+              <AddIcon
+                color='white'
+                width={theme.spaces.semiRegular}
+                height={theme.spaces.semiRegular}
+              />
+            </Button>
+          </Row>
+        </Column>
       </Row>
-    </OrganizationCardContentContainer>
-  </OrganizationCardWrapper>
-)
+    </Box>
+  )
+})
