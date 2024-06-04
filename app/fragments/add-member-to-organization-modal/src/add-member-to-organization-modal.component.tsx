@@ -4,6 +4,7 @@ import React                                 from 'react'
 import { FC }                                from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
+import { useCallback }                       from 'react'
 
 import { Button }                            from '@ui/button'
 import { SelectInput }                       from '@ui/input'
@@ -22,11 +23,11 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const [checkedSwitches, setCheckedSwitches] = useState([])
   const [selectedUsers, setSelectedUsers] = useState([])
 
-  const handlerSwitch = (e, category) => {
-    if (checkedSwitches.includes(category)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c != category))
+  const handlerSwitch = (e: Event, category: string) => {
+    if (checkedSwitches.includes(category as never)) {
+      setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
     } else {
-      setCheckedSwitches(checkedSwitches.concat([category]))
+      setCheckedSwitches(checkedSwitches.concat([category as never]))
     }
   }
 
@@ -34,6 +35,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     if (selectedUsers.length && checkedSwitches.length) setButtonActive(true)
     else setButtonActive(false)
   }, [selectedUsers, checkedSwitches])
+
+  const setSelectedUsersCallback = useCallback(() => {
+    setSelectedUsers(selectedUsers)
+  }, [selectedUsers])
 
   const testUsersData = [
     {
@@ -63,7 +68,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         <SelectInput
           placeholder='Team member'
           searchItems={testUsersData}
-          parentHook={setSelectedUsers}
+          parentHook={setSelectedUsersCallback}
         />
         <Row
           flexDirection='row'

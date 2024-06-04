@@ -25,18 +25,18 @@ const SuggestedItemBox = styled(Box)(
 )
 
 export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
-  const { id, primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
+  const { primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
 
   const theme: any = useTheme()
 
-  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
-  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext)
-  const inputValueDispatch = useContext(InputValueDispatchContext)
+  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext) as any
+  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext) as any
+  const inputValueDispatch = useContext(InputValueDispatchContext) as any
 
-  function handleAddSelectedItem(e, suggestedItemData) {
+  function handleAddSelectedItem(e, itemData) {
     selectedItemsDispatch({
       type: 'added',
-      itemData: suggestedItemData,
+      itemData,
     })
     suggestedItemsDispatch({
       type: 'clean',

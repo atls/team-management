@@ -1,26 +1,31 @@
-import React               from 'react'
-import { FC }              from 'react'
-import { useState }        from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { useState }                 from 'react'
 
-import { BaseInput }       from '@ui/input'
+import { BaseInput }                from '@ui/input'
 
-import { checkValidEmail } from './check-valid-email.utils'
+import { AddMemberModalInputProps } from './input.interfaces'
+import { checkValidEmail }          from './check-valid-email.utils'
 
-export const AddMemberModalInput: FC = ({ inputIndex, updateInputValuesHook, ...props }) => {
+export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
+  inputIndex,
+  updateInputValuesHook,
+  ...props
+}) => {
   const INPUT_PROPS = {
     placeholder: 'me@torinasakura.name',
   }
 
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorText, setErrorText] = useState('')
 
   const handleInputChange = (e) => {
     const inputValueString = e.target.value
 
     if (inputValueString) {
       const isEmailValid = checkValidEmail(inputValueString)
-      if (!isEmailValid) setErrorMessage('Введите правильный E-mail')
-      else setErrorMessage('')
-    } else setErrorMessage('')
+      if (!isEmailValid) setErrorText('Введите правильный E-mail')
+      else setErrorText('')
+    } else setErrorText('')
 
     updateInputValuesHook(inputIndex, inputValueString)
   }
@@ -32,7 +37,7 @@ export const AddMemberModalInput: FC = ({ inputIndex, updateInputValuesHook, ...
   return (
     <BaseInput
       {...INPUT_PROPS}
-      errorMessage={errorMessage}
+      errorText={errorText}
       onChangeNative={handleInputChange}
       deleteHook={!!inputIndex && handleInputDelete}
     />

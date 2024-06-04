@@ -14,7 +14,7 @@ import { baseDeleteButtonStyles } from './delete-button.styles'
 const DeleteButtonContainer = styled(Box)<BoxProps>(baseDeleteButtonStyles)
 
 export const DeleteButton: FC<DeleteButtonProps> = ({ deleteHook }) => (
-  <Condition match={deleteHook}>
+  <Condition match={Boolean(deleteHook)}>
     <DeleteButtonContainer onClick={deleteHook}>
       <RemoveIcon />
     </DeleteButtonContainer>

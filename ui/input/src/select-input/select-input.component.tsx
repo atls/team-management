@@ -1,13 +1,11 @@
 import styled                            from '@emotion/styled'
 import { RawInput }                      from '@atls-ui-parts/input'
-import { useChangeValue }                from '@atls-ui-parts/input'
 import { useTheme }                      from '@emotion/react'
 
 import React                             from 'react'
 import { ForwardRefRenderFunction }      from 'react'
 import { useReducer }                    from 'react'
 import { forwardRef }                    from 'react'
-import { useState }                      from 'react'
 import { useRef }                        from 'react'
 import { useEffect }                     from 'react'
 import { useLayer }                      from 'react-laag'
@@ -16,7 +14,7 @@ import { Box }                           from '@ui/layout'
 
 import { InputValueContext }             from './select-input.context'
 import { InputValueDispatchContext }     from './select-input.context'
-import { InputProps }                    from './select-input.interfaces'
+import { SelectInputProps }              from './select-input.interfaces'
 import { SelectedItemsDispatchContext }  from './selected-items'
 import { SelectedItems }                 from './selected-items'
 import { SelectedItemsContext }          from './selected-items'
@@ -33,7 +31,6 @@ const InputBox = styled(Box)(shapeStyles, appearanceStyles)
 
 const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputProps> = ({
   value,
-  disabled,
   onChange,
   onChangeNative,
   errorText,
@@ -42,14 +39,16 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   ...props
 }) => {
   const theme: any = useTheme()
-  const inputRef = useRef(null)
-  const changeValue = useChangeValue(disabled, onChange, onChangeNative)
+  const inputRef = useRef(null) as any
 
   const [selectedItems, selectedItemsDispatch] = useReducer(selectedItemsReducer, [])
   const [suggestedItems, suggestedItemsDispatch] = useReducer(suggestedItemsReducer, [])
   const [inputValue, inputValueDispatch] = useReducer(inputValueReducer, '')
 
-  const handlerClickContainer = () => inputRef.current.focus()
+  const handlerClickContainer = () => {
+    if (inputRef?.current) inputRef.current.focus()
+    return undefined
+  }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
     isOpen: suggestedItems.length,
@@ -76,6 +75,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
 
         if (compare(compareString) && !selectedItems.some((item) => item.id === id))
           return searchItem
+        return undefined
       })
 
       suggestedItemsDispatch({
@@ -91,7 +91,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
 
   useEffect(() => {
     parentHook(selectedItems)
-  }, [selectedItems])
+  }, [parentHook, selectedItems])
 
   return (
     <SuggestedItemsContext.Provider value={suggestedItems}>
@@ -111,7 +111,6 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
                     <RawInput
                       ref={inputRef}
                       {...props}
-                      disabled={disabled}
                       value={inputValue}
                       onChange={handleInputChange}
                     />
@@ -131,4 +130,4 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   )
 }
 
-export const SelectInput = forwardRef<HTMLInputElement, InputProps>(InputWithoutRef)
+export const SelectInput = forwardRef<HTMLInputElement, SelectInputProps>(InputWithoutRef)

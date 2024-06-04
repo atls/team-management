@@ -4,6 +4,8 @@ import { Box as BaseBox }       from '@atls-ui-parts/layout'
 
 import { flexStyles }           from './flex/flex.styles'
 
+export { BoxProps } from '@atls-ui-parts/layout'
+
 export const Box = styled(BaseBox)(flexStyles)
 export const Layout = styled(BaseLayout)(flexStyles)
 

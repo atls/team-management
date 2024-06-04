@@ -27,10 +27,10 @@ export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
   const theme: any = useTheme()
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
 
-  function handleDeleteSelectedItem(e, selectedItemData) {
+  function handleDeleteSelectedItem(e, itemData) {
     selectedItemsDispatch({
       type: 'deleted',
-      itemData: selectedItemData,
+      itemData,
     })
   }
 

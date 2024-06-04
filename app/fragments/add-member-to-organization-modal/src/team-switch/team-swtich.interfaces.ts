@@ -1,4 +1,4 @@
 export interface TeamSwitchProps {
   teamName: string
-  onChange: VoidFunction
+  onChange: (e: any) => void
 }

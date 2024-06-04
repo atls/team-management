@@ -5,13 +5,11 @@ import { useChangeValue }           from '@atls-ui-parts/input'
 import React                        from 'react'
 import { ForwardRefRenderFunction } from 'react'
 import { forwardRef }               from 'react'
-import { useState }                 from 'react'
 
-import { Condition }                from '@ui/condition'
 import { Box }                      from '@ui/layout'
 
-import { InputProps }               from './base-input.interfaces'
-import { InputContainerProps }      from './base-input.interfaces'
+import { BaseInputProps }           from './base-input.interfaces'
+import { BaseInputBoxProps }        from './base-input.interfaces'
 import { DeleteButton }             from './delete-button'
 import { ErrorMessage }             from './error-message'
 import { shapeStyles }              from '../input.styles'
@@ -20,22 +18,18 @@ import { appearanceStyles }         from '../input.styles'
 const BaseInputBox = styled(Box)<BaseInputBoxProps>(shapeStyles, appearanceStyles)
 
 const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, BaseInputProps> = (
-  { value, disabled, onChange, onChangeNative, deleteHook, errorMessage, ...props },
+  { value, disabled, onChange, onChangeNative, deleteHook, errorText, ...props },
   ref
 ) => {
   const changeValue = useChangeValue(disabled, onChange, onChangeNative)
 
-  const [visibleInputState, setVisibleInputState] = useState(true)
-
   return (
-    <Condition match={visibleInputState}>
-      <BaseInputBox {...props} position='relative'>
-        <ErrorMessage messageText={errorMessage} />
-        <RawInput ref={ref} {...props} disabled={disabled} value={value} onChange={changeValue} />
-        <DeleteButton deleteHook={deleteHook} />
-      </BaseInputBox>
-    </Condition>
+    <BaseInputBox {...props} position='relative'>
+      <ErrorMessage messageText={errorText} />
+      <RawInput ref={ref} {...props} disabled={disabled} value={value} onChange={changeValue} />
+      <DeleteButton deleteHook={deleteHook} />
+    </BaseInputBox>
   )
 }
 
-export const BaseInput = forwardRef<HTMLInputElement, InputProps>(InputWithoutRef)
+export const BaseInput = forwardRef<HTMLInputElement, BaseInputProps>(InputWithoutRef)

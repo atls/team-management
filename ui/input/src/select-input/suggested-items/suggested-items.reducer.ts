@@ -7,7 +7,7 @@ export function suggestedItemsReducer(suggestedItems, action) {
       return []
     }
     default: {
-      throw new Error('Unknown action: ' + action.type)
+      throw new Error(`Unknown action: ${action.type}`)
     }
   }
 }

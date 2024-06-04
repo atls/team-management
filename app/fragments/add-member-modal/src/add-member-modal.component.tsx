@@ -1,24 +1,24 @@
-import { useTheme }            from '@emotion/react'
+import { useTheme }             from '@emotion/react'
 
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useState }            from 'react'
-import { useEffect }           from 'react'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { useState }             from 'react'
+import { useEffect }            from 'react'
 
-import { Button }              from '@ui/button'
-import { AddIcon }             from '@ui/icons'
-import { GitHubIcon }          from '@ui/icons'
-import { FigmaIcon }           from '@ui/icons'
-import { DiscordIcon }         from '@ui/icons'
-import { TelegramIcon }        from '@ui/icons'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Modal }               from '@ui/modal'
-import { IconSwitch }          from '@ui/switch'
-import { Text }                from '@ui/text'
+import { Button }               from '@ui/button'
+import { AddIcon }              from '@ui/icons'
+import { GitHubIcon }           from '@ui/icons'
+import { FigmaIcon }            from '@ui/icons'
+import { DiscordIcon }          from '@ui/icons'
+import { TelegramIcon }         from '@ui/icons'
+import { Row }                  from '@ui/layout'
+import { Column }               from '@ui/layout'
+import { Modal }                from '@ui/modal'
+import { IconSwitch }           from '@ui/switch'
+import { Text }                 from '@ui/text'
 
-import { AddMemberModalInput } from './input'
-import { checkValidEmail }     from './input/check-valid-email.utils'
+import { TeamMemberModalProps } from './add-member-modal.interfaces'
+import { AddMemberModalInput }  from './input'
 
 export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
   const theme: any = useTheme()
@@ -35,7 +35,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
 
   const updateInputValuesHook = (inputIndex, value) => {
     if (value == null && inputIndex) {
-      const newInputValues = inputValues.filter((input, index) => index != inputIndex)
+      const newInputValues = inputValues.filter((input, index) => index !== inputIndex)
       setInputValues(newInputValues)
     } else {
       const newInputValues = inputValues
@@ -44,11 +44,11 @@ export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
     }
   }
 
-  const handlerSwitch = (e, category) => {
-    if (checkedSwitches.includes(category)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c != category))
+  const handlerSwitch = (e, category: string) => {
+    if (checkedSwitches.includes(category as never)) {
+      setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
     } else {
-      setCheckedSwitches(checkedSwitches.concat([category]))
+      setCheckedSwitches(checkedSwitches.concat([category as never]))
     }
   }
 

@@ -1,5 +1,7 @@
-import { InputProps as BaseInputProps } from '@atls-ui-parts/input'
-import { BoxProps }                     from '@atls-ui-parts/layout'
+import { Dispatch }                     from 'react'
+import { SetStateAction }               from 'react'
+
+import { InputProps as BaseInputProps } from '@ui/input'
 
 interface SearchItemProps {
   id: number
@@ -9,7 +11,10 @@ interface SearchItemProps {
 }
 
 export interface SelectInputProps extends BaseInputProps {
+  value?: string
   searchItems: Array<SearchItemProps>
-  parentHook: VoidFunction
+  parentHook: Dispatch<SetStateAction<never[]>>
+  onChange?: VoidFunction
+  onChangeNative?: VoidFunction
   errorText?: string
 }

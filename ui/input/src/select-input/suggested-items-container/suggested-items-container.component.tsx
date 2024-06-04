@@ -24,7 +24,7 @@ export const SuggestedItemsContainer: FC<SuggestedItemsContainerProps> = ({
   width,
   layerProps,
 }) => (
-  <Condition match={suggestedItems.length}>
+  <Condition match={!!suggestedItems.length}>
     {renderLayer(
       <SuggestedItemsContainerBox width={width} {...layerProps}>
         {suggestedItems.map((suggestedItemData) => (
