@@ -9,4 +9,5 @@ import { flexStyles }           from './flex.styles'
 export const Row = styled(BaseRow)<FlexProps>(flexStyles)
 
 export const Column = styled(BaseColumn)<FlexProps>(flexStyles)
+
 export { BoxProps }
