@@ -4,7 +4,7 @@ import { CSSProperties } from 'react'
 import { JSX }           from 'react'
 
 export interface GridAutoRowsProps extends BoxProps {
-  color?: any
+  color?: CSSProperties['color']
   children: JSX.Element
   gap?: CSSProperties['gap']
   maxColumnWidth: number
