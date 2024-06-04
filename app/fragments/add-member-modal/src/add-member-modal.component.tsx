@@ -1,31 +1,32 @@
-import { useTheme }             from '@emotion/react'
+import { useTheme }                 from '@emotion/react'
 
-import React                    from 'react'
-import { FC }                   from 'react'
-import { useState }             from 'react'
-import { useEffect }            from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { memo }                     from 'react'
+import { useState }                 from 'react'
+import { useIntl }                  from 'react-intl'
 
-import { Button }               from '@ui/button'
-import { AddIcon }              from '@ui/icons'
-import { GitHubIcon }           from '@ui/icons'
-import { FigmaIcon }            from '@ui/icons'
-import { DiscordIcon }          from '@ui/icons'
-import { TelegramIcon }         from '@ui/icons'
-import { Row }                  from '@ui/layout'
-import { Column }               from '@ui/layout'
-import { Modal }                from '@ui/modal'
-import { IconSwitch }           from '@ui/switch'
-import { Text }                 from '@ui/text'
+import { Button }                   from '@ui/button'
+import { AddIcon }                  from '@ui/icons'
+import { GitHubIcon }               from '@ui/icons'
+import { FigmaIcon }                from '@ui/icons'
+import { DiscordIcon }              from '@ui/icons'
+import { TelegramIcon }             from '@ui/icons'
+import { Row }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Modal }                    from '@ui/modal'
+import { IconSwitch }               from '@ui/switch'
+import { Text }                     from '@ui/text'
 
-import { TeamMemberModalProps } from './add-member-modal.interfaces'
-import { AddMemberModalInput }  from './input'
+import { TeamMemberModalProps }     from './add-member-modal.interfaces'
+import { AddMemberModalInput }      from './input'
+import { useUpdateInputValuesHook } from './update-input-values.hook'
+import { useButtonActiveHook }      from './use-button-active.hook'
 
-export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
+export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   const theme: any = useTheme()
 
-  const [isButtonActive, setButtonActive] = useState(false)
-  const [checkedSwitches, setCheckedSwitches] = useState([])
-  const [inputValues, setInputValues] = useState([''])
+  const { formatMessage } = useIntl()
 
   const ICON_PROPS = {
     width: theme.spaces.large,
@@ -33,18 +34,14 @@ export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
     color: 'none',
   }
 
-  const updateInputValuesHook = (inputIndex, value) => {
-    if (value == null && inputIndex) {
-      const newInputValues = inputValues.filter((input, index) => index !== inputIndex)
-      setInputValues(newInputValues)
-    } else {
-      const newInputValues = inputValues
-      newInputValues[inputIndex] = value
-      setInputValues(newInputValues)
-    }
-  }
+  const [isButtonActive, setButtonActive] = useState(false)
+  const [checkedSwitches, setCheckedSwitches] = useState([])
+  const [inputValues, setInputValues] = useState([''])
 
-  const handlerSwitch = (e, category: string) => {
+  useButtonActiveHook(checkedSwitches, setButtonActive)
+  const updateInputValuesHook = useUpdateInputValuesHook(inputValues, setInputValues)
+
+  const handlerSwitch = (e, category: string): void => {
     if (checkedSwitches.includes(category as never)) {
       setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
     } else {
@@ -52,19 +49,14 @@ export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
     }
   }
 
-  useEffect(() => {
-    if (checkedSwitches.length) setButtonActive(true)
-    else setButtonActive(false)
-  }, [checkedSwitches])
-
-  const handleAddInputClick = () => {
+  const handleAddInputClick = (): void => {
     setInputValues(inputValues.concat(''))
   }
 
   return (
     <Modal open={open} padding={theme.spaces.increased}>
       <Column gap={theme.spaces.moderate}>
-        <Text fontSize='normal.increased'>Добавление участника команды</Text>
+        <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
         {inputValues.map((inputValue, index) => (
           <AddMemberModalInput inputIndex={index} updateInputValuesHook={updateInputValuesHook} />
         ))}
@@ -100,11 +92,11 @@ export const AddMemberModal: FC<TeamMemberModalProps> = ({ open }) => {
             size='middlingRoundedPadding'
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal'>
-              Пригласить
+              {formatMessage({ id: 'add-member-modal.invite' })}
             </Text>
           </Button>
         </Row>
       </Column>
     </Modal>
   )
-}
+})

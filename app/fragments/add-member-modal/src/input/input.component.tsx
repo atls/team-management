@@ -1,17 +1,20 @@
 import React                        from 'react'
 import { FC }                       from 'react'
 import { useState }                 from 'react'
+import { useIntl }                  from 'react-intl'
 
 import { BaseInput }                from '@ui/input'
+import { emailValidator }           from '@ui/utils'
 
 import { AddMemberModalInputProps } from './input.interfaces'
-import { checkValidEmail }          from './check-valid-email.utils'
 
 export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputIndex,
   updateInputValuesHook,
   ...props
 }) => {
+  const { formatMessage } = useIntl()
+
   const INPUT_PROPS = {
     placeholder: 'me@torinasakura.name',
   }
@@ -22,15 +25,15 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
     const inputValueString = e.target.value
 
     if (inputValueString) {
-      const isEmailValid = checkValidEmail(inputValueString)
-      if (!isEmailValid) setErrorText('Введите правильный E-mail')
+      const isEmailValid = emailValidator(inputValueString)
+      if (!isEmailValid) setErrorText(formatMessage({ id: 'add-member-modal_input.invalid-email' }))
       else setErrorText('')
     } else setErrorText('')
 
     updateInputValuesHook(inputIndex, inputValueString)
   }
 
-  const handleInputDelete = () => {
+  const handleInputDelete = (): void => {
     updateInputValuesHook(inputIndex, null)
   }
 

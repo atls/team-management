@@ -2,9 +2,10 @@ import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
 import { FC }                                from 'react'
+import { memo }                              from 'react'
 import { useState }                          from 'react'
-import { useEffect }                         from 'react'
 import { useCallback }                       from 'react'
+import { useIntl }                           from 'react-intl'
 
 import { Button }                            from '@ui/button'
 import { SelectInput }                       from '@ui/input'
@@ -15,9 +16,13 @@ import { Text }                              from '@ui/text'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces'
 import { TeamSwitch }                        from './team-switch'
+import { useButtonActiveHook }               from './use-button-active.hook'
 
-export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = ({ open }) => {
+export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
+  open,
+}) => {
   const theme: any = useTheme()
+  const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState(false)
   const [checkedSwitches, setCheckedSwitches] = useState([])
@@ -31,14 +36,11 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
-  useEffect(() => {
-    if (selectedUsers.length && checkedSwitches.length) setButtonActive(true)
-    else setButtonActive(false)
-  }, [selectedUsers, checkedSwitches])
+  const setSelectedUsersCallback = useCallback((item) => {
+    setSelectedUsers(item)
+  }, [])
 
-  const setSelectedUsersCallback = useCallback(() => {
-    setSelectedUsers(selectedUsers)
-  }, [selectedUsers])
+  useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
   const testUsersData = [
     {
@@ -63,10 +65,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     <Modal open={open} width={theme.spaces.superPuperExtra}>
       <Column flexDirection='column' gap={theme.spaces.large}>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
-          Добавить сотрудника в организацию
+          {formatMessage({ id: 'add-member-to-organization-modal.header' })}
         </Text>
         <SelectInput
-          placeholder='Team member'
+          placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
           searchItems={testUsersData}
           parentHook={setSelectedUsersCallback}
         />
@@ -100,4 +102,4 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
       </Column>
     </Modal>
   )
-}
+})
