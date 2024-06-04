@@ -5,17 +5,11 @@ export interface OrganizationsModalProps {
   img: string
 }
 export interface OrganizationsModalTheme extends Theme {
-  space?: {
-    largeSemiDefault: number
-    miniReduced: number
-    mediumSemiDefault: number
-    miniIncreased: number
-    largeSemiNormalIncreased: number
-    medium: number
-    nano: number
+  spaces?: {
+    largeDefaultIncreased: number
+    micro: number
+    superBiggest: number
+    large: number
+    superExtraIncreased: number
   }
-  colors?: {
-    white: string
-  }
-  backgrounds?: { gray: string }
 }

@@ -16,15 +16,15 @@ const UserBadge: FC<UserBadgeProps> = ({ avatar, name, email }) => {
   const theme: UserBadgeTheme = useTheme()
   return (
     <Card
-      height={theme.space?.medium}
-      width={theme.space?.largeSemiNormalIncreased}
-      borderRadius={theme.space?.miniIncreased}
+      height={theme.spaces?.medium}
+      width={theme.spaces?.largeSemiNormalIncreased}
+      borderRadius={theme.spaces?.miniIncreased}
       backgroundColor={theme.colors?.white}
       alignItems='center'
     >
-      <Row alignItems='center' margin={theme.space?.miniReduced} justifyContent='space-between'>
+      <Row alignItems='center' margin={theme.spaces?.miniReduced} justifyContent='space-between'>
         <Avatar
-          size={theme.space?.mediumSemiDefault}
+          size={theme.spaces?.mediumSemiDefault}
           image
           notification={false}
           src={avatar}

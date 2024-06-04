@@ -14,7 +14,7 @@ import { Text }              from '@ui/text'
 import { AnimatedCardProps } from './animated-card.interfaces'
 import { AnimatedCardTheme } from './animated-card.interfaces'
 
-const AnimatedCard: FC<AnimatedCardProps> = ({ img }) => {
+const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
   const theme: AnimatedCardTheme = useTheme()
   const [openMenu, setOpenMenu] = React.useState<boolean>(false)
   const handleDelete = () => {
@@ -44,7 +44,7 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img }) => {
               <ImageBlock src={img} borderRadius={theme.spaces?.miniReduced} />
             </Box>
             <Text fontSize='normal.semiDefault' marginLeft={theme.spaces?.tiny}>
-              Atls
+              {organization ? organization : 'Atls'}
             </Text>
           </Box>
           <RemoveIcon onClick={handleDelete} />

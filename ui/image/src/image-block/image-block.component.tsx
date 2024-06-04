@@ -7,14 +7,15 @@ import { PropsWithChildren }          from 'react'
 import { ContainerProps }             from './image-block.interfaces'
 import { createBaseImageBlockStyles } from './image-block.styles'
 
-export const Image = styled.img<ContainerProps>(createBaseImageBlockStyles())
+const Image = styled.img<ContainerProps>(createBaseImageBlockStyles())
 
 export const ImageBlock: FC<PropsWithChildren<ContainerProps>> = ({
   children,
   borderRadius,
   src,
+  alt,
 }) => (
-  <Image borderRadius={borderRadius} src={src}>
+  <Image borderRadius={borderRadius} src={src} alt={alt}>
     {children}
   </Image>
 )

@@ -28,8 +28,8 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
   const theme: UserCardTheme = useTheme()
   return (
     <Card
-      width={theme.space?.largeSemiIncreased}
-      height={theme.space?.largeIncreased}
+      width={theme.spaces?.largeSemiIncreased}
+      height={theme.spaces?.largeIncreased}
       boxShadow={theme.shadows?.nero}
       borderRadius={theme.radii?.f24}
       alignItems='flex-start'
@@ -37,27 +37,27 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
       <Column>
         <Column
           position='relative'
-          width={theme.space?.largeSemiIncreased}
-          height={theme.space?.largeDefault}
+          width={theme.spaces?.largeSemiIncreased}
+          height={theme.spaces?.largeDefault}
         >
           <ImageBlock
             src={avatar ? avatar : '/profile.png'}
+            borderRadius={theme.radii?.tl24tr24}
             alt='avatar'
-            style={{ borderRadius: theme.radii?.tl24tr24 }}
           />
           <Column
             position='absolute'
-            marginTop={theme.space?.largeSemiDecreased}
+            marginTop={theme.spaces?.largeSemiDecreased}
             alignItems='flex-start'
-            width={theme.space?.full}
-            height={theme.space?.full}
+            width={theme.spaces?.full}
+            height={theme.spaces?.full}
             margin='auto'
-            padding={theme.space?.t241rl12b12}
+            padding={theme.spaces?.t241rl12b12}
           >
             <Column
               alignItems='flex-start'
-              padding={theme.space?.miniIncreased}
-              width={theme.space?.full}
+              padding={theme.spaces?.miniIncreased}
+              width={theme.spaces?.full}
             >
               <Text color={theme.colors?.white} fontSize='medium.semiDefault'>
                 {name ? name : 'Gay Hawkins'}
@@ -68,31 +68,31 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
             </Column>
             <Row
               justifyContent='space-between'
-              width={theme.space?.full}
-              padding={theme.space?.t0rbl12}
+              width={theme.spaces?.full}
+              padding={theme.spaces?.t0rbl12}
             >
               <Tag
-                height={theme.space?.mediumReduced}
-                width={theme.space?.mediumSemiIncreased}
+                height={theme.spaces?.mediumReduced}
+                width={theme.spaces?.mediumSemiIncreased}
                 backgroundColor={theme.backgrounds?.darkGray}
                 borderRadius={theme.radii?.f7}
                 color={theme.colors?.white}
               >
-                <Text margin={theme.space?.t0r6lb0} color={theme.colors?.white}>
+                <Text margin={theme.spaces?.t0r6lb0} color={theme.colors?.white}>
                   {organizations ? organizations : '6'}
                 </Text>
-                <OrgWhiteIcon width={theme.space?.micro} />
+                <OrgWhiteIcon width={theme.spaces?.micro} />
               </Tag>
               <Tag
-                padding={theme.space?.miniReduced}
-                height={theme.space?.mediumReduced}
-                width={theme.space?.largeReduced}
+                padding={theme.spaces?.miniReduced}
+                height={theme.spaces?.mediumReduced}
+                width={theme.spaces?.largeReduced}
                 backgroundColor={theme.backgrounds?.white}
                 borderRadius={theme.radii?.f19}
               >
                 <TimerIcon
-                  width={theme.space?.normalDefault}
-                  height={theme.space?.normalIncreased}
+                  width={theme.spaces?.normalDefault}
+                  height={theme.spaces?.normalIncreased}
                 />
                 <Text fontSize='small.semiLarge' color={theme.colors?.GRAY_1600}>
                   {time ? time : '10:10:33'}
@@ -105,11 +105,11 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
           <Line
             percent={20}
             strokeColor={[{ direction: 'to left', from: '#005ACF', to: '#D2DAFF' }]}
-            strokeWeight={theme.space?.normalIncreased}
+            strokeWeight={theme.spaces?.normalIncreased}
             trailColor={theme.colors?.BLUE_0}
           />
           <Text
-            margin={theme.space?.t2l0b23r0}
+            margin={theme.spaces?.t2l0b23r0}
             style={{ position: 'absolute' }}
             fontSize='small.default'
             color={theme.colors?.white}
@@ -119,102 +119,31 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
         </Row>
 
         <Scroll>
-          <Box maxHeight={theme.space?.largeSemiNormal}>
+          <Box maxHeight={theme.spaces?.largeSemiNormal}>
             <Column
-              width={theme.space?.full}
-              flexBasis={theme.space?.fullHalfReduced}
-              margin={theme.space?.t8r2b6l12}
+              width={theme.spaces?.full}
+              flexBasis={theme.spaces?.fullHalfReduced}
+              margin={theme.spaces?.t8r2b6l12}
             >
               <Column
-                maxWidth={theme.space?.largeSemi}
-                padding={theme.space?.t1r5b2l5}
-                maxHeight={theme.space?.mediumSemiReduced}
+                maxWidth={theme.spaces?.largeSemi}
+                padding={theme.spaces?.t1r5b2l5}
+                maxHeight={theme.spaces?.mediumSemiReduced}
               >
                 <Checkbox labelPosition='start' checked={true}>
                   <Row marginRight='auto'>
                     <GitHubIcon
-                      width={theme.space?.normalReduced}
-                      height={theme.space?.normalReduced}
+                      width={theme.spaces?.normalReduced}
+                      height={theme.spaces?.normalReduced}
                     />
-                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                    <Text fontSize='small.default' margin={theme.spaces?.tlb0r11}>
                       Git
                     </Text>
                   </Row>
                 </Checkbox>
-                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                <Box padding={theme.spaces?.tb3rl0} marginTop={theme.spaces?.nanoIncreased}>
                   <Divider
-                    weight={theme.space?.nano}
-                    backgroundColor={theme.backgrounds?.lightGray}
-                  />
-                </Box>
-              </Column>
-
-              <Column
-                maxWidth={theme.space?.largeSemi}
-                padding={theme.space?.t1r5b2l5}
-                maxHeight={theme.space?.mediumSemiReduced}
-              >
-                <Checkbox labelPosition='start' checked={true}>
-                  <Row marginRight='auto'>
-                    <DiscordIcon
-                      width={theme.space?.normalReduced}
-                      height={theme.space?.normalReduced}
-                    />
-                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
-                      Discord
-                    </Text>
-                  </Row>
-                </Checkbox>
-                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
-                  <Divider
-                    weight={theme.space?.nano}
-                    backgroundColor={theme.backgrounds?.lightGray}
-                  />
-                </Box>
-              </Column>
-
-              <Column
-                maxWidth={theme.space?.largeSemi}
-                padding={theme.space?.t1r5b2l5}
-                maxHeight={theme.space?.mediumSemiReduced}
-              >
-                <Checkbox labelPosition='start' checked={true}>
-                  <Row marginRight='auto'>
-                    <TelegramIcon
-                      width={theme.space?.normalReduced}
-                      height={theme.space?.normalReduced}
-                    />
-                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
-                      Telegram
-                    </Text>
-                  </Row>
-                </Checkbox>
-                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
-                  <Divider
-                    weight={theme.space?.nano}
-                    backgroundColor={theme.backgrounds?.lightGray}
-                  />
-                </Box>
-              </Column>
-              <Column
-                maxWidth={theme.space?.largeSemi}
-                padding={theme.space?.t1r5b2l5}
-                maxHeight={theme.space?.mediumSemiReduced}
-              >
-                <Checkbox labelPosition='start' checked={true}>
-                  <Row marginRight='auto'>
-                    <FigmaIcon
-                      width={theme.space?.normalReduced}
-                      height={theme.space?.normalReduced}
-                    />
-                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
-                      Figma
-                    </Text>
-                  </Row>
-                </Checkbox>
-                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
-                  <Divider
-                    weight={theme.space?.nano}
+                    weight={theme.spaces?.nano}
                     backgroundColor={theme.backgrounds?.lightGray}
                   />
                 </Box>
@@ -222,29 +151,29 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
             </Column>
 
             <Column
-              width={theme.space?.full}
-              flexBasis={theme.space?.fullHalfReduced}
-              margin={theme.space?.t8r2b6l12}
+              width={theme.spaces?.full}
+              flexBasis={theme.spaces?.fullHalfReduced}
+              margin={theme.spaces?.t8r2b6l12}
             >
               <Column
-                maxWidth={theme.space?.largeSemi}
-                padding={theme.space?.t1r5b2l5}
-                maxHeight={theme.space?.mediumSemiReduced}
+                maxWidth={theme.spaces?.largeSemi}
+                padding={theme.spaces?.t1r5b2l5}
+                maxHeight={theme.spaces?.mediumSemiReduced}
               >
                 <Checkbox labelPosition='start' checked={true}>
                   <Row marginRight='auto'>
                     <GitHubIcon
-                      width={theme.space?.normalReduced}
-                      height={theme.space?.normalReduced}
+                      width={theme.spaces?.normalReduced}
+                      height={theme.spaces?.normalReduced}
                     />
-                    <Text fontSize='small.default' margin={theme.space?.tlb0r11}>
+                    <Text fontSize='small.default' margin={theme.spaces?.tlb0r11}>
                       Git
                     </Text>
                   </Row>
                 </Checkbox>
-                <Box padding={theme.space?.tb3rl0} marginTop={theme.space?.nanoIncreased}>
+                <Box padding={theme.spaces?.tb3rl0} marginTop={theme.spaces?.nanoIncreased}>
                   <Divider
-                    weight={theme.space?.nano}
+                    weight={theme.spaces?.nano}
                     backgroundColor={theme.backgrounds?.lightGray}
                   />
                 </Box>

@@ -16,10 +16,8 @@
   "dependencies": {
     "@app/animated-card": "workspace:*",
     "@ui/button": "workspace:*",
-    "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
-    "@ui/text": "workspace:0.0.1",
-    "framer-motion": "10.16.1"
+    "@ui/text": "workspace:0.0.1"
   }
 }

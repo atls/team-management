@@ -5,7 +5,7 @@ export interface UserBadgeProps {
   email: string
 }
 export interface UserBadgeTheme extends Theme {
-  space?: {
+  spaces?: {
     largeSemiDefault: number
     miniReduced: number
     mediumSemiDefault: number

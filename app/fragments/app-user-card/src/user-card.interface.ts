@@ -9,7 +9,7 @@ export interface UserCardProps {
 }
 
 export interface UserCardTheme extends Theme {
-  space?: {
+  spaces?: {
     full: string
     largeIncreased: number
     largeSemiIncreased: number

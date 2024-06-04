@@ -1,5 +1,6 @@
 export interface AnimatedCardProps {
   img: string
+  organization: string
 }
 
 export interface AnimatedCardTheme {

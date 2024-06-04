@@ -10,6 +10,7 @@ import { Column }                  from '@ui/layout'
 import { Modal }                   from '@ui/modal'
 import { Scroll }                  from '@ui/scroll'
 import { Text }                    from '@ui/text'
+import { Space }                   from '@ui/text'
 
 import { NotificationsModalProps } from './notifications-modal.interfaces'
 import { NotificationsModalTheme } from './notifications-modal.interfaces'
@@ -17,25 +18,37 @@ import { NotificationsModalTheme } from './notifications-modal.interfaces'
 const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date }) => {
   const theme: NotificationsModalTheme = useTheme()
   return (
-    <Modal open={true} width={415}>
+    <Modal open={true} width={theme.spaces?.largeSemiLargeIncreased}>
       <Column>
         <Text
           maxWidth={theme.spaces?.superBiggest}
           marginBottom={theme.spaces?.micro}
           fontSize='medium.semiReduced'
-          color='#282828'
+          color='GRAY_1600'
         >
           Notifications
         </Text>
-        <Scroll height='241px'>
-          <Box flexDirection='column' alignItems='flex-start' maxWidth={350}>
+        <Scroll height={theme.spaces?.largeSemiDecreased}>
+          <Box
+            flexDirection='column'
+            alignItems='flex-start'
+            maxWidth={theme.spaces?.largeDefaultIncreased}
+          >
             <Box marginBottom={theme.spaces?.micro}>
-              <Avatar size={50} image notification={true} src={avatar} alt='avatar' />
+              <Avatar
+                size={theme.spaces?.bigDecreased}
+                image
+                notification={true}
+                src={avatar}
+                alt='avatar'
+              />
               <Column margin={theme.spaces?.tiny}>
                 <Text fontSize='small.semiLarge'>
-                  {name} <Text fontWeight='semiBold'> accepted the invite</Text>
+                  {name}
+                  <Space count={1} />
+                  <Text fontWeight='semiBold'> accepted the invite</Text>
                 </Text>
-                <Text fontSize='small.default' color='#AEAEAE' marginTop={theme.spaces?.s5}>
+                <Text fontSize='small.default' color='silverchalice' marginTop={theme.spaces?.s5}>
                   {date ? date : 'Dec 7, 2025 09:33'}
                 </Text>
               </Column>
@@ -51,7 +64,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date })
 
         <Box justifyContent='center'>
           <Text
-            color='#508EE9'
+            color='indigo'
             maxWidth={theme.spaces?.superBiggest}
             marginBottom={theme.spaces?.micro}
             fontSize='normal.semiDefault'

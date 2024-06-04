@@ -12,7 +12,7 @@ import { UserTitleTheme } from './user-title.interface'
 const UsersTitle: React.FC = () => {
   const theme: UserTitleTheme = useTheme()
   return (
-    <Row maxWidth={theme.space?.largeDefaultDecreased} justifyContent='space-between'>
+    <Row maxWidth={theme.spaces?.largeDefaultDecreased} justifyContent='space-between'>
       <Text fontSize='medium.semiIncreased' color={theme.colors?.GRAY_1600}>
         Team members
       </Text>
@@ -22,7 +22,7 @@ const UsersTitle: React.FC = () => {
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
       >
-        <AddIcon width={theme.space?.normalSemiDefault} height={theme.space?.normalSemiDefault} />
+        <AddIcon width={theme.spaces?.normalSemiDefault} height={theme.spaces?.normalSemiDefault} />
       </Button>
     </Row>
   )

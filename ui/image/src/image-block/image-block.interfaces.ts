@@ -1,4 +1,5 @@
 export interface ContainerProps {
-  borderRadius?: number
+  borderRadius?: number | string
   src: string
+  alt?: string
 }

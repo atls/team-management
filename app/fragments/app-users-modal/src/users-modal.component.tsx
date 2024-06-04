@@ -19,61 +19,94 @@ import { Text }              from '@ui/text'
 import { UsersModalTheme }   from './users-modal.interfaces'
 import { UsersModalProps }   from './users-modal.interfaces'
 
-const UsersModal: FC<UsersModalProps> = ({ avatar, name, position }) => {
+const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount }) => {
   const theme: UsersModalTheme = useTheme()
   const [isOpen, setIsOpen] = React.useState(false)
   const handleUserModal = () => {
     setIsOpen(!isOpen)
   }
   return (
-    <Modal open={true} width={773} padding={40}>
+    <Modal open={true} width={theme.spaces?.extraLargeDecreased} padding={theme.spaces?.increased}>
       <Column>
         <Row>
-          <AtlantisSmallIcon width={26.4} height={24} />
-          <Text maxWidth={215} marginBottom={12} marginLeft={15} fontSize={24} color='#282828'>
+          <AtlantisSmallIcon width={theme.spaces?.largest} height={theme.spaces?.large} />
+          <Text
+            maxWidth={theme.spaces?.extraLargeDecreased}
+            marginBottom={theme.spaces?.micro}
+            marginLeft={theme.spaces?.middling}
+            fontSize='normal.increased'
+            color='GRAY_1600'
+          >
             Atlantis Main Team
           </Text>
         </Row>
-        <Text maxWidth={244} marginBottom={12} fontSize={34} color='#282828'>
-          Участники (15)
+        <Text
+          maxWidth={theme.spaces?.largeSemiDecreasedDefault}
+          marginBottom={theme.spaces?.micro}
+          fontSize='medium.semiIncreased'
+          color='GRAY_1600'
+        >
+          Участники ({usersCount})
         </Text>
-        <Scroll height={544}>
-          <Box flexDirection={'column'} alignItems='flex-start' maxWidth={663}>
+        <Scroll height={theme.spaces?.superExtraIncreasedDefault}>
+          <Box
+            flexDirection='column'
+            alignItems='flex-start'
+            maxWidth={theme.spaces?.superPuperExtraIncreased}
+          >
             <Row justifyContent='space-between' alignItems='center'>
-              <Box
-                // marginBottom={12}
-                alignItems='center'
-              >
-                <Avatar size={50} image notification={true} src={avatar} alt='avatar' />
-                <Column margin={10}>
+              <Box alignItems='center'>
+                <Avatar
+                  size={theme.spaces?.bigDecreased}
+                  image
+                  notification={true}
+                  src={avatar}
+                  alt='avatar'
+                />
+                <Column margin={theme.spaces?.miniDefault}>
                   <Text fontSize='normal.semiDefault'>{name}</Text>
-                  <Text fontSize='small.semiLarge' color='#4D4D4D' marginTop={3}>
+                  <Text
+                    fontSize='small.semiLarge'
+                    color='outerspace'
+                    marginTop={theme.spaces?.semiTiny}
+                  >
                     {position ? position : 'Frontend Developer'}
                   </Text>
                 </Column>
               </Box>
               <Button
-                style={{ position: 'relative', height: '39px' }}
-                variant={'transparentBlueBackgroundButton'}
-                shape={'rectangle'}
+                style={{ position: 'relative' }}
+                variant='transparentBlueBackgroundButton'
+                shape='rectangle'
                 size='microRoundedPadding'
                 onClick={handleUserModal}
               >
-                <ActionsIcon style={{ rotate: '90deg' }} width={15} height={15} />
+                <ActionsIcon
+                  style={{ rotate: '90deg' }}
+                  width={theme.spaces?.middling}
+                  height={theme.spaces?.middling}
+                />
                 {isOpen && (
                   <Box
                     style={{ position: 'absolute' }}
-                    boxShadow=' 0px 4px 8px 0px #00000026'
-                    borderRadius={9}
+                    boxShadow={theme.shadows?.asphalt}
+                    borderRadius={theme.spaces?.minniSemiDefault}
                     background={theme.colors?.white}
-                    width={180}
-                    padding={12}
-                    right={7}
-                    top={40}
+                    width={theme.spaces?.semiSuperDecreased}
+                    padding={theme.spaces?.micro}
+                    right={theme.spaces?.miniSemiReduced}
+                    top={theme.spaces?.increased}
                   >
                     <Row justifyContent='flex-start' alignItems='center'>
-                      <WrongOutlineIcon fill='#E95050' width={14} height={14} />
-                      <Text marginLeft={2} color='#E95050' fontSize={13}>
+                      <WrongOutlineIcon
+                        width={theme.spaces?.semiMedium}
+                        height={theme.spaces?.semiMedium}
+                      />
+                      <Text
+                        marginLeft={theme.spaces?.normalCount}
+                        color='carnation'
+                        fontSize='small.semiLarge'
+                      >
                         Remove
                       </Text>
                     </Row>
@@ -82,10 +115,10 @@ const UsersModal: FC<UsersModalProps> = ({ avatar, name, position }) => {
               </Button>
             </Row>
             <Divider
-              weight={theme.space?.nano}
+              weight={theme.spaces?.nano}
               backgroundColor={theme.backgrounds?.gray}
-              marginTop={9.5}
-              marginBottom={10.5}
+              marginTop={theme.spaces?.minniSemiDefault}
+              marginBottom={theme.spaces?.miniDefault}
             />
           </Box>
         </Scroll>

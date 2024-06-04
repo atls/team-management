@@ -13,6 +13,10 @@ export interface NotificationsModalTheme extends Theme {
     tiny: number
     minniSemiDefault: number
     s5: number
+    largeSemiDecreased: number
+    largeDefaultIncreased: number
+    bigDecreased: number
+    largeSemiLargeIncreased: number
   }
   colors?: {
     white: string

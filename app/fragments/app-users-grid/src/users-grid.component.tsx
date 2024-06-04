@@ -1,16 +1,18 @@
-import React        from 'react'
+import { useTheme }          from '@emotion/react'
 
-import { UserCard } from '@app/user-card'
-import { Box }      from '@ui/layout'
+import React                 from 'react'
+import { FC }                from 'react'
+import { PropsWithChildren } from 'react'
 
-const UsersGrid = () => {
+import { Box }               from '@ui/layout'
+
+import { UserGridTheme }      from './user-grid.interface'
+
+const UsersGrid: FC<PropsWithChildren> = ({ children }) => {
+  const theme: UserGridTheme = useTheme()
   return (
-    <Box display='grid' gridTemplateColumns='repeat(3,407px)' gap='22px'>
-      <UserCard />
-      <UserCard />
-      <UserCard />
-      <UserCard />
-      <UserCard />
+    <Box display='grid' gridTemplateColumns='repeat(3,407px)' gap={theme.spaces?.semiLarge}>
+      {children}
     </Box>
   )
 }

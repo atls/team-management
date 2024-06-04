@@ -185,7 +185,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/main-logo@workspace:*, @app/main-logo@workspace:app/fragments/app-main-logo":
+"@app/main-logo@workspace:app/fragments/app-main-logo":
   version: 0.0.0-use.local
   resolution: "@app/main-logo@workspace:app/fragments/app-main-logo"
   dependencies:
@@ -200,7 +200,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/notifications-modal@workspace:*, @app/notifications-modal@workspace:app/fragments/app-notifications-modal":
+"@app/notifications-modal@workspace:app/fragments/app-notifications-modal":
   version: 0.0.0-use.local
   resolution: "@app/notifications-modal@workspace:app/fragments/app-notifications-modal"
   dependencies:
@@ -218,7 +218,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/organizations-modal@workspace:*, @app/organizations-modal@workspace:app/fragments/app-organizations-modal":
+"@app/organizations-modal@workspace:app/fragments/app-organizations-modal":
   version: 0.0.0-use.local
   resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
   dependencies:
@@ -226,11 +226,9 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@ui/button": "workspace:*"
-    "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
     "@ui/text": "workspace:0.0.1"
-    framer-motion: "npm:10.16.1"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -241,13 +239,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
-    "@app/main-logo": "workspace:*"
-    "@app/notifications-modal": "workspace:*"
-    "@app/organizations-modal": "workspace:*"
-    "@app/theme-selector": "workspace:*"
-    "@app/user-badge": "workspace:*"
-    "@app/users-modal": "workspace:*"
-    "@app/users-title": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.2"
@@ -260,7 +251,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/theme-selector@workspace:*, @app/theme-selector@workspace:app/fragments/app-theme-selector":
+"@app/theme-selector@workspace:app/fragments/app-theme-selector":
   version: 0.0.0-use.local
   resolution: "@app/theme-selector@workspace:app/fragments/app-theme-selector"
   dependencies:
@@ -276,7 +267,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/user-badge@workspace:*, @app/user-badge@workspace:app/fragments/app-user-badge":
+"@app/user-badge@workspace:app/fragments/app-user-badge":
   version: 0.0.0-use.local
   resolution: "@app/user-badge@workspace:app/fragments/app-user-badge"
   dependencies:
@@ -292,7 +283,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/user-card@workspace:*, @app/user-card@workspace:app/fragments/app-user-card":
+"@app/user-card@workspace:app/fragments/app-user-card":
   version: 0.0.0-use.local
   resolution: "@app/user-card@workspace:app/fragments/app-user-card"
   dependencies:
@@ -318,15 +309,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/users-grid@workspace:app/fragments/app-users-grid"
   dependencies:
-    "@app/user-card": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@ui/layout": "workspace:*"
   peerDependencies:
+    "@emotion/react": "*"
     react: "*"
   languageName: unknown
   linkType: soft
 
-"@app/users-modal@workspace:*, @app/users-modal@workspace:app/fragments/app-users-modal":
+"@app/users-modal@workspace:app/fragments/app-users-modal":
   version: 0.0.0-use.local
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
@@ -347,7 +339,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/users-title@workspace:*, @app/users-title@workspace:app/fragments/app-users-title":
+"@app/users-title@workspace:app/fragments/app-users-title":
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
