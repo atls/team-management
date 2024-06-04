@@ -3,8 +3,13 @@ import { prop }       from 'styled-tools'
 import { switchProp } from 'styled-tools'
 
 export const shapeStyles: styleFn = ({ theme }) => ({
+  cursor: 'text',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  gap: theme.spaces.tiny,
   fontFamily: theme.fonts.primary,
-  size: theme.spaces.big,
+  minHeight: theme.spaces.extra,
+  size: theme.spaces.extra,
   fontWeight: theme.fontWeights.normal,
   fontSize: theme.fontSizes.small.semiLarge,
   borderRadius: theme.radii.miniMedium,
