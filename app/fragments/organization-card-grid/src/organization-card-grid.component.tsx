@@ -2,13 +2,16 @@ import { useTheme }                  from '@emotion/react'
 
 import React                         from 'react'
 import { FC }                        from 'react'
+import { PropsWithChildren }         from 'react'
 import { memo }                      from 'react'
 
 import { GridAutoRows }              from '@ui/layout'
 
 import { OrganizationCardGridProps } from './organization-card-grid.interfaces.js'
 
-export const OrganizationCardGrid: FC<OrganizationCardGridProps> = memo(({ children }) => {
+export const OrganizationCardGrid: FC<PropsWithChildren<OrganizationCardGridProps>> = memo(({
+  children,
+}) => {
   const theme: any = useTheme()
 
   return (
