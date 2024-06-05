@@ -7,10 +7,10 @@ import React                      from 'react'
 import { FC }                     from 'react'
 import { useRef }                 from 'react'
 
-import { BaseSwitchProps }        from './base-switch.interfaces'
-import { ThumbComponent }         from './thumb/thumb.component'
-import { appearanceHandleStyles } from './base-switch.styles'
-import { shapeHandleStyles }      from './base-switch.styles'
+import { BaseSwitchProps }        from './base-switch.interfaces.js'
+import { ThumbComponent }         from './thumb/thumb.component.js'
+import { appearanceHandleStyles } from './base-switch.styles.js'
+import { shapeHandleStyles }      from './base-switch.styles.js'
 
 const BaseSwitchContainer = styled(HandleElement)<any>(
   baseHandleStyles,

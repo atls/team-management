@@ -16,7 +16,7 @@ import { Box }                   from '@ui/layout'
 import { Text }                  from '@ui/text'
 import { Space }                 from '@ui/text'
 
-import { OrganizationCardProps } from './organization-card.interfaces'
+import { OrganizationCardProps } from './organization-card.interfaces.js'
 
 const Members: FC<any> = ({ quantity }) => {
   const { formatMessage } = useIntl()

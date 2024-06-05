@@ -18,10 +18,10 @@ import { Modal }                    from '@ui/modal'
 import { IconSwitch }               from '@ui/switch'
 import { Text }                     from '@ui/text'
 
-import { TeamMemberModalProps }     from './add-member-modal.interfaces'
-import { AddMemberModalInput }      from './input'
-import { useUpdateInputValuesHook } from './update-input-values.hook'
-import { useButtonActiveHook }      from './use-button-active.hook'
+import { TeamMemberModalProps }     from './add-member-modal.interfaces.js'
+import { AddMemberModalInput }      from './input/index.js'
+import { useUpdateInputValuesHook } from './update-input-values.hook.js'
+import { useButtonActiveHook }      from './use-button-active.hook.js'
 
 export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   const theme: any = useTheme()

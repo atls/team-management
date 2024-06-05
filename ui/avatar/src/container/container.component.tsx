@@ -4,10 +4,10 @@ import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
 
-import { AvatarShapeStyles } from '../styles/shape'
-import { ContainerProps }    from './container.interfaces'
-import { createBaseStyles }  from '../styles/base'
-import { getShapeStyles }    from '../styles/shape'
+import { AvatarShapeStyles } from '../styles/shape/index.js'
+import { ContainerProps }    from './container.interfaces.js'
+import { createBaseStyles }  from '../styles/base/index.js'
+import { getShapeStyles }    from '../styles/shape/index.js'
 
 const Container = styled.div<AvatarShapeStyles>(createBaseStyles, getShapeStyles)
 

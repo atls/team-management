@@ -4,7 +4,7 @@ import { FC }                from 'react'
 
 import { Box }               from '@ui/layout'
 
-import { CardProps }         from './card.interfaces'
+import { CardProps }         from './card.interfaces.js'
 
 export const Card: FC<PropsWithChildren<CardProps>> = ({
   children,

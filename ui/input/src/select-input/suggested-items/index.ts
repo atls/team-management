@@ -1,2 +1,2 @@
-export * from './suggested-items.context'
-export * from './suggested-items.reducer'
+export * from './suggested-items.context.js'
+export * from './suggested-items.reducer.js'

@@ -1,2 +1,2 @@
-export * from './select-input.component'
-export * from './select-input.interfaces'
+export * from './select-input.component.js'
+export * from './select-input.interfaces.js'

@@ -1,2 +1,2 @@
-export * from './icon-attachment.component'
-export * from './icon-attachment.interface'
+export * from './icon-attachment.component.js'
+export * from './icon-attachment.interface.js'

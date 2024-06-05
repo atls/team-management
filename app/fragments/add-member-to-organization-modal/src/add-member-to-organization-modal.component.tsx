@@ -14,9 +14,9 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 
-import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces'
-import { TeamSwitch }                        from './team-switch'
-import { useButtonActiveHook }               from './use-button-active.hook'
+import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
+import { TeamSwitch }                        from './team-switch/index.js'
+import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,

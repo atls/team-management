@@ -1,1 +1,1 @@
-export * from './card.components'
+export * from './card.components.js'

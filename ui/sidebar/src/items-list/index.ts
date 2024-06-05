@@ -1,3 +1,3 @@
-export * from './items-list.component'
-export * from './items-list.styles'
-export * from './items-list.element'
+export * from './items-list.component.js'
+export * from './items-list.styles.js'
+export * from './items-list.element.js'

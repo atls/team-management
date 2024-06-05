@@ -4,7 +4,7 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "src/index.js",
   "scripts": {
     "build": "generate-icons src/ -i ./icons"
   },

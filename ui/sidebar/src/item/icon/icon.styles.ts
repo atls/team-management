@@ -1,6 +1,6 @@
 import { CSSObject } from '@emotion/css'
 
-import { theme }     from '../../../../theme/src'
+import { theme }     from '@ui/theme'
 
 export const baseItemIconStyles: CSSObject = {
   height: theme.space.full,

@@ -6,7 +6,7 @@ import { memo }                      from 'react'
 
 import { GridAutoRows }              from '@ui/layout'
 
-import { OrganizationCardGridProps } from './organization-card-grid.interfaces'
+import { OrganizationCardGridProps } from './organization-card-grid.interfaces.js'
 
 export const OrganizationCardGrid: FC<OrganizationCardGridProps> = memo(({ children }) => {
   const theme: any = useTheme()

@@ -1,1 +1,1 @@
-export * from './organization-card-grid.component'
+export * from './organization-card-grid.component.js'

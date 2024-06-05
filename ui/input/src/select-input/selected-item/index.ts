@@ -1,2 +1,2 @@
-export * from './selected-item.component'
-export * from './selected-item.interface'
+export * from './selected-item.component.js'
+export * from './selected-item.interface.js'

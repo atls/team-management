@@ -1,3 +1,3 @@
-export * from './base-switch'
-export * from './icon-switch'
-export * from './theme-switch'
+export * from './base-switch/index.js'
+export * from './icon-switch/index.js'
+export * from './theme-switch/index.js'

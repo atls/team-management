@@ -5,9 +5,9 @@ import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 
-import { AvatarProps }      from './avatar.interfaces'
-import { ContainerWrapper } from './container'
-import { Notification }     from './notification'
+import { AvatarProps }      from './avatar.interfaces.js'
+import { ContainerWrapper } from './container/index.js'
+import { Notification }     from './notification/index.js'
 
 export const Avatar: FC<AvatarProps> = ({
   borderWidth,

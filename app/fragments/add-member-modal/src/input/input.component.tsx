@@ -6,7 +6,7 @@ import { useIntl }                  from 'react-intl'
 import { BaseInput }                from '@ui/input'
 import { emailValidator }           from '@ui/utils'
 
-import { AddMemberModalInputProps } from './input.interfaces'
+import { AddMemberModalInputProps } from './input.interfaces.js'
 
 export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputIndex,

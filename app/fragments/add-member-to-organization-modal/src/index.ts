@@ -1,1 +1,1 @@
-export * from './add-member-to-organization-modal.component'
+export * from './add-member-to-organization-modal.component.js'

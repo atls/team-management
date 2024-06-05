@@ -6,11 +6,11 @@ import { FC }          from 'react'
 import { Condition }   from '@ui/condition'
 import { CheckIcon }   from '@ui/icons'
 
-import CheckboxProps   from './checkbox.interface'
-import { Box }         from './box'
-import { Check }       from './check'
-import { Container }   from './container'
-import { Label }       from './label'
+import CheckboxProps   from './checkbox.interface.js'
+import { Box }         from './box/index.js'
+import { Check }       from './check/index.js'
+import { Container }   from './container/index.js'
+import { Label }       from './label/index.js'
 
 const doNothing = () => {
   // do nothing
