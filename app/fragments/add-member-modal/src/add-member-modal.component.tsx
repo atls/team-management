@@ -1,31 +1,30 @@
-import { useTheme }                 from '@emotion/react'
+import { useTheme }                from '@emotion/react'
 
-import React                        from 'react'
-import { FC }                       from 'react'
-import { memo }                     from 'react'
-import { useState }                 from 'react'
-import { useIntl }                  from 'react-intl'
+import React                       from 'react'
+import { FC }                      from 'react'
+import { memo }                    from 'react'
+import { useState }                from 'react'
+import { useIntl }                 from 'react-intl'
 
-import { Button }                   from '@ui/button'
-import { AddIcon }                  from '@ui/icons'
-import { GitHubIcon }               from '@ui/icons'
-import { FigmaIcon }                from '@ui/icons'
-import { DiscordIcon }              from '@ui/icons'
-import { TelegramIcon }             from '@ui/icons'
-import { Row }                      from '@ui/layout'
-import { Column }                   from '@ui/layout'
-import { Modal }                    from '@ui/modal'
-import { IconSwitch }               from '@ui/switch'
-import { Text }                     from '@ui/text'
+import { Button }                  from '@ui/button'
+import { AddIcon }                 from '@ui/icons'
+import { GitHubIcon }              from '@ui/icons'
+import { FigmaIcon }               from '@ui/icons'
+import { DiscordIcon }             from '@ui/icons'
+import { TelegramIcon }            from '@ui/icons'
+import { Row }                     from '@ui/layout'
+import { Column }                  from '@ui/layout'
+import { Modal }                   from '@ui/modal'
+import { IconSwitch }              from '@ui/switch'
+import { Text }                    from '@ui/text'
 
-import { HandleAddInputClickType }  from './add-member-modal.interfaces.js'
-import { InputValuesType }          from './add-member-modal.interfaces.js'
-import { HandlerSwitchType }        from './add-member-modal.interfaces.js'
-import { TeamMemberModalProps }     from './add-member-modal.interfaces.js'
-import { CheckedSwitchesType }      from './add-member-modal.interfaces.js'
-import { AddMemberModalInput }      from './input/index.js'
-import { useUpdateInputValuesHook } from './update-input-values.hook.js'
-import { useButtonActiveHook }      from './use-button-active.hook.js'
+import { HandleAddInputClickType } from './add-member-modal.interfaces.js'
+import { InputValuesType }         from './add-member-modal.interfaces.js'
+import { HandlerSwitchType }       from './add-member-modal.interfaces.js'
+import { TeamMemberModalProps }    from './add-member-modal.interfaces.js'
+import { CheckedSwitchesType }     from './add-member-modal.interfaces.js'
+import { AddMemberModalInput }     from './input/index.js'
+import { useButtonActiveHook }     from './use-button-active.hook.js'
 
 export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   const theme: any = useTheme()
@@ -43,7 +42,6 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   const [inputValues, setInputValues] = useState<InputValuesType>([''])
 
   useButtonActiveHook(checkedSwitches, setButtonActive)
-  const updateInputValuesHook = useUpdateInputValuesHook(inputValues, setInputValues)
 
   const handlerSwitch: HandlerSwitchType = (state, category) => {
     if (checkedSwitches.includes(category as never)) {
@@ -62,7 +60,11 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
       <Column gap={theme.spaces.moderate}>
         <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
         {inputValues.map((_inputValue: string, index: number) => (
-          <AddMemberModalInput inputIndex={index} updateInputValuesHook={updateInputValuesHook} />
+          <AddMemberModalInput
+            inputIndex={index}
+            inputValues={inputValues}
+            setInputValues={setInputValues}
+          />
         ))}
         <Row justifyContent='center'>
           <Button

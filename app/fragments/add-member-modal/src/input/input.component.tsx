@@ -12,7 +12,8 @@ import { HandleInputChangeType }    from './input.interfaces.js'
 
 export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputIndex,
-  updateInputValuesHook,
+  inputValues,
+  setInputValues,
 }) => {
   const { formatMessage } = useIntl()
 
@@ -35,11 +36,17 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
     } else {
       setErrorText('')
     }
-    updateInputValuesHook(inputIndex, inputValueString)
+
+    const newInputValues = inputValues
+    newInputValues[inputIndex] = inputValueString
+    setInputValues(newInputValues)
   }
 
   const handleInputDelete: HandleInputDeleteType = (): void => {
-    updateInputValuesHook(inputIndex, null)
+    const newInputValues = inputValues.filter(
+      (_input: string, index: number) => index !== inputIndex
+    )
+    setInputValues(newInputValues)
   }
 
   return (
