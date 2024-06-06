@@ -3,24 +3,29 @@ import { useTheme }          from '@emotion/react'
 import React                 from 'react'
 import { FC }                from 'react'
 import { motion }            from 'framer-motion'
+import { useIntl }           from 'react-intl'
 
 import { Button }            from '@ui/button'
 import { RemoveIcon }        from '@ui/icons'
 import { ImageBlock }        from '@ui/image'
+import { NextImage }         from '@ui/image'
 import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Text }              from '@ui/text'
 
-import { AnimatedCardProps } from './animated-card.interfaces'
-import { AnimatedCardTheme } from './animated-card.interfaces'
+import { AnimatedCardTheme } from './animated-card.interfaces.js'
+import { AnimatedCardProps } from './animated-card.interfaces.js'
 
 const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
+  const { formatMessage } = useIntl()
   const theme: AnimatedCardTheme = useTheme()
   const [openMenu, setOpenMenu] = React.useState<boolean>(false)
+
   const handleDelete = () => {
     setOpenMenu(!openMenu)
   }
   const removeOrganization = () => {}
+
   return (
     <motion.div
       animate={openMenu ? { height: '116px' } : { height: '64px' }}
@@ -41,7 +46,14 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
         <Box alignItems='center' justifyContent='space-between'>
           <Box alignItems='center'>
             <Box width={theme.spaces?.increased} height={theme.spaces?.increased}>
-              <ImageBlock src={img} borderRadius={theme.spaces?.miniReduced} />
+              <NextImage
+                src={img}
+                borderRadius={theme.spaces?.miniReduced}
+                width={40}
+                height={40}
+                alt={'logo'}
+              />
+              {/*<ImageBlock src={img} borderRadius={theme.spaces?.miniReduced} />*/}
             </Box>
             <Text fontSize='normal.semiDefault' marginLeft={theme.spaces?.tiny}>
               {organization ? organization : 'Atls'}
@@ -51,8 +63,8 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
         </Box>
 
         <Box marginTop={theme.spaces?.medium} justifyContent='space-between'>
-          <Text maxWidth={theme.spaces?.largeDecreased} fontSize='small.semilarge'>
-            Вы уверены, что хотите исключить пользователя из данной организации?
+          <Text maxWidth={theme.spaces?.largeDecreased} fontSize='small.semiLarge'>
+            {formatMessage({ id: 'confirm-deleting-organization.warning' })}
           </Text>
           <Button
             onClick={removeOrganization}
@@ -60,16 +72,14 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
             size='middlingRoundedPadding'
             variant='lightBlueBackgroundButton'
           >
-            Да
+            {formatMessage({ id: 'confirm-deleting-organization.yes' })}
           </Button>
           <Button
-            onClick={() => {
-              setOpenMenu(false)
-            }}
+            onClick={handleDelete}
             size='middlingRoundedPadding'
             variant='lightBlueBackgroundButton'
           >
-            Нет
+            {formatMessage({ id: 'confirm-deleting-organization.no' })}
           </Button>
         </Box>
       </Column>

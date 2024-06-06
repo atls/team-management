@@ -29,7 +29,6 @@ const Tag: FC<PropsWithChildren<TagProps>> = ({
     <Box
       justifyContent='center'
       alignItems='center'
-      // flexDirection={flexDirection}
       backgroundColor={backgroundColor}
       borderRadius={borderRadius}
       padding={padding}

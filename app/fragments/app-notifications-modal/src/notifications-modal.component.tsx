@@ -2,6 +2,7 @@ import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
 import { FC }                      from 'react'
+import { useIntl }                 from 'react-intl'
 
 import { Avatar }                  from '@ui/avatar'
 import { Divider }                 from '@ui/divider'
@@ -12,13 +13,14 @@ import { Scroll }                  from '@ui/scroll'
 import { Text }                    from '@ui/text'
 import { Space }                   from '@ui/text'
 
-import { NotificationsModalProps } from './notifications-modal.interfaces'
-import { NotificationsModalTheme } from './notifications-modal.interfaces'
+import { NotificationsModalProps } from './notifications-modal.interfaces.js'
+import { NotificationsModalTheme } from './notifications-modal.interfaces.js'
 
-const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date }) => {
+const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date, open }) => {
+  const { formatMessage } = useIntl()
   const theme: NotificationsModalTheme = useTheme()
   return (
-    <Modal open={true} width={theme.spaces?.largeSemiLargeIncreased}>
+    <Modal open={open} width={theme.spaces?.largeSemiLargeIncreased}>
       <Column>
         <Text
           maxWidth={theme.spaces?.superBiggest}
@@ -26,7 +28,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date })
           fontSize='medium.semiReduced'
           color='GRAY_1600'
         >
-          Notifications
+          {formatMessage({ id: 'notifications-modal.title' })}
         </Text>
         <Scroll height={theme.spaces?.largeSemiDecreased}>
           <Box
@@ -69,7 +71,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date })
             marginBottom={theme.spaces?.micro}
             fontSize='normal.semiDefault'
           >
-            Mark all as read
+            {formatMessage({ id: 'notifications-modal.mark-all-read' })}
           </Text>
         </Box>
       </Column>

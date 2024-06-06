@@ -2,6 +2,7 @@ import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
 import { FC }                from 'react'
+import { useIntl }           from 'react-intl'
 
 import { Avatar }            from '@ui/avatar'
 import { Button }            from '@ui/button'
@@ -16,17 +17,20 @@ import { Modal }             from '@ui/modal'
 import { Scroll }            from '@ui/scroll'
 import { Text }              from '@ui/text'
 
-import { UsersModalTheme }   from './users-modal.interfaces'
-import { UsersModalProps }   from './users-modal.interfaces'
+import { UsersModalTheme }   from './users-modal.interfaces.js'
+import { UsersModalProps }   from './users-modal.interfaces.js'
 
-const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount }) => {
+const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount, open }) => {
+  const { formatMessage } = useIntl()
   const theme: UsersModalTheme = useTheme()
   const [isOpen, setIsOpen] = React.useState(false)
+
   const handleUserModal = () => {
     setIsOpen(!isOpen)
   }
+
   return (
-    <Modal open={true} width={theme.spaces?.extraLargeDecreased} padding={theme.spaces?.increased}>
+    <Modal open={open} width={theme.spaces?.extraLargeDecreased} padding={theme.spaces?.increased}>
       <Column>
         <Row>
           <AtlantisSmallIcon width={theme.spaces?.largest} height={theme.spaces?.large} />
@@ -37,7 +41,7 @@ const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount })
             fontSize='normal.increased'
             color='GRAY_1600'
           >
-            Atlantis Main Team
+            {formatMessage({ id: 'users-modal.title' })}
           </Text>
         </Row>
         <Text
@@ -46,7 +50,7 @@ const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount })
           fontSize='medium.semiIncreased'
           color='GRAY_1600'
         >
-          Участники ({usersCount})
+          {formatMessage({ id: 'users-modal.subTitle' })} ({usersCount})
         </Text>
         <Scroll height={theme.spaces?.superExtraIncreasedDefault}>
           <Box
@@ -107,7 +111,7 @@ const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount })
                         color='carnation'
                         fontSize='small.semiLarge'
                       >
-                        Remove
+                        {formatMessage({ id: 'users-modal.button-remove' })}
                       </Text>
                     </Row>
                   </Box>

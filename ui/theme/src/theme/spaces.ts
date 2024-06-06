@@ -120,4 +120,6 @@ export const spaces = {
   fullHalfReduced: '50%',
   fullSemiReduced: '80%',
   full: '100%',
+
+  threeColumnsGrid: 'repeat(3,407px)',
 }

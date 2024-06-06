@@ -1,0 +1,14 @@
+{
+  "confirm-deleting-organization.warning": "Вы уверены, что хотите исключить пользователя из данной организации?",
+  "confirm-deleting-organization.yes": "Да",
+  "confirm-deleting-organization.no":"Нет",
+  "logo-title": "Team management system",
+  "notifications-modal.title": "Уведомления",
+  "notifications-modal.mark-all-read": "Отметить все, как прочитанное",
+  "organizations-modal.title": "Организации",
+  "organizations-modal.button-invite": "Пригласить",
+  "users-modal.title": "Команда Atlantis",
+  "users-modal.subTitle": "Участники",
+  "users-modal.button-remove": "Удалить",
+  "users-ешеду.title": "Команда"
+}

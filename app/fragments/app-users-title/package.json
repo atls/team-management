@@ -1,6 +1,8 @@
 {
   "name": "@app/users-title",
   "version": "0.0.1",
+  "type": "module",
+  "private": true,
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts"
@@ -13,10 +15,12 @@
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "react": "*"
+    "react": "*",
+    "react-intl": "*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@types/react": "^18.3.2"
+    "@types/react": "^18.3.2",
+    "react-intl": "6.6.8"
   }
 }

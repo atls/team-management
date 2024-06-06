@@ -6,12 +6,16 @@ import { PropsWithChildren } from 'react'
 
 import { Box }               from '@ui/layout'
 
-import { UserGridTheme }      from './user-grid.interface'
+import { UserGridTheme }     from './user-grid.interface.js'
 
 const UsersGrid: FC<PropsWithChildren> = ({ children }) => {
   const theme: UserGridTheme = useTheme()
   return (
-    <Box display='grid' gridTemplateColumns='repeat(3,407px)' gap={theme.spaces?.semiLarge}>
+    <Box
+      display='grid'
+      gridTemplateColumns={theme.spaces?.threeColumnsGrid}
+      gap={theme.spaces?.semiLarge}
+    >
       {children}
     </Box>
   )

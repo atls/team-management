@@ -7,7 +7,7 @@ import { NotificationsIcon }  from '@ui/icons'
 import { Row }                from '@ui/layout'
 import { ThemeSwitch }        from '@ui/switch'
 
-import { ThemeSelectorTheme } from './theme-selector.interface'
+import { ThemeSelectorTheme } from './theme-selector.interface.js'
 
 const ThemeSelector: React.FC = () => {
   const theme: ThemeSelectorTheme = useTheme()

@@ -5,6 +5,7 @@ export interface UsersModalProps {
   name: string
   position: string
   usersCount: number | string
+  open: boolean
 }
 export interface UsersModalTheme extends Theme {
   spaces?: {

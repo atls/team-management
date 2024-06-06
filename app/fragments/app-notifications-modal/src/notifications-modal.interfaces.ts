@@ -4,6 +4,7 @@ export interface NotificationsModalProps {
   avatar: string
   name: string
   date: string
+  open: boolean
 }
 export interface NotificationsModalTheme extends Theme {
   spaces?: {

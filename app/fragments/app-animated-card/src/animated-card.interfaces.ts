@@ -15,4 +15,9 @@ export interface AnimatedCardTheme {
   radii?: {
     f8: number
   }
+  fontSizes?: {
+    small: {
+      semiLarge: number
+    }
+  }
 }

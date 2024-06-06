@@ -12,7 +12,7 @@ import { OrgWhiteIcon }  from '@ui/icons'
 import { GitHubIcon }    from '@ui/icons'
 import { TimerIcon }     from '@ui/icons'
 import { TelegramIcon }  from '@ui/icons'
-import { ImageBlock }    from '@ui/image'
+import { NextImage }     from '@ui/image'
 import { Box }           from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
@@ -21,8 +21,8 @@ import { Scroll }        from '@ui/scroll'
 import { Tag }           from '@ui/tag'
 import { Text }          from '@ui/text'
 
-import { UserCardProps } from './user-card.interface'
-import { UserCardTheme } from './user-card.interface'
+import { UserCardProps } from './user-card.interface.js'
+import { UserCardTheme } from './user-card.interface.js'
 
 const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar }) => {
   const theme: UserCardTheme = useTheme()
@@ -40,7 +40,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
           width={theme.spaces?.largeSemiIncreased}
           height={theme.spaces?.largeDefault}
         >
-          <ImageBlock
+          <NextImage
             src={avatar ? avatar : '/profile.png'}
             borderRadius={theme.radii?.tl24tr24}
             alt='avatar'
@@ -114,7 +114,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
             fontSize='small.default'
             color={theme.colors?.white}
           >
-            20% done
+            20%
           </Text>
         </Row>
 

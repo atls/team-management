@@ -9,8 +9,8 @@ import { Row }            from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Text }           from '@ui/text'
 
-import { UserBadgeProps } from './user-badge.interfaces'
-import { UserBadgeTheme } from './user-badge.interfaces'
+import { UserBadgeProps } from './user-badge.interfaces.js'
+import { UserBadgeTheme } from './user-badge.interfaces.js'
 
 const UserBadge: FC<UserBadgeProps> = ({ avatar, name, email }) => {
   const theme: UserBadgeTheme = useTheme()

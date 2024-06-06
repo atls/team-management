@@ -3,6 +3,7 @@ import { Theme } from '@emotion/react'
 export interface OrganizationsModalProps {
   organization: string
   img: string
+  open: boolean
 }
 export interface OrganizationsModalTheme extends Theme {
   spaces?: {
