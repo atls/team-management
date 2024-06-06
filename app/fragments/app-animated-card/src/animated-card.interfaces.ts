@@ -1,4 +1,4 @@
 export interface AnimatedCardProps {
   img: string
-  organization: string
+  organization: string | null
 }

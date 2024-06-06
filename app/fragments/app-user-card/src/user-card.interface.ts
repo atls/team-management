@@ -4,4 +4,5 @@ export interface UserCardProps {
   time?: string
   organizations?: string
   avatar?: string
+  checked?: boolean
 }

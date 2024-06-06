@@ -17,13 +17,13 @@ import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Line }          from '@ui/progress'
 import { Scroll }        from '@ui/scroll'
-import { Tag }            from '@ui/tag'
+import { Tag }           from '@ui/tag'
 import { Text }          from '@ui/text'
 import { ThemeType }     from '@ui/theme'
 
 import { UserCardProps } from './user-card.interface.js'
 
-const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar }) => {
+const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar, checked }) => {
   const theme = useTheme() as ThemeType
   return (
     <Card
@@ -59,10 +59,10 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
               width={theme.spaces.fullWidth}
             >
               <Text color={theme.colors.white} fontSize='medium.semiDefault'>
-                {name ? name : 'Gay Hawkins'}
+                {name}
               </Text>
               <Text color={theme.colors.white} fontSize='normal.semiDefault'>
-                {position ? position : 'DevOps'}
+                {position}
               </Text>
             </Column>
             <Row
@@ -78,7 +78,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                 color={theme.colors.white}
               >
                 <Text margin={theme.spaces.t0r6lb0} color={theme.colors.white}>
-                  {organizations ? organizations : '6'}
+                  {organizations}
                 </Text>
                 <OrgWhiteIcon width={theme.spaces.micro} />
               </Tag>
@@ -91,7 +91,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
               >
                 <TimerIcon width={theme.spaces.regular} height={theme.spaces.medium} />
                 <Text fontSize='small.semiLarge' color={theme.colors.GRAY_1600}>
-                  {time ? time : '10:10:33'}
+                  {time}
                 </Text>
               </Tag>
             </Row>
@@ -126,7 +126,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                 padding={theme.spaces.t1r5b2l5}
                 maxHeight={theme.spaces.small}
               >
-                <Checkbox labelPosition='start' checked={true}>
+                <Checkbox labelPosition='start' checked={checked}>
                   <Row marginRight='auto'>
                     <GitHubIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
                     <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
@@ -153,7 +153,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                 padding={theme.spaces.t1r5b2l5}
                 maxHeight={theme.spaces.small}
               >
-                <Checkbox labelPosition='start' checked={true}>
+                <Checkbox labelPosition='start' checked={checked}>
                   <Row marginRight='auto'>
                     <TelegramIcon
                       width={theme.spaces.semiMedium}
@@ -182,7 +182,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                   padding={theme.spaces.t1r5b2l5}
                   maxHeight={theme.spaces.small}
                 >
-                  <Checkbox labelPosition='start' checked={true}>
+                  <Checkbox labelPosition='start' checked={checked}>
                     <Row marginRight='auto'>
                       <DiscordIcon
                         width={theme.spaces.semiMedium}

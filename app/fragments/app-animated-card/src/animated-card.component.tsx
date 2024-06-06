@@ -54,7 +54,7 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
               />
             </Box>
             <Text fontSize='normal.semiDefault' marginLeft={theme.spaces.tiny}>
-              {organization ? organization : 'Atls'}
+              {organization}
             </Text>
           </Box>
           <RemoveIcon onClick={handleDelete} />

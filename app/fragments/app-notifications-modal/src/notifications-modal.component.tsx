@@ -58,7 +58,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
                   <Text fontWeight='semiBold'> accepted the invite</Text>
                 </Text>
                 <Text fontSize='small.default' color='silverchalice' marginTop={theme.spaces.s5}>
-                  {date ? date : 'Dec 7, 2025 09:33'}
+                  {date}
                 </Text>
               </Column>
             </Box>
