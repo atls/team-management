@@ -50,7 +50,7 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
                 borderRadius={theme.spaces.miniReduced}
                 width={theme.spaces.increased}
                 height={theme.spaces.increased}
-                alt={'logo'}
+                alt='logo'
               />
             </Box>
             <Text fontSize='normal.semiDefault' marginLeft={theme.spaces.tiny}>

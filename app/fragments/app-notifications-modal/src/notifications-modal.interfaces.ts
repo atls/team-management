@@ -3,4 +3,5 @@ export interface NotificationsModalProps {
   name: string
   date: string
   open: boolean
+  notifiaction: boolean
 }

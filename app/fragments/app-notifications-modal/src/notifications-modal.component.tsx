@@ -16,7 +16,13 @@ import { ThemeType }               from '@ui/theme'
 
 import { NotificationsModalProps } from './notifications-modal.interfaces.js'
 
-const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date, open }) => {
+const NotificationsModal: FC<NotificationsModalProps> = ({
+  avatar,
+  name,
+  date,
+  open,
+  notifiaction,
+}) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
@@ -41,7 +47,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date, o
               <Avatar
                 size={theme.spaces.bigDecreased}
                 image
-                notification={true}
+                notification={notifiaction}
                 src={avatar}
                 alt='avatar'
               />

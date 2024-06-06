@@ -7,12 +7,11 @@ import { FC }                from 'react'
 import { forwardRef }        from 'react'
 import { useState }          from 'react'
 
-import { Box }               from '@ui/layout'
 import { useHover }          from '@ui/utils'
 
 import { ButtonProps }       from './button.interfaces'
 import { IconAttachment }    from './icon-attachment'
-import { ButtonShadow }       from './styles/shadow'
+import { ButtonShadow }      from './styles/shadow'
 import { baseStyles }        from './button.styles'
 import { shapeStyles }       from './button.styles'
 import { contentStyles }     from './button.styles'

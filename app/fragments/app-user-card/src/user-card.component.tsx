@@ -17,7 +17,7 @@ import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Line }          from '@ui/progress'
 import { Scroll }        from '@ui/scroll'
-import { Tag }           from '@ui/tag'
+import { Tag }            from '@ui/tag'
 import { Text }          from '@ui/text'
 import { ThemeType }     from '@ui/theme'
 
