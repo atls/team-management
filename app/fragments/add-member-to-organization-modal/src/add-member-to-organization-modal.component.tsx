@@ -4,7 +4,6 @@ import React                                 from 'react'
 import { FC }                                from 'react'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
-import { useCallback }                       from 'react'
 import { useIntl }                           from 'react-intl'
 
 import { Button }                            from '@ui/button'
@@ -39,10 +38,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
-  const setSelectedUsersCallback = useCallback((item) => {
-    setSelectedUsers(item)
-  }, [])
-
   useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
   const testUsersData = [
@@ -73,7 +68,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         <SelectInput
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
           searchItems={testUsersData}
-          parentHook={setSelectedUsersCallback}
+          parentHook={setSelectedUsers}
         />
         <Row
           flexDirection='row'

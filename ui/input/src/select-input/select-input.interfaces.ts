@@ -1,6 +1,3 @@
-import { Dispatch }                     from 'react'
-import { SetStateAction }               from 'react'
-
 import { InputProps as BaseInputProps } from '@ui/input'
 
 interface SearchItemProps {
@@ -13,7 +10,7 @@ interface SearchItemProps {
 export interface SelectInputProps extends BaseInputProps {
   value?: string
   searchItems: Array<SearchItemProps>
-  parentHook: Dispatch<SetStateAction<never[]>>
+  parentHook: Function
   onChange?: VoidFunction
   onChangeNative?: VoidFunction
   errorText?: string
