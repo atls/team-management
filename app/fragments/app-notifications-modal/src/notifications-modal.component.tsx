@@ -12,54 +12,55 @@ import { Modal }                   from '@ui/modal'
 import { Scroll }                  from '@ui/scroll'
 import { Text }                    from '@ui/text'
 import { Space }                   from '@ui/text'
+import { ThemeType }               from '@ui/theme'
 
 import { NotificationsModalProps } from './notifications-modal.interfaces.js'
-import { NotificationsModalTheme } from './notifications-modal.interfaces.js'
 
 const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date, open }) => {
   const { formatMessage } = useIntl()
-  const theme: NotificationsModalTheme = useTheme()
+  const theme = useTheme() as ThemeType
+
   return (
-    <Modal open={open} width={theme.spaces?.largeSemiLargeIncreased}>
+    <Modal open={open} width={theme.spaces.largeSemiLargeIncreased}>
       <Column>
         <Text
-          maxWidth={theme.spaces?.superBiggest}
-          marginBottom={theme.spaces?.micro}
+          maxWidth={theme.spaces.superBiggest}
+          marginBottom={theme.spaces.micro}
           fontSize='medium.semiReduced'
           color='GRAY_1600'
         >
           {formatMessage({ id: 'notifications-modal.title' })}
         </Text>
-        <Scroll height={theme.spaces?.largeSemiDecreased}>
+        <Scroll height={theme.spaces.largeSemiDecreased}>
           <Box
             flexDirection='column'
             alignItems='flex-start'
-            maxWidth={theme.spaces?.largeDefaultIncreased}
+            maxWidth={theme.spaces.largeDefaultIncreased}
           >
-            <Box marginBottom={theme.spaces?.micro}>
+            <Box marginBottom={theme.spaces.micro}>
               <Avatar
-                size={theme.spaces?.bigDecreased}
+                size={theme.spaces.bigDecreased}
                 image
                 notification={true}
                 src={avatar}
                 alt='avatar'
               />
-              <Column margin={theme.spaces?.tiny}>
+              <Column margin={theme.spaces.tiny}>
                 <Text fontSize='small.semiLarge'>
                   {name}
                   <Space count={1} />
                   <Text fontWeight='semiBold'> accepted the invite</Text>
                 </Text>
-                <Text fontSize='small.default' color='silverchalice' marginTop={theme.spaces?.s5}>
+                <Text fontSize='small.default' color='silverchalice' marginTop={theme.spaces.s5}>
                   {date ? date : 'Dec 7, 2025 09:33'}
                 </Text>
               </Column>
             </Box>
             <Divider
-              weight={theme.spaces?.nano}
-              backgroundColor={theme.backgrounds?.gray}
-              marginTop={theme.spaces?.minniSemiDefault}
-              marginBottom={theme.spaces?.tiny}
+              weight={theme.spaces.nano}
+              backgroundColor={theme.backgrounds.gray}
+              marginTop={theme.spaces.minniSemiDefault}
+              marginBottom={theme.spaces.tiny}
             />
           </Box>
         </Scroll>
@@ -67,8 +68,8 @@ const NotificationsModal: FC<NotificationsModalProps> = ({ avatar, name, date, o
         <Box justifyContent='center'>
           <Text
             color='indigo'
-            maxWidth={theme.spaces?.superBiggest}
-            marginBottom={theme.spaces?.micro}
+            maxWidth={theme.spaces.superBiggest}
+            marginBottom={theme.spaces.micro}
             fontSize='normal.semiDefault'
           >
             {formatMessage({ id: 'notifications-modal.mark-all-read' })}

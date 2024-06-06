@@ -178,6 +178,7 @@ __metadata:
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
@@ -196,6 +197,7 @@ __metadata:
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
@@ -216,6 +218,7 @@ __metadata:
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
@@ -273,6 +276,7 @@ __metadata:
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/switch": "workspace:*"
+    "@ui/theme": "workspace:*"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -289,6 +293,7 @@ __metadata:
     "@ui/card": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -311,6 +316,7 @@ __metadata:
     "@ui/scroll": "workspace:*"
     "@ui/tag": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -324,6 +330,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -345,6 +352,7 @@ __metadata:
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
@@ -363,6 +371,7 @@ __metadata:
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"

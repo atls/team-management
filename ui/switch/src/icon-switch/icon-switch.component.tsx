@@ -8,10 +8,10 @@ import { FC }                     from 'react'
 import { PropsWithChildren }      from 'react'
 import { useRef }                 from 'react'
 
-import { IconSwitchProps }        from './icon-switch.interfaces'
-import { ThumbComponent }         from './thumb/thumb.component'
-import { appearanceHandleStyles } from './icon-switch.styles'
-import { shapeHandleStyles }      from './icon-switch.styles'
+import { IconSwitchProps }        from './icon-switch.interfaces.js'
+import { ThumbComponent }         from './thumb/thumb.component.js'
+import { appearanceHandleStyles } from './icon-switch.styles.js'
+import { shapeHandleStyles }      from './icon-switch.styles.js'
 
 const IconSwitchContainer = styled(HandleElement)(
   baseHandleStyles,

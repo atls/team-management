@@ -11,7 +11,8 @@
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/layout": "workspace:*",
-    "@ui/switch": "workspace:*"
+    "@ui/switch": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "peerDependencies": {
     "@emotion/react": "*",

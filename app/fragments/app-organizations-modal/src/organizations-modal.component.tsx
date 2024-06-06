@@ -13,18 +13,17 @@ import { Text }                    from '@ui/text'
 import { ThemeType }               from '@ui/theme'
 
 import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
-import { OrganizationsModalTheme } from './organizations-modal.interfaces.js'
 
 const OrganizationsModal: FC<OrganizationsModalProps> = ({ organization, img, open }) => {
   const { formatMessage } = useIntl()
-  const theme: ThemeType = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
-    <Modal open={open} width={theme.spaces?.superExtraIncreased} padding={theme.spaces?.large}>
+    <Modal open={open} width={theme.spaces.superExtraIncreased} padding={theme.spaces.large}>
       <Column>
         <Text
           maxWidth={theme.spaces.superBiggest}
-          marginBottom={theme.spaces?.micro}
+          marginBottom={theme.spaces.micro}
           fontSize='medium.semiReduced'
           color='GRAY_1600'
         >
@@ -34,7 +33,7 @@ const OrganizationsModal: FC<OrganizationsModalProps> = ({ organization, img, op
         <Box
           flexDirection='column'
           alignItems='flex-start'
-          maxWidth={theme.spaces?.largeDefaultIncreased}
+          maxWidth={theme.spaces.largeDefaultIncreased}
         >
           <AnimatedCard img={img} organization={organization} />
         </Box>

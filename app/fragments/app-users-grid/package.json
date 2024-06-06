@@ -8,7 +8,8 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@ui/layout": "workspace:*"
+    "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "peerDependencies": {
     "@emotion/react": "*",

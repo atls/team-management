@@ -1,32 +1,35 @@
-import * as theme                                from './theme'
-
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
 import React                                     from 'react'
 
-import { GlobalStyles }                          from './global.styles'
-// import { ThemeProviderProps }                    from './theme.interfaces'
-import { borders }                               from './theme'
-import { colors }                                from './theme'
-import { spaces }                                from './theme'
-import { fontSizes }                             from './theme'
-import { fontWeights }                           from './theme'
-import { radii }                                 from './theme'
-import { backgrounds }                           from './theme'
-import { shadows }                                from './theme'
+import { GlobalStyles }                          from './global.styles.js'
+import { lineHeights }                           from './theme/index.js'
+import { radii }                                 from './theme/index.js'
+import { shadows }                               from './theme/index.js'
+import { space }                                 from './theme/index.js'
+import { spaces }                                from './theme/index.js'
+import { fontWeights }                           from './theme/index.js'
+import { borders }                               from './theme/index.js'
+import { colors }                                from './theme/index.js'
+import { fonts }                                 from './theme/index.js'
+import { fontSizes }                             from './theme/index.js'
+import { backgrounds }                           from './theme/index.js'
 
 const theme = {
+  backgrounds,
+  borders,
   colors,
+  fonts,
   fontSizes,
   fontWeights,
-  spaces,
+  lineHeights,
   radii,
-  borders,
-  backgrounds,
   shadows,
+  spaces,
 }
 
 export type ThemeType = typeof theme
+
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />

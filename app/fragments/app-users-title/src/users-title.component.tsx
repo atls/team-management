@@ -1,23 +1,22 @@
-import { useTheme }       from '@emotion/react'
+import { useTheme }  from '@emotion/react'
 
-import React              from 'react'
-import { useIntl }        from 'react-intl'
+import React         from 'react'
+import { useIntl }   from 'react-intl'
 
-import { Button }         from '@ui/button'
-import { AddIcon }        from '@ui/icons'
-import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-
-import { UserTitleTheme } from './user-title.interface.js'
+import { Button }    from '@ui/button'
+import { AddIcon }   from '@ui/icons'
+import { Row }       from '@ui/layout'
+import { Text }      from '@ui/text'
+import { ThemeType } from '@ui/theme'
 
 const UsersTitle: React.FC = () => {
   const { formatMessage } = useIntl()
-  const theme: UserTitleTheme = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
-    <Row maxWidth={theme.spaces?.largeDefaultDecreased} justifyContent='space-between'>
-      <Text fontSize='medium.semiIncreased' color={theme.colors?.GRAY_1600}>
-        {formatMessage({ id: 'users-ешеду.title' })}
+    <Row maxWidth={theme.spaces.largeDefaultDecreased} justifyContent='space-between'>
+      <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600}>
+        {formatMessage({ id: 'users-title.title' })}
       </Text>
       <Button
         boxShadow={theme.shadows?.black}
@@ -25,7 +24,7 @@ const UsersTitle: React.FC = () => {
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
       >
-        <AddIcon width={theme.spaces?.normalSemiDefault} height={theme.spaces?.normalSemiDefault} />
+        <AddIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
       </Button>
     </Row>
   )

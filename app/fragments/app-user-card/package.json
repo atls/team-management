@@ -17,7 +17,8 @@
     "@ui/progress": "workspace:*",
     "@ui/scroll": "workspace:*",
     "@ui/tag": "workspace:*",
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1",
+    "@ui/theme": "workspace:*"
   },
   "peerDependencies": {
     "@emotion/react": "*",

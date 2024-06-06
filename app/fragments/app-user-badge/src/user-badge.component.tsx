@@ -8,23 +8,23 @@ import { Card }           from '@ui/card'
 import { Row }            from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Text }           from '@ui/text'
+import { ThemeType }      from '@ui/theme'
 
 import { UserBadgeProps } from './user-badge.interfaces.js'
-import { UserBadgeTheme } from './user-badge.interfaces.js'
 
 const UserBadge: FC<UserBadgeProps> = ({ avatar, name, email }) => {
-  const theme: UserBadgeTheme = useTheme()
+  const theme = useTheme() as ThemeType
   return (
     <Card
-      height={theme.spaces?.medium}
-      width={theme.spaces?.largeSemiNormalIncreased}
-      borderRadius={theme.spaces?.miniIncreased}
-      backgroundColor={theme.colors?.white}
+      height={theme.spaces.medium}
+      width={theme.spaces.largeSemiNormalIncreased}
+      borderRadius={theme.spaces.miniIncreased}
+      backgroundColor={theme.colors.white}
       alignItems='center'
     >
-      <Row alignItems='center' margin={theme.spaces?.miniReduced} justifyContent='space-between'>
+      <Row alignItems='center' margin={theme.spaces.miniReduced} justifyContent='space-between'>
         <Avatar
-          size={theme.spaces?.mediumSemiDefault}
+          size={theme.spaces.increased}
           image
           notification={false}
           src={avatar}

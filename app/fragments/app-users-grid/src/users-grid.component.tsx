@@ -5,16 +5,15 @@ import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 
 import { Box }               from '@ui/layout'
-
-import { UserGridTheme }     from './user-grid.interface.js'
+import { ThemeType }         from '@ui/theme'
 
 const UsersGrid: FC<PropsWithChildren> = ({ children }) => {
-  const theme: UserGridTheme = useTheme()
+  const theme = useTheme() as ThemeType
   return (
     <Box
       display='grid'
-      gridTemplateColumns={theme.spaces?.threeColumnsGrid}
-      gap={theme.spaces?.semiLarge}
+      gridTemplateColumns={theme.spaces.threeColumnsGrid}
+      gap={theme.spaces.semiLarge}
     >
       {children}
     </Box>

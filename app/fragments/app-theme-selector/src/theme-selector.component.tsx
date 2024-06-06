@@ -1,30 +1,28 @@
-import { useTheme }           from '@emotion/react'
+import { useTheme }          from '@emotion/react'
 
-import React                  from 'react'
+import React                 from 'react'
 
-import { Button }             from '@ui/button'
-import { NotificationsIcon }  from '@ui/icons'
-import { Row }                from '@ui/layout'
-import { ThemeSwitch }        from '@ui/switch'
-
-import { ThemeSelectorTheme } from './theme-selector.interface.js'
+import { Button }            from '@ui/button'
+import { NotificationsIcon } from '@ui/icons'
+import { Row }               from '@ui/layout'
+import { ThemeSwitch }       from '@ui/switch'
+import { ThemeType }         from '@ui/theme'
 
 const ThemeSelector: React.FC = () => {
-  const theme: ThemeSelectorTheme = useTheme()
+  const theme = useTheme() as ThemeType
+
+  const onThemeChange = () => {}
   return (
-    <Row maxWidth={theme.space?.largeSuper} justifyContent='space-between'>
+    <Row maxWidth={theme.spaces.semiSuper} justifyContent='space-between'>
       <Button
-        boxShadow={theme.shadows?.black}
+        boxShadow={theme.shadows.black}
         shape='circle'
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
       >
-        <NotificationsIcon
-          width={theme.space?.normalSemiDefault}
-          height={theme.space?.normalSemiDefault}
-        />
+        <NotificationsIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
       </Button>
-      <ThemeSwitch />
+      <ThemeSwitch onChange={onThemeChange} />
     </Row>
   )
 }

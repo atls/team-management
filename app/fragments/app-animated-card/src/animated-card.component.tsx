@@ -7,18 +7,17 @@ import { useIntl }           from 'react-intl'
 
 import { Button }            from '@ui/button'
 import { RemoveIcon }        from '@ui/icons'
-import { ImageBlock }        from '@ui/image'
 import { NextImage }         from '@ui/image'
 import { Box }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Text }              from '@ui/text'
+import { ThemeType }         from '@ui/theme'
 
-import { AnimatedCardTheme } from './animated-card.interfaces.js'
 import { AnimatedCardProps } from './animated-card.interfaces.js'
 
 const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
   const { formatMessage } = useIntl()
-  const theme: AnimatedCardTheme = useTheme()
+  const theme = useTheme() as ThemeType
   const [openMenu, setOpenMenu] = React.useState<boolean>(false)
 
   const handleDelete = () => {
@@ -42,28 +41,27 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
         overflow: 'hidden',
       }}
     >
-      <Column width={theme.spaces?.superExtraReduced}>
+      <Column width={theme.spaces.superExtraReduced}>
         <Box alignItems='center' justifyContent='space-between'>
           <Box alignItems='center'>
-            <Box width={theme.spaces?.increased} height={theme.spaces?.increased}>
+            <Box width={theme.spaces.increased} height={theme.spaces.increased}>
               <NextImage
                 src={img}
-                borderRadius={theme.spaces?.miniReduced}
-                width={40}
-                height={40}
+                borderRadius={theme.spaces.miniReduced}
+                width={theme.spaces.increased}
+                height={theme.spaces.increased}
                 alt={'logo'}
               />
-              {/*<ImageBlock src={img} borderRadius={theme.spaces?.miniReduced} />*/}
             </Box>
-            <Text fontSize='normal.semiDefault' marginLeft={theme.spaces?.tiny}>
+            <Text fontSize='normal.semiDefault' marginLeft={theme.spaces.tiny}>
               {organization ? organization : 'Atls'}
             </Text>
           </Box>
           <RemoveIcon onClick={handleDelete} />
         </Box>
 
-        <Box marginTop={theme.spaces?.medium} justifyContent='space-between'>
-          <Text maxWidth={theme.spaces?.largeDecreased} fontSize='small.semiLarge'>
+        <Box marginTop={theme.spaces.medium} justifyContent='space-between'>
+          <Text maxWidth={theme.spaces.largeDecreased} fontSize='small.semiLarge'>
             {formatMessage({ id: 'confirm-deleting-organization.warning' })}
           </Text>
           <Button
