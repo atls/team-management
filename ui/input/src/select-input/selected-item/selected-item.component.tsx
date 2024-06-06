@@ -9,11 +9,11 @@ import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 
-import { SelectedItemsDispatchContext }    from '../selected-items'
-import { SelectedItemProps }               from './selected-item.interface'
-import { baseSelectedItemBoxStyles }       from './selected-item.styles'
-import { shapeSelectedItemBoxStyles }      from './selected-item.styles'
-import { appearanceSelectedItemBoxStyles } from './selected-item.styles'
+import { SelectedItemsDispatchContext }    from '../selected-items/index.js'
+import { SelectedItemProps }               from './selected-item.interface.js'
+import { baseSelectedItemBoxStyles }       from './selected-item.styles.js'
+import { shapeSelectedItemBoxStyles }      from './selected-item.styles.js'
+import { appearanceSelectedItemBoxStyles } from './selected-item.styles.js'
 
 const SelectedItemBox = styled(Box)(
   baseSelectedItemBoxStyles,

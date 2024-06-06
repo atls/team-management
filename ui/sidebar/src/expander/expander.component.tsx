@@ -1,7 +1,7 @@
 import styled                 from '@emotion/styled'
 
-import { ExpanderElement }    from './expander.element'
-import { baseExpanderStyles } from './expander.styles'
+import { ExpanderElement }    from './expander.element.js'
+import { baseExpanderStyles } from './expander.styles.js'
 
 const Expander = styled(ExpanderElement)(baseExpanderStyles)
 

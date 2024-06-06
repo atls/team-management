@@ -1,2 +1,2 @@
-export * from './icon-switch.component'
-export * from './icon-switch.interfaces'
+export * from './icon-switch.component.js'
+export * from './icon-switch.interfaces.js'

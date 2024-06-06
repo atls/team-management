@@ -7,10 +7,10 @@ import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { MouseEventHandler } from 'react'
 
-import { Backdrop }          from './backdrop'
-import { ChildContainer }    from './child-container'
-import { Container }         from './container'
-import { ModalProps }        from './modal.interfaces'
+import { Backdrop }          from './backdrop/index.js'
+import { ChildContainer }    from './child-container/index.js'
+import { Container }         from './container/index.js'
+import { ModalProps }        from './modal.interfaces.js'
 
 const Modal: FC<PropsWithChildren<ModalProps>> = ({ children, open, width, padding }) => {
   const childrenContainerHandler: MouseEventHandler<HTMLDivElement> = (e) => {

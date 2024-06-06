@@ -1,1 +1,1 @@
-export * from './check.component'
+export * from './check.component.js'

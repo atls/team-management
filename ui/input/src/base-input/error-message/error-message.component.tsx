@@ -5,8 +5,8 @@ import React                            from 'react'
 import { Box }                          from '@ui/layout'
 import { BoxProps }                     from '@ui/layout'
 
-import { baseErrorMessageStyles }       from './error-message.styles'
-import { appearanceErrorMessageStyles } from './error-message.styles'
+import { baseErrorMessageStyles }       from './error-message.styles.js'
+import { appearanceErrorMessageStyles } from './error-message.styles.js'
 
 const ErrorMessageBox = styled(Box)<BoxProps>(baseErrorMessageStyles, appearanceErrorMessageStyles)
 

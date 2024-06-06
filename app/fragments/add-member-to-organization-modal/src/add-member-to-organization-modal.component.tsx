@@ -14,9 +14,12 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 
-import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces'
-import { TeamSwitch }                        from './team-switch'
-import { useButtonActiveHook }               from './use-button-active.hook'
+import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
+import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
+import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
+import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
+import { TeamSwitch }                        from './team-switch/index.js'
+import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -24,11 +27,11 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme: any = useTheme()
   const { formatMessage } = useIntl()
 
-  const [isButtonActive, setButtonActive] = useState(false)
-  const [checkedSwitches, setCheckedSwitches] = useState([])
-  const [selectedUsers, setSelectedUsers] = useState([])
+  const [isButtonActive, setButtonActive] = useState<boolean>(false)
+  const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
+  const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
 
-  const handlerSwitch = (e: Event, category: string) => {
+  const handlerSwitch: HandlerSwitchType = (state, category) => {
     if (checkedSwitches.includes(category as never)) {
       setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
     } else {

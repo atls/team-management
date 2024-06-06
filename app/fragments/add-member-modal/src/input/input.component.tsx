@@ -6,12 +6,13 @@ import { useIntl }                  from 'react-intl'
 import { BaseInput }                from '@ui/input'
 import { emailValidator }           from '@ui/utils'
 
-import { AddMemberModalInputProps } from './input.interfaces'
+import { AddMemberModalInputProps } from './input.interfaces.js'
+import { HandleInputDeleteType }    from './input.interfaces.js'
+import { HandleInputChangeType }    from './input.interfaces.js'
 
 export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputIndex,
   updateInputValuesHook,
-  ...props
 }) => {
   const { formatMessage } = useIntl()
 
@@ -21,7 +22,7 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
 
   const [errorText, setErrorText] = useState('')
 
-  const handleInputChange = (e) => {
+  const handleInputChange: HandleInputChangeType = (e) => {
     const inputValueString = e.target.value
 
     if (inputValueString) {
@@ -33,7 +34,7 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
     updateInputValuesHook(inputIndex, inputValueString)
   }
 
-  const handleInputDelete = (): void => {
+  const handleInputDelete: HandleInputDeleteType = (): void => {
     updateInputValuesHook(inputIndex, null)
   }
 

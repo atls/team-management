@@ -6,7 +6,7 @@ import { prop }                from 'styled-tools'
 import { switchProp }          from 'styled-tools'
 import { ifProp }              from 'styled-tools'
 
-import { getBaseStyles }       from './styles'
+import { getBaseStyles }       from './styles/index.js'
 
 export const fillStyles: styleFn = ifProp(prop('fill', false), { width: '100%' })
 

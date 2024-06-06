@@ -10,13 +10,13 @@ import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 
-import { InputValueDispatchContext }        from '../select-input.context'
-import { SelectedItemsDispatchContext }     from '../selected-items'
-import { SuggestedItemsDispatchContext }    from '../suggested-items'
-import { SuggestedItemProps }               from './suggested-item.interfaces'
-import { baseSuggestedItemBoxStyles }       from './suggested-item.styles'
-import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles'
-import { appearanceSuggestedItemBoxStyles } from './suggested-item.styles'
+import { InputValueDispatchContext }        from '../select-input.context.js'
+import { SelectedItemsDispatchContext }     from '../selected-items/index.js'
+import { SuggestedItemsDispatchContext }    from '../suggested-items/index.js'
+import { SuggestedItemProps }               from './suggested-item.interfaces.js'
+import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
+import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles.js'
+import { appearanceSuggestedItemBoxStyles } from './suggested-item.styles.js'
 
 const SuggestedItemBox = styled(Box)(
   baseSuggestedItemBoxStyles,

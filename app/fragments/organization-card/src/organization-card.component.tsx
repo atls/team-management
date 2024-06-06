@@ -2,9 +2,7 @@ import { useTheme }              from '@emotion/react'
 
 import React                     from 'react'
 import { FC }                    from 'react'
-import { FormattedPlural }       from 'react-intl'
 import { memo }                  from 'react'
-import { useIntl }               from 'react-intl'
 
 import { Button }                from '@ui/button'
 import { TeamIcon }              from '@ui/icons'
@@ -14,32 +12,13 @@ import { Row }                   from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Box }                   from '@ui/layout'
 import { Text }                  from '@ui/text'
-import { Space }                 from '@ui/text'
 
-import { OrganizationCardProps } from './organization-card.interfaces'
-
-const Members: FC<any> = ({ quantity }) => {
-  const { formatMessage } = useIntl()
-  return (
-    <>
-      <TeamIcon color='white' />
-      <Text fontSize='small.default' color='white'>
-        {quantity}
-        <Space />
-        <FormattedPlural
-          value={quantity}
-          one={formatMessage({ id: 'organization-card_member.one' })}
-          other={formatMessage({ id: 'organization-card_member.many' })}
-        />
-      </Text>
-    </>
-  )
-}
+import { Members }               from './members/index.js'
+import { OrganizationCardProps } from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({
   title,
   description,
-  membersQuantity,
   organizationCoverSrc,
 }) => {
   const theme: any = useTheme()

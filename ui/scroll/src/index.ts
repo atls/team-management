@@ -1,3 +1,3 @@
-export * from './scroll.component'
-export * from './scroll.interface'
-export * from './scroll.styles'
+export * from './scroll.component.js'
+export * from './scroll.interface.js'
+export * from './scroll.styles.js'

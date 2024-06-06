@@ -8,12 +8,12 @@ import { forwardRef }               from 'react'
 
 import { Box }                      from '@ui/layout'
 
-import { BaseInputProps }           from './base-input.interfaces'
-import { BaseInputBoxProps }        from './base-input.interfaces'
-import { DeleteButton }             from './delete-button'
-import { ErrorMessage }             from './error-message'
-import { shapeStyles }              from '../input.styles'
-import { appearanceStyles }         from '../input.styles'
+import { BaseInputProps }           from './base-input.interfaces.js'
+import { BaseInputBoxProps }        from './base-input.interfaces.js'
+import { DeleteButton }             from './delete-button/index.js'
+import { ErrorMessage }             from './error-message/index.js'
+import { shapeStyles }              from '../input.styles.js'
+import { appearanceStyles }         from '../input.styles.js'
 
 const BaseInputBox = styled(Box)<BaseInputBoxProps>(shapeStyles, appearanceStyles)
 

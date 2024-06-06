@@ -1,1 +1,1 @@
-export * from './team-switch.component'
+export * from './team-switch.component.js'

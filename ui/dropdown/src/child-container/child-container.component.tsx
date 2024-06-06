@@ -7,10 +7,10 @@ import { FC }                             from 'react'
 import { PropsWithChildren }              from 'react'
 import { MouseEventHandler }              from 'react'
 
-import { ChildContainerProps }            from './child-container.interfaces'
-import { baseChildContainerStyles }       from './child-container.styles'
-import { shapeChildContainerStyles }      from './child-container.styles'
-import { appearanceChildContainerStyles } from './child-container.styles'
+import { ChildContainerProps }            from './child-container.interfaces.js'
+import { baseChildContainerStyles }       from './child-container.styles.js'
+import { shapeChildContainerStyles }      from './child-container.styles.js'
+import { appearanceChildContainerStyles } from './child-container.styles.js'
 
 const StyledBox = styled(Box)<BoxProps>(
   baseChildContainerStyles,

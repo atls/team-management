@@ -4,10 +4,10 @@ import { Box }                        from '@atls-ui-parts/layout'
 import React                          from 'react'
 import { FC }                         from 'react'
 
-import { GridAutoRowsProps }          from './grid.interfaces'
-import { GridAutoRowsContainerProps } from './grid.interfaces'
-import { gridAutoRowsStyles }         from './grid.styles'
-import { baseGridAutoRowsStyles }     from './grid.styles'
+import { GridAutoRowsProps }          from './grid.interfaces.js'
+import { GridAutoRowsContainerProps } from './grid.interfaces.js'
+import { gridAutoRowsStyles }         from './grid.styles.js'
+import { baseGridAutoRowsStyles }     from './grid.styles.js'
 
 const GridAutoRowsContainer = styled(Box)<GridAutoRowsContainerProps>(
   gridAutoRowsStyles,

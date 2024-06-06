@@ -6,9 +6,9 @@ import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
 import { useLayer }          from 'react-laag'
 
-import { DropdownButton }    from './button/button.component'
-import { ChildContainer }    from './child-container'
-import { DropdownProps }     from './dropdown.interface'
+import { DropdownButton }    from './button/button.component.js'
+import { ChildContainer }    from './child-container/index.js'
+import { DropdownProps }     from './dropdown.interface.js'
 
 export const Dropdown: FC<PropsWithChildren<DropdownProps>> = ({ children }) => {
   const [isOpen, setOpen] = useState(false)

@@ -8,7 +8,7 @@ import { Row }               from '@ui/layout'
 import { BaseSwitch }        from '@ui/switch'
 import { Text }              from '@ui/text'
 
-import { TeamSwitchProps }   from './team-swtich.interfaces'
+import { TeamSwitchProps }   from './team-swtich.interfaces.js'
 
 export const TeamSwitch: FC<PropsWithChildren<TeamSwitchProps>> = ({ teamName, onChange }) => {
   const theme: any = useTheme()

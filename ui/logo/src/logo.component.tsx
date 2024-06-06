@@ -5,7 +5,7 @@ import { FC }           from 'react'
 
 import { AtlantisIcon } from '@ui/icons'
 
-import { AvatarTheme }  from './logo.interfaces'
+import { AvatarTheme }  from './logo.interfaces.js'
 
 const Logo: FC = ({ ...props }) => {
   const theme: AvatarTheme = useTheme()

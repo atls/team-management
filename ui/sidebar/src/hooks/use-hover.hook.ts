@@ -1,8 +1,8 @@
 import { RefObject }           from 'react'
 import { useEffect }           from 'react'
 
-import { UseHoverStateResult } from './use-hover-state.interfaces'
-import { useHoverStateHook }   from './use-hover-state.hook'
+import { UseHoverStateResult } from './use-hover-state.interfaces.js'
+import { useHoverStateHook }   from './use-hover-state.hook.js'
 
 export const useHoverHook = (node: RefObject<HTMLDivElement>): UseHoverStateResult => {
   const [hovered, setHovered] = useHoverStateHook()

@@ -7,8 +7,8 @@ import { FC }                from 'react'
 import { Box }               from '@ui/layout'
 import { Text }              from '@ui/text'
 
-import { TagProps }          from './tag.interfaces'
-import { TagTextTheme }      from './tag.interfaces'
+import { TagProps }          from './tag.interfaces.js'
+import { TagTextTheme }      from './tag.interfaces.js'
 
 const Tag: FC<PropsWithChildren<TagProps>> = ({
   children,

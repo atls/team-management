@@ -3,9 +3,9 @@ import { useContext }           from 'react'
 
 import { Condition }            from '@ui/condition'
 
-import { SelectedItem }         from '../selected-item'
-import { SelectedItemProps }    from '../selected-item'
-import { SelectedItemsContext } from '../selected-items'
+import { SelectedItem }         from '../selected-item/index.js'
+import { SelectedItemProps }    from '../selected-item/index.js'
+import { SelectedItemsContext } from '../selected-items/index.js'
 
 export const SelectedItems = () => {
   const selectedItems: Array<SelectedItemProps> = useContext(SelectedItemsContext) as any

@@ -3,8 +3,8 @@ import { Row as BaseRow }       from '@atls-ui-parts/layout'
 import { Column as BaseColumn } from '@atls-ui-parts/layout'
 import { BoxProps }             from '@atls-ui-parts/layout'
 
-import { FlexProps }            from './flex.interfaces'
-import { flexStyles }           from './flex.styles'
+import { FlexProps }            from './flex.interfaces.js'
+import { flexStyles }           from './flex.styles.js'
 
 export const Row = styled(BaseRow)<FlexProps>(flexStyles)
 

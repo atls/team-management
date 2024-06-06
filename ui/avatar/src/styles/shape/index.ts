@@ -1,2 +1,2 @@
-export * from './shape.styles'
-export * from './shape.interfaces'
+export * from './shape.styles.js'
+export * from './shape.interfaces.js'

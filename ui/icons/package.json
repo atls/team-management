@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
     "build": "generate-icons src/ -i ./icons"
   },

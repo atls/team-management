@@ -1,1 +1,1 @@
-export * from './add-member-modal.component'
+export * from './add-member-modal.component.js'

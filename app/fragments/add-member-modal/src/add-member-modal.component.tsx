@@ -18,10 +18,14 @@ import { Modal }                    from '@ui/modal'
 import { IconSwitch }               from '@ui/switch'
 import { Text }                     from '@ui/text'
 
-import { TeamMemberModalProps }     from './add-member-modal.interfaces'
-import { AddMemberModalInput }      from './input'
-import { useUpdateInputValuesHook } from './update-input-values.hook'
-import { useButtonActiveHook }      from './use-button-active.hook'
+import { HandleAddInputClickType }  from './add-member-modal.interfaces.js'
+import { InputValuesType }          from './add-member-modal.interfaces.js'
+import { HandlerSwitchType }        from './add-member-modal.interfaces.js'
+import { TeamMemberModalProps }     from './add-member-modal.interfaces.js'
+import { CheckedSwitchesType }      from './add-member-modal.interfaces.js'
+import { AddMemberModalInput }      from './input/index.js'
+import { useUpdateInputValuesHook } from './update-input-values.hook.js'
+import { useButtonActiveHook }      from './use-button-active.hook.js'
 
 export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   const theme: any = useTheme()
@@ -35,21 +39,21 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   }
 
   const [isButtonActive, setButtonActive] = useState(false)
-  const [checkedSwitches, setCheckedSwitches] = useState([])
-  const [inputValues, setInputValues] = useState([''])
+  const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
+  const [inputValues, setInputValues] = useState<InputValuesType>([''])
 
   useButtonActiveHook(checkedSwitches, setButtonActive)
   const updateInputValuesHook = useUpdateInputValuesHook(inputValues, setInputValues)
 
-  const handlerSwitch = (e, category: string): void => {
+  const handlerSwitch: HandlerSwitchType = (state, category) => {
     if (checkedSwitches.includes(category as never)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
+      setCheckedSwitches(checkedSwitches.filter((c: string) => c !== (category as never)))
     } else {
       setCheckedSwitches(checkedSwitches.concat([category as never]))
     }
   }
 
-  const handleAddInputClick = (): void => {
+  const handleAddInputClick: HandleAddInputClickType = () => {
     setInputValues(inputValues.concat(''))
   }
 
@@ -57,7 +61,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
     <Modal open={open} padding={theme.spaces.increased}>
       <Column gap={theme.spaces.moderate}>
         <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
-        {inputValues.map((inputValue, index) => (
+        {inputValues.map((_inputValue: string, index: number) => (
           <AddMemberModalInput inputIndex={index} updateInputValuesHook={updateInputValuesHook} />
         ))}
         <Row justifyContent='center'>

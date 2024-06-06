@@ -7,13 +7,13 @@ import { FC }                           from 'react'
 import { PropsWithChildren }            from 'react'
 import { useHover }                     from 'react-laag'
 
-import { DropdownButtonProps }          from './button.interfaces'
-import { DropdownButtonContainerProps } from './button.interfaces'
-import { DotTheme }                     from './button.interfaces'
-import { DotComponent }                 from './dot'
-import { baseButtonStyles }             from './button.styles'
-import { sizeButtonStyles }             from './button.styles'
-import { appearanceButtonStyles }       from './button.styles'
+import { DropdownButtonProps }          from './button.interfaces.js'
+import { DropdownButtonContainerProps } from './button.interfaces.js'
+import { DotTheme }                     from './button.interfaces.js'
+import { DotComponent }                 from './dot/index.js'
+import { baseButtonStyles }             from './button.styles.js'
+import { sizeButtonStyles }             from './button.styles.js'
+import { appearanceButtonStyles }       from './button.styles.js'
 
 const DropdownButtonContainer = styled(Box)<DropdownButtonContainerProps>(
   baseButtonStyles,

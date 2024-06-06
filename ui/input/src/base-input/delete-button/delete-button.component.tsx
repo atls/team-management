@@ -8,8 +8,8 @@ import { RemoveIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
 import { BoxProps }               from '@ui/layout'
 
-import { DeleteButtonProps }      from './delete-button.interfaces'
-import { baseDeleteButtonStyles } from './delete-button.styles'
+import { DeleteButtonProps }      from './delete-button.interfaces.js'
+import { baseDeleteButtonStyles } from './delete-button.styles.js'
 
 const DeleteButtonContainer = styled(Box)<BoxProps>(baseDeleteButtonStyles)
 

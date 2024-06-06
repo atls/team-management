@@ -1,1 +1,1 @@
-export * from './suggested-items-container.component'
+export * from './suggested-items-container.component.js'
