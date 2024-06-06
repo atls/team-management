@@ -7,11 +7,12 @@ import { PropsWithChildren } from 'react'
 import { Row }               from '@ui/layout'
 import { BaseSwitch }        from '@ui/switch'
 import { Text }              from '@ui/text'
+import { ThemeType }         from '@ui/theme'
 
 import { TeamSwitchProps }   from './team-swtich.interfaces.js'
 
 export const TeamSwitch: FC<PropsWithChildren<TeamSwitchProps>> = ({ teamName, onChange }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
   return (
     <Row
       justifyContent='space-between'

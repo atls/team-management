@@ -17,6 +17,7 @@ import { Column }                  from '@ui/layout'
 import { Modal }                   from '@ui/modal'
 import { IconSwitch }              from '@ui/switch'
 import { Text }                    from '@ui/text'
+import { ThemeType }               from '@ui/theme'
 
 import { HandleAddInputClickType } from './add-member-modal.interfaces.js'
 import { InputValuesType }         from './add-member-modal.interfaces.js'
@@ -27,7 +28,7 @@ import { AddMemberModalInput }     from './input/index.js'
 import { useButtonActiveHook }     from './use-button-active.hook.js'
 
 export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
   const { formatMessage } = useIntl()
 

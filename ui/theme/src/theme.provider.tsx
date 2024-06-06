@@ -29,8 +29,6 @@ const theme = {
   spaces,
 }
 
-export type ThemeType = typeof theme
-
 export const ThemeProvider = ({ children }) => (
   <>
     <GlobalStyles />

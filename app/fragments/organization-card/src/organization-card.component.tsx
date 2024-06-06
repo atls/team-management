@@ -12,6 +12,7 @@ import { Row }                   from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Box }                   from '@ui/layout'
 import { Text }                  from '@ui/text'
+import { ThemeType }             from '@ui/theme'
 
 import { Members }               from './members/index.js'
 import { OrganizationCardProps } from './organization-card.interfaces.js'
@@ -21,7 +22,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({
   description,
   organizationCoverSrc,
 }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
     <Box

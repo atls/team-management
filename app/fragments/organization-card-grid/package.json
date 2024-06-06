@@ -6,7 +6,8 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/layout": "workspace:*"
+    "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

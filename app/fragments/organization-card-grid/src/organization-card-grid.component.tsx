@@ -6,13 +6,14 @@ import { PropsWithChildren }         from 'react'
 import { memo }                      from 'react'
 
 import { GridAutoRows }              from '@ui/layout'
+import { ThemeType }                 from '@ui/theme'
 
 import { OrganizationCardGridProps } from './organization-card-grid.interfaces.js'
 
 export const OrganizationCardGrid: FC<PropsWithChildren<OrganizationCardGridProps>> = memo(({
   children,
 }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
     <GridAutoRows

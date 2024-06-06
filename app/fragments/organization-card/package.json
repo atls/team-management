@@ -10,7 +10,8 @@
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
-    "@ui/text": "workspace:*"
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

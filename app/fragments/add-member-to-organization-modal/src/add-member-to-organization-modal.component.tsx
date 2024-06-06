@@ -12,6 +12,7 @@ import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
+import { ThemeType }                         from '@ui/theme'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
@@ -23,7 +24,7 @@ import { useButtonActiveHook }               from './use-button-active.hook.js'
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
 }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState<boolean>(false)

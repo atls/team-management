@@ -13,6 +13,7 @@
     "@ui/modal": "workspace:*",
     "@ui/switch": "workspace:*",
     "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
