@@ -19,15 +19,15 @@ export const boxBaseStyles: styleFn = ({ theme: checkboxTheme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  border: '1px solid',
-  width: 14,
-  height: 14,
+  border: theme.borders.thin,
+  width: theme.spaces.semiMedium,
+  height: theme.spaces.semiMedium,
   borderRadius: checkboxTheme.radii.extra,
 })
 
 export const boxShapeStyles = createBoxShapeStyles({
-  size: 14,
-  borderWidth: 1,
+  size: theme.spaces.semiMedium,
+  borderWidth: theme.spaces.nano,
   borderRadius: theme.radii.extra,
 })
 
@@ -80,7 +80,7 @@ export const checkAppearanceStyles = createCheckAppearanceStyles({
   color: theme.colors.checkbox.checked.background,
 })
 export const checkmarkShapeStyles = createCheckShapeStyles({
-  size: 20,
+  size: theme.spaces.regular,
   borderRadius: theme.radii.zero,
 })
 export const checkmarkCheckStyles = ifProp(

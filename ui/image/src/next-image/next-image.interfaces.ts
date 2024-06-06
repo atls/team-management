@@ -1,6 +1,6 @@
 export interface NextImageProps {
-  src: string | undefined
-  alt: string | undefined
+  src: string
+  alt: string
   width?: number
   height?: number
   borderRadius?: number | string

@@ -12,6 +12,7 @@ import { OrgamizationsIcon }  from '@ui/icons'
 import { LogOutIcon }         from '@ui/icons'
 import { Box }                from '@ui/layout'
 import { Column }             from '@ui/layout'
+import { Row }                from '@ui/layout'
 import { Logo }               from '@ui/logo'
 import { Text }               from '@ui/text'
 import { ThemeType }          from '@ui/theme'
@@ -78,16 +79,14 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Items>
             </Column>
 
-            <Box display='flex' flexDirection='column' alignItems='center'>
+            <Column alignItems='center'>
               <Divider
                 weight={1}
                 backgroundColor={theme.colors.lightgrey}
                 maxWidth={theme.spaces.largeSemiDefault}
                 margin='auto'
               />
-              <Box
-                display='flex'
-                flexDirection='row'
+              <Row
                 alignItems='center'
                 minWidth={theme.spaces.largeSemiDefault}
                 margin={theme.spaces.miniReduced}
@@ -100,15 +99,15 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                   src={src}
                   alt='avatar'
                 />
-                <Box display='flex' flexDirection='column'>
+                <Column>
                   <Text fontSize='small.semiLarge'>{name}</Text>
                   <Text fontSize='small.default'>{email}</Text>
-                </Box>
+                </Column>
                 <Box>
                   <LogOutIcon height={theme.spaces.large} width={theme.spaces.large} />
                 </Box>
-              </Box>
-            </Box>
+              </Row>
+            </Column>
           </Expander>
         </Container>
       </Wrapper>

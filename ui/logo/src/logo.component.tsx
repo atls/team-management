@@ -4,11 +4,10 @@ import React            from 'react'
 import { FC }           from 'react'
 
 import { AtlantisIcon } from '@ui/icons'
+import { ThemeType }    from '@ui/theme'
 
-import { AvatarTheme }  from './logo.interfaces'
-
-const Logo: FC = ({ ...props }) => {
-  const theme: AvatarTheme = useTheme()
-  return <AtlantisIcon width={theme.spaces?.semiSuperExtra} height={theme.spaces?.large} />
+const Logo: React.FC = ({ ...props }) => {
+  const theme = useTheme() as ThemeType
+  return <AtlantisIcon width={theme.spaces.semiSuperExtra} height={theme.spaces.large} />
 }
 export { Logo }

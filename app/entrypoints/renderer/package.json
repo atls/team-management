@@ -21,8 +21,6 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "@app/organizations-modal": "workspace:*",
-    "D": "1.0.0",
     "react-intl": "6.6.8"
   }
 }

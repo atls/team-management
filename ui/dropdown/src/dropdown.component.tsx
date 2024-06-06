@@ -8,9 +8,8 @@ import { useLayer }          from 'react-laag'
 
 import { DropdownButton }    from './button/button.component'
 import { ChildContainer }    from './child-container'
-import { DropdownProps }     from './dropdown.interface'
 
-export const Dropdown: FC<PropsWithChildren<DropdownProps>> = ({ children }) => {
+export const Dropdown: FC<PropsWithChildren> = ({ children }) => {
   const [isOpen, setOpen] = useState(false)
 
   const buttonClickHandler = () => setOpen(!isOpen)

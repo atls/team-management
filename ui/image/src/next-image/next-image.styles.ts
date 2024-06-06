@@ -4,10 +4,10 @@ import { styleFn }           from 'styled-system'
 
 import { ImageWrapperProps } from './next-image.interfaces'
 
-export const createBaseNextImageStyles: styleFn = () =>
+export const createBaseNextImageStyles: styleFn = ({ theme }) =>
   ({ borderRadius }) => ({
-    width: '100%',
-    height: '100%',
+    width: theme.spaces.fullWidth,
+    height: theme.spaces.fullWidth,
     borderRadius: borderRadius,
     overflow: 'hidden',
   })
