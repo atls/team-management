@@ -1,6 +1,7 @@
 import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
+import { memo }        from 'react'
 import { FC }                from 'react'
 import { useState }          from 'react'
 import { useIntl }           from 'react-intl'
@@ -21,7 +22,7 @@ import { ThemeType }         from '@ui/theme'
 
 import { UsersModalProps }   from './users-modal.interfaces.js'
 
-const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount, open }) => {
+const UsersModal: FC<UsersModalProps> = memo(({ avatar, name, position, usersCount, open }) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -130,6 +131,6 @@ const UsersModal: FC<UsersModalProps> = ({ avatar, name, position, usersCount, o
       </Column>
     </Modal>
   )
-}
+})
 
 export { UsersModal }

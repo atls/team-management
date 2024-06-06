@@ -1,6 +1,7 @@
 import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
+import { memo }              from 'react'
 import { FC }                      from 'react'
 import { useIntl }                 from 'react-intl'
 
@@ -14,7 +15,7 @@ import { ThemeType }               from '@ui/theme'
 
 import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
-const OrganizationsModal: FC<OrganizationsModalProps> = ({ organization, img, open }) => {
+const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, img, open }) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
@@ -46,6 +47,6 @@ const OrganizationsModal: FC<OrganizationsModalProps> = ({ organization, img, op
       </Column>
     </Modal>
   )
-}
+})
 
 export { OrganizationsModal }
