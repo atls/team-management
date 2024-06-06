@@ -27,10 +27,14 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
 
     if (inputValueString) {
       const isEmailValid = emailValidator(inputValueString)
-      if (!isEmailValid) setErrorText(formatMessage({ id: 'add-member-modal_input.invalid-email' }))
-      else setErrorText('')
-    } else setErrorText('')
-
+      if (!isEmailValid) {
+        setErrorText(formatMessage({ id: 'add-member-modal_input.invalid-email' }))
+      } else {
+        setErrorText('')
+      }
+    } else {
+      setErrorText('')
+    }
     updateInputValuesHook(inputIndex, inputValueString)
   }
 
