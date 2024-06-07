@@ -1,11 +1,11 @@
-import styled                      from '@emotion/styled'
+import styled                 from '@emotion/styled'
 
-import React                       from 'react'
-import { PropsWithChildren } from 'react'
-import { FC }                      from 'react'
+import React                  from 'react'
+import { PropsWithChildren }  from 'react'
+import { FC }                 from 'react'
 
-import { SwitchWrapperProps }      from './switch.interface'
-import { baseSwitchStyles }        from './switch.styles'
+import { SwitchWrapperProps } from './switch.interface.js'
+import { baseSwitchStyles }   from './switch.styles.js'
 
 const Switch = styled.div(baseSwitchStyles)
 
