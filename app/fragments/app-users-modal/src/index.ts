@@ -1,1 +1,1 @@
-export * from './users-modal.component'
+export * from './users-modal.component.js'

@@ -1,8 +1,8 @@
 import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
-import { memo }        from 'react'
 import { FC }                from 'react'
+import { memo }              from 'react'
 import { useState }          from 'react'
 import { useIntl }           from 'react-intl'
 
@@ -76,7 +76,7 @@ const UsersModal: FC<UsersModalProps> = memo(({ avatar, name, position, usersCou
                     color='outerspace'
                     marginTop={theme.spaces.semiTiny}
                   >
-                    {position ? position : 'Frontend Developer'}
+                    {position}
                   </Text>
                 </Column>
               </Box>

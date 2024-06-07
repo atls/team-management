@@ -1,1 +1,1 @@
-export * from './users-grid.component'
+export * from './users-grid.component.js'

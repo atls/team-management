@@ -1,1 +1,1 @@
-export * from './user-badge.component'
+export * from './user-badge.component.js'

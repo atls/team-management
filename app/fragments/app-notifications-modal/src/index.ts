@@ -1,1 +1,1 @@
-export * from './notifications-modal.component'
+export * from './notifications-modal.component.js'

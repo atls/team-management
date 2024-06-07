@@ -3,6 +3,6 @@ export interface UserCardProps {
   position?: string
   time?: string
   organizations?: string
-  avatar?: string
+  avatar: string
   checked?: boolean
 }

@@ -1,1 +1,1 @@
-export * from './organizations-modal.component'
+export * from './organizations-modal.component.js'

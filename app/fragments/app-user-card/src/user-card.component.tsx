@@ -39,11 +39,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
           width={theme.spaces.largeSemiIncreased}
           height={theme.spaces.largeDefault}
         >
-          <NextImage
-            src={avatar ? avatar : '/profile.png'}
-            borderRadius={theme.radii.tl24tr24}
-            alt='avatar'
-          />
+          <NextImage src={avatar} borderRadius={theme.radii.tl24tr24} alt='avatar' />
           <Column
             position='absolute'
             marginTop={theme.spaces.largeSemiDecreased}

@@ -1,1 +1,1 @@
-export * from './theme-selector.component'
+export * from './theme-selector.component.js'

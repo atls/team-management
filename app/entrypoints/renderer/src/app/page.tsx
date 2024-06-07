@@ -2,5 +2,5 @@
 
 import React from 'react'
 
-const Page = () => <></>
+const Page = () => {}
 export default Page
