@@ -11,7 +11,9 @@ import { ThemeType }         from '@ui/theme'
 const ThemeSelector: React.FC = () => {
   const theme = useTheme() as ThemeType
 
-  const onThemeChange = () => {}
+  const onThemeChange = () => {
+    onThemeChange()
+  }
   return (
     <Row maxWidth={theme.spaces.semiSuper} justifyContent='space-between'>
       <Button

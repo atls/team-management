@@ -23,7 +23,9 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
   const handleDelete = () => {
     setOpenMenu(!openMenu)
   }
-  const removeOrganization = () => {}
+  const removeOrganization = () => {
+    removeOrganization()
+  }
 
   return (
     <motion.div
