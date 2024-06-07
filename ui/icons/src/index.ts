@@ -1,3 +1,5 @@
+export * from './ActionsIcon'
+export * from './AddIcon'
 export * from './AlarmClockIcon'
 export * from './ArrowIcon'
 export * from './ArrowChevronIcon'

@@ -1,4 +1,11 @@
 {
+  "add-member-modal.header": "Добавление участника команды",
+  "add-member-modal.invite": "Пригласить",
+  "add-member-modal_input.invalid-email": "Введите правильный E-mail",
+  "add-member-to-organization-modal.header": "Добавить сотрудника в организацию",
+  "add-member-to-organization-modal_input.placeholder": "Team member",
+  "organization-card_member.one": "member",
+  "organization-card_member.many": "members",
   "confirm-deleting-organization.warning": "Вы уверены, что хотите исключить пользователя из данной организации?",
   "confirm-deleting-organization.yes": "Да",
   "confirm-deleting-organization.no":"Нет",
