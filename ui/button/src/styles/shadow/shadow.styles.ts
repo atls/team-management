@@ -1,10 +1,5 @@
-import { CSSProperties } from 'react'
-import { Config }        from 'styled-system'
-import { system }        from 'styled-system'
-
-export interface ButtonShadow {
-  boxShadow?: CSSProperties['boxShadow']
-}
+import { Config } from 'styled-system'
+import { system } from 'styled-system'
 
 const shadowConfig: Config = {
   boxShadow: {
