@@ -11,5 +11,4 @@ export const replacements = {
   TelegramIcon: {
     '#282828': '{props.color || "#282828"}',
   },
-  WrongOutlineIcon: { '#282828': '{props.color || "#282828"}' },
 }
