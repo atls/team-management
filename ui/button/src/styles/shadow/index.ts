@@ -1,1 +1,1 @@
-export * from './shadow.styles'
+export * from './shadow.styles.js'

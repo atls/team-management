@@ -1,2 +1,2 @@
-export * from './image-block'
-export * from './next-image'
+export * from './image-block/index.js'
+export * from './next-image/index.js'
