@@ -7,10 +7,10 @@ import { Column as BaseColumn } from '@atls-ui-parts/layout'
 import { TypographyProps }      from 'styled-system'
 import { typography }           from 'styled-system'
 
-import { LayoutWithGap }        from './styles'
-import { ColumnWithPosition }   from './styles'
-import { gapStyles }            from './styles'
-import { positionStyles }       from './styles'
+import { LayoutWithGap }        from './styles/index.js'
+import { ColumnWithPosition }   from './styles/index.js'
+import { gapStyles }            from './styles/index.js'
+import { positionStyles }       from './styles/index.js'
 
 type GeneralProps = LayoutWithGap & ColumnWithPosition
 

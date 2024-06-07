@@ -8,9 +8,9 @@ import React                        from 'react'
 import { ForwardRefRenderFunction } from 'react'
 import { forwardRef }               from 'react'
 
-import { InputProps }               from './input.interfaces'
-import { shapeStyles }              from './input.styles'
-import { appearanceStyles }         from './input.styles'
+import { InputProps }               from './input.interfaces.js'
+import { shapeStyles }              from './input.styles.js'
+import { appearanceStyles }         from './input.styles.js'
 
 const InputElement = styled(Box)<BoxProps>(shapeStyles, appearanceStyles)
 
