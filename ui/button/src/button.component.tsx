@@ -9,20 +9,22 @@ import { useState }          from 'react'
 
 import { useHover }          from '@ui/utils'
 
-import { ButtonProps }       from './button.interfaces.js'
-import { IconAttachment }    from './icon-attachment/index.js'
-import { baseStyles }        from './button.styles.js'
-import { shapeStyles }       from './button.styles.js'
-import { contentStyles }     from './button.styles.js'
-import { fillStyles }        from './button.styles.js'
-import { appearanceStyles }  from './styles/index.js'
+import { ButtonProps }       from './button.interfaces'
+import { IconAttachment }    from './icon-attachment'
+import { ButtonShadow }      from './styles/shadow'
+import { baseStyles }        from './button.styles'
+import { shapeStyles }       from './button.styles'
+import { contentStyles }     from './button.styles'
+import { fillStyles }        from './button.styles'
+import { appearanceStyles }  from './styles'
 
 export const ButtonElement = styled('button')<any>(
   baseStyles,
   contentStyles,
   shapeStyles,
   appearanceStyles,
-  fillStyles
+  fillStyles,
+  ButtonShadow
 )
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((

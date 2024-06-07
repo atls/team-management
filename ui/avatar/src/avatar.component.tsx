@@ -2,7 +2,7 @@ import React                from 'react'
 import { FC }               from 'react'
 
 import { Condition }        from '@ui/condition'
-import { ImageBlock }       from '@ui/image'
+import { NextImage }        from '@ui/image'
 import { Box }              from '@ui/layout'
 
 import { AvatarProps }      from './avatar.interfaces.js'
@@ -31,7 +31,7 @@ export const Avatar: FC<AvatarProps> = ({
       padding={padding}
     >
       <Condition match={image}>
-        <ImageBlock src={src} alt={alt} />
+        <NextImage src={src} alt={alt} />
       </Condition>
     </ContainerWrapper>
   </Box>

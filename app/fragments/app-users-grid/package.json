@@ -1,0 +1,22 @@
+{
+  "name": "@app/users-grid",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@types/react": "^18.3.2"
+  }
+}

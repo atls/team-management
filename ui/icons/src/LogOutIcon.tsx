@@ -5,7 +5,7 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces.js'
 
-export const LogoutIcon = React.memo((props: IconProps) => {
+export const LogOutIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -39,4 +39,4 @@ export const LogoutIcon = React.memo((props: IconProps) => {
       </defs>
     </svg>
   )
-})
+}

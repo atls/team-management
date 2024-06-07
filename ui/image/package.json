@@ -5,7 +5,8 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/image": "0.1.1"
+    "@atls-ui-parts/image": "0.1.1",
+    "@atls-ui-parts/next-image": "0.1.2"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
