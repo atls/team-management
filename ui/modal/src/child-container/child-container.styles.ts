@@ -13,16 +13,14 @@ export const baseChildContainerStyles: styleFn = ({ theme }) => ({
 })
 
 export const sizeChildContainerStyles: styleFn = ({ theme }) => ({
-  width: theme.spaces.superExtra,
   height: 'min-content',
   maxWidth: theme.spaces.fullWidthWithPaddingNormal,
   maxHeight: theme.spaces.fullWidthWithPaddingNormal,
   margin: 'auto',
-  padding: theme.spaces.paddingsNormal,
 })
 
 export const appearanceChildContainerStyles: styleFn = ({ theme }) => ({
   boxShadow: theme.shadows.black,
-  borderRadius: theme.radii.f24,
+  borderRadius: theme.radii.bigger,
   backgroundColor: theme.colors.modal.childContainer,
 })

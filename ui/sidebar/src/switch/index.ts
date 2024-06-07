@@ -1,2 +1,2 @@
-export * from './switch.component'
-export * from './switch.styles'
+export * from './switch.component.js'
+export * from './switch.styles.js'

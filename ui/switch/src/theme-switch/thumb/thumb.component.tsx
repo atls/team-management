@@ -4,8 +4,8 @@ import { FC }                  from 'react'
 import { LightThemeIcon }      from '@ui/icons'
 import { DarkThemeIcon }       from '@ui/icons'
 
-import { ThumbElement }        from './thumb.element'
-import { ThumbComponentProps } from './thumb.interfaces'
+import { ThumbElement }        from './thumb.element.js'
+import { ThumbComponentProps } from './thumb.interfaces.js'
 
 const ThumbComponent: FC<ThumbComponentProps> = ({ checked, hover }) => (
   <>

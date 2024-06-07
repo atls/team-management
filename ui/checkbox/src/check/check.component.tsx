@@ -1,9 +1,9 @@
 import styled                    from '@emotion/styled'
 
-import { checkAppearanceStyles } from '../checkbox.styles'
-import { checkBaseStyles }       from '../checkbox.styles'
-import { checkmarkShapeStyles }  from '../checkbox.styles'
-import { checkmarkCheckStyles }  from '../checkbox.styles'
+import { checkmarkShapeStyles }  from '../checkbox.styles.js'
+import { checkmarkCheckStyles }  from '../checkbox.styles.js'
+import { checkAppearanceStyles } from '../checkbox.styles.js'
+import { checkBaseStyles }       from '../checkbox.styles.js'
 
 const Check = styled.div<{ checked: boolean }>(
   checkBaseStyles,

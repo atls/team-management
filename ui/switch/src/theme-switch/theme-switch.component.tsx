@@ -7,12 +7,12 @@ import { FC }                     from 'react'
 import { useRef }                 from 'react'
 import { useHover }               from 'react-laag'
 
-import { ThemeSwitchProps }       from './theme-switch.interfaces'
-import { ThumbComponent }         from './thumb/thumb.component'
-import { baseHandleStyles }       from './theme-switch.styles'
-import { sizeHandleStyles }       from './theme-switch.styles'
-import { shapeHandleStyles }      from './theme-switch.styles'
-import { appearanceHandleStyles } from './theme-switch.styles'
+import { ThemeSwitchProps }       from './theme-switch.interfaces.js'
+import { ThumbComponent }         from './thumb/thumb.component.js'
+import { baseHandleStyles }       from './theme-switch.styles.js'
+import { sizeHandleStyles }       from './theme-switch.styles.js'
+import { shapeHandleStyles }      from './theme-switch.styles.js'
+import { appearanceHandleStyles } from './theme-switch.styles.js'
 
 const ThemeSwitchContainer = styled(HandleElement)(
   baseHandleStyles,

@@ -7,7 +7,7 @@ import { useMemo }             from 'react'
 
 import { Box }                 from '@ui/layout'
 
-import { IconAttachmentProps } from './icon-attachment.interface'
+import { IconAttachmentProps } from './icon-attachment.interface.js'
 
 const IconAttachment: FC<IconAttachmentProps> = ({
   iconSvg,

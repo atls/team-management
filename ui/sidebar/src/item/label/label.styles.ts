@@ -1,6 +1,6 @@
 import { CSSObject } from '@emotion/css'
 
-import { theme }     from '../../../../theme'
+import { theme }     from '@ui/theme'
 
 export const baseItemLabelStyles: CSSObject = {
   textOverflow: 'ellipsis',

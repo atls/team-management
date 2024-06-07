@@ -5,11 +5,11 @@ import React                     from 'react'
 import { FC }                    from 'react'
 import { PropsWithChildren }     from 'react'
 
-import { ThumbElementProps }     from './thumb.interfaces'
-import { baseThumbStyles }       from './thumb.styles'
-import { sizeThumbStyles }       from './thumb.styles'
-import { shapeThumbStyles }      from './thumb.styles'
-import { appearanceThumbStyles } from './thumb.styles'
+import { ThumbElementProps }     from './thumb.interfaces.js'
+import { baseThumbStyles }       from './thumb.styles.js'
+import { sizeThumbStyles }       from './thumb.styles.js'
+import { shapeThumbStyles }      from './thumb.styles.js'
+import { appearanceThumbStyles } from './thumb.styles.js'
 
 const ThumbElementContainer = styled(Box)<any>(
   baseThumbStyles,

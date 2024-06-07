@@ -3,8 +3,8 @@ import { FC }                   from 'react'
 import { motion }               from 'framer-motion'
 import { useMemo }              from 'react'
 
-import { PinnerElementProps }   from './pinner.interface'
-import { pinnerMotionVariants } from './pinner.motion'
+import { PinnerElementProps }   from './pinner.interface.js'
+import { pinnerMotionVariants } from './pinner.motion.js'
 
 const PinnerElement: FC<PinnerElementProps> = ({ opened, ...props }) => {
   const initial = useMemo(() => (opened ? 'visible' : 'hidden'), [opened])

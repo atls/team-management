@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -14,7 +15,7 @@
     "@atls-ui-parts/layout": "0.1.1",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
-    "@types/react": "^18.3.2",
+    "@types/react": "^18.3.3",
     "@types/styled-system": "^5.1.22",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",

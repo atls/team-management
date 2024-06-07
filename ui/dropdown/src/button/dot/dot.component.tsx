@@ -5,9 +5,9 @@ import { BoxProps }            from '@atls-ui-parts/layout'
 import React                   from 'react'
 import { FC }                  from 'react'
 
-import { DotProps }            from './dot.iterfaces'
-import { sizeDotStyles }       from './dot.styles'
-import { appearanceDotStyles } from './dot.styles'
+import { DotProps }            from './dot.iterfaces.js'
+import { sizeDotStyles }       from './dot.styles.js'
+import { appearanceDotStyles } from './dot.styles.js'
 
 const Dot = styled(Box)<BoxProps>(sizeDotStyles, appearanceDotStyles)
 

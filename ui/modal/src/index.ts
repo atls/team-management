@@ -1,2 +1,2 @@
-export * from './modal.component'
-export * from './modal.interfaces'
+export * from './modal.component.js'
+export * from './modal.interfaces.js'

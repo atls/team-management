@@ -1,2 +1,2 @@
-export * from './button.component'
-export * from './button.interfaces'
+export * from './button.component.js'
+export * from './button.interfaces.js'

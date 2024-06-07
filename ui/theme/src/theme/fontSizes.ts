@@ -13,6 +13,7 @@ export const fontSizes = {
     semiDefault: 16,
     default: 18,
     semiIncreased: 20,
+    increased: 24,
   },
   medium: {
     semiReduced: 25,
