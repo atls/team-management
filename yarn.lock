@@ -171,7 +171,8 @@ __metadata:
   resolution: "@app/animated-card@workspace:app/fragments/app-animated-card"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:^18.3.2"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -194,6 +195,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:0.0.1"
@@ -212,6 +214,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -234,6 +237,7 @@ __metadata:
     "@app/animated-card": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
@@ -274,11 +278,13 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/switch": "workspace:*"
     "@ui/theme": "workspace:*"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -291,6 +297,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -308,6 +315,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/card": "workspace:*"
     "@ui/checkbox": "workspace:*"
     "@ui/divider": "workspace:*"
@@ -331,6 +339,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
   peerDependencies:
@@ -345,6 +354,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
@@ -369,6 +379,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
