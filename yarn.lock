@@ -3335,6 +3335,7 @@ __metadata:
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
     "@atls-ui-parts/input": "npm:0.1.1"
+    "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"

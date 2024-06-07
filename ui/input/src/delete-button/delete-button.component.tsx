@@ -8,8 +8,8 @@ import { FC }                     from 'react'
 import { Condition }              from '@ui/condition'
 import { RemoveIcon }             from '@ui/icons'
 
-import { DeleteButtonProps }      from './delete-button.interfaces'
-import { baseDeleteButtonStyles } from './delete-button.styles'
+import { DeleteButtonProps }      from './delete-button.interfaces.js'
+import { baseDeleteButtonStyles } from './delete-button.styles.js'
 
 const DeleteButtonContainer = styled(Box)<BoxProps>(baseDeleteButtonStyles)
 

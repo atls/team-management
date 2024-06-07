@@ -4,8 +4,8 @@ import React                          from 'react'
 import { FC }                         from 'react'
 import { PropsWithChildren }          from 'react'
 
-import { ContainerProps }             from './image-block.interfaces'
-import { createBaseImageBlockStyles } from './image-block.styles'
+import { ContainerProps }             from './image-block.interfaces.js'
+import { createBaseImageBlockStyles } from './image-block.styles.js'
 
 const Image = styled.img<ContainerProps>(createBaseImageBlockStyles())
 
