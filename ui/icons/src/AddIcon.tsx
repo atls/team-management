@@ -4,7 +4,8 @@ import { useTheme }  from '@emotion/react'
 import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
-export const AddIcon = React.memo((props: IconProps) => {
+
+export const AddIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -21,4 +22,4 @@ export const AddIcon = React.memo((props: IconProps) => {
       />
     </svg>
   )
-})
+}

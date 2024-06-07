@@ -4,7 +4,8 @@ import { useTheme }  from '@emotion/react'
 import React         from 'react'
 
 import { IconProps } from '../icons.interfaces'
-export const AtlantisIcon = React.memo((props: IconProps) => {
+
+export const AtlantisIcon = (props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -87,4 +88,4 @@ export const AtlantisIcon = React.memo((props: IconProps) => {
       </defs>
     </svg>
   )
-})
+}
