@@ -4,7 +4,7 @@ import { styleFn } from 'styled-system'
 
 export const scrollContainerBaseStyles: styleFn = ({ theme, height }) => ({
   width: theme.spaces.fullWidth,
-  height: height,
+  height,
   overflowY: 'scroll',
   scrollbarWidth: 'thin',
   scrollbarColor: theme.colors.scroll.default.scrollbarColor,

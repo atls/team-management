@@ -6,5 +6,5 @@ export const createBaseImageBlockStyles: styleFn = ({ theme }) =>
     height: theme.spaces.fullWidth,
     width: theme.spaces.fullWidth,
     objectFit: 'cover',
-    borderRadius: borderRadius,
+    borderRadius,
   })

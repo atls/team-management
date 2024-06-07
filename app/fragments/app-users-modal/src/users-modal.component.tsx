@@ -65,7 +65,7 @@ const UsersModal: FC<UsersModalProps> = memo(({ avatar, name, position, usersCou
                 <Avatar
                   size={theme.spaces.bigDecreased}
                   image
-                  notification={true}
+                  notification
                   src={avatar}
                   alt='avatar'
                 />
