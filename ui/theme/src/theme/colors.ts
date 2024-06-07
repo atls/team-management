@@ -15,7 +15,7 @@ const RED_400 = '#E95050'
 
 const BLACK_50 = '00000080'
 
-export const colors = {
+const colors = {
   gradientLigthBlue: '#005ACF',
   BLUE_0,
   GRAY_300,
