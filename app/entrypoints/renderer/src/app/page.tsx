@@ -1,6 +1,8 @@
 'use client'
 
-import React from 'react'
+import { OrganizationsPage } from '@pages/organizations-page'
 
-const Page = () => <>page</>
+import React                 from 'react'
+
+const Page = () => <OrganizationsPage />
 export default Page
