@@ -17,7 +17,8 @@ export const OrganizationCardGrid: FC<PropsWithChildren<OrganizationCardGridProp
 
   return (
     <GridAutoRows
-      rowHeight={theme.spaces.superBiggest}
+      // rowHeight={theme.spaces.superBiggest}
+      rowHeight='auto'
       columns={theme.spaces.s2}
       maxColumnWidth={theme.spaces.hardcore}
     >
