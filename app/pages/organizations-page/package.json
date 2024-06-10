@@ -3,10 +3,22 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/organization-card": "workspace:*",
+    "@fragments/organization-card-grid": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/sidebar": "workspace:*"
   },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-system": "5.1.5"
+  },
   "peerDependencies": {
-    "react": "*"
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "styled-system": "*"
   }
 }
