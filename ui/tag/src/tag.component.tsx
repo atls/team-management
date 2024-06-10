@@ -6,9 +6,9 @@ import { FC }                from 'react'
 
 import { Box }               from '@ui/layout'
 import { Text }              from '@ui/text'
+import { ThemeType }         from '@ui/theme'
 
 import { TagProps }          from './tag.interfaces.js'
-import { TagTextTheme }      from './tag.interfaces.js'
 
 const Tag: FC<PropsWithChildren<TagProps>> = ({
   children,
@@ -23,7 +23,7 @@ const Tag: FC<PropsWithChildren<TagProps>> = ({
   color,
   borderRadius,
 }) => {
-  const theme: TagTextTheme = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
     <Box
@@ -39,9 +39,9 @@ const Tag: FC<PropsWithChildren<TagProps>> = ({
       {children}
       <Text
         fontFamily={fontFamily}
-        fontWeight={theme.fontWeights?.medium}
+        fontWeight={theme.fontWeights.medium}
         fontSize={fontSize}
-        lineHeight={theme.lineHeights?.default}
+        lineHeight={theme.lineHeights.default}
         color={color}
       >
         {text}

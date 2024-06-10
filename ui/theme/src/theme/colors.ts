@@ -15,7 +15,8 @@ const RED_400 = '#E95050'
 
 const BLACK_50 = '00000080'
 
-export const colors = {
+const colors = {
+  gradientLigthBlue: '#005ACF',
   BLUE_0,
   GRAY_300,
   GRAY_1000,
@@ -208,6 +209,28 @@ export const colors = {
         border: 'transparent',
       },
     },
+    transparentBlueBackgroundButton: {
+      default: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgb(197, 220, 253)',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgb(197, 220, 253)',
+        font: 'rgb(154,101,242)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'transparent',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
     blackBackgroundButton: {
       default: {
         background: 'rgba(23, 24, 28, 0.9)',
@@ -237,12 +260,12 @@ export const colors = {
         border: 'transparent',
       },
       hover: {
-        background: 'rgba(255, 255, 255, 1)',
+        background: 'rgba(242, 242, 242, 1)',
         font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },
       pressed: {
-        background: 'transparent',
+        background: 'rgba(80, 142, 233, 1)',
         font: 'rgb(0,0,0,1)',
         border: 'transparent',
       },
@@ -323,7 +346,7 @@ export const colors = {
     default: {
       background: 'transparent',
       color: 'red',
-      border: 'rgba(165, 165, 165, 1)',
+      border: 'rgba(165, 165, 165, 0)',
     },
     hover: {
       background: 'transparent',
@@ -342,9 +365,12 @@ export const colors = {
       border: 'rgba(80, 142, 233, 1)',
     },
   },
+
   scroll: {
     default: {
-      scrollbarColor: 'rgba(152, 190, 249, 1) transparent',
+      scrollbarColor: 'rgba(197, 220, 253, 1) transparent',
     },
   },
 }
+
+export { colors }

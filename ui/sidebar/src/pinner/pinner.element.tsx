@@ -1,4 +1,5 @@
 import React                    from 'react'
+import { PropsWithChildren }    from 'react'
 import { FC }                   from 'react'
 import { motion }               from 'framer-motion'
 import { useMemo }              from 'react'
@@ -6,7 +7,7 @@ import { useMemo }              from 'react'
 import { PinnerElementProps }   from './pinner.interface.js'
 import { pinnerMotionVariants } from './pinner.motion.js'
 
-const PinnerElement: FC<PinnerElementProps> = ({ opened, ...props }) => {
+const PinnerElement: FC<PropsWithChildren<PinnerElementProps>> = ({ opened, ...props }) => {
   const initial = useMemo(() => (opened ? 'visible' : 'hidden'), [opened])
 
   return <motion.div animate={opened ? 'visible' : 'hidden'} initial={initial} {...props} />

@@ -9,10 +9,13 @@ import { Avatar }             from '@ui/avatar'
 import { ArrowChevronIcon }   from '@ui/icons'
 import { DashboardIcon }      from '@ui/icons'
 import { OrgamizationsIcon }  from '@ui/icons'
-import { LogoutIcon }         from '@ui/icons'
+import { LogOutIcon }         from '@ui/icons'
 import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Row }                from '@ui/layout'
 import { Logo }               from '@ui/logo'
 import { Text }               from '@ui/text'
+import { ThemeType }          from '@ui/theme'
 
 import { Container }          from './container/index.js'
 import { Expander }           from './expander/index.js'
@@ -20,8 +23,7 @@ import { ItemIcon }           from './item/icon/index.js'
 import { Item }               from './item/index.js'
 import { ItemLabel }          from './item/label/index.js'
 import { Items }              from './items-list/index.js'
-import { Pinner }             from './pinner/index.js'
-import { SidebarTheme }       from './sidebar.interfaces.js'
+import { Pinner }              from './pinner/index.js'
 import { SidebarProps }       from './sidebar.interfaces.js'
 import { SwitchWrapper }      from './switch/index.js'
 import { Wrapper }            from './wrapper/index.js'
@@ -34,7 +36,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
     setPinned((prev) => !prev)
   }
 
-  const theme: SidebarTheme = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
     <>
@@ -46,14 +48,12 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
       <Wrapper pinned={pinned}>
         <Container ref={node}>
           <Expander opened={pinned}>
-            <Box
-              display='flex'
-              flexDirection='column'
+            <Column
               justifyContent='space-between'
-              height={theme.space?.full}
-              marginTop={theme.space?.mediumSemiReduced}
+              height={theme.spaces.fullWidth}
+              marginTop={theme.spaces.small}
             >
-              <Box margin={theme.space?.t20autob0}>
+              <Box margin={theme.spaces.t20autob0}>
                 <Logo />
               </Box>
 
@@ -61,8 +61,8 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 <Item active={false} href='/'>
                   <ItemIcon>
                     <DashboardIcon
-                      height={theme.space?.normalSemiDefault}
-                      width={theme.space?.normalSemiDefault}
+                      height={theme.spaces.semiRegular}
+                      width={theme.spaces.semiRegular}
                     />
                   </ItemIcon>
                   <ItemLabel>Dashboard</ItemLabel>
@@ -70,49 +70,44 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 <Item active href='/'>
                   <ItemIcon>
                     <OrgamizationsIcon
-                      height={theme.space?.normalSemiDefault}
-                      width={theme.space?.normalSemiDefault}
+                      height={theme.spaces.semiRegular}
+                      width={theme.spaces.semiRegular}
                     />
                   </ItemIcon>
                   <ItemLabel>Organizations</ItemLabel>
                 </Item>
               </Items>
-            </Box>
+            </Column>
 
-            <Box display='flex' flexDirection='column' alignItems='center'>
+            <Column alignItems='center'>
               <Divider
                 weight={1}
-                backgroundColor={theme.backgrounds?.divider}
-                maxWidth={theme.space?.largeSemiDefault}
+                backgroundColor={theme.colors.lightgrey}
+                maxWidth={theme.spaces.largeSemiDefault}
                 margin='auto'
               />
-              <Box
-                display='flex'
-                flexDirection='row'
+              <Row
                 alignItems='center'
-                minWidth={theme.space?.largeSemiDefault}
-                margin={theme.space?.miniReduced}
+                minWidth={theme.spaces.largeSemiDefault}
+                margin={theme.spaces.miniReduced}
                 justifyContent='space-between'
               >
                 <Avatar
-                  size={theme.space?.mediumSemiDefault}
+                  size={theme.spaces.increased}
                   image
                   notification={false}
                   src={src}
                   alt='avatar'
                 />
-                <Box display='flex' flexDirection='column'>
-                  <Text style={{ fontSize: theme.fontSizes?.small.semiLarge }}>{name}</Text>
-                  <Text style={{ fontSize: theme.fontSizes?.small.default }}>{email}</Text>
-                </Box>
+                <Column>
+                  <Text fontSize='small.semiLarge'>{name}</Text>
+                  <Text fontSize='small.default'>{email}</Text>
+                </Column>
                 <Box>
-                  <LogoutIcon
-                    height={theme.space?.normalSemiIncreased}
-                    width={theme.space?.normalSemiIncreased}
-                  />
+                  <LogOutIcon height={theme.spaces.large} width={theme.spaces.large} />
                 </Box>
-              </Box>
-            </Box>
+              </Row>
+            </Column>
           </Expander>
         </Container>
       </Wrapper>

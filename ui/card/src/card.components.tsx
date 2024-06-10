@@ -21,7 +21,6 @@ export const Card: FC<PropsWithChildren<CardProps>> = ({
     width={width}
     height={height}
     borderRadius={borderRadius}
-    display='flex'
     backgroundColor={backgroundColor}
     alignItems={alignItems}
     justifyContent={justifyContent}

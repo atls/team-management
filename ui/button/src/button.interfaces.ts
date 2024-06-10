@@ -6,13 +6,19 @@ export type ButtonVariant =
   | 'blueBackgroundButton'
   | 'transparentBackgroundButton'
   | 'lightBlueBackgroundButton'
+  | 'transparentBlueBackgroundButton'
 
-export type ButtonSize = 'middlingRoundedPadding' | 'smallRoundedPadding' | 'bigRoundedPadding'
+export type ButtonSize =
+  | 'middlingRoundedPadding'
+  | 'smallRoundedPadding'
+  | 'bigRoundedPadding'
+  | 'microRoundedPadding'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
   size?: ButtonSize
   active?: boolean
+  boxShadow?: string
   ref?: any
   iconSvg?: React.ReactNode
   valueRadius?: string | Record<string, string>

@@ -6,7 +6,6 @@ import { GlobalStyles }                          from './global.styles.js'
 import { lineHeights }                           from './theme/index.js'
 import { radii }                                 from './theme/index.js'
 import { shadows }                               from './theme/index.js'
-import { space }                                 from './theme/index.js'
 import { spaces }                                from './theme/index.js'
 import { fontWeights }                           from './theme/index.js'
 import { borders }                               from './theme/index.js'
@@ -25,7 +24,6 @@ const theme = {
   lineHeights,
   radii,
   shadows,
-  space,
   spaces,
 }
 
