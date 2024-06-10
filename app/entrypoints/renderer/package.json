@@ -9,12 +9,12 @@
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
+  "dependencies": {
+    "react-intl": "6.6.8"
+  },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@fragments/add-member-modal": "workspace:*",
-    "@fragments/add-member-to-organization-modal": "workspace:*",
-    "@fragments/organization-card": "workspace:*",
-    "@fragments/organization-card-grid": "workspace:*",
+    "@pages/organizations-page": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
@@ -24,8 +24,5 @@
     "react-dom": "18.3.1",
     "react-intl": "6.6.8",
     "typescript": "5.2.2"
-  },
-  "dependencies": {
-    "react-intl": "6.6.8"
   }
 }
