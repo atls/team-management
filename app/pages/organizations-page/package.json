@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@app/theme-selector": "workspace:*",
+    "@app/users-title": "workspace:*",
     "@fragments/organization-card": "workspace:*",
     "@fragments/organization-card-grid": "workspace:*",
     "@ui/layout": "workspace:*",
