@@ -15,7 +15,7 @@ export const RegistrationPage: React.FC = () => {
   const { formatMessage } = useIntl()
   return (
     <Box
-      background={'url(/Bg.png)'}
+      background='url(/Bg.png)'
       height={theme.spaces.fullVh}
       width={theme.spaces.fullWidth}
       backgroundSize='cover'
