@@ -238,17 +238,17 @@ const colors = {
         border: 'transparent',
       },
       hover: {
-        background: 'rgba(23, 24, 28, 0.9)',
+        background: 'rgba(54, 54, 54, 1)',
         font: 'rgb(255,255,255,1)',
         border: 'transparent',
       },
       pressed: {
-        background: 'rgba(23, 24, 28, 0.9)',
+        background: 'rgba(67, 67, 67, 1)',
         font: 'rgb(255,255,255,1)',
         border: 'transparent',
       },
       disabled: {
-        background: 'rgba(23, 24, 28, 0.9)',
+        background: 'rgba(228, 228, 228, 1)',
         font: 'rgb(242,242,242)',
         border: 'transparent',
       },

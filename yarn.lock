@@ -189,7 +189,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/main-logo@workspace:app/fragments/app-main-logo":
+"@app/main-logo@workspace:*, @app/main-logo@workspace:app/fragments/app-main-logo":
   version: 0.0.0-use.local
   resolution: "@app/main-logo@workspace:app/fragments/app-main-logo"
   dependencies:
@@ -251,15 +251,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/registration-page@workspace:app/pages/registration-page":
+  version: 0.0.0-use.local
+  resolution: "@app/registration-page@workspace:app/pages/registration-page"
+  dependencies:
+    "@app/main-logo": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/renderer-entrypoint@workspace:app/entrypoints/renderer":
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@fragments/add-member-modal": "workspace:*"
-    "@fragments/add-member-to-organization-modal": "workspace:*"
-    "@fragments/organization-card": "workspace:*"
-    "@fragments/organization-card-grid": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -1587,7 +1604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fragments/add-member-modal@workspace:*, @fragments/add-member-modal@workspace:app/fragments/add-member-modal":
+"@fragments/add-member-modal@workspace:app/fragments/add-member-modal":
   version: 0.0.0-use.local
   resolution: "@fragments/add-member-modal@workspace:app/fragments/add-member-modal"
   dependencies:
@@ -1616,7 +1633,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/add-member-to-organization-modal@workspace:*, @fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal":
+"@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal":
   version: 0.0.0-use.local
   resolution: "@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal"
   dependencies:
@@ -1640,7 +1657,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/organization-card-grid@workspace:*, @fragments/organization-card-grid@workspace:app/fragments/organization-card-grid":
+"@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid":
   version: 0.0.0-use.local
   resolution: "@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid"
   dependencies:
@@ -1660,7 +1677,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/organization-card@workspace:*, @fragments/organization-card@workspace:app/fragments/organization-card":
+"@fragments/organization-card@workspace:app/fragments/organization-card":
   version: 0.0.0-use.local
   resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
   dependencies:

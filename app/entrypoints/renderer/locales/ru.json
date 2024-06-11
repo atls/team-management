@@ -17,5 +17,6 @@
   "users-modal.title": "Команда Atlantis",
   "users-modal.subTitle": "Участники",
   "users-modal.button-remove": "Удалить",
-  "users-title.title": "Команда"
+  "users-title.title": "Команда",
+  "registration-page.login-button": "Войти с помощью GitHub"
 }
