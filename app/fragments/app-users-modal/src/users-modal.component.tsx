@@ -22,7 +22,14 @@ import { ThemeType }         from '@ui/theme'
 
 import { UsersModalProps }   from './users-modal.interfaces.js'
 
-const UsersModal: FC<UsersModalProps> = memo(({ avatar, name, position, usersCount, open }) => {
+const UsersModal: FC<UsersModalProps> = memo(({
+  avatar,
+  name,
+  position,
+  usersCount,
+  open,
+  onBackdropClick,
+}) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -32,7 +39,12 @@ const UsersModal: FC<UsersModalProps> = memo(({ avatar, name, position, usersCou
   }
 
   return (
-    <Modal open={open} width={theme.spaces.extraLargeDecreased} padding={theme.spaces.increased}>
+    <Modal
+      open={open}
+      width={theme.spaces.extraLargeDecreased}
+      padding={theme.spaces.increased}
+      onBackdropClick={onBackdropClick}
+    >
       <Column>
         <Row>
           <AtlantisSmallIcon width={theme.spaces.largest} height={theme.spaces.large} />
