@@ -1,3 +1,4 @@
+export const themeName = 'light'
 export * from './backgrounds.js'
 export * from './borders.js'
 export * from './colors.js'
