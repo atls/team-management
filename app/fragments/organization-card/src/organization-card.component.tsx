@@ -18,8 +18,10 @@ import { Members }               from './members/index.js'
 import { OrganizationCardProps } from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({
-  title,
-  description,
+  organizatoinId,
+  organizationTitle,
+  organizationDescription,
+  organizationMembersQuantity,
   organizationCoverSrc,
 }) => {
   const theme = useTheme() as ThemeType
@@ -39,15 +41,15 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({
         <Column padding={theme.spaces.v14h12} width='100%'>
           <Column gap={theme.spaces.semiTiny}>
             <Text fontSize='normal.semiDefault' color='white'>
-              {title}
+              {organizationTitle}
             </Text>
-            {description && (
+            {organizationDescription && (
               <Text fontSize='small.default' color='white'>
-                {description}
+                {organizationDescription}
               </Text>
             )}
             <Row gap={theme.spaces.semiTiny} alignItems='center'>
-              <Members quantity={12} />
+              {organizationMembersQuantity && <Members quantity={organizationMembersQuantity} />}
             </Row>
           </Column>
           <Row gap={theme.spaces.micro} justifyContent='end'>
