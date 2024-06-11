@@ -20,13 +20,15 @@ import { ThemeType }                    from '@ui/theme'
 import { Members }                      from './members/index.js'
 import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
-export const OrganizationCard: FC<OrganizationCardProps> = memo(({
-  organizationId,
-  organizationTitle,
-  organizationDescription,
-  organizationMembersQuantity,
-  organizationCoverSrc,
-}) => {
+export const OrganizationCard: FC<OrganizationCardProps> = memo((organizationData) => {
+  const {
+    organizationId,
+    organizationTitle,
+    organizationDescription,
+    organizationMembersQuantity,
+    organizationCoverSrc,
+  } = organizationData
+
   const [isAddMemberToOrganizationModalOpen, setAddMemberToOrganizationModalOpen] =
     useState<boolean>(false)
   const [isUsersModalOpen, setUsersModalOpen] = useState<boolean>(false)
@@ -82,7 +84,11 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({
               />
             </Button>
 
-            <UsersModal open={isUsersModalOpen} onBackdropClick={handlerUsersModalClick} />
+            <UsersModal
+              open={isUsersModalOpen}
+              onBackdropClick={handlerUsersModalClick}
+              {...organizationData}
+            />
 
             <Button
               shape='circle'
