@@ -23,6 +23,8 @@ import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
+  onBackdropClick,
+  organizationId,
 }) => {
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
@@ -61,7 +63,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   ]
 
   return (
-    <Modal open={open} width={theme.spaces.superPuperExtra}>
+    <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
       <Column flexDirection='column' gap={theme.spaces.large}>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
           {formatMessage({ id: 'add-member-to-organization-modal.header' })}
