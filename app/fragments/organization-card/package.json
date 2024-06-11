@@ -6,6 +6,8 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
+    "@app/users-modal": "workspace:*",
+    "@fragments/add-member-to-organization-modal": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
