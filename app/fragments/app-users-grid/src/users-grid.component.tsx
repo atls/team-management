@@ -1,23 +1,23 @@
 import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
-import { memo }        from 'react'
 import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
+import { memo }              from 'react'
 
-import { Box }               from '@ui/layout'
+import { GridAutoRows }      from '@ui/layout'
 import { ThemeType }         from '@ui/theme'
 
 const UsersGrid: FC<PropsWithChildren> = memo(({ children }) => {
   const theme = useTheme() as ThemeType
   return (
-    <Box
-      display='grid'
-      gridTemplateColumns={theme.spaces.threeColumnsGrid}
+    <GridAutoRows
+      columns={theme.spaces.normalCount}
+      maxColumnWidth={theme.spaces.largeSemiIncreased}
       gap={theme.spaces.semiLarge}
     >
       {children}
-    </Box>
+    </GridAutoRows>
   )
 })
 export { UsersGrid }

@@ -15,7 +15,12 @@ const ThemeSelector: React.FC = () => {
     onThemeChange()
   }
   return (
-    <Row maxWidth={theme.spaces.semiSuper} justifyContent='space-between'>
+    <Row
+      maxWidth={theme.spaces.semiSuper}
+      justifyContent='space-between'
+      margin={'24px 24px 0 0'}
+      alignSelf={'flex-end'}
+    >
       <Button
         boxShadow={theme.shadows.black}
         shape='circle'

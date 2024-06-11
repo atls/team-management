@@ -23,7 +23,7 @@ import { ItemIcon }           from './item/icon/index.js'
 import { Item }               from './item/index.js'
 import { ItemLabel }          from './item/label/index.js'
 import { Items }              from './items-list/index.js'
-import { Pinner }              from './pinner/index.js'
+import { Pinner }             from './pinner/index.js'
 import { SidebarProps }       from './sidebar.interfaces.js'
 import { SwitchWrapper }      from './switch/index.js'
 import { Wrapper }            from './wrapper/index.js'
@@ -50,7 +50,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
           <Expander opened={pinned}>
             <Column
               justifyContent='space-between'
-              height={theme.spaces.fullWidth}
+              height={theme.spaces.fullVh}
               marginTop={theme.spaces.small}
             >
               <Box margin={theme.spaces.t20autob0}>

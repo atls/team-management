@@ -1,3 +1,5 @@
+import * as theme                                from './theme/index.js'
+
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
 import React                                     from 'react'
@@ -14,18 +16,18 @@ import { fonts }                                 from './theme/index.js'
 import { fontSizes }                             from './theme/index.js'
 import { backgrounds }                           from './theme/index.js'
 
-const theme = {
-  backgrounds,
-  borders,
-  colors,
-  fonts,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  radii,
-  shadows,
-  spaces,
-}
+// const theme = {
+//   backgrounds,
+//   borders,
+//   colors,
+//   fonts,
+//   fontSizes,
+//   fontWeights,
+//   lineHeights,
+//   radii,
+//   shadows,
+//   spaces,
+// }
 
 export const ThemeProvider = ({ children }) => (
   <>
