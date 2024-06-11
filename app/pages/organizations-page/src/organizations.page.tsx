@@ -11,7 +11,7 @@ import { Box }                  from '@ui/layout'
 import { Sidebar }              from '@ui/sidebar'
 
 export const OrganizationsPage: FC<any> = ({}) => {
-  const TEST_ORGANIZATION_DATA = {
+  const ORGANIZATION_TEST_DATA = {
     organizationId: 1,
     organizationTitle: 'atls',
     organizationDescription: 'Atlantis Main Team',
@@ -21,10 +21,10 @@ export const OrganizationsPage: FC<any> = ({}) => {
   }
 
   const TEST_ORGANIZATIONS_DATA = [
-    TEST_ORGANIZATION_DATA,
-    TEST_ORGANIZATION_DATA,
-    TEST_ORGANIZATION_DATA,
-    TEST_ORGANIZATION_DATA,
+    ORGANIZATION_TEST_DATA,
+    ORGANIZATION_TEST_DATA,
+    ORGANIZATION_TEST_DATA,
+    ORGANIZATION_TEST_DATA,
   ]
 
   const organizationsData = TEST_ORGANIZATIONS_DATA
