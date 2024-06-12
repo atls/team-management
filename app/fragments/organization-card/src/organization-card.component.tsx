@@ -40,7 +40,6 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo((organizationDat
   }
 
   const handlerUsersModalClick = () => {
-    console.log('click')
     setUsersModalOpen(!isUsersModalOpen)
   }
 
