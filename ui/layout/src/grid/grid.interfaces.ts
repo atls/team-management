@@ -1,11 +1,13 @@
-import { BoxProps }      from '@atls-ui-parts/layout'
+import { BoxProps }                       from '@atls-ui-parts/layout'
 
-import { CSSProperties } from 'react'
-import { JSX }           from 'react'
+import React                              from 'react'
+import { CSSProperties }            from 'react'
+import { ReactNode } from 'react'
+import { JSX }                            from 'react'
 
 export interface GridAutoRowsProps extends BoxProps {
   color?: CSSProperties['color']
-  children: JSX.Element
+  children: JSX.Element | ReactNode
   gap?: CSSProperties['gap']
   maxColumnWidth: number
   columns: number

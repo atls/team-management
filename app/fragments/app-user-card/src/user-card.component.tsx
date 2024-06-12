@@ -34,13 +34,20 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
       alignItems='flex-start'
     >
       <Column>
-        <Column
+        <Box
           position='relative'
           width={theme.spaces.largeSemiIncreased}
           height={theme.spaces.largeDefault}
         >
-          <NextImage src={avatar} borderRadius={theme.radii.tl24tr24} alt='avatar' />
-          <Column
+          <NextImage
+            src={avatar}
+            borderRadius={theme.radii.tl24tr24}
+            width={407}
+            height={380}
+            alt='avatar'
+          />
+          <Box
+            flexDirection='column'
             position='absolute'
             marginTop={theme.spaces.largeSemiDecreased}
             alignItems='flex-start'
@@ -91,8 +98,8 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                 </Text>
               </Tag>
             </Row>
-          </Column>
-        </Column>
+          </Box>
+        </Box>
         <Row>
           <Line
             percent={20}

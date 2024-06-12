@@ -53,11 +53,11 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
           <Expander opened={pinned}>
             <Column
               justifyContent='space-between'
-              height={theme.spaces.fullVh}
+              // height={theme.spaces.fullVh}
               marginTop={theme.spaces.small}
             >
               <motion.div animate={pinned ? { marginLeft: '20px' } : { marginLeft: '25px' }}>
-                <Box margin={theme.spaces.t20autob0}>
+                <Box margin={theme.spaces.t20autob0} width={190}>
                   <Logo />
                 </Box>
               </motion.div>
@@ -106,7 +106,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Items>
             </Column>
 
-            <Column alignItems='center'>
+            <Column alignItems='center' height={'auto'}>
               <Divider
                 weight={1}
                 backgroundColor={theme.colors.lightgrey}

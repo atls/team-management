@@ -6,9 +6,9 @@ import { ifProp }    from 'styled-tools'
 import { theme }     from '@ui/theme'
 
 export const baseWrapperStyles: CSSObject = {
-  position: 'relative',
+  position: 'sticky',
   display: 'flex',
-  height: theme.space.full,
+  height: theme.spaces.fullVh,
   width: theme.space.mediumIncreased,
 }
 
