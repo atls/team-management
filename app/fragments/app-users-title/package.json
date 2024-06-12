@@ -8,6 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/add-member-modal": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/layout": "workspace:*",

@@ -1,20 +1,28 @@
-import { useTheme }  from '@emotion/react'
+import { useTheme }       from '@emotion/react'
 
-import React         from 'react'
-import { useIntl }   from 'react-intl'
+import React              from 'react'
+import { useState }       from 'react'
+import { useIntl }        from 'react-intl'
 
-import { Button }    from '@ui/button'
-import { AddIcon }   from '@ui/icons'
-import { Row }       from '@ui/layout'
-import { Text }      from '@ui/text'
-import { ThemeType } from '@ui/theme'
+import { AddMemberModal } from '@fragments/add-member-modal'
+import { Button }         from '@ui/button'
+import { AddIcon }        from '@ui/icons'
+import { Row }            from '@ui/layout'
+import { Text }           from '@ui/text'
+import { ThemeType }      from '@ui/theme'
 
 const UsersTitle: React.FC = () => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
+  const [isAddMemberModalOpen, setAddMemberModalOpen] = useState(false)
+
+  const handlerPlusButtonClick = () => {
+    setAddMemberModalOpen(!isAddMemberModalOpen)
+  }
+
   return (
-    <Row maxWidth={theme.spaces.largeDefaultDecreased} justifyContent='space-between'>
+    <Row maxWidth={theme.spaces.largeDefaultDecreased} gap={theme.spaces.largest}>
       <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600}>
         {formatMessage({ id: 'users-title.title' })}
       </Text>
@@ -23,9 +31,11 @@ const UsersTitle: React.FC = () => {
         shape='circle'
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
+        onClick={handlerPlusButtonClick}
       >
         <AddIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
       </Button>
+      <AddMemberModal open={isAddMemberModalOpen} onBackdropClick={handlerPlusButtonClick} />
     </Row>
   )
 }

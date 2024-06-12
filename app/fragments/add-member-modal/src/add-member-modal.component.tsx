@@ -27,7 +27,7 @@ import { CheckedSwitchesType }     from './add-member-modal.interfaces.js'
 import { AddMemberModalInput }     from './input/index.js'
 import { useButtonActiveHook }     from './use-button-active.hook.js'
 
-export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
+export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const theme = useTheme() as ThemeType
 
   const { formatMessage } = useIntl()
@@ -57,7 +57,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   }
 
   return (
-    <Modal open={open} padding={theme.spaces.increased}>
+    <Modal open={open} padding={theme.spaces.increased} onBackdropClick={onBackdropClick}>
       <Column gap={theme.spaces.moderate}>
         <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
         {inputValues.map((_inputValue: string, index: number) => (
