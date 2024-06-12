@@ -10,6 +10,7 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
+    "@fragments/base-layout": "workspace:*",
     "react-intl": "6.6.8"
   },
   "devDependencies": {
