@@ -1,6 +1,7 @@
 import { styleFn } from 'styled-system'
 
 export const baseChildContainerStyles: styleFn = ({ theme }) => ({
+  zIndex: 1500,
   display: 'flex',
   flexDirection: 'column',
   boxSizing: 'border-box',
