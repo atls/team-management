@@ -1,0 +1,21 @@
+{
+  "name": "@fragments/base-layout",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@app/theme-selector": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/sidebar": "workspace:*"
+  },
+  "devDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
