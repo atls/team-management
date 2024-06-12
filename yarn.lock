@@ -255,10 +255,27 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/registration-page@workspace:app/pages/registration-page"
   dependencies:
+    "@app/registration": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/registration@workspace:*, @app/registration@workspace:app/fragments/app-registration":
+  version: 0.0.0-use.local
+  resolution: "@app/registration@workspace:app/fragments/app-registration"
+  dependencies:
     "@app/main-logo": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/background": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -3040,6 +3057,26 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/background@workspace:*, @ui/background@workspace:ui/background":
+  version: 0.0.0-use.local
+  resolution: "@ui/background@workspace:ui/background"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
