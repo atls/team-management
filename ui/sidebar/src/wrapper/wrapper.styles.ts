@@ -10,6 +10,7 @@ export const baseWrapperStyles: CSSObject = {
   display: 'flex',
   height: theme.spaces.fullVh,
   width: theme.space.mediumIncreased,
+  top: 0,
 }
 
 export const pinnedWrapperStyles: CSSObject = {
