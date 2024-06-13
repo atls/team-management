@@ -1,0 +1,21 @@
+export const colorsConstants = {
+  WHITE: '#FFFFFF',
+  GRAY_0: '#F8F8F8',
+  GRAY_100: '#F2F2F2',
+  GRAY_200: '#E4E4E4',
+  GRAY_300: '#D7D7D7',
+  GRAY_400: '#C9C9C9',
+  GRAY_800: '#949494',
+  GRAY_1000: '#797979',
+  GRAY_1400: '#434343',
+  GRAY_1500: '#363636',
+  GRAY_1600: '#282828',
+
+  BLUE_0: '#F5F9FF',
+  BLUE_100: '#C5DCFD',
+  BLUE_400: '#508EE9',
+
+  RED_400: '#E95050',
+
+  BLACK_50: 'rgba(0, 0, 0, 0.5)',
+}
