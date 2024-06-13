@@ -95,7 +95,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
           >
-            <Text fontSize='normal.semiDefault' fontWeight='normal'>
+            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               Пригласить
             </Text>
           </Button>

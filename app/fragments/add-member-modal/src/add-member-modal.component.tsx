@@ -98,7 +98,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open, onBackdrop
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
           >
-            <Text fontSize='normal.semiDefault' fontWeight='normal'>
+            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               {formatMessage({ id: 'add-member-modal.invite' })}
             </Text>
           </Button>
