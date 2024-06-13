@@ -5,4 +5,5 @@ export interface UserCardProps {
   organizations?: string | number
   avatar: string
   checked?: boolean
+  handleOrganizations: () => void
 }

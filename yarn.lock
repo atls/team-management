@@ -208,7 +208,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/notifications-modal@workspace:app/fragments/app-notifications-modal":
+"@app/notifications-modal@workspace:*, @app/notifications-modal@workspace:app/fragments/app-notifications-modal":
   version: 0.0.0-use.local
   resolution: "@app/notifications-modal@workspace:app/fragments/app-notifications-modal"
   dependencies:
@@ -230,7 +230,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/organizations-modal@workspace:app/fragments/app-organizations-modal":
+"@app/organizations-modal@workspace:*, @app/organizations-modal@workspace:app/fragments/app-organizations-modal":
   version: 0.0.0-use.local
   resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
   dependencies:
@@ -295,6 +295,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/theme-selector@workspace:app/fragments/app-theme-selector"
   dependencies:
+    "@app/notifications-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -336,6 +337,7 @@ __metadata:
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/checkbox": "workspace:*"
     "@ui/divider": "workspace:*"
@@ -400,6 +402,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/users-page@workspace:app/pages/users-page"
   dependencies:
+    "@app/organizations-modal": "workspace:*"
     "@app/theme-selector": "workspace:*"
     "@app/user-card": "workspace:*"
     "@app/users-grid": "workspace:*"

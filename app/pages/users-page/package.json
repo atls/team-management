@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@app/organizations-modal": "workspace:*",
     "@app/theme-selector": "workspace:*",
     "@app/user-card": "workspace:*",
     "@app/users-grid": "workspace:*",

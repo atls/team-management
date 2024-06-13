@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
     "@ui/checkbox": "workspace:*",
     "@ui/divider": "workspace:*",

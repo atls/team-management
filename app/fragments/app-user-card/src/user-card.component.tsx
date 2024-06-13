@@ -3,6 +3,7 @@ import { useTheme }      from '@emotion/react'
 import React             from 'react'
 import { FC }            from 'react'
 
+import { Button }         from '@ui/button'
 import { Card }          from '@ui/card'
 import { Checkbox }      from '@ui/checkbox'
 import { Divider }       from '@ui/divider'
@@ -23,7 +24,15 @@ import { ThemeType }     from '@ui/theme'
 
 import { UserCardProps } from './user-card.interface.js'
 
-const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar, checked }) => {
+const UserCard: FC<UserCardProps> = ({
+  name,
+  position,
+  time,
+  organizations,
+  handleOrganizations,
+  avatar,
+  checked,
+}) => {
   const theme = useTheme() as ThemeType
   return (
     <Card
@@ -73,18 +82,22 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
               width={theme.spaces.fullWidth}
               padding={theme.spaces.t0rbl12}
             >
-              <Tag
-                height={theme.spaces.moderate}
-                width={theme.spaces.big}
-                backgroundColor={theme.backgrounds.darkGray}
-                borderRadius={theme.radii.f7}
-                color={theme.colors.white}
+              <Button
+                size={'microRoundedPadding'}
+                shape='rectangle'
+                variant='blackBackgroundButton'
+                onClick={handleOrganizations}
+                // height={theme.spaces.moderate}
+                // width={theme.spaces.big}
+                // backgroundColor={theme.backgrounds.darkGray}
+                // borderRadius={theme.radii.f7}
+                // color={theme.colors.white}
               >
                 <Text margin={theme.spaces.t0r6lb0} color={theme.colors.white}>
                   {organizations}
                 </Text>
                 <OrgWhiteIcon width={theme.spaces.micro} />
-              </Tag>
+              </Button>
               <Tag
                 padding={theme.spaces.miniReduced}
                 height={theme.spaces.moderate}

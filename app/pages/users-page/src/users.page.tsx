@@ -1,13 +1,15 @@
-import React             from 'react'
+import React                  from 'react'
+import { useState }           from 'react'
 
-import { ThemeSelector } from '@app/theme-selector'
-import { UserCard }      from '@app/user-card'
-import { UsersGrid }     from '@app/users-grid'
-import { UsersTitle }    from '@app/users-title'
-import { Box }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Sidebar }       from '@ui/sidebar'
+import { OrganizationsModal } from '@app/organizations-modal'
+import { ThemeSelector }      from '@app/theme-selector'
+import { UserCard }           from '@app/user-card'
+import { UsersGrid }          from '@app/users-grid'
+import { UsersTitle }         from '@app/users-title'
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Sidebar }            from '@ui/sidebar'
 
 export const Users = () => {
   const TEST_DATA = [
@@ -102,9 +104,13 @@ export const Users = () => {
       time: '2:20:01',
     },
   ]
+  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+  const handleOrganizations = () => {
+    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
+  }
 
   return (
-    <Row background={'#F8F8F8'}>
+    <Row>
       <Sidebar name={'Nikita Efimov'} email={'efimov@atls.com'} src={'/profile.png'} />
       <Column alignItems='flex-end' width='100%'>
         <ThemeSelector />
@@ -113,6 +119,7 @@ export const Users = () => {
           <UsersGrid>
             {TEST_DATA.map((user) => (
               <UserCard
+                handleOrganizations={handleOrganizations}
                 key={user.id}
                 avatar={user.avatar}
                 name={user.name}
@@ -122,6 +129,7 @@ export const Users = () => {
               />
             ))}
           </UsersGrid>
+          <OrganizationsModal open={isOrganizationsModalOpen} />
         </Column>
       </Column>
     </Row>

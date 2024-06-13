@@ -9,15 +9,15 @@ const __dirname = dirname(__filename)
 /** @type {import('next').NextConfig} */
 export default {
   images: {
-    domains: ['robohash.org'],
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'robohash.org',
-    //     port: '',
-    //     pathname: '*',
-    //   },
-    // ],
+    // domains: ['robohash.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'robohash.org',
+        // port: '',
+        // pathname: '*',
+      },
+    ],
   },
 
   experimental: {
