@@ -4,7 +4,7 @@ import { FC }                   from 'react'
 import { OrganizationCard }     from '@fragments/organization-card'
 import { OrganizationCardGrid } from '@fragments/organization-card-grid'
 
-export const OrganizationsPage: FC<any> = ({}) => {
+export const OrganizationsPage: FC = () => {
   const ORGANIZATION_TEST_DATA = {
     organizationId: 1,
     organizationTitle: 'atls',
@@ -27,7 +27,7 @@ export const OrganizationsPage: FC<any> = ({}) => {
   return (
     <OrganizationCardGrid>
       {organizationsData.map((organizationData) => (
-        <OrganizationCard {...organizationData} />
+        <OrganizationCard organizationData={organizationData} />
       ))}
     </OrganizationCardGrid>
   )
