@@ -16,19 +16,12 @@ import { Text }            from '@ui/text'
 import { ThemeType }       from '@ui/theme'
 
 import { Member }          from './member/index.js'
+import { MemberDataType }  from './users-modal.interfaces.js'
 import { UsersModalProps } from './users-modal.interfaces.js'
 
-const UsersModal: FC<UsersModalProps> = memo(({
-  // avatar,
-  // name,
-  // position,
-  // usersCount,
-  open,
-  onBackdropClick,
-  ...organizationData
-}) => {
+const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, ...organizationData }) => {
   const {
-    organizationId,
+    // organizationId,
     organizationTitle,
     organizationDescription,
     organizationMembersQuantity,
@@ -53,7 +46,7 @@ const UsersModal: FC<UsersModalProps> = memo(({
     MEMBER_TEST_DATA,
   ])
 
-  const handlerDeleteMemberClick = (removeMemberId) => {
+  const handlerDeleteMemberClick = (removeMemberId: number) => {
     const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
     setMembersData(newMembersData)
   }
@@ -78,7 +71,7 @@ const UsersModal: FC<UsersModalProps> = memo(({
           {formatMessage({ id: 'users-modal.subTitle' })} ({organizationMembersQuantity})
         </Text>
         <Scroll height={theme.spaces.superExtraIncreasedDefault}>
-          {membersData.map((memberData) => (
+          {membersData.map((memberData: MemberDataType) => (
             <Member memberData={memberData} onDeleteMemberClick={handlerDeleteMemberClick} />
           ))}
         </Scroll>
