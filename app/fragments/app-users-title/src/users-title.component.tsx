@@ -14,13 +14,8 @@ const UsersTitle: React.FC = () => {
   const theme = useTheme() as ThemeType
 
   return (
-    <Row
-      maxWidth={theme.spaces.largeDefaultDecreased}
-      justifyContent='space-between'
-      margin={'44px 0 24px 0'}
-      alignSelf='flex-start'
-    >
-      <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600}>
+    <Row margin={'44px 0 24px 0'} width='auto'>
+      <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600} marginRight={'27px'}>
         {formatMessage({ id: 'users-title.title' })}
       </Text>
       <Button

@@ -19,7 +19,7 @@ export const GlobalStyles = () => (
 
       html,
       body {
-        //overflow-x: hidden;
+        overflow-x: hidden;
         background-color: #f8f8f8;
       }
 

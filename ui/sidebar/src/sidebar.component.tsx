@@ -41,14 +41,14 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
 
   return (
     <>
-      <Pinner opened={pinned}>
-        <SwitchWrapper onClick={handleClick}>
-          <motion.div animate={pinned ? { rotate: '180deg' } : { rotate: '0deg' }}>
-            <ArrowChevronIcon />
-          </motion.div>
-        </SwitchWrapper>
-      </Pinner>
       <Wrapper pinned={pinned}>
+        <Pinner opened={pinned}>
+          <SwitchWrapper onClick={handleClick}>
+            <motion.div animate={pinned ? { rotate: '180deg' } : { rotate: '0deg' }}>
+              <ArrowChevronIcon />
+            </motion.div>
+          </SwitchWrapper>
+        </Pinner>
         <Container ref={node}>
           <Expander opened={pinned}>
             <Column
@@ -106,7 +106,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Items>
             </Column>
 
-            <Column alignItems='center' height={'auto'}>
+            <Column alignItems='center' height='auto'>
               <Divider
                 weight={1}
                 backgroundColor={theme.colors.lightgrey}
@@ -118,6 +118,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 minWidth={theme.spaces.largeSemiDefault}
                 padding={theme.spaces.miniReduced}
                 justifyContent='space-between'
+                margin='16.5px 20px 30px '
               >
                 <motion.div
                   animate={
