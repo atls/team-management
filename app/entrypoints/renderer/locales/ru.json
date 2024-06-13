@@ -8,7 +8,7 @@
   "organization-card_member.many": "members",
   "confirm-deleting-organization.warning": "Вы уверены, что хотите исключить пользователя из данной организации?",
   "confirm-deleting-organization.yes": "Да",
-  "confirm-deleting-organization.no":"Нет",
+  "confirm-deleting-organization.no": "Нет",
   "logo-title": "Team management system",
   "notifications-modal.title": "Уведомления",
   "notifications-modal.mark-all-read": "Отметить все, как прочитанное",
