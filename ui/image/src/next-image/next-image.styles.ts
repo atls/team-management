@@ -8,7 +8,7 @@ export const createBaseNextImageStyles: styleFn = () =>
   ({ borderRadius }) => ({
     width: '100%',
     height: '100%',
-    borderRadius: borderRadius,
+    borderRadius,
     overflow: 'hidden',
   })
 export const NextImageWrapper = styled.div<ImageWrapperProps>(createBaseNextImageStyles())

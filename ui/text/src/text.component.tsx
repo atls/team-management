@@ -8,6 +8,7 @@ import { ThemeType }        from '@ui/theme'
 
 // TODO interface
 export const Text: FC<any> = (props) => {
+  const { color } = props
   const theme = useTheme() as ThemeType
-  return <BaseText color={props.color || theme.colors.text.primary} {...props} />
+  return <BaseText color={color || theme.colors.text.primary} {...props} />
 }

@@ -6,5 +6,5 @@ export const createBaseImageBlockStyles: styleFn = () =>
     height: '100%',
     width: '100%',
     objectFit: 'cover',
-    borderRadius: borderRadius,
+    borderRadius,
   })

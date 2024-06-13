@@ -106,7 +106,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Items>
             </Column>
 
-            <Column alignItems='center' height={'auto'}>
+            <Column alignItems='center' height='auto'>
               <Divider
                 weight={1}
                 backgroundColor={theme.colors.lightgrey}

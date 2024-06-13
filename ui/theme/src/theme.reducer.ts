@@ -6,7 +6,8 @@ export function activeThemeReducer(theme, action) {
     case 'toggle': {
       if (theme.themeName === 'light') {
         return darkTheme
-      } else return lightTheme
+      }
+      return lightTheme
     }
     default: {
       throw new Error(`Unknown action: ${action.type}`)
