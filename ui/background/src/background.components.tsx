@@ -11,7 +11,7 @@ import { BackgroundProps }   from './background.interfaces.js'
 
 export const Background: FC<PropsWithChildren<BackgroundProps>> = ({
   children,
-  background,
+  backgroundUrl,
   backgroundSize,
   justifyContent,
   height,
@@ -20,7 +20,7 @@ export const Background: FC<PropsWithChildren<BackgroundProps>> = ({
   const theme = useTheme() as ThemeType
   return (
     <Box
-      background={background}
+      background={backgroundUrl}
       height={height || theme.spaces.fullVh}
       width={width || theme.spaces.fullWidth}
       backgroundSize={backgroundSize || 'cover'}

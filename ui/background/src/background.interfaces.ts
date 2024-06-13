@@ -5,5 +5,5 @@ export interface BackgroundProps {
   backgroundSize?: string
   alignItems?: string
   justifyContent?: string
-  background?: string
+  backgroundUrl?: string
 }

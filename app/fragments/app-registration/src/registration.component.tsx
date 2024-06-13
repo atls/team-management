@@ -16,7 +16,7 @@ const Registration: React.FC = () => {
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
   return (
-    <Background background={'url(/Bg.png)'}>
+    <Background backgroundUrl={'url(/Bg.png)'}>
       <Column margin={theme.spaces.tb180lra} height='auto'>
         <MainLogo />
         <Box justifyContent='center'>
