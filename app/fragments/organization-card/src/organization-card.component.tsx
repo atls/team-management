@@ -8,6 +8,7 @@ import { useState }                     from 'react'
 import { UsersModal }                   from '@app/users-modal'
 import { AddMemberToOrganizationModal } from '@fragments/add-member-to-organization-modal'
 import { Button }                       from '@ui/button'
+import { Condition }                    from '@ui/condition'
 import { TeamIcon }                     from '@ui/icons'
 import { AddIcon }                      from '@ui/icons'
 import { ImageBlock }                   from '@ui/image'
@@ -60,13 +61,15 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
             <Text fontSize='normal.semiDefault' color='white'>
               {organizationTitle}
             </Text>
-            {organizationDescription && (
+            <Condition match={Boolean(organizationDescription)}>
               <Text fontSize='small.default' color='white'>
                 {organizationDescription}
               </Text>
-            )}
+            </Condition>
             <Row gap={theme.spaces.semiTiny} alignItems='center'>
-              {organizationMembersQuantity && <Members quantity={organizationMembersQuantity} />}
+              <Condition match={Boolean(organizationMembersQuantity)}>
+                <Members quantity={organizationMembersQuantity} />
+              </Condition>
             </Row>
           </Column>
           <Row gap={theme.spaces.micro} justifyContent='end'>

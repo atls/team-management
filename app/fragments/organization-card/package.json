@@ -9,6 +9,7 @@
     "@app/users-modal": "workspace:*",
     "@fragments/add-member-to-organization-modal": "workspace:*",
     "@ui/button": "workspace:*",
+    "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
