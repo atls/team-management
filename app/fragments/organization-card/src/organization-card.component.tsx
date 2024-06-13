@@ -20,7 +20,7 @@ import { ThemeType }                    from '@ui/theme'
 import { Members }                      from './members/index.js'
 import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
-export const OrganizationCard: FC<OrganizationCardProps> = memo((organizationData) => {
+export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
     organizationId,
     organizationTitle,
@@ -86,7 +86,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo((organizationDat
             <UsersModal
               open={isUsersModalOpen}
               onBackdropClick={handlerUsersModalClick}
-              {...organizationData}
+              organizationData={organizationData}
             />
 
             <Button

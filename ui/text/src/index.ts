@@ -1,2 +1,2 @@
 export * from '@atls-ui-parts/text'
-export * from './text.component.js'
+export { Text } from './text.component.js'

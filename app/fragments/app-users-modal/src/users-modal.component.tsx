@@ -19,7 +19,7 @@ import { Member }          from './member/index.js'
 import { MemberDataType }  from './users-modal.interfaces.js'
 import { UsersModalProps } from './users-modal.interfaces.js'
 
-const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, ...organizationData }) => {
+const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizationData }) => {
   const {
     // organizationId,
     organizationTitle,

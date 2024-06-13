@@ -2,10 +2,11 @@ import React                    from 'react'
 import { FC }                   from 'react'
 
 import { OrganizationCard }     from '@fragments/organization-card'
+import { OrganizationDataType } from '@fragments/organization-card'
 import { OrganizationCardGrid } from '@fragments/organization-card-grid'
 
 export const OrganizationsPage: FC = () => {
-  const ORGANIZATION_TEST_DATA = {
+  const ORGANIZATION_TEST_DATA: OrganizationDataType = {
     organizationId: 1,
     organizationTitle: 'atls',
     organizationDescription: 'Atlantis Main Team',
@@ -23,10 +24,9 @@ export const OrganizationsPage: FC = () => {
 
   const organizationsData = TEST_ORGANIZATIONS_DATA
 
-  // TODO params to theme? new component?
   return (
     <OrganizationCardGrid>
-      {organizationsData.map((organizationData) => (
+      {organizationsData.map((organizationData: OrganizationDataType) => (
         <OrganizationCard organizationData={organizationData} />
       ))}
     </OrganizationCardGrid>

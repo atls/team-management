@@ -102,7 +102,7 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
           />
           <Text
             margin={theme.spaces.t2l0b23r0}
-            style={{ position: 'absolute' }}
+            // style={{ position: 'absolute' }}
             fontSize='small.default'
             color={theme.colors.white}
           >

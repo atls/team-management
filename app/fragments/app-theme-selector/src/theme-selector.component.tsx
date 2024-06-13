@@ -9,8 +9,8 @@ import { Row }                         from '@ui/layout'
 import { ThemeSwitch }                 from '@ui/switch'
 import { ThemeType }                   from '@ui/theme'
 
-import { baseThemeSelectorRowStyles }  from './theme-selector.styles.ts'
-import { shapeThemeSelectorRowStyles } from './theme-selector.styles.ts'
+import { baseThemeSelectorRowStyles }  from './theme-selector.styles.js'
+import { shapeThemeSelectorRowStyles } from './theme-selector.styles.js'
 
 const ThemeSelectorRow = styled(Row)(baseThemeSelectorRowStyles, shapeThemeSelectorRowStyles)
 
@@ -28,7 +28,7 @@ const ThemeSelector: React.FC = () => {
         <NotificationsIcon
           width={theme.spaces.semiRegular}
           height={theme.spaces.semiRegular}
-          color={theme.colors.button.whiteBackgroundButton.default.color}
+          color={theme.colors.text.primary}
         />
       </Button>
       <ThemeSwitch />

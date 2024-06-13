@@ -27,7 +27,11 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
   const theme = useTheme() as ThemeType
 
   return (
-    <Modal open={open} width={theme.spaces.largeSemiLargeIncreased}>
+    <Modal
+      open={open}
+      width={theme.spaces.largeSemiLargeIncreased}
+      onBackdropClick={() => undefined as void}
+    >
       <Column>
         <Text
           maxWidth={theme.spaces.superBiggest}

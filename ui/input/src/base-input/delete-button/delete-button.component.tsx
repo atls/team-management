@@ -8,6 +8,7 @@ import { Condition }              from '@ui/condition'
 import { RemoveIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
 import { BoxProps }               from '@ui/layout'
+import { ThemeType }              from '@ui/theme'
 
 import { DeleteButtonProps }      from './delete-button.interfaces.js'
 import { baseDeleteButtonStyles } from './delete-button.styles.js'

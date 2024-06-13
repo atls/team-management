@@ -16,7 +16,7 @@ export const BaseLayout: FC<PropsWithChildren<any>> = ({ children }) => {
   return (
     <Row>
       <ThemeSelector />
-      <Sidebar />
+      <Sidebar src='' />
       <Column
         minHeight='100vh'
         margin='0 auto'

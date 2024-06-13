@@ -34,7 +34,7 @@ const UsersTitle: React.FC = () => {
         <AddIcon
           width={theme.spaces.semiRegular}
           height={theme.spaces.semiRegular}
-          color={theme.colors.button.whiteBackgroundButton.default.color}
+          color={theme.colors.text.primary}
         />
       </Button>
       <AddMemberModal open={isAddMemberModalOpen} onBackdropClick={handlerPlusButtonClick} />

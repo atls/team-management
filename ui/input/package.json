@@ -13,6 +13,7 @@
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {

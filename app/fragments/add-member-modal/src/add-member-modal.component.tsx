@@ -22,12 +22,12 @@ import { ThemeType }               from '@ui/theme'
 import { HandleAddInputClickType } from './add-member-modal.interfaces.js'
 import { InputValuesType }         from './add-member-modal.interfaces.js'
 import { HandlerSwitchType }       from './add-member-modal.interfaces.js'
-import { TeamMemberModalProps }    from './add-member-modal.interfaces.js'
+import { AddMemberModalProps }     from './add-member-modal.interfaces.js'
 import { CheckedSwitchesType }     from './add-member-modal.interfaces.js'
 import { AddMemberModalInput }     from './input/index.js'
 import { useButtonActiveHook }     from './use-button-active.hook.js'
 
-export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open, onBackdropClick }) => {
+export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const theme = useTheme() as ThemeType
 
   const { formatMessage } = useIntl()

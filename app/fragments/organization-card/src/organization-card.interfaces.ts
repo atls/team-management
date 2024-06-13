@@ -1,6 +1,11 @@
-export interface OrganizationCardProps {
+export type OrganizationDataType = {
+  organizationId: number
+  organizationTitle: string
+  organizationDescription: string
+  organizationMembersQuantity: number
   organizationCoverSrc: string
-  title: string
-  description?: string
-  membersQuantity: number
+}
+
+export interface OrganizationCardProps {
+  organizationData: OrganizationDataType
 }

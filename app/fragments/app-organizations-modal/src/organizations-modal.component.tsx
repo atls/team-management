@@ -20,7 +20,12 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, im
   const theme = useTheme() as ThemeType
 
   return (
-    <Modal open={open} width={theme.spaces.superExtraIncreased} padding={theme.spaces.large}>
+    <Modal
+      open={open}
+      width={theme.spaces.superExtraIncreased}
+      padding={theme.spaces.large}
+      onBackdropClick={() => undefined as void}
+    >
       <Column>
         <Text
           maxWidth={theme.spaces.superBiggest}
