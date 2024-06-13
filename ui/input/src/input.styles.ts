@@ -1,5 +1,4 @@
 import { styleFn } from 'styled-system'
-import { prop }    from 'styled-tools'
 
 export const shapeStyles: styleFn = ({ theme }) => ({
   cursor: 'text',
