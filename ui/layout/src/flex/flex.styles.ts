@@ -17,6 +17,9 @@ const flexConfig: Config = {
   gridColumn: {
     property: 'gridColumn',
   },
+  backgroundColor: {
+    property: 'backgroundColor',
+  },
 }
 
 export const flexStyles = system(flexConfig)

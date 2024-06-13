@@ -15,7 +15,7 @@ const BLUE_400 = '#508EE9'
 
 const RED_400 = '#E95050'
 
-const BLACK_50 = '00000080'
+const BLACK_50 = 'rgba(0, 0, 0, 0.5)'
 
 const colors = {
   divider: GRAY_300,
@@ -23,19 +23,12 @@ const colors = {
     primary: GRAY_1600,
     secondary: GRAY_1000,
   },
-  organizationsPage: {
+  baseLayout: {
     background: GRAY_0,
-  },
-  usersTitle: {
-    text: GRAY_1600,
   },
   addMemberModal: {
     addIcon: GRAY_1600,
-    text: GRAY_1600,
     buttonText: GRAY_800,
-  },
-  AddMemberToOrganizationModal: {
-    text: GRAY_1600,
   },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
