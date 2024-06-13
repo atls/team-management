@@ -10,6 +10,7 @@
     "start": "node dist/src/index.cjs"
   },
   "devDependencies": {
+    "@app/registration-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",

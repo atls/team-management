@@ -8,6 +8,7 @@ import { MainLogo }   from '@app/main-logo'
 import { Button }     from '@ui/button'
 import { GitHubIcon } from '@ui/icons'
 import { Box }        from '@ui/layout'
+import { Column }     from '@ui/layout'
 import { Text }       from '@ui/text'
 import { ThemeType }  from '@ui/theme'
 
@@ -15,8 +16,8 @@ const Registration: React.FC = () => {
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
   return (
-    <Background>
-      <Box flexDirection='column' margin={theme.spaces.tb180lra}>
+    <Background background={'url(/Bg.png)'}>
+      <Column margin={theme.spaces.tb180lra} height='auto'>
         <MainLogo />
         <Box justifyContent='center'>
           <Button variant='blackBackgroundButton' shape='rectangle' size='bigRoundedPadding'>
@@ -29,7 +30,7 @@ const Registration: React.FC = () => {
             </Text>
           </Button>
         </Box>
-      </Box>
+      </Column>
     </Background>
   )
 }

@@ -251,7 +251,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/registration-page@workspace:app/pages/registration-page":
+"@app/registration-page@workspace:*, @app/registration-page@workspace:app/pages/registration-page":
   version: 0.0.0-use.local
   resolution: "@app/registration-page@workspace:app/pages/registration-page"
   dependencies:
@@ -293,6 +293,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/registration-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.3"

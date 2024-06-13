@@ -7,15 +7,24 @@ import { FC }                from 'react'
 import { Box }               from '@ui/layout'
 import { ThemeType }         from '@ui/theme'
 
-export const Background: FC<PropsWithChildren> = ({ children }) => {
+import { BackgroundProps }   from './background.interfaces.js'
+
+export const Background: FC<PropsWithChildren<BackgroundProps>> = ({
+  children,
+  background,
+  backgroundSize,
+  justifyContent,
+  height,
+  width,
+}) => {
   const theme = useTheme() as ThemeType
   return (
     <Box
-      background='url(/Bg.png)'
-      height={theme.spaces.fullVh}
-      width={theme.spaces.fullWidth}
-      backgroundSize='cover'
-      justifyContent='center'
+      background={background}
+      height={height || theme.spaces.fullVh}
+      width={width || theme.spaces.fullWidth}
+      backgroundSize={backgroundSize || 'cover'}
+      justifyContent={justifyContent || 'center'}
     >
       {children}
     </Box>

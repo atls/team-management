@@ -1,1 +1,1 @@
-export * from './registration.page.js'
+export { default } from './registration.page.js'
