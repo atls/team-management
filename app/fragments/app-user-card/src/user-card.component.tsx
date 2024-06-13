@@ -3,7 +3,7 @@ import { useTheme }      from '@emotion/react'
 import React             from 'react'
 import { FC }            from 'react'
 
-import { Button }         from '@ui/button'
+import { Button }        from '@ui/button'
 import { Card }          from '@ui/card'
 import { Checkbox }      from '@ui/checkbox'
 import { Divider }       from '@ui/divider'
@@ -14,6 +14,7 @@ import { TimerIcon }     from '@ui/icons'
 import { TelegramIcon }  from '@ui/icons'
 import { NextImage }     from '@ui/image'
 import { Box }           from '@ui/layout'
+import { GridAutoRows }  from '@ui/layout'
 import { Row }           from '@ui/layout'
 import { Column }        from '@ui/layout'
 import { Line }          from '@ui/progress'
@@ -87,11 +88,6 @@ const UserCard: FC<UserCardProps> = ({
                 shape='rectangle'
                 variant='blackBackgroundButton'
                 onClick={handleOrganizations}
-                // height={theme.spaces.moderate}
-                // width={theme.spaces.big}
-                // backgroundColor={theme.backgrounds.darkGray}
-                // borderRadius={theme.radii.f7}
-                // color={theme.colors.white}
               >
                 <Text margin={theme.spaces.t0r6lb0} color={theme.colors.white}>
                   {organizations}
@@ -129,14 +125,21 @@ const UserCard: FC<UserCardProps> = ({
             20%
           </Text>
         </Row>
-
-        <Scroll>
-          <Box maxHeight={theme.spaces.largeSemiNormal}>
-            <Column
-              width={theme.spaces.fullWidth}
-              flexBasis={theme.spaces.fullHalfReduced}
-              margin={theme.spaces.t8r2b6l12}
+        <Box padding={'8px 6px 12px'}>
+          <Scroll>
+            <GridAutoRows
+              columnGap={10}
+              // margin={'8px 6px 12px'}
+              columns={2}
+              maxColumnWidth={190}
+              gap={0}
+              maxHeight={theme.spaces.largeSemiNormal}
             >
+              {/*<Column*/}
+              {/*  width={theme.spaces.fullWidth}*/}
+              {/*  flexBasis={theme.spaces.fullHalfReduced}*/}
+              {/*  margin={theme.spaces.t8r2b6l12}*/}
+              {/*>*/}
               <Column
                 maxWidth={theme.spaces.largeSemi}
                 padding={theme.spaces.t1r5b2l5}
@@ -157,13 +160,36 @@ const UserCard: FC<UserCardProps> = ({
                   />
                 </Box>
               </Column>
-            </Column>
+              {/*</Column>*/}
 
-            <Column
-              width={theme.spaces.fullWidth}
-              flexBasis={theme.spaces.fullHalfReduced}
-              margin={theme.spaces.t8r2b6l12}
-            >
+              {/*<Column*/}
+              {/*  width={theme.spaces.fullWidth}*/}
+              {/*  flexBasis={theme.spaces.fullHalfReduced}*/}
+              {/*  margin={theme.spaces.t8r2b6l12}*/}
+              {/*>*/}
+              <Column
+                maxWidth={theme.spaces.largeSemi}
+                padding={theme.spaces.t1r5b2l5}
+                maxHeight={theme.spaces.small}
+              >
+                <Checkbox labelPosition='start' checked={checked}>
+                  <Row marginRight='auto'>
+                    <TelegramIcon
+                      width={theme.spaces.semiMedium}
+                      height={theme.spaces.semiMedium}
+                    />
+                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
+                      Telegram
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
+                  <Divider
+                    weight={theme.spaces.nano}
+                    backgroundColor={theme.backgrounds.lightGray}
+                  />
+                </Box>
+              </Column>
               <Column
                 maxWidth={theme.spaces.largeSemi}
                 padding={theme.spaces.t1r5b2l5}
@@ -189,37 +215,105 @@ const UserCard: FC<UserCardProps> = ({
               </Column>
 
               <Column
-                width={theme.spaces.fullWidth}
-                flexBasis={theme.spaces.fullHalfReduced}
-                margin={theme.spaces.t8r2b6l12}
+                maxWidth={theme.spaces.largeSemi}
+                padding={theme.spaces.t1r5b2l5}
+                maxHeight={theme.spaces.small}
               >
-                <Column
-                  maxWidth={theme.spaces.largeSemi}
-                  padding={theme.spaces.t1r5b2l5}
-                  maxHeight={theme.spaces.small}
-                >
-                  <Checkbox labelPosition='start' checked={checked}>
-                    <Row marginRight='auto'>
-                      <DiscordIcon
-                        width={theme.spaces.semiMedium}
-                        height={theme.spaces.semiMedium}
-                      />
-                      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
-                        Discord
-                      </Text>
-                    </Row>
-                  </Checkbox>
-                  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
-                    <Divider
-                      weight={theme.spaces.nano}
-                      backgroundColor={theme.backgrounds.lightGray}
+                <Checkbox labelPosition='start' checked={checked}>
+                  <Row marginRight='auto'>
+                    <TelegramIcon
+                      width={theme.spaces.semiMedium}
+                      height={theme.spaces.semiMedium}
                     />
-                  </Box>
-                </Column>
+                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
+                      Telegram
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
+                  <Divider
+                    weight={theme.spaces.nano}
+                    backgroundColor={theme.backgrounds.lightGray}
+                  />
+                </Box>
               </Column>
-            </Column>
-          </Box>
-        </Scroll>
+              <Column
+                maxWidth={theme.spaces.largeSemi}
+                padding={theme.spaces.t1r5b2l5}
+                maxHeight={theme.spaces.small}
+              >
+                <Checkbox labelPosition='start' checked={checked}>
+                  <Row marginRight='auto'>
+                    <TelegramIcon
+                      width={theme.spaces.semiMedium}
+                      height={theme.spaces.semiMedium}
+                    />
+                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
+                      Telegram
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
+                  <Divider
+                    weight={theme.spaces.nano}
+                    backgroundColor={theme.backgrounds.lightGray}
+                  />
+                </Box>
+              </Column>
+              <Column
+                maxWidth={theme.spaces.largeSemi}
+                padding={theme.spaces.t1r5b2l5}
+                maxHeight={theme.spaces.small}
+              >
+                <Checkbox labelPosition='start' checked={checked}>
+                  <Row marginRight='auto'>
+                    <TelegramIcon
+                      width={theme.spaces.semiMedium}
+                      height={theme.spaces.semiMedium}
+                    />
+                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
+                      Telegram
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
+                  <Divider
+                    weight={theme.spaces.nano}
+                    backgroundColor={theme.backgrounds.lightGray}
+                  />
+                </Box>
+              </Column>
+
+              {/*<Column*/}
+              {/*  width={theme.spaces.fullWidth}*/}
+              {/*  flexBasis={theme.spaces.fullHalfReduced}*/}
+              {/*  margin={theme.spaces.t8r2b6l12}*/}
+              {/*>*/}
+              <Column
+                maxWidth={theme.spaces.largeSemi}
+                padding={theme.spaces.t1r5b2l5}
+                maxHeight={theme.spaces.small}
+              >
+                <Checkbox labelPosition='start' checked={checked}>
+                  <Row marginRight='auto'>
+                    <DiscordIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
+                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
+                      Discord
+                    </Text>
+                  </Row>
+                </Checkbox>
+                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
+                  <Divider
+                    weight={theme.spaces.nano}
+                    backgroundColor={theme.backgrounds.lightGray}
+                  />
+                </Box>
+              </Column>
+              {/*</Column>*/}
+              {/*</Column>*/}
+            </GridAutoRows>
+          </Scroll>
+        </Box>
       </Column>
     </Card>
   )

@@ -24,6 +24,7 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@types/styled-system": "*",
+    "glob": "*",
     "react": "*",
     "styled-system": "*"
   },
@@ -32,6 +33,7 @@
     "@types/react": "^18.3.2",
     "@types/react-dom": "18.3.0",
     "@types/styled-system": "5.1.22",
+    "glob": "8.1.0",
     "styled-system": "5.1.5"
   }
 }

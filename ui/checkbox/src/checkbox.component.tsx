@@ -21,7 +21,7 @@ const doNothing = () => {
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
-  checked = false,
+  checked = true,
   onCheck = doNothing,
   labelPosition = 'end',
   ...props

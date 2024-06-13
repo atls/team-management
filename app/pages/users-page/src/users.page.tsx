@@ -112,9 +112,9 @@ export const Users = () => {
   return (
     <Row>
       <Sidebar name={'Nikita Efimov'} email={'efimov@atls.com'} src={'/profile.png'} />
-      <Column alignItems='flex-end' width='100%'>
+      <Column alignItems='flex-end' width='100%' flex={1}>
         <ThemeSelector />
-        <Column margin='0 240px 0 175px '>
+        <Column margin='0 auto 0'>
           <UsersTitle />
           <UsersGrid>
             {TEST_DATA.map((user) => (
@@ -129,7 +129,12 @@ export const Users = () => {
               />
             ))}
           </UsersGrid>
-          <OrganizationsModal open={isOrganizationsModalOpen} />
+          <OrganizationsModal
+            open={isOrganizationsModalOpen}
+            onBackdropClick={handleOrganizations}
+            img={'/organizations-logos/atlantis.png'}
+            organization={'Atls'}
+          />
         </Column>
       </Column>
     </Row>

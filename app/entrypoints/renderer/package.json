@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@app/user-card": "workspace:*",
+    "@ui/checkbox": "workspace:*",
     "react-intl": "6.6.8"
   }
 }

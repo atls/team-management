@@ -1,10 +1,16 @@
 'use client'
 
-import { Users }    from '@app/users-page'
-
 import React        from 'react'
 
 import { UserCard } from '@app/user-card'
+import { Users }    from '@app/users-page'
+import { Checkbox } from '@ui/checkbox'
 
-const Page = () => <Users />
+const Page = () => (
+  <Users />
+  // <>
+  //   <UserCard avatar={'/profile.png'} />
+  //   <Checkbox />
+  // </>
+)
 export default Page

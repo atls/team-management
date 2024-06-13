@@ -1,8 +1,8 @@
 import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
-import { memo }              from 'react'
 import { FC }                      from 'react'
+import { memo }                    from 'react'
 import { useIntl }                 from 'react-intl'
 
 import { AnimatedCard }            from '@app/animated-card'
@@ -15,12 +15,22 @@ import { ThemeType }               from '@ui/theme'
 
 import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
-const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, img, open }) => {
+const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
+  organization,
+  img,
+  open,
+  onBackdropClick,
+}) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   return (
-    <Modal open={open} width={theme.spaces.superExtraIncreased} padding={theme.spaces.large}>
+    <Modal
+      open={open}
+      width={theme.spaces.superExtraIncreased}
+      padding={theme.spaces.large}
+      onBackdropClick={onBackdropClick}
+    >
       <Column>
         <Text
           maxWidth={theme.spaces.superBiggest}

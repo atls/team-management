@@ -8,13 +8,14 @@ import { useRef }             from 'react'
 
 import { Avatar }             from '@ui/avatar'
 import { ArrowChevronIcon }   from '@ui/icons'
+import { AtlantisSmallIcon }  from '@ui/icons'
+import { AtlantisTitleIcon }  from '@ui/icons'
 import { DashboardIcon }      from '@ui/icons'
 import { OrgamizationsIcon }  from '@ui/icons'
 import { LogOutIcon }         from '@ui/icons'
 import { Box }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Row }                from '@ui/layout'
-import { Logo }               from '@ui/logo'
 import { Text }               from '@ui/text'
 import { ThemeType }          from '@ui/theme'
 
@@ -56,10 +57,16 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               // height={theme.spaces.fullVh}
               marginTop={theme.spaces.small}
             >
-              <motion.div animate={pinned ? { marginLeft: '20px' } : { marginLeft: '25px' }}>
-                <Box margin={theme.spaces.t20autob0} width={190}>
-                  <Logo />
-                </Box>
+              <motion.div animate={pinned ? { marginLeft: '25px' } : { marginLeft: '25px' }}>
+                <Row
+                  margin={theme.spaces.t20autob0}
+                  width={193}
+                  alignItems='center'
+                  justifyContent='space-between'
+                >
+                  <AtlantisSmallIcon width={26} height={24} margin={'0 21px 0 0'} />{' '}
+                  <AtlantisTitleIcon height={12} width={143} />
+                </Row>
               </motion.div>
               <Items>
                 <Item active={false} href='/'>

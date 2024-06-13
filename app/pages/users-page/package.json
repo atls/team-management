@@ -22,6 +22,7 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@types/styled-system": "*",
+    "glob": "*",
     "react": "*",
     "react-dom": "*",
     "styled-system": "*"
@@ -32,6 +33,7 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "18.3.0",
     "@types/styled-system": "5.1.22",
+    "glob": "8.1.0",
     "react-intl": "6.6.8",
     "styled-system": "5.1.5"
   }
