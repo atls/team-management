@@ -25,7 +25,11 @@ const ThemeSelector: React.FC = () => {
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
       >
-        <NotificationsIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
+        <NotificationsIcon
+          width={theme.spaces.semiRegular}
+          height={theme.spaces.semiRegular}
+          color={theme.colors.button.whiteBackgroundButton.default.color}
+        />
       </Button>
       <ThemeSwitch />
     </ThemeSelectorRow>

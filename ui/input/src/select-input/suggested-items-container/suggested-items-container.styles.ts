@@ -12,5 +12,5 @@ export const shapeSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
 })
 
 export const appearanceSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.BLUE_0,
+  backgroundColor: theme.colors.selectInput.suggestedItemsContainer,
 })

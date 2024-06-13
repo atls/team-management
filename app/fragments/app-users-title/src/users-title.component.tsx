@@ -23,9 +23,7 @@ const UsersTitle: React.FC = () => {
 
   return (
     <Row maxWidth={theme.spaces.largeDefaultDecreased} gap={theme.spaces.largest}>
-      <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600}>
-        {formatMessage({ id: 'users-title.title' })}
-      </Text>
+      <Text fontSize='medium.semiIncreased'>{formatMessage({ id: 'users-title.title' })}</Text>
       <Button
         boxShadow={theme.shadows?.black}
         shape='circle'
@@ -33,7 +31,11 @@ const UsersTitle: React.FC = () => {
         variant='whiteBackgroundButton'
         onClick={handlerPlusButtonClick}
       >
-        <AddIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
+        <AddIcon
+          width={theme.spaces.semiRegular}
+          height={theme.spaces.semiRegular}
+          color={theme.colors.button.whiteBackgroundButton.default.color}
+        />
       </Button>
       <AddMemberModal open={isAddMemberModalOpen} onBackdropClick={handlerPlusButtonClick} />
     </Row>

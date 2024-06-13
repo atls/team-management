@@ -40,7 +40,11 @@ export const Member: FC<any> = memo(({ memberData, onDeleteMemberClick }) => {
           </Box>
           <Column margin={theme.spaces.miniDefault}>
             <Text fontSize='normal.semiDefault'>{memberName}</Text>
-            <Text fontSize='small.semiLarge' color='outerspace' marginTop={theme.spaces.semiTiny}>
+            <Text
+              fontSize='small.semiLarge'
+              marginTop={theme.spaces.semiTiny}
+              color='text.secondary'
+            >
               {memberPosition}
             </Text>
           </Column>
@@ -50,7 +54,6 @@ export const Member: FC<any> = memo(({ memberData, onDeleteMemberClick }) => {
       </Row>
       <Divider
         weight={theme.spaces.nano}
-        backgroundColor={theme.backgrounds.gray}
         marginTop={theme.spaces.minniSemiDefault}
         marginBottom={theme.spaces.miniDefault}
       />

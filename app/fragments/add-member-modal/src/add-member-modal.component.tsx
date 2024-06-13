@@ -75,7 +75,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open, onBackdrop
             style={{ boxShadow: theme.shadows.black }}
             variant='whiteBackgroundButton'
           >
-            <AddIcon />
+            <AddIcon color={theme.colors.addMemberModal.addIcon} />
           </Button>
         </Row>
         <Row justifyContent='space-between'>

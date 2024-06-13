@@ -70,19 +70,11 @@ const UsersModal: FC<UsersModalProps> = memo(({
           <Box width={theme.spaces.large} height={theme.spaces.large}>
             <ImageBlock src={organizationCoverSrc} alt='organization-cover' />
           </Box>
-          <Text
-            maxWidth={theme.spaces.extraLargeDecreased}
-            fontSize='normal.increased'
-            color='GRAY_1600'
-          >
+          <Text maxWidth={theme.spaces.extraLargeDecreased} fontSize='normal.increased'>
             {organizationTitle}, {organizationDescription}
           </Text>
         </Row>
-        <Text
-          maxWidth={theme.spaces.largeSemiDecreasedDefault}
-          fontSize='medium.semiIncreased'
-          color='GRAY_1600'
-        >
+        <Text maxWidth={theme.spaces.largeSemiDecreasedDefault} fontSize='medium.semiIncreased'>
           {formatMessage({ id: 'users-modal.subTitle' })} ({organizationMembersQuantity})
         </Text>
         <Scroll height={theme.spaces.superExtraIncreasedDefault}>
