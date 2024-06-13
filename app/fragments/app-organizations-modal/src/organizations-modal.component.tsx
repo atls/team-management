@@ -1,8 +1,8 @@
 import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
-import { memo }              from 'react'
 import { FC }                      from 'react'
+import { memo }                    from 'react'
 import { useIntl }                 from 'react-intl'
 
 import { AnimatedCard }            from '@app/animated-card'

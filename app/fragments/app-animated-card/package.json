@@ -1,23 +1,12 @@
 {
   "name": "@app/animated-card",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
-  "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "react": "*",
-    "react-intl": "*"
-  },
-  "devDependencies": {
-    "@emotion/react": "11.11.4",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "18.3.0",
-    "react-intl": "6.6.8"
-  },
+  "main": "src/index.ts",
   "dependencies": {
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
@@ -27,5 +16,16 @@
     "@ui/text": "workspace:0.0.1",
     "@ui/theme": "workspace:*",
     "framer-motion": "10.16.1"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react-intl": "6.6.8"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*",
+    "react-intl": "*"
   }
 }
