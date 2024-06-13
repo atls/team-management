@@ -1,3 +1,5 @@
+import { useTheme }             from '@emotion/react'
+
 import React                    from 'react'
 import { FC }                   from 'react'
 
@@ -6,8 +8,11 @@ import { OrganizationCard }     from '@fragments/organization-card'
 import { OrganizationCardGrid } from '@fragments/organization-card-grid'
 import { Column }               from '@ui/layout'
 import { Box }                  from '@ui/layout'
+import { ThemeType }            from '@ui/theme'
 
 export const OrganizationsPage: FC<any> = ({}) => {
+  const theme = useTheme() as ThemeType
+
   const ORGANIZATION_TEST_DATA = {
     organizationId: 1,
     organizationTitle: 'atls',
@@ -26,8 +31,16 @@ export const OrganizationsPage: FC<any> = ({}) => {
 
   const organizationsData = TEST_ORGANIZATIONS_DATA
 
+  // TODO params to theme? new component?
   return (
-    <Column width='100%' justifyContent='center' paddingTop={110}>
+    <Box
+      width='100%'
+      minHeight='100vh'
+      justifyContent='center'
+      alignItems='flex-start'
+      padding='110px 40px 0'
+      backgroundColor={theme.colors.organizationsPage.background}
+    >
       <OrganizationCardGrid>
         <Box gridColumn='1 / -1'>
           <UsersTitle />
@@ -36,6 +49,6 @@ export const OrganizationsPage: FC<any> = ({}) => {
           <OrganizationCard {...organizationData} />
         ))}
       </OrganizationCardGrid>
-    </Column>
+    </Box>
   )
 }
