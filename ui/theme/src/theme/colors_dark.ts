@@ -3,8 +3,10 @@ const GRAY_100 = '#F2F2F2'
 const GRAY_200 = '#E4E4E4'
 const GRAY_300 = '#D7D7D7'
 const GRAY_400 = '#C9C9C9'
+const GRAY_800 = '#949494'
 const GRAY_1000 = '#797979'
 const GRAY_1400 = '#434343'
+const GRAY_1500 = '#363636'
 const GRAY_1600 = '#282828'
 
 const BLUE_0 = '#F5F9FF'
@@ -16,6 +18,25 @@ const RED_400 = '#E95050'
 const BLACK_50 = '00000080'
 
 const colors = {
+  divider: GRAY_1500,
+  text: {
+    primary: WHITE,
+    secondary: GRAY_400,
+  },
+  organizationsPage: {
+    background: GRAY_1500,
+  },
+  usersTitle: {
+    text: WHITE,
+  },
+  addMemberModal: {
+    addIcon: WHITE,
+    text: WHITE,
+    buttonText: GRAY_800,
+  },
+  AddMemberToOrganizationModal: {
+    text: WHITE,
+  },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
   GRAY_300,
@@ -131,34 +152,32 @@ const colors = {
   cherrywood: 'rgba(97, 32, 19, 0.20)',
   dune: 'rgba(37, 37, 37, 0.20)',
   input: {
-    light: {
-      backgroundColor: GRAY_200,
-      fontColor: GRAY_1600,
-    },
-    dark: {
-      backgroundColor: GRAY_1400,
-      fontColor: WHITE,
-    },
+    backgroundColor: GRAY_1400,
+    fontColor: WHITE,
+  },
+  selectInput: {
+    suggestedItemsContainer: GRAY_1000,
+    suggestedItem: GRAY_1400,
   },
   modal: {
-    childContainer: WHITE,
+    childContainer: GRAY_1600,
     backdrop: BLACK_50,
   },
   dropdown: {
     button: {
-      default: WHITE,
-      hover: BLUE_0,
-      pressed: BLUE_100,
+      default: GRAY_1600,
+      hover: GRAY_1400,
+      pressed: GRAY_1600,
     },
     dot: {
       background: BLUE_400,
     },
-    childContainer: WHITE,
+    childContainer: GRAY_1400,
   },
   switch: {
     baseSwitch: {
       handle: {
-        default: GRAY_100,
+        default: GRAY_1400,
       },
       thumb: {
         default: GRAY_400,
@@ -167,7 +186,7 @@ const colors = {
     },
     iconSwitch: {
       handle: {
-        default: GRAY_100,
+        default: GRAY_1400,
         checked: BLUE_100,
       },
       thumb: {
@@ -180,8 +199,8 @@ const colors = {
         background: GRAY_1600,
       },
       thumb: {
-        default: GRAY_1600,
-        hover: GRAY_100,
+        default: WHITE,
+        hover: GRAY_1400,
         checked: BLUE_400,
       },
     },
@@ -255,8 +274,9 @@ const colors = {
     },
     whiteBackgroundButton: {
       default: {
-        background: 'rgba(255, 255, 255, 1)',
+        background: GRAY_1400,
         font: 'rgb(0,0,0,1)',
+        color: WHITE,
         border: 'transparent',
       },
       hover: {

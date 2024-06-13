@@ -1,8 +1,10 @@
 const WHITE = '#FFFFFF'
+const GRAY_0 = '#F8F8F8'
 const GRAY_100 = '#F2F2F2'
 const GRAY_200 = '#E4E4E4'
 const GRAY_300 = '#D7D7D7'
 const GRAY_400 = '#C9C9C9'
+const GRAY_800 = '#949494'
 const GRAY_1000 = '#797979'
 const GRAY_1400 = '#434343'
 const GRAY_1600 = '#282828'
@@ -16,6 +18,25 @@ const RED_400 = '#E95050'
 const BLACK_50 = '00000080'
 
 const colors = {
+  divider: GRAY_300,
+  text: {
+    primary: GRAY_1600,
+    secondary: GRAY_1000,
+  },
+  organizationsPage: {
+    background: GRAY_0,
+  },
+  usersTitle: {
+    text: GRAY_1600,
+  },
+  addMemberModal: {
+    addIcon: GRAY_1600,
+    text: GRAY_1600,
+    buttonText: GRAY_800,
+  },
+  AddMemberToOrganizationModal: {
+    text: GRAY_1600,
+  },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
   GRAY_300,
@@ -131,14 +152,12 @@ const colors = {
   cherrywood: 'rgba(97, 32, 19, 0.20)',
   dune: 'rgba(37, 37, 37, 0.20)',
   input: {
-    light: {
-      backgroundColor: GRAY_200,
-      fontColor: GRAY_1600,
-    },
-    dark: {
-      backgroundColor: GRAY_1400,
-      fontColor: WHITE,
-    },
+    backgroundColor: GRAY_200,
+    fontColor: GRAY_1600,
+  },
+  selectInput: {
+    suggestedItemsContainer: BLUE_0,
+    suggestedItem: WHITE,
   },
   modal: {
     childContainer: WHITE,
