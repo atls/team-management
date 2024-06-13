@@ -81,7 +81,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           rowGap={theme.spaces.large}
         >
           <Text fontSize='normal.semiIncreased' width='100%'>
-            Команды организации
+            {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
           </Text>
           <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
           <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
@@ -96,7 +96,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             size='middlingRoundedPadding'
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              Пригласить
+              {formatMessage({ id: 'add-member-to-organization-modal.button' })}
             </Text>
           </Button>
         </Row>
