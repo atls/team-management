@@ -150,6 +150,7 @@ const colors = {
     fontColor: GRAY_1600,
   },
   selectInput: {
+    selectedItem: GRAY_300,
     suggestedItemsContainer: BLUE_0,
     suggestedItem: WHITE,
   },

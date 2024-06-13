@@ -149,6 +149,7 @@ const colors = {
     fontColor: WHITE,
   },
   selectInput: {
+    selectedItem: GRAY_1500,
     suggestedItemsContainer: GRAY_1000,
     suggestedItem: GRAY_1400,
   },
@@ -267,9 +268,8 @@ const colors = {
     },
     whiteBackgroundButton: {
       default: {
-        background: GRAY_1400,
+        background: GRAY_1600,
         font: 'rgb(0,0,0,1)',
-        color: WHITE,
         border: 'transparent',
       },
       hover: {
