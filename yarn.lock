@@ -1648,11 +1648,16 @@ __metadata:
   resolution: "@fragments/base-layout@workspace:app/fragments/base-layout"
   dependencies:
     "@app/theme-selector": "workspace:*"
+    "@app/users-title": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
     "@ui/layout": "workspace:*"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -2180,19 +2185,13 @@ __metadata:
   resolution: "@pages/organizations-page@workspace:app/pages/organizations-page"
   dependencies:
     "@app/theme-selector": "workspace:*"
-    "@app/users-title": "workspace:*"
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
     "@fragments/organization-card": "workspace:*"
     "@fragments/organization-card-grid": "workspace:*"
-    "@ui/layout": "workspace:*"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
     react: "*"
     styled-system: "*"
   languageName: unknown
