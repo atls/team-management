@@ -4,5 +4,5 @@ import React                 from 'react'
 
 import { OrganizationsPage } from '@pages/organizations-page'
 
-const Page = () => <OrganizationsPage />
-export default Page
+// eslint-disable-next-line react/function-component-definition
+export default () => <OrganizationsPage />
