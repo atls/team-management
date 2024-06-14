@@ -40,9 +40,29 @@ const UserCard: FC<UserCardProps> = ({
   // const handleCheckbox = () => {
   //   setChecked(!checked)
   // }
-
+  const ICONS = [
+    <GitHubIcon />,
+    <TelegramIcon />,
+    <DiscordIcon />,
+    <GitHubIcon />,
+    <TelegramIcon />,
+    <DiscordIcon />,
+    <GitHubIcon />,
+    <TelegramIcon />,
+    <DiscordIcon />,
+    <GitHubIcon />,
+  ]
   const CHECKBOX_DATA = [
     { name: 'Git', checked: true },
+    { name: 'Telegram', checked: false },
+    { name: 'Discord', checked: false },
+    { name: 'Git', checked: true },
+    { name: 'Telegram', checked: false },
+    { name: 'Discord', checked: false },
+    { name: 'Telegram', checked: false },
+    { name: 'Discord', checked: false },
+    { name: 'Telegram', checked: false },
+    { name: 'Discord', checked: false },
     { name: 'Telegram', checked: false },
     { name: 'Discord', checked: false },
   ]
@@ -96,12 +116,12 @@ const UserCard: FC<UserCardProps> = ({
               padding={theme.spaces.t0rbl12}
             >
               <Button
-                size={'microRoundedPadding'}
+                size='microIncreasedRoundedPadding'
                 shape='rectangle'
-                variant='blackBackgroundButton'
+                variant='blackSolidBackgroundButton'
                 onClick={handleOrganizations}
               >
-                <Text margin={theme.spaces.t0r6lb0} color={theme.colors.white}>
+                <Text color={theme.colors.white} fontSize='normal.semiDefault'>
                   {organizations}
                 </Text>
                 <OrgWhiteIcon width={theme.spaces.micro} />
@@ -138,31 +158,23 @@ const UserCard: FC<UserCardProps> = ({
           </Text>
         </Row>
         <Box padding={'8px 6px 12px'}>
-          <Scroll>
+          <Scroll height={theme.spaces.gigantIncreased}>
             <GridAutoRows
               columnGap={10}
               columns={2}
               maxColumnWidth={190}
               gap={0}
-              maxHeight={theme.spaces.largeSemiNormal}
+              // maxHeight={theme.spaces.semiGigant}
             >
-              {CHECKBOX_DATA.map((checkbox) => (
+              {CHECKBOX_DATA.map((checkbox, index) => (
                 <Column
                   maxWidth={theme.spaces.largeSemi}
                   padding={theme.spaces.t1r5b2l5}
-                  maxHeight={theme.spaces.small}
+                  height={theme.spaces.moderate}
                 >
-                  <Checkbox
-                    labelPosition='start'
-                    checked={checked}
-                    // onCheck={onCheck}
-                    // onCheck={handleCheckbox}
-                  >
+                  <Checkbox labelPosition='start' checked={checked}>
                     <Row marginRight='auto'>
-                      <GitHubIcon
-                        width={theme.spaces.semiMedium}
-                        height={theme.spaces.semiMedium}
-                      />
+                      {ICONS[index]}
                       <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
                         {checkbox.name}
                       </Text>
@@ -176,165 +188,6 @@ const UserCard: FC<UserCardProps> = ({
                   </Box>
                 </Column>
               ))}
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <GitHubIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Git*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <TelegramIcon*/}
-              {/*        width={theme.spaces.semiMedium}*/}
-              {/*        height={theme.spaces.semiMedium}*/}
-              {/*      />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Telegram*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <TelegramIcon*/}
-              {/*        width={theme.spaces.semiMedium}*/}
-              {/*        height={theme.spaces.semiMedium}*/}
-              {/*      />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Telegram*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <TelegramIcon*/}
-              {/*        width={theme.spaces.semiMedium}*/}
-              {/*        height={theme.spaces.semiMedium}*/}
-              {/*      />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Telegram*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <TelegramIcon*/}
-              {/*        width={theme.spaces.semiMedium}*/}
-              {/*        height={theme.spaces.semiMedium}*/}
-              {/*      />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Telegram*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={checked} onCheck={handleCheckbox}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <TelegramIcon*/}
-              {/*        width={theme.spaces.semiMedium}*/}
-              {/*        height={theme.spaces.semiMedium}*/}
-              {/*      />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Telegram*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
-
-              {/*<Column*/}
-              {/*  maxWidth={theme.spaces.largeSemi}*/}
-              {/*  padding={theme.spaces.t1r5b2l5}*/}
-              {/*  maxHeight={theme.spaces.small}*/}
-              {/*>*/}
-              {/*  <Checkbox labelPosition='start' checked={true}>*/}
-              {/*    <Row marginRight='auto'>*/}
-              {/*      <DiscordIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />*/}
-              {/*      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>*/}
-              {/*        Discord*/}
-              {/*      </Text>*/}
-              {/*    </Row>*/}
-              {/*  </Checkbox>*/}
-              {/*  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>*/}
-              {/*    <Divider*/}
-              {/*      weight={theme.spaces.nano}*/}
-              {/*      backgroundColor={theme.backgrounds.lightGray}*/}
-              {/*    />*/}
-              {/*  </Box>*/}
-              {/*</Column>*/}
             </GridAutoRows>
           </Scroll>
         </Box>

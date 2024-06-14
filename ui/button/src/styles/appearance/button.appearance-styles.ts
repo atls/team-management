@@ -3,6 +3,30 @@ import { ifProp } from 'styled-tools'
 import { switchProp } from 'styled-tools'
 import { prop } from 'styled-tools'
 
+const appearanceBlackSolidBackgroundButtonDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blackSolidBackgroundButton.default.font'),
+  backgroundColor: prop('theme.colors.button.blackSolidBackgroundButton.default.background'),
+  borderColor: prop('theme.colors.button.blackSolidBackgroundButton.default.border'),
+})
+
+const appearanceBlackSolidBackgroundButtonHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blackSolidBackgroundButton.hover.font'),
+  backgroundColor: prop('theme.colors.button.blackSolidBackgroundButton.hover.background'),
+  borderColor: prop('theme.colors.button.blackSolidBackgroundButton.hover.border'),
+})
+
+const appearanceBlackSolidBackgroundButtonPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blackSolidBackgroundButton.pressed.font'),
+  backgroundColor: prop('theme.colors.button.blackSolidBackgroundButton.pressed.background'),
+  borderColor: prop('theme.colors.button.blackSolidBackgroundButton.pressed.border'),
+})
+
+const appearanceBlackSolidBackgroundButtonDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blackSolidBackgroundButton.disabled.font'),
+  backgroundColor: prop('theme.colors.button.blackSolidBackgroundButton.disabled.background'),
+  borderColor: prop('theme.colors.button.blackSolidBackgroundButton.disabled.border'),
+})
+
 const appearanceTransparentBackgroundButtonDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.transparentBackgroundButton.default.font'),
   backgroundColor: prop('theme.colors.button.transparentBackgroundButton.default.background'),
@@ -172,6 +196,19 @@ const appearanceLightBlueBackgroundDottedButtonDisabledStyles = createAppearance
 })
 
 const appearanceStyles = switchProp(prop('variant', 'primary'), {
+  blackSolidBackgroundButton: ifProp(
+    prop('disabled', false),
+    appearanceBlackSolidBackgroundButtonDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceBlackSolidBackgroundButtonPressedStyles,
+      ifProp(
+        prop('hover', false),
+        appearanceBlackSolidBackgroundButtonHoverStyles,
+        appearanceBlackSolidBackgroundButtonDefaultStyles
+      )
+    )
+  ),
   transparentBackgroundButton: ifProp(
     prop('disabled', false),
     appearanceTransparentBackgroundButtonDisabledStyles,

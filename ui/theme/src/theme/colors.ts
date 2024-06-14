@@ -187,6 +187,28 @@ const colors = {
     },
   },
   button: {
+    blackSolidBackgroundButton: {
+      default: {
+        background: 'rgba(40, 40, 40, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'rgba(54, 54, 54, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'rgba(67, 67, 67, 1)',
+        font: 'rgb(255,255,255,1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'rgba(228, 228, 228, 1)',
+        font: 'rgb(242,242,242)',
+        border: 'transparent',
+      },
+    },
     transparentBackgroundButton: {
       default: {
         background: 'transparent',
