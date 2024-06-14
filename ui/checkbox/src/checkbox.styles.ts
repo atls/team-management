@@ -88,5 +88,5 @@ export const checkmarkCheckStyles = ifProp(
   {
     display: 'flex',
   },
-  { display: 'none' }
+  { display: 'flex' }
 )

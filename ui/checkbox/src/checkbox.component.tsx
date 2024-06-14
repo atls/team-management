@@ -7,6 +7,7 @@ import { FC }                from 'react'
 
 import { Condition }         from '@ui/condition'
 import { CheckIcon }         from '@ui/icons'
+import { WrongSolidIcon }    from '@ui/icons'
 import { ThemeType }         from '@ui/theme'
 
 import CheckboxProps         from './checkbox.interface.js'
@@ -21,7 +22,7 @@ const doNothing = () => {
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
-  checked = true,
+  checked = false,
   onCheck = doNothing,
   labelPosition = 'end',
   ...props
@@ -39,6 +40,7 @@ const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
           <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
             <CheckIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
           </Condition>
+          <WrongSolidIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
         </Check>
       </Box>
       <Label position='end'>{children}</Label>
