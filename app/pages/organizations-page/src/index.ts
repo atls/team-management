@@ -1,1 +1,1 @@
-export * from './organizations.page.js'
+export { default } from './organizations.page.js'
