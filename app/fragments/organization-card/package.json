@@ -1,13 +1,13 @@
 {
-  "name": "@fragments/organization-card",
+  "name": "@app/organization-card-fragment",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
+    "@app/add-member-to-organization-modal-fragment": "workspace:*",
     "@app/users-modal": "workspace:*",
-    "@fragments/add-member-to-organization-modal": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",

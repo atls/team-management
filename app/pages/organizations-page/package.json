@@ -1,12 +1,12 @@
 {
-  "name": "@pages/organizations-page",
+  "name": "@app/organizations-page",
   "version": "0.0.1",
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
+    "@app/organization-card-fragment": "workspace:*",
+    "@app/organization-card-grid-fragment": "workspace:*",
     "@app/theme-selector": "workspace:*",
-    "@fragments/organization-card": "workspace:*",
-    "@fragments/organization-card-grid": "workspace:*",
     "@ui/sidebar": "workspace:*"
   },
   "devDependencies": {

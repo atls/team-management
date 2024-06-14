@@ -1,5 +1,5 @@
 {
-  "name": "@fragments/organization-card-grid",
+  "name": "@app/organization-card-grid-fragment",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",

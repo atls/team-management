@@ -1,5 +1,5 @@
 {
-  "name": "@fragments/add-member-to-organization-modal",
+  "name": "@app/add-member-to-organization-modal-fragment",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",

@@ -1,3 +1,4 @@
+import { AddMemberToOrganizationModal } from '@app/add-member-to-organization-modal-fragment'
 import { useTheme }                     from '@emotion/react'
 
 import React                            from 'react'
@@ -6,7 +7,6 @@ import { memo }                         from 'react'
 import { useState }                     from 'react'
 
 import { UsersModal }                   from '@app/users-modal'
-import { AddMemberToOrganizationModal } from '@fragments/add-member-to-organization-modal'
 import { Button }                       from '@ui/button'
 import { Condition }                    from '@ui/condition'
 import { TeamIcon }                     from '@ui/icons'

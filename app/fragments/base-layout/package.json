@@ -1,9 +1,12 @@
 {
-  "name": "@fragments/base-layout",
+  "name": "@app/base-layout-fragment",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@app/theme-selector": "workspace:*",
