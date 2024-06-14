@@ -1,11 +1,11 @@
 'use client'
 
+import React                    from 'react'
+import { FC }                   from 'react'
+
 import { OrganizationCard }     from '@app/organization-card-fragment'
 import { OrganizationDataType } from '@app/organization-card-fragment'
 import { OrganizationCardGrid } from '@app/organization-card-grid-fragment'
-
-import React                    from 'react'
-import { FC }                   from 'react'
 
 export default function OrganizationsPage(): FC {
   const ORGANIZATION_TEST_DATA: OrganizationDataType = {

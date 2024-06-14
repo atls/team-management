@@ -1,10 +1,10 @@
-import { AddMemberModal } from '@app/add-member-modal-fragment'
 import { useTheme }       from '@emotion/react'
 
 import React              from 'react'
 import { useState }       from 'react'
 import { useIntl }        from 'react-intl'
 
+import { AddMemberModal } from '@app/add-member-modal-fragment'
 import { Button }         from '@ui/button'
 import { AddIcon }        from '@ui/icons'
 import { Row }            from '@ui/layout'

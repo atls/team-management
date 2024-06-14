@@ -33,7 +33,6 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
 ) => {
   const [hover, hoverProps] = useHover()
   const [pressed, setPressed] = useState<boolean>(false)
-
   if (props.horizontalLocation === 'right') {
     return (
       <ButtonElement

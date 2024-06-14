@@ -103,6 +103,7 @@ export const spaces = {
   tlb0r11: '0 0 0 11px',
   t0r6lb0: '0 6px 0 0',
   tb179lrauto: '179px auto',
+  tb180lra: '180px auto',
 
   mediumDefault: 50,
   mediumIncreased: 80,
