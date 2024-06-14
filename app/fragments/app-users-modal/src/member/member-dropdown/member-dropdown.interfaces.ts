@@ -1,4 +1,4 @@
 export interface MemberDorpdownProps {
   memberId: number
-  onDeleteMemberClick: VoidFunction
+  onDeleteMemberClick: (memberId: number) => void
 }
