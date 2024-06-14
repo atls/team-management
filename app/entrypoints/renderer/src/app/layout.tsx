@@ -1,9 +1,10 @@
 'use client'
 
+import { BaseLayout }    from '@app/base-layout-fragment'
+
 import React             from 'react'
 import { IntlProvider }  from 'react-intl'
 
-import { BaseLayout }    from '@fragments/base-layout'
 import { ThemeProvider } from '@ui/theme'
 
 import messages          from '../../locales/ru.json'
