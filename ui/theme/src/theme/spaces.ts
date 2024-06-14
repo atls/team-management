@@ -76,6 +76,7 @@ export const spaces = {
   superSemiSuperExtra: 245,
   superExtra: 486,
   superExtraIncreased: 500,
+  superExtraIncreasedSmall: 530,
   superExtraIncreasedDefault: 544,
   superPuperExtra: 578,
   superPuperExtraIncreased: 663,

@@ -47,7 +47,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
   return (
     <Box
       overflow='hidden'
-      height={theme.spaces.superBiggest}
+      minHeight={theme.spaces.superBiggest}
       borderRadius={theme.radii.f10}
       background={theme.backgrounds.darkBlueGradient}
       boxShadow={theme.shadows.diesel}
