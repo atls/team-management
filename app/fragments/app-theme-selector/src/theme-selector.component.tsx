@@ -27,6 +27,7 @@ const ThemeSelector: React.FC = () => {
       justifyContent='space-between'
       margin={'24px 24px 0 0'}
       alignSelf='flex-end'
+      style={{ position: 'relative' }}
     >
       <Button
         boxShadow={theme.shadows.black}
@@ -34,17 +35,11 @@ const ThemeSelector: React.FC = () => {
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'
         onClick={handleNotificationsModal}
-        style={{ position: 'relative' }}
       >
         <NotificationsIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
       </Button>
       <ThemeSwitch onChange={onThemeChange} />
-      <Box
-        position={'absolute'}
-        top={0}
-        right={0}
-        style={{ position: 'absolute', top: '0', right: '0' }}
-      >
+      <Box style={{ position: 'absolute', top: '0', right: '0' }}>
         <NotificationsModal
           open={isNotificationsModalOpen}
           onBackdropClick={handleNotificationsModal}

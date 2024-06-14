@@ -1,14 +1,21 @@
 import { styleFn } from 'styled-system'
 
-export const baseChildContainerStyles: styleFn = ({ theme }) => ({
-  position: 'fixed',
+export const baseChildContainerStyles: styleFn = ({
+  theme,
+  bottom,
+  top,
+  left,
+  right,
+  position,
+}) => ({
+  position: position ?? 'fixed',
   display: 'flex',
   flexDirection: 'column',
   zIndex: theme.spaces.s1400,
-  bottom: theme.spaces.zero,
-  top: theme.spaces.zero,
-  left: theme.spaces.zero,
-  right: theme.spaces.zero,
+  bottom: bottom ?? theme.spaces.zero,
+  top: top ?? theme.spaces.zero,
+  left: left ?? theme.spaces.zero,
+  right: right ?? theme.spaces.zero,
   WebkitTapHighlightColor: 'transparent',
 })
 

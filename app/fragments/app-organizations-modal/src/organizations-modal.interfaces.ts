@@ -1,5 +1,5 @@
 export interface OrganizationsModalProps {
-  organization: string
+  organization: []
   img: string
   open: boolean
   onBackdropClick: () => void

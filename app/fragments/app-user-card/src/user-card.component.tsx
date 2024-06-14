@@ -1,45 +1,46 @@
-import { useTheme }      from '@emotion/react'
+import { useTheme }           from '@emotion/react'
 
-import React             from 'react'
-import { FC }            from 'react'
-import { useState }      from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { useState }           from 'react'
 
-import { Button }        from '@ui/button'
-import { Card }          from '@ui/card'
-import { Checkbox }      from '@ui/checkbox'
-import { Divider }       from '@ui/divider'
-import { DiscordIcon }   from '@ui/icons'
-import { OrgWhiteIcon }  from '@ui/icons'
-import { GitHubIcon }    from '@ui/icons'
-import { TimerIcon }     from '@ui/icons'
-import { TelegramIcon }  from '@ui/icons'
-import { NextImage }     from '@ui/image'
-import { Box }           from '@ui/layout'
-import { GridAutoRows }  from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Line }          from '@ui/progress'
-import { Scroll }        from '@ui/scroll'
-import { Tag }           from '@ui/tag'
-import { Text }          from '@ui/text'
-import { ThemeType }     from '@ui/theme'
+import { OrganizationsModal } from '@app/organizations-modal'
+import { Button }             from '@ui/button'
+import { Card }               from '@ui/card'
+import { Checkbox }           from '@ui/checkbox'
+import { Divider }            from '@ui/divider'
+import { DiscordIcon }        from '@ui/icons'
+import { OrgWhiteIcon }       from '@ui/icons'
+import { GitHubIcon }         from '@ui/icons'
+import { TimerIcon }          from '@ui/icons'
+import { TelegramIcon }       from '@ui/icons'
+import { NextImage }          from '@ui/image'
+import { Box }                from '@ui/layout'
+import { GridAutoRows }       from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Line }               from '@ui/progress'
+import { Scroll }             from '@ui/scroll'
+import { Tag }                from '@ui/tag'
+import { Text }               from '@ui/text'
+import { ThemeType }          from '@ui/theme'
 
-import { UserCardProps } from './user-card.interface.js'
+import { UserCardProps }      from './user-card.interface.js'
 
 const UserCard: FC<UserCardProps> = ({
   name,
   position,
   time,
   organizations,
-  handleOrganizations,
+  organizationsData,
+  // handleOrganizations,
   avatar,
-  // checked,
 }) => {
   const theme = useTheme() as ThemeType
-  const [checked, setChecked] = useState<boolean>(false)
-  // const handleCheckbox = () => {
-  //   setChecked(!checked)
-  // }
+  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+  const handleOrganizations = () => {
+    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
+  }
   const ICONS = [
     <GitHubIcon />,
     <TelegramIcon />,
@@ -84,8 +85,8 @@ const UserCard: FC<UserCardProps> = ({
           <NextImage
             src={avatar}
             borderRadius={theme.radii.tl24tr24}
-            width={407}
-            height={380}
+            width={theme.spaces.largeSemiIncreased}
+            height={theme.spaces.largeDefault}
             alt='avatar'
           />
           <Box
@@ -157,14 +158,13 @@ const UserCard: FC<UserCardProps> = ({
             20%
           </Text>
         </Row>
-        <Box padding={'8px 6px 12px'}>
+        <Box padding={theme.spaces.t8lr6b12}>
           <Scroll height={theme.spaces.gigantIncreased}>
             <GridAutoRows
-              columnGap={10}
-              columns={2}
-              maxColumnWidth={190}
-              gap={0}
-              // maxHeight={theme.spaces.semiGigant}
+              columnGap={theme.spaces.miniDefault}
+              columns={theme.spaces.s2}
+              maxColumnWidth={theme.spaces.semiSuperExtra}
+              gap={theme.spaces.zero}
             >
               {CHECKBOX_DATA.map((checkbox, index) => (
                 <Column
@@ -172,7 +172,7 @@ const UserCard: FC<UserCardProps> = ({
                   padding={theme.spaces.t1r5b2l5}
                   height={theme.spaces.moderate}
                 >
-                  <Checkbox labelPosition='start' checked={checked}>
+                  <Checkbox labelPosition='start' checked={checkbox.checked}>
                     <Row marginRight='auto'>
                       {ICONS[index]}
                       <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
@@ -192,6 +192,12 @@ const UserCard: FC<UserCardProps> = ({
           </Scroll>
         </Box>
       </Column>
+      <OrganizationsModal
+        open={isOrganizationsModalOpen}
+        onBackdropClick={handleOrganizations}
+        img={'/organizations-logos/atlantis.png'}
+        organization={organizationsData}
+      />
     </Card>
   )
 }

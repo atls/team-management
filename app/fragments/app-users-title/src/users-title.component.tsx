@@ -14,12 +14,16 @@ const UsersTitle: React.FC = () => {
   const theme = useTheme() as ThemeType
 
   return (
-    <Row margin={'44px 0 24px 0'} width='auto'>
-      <Text fontSize='medium.semiIncreased' color={theme.colors.GRAY_1600} marginRight={'27px'}>
+    <Row margin={theme.spaces.t44lr0b24} width='auto'>
+      <Text
+        fontSize='medium.semiIncreased'
+        color={theme.colors.GRAY_1600}
+        marginRight={theme.spaces.semiModerate}
+      >
         {formatMessage({ id: 'users-title.title' })}
       </Text>
       <Button
-        boxShadow={theme.shadows?.black}
+        boxShadow={theme.shadows.black}
         shape='circle'
         size='middlingRoundedPadding'
         variant='whiteBackgroundButton'

@@ -29,7 +29,12 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
 
   return (
     <Modal
+      top={80}
+      left='auto'
+      bottom='auto'
+      right='10%'
       open={open}
+      position='absolute'
       width={theme.spaces.largeSemiLargeIncreased}
       onBackdropClick={onBackdropClick}
     >

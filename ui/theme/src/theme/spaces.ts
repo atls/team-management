@@ -99,7 +99,9 @@ export const spaces = {
   t2l0b23r0: '2px 0 0 23.5px',
   tlb0r11: '0 0 0 11px',
   t0r6lb0: '0 6px 0 0',
+  t8lr6b12: '8px 6px 12px',
   tb179lrauto: '179px auto',
+  t44lr0b24: '44px 0 24px 0',
 
   mediumDefault: 50,
   mediumIncreased: 80,

@@ -20,6 +20,11 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
   width,
   padding,
   onBackdropClick,
+  top,
+  left,
+  bottom,
+  right,
+  position,
 }) => {
   const childrenContainerHandler: MouseEventHandler<HTMLDivElement> = (e) => {
     e.stopPropagation()
@@ -35,6 +40,11 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
             onClick={childrenContainerHandler}
             width={width || theme.spaces.superExtra}
             padding={padding || theme.spaces.paddingsNormal}
+            top={top}
+            left={left}
+            bottom={bottom}
+            right={right}
+            position={position}
           >
             {children}
           </ChildContainer>

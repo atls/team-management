@@ -334,6 +334,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/user-card@workspace:app/fragments/app-user-card"
   dependencies:
+    "@app/organizations-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -3367,6 +3368,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.3.1"

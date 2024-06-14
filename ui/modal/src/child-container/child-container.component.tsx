@@ -1,5 +1,6 @@
 import styled                             from '@emotion/styled'
-import { Box }                            from '@atls-ui-parts/layout'
+
+import { Box }                            from '@ui/layout'
 
 import { baseChildContainerStyles }       from './child-container.styles.js'
 import { appearanceChildContainerStyles } from './child-container.styles.js'

@@ -4,6 +4,6 @@ export interface UserCardProps {
   time?: string
   organizations?: string | number
   avatar: string
-  // checked?: boolean
   handleOrganizations?: () => void
+  organizationsData: []
 }

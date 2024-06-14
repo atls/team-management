@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@app/organizations-modal": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
     "@ui/checkbox": "workspace:*",

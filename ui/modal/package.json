@@ -9,6 +9,7 @@
     "@atls-ui-parts/condition": "0.1.1",
     "@atls-ui-parts/layout": "0.1.1",
     "@atls-ui-parts/portal": "0.0.7",
+    "@ui/layout": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {

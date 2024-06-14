@@ -19,7 +19,12 @@ export const Users = () => {
       position: 'Safety Technician IV',
       email: 'feves0@deviantart.com',
       avatar: 'https://robohash.org/dignissimosutrepudiandae.png?size=407x380&set=set1',
-      organizations: 5,
+      organizations: [
+        { name: 'Atls' },
+        { name: 'Dream-team' },
+        { name: 'LOL' },
+        { name: 'Freelance' },
+      ],
       time: '12:29:33',
     },
     {
@@ -28,7 +33,7 @@ export const Users = () => {
       position: 'VP Sales',
       email: 'kadcocks1@slashdot.org',
       avatar: 'https://robohash.org/estquasimodi.png?size=407x380&set=set1',
-      organizations: 3,
+      organizations: [{ name: 'Atls' }, { name: 'Dream-team' }, { name: 'LOL' }],
       time: '6:19:44',
     },
     {
@@ -37,7 +42,7 @@ export const Users = () => {
       position: 'Financial Advisor',
       email: 'tcornish2@youku.com',
       avatar: 'https://robohash.org/autsuntest.png?size=407x380&set=set1',
-      organizations: 6,
+      organizations: [{ name: 'Atls' }, { name: 'Dream-team' }, { name: 'LOL' }],
       time: '3:03:34',
     },
     {
@@ -46,7 +51,7 @@ export const Users = () => {
       position: 'Food Chemist',
       email: 'jbachmann3@devhub.com',
       avatar: 'https://robohash.org/explicaboreprehenderitillo.png?size=407x380&set=set1',
-      organizations: 4,
+      organizations: [{ name: 'Atls' }, { name: 'Dream-team' }, { name: 'LOL' }],
       time: '19:02:37',
     },
     {
@@ -55,7 +60,7 @@ export const Users = () => {
       position: 'Geologist III',
       email: 'mmustarde4@networkadvertising.org',
       avatar: 'https://robohash.org/ipsamessequasi.png?size=407x380&set=set1',
-      organizations: 4,
+      organizations: [{ name: 'Atls' }, { name: 'Dream-team' }, { name: 'LOL' }],
       time: '22:03:36',
     },
     {
@@ -64,7 +69,7 @@ export const Users = () => {
       position: 'Geological Engineer',
       email: 'kgirke5@aboutads.info',
       avatar: 'https://robohash.org/magnamfugased.png?size=407x380&set=set1',
-      organizations: 5,
+      organizations: [{ name: 'Atls' }, { name: 'Dream-team' }, { name: 'LOL' }],
       time: '22:28:29',
     },
     {
@@ -73,41 +78,14 @@ export const Users = () => {
       position: 'Senior Quality Engineer',
       email: 'eranscombe6@wsj.com',
       avatar: 'https://robohash.org/animiipsaodio.png?size=407x380&set=set1',
-      organizations: 1,
+      organizations: [{ name: 'Dream-team' }, { name: 'LOL' }],
       time: '15:15:49',
     },
-    {
-      id: 8,
-      name: 'Margy Luckett',
-      position: 'Director of Sales',
-      email: 'mluckett7@upenn.edu',
-      avatar: 'https://robohash.org/commodipariaturcupiditate.png?size=407x380&set=set1',
-      organizations: 3,
-      time: '22:27:26',
-    },
-    {
-      id: 9,
-      name: 'Quinn Coil',
-      position: 'Nuclear Power Engineer',
-      email: 'qcoil8@amazon.com',
-      avatar: 'https://robohash.org/idetdolore.png?size=407x380&set=set1',
-      organizations: 5,
-      time: '15:52:52',
-    },
-    {
-      id: 10,
-      name: 'Cyrille Japp',
-      position: 'GIS Technical Architect',
-      email: 'cjapp9@nifty.com',
-      avatar: 'https://robohash.org/rerumeosdolor.png?size=407x380&set=set1',
-      organizations: 1,
-      time: '2:20:01',
-    },
   ]
-  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
-  const handleOrganizations = () => {
-    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
-  }
+  // const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+  // const handleOrganizations = () => {
+  //   setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
+  // }
 
   return (
     <Row>
@@ -119,22 +97,23 @@ export const Users = () => {
           <UsersGrid>
             {TEST_DATA.map((user) => (
               <UserCard
-                handleOrganizations={handleOrganizations}
+                // handleOrganizations={handleOrganizations}
                 key={user.id}
                 avatar={user.avatar}
                 name={user.name}
                 position={user.position}
-                organizations={user.organizations}
+                organizations={user.organizations.length}
                 time={user.time}
+                organizationsData={user.organizations}
               />
             ))}
           </UsersGrid>
-          <OrganizationsModal
-            open={isOrganizationsModalOpen}
-            onBackdropClick={handleOrganizations}
-            img={'/organizations-logos/atlantis.png'}
-            organization={'Atls'}
-          />
+          {/*<OrganizationsModal*/}
+          {/*  open={isOrganizationsModalOpen}*/}
+          {/*  onBackdropClick={handleOrganizations}*/}
+          {/*  img={'/organizations-logos/atlantis.png'}*/}
+          {/*  organization={'Atls'}*/}
+          {/*/>*/}
         </Column>
       </Column>
     </Row>
