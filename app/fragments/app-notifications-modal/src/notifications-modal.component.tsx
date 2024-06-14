@@ -22,12 +22,17 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
   date,
   open,
   notifiaction,
+  onBackdropClick,
 }) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   return (
-    <Modal open={open} width={theme.spaces.largeSemiLargeIncreased}>
+    <Modal
+      open={open}
+      width={theme.spaces.largeSemiLargeIncreased}
+      onBackdropClick={onBackdropClick}
+    >
       <Column>
         <Text marginBottom={theme.spaces.micro} fontSize='medium.semiReduced' color='GRAY_1600'>
           {formatMessage({ id: 'notifications-modal.title' })}

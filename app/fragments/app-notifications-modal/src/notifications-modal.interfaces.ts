@@ -4,4 +4,5 @@ export interface NotificationsModalProps {
   date?: string
   open: boolean
   notifiaction?: boolean
+  onBackdropClick: () => void
 }

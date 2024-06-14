@@ -45,7 +45,10 @@ const ThemeSelector: React.FC = () => {
         right={0}
         style={{ position: 'absolute', top: '0', right: '0' }}
       >
-        <NotificationsModal open={isNotificationsModalOpen} />
+        <NotificationsModal
+          open={isNotificationsModalOpen}
+          onBackdropClick={handleNotificationsModal}
+        />
       </Box>
     </Row>
   )
