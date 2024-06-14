@@ -5,6 +5,7 @@ export const spaces = {
   s2: 2,
   paddingsNormal: '12px 24px',
   fullWidth: '100%',
+  fullVh: '100vh',
   fullWidthWithPaddingNormal: 'calc(100% - 24px)',
   semiTiny: 3,
   s4: 4,
@@ -98,6 +99,7 @@ export const spaces = {
   t2l0b23r0: '2px 0 0 23.5px',
   tlb0r11: '0 0 0 11px',
   t0r6lb0: '0 6px 0 0',
+  tb180lra: '180px auto',
 
   mediumDefault: 50,
   mediumIncreased: 80,
