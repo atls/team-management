@@ -1,7 +1,5 @@
 'use client'
 
-import { BaseLayout }    from '@app/base-layout-fragment'
-
 import React             from 'react'
 import { IntlProvider }  from 'react-intl'
 
@@ -13,9 +11,7 @@ const RootLayout = ({ children }) => (
   <html>
     <body>
       <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
-        <ThemeProvider>
-          <BaseLayout>{children}</BaseLayout>
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </IntlProvider>
     </body>
   </html>
