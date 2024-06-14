@@ -567,6 +567,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/add-member-to-organization-modal-fragment", "virtual:a16c821fbbc8503c711370a54060e4b8e6f49abb0a6e128da04a5db08fb53b11c7e56cde4f3620a64dad45cf73cae7a8f079355cb1d40cc7c5b9d6257e2bccd7#workspace:app/fragments/add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
+          ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -582,6 +584,7 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:b349643880b8b72673d4f343912f9a74c0df95fa90c1a964580cf402dfd00f26598ae146ba6bdd75438d9614560ccb8a3d8f595290eff1e4641890e2f3804e1c#npm:6.6.8"]\
         ],\
         "packagePeers": [\
+          "@types/faker-js__faker",\
           "@types/react-intl",\
           "react-dom",\
           "react-intl",\
@@ -594,6 +597,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/add-member-to-organization-modal-fragment", "virtual:a84686931a49ac40af257f423ca1ede28c123bd05001b36bde44085cb073e4d0649e13daf5e14704eeb18b59c5f9fd377f7f54db6928c6e9c8c4da30cc6e6cce#workspace:app/fragments/add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
+          ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -609,6 +614,7 @@ const RAW_RUNTIME_STATE =
           ["react-intl", "virtual:b349643880b8b72673d4f343912f9a74c0df95fa90c1a964580cf402dfd00f26598ae146ba6bdd75438d9614560ccb8a3d8f595290eff1e4641890e2f3804e1c#npm:6.6.8"]\
         ],\
         "packagePeers": [\
+          "@types/faker-js__faker",\
           "@types/react-intl",\
           "@types/react",\
           "react-dom",\
@@ -622,6 +628,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/add-member-to-organization-modal-fragment", "workspace:app/fragments/add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/button", "virtual:c0b13ffe3e77049d3bad23fdcc5ad121f36b50e3021bef2d4f368685860b29c73085bf6d4b8b8bfbc051805175d56ab9a308a803917a607e769f39ef1fce7447#workspace:ui/button"],\
@@ -1025,6 +1032,8 @@ const RAW_RUNTIME_STATE =
           ["@app/organization-card-fragment", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/organization-card"],\
           ["@app/organization-card-grid-fragment", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/organization-card-grid"],\
           ["@app/theme-selector", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/app-theme-selector"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
+          ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/styled-system", null],\
           ["@ui/sidebar", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:ui/sidebar"],\
@@ -1033,6 +1042,7 @@ const RAW_RUNTIME_STATE =
           ["styled-system", "npm:5.1.5"]\
         ],\
         "packagePeers": [\
+          "@types/faker-js__faker",\
           "@types/react",\
           "@types/styled-system",\
           "react"\
@@ -1046,6 +1056,7 @@ const RAW_RUNTIME_STATE =
           ["@app/organization-card-fragment", "virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:app/fragments/organization-card"],\
           ["@app/organization-card-grid-fragment", "virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:app/fragments/organization-card-grid"],\
           ["@app/theme-selector", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/app-theme-selector"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
           ["@ui/sidebar", "virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:ui/sidebar"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:299bdfcb9beb453fc21ec8892630c44783e542948d4f530bc6a485fa03243973c393ad7382c42688d8f603e8a333fa711e1970688750a8317ff4b49c31476a17#npm:18.3.1"],\
@@ -1360,7 +1371,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/users-modal", "virtual:a16c821fbbc8503c711370a54060e4b8e6f49abb0a6e128da04a5db08fb53b11c7e56cde4f3620a64dad45cf73cae7a8f079355cb1d40cc7c5b9d6257e2bccd7#workspace:app/fragments/app-users-modal"],\
           ["@emotion/react", "virtual:299bdfcb9beb453fc21ec8892630c44783e542948d4f530bc6a485fa03243973c393ad7382c42688d8f603e8a333fa711e1970688750a8317ff4b49c31476a17#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
           ["@types/emotion__react", null],\
+          ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -1382,6 +1395,7 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@emotion/react",\
           "@types/emotion__react",\
+          "@types/faker-js__faker",\
           "@types/react-intl",\
           "react-intl",\
           "react"\
@@ -1393,7 +1407,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/users-modal", "virtual:a84686931a49ac40af257f423ca1ede28c123bd05001b36bde44085cb073e4d0649e13daf5e14704eeb18b59c5f9fd377f7f54db6928c6e9c8c4da30cc6e6cce#workspace:app/fragments/app-users-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
           ["@types/emotion__react", null],\
+          ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -1415,6 +1431,7 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@emotion/react",\
           "@types/emotion__react",\
+          "@types/faker-js__faker",\
           "@types/react-intl",\
           "@types/react",\
           "react-intl",\
@@ -1427,6 +1444,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/users-modal", "workspace:app/fragments/app-users-modal"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
+          ["@faker-js/faker", "npm:8.4.1"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/avatar", "virtual:6f072cb25c8571e52042d4ef03485a8513ce3fff603e6ca03ada28cdae96fc64f304d1c9166738e96330efff40007e7cbc45f5c30b79d80869aea7ecdd29bb6a#workspace:ui/avatar"],\

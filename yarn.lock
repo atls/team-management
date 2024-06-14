@@ -200,6 +200,7 @@ __metadata:
   resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
@@ -213,6 +214,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
+    "@faker-js/faker": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -382,11 +384,13 @@ __metadata:
     "@app/organization-card-fragment": "workspace:*"
     "@app/organization-card-grid-fragment": "workspace:*"
     "@app/theme-selector": "workspace:*"
+    "@faker-js/faker": "npm:8.4.1"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    "@faker-js/faker": "*"
     react: "*"
     styled-system: "*"
   languageName: unknown
@@ -536,6 +540,7 @@ __metadata:
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
@@ -553,6 +558,7 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
+    "@faker-js/faker": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
