@@ -10,21 +10,20 @@ import { Row }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Sidebar }           from '@ui/sidebar'
 
-// TODO change interface
-export const BaseLayout: FC<PropsWithChildren<any>> = ({ children }) => {
+export const BaseLayout: FC<PropsWithChildren> = ({ children }) => {
   const theme: any = useTheme()
   return (
-    <Row>
+    <Row backgroundColor={theme.colors.baseLayout.background}>
       <ThemeSelector />
       <Sidebar src='' />
       <Column
-        minHeight='100vh'
-        margin='0 auto'
+        maxWidth={theme.spaces.extraSuperLarge}
+        margin={theme.spaces.horizontalAutoMargin}
+        minHeight={theme.spaces.fullVh}
         gap={theme.spaces.large}
         justifyContent='flex-start'
         alignItems='flex-start'
-        padding='110px 40px 0'
-        backgroundColor={theme.colors.baseLayout.background}
+        padding={theme.spaces.normalLayoutPaddings}
       >
         <UsersTitle />
         {children}
