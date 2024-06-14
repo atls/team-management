@@ -14,6 +14,7 @@ import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
 
+import { USERS_TEST_DATA }                   from './add-member-to-organization-modal.constants.js'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
 import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
@@ -43,24 +44,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
-  const testUsersData = [
-    {
-      id: 1,
-      primaryInfo: 'test user1',
-      secondaryInfo: 'testmail1@mail.ru',
-      imageSrc: 'https://placehold.co/400',
-    },
-    {
-      id: 2,
-      primaryInfo: 'test user2',
-      secondaryInfo: 'testmail2@mail.ru',
-      imageSrc: 'https://placehold.co/400',
-    },
-    {
-      id: 3,
-      primaryInfo: 'test user3',
-    },
-  ]
+  const usersData = USERS_TEST_DATA
 
   return (
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
@@ -70,7 +54,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         </Text>
         <SelectInput
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
-          searchItems={testUsersData}
+          searchItems={usersData}
           parentHook={setSelectedUsers}
         />
         <Row

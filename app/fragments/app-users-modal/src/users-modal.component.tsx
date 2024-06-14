@@ -1,23 +1,24 @@
-import { useTheme }        from '@emotion/react'
+import { useTheme }          from '@emotion/react'
 
-import React               from 'react'
-import { FC }              from 'react'
-import { memo }            from 'react'
-import { useState }        from 'react'
-import { useIntl }         from 'react-intl'
+import React                 from 'react'
+import { FC }                from 'react'
+import { memo }              from 'react'
+import { useState }          from 'react'
+import { useIntl }           from 'react-intl'
 
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Modal }           from '@ui/modal'
-import { Scroll }          from '@ui/scroll'
-import { Text }            from '@ui/text'
-import { ThemeType }       from '@ui/theme'
+import { ImageBlock }        from '@ui/image'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Modal }             from '@ui/modal'
+import { Scroll }            from '@ui/scroll'
+import { Text }              from '@ui/text'
+import { ThemeType }         from '@ui/theme'
 
-import { Member }          from './member/index.js'
-import { MemberDataType }  from './users-modal.interfaces.js'
-import { UsersModalProps } from './users-modal.interfaces.js'
+import { Member }            from './member/index.js'
+import { MEMBERS_TEST_DATA } from './users-modal.constants.js'
+import { MemberDataType }    from './users-modal.interfaces.js'
+import { UsersModalProps }   from './users-modal.interfaces.js'
 
 const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizationData }) => {
   const {
@@ -28,23 +29,10 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
     organizationCoverSrc,
   } = organizationData
 
-  const MEMBER_TEST_DATA = {
-    memberId: 1,
-    memberName: 'Brooklyn Simmons',
-    memberPosition: 'Frontend developer',
-    memberAvatarSrc:
-      'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.sWCvltMZF_s3mjA5sL-RdgHaE8%26pid%3DApi&f=1&ipt=75b1307f72623776b37217b88a805f10036ed22338715def57bb6eeb6c55323b&ipo=images',
-  }
-
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
-  const [membersData, setMembersData] = useState([
-    MEMBER_TEST_DATA,
-    MEMBER_TEST_DATA,
-    MEMBER_TEST_DATA,
-    MEMBER_TEST_DATA,
-  ])
+  const [membersData, setMembersData] = useState(MEMBERS_TEST_DATA)
 
   const handlerDeleteMemberClick = (removeMemberId: number) => {
     const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)

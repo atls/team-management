@@ -2,6 +2,9 @@
   "name": "@app/organizations-page",
   "version": "0.0.1",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@app/organization-card-fragment": "workspace:*",
@@ -10,11 +13,13 @@
     "@ui/sidebar": "workspace:*"
   },
   "devDependencies": {
+    "@faker-js/faker": "8.4.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
+    "@faker-js/faker": "*",
     "react": "*",
     "styled-system": "*"
   }
