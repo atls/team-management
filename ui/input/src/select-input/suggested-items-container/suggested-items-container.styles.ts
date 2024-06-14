@@ -9,6 +9,7 @@ export const baseSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
 export const shapeSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
   borderRadius: theme.radii.bl9br9,
   padding: theme.spaces.semiRegular,
+  maxWidth: theme.spaces.superExtraIncreasedSmall,
 })
 
 export const appearanceSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
