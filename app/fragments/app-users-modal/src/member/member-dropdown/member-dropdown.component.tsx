@@ -1,15 +1,17 @@
-import { useTheme }         from '@emotion/react'
+import { useTheme }            from '@emotion/react'
 
-import React                from 'react'
-import { FC }               from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
 
-import { Dropdown }         from '@ui/dropdown'
-import { WrongOutlineIcon } from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Text }             from '@ui/text'
-import { ThemeType }        from '@ui/theme'
+import { Dropdown }            from '@ui/dropdown'
+import { WrongOutlineIcon }    from '@ui/icons'
+import { Box }                 from '@ui/layout'
+import { Text }                from '@ui/text'
+import { ThemeType }           from '@ui/theme'
 
-export const MemberDorpdown: FC<any> = ({ memberId, onDeleteMemberClick }) => {
+import { MemberDorpdownProps } from './member-dropdown.interfaces.js'
+
+export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberId, onDeleteMemberClick }) => {
   const theme = useTheme() as ThemeType
   return (
     <Dropdown>
