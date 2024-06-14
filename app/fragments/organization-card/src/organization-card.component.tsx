@@ -1,3 +1,4 @@
+import { AddMemberToOrganizationModal } from '@app/add-member-to-organization-modal-fragment'
 import { useTheme }                     from '@emotion/react'
 
 import React                            from 'react'
@@ -5,7 +6,6 @@ import { FC }                           from 'react'
 import { memo }                         from 'react'
 import { useState }                     from 'react'
 
-import { AddMemberToOrganizationModal } from '@app/add-member-to-organization-modal-fragment'
 import { UsersModal }                   from '@app/users-modal'
 import { Button }                       from '@ui/button'
 import { Condition }                    from '@ui/condition'
@@ -47,7 +47,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
   return (
     <Box
       overflow='hidden'
-      height={theme.spaces.superBiggest}
+      minHeight={theme.spaces.superBiggest}
       borderRadius={theme.radii.f10}
       background={theme.backgrounds.darkBlueGradient}
       boxShadow={theme.shadows.diesel}
