@@ -25,6 +25,7 @@ const Registration: React.FC = () => {
             <Text
               fontSize={theme.fontSizes.normal.semiIncreased}
               fontWeight={theme.fontWeights.medium}
+              color={theme.colors.white}
             >
               {formatMessage({ id: 'registration-page.login-button' })}
             </Text>
