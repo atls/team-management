@@ -1,6 +1,10 @@
 export interface OrganizationsModalProps {
-  organization: []
-  img: string
+  organization: Organizations[]
   open: boolean
   onBackdropClick: () => void
+}
+
+interface Organizations {
+  name: string
+  organizationLogo: string
 }

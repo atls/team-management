@@ -4,6 +4,10 @@ export interface UserCardProps {
   time?: string
   organizations?: string | number
   avatar: string
-  handleOrganizations?: () => void
-  organizationsData: []
+  organizationsData: Organizations[]
+}
+
+interface Organizations {
+  name: string
+  organizationLogo: string
 }

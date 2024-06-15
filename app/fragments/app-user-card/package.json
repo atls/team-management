@@ -1,12 +1,12 @@
 {
   "name": "@app/user-card",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
-  "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
+  "main": "src/index.ts",
   "dependencies": {
     "@app/organizations-modal": "workspace:*",
     "@ui/button": "workspace:*",
@@ -22,13 +22,6 @@
     "@ui/text": "workspace:0.0.1",
     "@ui/theme": "workspace:*"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@types/styled-system": "*",
-    "glob": "*",
-    "react": "*",
-    "styled-system": "*"
-  },
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@types/react": "^18.3.2",
@@ -36,5 +29,12 @@
     "@types/styled-system": "5.1.22",
     "glob": "8.1.0",
     "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@types/styled-system": "*",
+    "glob": "*",
+    "react": "*",
+    "styled-system": "*"
   }
 }

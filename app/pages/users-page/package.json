@@ -1,12 +1,12 @@
 {
   "name": "@app/users-page",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
-  "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
+  "main": "src/index.ts",
   "dependencies": {
     "@app/organizations-modal": "workspace:*",
     "@app/theme-selector": "workspace:*",
@@ -18,15 +18,6 @@
     "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "@types/styled-system": "*",
-    "glob": "*",
-    "react": "*",
-    "react-dom": "*",
-    "styled-system": "*"
-  },
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
@@ -36,5 +27,14 @@
     "glob": "8.1.0",
     "react-intl": "6.6.8",
     "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/styled-system": "*",
+    "glob": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
   }
 }

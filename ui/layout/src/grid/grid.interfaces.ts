@@ -1,6 +1,5 @@
 import { BoxProps }      from '@atls-ui-parts/layout'
 
-import React             from 'react'
 import { CSSProperties } from 'react'
 import { ReactNode }     from 'react'
 import { JSX }           from 'react'

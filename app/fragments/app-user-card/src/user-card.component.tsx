@@ -25,15 +25,28 @@ import { Tag }                from '@ui/tag'
 import { Text }               from '@ui/text'
 import { ThemeType }          from '@ui/theme'
 
+import { CHECKBOX_DATA }      from './user-card.constants.js'
+// import { ICONS }              from './user-card.constants.js'
 import { UserCardProps }      from './user-card.interface.js'
 
+export const ICONS = [
+  <GitHubIcon />,
+  <TelegramIcon />,
+  <DiscordIcon />,
+  <GitHubIcon />,
+  <TelegramIcon />,
+  <DiscordIcon />,
+  <GitHubIcon />,
+  <TelegramIcon />,
+  <DiscordIcon />,
+  <GitHubIcon />,
+]
 const UserCard: FC<UserCardProps> = ({
   name,
   position,
   time,
   organizations,
   organizationsData,
-  // handleOrganizations,
   avatar,
 }) => {
   const theme = useTheme() as ThemeType
@@ -41,32 +54,6 @@ const UserCard: FC<UserCardProps> = ({
   const handleOrganizations = () => {
     setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
   }
-  const ICONS = [
-    <GitHubIcon />,
-    <TelegramIcon />,
-    <DiscordIcon />,
-    <GitHubIcon />,
-    <TelegramIcon />,
-    <DiscordIcon />,
-    <GitHubIcon />,
-    <TelegramIcon />,
-    <DiscordIcon />,
-    <GitHubIcon />,
-  ]
-  const CHECKBOX_DATA = [
-    { name: 'Git', checked: true },
-    { name: 'Telegram', checked: false },
-    { name: 'Discord', checked: false },
-    { name: 'Git', checked: true },
-    { name: 'Telegram', checked: false },
-    { name: 'Discord', checked: false },
-    { name: 'Telegram', checked: false },
-    { name: 'Discord', checked: false },
-    { name: 'Telegram', checked: false },
-    { name: 'Discord', checked: false },
-    { name: 'Telegram', checked: false },
-    { name: 'Discord', checked: false },
-  ]
 
   return (
     <Card
@@ -195,7 +182,6 @@ const UserCard: FC<UserCardProps> = ({
       <OrganizationsModal
         open={isOrganizationsModalOpen}
         onBackdropClick={handleOrganizations}
-        img={'/organizations-logos/atlantis.png'}
         organization={organizationsData}
       />
     </Card>

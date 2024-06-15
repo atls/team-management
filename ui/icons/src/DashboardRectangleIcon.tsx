@@ -3,7 +3,8 @@ import { useTheme }  from '@emotion/react'
 /* eslint-disable */
 import React         from 'react'
 
-import { IconProps } from '../icons.interfaces'
+import { IconProps } from '../icons.interfaces.js'
+
 export const DashboardRectangleIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()
   return (

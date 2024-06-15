@@ -17,7 +17,6 @@ import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
 const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
   organization,
-  img,
   open,
   onBackdropClick,
 }) => {
@@ -47,7 +46,7 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
           maxWidth={theme.spaces.largeDefaultIncreased}
         >
           {organization.map((org) => (
-            <AnimatedCard img={img} organization={org.name} />
+            <AnimatedCard img={org.organizationLogo} organization={org.name} />
           ))}
         </Box>
 

@@ -5,7 +5,7 @@ export interface AvatarProps {
   image: boolean
   borderRadius?: number
   padding?: number
-  src?: string
+  src: string
   alt: string
   notification?: boolean
 }

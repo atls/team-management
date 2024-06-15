@@ -1,5 +1,5 @@
 export interface NotificationsModalProps {
-  avatar?: string
+  avatar: string
   name?: string
   date?: string
   open: boolean
