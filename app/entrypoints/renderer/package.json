@@ -9,8 +9,12 @@
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
+  "dependencies": {
+    "react-intl": "6.6.8"
+  },
   "devDependencies": {
     "@app/registration-page": "workspace:*",
+    "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
@@ -21,8 +25,5 @@
     "react-dom": "18.3.1",
     "react-intl": "6.6.8",
     "typescript": "5.2.2"
-  },
-  "dependencies": {
-    "react-intl": "6.6.8"
   }
 }
