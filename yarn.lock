@@ -208,7 +208,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/notifications-modal@workspace:*, @app/notifications-modal@workspace:app/fragments/app-notifications-modal":
+"@app/notifications-modal@workspace:app/fragments/app-notifications-modal":
   version: 0.0.0-use.local
   resolution: "@app/notifications-modal@workspace:app/fragments/app-notifications-modal"
   dependencies:
@@ -230,7 +230,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/organizations-modal@workspace:*, @app/organizations-modal@workspace:app/fragments/app-organizations-modal":
+"@app/organizations-modal@workspace:app/fragments/app-organizations-modal":
   version: 0.0.0-use.local
   resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
   dependencies:
@@ -251,14 +251,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/registration-page@workspace:app/pages/registration-page":
+"@app/registration-page@workspace:*, @app/registration-page@workspace:app/pages/registration-page":
   version: 0.0.0-use.local
   resolution: "@app/registration-page@workspace:app/pages/registration-page"
+  dependencies:
+    "@app/registration": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/registration@workspace:*, @app/registration@workspace:app/fragments/app-registration":
+  version: 0.0.0-use.local
+  resolution: "@app/registration@workspace:app/fragments/app-registration"
   dependencies:
     "@app/main-logo": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/background": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -276,7 +293,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
-    "@app/users-page": "workspace:*"
+    "@app/registration-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.3"
@@ -290,11 +307,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/theme-selector@workspace:*, @app/theme-selector@workspace:app/fragments/app-theme-selector":
+"@app/theme-selector@workspace:app/fragments/app-theme-selector":
   version: 0.0.0-use.local
   resolution: "@app/theme-selector@workspace:app/fragments/app-theme-selector"
   dependencies:
-    "@app/notifications-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -328,16 +344,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/user-card@workspace:*, @app/user-card@workspace:app/fragments/app-user-card":
+"@app/user-card@workspace:app/fragments/app-user-card":
   version: 0.0.0-use.local
   resolution: "@app/user-card@workspace:app/fragments/app-user-card"
   dependencies:
-    "@app/organizations-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/checkbox": "workspace:*"
     "@ui/divider": "workspace:*"
@@ -349,18 +362,13 @@ __metadata:
     "@ui/tag": "workspace:*"
     "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:*"
-    glob: "npm:8.1.0"
-    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
-    "@types/styled-system": "*"
-    glob: "*"
     react: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
-"@app/users-grid@workspace:*, @app/users-grid@workspace:app/fragments/app-users-grid":
+"@app/users-grid@workspace:app/fragments/app-users-grid":
   version: 0.0.0-use.local
   resolution: "@app/users-grid@workspace:app/fragments/app-users-grid"
   dependencies:
@@ -400,39 +408,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/users-page@workspace:*, @app/users-page@workspace:app/pages/users-page":
-  version: 0.0.0-use.local
-  resolution: "@app/users-page@workspace:app/pages/users-page"
-  dependencies:
-    "@app/organizations-modal": "workspace:*"
-    "@app/theme-selector": "workspace:*"
-    "@app/user-card": "workspace:*"
-    "@app/users-grid": "workspace:*"
-    "@app/users-title": "workspace:*"
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:^18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/layout": "workspace:*"
-    "@ui/sidebar": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    glob: "npm:8.1.0"
-    react-intl: "npm:6.6.8"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/styled-system": "*"
-    glob: "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@app/users-title@workspace:*, @app/users-title@workspace:app/fragments/app-users-title":
+"@app/users-title@workspace:app/fragments/app-users-title":
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
@@ -3085,6 +3061,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/background@workspace:*, @ui/background@workspace:ui/background":
+  version: 0.0.0-use.local
+  resolution: "@ui/background@workspace:ui/background"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/button@workspace:*, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
@@ -3366,8 +3362,6 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:*"
-    "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -3429,7 +3423,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/sidebar@workspace:*, @ui/sidebar@workspace:ui/sidebar":
+"@ui/sidebar@workspace:ui/sidebar":
   version: 0.0.0-use.local
   resolution: "@ui/sidebar@workspace:ui/sidebar"
   dependencies:
