@@ -11,13 +11,11 @@ import { Column }            from '@ui/layout'
 import { Sidebar }           from '@ui/sidebar'
 
 import { BaseLayoutProps }   from './base-layout.interfaces.js'
+import { avatar }            from './base-layout.constants.js'
+import { email }             from './base-layout.constants.js'
+import { name }              from './base-layout.constants.js'
 
-export const BaseLayout: FC<PropsWithChildren<BaseLayoutProps>> = ({
-  children,
-  name,
-  email,
-  avatar,
-}) => {
+export const BaseLayout: FC<PropsWithChildren<BaseLayoutProps>> = ({ children }) => {
   const theme: any = useTheme()
   return (
     <Row backgroundColor={theme.backgrounds.main}>

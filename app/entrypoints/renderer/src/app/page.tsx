@@ -1,5 +1,6 @@
 'use client'
 
+// @ts-ignore:next-line
 import { useRouter } from 'next/navigation'
 
 const Page = () => {
