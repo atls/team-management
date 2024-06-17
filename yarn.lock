@@ -264,6 +264,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/dashboard-redirect-page@workspace:*, @app/dashboard-redirect-page@workspace:app/pages/dashboard-redirect-page":
+  version: 0.0.0-use.local
+  resolution: "@app/dashboard-redirect-page@workspace:app/pages/dashboard-redirect-page"
+  dependencies:
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/main-logo@workspace:*, @app/main-logo@workspace:app/fragments/app-main-logo":
   version: 0.0.0-use.local
   resolution: "@app/main-logo@workspace:app/fragments/app-main-logo"
@@ -439,6 +451,7 @@ __metadata:
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
     "@app/base-layout-fragment": "workspace:*"
+    "@app/dashboard-redirect-page": "workspace:*"
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
@@ -10081,7 +10094,6 @@ __metadata:
     "@atls/config-eslint": "npm:0.0.12"
     "@atls/config-jest": "npm:0.0.18"
     "@atls/prettier-plugin": "npm:0.0.8"
-    "@faker-js/faker": "npm:8.4.1"
     "@jest/core": "npm:29.7.0"
     "@types/eslint": "npm:^8.56.10"
     "@types/jest": "npm:29.5.12"

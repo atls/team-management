@@ -82,6 +82,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:app/fragments/organization-card-grid"\
     },\
     {\
+      "name": "@app/dashboard-redirect-page",\
+      "reference": "workspace:app/pages/dashboard-redirect-page"\
+    },\
+    {\
       "name": "@app/organizations-page",\
       "reference": "workspace:app/pages/organizations-page"\
     },\
@@ -185,6 +189,7 @@ const RAW_RUNTIME_STATE =
     ["@app/add-member-to-organization-modal-fragment", ["virtual:a16c821fbbc8503c711370a54060e4b8e6f49abb0a6e128da04a5db08fb53b11c7e56cde4f3620a64dad45cf73cae7a8f079355cb1d40cc7c5b9d6257e2bccd7#workspace:app/fragments/add-member-to-organization-modal", "virtual:a84686931a49ac40af257f423ca1ede28c123bd05001b36bde44085cb073e4d0649e13daf5e14704eeb18b59c5f9fd377f7f54db6928c6e9c8c4da30cc6e6cce#workspace:app/fragments/add-member-to-organization-modal", "workspace:app/fragments/add-member-to-organization-modal"]],\
     ["@app/animated-card", ["virtual:56966134acd46b54a7faa199a9b2afc6c4c30e7e013b160f4d72b05e51d6e1b4a93568ee49447ecc1347aed1e75a0fdc131eeb260b9437e1062d4db270592176#workspace:app/fragments/app-animated-card", "workspace:app/fragments/app-animated-card"]],\
     ["@app/base-layout-fragment", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/base-layout", "workspace:app/fragments/base-layout"]],\
+    ["@app/dashboard-redirect-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/dashboard-redirect-page", "workspace:app/pages/dashboard-redirect-page"]],\
     ["@app/main-logo", ["virtual:bab840902431193d5bf4d02662a21578a63ec20e9a89ebb767689df64c3a9349a86b79824df9a94f326bbf3ad35c32b5140399e4be75b9a88a87c1598817b7b8#workspace:app/fragments/app-main-logo", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:app/fragments/app-main-logo", "workspace:app/fragments/app-main-logo"]],\
     ["@app/notifications-modal", ["workspace:app/fragments/app-notifications-modal"]],\
     ["@app/organization-card-fragment", ["virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:app/fragments/organization-card", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/organization-card", "workspace:app/fragments/organization-card"]],\
@@ -235,7 +240,6 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
-          ["@faker-js/faker", "npm:8.4.1"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -741,6 +745,34 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@app/dashboard-redirect-page", [\
+      ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/dashboard-redirect-page", {\
+        "packageLocation": "./.yarn/__virtual__/@app-dashboard-redirect-page-virtual-40d2c700c7/1/app/pages/dashboard-redirect-page/",\
+        "packageDependencies": [\
+          ["@app/dashboard-redirect-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/dashboard-redirect-page"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:app/pages/dashboard-redirect-page", {\
+        "packageLocation": "./app/pages/dashboard-redirect-page/",\
+        "packageDependencies": [\
+          ["@app/dashboard-redirect-page", "workspace:app/pages/dashboard-redirect-page"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:299bdfcb9beb453fc21ec8892630c44783e542948d4f530bc6a485fa03243973c393ad7382c42688d8f603e8a333fa711e1970688750a8317ff4b49c31476a17#npm:18.3.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@app/main-logo", [\
       ["virtual:bab840902431193d5bf4d02662a21578a63ec20e9a89ebb767689df64c3a9349a86b79824df9a94f326bbf3ad35c32b5140399e4be75b9a88a87c1598817b7b8#workspace:app/fragments/app-main-logo", {\
         "packageLocation": "./.yarn/__virtual__/@app-main-logo-virtual-d4daf90575/1/app/fragments/app-main-logo/",\
@@ -1186,6 +1218,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/renderer-entrypoint", "workspace:app/entrypoints/renderer"],\
           ["@app/base-layout-fragment", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/base-layout"],\
+          ["@app/dashboard-redirect-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/dashboard-redirect-page"],\
           ["@app/organizations-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/organizations-page"],\
           ["@app/registration-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/registration-page"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
@@ -19111,7 +19144,6 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
-          ["@faker-js/faker", "npm:8.4.1"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
