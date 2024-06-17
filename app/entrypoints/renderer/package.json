@@ -10,10 +10,11 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
-    "@app/base-layout-fragment": "workspace:*",
     "react-intl": "6.6.8"
   },
   "devDependencies": {
+    "@app/base-layout-fragment": "workspace:*",
+    "@app/index-page": "workspace:*",
     "@app/registration-page": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",

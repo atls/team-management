@@ -1,3 +1,5 @@
+'use client'
+
 import React          from 'react'
 
 import { UserCard }   from '@app/user-card'

@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
@@ -10,16 +12,16 @@ import { Row }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Sidebar }           from '@ui/sidebar'
 
+import { AVATAR }            from './base-layout.constants.js'
+import { EMAIL }             from './base-layout.constants.js'
+import { NAME }              from './base-layout.constants.js'
 import { BaseLayoutProps }   from './base-layout.interfaces.js'
-import { avatar }            from './base-layout.constants.js'
-import { email }             from './base-layout.constants.js'
-import { name }              from './base-layout.constants.js'
 
 export const BaseLayout: FC<PropsWithChildren<BaseLayoutProps>> = ({ children }) => {
   const theme: any = useTheme()
   return (
     <Row backgroundColor={theme.backgrounds.main}>
-      <Sidebar name={name} email={email} src={avatar} />
+      <Sidebar name={NAME} email={EMAIL} src={AVATAR} />
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
         <Column
