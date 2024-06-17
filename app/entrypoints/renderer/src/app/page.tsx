@@ -1,6 +1,1 @@
-'use client'
-
-import React from 'react'
-
-const Page = () => <>page</>
-export default Page
+export { default } from '@app/dashboard-redirect-page'

@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@app/base-layout-fragment": "workspace:*",
+    "@app/dashboard-redirect-page": "workspace:*",
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
     "@emotion/react": "11.11.4",
