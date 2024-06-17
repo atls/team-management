@@ -8,15 +8,8 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/organizations-modal": "workspace:*",
-    "@app/theme-selector": "workspace:*",
     "@app/user-card": "workspace:*",
-    "@app/users-grid": "workspace:*",
-    "@app/users-title": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/sidebar": "workspace:*",
-    "@ui/text": "workspace:*",
-    "@ui/theme": "workspace:*"
+    "@app/users-grid": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

@@ -21,7 +21,6 @@ export const USERS_DATA = [
     avatar: 'https://robohash.org/estquasimodi.png?size=407x380&set=set1',
     organizations: [
       { name: 'Atls', organizationLogo: '/organization-logos/atlantis.png' },
-      { name: 'Dream-team', organizationLogo: '/organization-logos/atlantis-academy.png' },
       { name: 'LOL', organizationLogo: '/organization-logos/deltadoc.png' },
       { name: 'Freelance', organizationLogo: '/organization-logos/atlantis.png' },
     ],
@@ -34,7 +33,6 @@ export const USERS_DATA = [
     email: 'tcornish2@youku.com',
     avatar: 'https://robohash.org/autsuntest.png?size=407x380&set=set1',
     organizations: [
-      { name: 'Atls', organizationLogo: '/organization-logos/atlantis.png' },
       { name: 'Dream-team', organizationLogo: '/organization-logos/atlantis-academy.png' },
       { name: 'LOL', organizationLogo: '/organization-logos/deltadoc.png' },
       { name: 'Freelance', organizationLogo: '/organization-logos/atlantis.png' },
@@ -51,7 +49,6 @@ export const USERS_DATA = [
       { name: 'Atls', organizationLogo: '/organization-logos/atlantis.png' },
       { name: 'Dream-team', organizationLogo: '/organization-logos/atlantis-academy.png' },
       { name: 'LOL', organizationLogo: '/organization-logos/deltadoc.png' },
-      { name: 'Freelance', organizationLogo: '/organization-logos/atlantis.png' },
     ],
     time: '19:02:37',
   },

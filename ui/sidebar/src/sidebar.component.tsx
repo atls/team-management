@@ -75,7 +75,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Row>
             </motion.div>
             <Items>
-              <Item active={false} href='/'>
+              <Item active href='/dashboard/users'>
                 <ItemIcon>
                   <motion.div
                     animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
@@ -96,7 +96,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
                 </motion.div>
               </Item>
 
-              <Item active href='/'>
+              <Item active={false} href='/dashboard/organizations'>
                 <ItemIcon>
                   <motion.div
                     animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}

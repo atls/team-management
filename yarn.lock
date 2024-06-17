@@ -189,6 +189,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/base-layout-fragment@workspace:*, @app/base-layout-fragment@workspace:app/fragments/app-base-layout":
+  version: 0.0.0-use.local
+  resolution: "@app/base-layout-fragment@workspace:app/fragments/app-base-layout"
+  dependencies:
+    "@app/theme-selector": "workspace:*"
+    "@app/users-title": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@ui/layout": "workspace:*"
+    "@ui/sidebar": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/main-logo@workspace:*, @app/main-logo@workspace:app/fragments/app-main-logo":
   version: 0.0.0-use.local
   resolution: "@app/main-logo@workspace:app/fragments/app-main-logo"
@@ -293,6 +313,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/base-layout-fragment": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
@@ -422,20 +443,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/users-page@workspace:app/pages/users-page"
   dependencies:
-    "@app/organizations-modal": "workspace:*"
-    "@app/theme-selector": "workspace:*"
     "@app/user-card": "workspace:*"
     "@app/users-grid": "workspace:*"
-    "@app/users-title": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/layout": "workspace:*"
-    "@ui/sidebar": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
     glob: "npm:8.1.0"
     react-intl: "npm:6.6.8"
     styled-system: "npm:5.1.5"

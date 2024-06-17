@@ -1,8 +1,11 @@
 'use client'
 
-import React     from 'react'
+import React from 'react'
 
-import { Users } from '@app/users-page'
+import Users from '@app/users-page'
 
-const Page = () => <Users />
+const Page = () => (
+  // <Users />
+  <>page</>
+)
 export default Page
