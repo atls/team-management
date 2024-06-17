@@ -564,17 +564,12 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@app-index-page-virtual-9ca30fcb2f/1/app/pages/index-page/",\
         "packageDependencies": [\
           ["@app/index-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page"],\
-          ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
-          ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
-          ["next", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:14.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"]\
         ],\
         "packagePeers": [\
-          "@emotion/react",\
-          "@types/emotion__react",\
           "@types/react-dom",\
           "@types/react",\
           "react-dom",\
@@ -586,10 +581,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./app/pages/index-page/",\
         "packageDependencies": [\
           ["@app/index-page", "workspace:app/pages/index-page"],\
-          ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
           ["@types/react", "npm:18.3.3"],\
-          ["@types/react-dom", "npm:18.3.0"],\
-          ["next", "virtual:6c3cdeb7bb8535ab1462515a3d36a314d42b7279b42c88a0e51f0266d0fccf40ed155b251e961ed787b4330b0b71cdea3f62f85274c57669609e01527d2f0cd3#npm:14.1.0"]\
+          ["@types/react-dom", "npm:18.3.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -15668,47 +15661,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:6c3cdeb7bb8535ab1462515a3d36a314d42b7279b42c88a0e51f0266d0fccf40ed155b251e961ed787b4330b0b71cdea3f62f85274c57669609e01527d2f0cd3#npm:14.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/next-virtual-096363a353/0/cache/next-npm-14.1.0-a62036d298-1db512c5c8.zip/node_modules/next/",\
-        "packageDependencies": [\
-          ["next", "virtual:6c3cdeb7bb8535ab1462515a3d36a314d42b7279b42c88a0e51f0266d0fccf40ed155b251e961ed787b4330b0b71cdea3f62f85274c57669609e01527d2f0cd3#npm:14.1.0"],\
-          ["@next/env", "npm:14.1.0"],\
-          ["@next/swc-darwin-arm64", "npm:14.1.0"],\
-          ["@next/swc-darwin-x64", "npm:14.1.0"],\
-          ["@next/swc-linux-arm64-gnu", "npm:14.1.0"],\
-          ["@next/swc-linux-arm64-musl", "npm:14.1.0"],\
-          ["@next/swc-linux-x64-gnu", "npm:14.1.0"],\
-          ["@next/swc-linux-x64-musl", "npm:14.1.0"],\
-          ["@next/swc-win32-arm64-msvc", "npm:14.1.0"],\
-          ["@next/swc-win32-ia32-msvc", "npm:14.1.0"],\
-          ["@next/swc-win32-x64-msvc", "npm:14.1.0"],\
-          ["@opentelemetry/api", null],\
-          ["@swc/helpers", "npm:0.5.2"],\
-          ["@types/opentelemetry__api", null],\
-          ["@types/react", "npm:18.3.3"],\
-          ["@types/react-dom", "npm:18.3.0"],\
-          ["@types/sass", null],\
-          ["busboy", "npm:1.6.0"],\
-          ["caniuse-lite", "npm:1.0.30001629"],\
-          ["graceful-fs", "npm:4.2.11"],\
-          ["postcss", "npm:8.4.31"],\
-          ["react", null],\
-          ["react-dom", null],\
-          ["sass", null],\
-          ["styled-jsx", "virtual:096363a353f7d5c0a1e0dc8b5c59a379d9cb2ce72b6c68523d2341146478a4c3e28fd15e57749977d18af25c633507aacbcec56316c0c1a287a04ff25c449967#npm:5.1.1"]\
-        ],\
-        "packagePeers": [\
-          "@opentelemetry/api",\
-          "@types/opentelemetry__api",\
-          "@types/react-dom",\
-          "@types/react",\
-          "@types/sass",\
-          "react-dom",\
-          "react",\
-          "sass"\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["virtual:c96a4144100636e1075c46304300681c9a430ab0f95b2a615e99e8ce501b0b0dbe825a56344cc4dabd30b220ddbe9b9decfa26d8972ae11ab7c7562f901c52d4#npm:14.1.0", {\
         "packageLocation": "./.yarn/__virtual__/next-virtual-9ef20c94ff/0/cache/next-npm-14.1.0-a62036d298-1db512c5c8.zip/node_modules/next/",\
         "packageDependencies": [\
@@ -17635,28 +17587,6 @@ const RAW_RUNTIME_STATE =
           ["styled-jsx", "npm:5.1.1"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["virtual:096363a353f7d5c0a1e0dc8b5c59a379d9cb2ce72b6c68523d2341146478a4c3e28fd15e57749977d18af25c633507aacbcec56316c0c1a287a04ff25c449967#npm:5.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-473b6c9fb8/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\
-        "packageDependencies": [\
-          ["styled-jsx", "virtual:096363a353f7d5c0a1e0dc8b5c59a379d9cb2ce72b6c68523d2341146478a4c3e28fd15e57749977d18af25c633507aacbcec56316c0c1a287a04ff25c449967#npm:5.1.1"],\
-          ["@babel/core", null],\
-          ["@types/babel-plugin-macros", null],\
-          ["@types/babel__core", null],\
-          ["@types/react", "npm:18.3.3"],\
-          ["babel-plugin-macros", null],\
-          ["client-only", "npm:0.0.1"],\
-          ["react", null]\
-        ],\
-        "packagePeers": [\
-          "@babel/core",\
-          "@types/babel-plugin-macros",\
-          "@types/babel__core",\
-          "@types/react",\
-          "babel-plugin-macros",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:be665aed48d6b5d60459c00cc2793f9d53afd76a67a9d56751858ffae18d9f25d3208ec67456d6d2a42f0a348ba0198888a96ac22e52c3672c338252acc1d73d#npm:5.1.1", {\
         "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-29a448fddb/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\

@@ -213,12 +213,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/index-page@workspace:app/pages/index-page"
   dependencies:
-    "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    next: "npm:14.1.0"
   peerDependencies:
-    "@emotion/react": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
