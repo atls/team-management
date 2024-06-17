@@ -1,5 +1,3 @@
-'use client'
-
 import React          from 'react'
 
 import { BaseLayout } from '@app/base-layout-fragment'
