@@ -9,11 +9,8 @@ import { Button }             from '@ui/button'
 import { Card }               from '@ui/card'
 import { Checkbox }           from '@ui/checkbox'
 import { Divider }            from '@ui/divider'
-import { DiscordIcon }        from '@ui/icons'
 import { OrgWhiteIcon }       from '@ui/icons'
-import { GitHubIcon }         from '@ui/icons'
 import { TimerIcon }          from '@ui/icons'
-import { TelegramIcon }       from '@ui/icons'
 import { NextImage }          from '@ui/image'
 import { Box }                from '@ui/layout'
 import { GridAutoRows }       from '@ui/layout'
@@ -25,22 +22,10 @@ import { Tag }                from '@ui/tag'
 import { Text }               from '@ui/text'
 import { ThemeType }          from '@ui/theme'
 
-import { CHECKBOX_DATA }      from './user-card.constants.js'
-// import { ICONS }              from './user-card.constants.js'
+import { ICONS }              from './user-card.constants.js'
+import { CheckboxInt }        from './user-card.interface.js'
 import { UserCardProps }      from './user-card.interface.js'
 
-export const ICONS = [
-  <GitHubIcon />,
-  <TelegramIcon />,
-  <DiscordIcon />,
-  <GitHubIcon />,
-  <TelegramIcon />,
-  <DiscordIcon />,
-  <GitHubIcon />,
-  <TelegramIcon />,
-  <DiscordIcon />,
-  <GitHubIcon />,
-]
 const UserCard: FC<UserCardProps> = ({
   name,
   position,
@@ -48,6 +33,7 @@ const UserCard: FC<UserCardProps> = ({
   organizations,
   organizationsData,
   avatar,
+  services,
 }) => {
   const theme = useTheme() as ThemeType
   const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
@@ -153,8 +139,9 @@ const UserCard: FC<UserCardProps> = ({
               maxColumnWidth={theme.spaces.semiSuperExtra}
               gap={theme.spaces.zero}
             >
-              {CHECKBOX_DATA.map((checkbox, index) => (
+              {services.map((checkbox: CheckboxInt, index) => (
                 <Column
+                  key={checkbox.id}
                   maxWidth={theme.spaces.largeSemi}
                   padding={theme.spaces.t1r5b2l5}
                   height={theme.spaces.moderate}
@@ -182,7 +169,7 @@ const UserCard: FC<UserCardProps> = ({
       <OrganizationsModal
         open={isOrganizationsModalOpen}
         onBackdropClick={handleOrganizations}
-        organization={organizationsData}
+        organizationsData={organizationsData}
       />
     </Card>
   )

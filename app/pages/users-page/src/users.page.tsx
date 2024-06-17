@@ -17,6 +17,7 @@ const Users: React.FC = () => (
         organizations={user.organizations.length}
         time={user.time}
         organizationsData={user.organizations}
+        services={user.services}
       />
     ))}
   </UsersGrid>

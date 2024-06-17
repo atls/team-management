@@ -1,10 +1,10 @@
 export interface OrganizationsModalProps {
-  organization: Organizations[]
+  organizationsData: Organization[]
   open: boolean
   onBackdropClick: () => void
 }
 
-interface Organizations {
+export interface Organization {
   name: string
   organizationLogo: string
 }

@@ -1,5 +1,5 @@
 export interface SidebarProps {
-  src: string
+  src?: string
   name?: string
   email?: string
 }

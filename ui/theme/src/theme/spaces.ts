@@ -119,6 +119,7 @@ export const spaces = {
   largeSemi: 185,
 
   largeIncreased: 535,
+  mini: '10%',
   fullHalfReduced: '50%',
   fullSemiReduced: '80%',
 

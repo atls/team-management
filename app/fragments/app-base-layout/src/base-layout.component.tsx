@@ -10,21 +10,27 @@ import { Row }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Sidebar }           from '@ui/sidebar'
 
-export const BaseLayout: FC<PropsWithChildren> = ({ children }) => {
+import { BaseLayoutProps }   from './base-layout.interfaces.js'
+
+export const BaseLayout: FC<PropsWithChildren<BaseLayoutProps>> = ({
+  children,
+  name,
+  email,
+  avatar,
+}) => {
   const theme: any = useTheme()
   return (
     <Row backgroundColor={theme.backgrounds.main}>
-      <Sidebar name='Nikita Efimov' email='efimov@atls.com' src='/profile.png' />
+      <Sidebar name={name} email={email} src={avatar} />
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
         <Column
           maxWidth={theme.spaces.extraSuperLarge}
           margin={theme.spaces.horizontalAutoMargin}
           minHeight={theme.spaces.fullVh}
-          // gap={theme.spaces.large}
-          // justifyContent='flex-start'
-          // alignItems='flex-start'
-          // padding={theme.spaces.normalLayoutPaddings}
+          gap={theme.spaces.large}
+          justifyContent='flex-start'
+          alignItems='flex-start'
         >
           <UsersTitle />
           {children}

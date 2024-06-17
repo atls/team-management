@@ -29,10 +29,10 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
 
   return (
     <Modal
-      top={80}
+      top={theme.spaces.huge}
       left='auto'
       bottom='auto'
-      right='10%'
+      right={theme.spaces.mini}
       open={open}
       position='absolute'
       width={theme.spaces.largeSemiLargeIncreased}

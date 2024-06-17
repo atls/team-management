@@ -1,11 +1,10 @@
 'use client'
 
-import React from 'react'
+import { useRouter } from 'next/navigation'
 
-import Users from '@app/users-page'
+const Page = () => {
+  const router = useRouter()
+  router.push('/dashboard/users')
+}
 
-const Page = () => (
-  // <Users />
-  <>page</>
-)
 export default Page
