@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme }                  from '@emotion/react'
 
 import React                         from 'react'
