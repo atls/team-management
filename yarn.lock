@@ -268,6 +268,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/dashboard-redirect-page@workspace:app/pages/dashboard-redirect-page"
   dependencies:
+    "@app/dashboard-redirect": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/dashboard-redirect@workspace:*, @app/dashboard-redirect@workspace:app/fragments/dashboard-redirect":
+  version: 0.0.0-use.local
+  resolution: "@app/dashboard-redirect@workspace:app/fragments/dashboard-redirect"
+  dependencies:
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
