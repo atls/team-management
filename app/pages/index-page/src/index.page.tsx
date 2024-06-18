@@ -1,11 +1,8 @@
-'use client'
-
 // @ts-ignore:next-line
-import { useRouter } from 'next/navigation.js'
+import { redirect } from 'next/navigation.js'
 
 const IndexPage = () => {
-  const router = useRouter()
-  router.push('/dashboard/users')
+  redirect('/dashboard/users')
 }
 
 export default IndexPage

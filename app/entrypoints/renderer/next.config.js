@@ -8,7 +8,6 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 export default {
-  appDir: true,
   images: {
     remotePatterns: [
       {
