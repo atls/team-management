@@ -55,11 +55,16 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
       boxShadow={theme.shadows.diesel}
     >
       <Row>
-        <Box minWidth={theme.spaces.superBiggest}>
+        <Box width={theme.spaces.superBiggest} minWidth={theme.spaces.superBiggest}>
           <ImageBlock src={organizationCoverSrc} />
         </Box>
-        <Column padding={theme.spaces.v14h12} width='100%'>
-          <Column gap={theme.spaces.semiTiny}>
+        <Column
+          padding={theme.spaces.v14h12}
+          width='100%'
+          gap={theme.spaces.large}
+          justifyContent='space-between'
+        >
+          <Column gap={theme.spaces.semiTiny} width='auto' height='auto'>
             <Text fontSize='normal.semiDefault' color='white'>
               {organizationTitle}
             </Text>
