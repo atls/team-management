@@ -14,6 +14,7 @@ import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
 
+import { USERS_TEST_DATA }                   from './add-member-to-organization-modal.constants.js'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
 import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
@@ -23,6 +24,8 @@ import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
+  onBackdropClick,
+  organizationId,
 }) => {
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
@@ -41,34 +44,17 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
-  const testUsersData = [
-    {
-      id: 1,
-      primaryInfo: 'test user1',
-      secondaryInfo: 'testmail1@mail.ru',
-      imageSrc: 'https://placehold.co/400',
-    },
-    {
-      id: 2,
-      primaryInfo: 'test user2',
-      secondaryInfo: 'testmail2@mail.ru',
-      imageSrc: 'https://placehold.co/400',
-    },
-    {
-      id: 3,
-      primaryInfo: 'test user3',
-    },
-  ]
+  const usersData = USERS_TEST_DATA
 
   return (
-    <Modal open={open} width={theme.spaces.superPuperExtra}>
+    <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
       <Column flexDirection='column' gap={theme.spaces.large}>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
           {formatMessage({ id: 'add-member-to-organization-modal.header' })}
         </Text>
         <SelectInput
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
-          searchItems={testUsersData}
+          searchItems={usersData}
           parentHook={setSelectedUsers}
         />
         <Row
@@ -79,7 +65,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           rowGap={theme.spaces.large}
         >
           <Text fontSize='normal.semiIncreased' width='100%'>
-            Команды организации
+            {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
           </Text>
           <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
           <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
@@ -93,8 +79,8 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
           >
-            <Text fontSize='normal.semiDefault' fontWeight='normal'>
-              Пригласить
+            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
+              {formatMessage({ id: 'add-member-to-organization-modal.button' })}
             </Text>
           </Button>
         </Row>

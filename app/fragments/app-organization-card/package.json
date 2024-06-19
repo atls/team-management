@@ -1,0 +1,37 @@
+{
+  "name": "@app/organization-card-fragment",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@app/add-member-to-organization-modal-fragment": "workspace:*",
+    "@app/users-modal": "workspace:*",
+    "@ui/button": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@types/styled-system": "5.1.22",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-intl": "6.6.8",
+    "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/styled-system": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*",
+    "styled-system": "*"
+  }
+}

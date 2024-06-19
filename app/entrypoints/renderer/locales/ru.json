@@ -3,6 +3,8 @@
   "add-member-modal.invite": "Пригласить",
   "add-member-modal_input.invalid-email": "Введите правильный E-mail",
   "add-member-to-organization-modal.header": "Добавить сотрудника в организацию",
+  "add-member-to-organization-modal.teams": "Команды организации",
+  "add-member-to-organization-modal.button": "Пригласить",
   "add-member-to-organization-modal_input.placeholder": "Team member",
   "organization-card_member.one": "member",
   "organization-card_member.many": "members",

@@ -2,7 +2,7 @@ import styled                from '@emotion/styled'
 
 import { styleFn }           from 'styled-system'
 
-import { ImageWrapperProps } from './next-image.interfaces.js'
+import { ImageWrapperProps } from './next-image.interfaces'
 
 export const createBaseNextImageStyles: styleFn = () =>
   ({ borderRadius }) => ({
@@ -11,5 +11,4 @@ export const createBaseNextImageStyles: styleFn = () =>
     borderRadius,
     overflow: 'hidden',
   })
-
 export const NextImageWrapper = styled.div<ImageWrapperProps>(createBaseNextImageStyles())

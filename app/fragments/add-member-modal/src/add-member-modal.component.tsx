@@ -22,12 +22,12 @@ import { ThemeType }               from '@ui/theme'
 import { HandleAddInputClickType } from './add-member-modal.interfaces.js'
 import { InputValuesType }         from './add-member-modal.interfaces.js'
 import { HandlerSwitchType }       from './add-member-modal.interfaces.js'
-import { TeamMemberModalProps }    from './add-member-modal.interfaces.js'
+import { AddMemberModalProps }     from './add-member-modal.interfaces.js'
 import { CheckedSwitchesType }     from './add-member-modal.interfaces.js'
 import { AddMemberModalInput }     from './input/index.js'
 import { useButtonActiveHook }     from './use-button-active.hook.js'
 
-export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
+export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const theme = useTheme() as ThemeType
 
   const { formatMessage } = useIntl()
@@ -57,7 +57,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
   }
 
   return (
-    <Modal open={open} padding={theme.spaces.increased}>
+    <Modal open={open} padding={theme.spaces.increased} onBackdropClick={onBackdropClick}>
       <Column gap={theme.spaces.moderate}>
         <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
         {inputValues.map((_inputValue: string, index: number) => (
@@ -75,7 +75,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
             style={{ boxShadow: theme.shadows.black }}
             variant='whiteBackgroundButton'
           >
-            <AddIcon />
+            <AddIcon color={theme.colors.addMemberModal.addIcon} />
           </Button>
         </Row>
         <Row justifyContent='space-between'>
@@ -98,7 +98,7 @@ export const AddMemberModal: FC<TeamMemberModalProps> = memo(({ open }) => {
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
           >
-            <Text fontSize='normal.semiDefault' fontWeight='normal'>
+            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               {formatMessage({ id: 'add-member-modal.invite' })}
             </Text>
           </Button>

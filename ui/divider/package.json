@@ -10,7 +10,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-proto/divider": "0.1.1",
-    "@ui/layout": "workspace:*"
+    "@ui/layout": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

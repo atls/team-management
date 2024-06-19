@@ -2,7 +2,7 @@
 import { redirect } from 'next/navigation.js'
 
 const IndexPage = () => {
-  redirect('/dashboard/users')
+  redirect('/users')
 }
 
 export default IndexPage

@@ -166,6 +166,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/add-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/add-member-modal-fragment@workspace:app/fragments/add-member-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/add-member-to-organization-modal-fragment@workspace:*, @app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@faker-js/faker": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/animated-card@workspace:*, @app/animated-card@workspace:app/fragments/app-animated-card":
   version: 0.0.0-use.local
   resolution: "@app/animated-card@workspace:app/fragments/app-animated-card"
@@ -262,6 +317,57 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/organization-card-fragment@workspace:*, @app/organization-card-fragment@workspace:app/fragments/app-organization-card":
+  version: 0.0.0-use.local
+  resolution: "@app/organization-card-fragment@workspace:app/fragments/app-organization-card"
+  dependencies:
+    "@app/add-member-to-organization-modal-fragment": "workspace:*"
+    "@app/users-modal": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/button": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/organization-card-grid-fragment@workspace:*, @app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid":
+  version: 0.0.0-use.local
+  resolution: "@app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/organizations-modal@workspace:*, @app/organizations-modal@workspace:app/fragments/app-organizations-modal":
   version: 0.0.0-use.local
   resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
@@ -280,6 +386,25 @@ __metadata:
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/organizations-page@workspace:*, @app/organizations-page@workspace:app/pages/organizations-page":
+  version: 0.0.0-use.local
+  resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
+  dependencies:
+    "@app/organization-card-fragment": "workspace:*"
+    "@app/organization-card-grid-fragment": "workspace:*"
+    "@app/theme-selector": "workspace:*"
+    "@faker-js/faker": "npm:8.4.1"
+    "@ui/sidebar": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@faker-js/faker": "*"
+    react: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -327,6 +452,7 @@ __metadata:
   dependencies:
     "@app/base-layout-fragment": "workspace:*"
     "@app/index-page": "workspace:*"
+    "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
@@ -348,17 +474,22 @@ __metadata:
   dependencies:
     "@app/notifications-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/switch": "workspace:*"
     "@ui/theme": "workspace:*"
     react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -427,18 +558,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/users-modal@workspace:app/fragments/app-users-modal":
+"@app/users-modal@workspace:*, @app/users-modal@workspace:app/fragments/app-users-modal":
   version: 0.0.0-use.local
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/divider": "workspace:*"
+    "@ui/dropdown": "workspace:*"
     "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
@@ -447,6 +581,7 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
+    "@faker-js/faker": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
@@ -481,6 +616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
+    "@app/add-member-modal-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -1600,6 +1736,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:8.4.1":
+  version: 8.4.1
+  resolution: "@faker-js/faker@npm:8.4.1"
+  checksum: 10/5983c2ea64f26055ad6648de748878e11ebe2fb751e3c7435ae141cdffabc2dccfe4c4f49da69a3d2add71e21b415c683ac5fba196fab0d5ed6779fbec436c80
+  languageName: node
+  linkType: hard
+
 "@formatjs/ecma402-abstract@npm:2.0.0":
   version: 2.0.0
   resolution: "@formatjs/ecma402-abstract@npm:2.0.0"
@@ -1690,107 +1833,6 @@ __metadata:
   checksum: 10/1d4e60cfb3edecb51a5f8dd2c2b1c784c1a9bfcbc1b6240323d8009e5f375e5c526c9eb19149b42e0e50f6a473e9709378071658ed25a62dc3923dd7fc6a2843
   languageName: node
   linkType: hard
-
-"@fragments/add-member-modal@workspace:app/fragments/add-member-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/add-member-modal@workspace:app/fragments/add-member-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    "@ui/utils": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid":
-  version: 0.0.0-use.local
-  resolution: "@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@ui/layout": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/organization-card@workspace:app/fragments/organization-card":
-  version: 0.0.0-use.local
-  resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/image": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/styled-system": "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
 
 "@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
@@ -2651,11 +2693,11 @@ __metadata:
   linkType: hard
 
 "@swc/types@npm:^0.1.5":
-  version: 0.1.7
-  resolution: "@swc/types@npm:0.1.7"
+  version: 0.1.8
+  resolution: "@swc/types@npm:0.1.8"
   dependencies:
     "@swc/counter": "npm:^0.1.3"
-  checksum: 10/ed66c26b36972a74f852c1781fadc75946578abfeeea58f110684833b5d1e70f28a77ddb82fd5bf3cf3c4dad0e1b6a1c924d7e2cc7a99f9b16ed16fe266bba25
+  checksum: 10/2d1cda35116e03714137c1c37f4493efe0e26e88285ecc9dcdf6256a77984e367ea7b5f31d650f110fdcfd6ac53dff3ec77f841787ca328d2efa7b07ef1ac318
   languageName: node
   linkType: hard
 
@@ -2857,11 +2899,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
+  version: 20.14.5
+  resolution: "@types/node@npm:20.14.5"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/c38e47b190fa0a8bdfde24b036dddcf9401551f2fb170a90ff33625c7d6f218907e81c74e0fa6e394804a32623c24c60c50e249badc951007830f0d02c48ee0f
+  checksum: 10/74c7974a8c75280f9397f22ce34d10d5575668e3c357a165f385c9365c39b3ccda3aa2e7237e7e907fc72e515afb93cc0be1f3e2074cc1889c1ffeb01d2843cc
   languageName: node
   linkType: hard
 
@@ -2875,11 +2917,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:^18.17.15":
-  version: 18.19.34
-  resolution: "@types/node@npm:18.19.34"
+  version: 18.19.36
+  resolution: "@types/node@npm:18.19.36"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10/5c8daed0c672e824c36d31312377fc4dddf3e91006fadad719527bb2bd710d4207193c1c7034da9d2d6cbc03da89d3693c86207f751540c18a7d38802040fbd9
+  checksum: 10/417756b2ee26babd92bbf5fe626e08f192f67b03219f897b479fe3329997f8a251bfb8488d2468d59a7ada42f5bb8283411d3be72184b74bd142e3b9b3b4bfc5
   languageName: node
   linkType: hard
 
@@ -3253,6 +3295,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
@@ -3267,7 +3310,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/dropdown@workspace:ui/dropdown":
+"@ui/dropdown@workspace:*, @ui/dropdown@workspace:ui/dropdown":
   version: 0.0.0-use.local
   resolution: "@ui/dropdown@workspace:ui/dropdown"
   dependencies:
@@ -3362,6 +3405,7 @@ __metadata:
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -3536,6 +3580,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/icons": "workspace:*"
+    "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.3.1"
     react-laag: "npm:2.0.5"
@@ -3582,6 +3627,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -3869,14 +3915,14 @@ __metadata:
   linkType: hard
 
 "@yarnpkg/core@npm:^4.0.3":
-  version: 4.0.5
-  resolution: "@yarnpkg/core@npm:4.0.5"
+  version: 4.1.0
+  resolution: "@yarnpkg/core@npm:4.1.0"
   dependencies:
     "@arcanis/slice-ansi": "npm:^1.1.1"
     "@types/semver": "npm:^7.1.0"
     "@types/treeify": "npm:^1.0.0"
-    "@yarnpkg/fslib": "npm:^3.0.2"
-    "@yarnpkg/libzip": "npm:^3.0.1"
+    "@yarnpkg/fslib": "npm:^3.1.0"
+    "@yarnpkg/libzip": "npm:^3.1.0"
     "@yarnpkg/parsers": "npm:^3.0.2"
     "@yarnpkg/shell": "npm:^4.0.2"
     camelcase: "npm:^5.3.1"
@@ -3898,7 +3944,7 @@ __metadata:
     treeify: "npm:^1.1.0"
     tslib: "npm:^2.4.0"
     tunnel: "npm:^0.0.6"
-  checksum: 10/ed2db44e6c172a746e93791de38510cd46db7d6b992d71c68b471513a0884bafd3d47dcca99f43bb33c8767560f423f0570c161b35f1696197e32c3d19764b65
+  checksum: 10/20ec87db90c5f2f5bbcce3b7022e406dc296c67b8a12bddda373d8c89b0e967db3a03818ac4593da562e1153147f6b0e4d57bac63942dc2bd0704ff439e7c215
   languageName: node
   linkType: hard
 
@@ -3932,7 +3978,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@yarnpkg/libzip@npm:^3.0.0, @yarnpkg/libzip@npm:^3.0.1":
+"@yarnpkg/libzip@npm:^3.0.0, @yarnpkg/libzip@npm:^3.0.1, @yarnpkg/libzip@npm:^3.1.0":
   version: 3.1.0
   resolution: "@yarnpkg/libzip@npm:3.1.0"
   dependencies:
@@ -4009,8 +4055,8 @@ __metadata:
   linkType: hard
 
 "@yarnpkg/plugin-essentials@npm:^4.1.0":
-  version: 4.1.2
-  resolution: "@yarnpkg/plugin-essentials@npm:4.1.2"
+  version: 4.2.0
+  resolution: "@yarnpkg/plugin-essentials@npm:4.2.0"
   dependencies:
     "@yarnpkg/fslib": "npm:^3.1.0"
     "@yarnpkg/parsers": "npm:^3.0.2"
@@ -4023,10 +4069,10 @@ __metadata:
     tslib: "npm:^2.4.0"
     typanion: "npm:^3.14.0"
   peerDependencies:
-    "@yarnpkg/cli": ^4.2.2
-    "@yarnpkg/core": ^4.0.5
+    "@yarnpkg/cli": ^4.3.0
+    "@yarnpkg/core": ^4.1.0
     "@yarnpkg/plugin-git": ^3.0.0
-  checksum: 10/7ac3d32d07c0459d0da89085283694309fb5b45e780973051beb708f279bfbaa5facd301e6890a32c611cca9a6462a304136a82ffcb1974b283005367525d639
+  checksum: 10/81b5e502b68591d03b3803c4ebf6e726464ead274fa0670d3078c1a617e467d9e888aacda1813259d35b0b1805a3d62a174ed78ac5cb43c84b601c71e923f730
   languageName: node
   linkType: hard
 
@@ -4336,12 +4382,12 @@ __metadata:
   linkType: hard
 
 "@yarnpkg/pnp@npm:^4.0.2, @yarnpkg/pnp@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "@yarnpkg/pnp@npm:4.0.5"
+  version: 4.0.6
+  resolution: "@yarnpkg/pnp@npm:4.0.6"
   dependencies:
     "@types/node": "npm:^18.17.15"
     "@yarnpkg/fslib": "npm:^3.1.0"
-  checksum: 10/f8784135d260a41a02bbd953233cdcf511910d625e06c51f7eb0a4a891924b3084fb4ee24589699297a0f2443870901341cce8ee78d142b811483a194d69c84b
+  checksum: 10/1bb9e91311a990a5592016937dba1cda20362c5497e073ca47e584709f5267e5b258ddfc967ba2db875498dbad176ab0bc57ddfd74e91794ac4efd78b6eb6b63
   languageName: node
   linkType: hard
 
@@ -4390,6 +4436,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"acorn-import-attributes@npm:^1.9.5":
+  version: 1.9.5
+  resolution: "acorn-import-attributes@npm:1.9.5"
+  peerDependencies:
+    acorn: ^8
+  checksum: 10/8bfbfbb6e2467b9b47abb4d095df717ab64fce2525da65eabee073e85e7975fb3a176b6c8bba17c99a7d8ede283a10a590272304eb54a93c4aa1af9790d47a8b
+  languageName: node
+  linkType: hard
+
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -4400,11 +4455,11 @@ __metadata:
   linkType: hard
 
 "acorn@npm:^8.7.1, acorn@npm:^8.8.2, acorn@npm:^8.9.0":
-  version: 8.11.3
-  resolution: "acorn@npm:8.11.3"
+  version: 8.12.0
+  resolution: "acorn@npm:8.12.0"
   bin:
     acorn: bin/acorn
-  checksum: 10/b688e7e3c64d9bfb17b596e1b35e4da9d50553713b3b3630cf5690f2b023a84eac90c56851e6912b483fe60e8b4ea28b254c07e92f17ef83d72d78745a8352dd
+  checksum: 10/550cc5033184eb98f7fbe2e9ddadd0f47f065734cc682f25db7a244f52314eb816801b64dec7174effd978045bd1754892731a90b1102b0ede9d17a15cfde138
   languageName: node
   linkType: hard
 
@@ -4840,16 +4895,16 @@ __metadata:
   linkType: hard
 
 "browserslist@npm:^4.14.5, browserslist@npm:^4.21.10, browserslist@npm:^4.22.2":
-  version: 4.23.0
-  resolution: "browserslist@npm:4.23.0"
+  version: 4.23.1
+  resolution: "browserslist@npm:4.23.1"
   dependencies:
-    caniuse-lite: "npm:^1.0.30001587"
-    electron-to-chromium: "npm:^1.4.668"
+    caniuse-lite: "npm:^1.0.30001629"
+    electron-to-chromium: "npm:^1.4.796"
     node-releases: "npm:^2.0.14"
-    update-browserslist-db: "npm:^1.0.13"
+    update-browserslist-db: "npm:^1.0.16"
   bin:
     browserslist: cli.js
-  checksum: 10/496c3862df74565dd942b4ae65f502c575cbeba1fa4a3894dad7aa3b16130dc3033bc502d8848147f7b625154a284708253d9598bcdbef5a1e34cf11dc7bad8e
+  checksum: 10/91da59f70a8e01ece97133670f9857d6d7e96be78e1b7ffa54b869f97d01d01c237612471b595cee41c1ab212e26e536ce0b6716ad1d6c4368a40c222698cac1
   languageName: node
   linkType: hard
 
@@ -4980,10 +5035,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001587":
-  version: 1.0.30001629
-  resolution: "caniuse-lite@npm:1.0.30001629"
-  checksum: 10/3345bbf1f114b4ba6f862361f2ae6c3f9898b9e061e5d2edd829eff8d2d138f86a6b8d34b2eea48fbf71e6b860e4b6559b31437a7da85568e9d95d03ec042fa9
+"caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001629":
+  version: 1.0.30001636
+  resolution: "caniuse-lite@npm:1.0.30001636"
+  checksum: 10/9e6c5ab4c20df31df36720dda77cf6a781549ac2ad844bc0a416b327a793da21486358a1f85fdd6c39e22d336f70aac3b0e232f5f228cdff0ceb6e3e1c5e98fd
   languageName: node
   linkType: hard
 
@@ -5528,10 +5583,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.4.668":
-  version: 1.4.795
-  resolution: "electron-to-chromium@npm:1.4.795"
-  checksum: 10/eae95ec90063fd24e6bdd8b7edd5f7963131a30dbe463f099a1f8b4448d37f8f5ab220a05a3c4e3d56fe18947ff3231c21a3efb333581c88dcdfe1e81d6245ac
+"electron-to-chromium@npm:^1.4.796":
+  version: 1.4.806
+  resolution: "electron-to-chromium@npm:1.4.806"
+  checksum: 10/d6e2ab14befb31513387388f2164969f31e79f9914644706ec67ab4972b1f6af93965f0604424d299da621cd3f3b5b2247f1bf9498da7875a9c6a1b27b05159b
   languageName: node
   linkType: hard
 
@@ -5581,7 +5636,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.15.0, enhanced-resolve@npm:^5.16.0":
+"enhanced-resolve@npm:^5.0.0, enhanced-resolve@npm:^5.15.0, enhanced-resolve@npm:^5.17.0":
   version: 5.17.0
   resolution: "enhanced-resolve@npm:5.17.0"
   dependencies:
@@ -6309,12 +6364,12 @@ __metadata:
   linkType: hard
 
 "foreground-child@npm:^3.1.0":
-  version: 3.1.1
-  resolution: "foreground-child@npm:3.1.1"
+  version: 3.2.1
+  resolution: "foreground-child@npm:3.2.1"
   dependencies:
     cross-spawn: "npm:^7.0.0"
     signal-exit: "npm:^4.0.1"
-  checksum: 10/087edd44857d258c4f73ad84cb8df980826569656f2550c341b27adf5335354393eec24ea2fabd43a253233fb27cee177ebe46bd0b7ea129c77e87cb1e9936fb
+  checksum: 10/77b33b3c438a499201727ca84de39a66350ccd54a8805df712773e963cefb5c4632dbc4386109e97a0df8fb1585aee95fa35acb07587e3e04cfacabfc0ae15dc
   languageName: node
   linkType: hard
 
@@ -6634,17 +6689,18 @@ __metadata:
   linkType: hard
 
 "glob@npm:^10.2.2, glob@npm:^10.3.10":
-  version: 10.4.1
-  resolution: "glob@npm:10.4.1"
+  version: 10.4.2
+  resolution: "glob@npm:10.4.2"
   dependencies:
     foreground-child: "npm:^3.1.0"
     jackspeak: "npm:^3.1.2"
     minimatch: "npm:^9.0.4"
     minipass: "npm:^7.1.2"
+    package-json-from-dist: "npm:^1.0.0"
     path-scurry: "npm:^1.11.1"
   bin:
     glob: dist/esm/bin.mjs
-  checksum: 10/d7bb49d2b413f77bdd59fea4ca86dcc12450deee221af0ca93e09534b81b9ef68fe341345751d8ff0c5b54bad422307e0e44266ff8ad7fbbd0c200e8ec258b16
+  checksum: 10/e412776b5952a818eba790c830bea161c9a56813fd767d8c4c49f855603b1fb962b3e73f1f627a47298a57d2992b9f0f2fe15cf93e74ecaaa63fb45d63fdd090
   languageName: node
   linkType: hard
 
@@ -8762,6 +8818,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"package-json-from-dist@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "package-json-from-dist@npm:1.0.0"
+  checksum: 10/ac706ec856a5a03f5261e4e48fa974f24feb044d51f84f8332e2af0af04fbdbdd5bbbfb9cbbe354190409bc8307c83a9e38c6672c3c8855f709afb0006a009ea
+  languageName: node
+  linkType: hard
+
 "parent-module@npm:^1.0.0":
   version: 1.0.1
   resolution: "parent-module@npm:1.0.1"
@@ -10476,7 +10539,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.0.13":
+"update-browserslist-db@npm:^1.0.16":
   version: 1.0.16
   resolution: "update-browserslist-db@npm:1.0.16"
   dependencies:
@@ -10581,8 +10644,8 @@ __metadata:
   linkType: hard
 
 "webpack@npm:^5.73.0":
-  version: 5.91.0
-  resolution: "webpack@npm:5.91.0"
+  version: 5.92.0
+  resolution: "webpack@npm:5.92.0"
   dependencies:
     "@types/eslint-scope": "npm:^3.7.3"
     "@types/estree": "npm:^1.0.5"
@@ -10590,10 +10653,10 @@ __metadata:
     "@webassemblyjs/wasm-edit": "npm:^1.12.1"
     "@webassemblyjs/wasm-parser": "npm:^1.12.1"
     acorn: "npm:^8.7.1"
-    acorn-import-assertions: "npm:^1.9.0"
+    acorn-import-attributes: "npm:^1.9.5"
     browserslist: "npm:^4.21.10"
     chrome-trace-event: "npm:^1.0.2"
-    enhanced-resolve: "npm:^5.16.0"
+    enhanced-resolve: "npm:^5.17.0"
     es-module-lexer: "npm:^1.2.1"
     eslint-scope: "npm:5.1.1"
     events: "npm:^3.2.0"
@@ -10613,7 +10676,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 10/647ca53c15fe0fa1af4396a7257d7a93cbea648d2685e565a11cc822a9e3ea9316345250987d75f02c0b45dae118814f094ec81908d1032e77a33cd6470b289e
+  checksum: 10/1d5e7e881615df05af7e58bd7ce872495cf6361f345f2b2a7dcbd8febd8761b68b7567e14f9ebbf1d666b6c78cc90c3f304fb10b8a457ab71aa7015116a7d6d9
   languageName: node
   linkType: hard
 
@@ -10764,8 +10827,8 @@ __metadata:
   linkType: hard
 
 "ws@npm:^7, ws@npm:^7.5.5":
-  version: 7.5.9
-  resolution: "ws@npm:7.5.9"
+  version: 7.5.10
+  resolution: "ws@npm:7.5.10"
   peerDependencies:
     bufferutil: ^4.0.1
     utf-8-validate: ^5.0.2
@@ -10774,7 +10837,7 @@ __metadata:
       optional: true
     utf-8-validate:
       optional: true
-  checksum: 10/171e35012934bd8788150a7f46f963e50bac43a4dc524ee714c20f258693ac4d3ba2abadb00838fdac42a47af9e958c7ae7e6f4bc56db047ba897b8a2268cf7c
+  checksum: 10/9c796b84ba80ffc2c2adcdfc9c8e9a219ba99caa435c9a8d45f9ac593bba325563b3f83edc5eb067cc6d21b9a6bf2c930adf76dd40af5f58a5ca6859e81858f0
   languageName: node
   linkType: hard
 
@@ -10811,11 +10874,11 @@ __metadata:
   linkType: hard
 
 "yaml@npm:^2.0.0":
-  version: 2.4.3
-  resolution: "yaml@npm:2.4.3"
+  version: 2.4.5
+  resolution: "yaml@npm:2.4.5"
   bin:
     yaml: bin.mjs
-  checksum: 10/a618d3b968e3fb601cf7266db6e250e5cdd3b81853039a59108145202d5055b47c2d23a8e1ab661f8ba3ba095dcf6b4bb55cea2c14b97a418e5b059d27f8814e
+  checksum: 10/b09bf5a615a65276d433d76b8e34ad6b4c0320b85eb3f1a39da132c61ae6e2ff34eff4624e6458d96d49566c93cf43408ba5e568218293a8c6541a2006883f64
   languageName: node
   linkType: hard
 

@@ -126,7 +126,7 @@ const UserCard: FC<UserCardProps> = ({
           />
           <Text
             margin={theme.spaces.t2l0b23r0}
-            style={{ position: 'absolute' }}
+            // style={{ position: 'absolute' }}
             fontSize='small.default'
             color={theme.colors.white}
           >

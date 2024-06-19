@@ -1,8 +1,6 @@
 export interface AddMemberModalProps {
   open: boolean
-}
-export interface TeamMemberModalProps {
-  open: boolean
+  onBackdropClick: VoidFunction
 }
 
 export type InputValuesType = Array<string>

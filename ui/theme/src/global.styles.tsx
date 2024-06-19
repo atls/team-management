@@ -11,16 +11,14 @@ export const GlobalStyles = () => (
       body,
       #__next {
         margin: 0;
+        padding: 0;
+        max-width: 100vw;
         -webkit-font-smoothing: antialiased;
         -webkit-overflow-scrolling: touch;
         height: 100%;
         scroll-behavior: smooth;
       }
       html,
-      body {
-        background-color: #f8f8f8;
-      }
-
       #__next {
         display: flex;
         flex-direction: column;

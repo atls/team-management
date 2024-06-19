@@ -19,10 +19,10 @@ export const Dropdown: FC<PropsWithChildren> = ({ children }) => {
     isOpen,
     onOutsideClick: buttonCloseClickHandler,
     onDisappear: buttonCloseClickHandler,
-    placement: 'bottom-start',
+    placement: 'bottom-end',
     overflowContainer: false,
     auto: true,
-    triggerOffset: 12,
+    triggerOffset: 0,
     containerOffset: 16,
     arrowOffset: 16,
   })
