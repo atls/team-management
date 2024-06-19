@@ -3,6 +3,7 @@
 import { useTheme }   from '@emotion/react'
 
 import React          from 'react'
+// @ts-ignore:next-line
 import { useRouter }  from 'next/navigation'
 import { useIntl }    from 'react-intl'
 
@@ -25,7 +26,10 @@ const Registration: React.FC = () => {
 
   const gitHubAuthBaseUrl = 'https://github.com/login/oauth/authorize'
   const gitHubAuthUrl = new URL('', gitHubAuthBaseUrl)
+
+  if (!process.env.NEXT_PUBLIC_GH_CLIENT_ID) throw new Error('need github cliend id')
   gitHubAuthUrl.searchParams.set('client_id', process.env.NEXT_PUBLIC_GH_CLIENT_ID)
+
   gitHubAuthUrl.searchParams.set('redirect_uri', `${currentUrl.origin}/api/github`)
 
   const authButtonClickHandler = async () => {
