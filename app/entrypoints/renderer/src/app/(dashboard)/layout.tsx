@@ -1,8 +1,8 @@
-import { BaseLayout } from '@app/base-layout'
-import { Loading }    from '@app/loading'
-
 import React          from 'react'
 import { Suspense }   from 'react'
+
+import { BaseLayout } from '@app/base-layout'
+import { Loading }    from '@app/loading'
 
 const Layout = ({ children }) => (
   <BaseLayout>

@@ -283,9 +283,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:*"
-    "@ui/loading": "workspace:*"
-    "@ui/theme": "workspace:*"
+    "@ui/preloader": "workspace:*"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -3462,25 +3460,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/loading@workspace:*, @ui/loading@workspace:ui/loading":
-  version: 0.0.0-use.local
-  resolution: "@ui/loading@workspace:ui/loading"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-  peerDependencies:
-    "@emotion/react": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
 "@ui/logo@workspace:*, @ui/logo@workspace:ui/logo":
   version: 0.0.0-use.local
   resolution: "@ui/logo@workspace:ui/logo"
@@ -3525,6 +3504,25 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/preloader@workspace:*, @ui/preloader@workspace:ui/preloader":
+  version: 0.0.0-use.local
+  resolution: "@ui/preloader@workspace:ui/preloader"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
