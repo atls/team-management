@@ -106,6 +106,8 @@ export const spaces = {
   t0r6lb0: '0 6px 0 0',
   tb180lra: '180px auto',
   t0r21bl0: '0 21px 0 0',
+  t8lr6b12: '8px 6px 12px',
+  t24r24b0l0: '24px 24px 0 0',
   mediumDefault: 50,
   mediumIncreased: 80,
 
@@ -116,6 +118,7 @@ export const spaces = {
   largeSemi: 185,
 
   largeIncreased: 535,
+  mini: '10%',
   fullHalfReduced: '50%',
   fullSemiReduced: '80%',
 

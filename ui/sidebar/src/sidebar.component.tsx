@@ -51,11 +51,7 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
       </Pinner>
       <Container ref={node}>
         <Expander opened={pinned}>
-          <Column
-            justifyContent='space-between'
-            // height={theme.spaces.fullVh}
-            marginTop={theme.spaces.small}
-          >
+          <Column justifyContent='space-between' marginTop={theme.spaces.small}>
             <motion.div animate={pinned ? { marginLeft: '25px' } : { marginLeft: '25px' }}>
               <Row
                 margin={theme.spaces.t20autob0}

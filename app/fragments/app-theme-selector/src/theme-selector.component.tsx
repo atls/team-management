@@ -1,20 +1,14 @@
-import styled                          from '@emotion/styled'
-import { useTheme }                    from '@emotion/react'
+import { useTheme }           from '@emotion/react'
 
-import React                           from 'react'
-import { useState }                    from 'react'
+import React                  from 'react'
+import { useState }           from 'react'
 
-import { NotificationsModal }          from '@app/notifications-modal'
-import { Button }                      from '@ui/button'
-import { NotificationsIcon }           from '@ui/icons'
-import { Row }                         from '@ui/layout'
-import { ThemeSwitch }                 from '@ui/switch'
-import { ThemeType }                   from '@ui/theme'
-
-import { baseThemeSelectorRowStyles }  from './theme-selector.styles.js'
-import { shapeThemeSelectorRowStyles } from './theme-selector.styles.js'
-
-const ThemeSelectorRow = styled(Row)(baseThemeSelectorRowStyles, shapeThemeSelectorRowStyles)
+import { NotificationsModal } from '@app/notifications-modal'
+import { Button }             from '@ui/button'
+import { NotificationsIcon }  from '@ui/icons'
+import { Row }                from '@ui/layout'
+import { ThemeSwitch }        from '@ui/switch'
+import { ThemeType }          from '@ui/theme'
 
 const ThemeSelector: React.FC = () => {
   const [isNotificationsModalOpen, setIsNotificationsModalOpen] = useState<boolean>(false)
@@ -24,8 +18,12 @@ const ThemeSelector: React.FC = () => {
   }
 
   return (
-    // <ThemeSelectorRow>
-    <Row>
+    <Row
+      maxWidth={theme.spaces.semiSuper}
+      justifyContent='space-between'
+      margin={theme.spaces.t24r24b0l0}
+      alignSelf='flex-end'
+    >
       <Button
         boxShadow={theme.shadows.black}
         shape='circle'
@@ -42,7 +40,6 @@ const ThemeSelector: React.FC = () => {
         onBackdropClick={handleNotificationsModal}
         avatar='/profile.png'
       />
-      {/*</ThemeSelectorRow>*/}
     </Row>
   )
 }
