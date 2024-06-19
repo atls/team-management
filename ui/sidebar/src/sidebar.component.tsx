@@ -5,6 +5,8 @@ import { useTheme }           from '@emotion/react'
 import Link                   from 'next/link'
 import React                  from 'react'
 import { motion }             from 'framer-motion'
+// @ts-ignore:next-line
+import { usePathname }        from 'next/navigation'
 import { useRef }             from 'react'
 
 import { Avatar }             from '@ui/avatar'
@@ -39,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ src, name, email }) => {
     setPinned(!pinned)
   }
   const theme = useTheme() as ThemeType
-
+  const pathname = usePathname()
   return (
     <Wrapper pinned={pinned}>
       <Pinner opened={pinned}>
@@ -72,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({ src, name, email }) => {
             </motion.div>
             <Items>
               <Link href='/users'>
-                <Item active>
+                <Item active={pathname === '/users' && true}>
                   <ItemIcon>
                     <motion.div
                       animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
@@ -95,7 +97,7 @@ const Sidebar: React.FC<SidebarProps> = ({ src, name, email }) => {
               </Link>
 
               <Link href='/organizations'>
-                <Item active={false} href='/organizations'>
+                <Item active={pathname === '/organizations' && true} href='/organizations'>
                   <ItemIcon>
                     <motion.div
                       animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
