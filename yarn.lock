@@ -166,9 +166,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/add-member-modal":
+"@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal":
   version: 0.0.0-use.local
-  resolution: "@app/add-member-modal-fragment@workspace:app/fragments/add-member-modal"
+  resolution: "@app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
@@ -195,9 +195,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/add-member-to-organization-modal-fragment@workspace:*, @app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal":
+"@app/add-member-to-organization-modal-fragment@workspace:*, @app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal":
   version: 0.0.0-use.local
-  resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal"
+  resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@faker-js/faker": "npm:8.4.1"
@@ -244,9 +244,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/base-layout-fragment@workspace:*, @app/base-layout-fragment@workspace:app/fragments/app-base-layout":
+"@app/base-layout@workspace:*, @app/base-layout@workspace:app/fragments/app-base-layout":
   version: 0.0.0-use.local
-  resolution: "@app/base-layout-fragment@workspace:app/fragments/app-base-layout"
+  resolution: "@app/base-layout@workspace:app/fragments/app-base-layout"
   dependencies:
     "@app/theme-selector": "workspace:*"
     "@app/users-title": "workspace:*"
@@ -273,6 +273,22 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/loading@workspace:*, @app/loading@workspace:app/fragments/app-loading":
+  version: 0.0.0-use.local
+  resolution: "@app/loading@workspace:app/fragments/app-loading"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/loading": "workspace:*"
+    "@ui/theme": "workspace:*"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
@@ -450,8 +466,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
-    "@app/base-layout-fragment": "workspace:*"
+    "@app/base-layout": "workspace:*"
     "@app/index-page": "workspace:*"
+    "@app/loading": "workspace:*"
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/users-page": "workspace:*"
@@ -3445,6 +3462,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/loading@workspace:*, @ui/loading@workspace:ui/loading":
+  version: 0.0.0-use.local
+  resolution: "@ui/loading@workspace:ui/loading"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/logo@workspace:*, @ui/logo@workspace:ui/logo":
   version: 0.0.0-use.local
   resolution: "@ui/logo@workspace:ui/logo"
@@ -3556,6 +3592,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:*"
     framer-motion: "npm:11.2.6"
+    next: "npm:14.1.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"

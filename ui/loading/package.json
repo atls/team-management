@@ -1,7 +1,6 @@
 {
-  "name": "@app/base-layout",
+  "name": "@ui/loading",
   "version": "0.0.1",
-  "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
@@ -9,20 +8,19 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/theme-selector": "workspace:*",
-    "@app/users-title": "workspace:*",
     "@ui/layout": "workspace:*",
-    "@ui/sidebar": "workspace:*"
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@emotion/styled": "*",
     "react": "*",
     "react-dom": "*"
   }

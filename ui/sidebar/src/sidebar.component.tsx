@@ -1,8 +1,9 @@
 import { Divider }            from '@atls-ui-proto/divider'
 import { useTheme }           from '@emotion/react'
 
+// @ts-ignore:next-line
+import Link                   from 'next/link'
 import React                  from 'react'
-import { FC }                 from 'react'
 import { motion }             from 'framer-motion'
 import { useRef }             from 'react'
 
@@ -31,13 +32,12 @@ import { SwitchWrapper }      from './switch/index.js'
 import { Wrapper }            from './wrapper/index.js'
 import { usePinnedStateHook } from './hooks/index.js'
 
-const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
+const Sidebar: React.FC<SidebarProps> = ({ src, name, email }) => {
   const node = useRef<HTMLDivElement>(null)
   const [pinned, setPinned] = usePinnedStateHook()
   const handleClick = () => {
-    setPinned((prev) => !prev)
+    setPinned(!pinned)
   }
-
   const theme = useTheme() as ThemeType
 
   return (
@@ -71,47 +71,51 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               </Row>
             </motion.div>
             <Items>
-              <Item active href='/users'>
-                <ItemIcon>
+              <Link href='/users'>
+                <Item active>
+                  <ItemIcon>
+                    <motion.div
+                      animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    >
+                      <DashboardIcon
+                        height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        style={{ transition: 'all .5s ease-out' }}
+                      />
+                    </motion.div>
+                  </ItemIcon>
                   <motion.div
-                    animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    animate={
+                      pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
+                    }
                   >
-                    <DashboardIcon
-                      height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
-                      width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
-                      style={{ transition: 'all .5s ease-out' }}
-                    />
+                    <ItemLabel>Dashboard</ItemLabel>
                   </motion.div>
-                </ItemIcon>
-                <motion.div
-                  animate={
-                    pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
-                  }
-                >
-                  <ItemLabel>Dashboard</ItemLabel>
-                </motion.div>
-              </Item>
+                </Item>
+              </Link>
 
-              <Item active={false} href='/organizations'>
-                <ItemIcon>
+              <Link href='/organizations'>
+                <Item active={false} href='/organizations'>
+                  <ItemIcon>
+                    <motion.div
+                      animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    >
+                      <OrgamizationsIcon
+                        height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        style={{ transition: 'all .5s ease-out' }}
+                      />
+                    </motion.div>
+                  </ItemIcon>
                   <motion.div
-                    animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    animate={
+                      pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
+                    }
                   >
-                    <OrgamizationsIcon
-                      height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
-                      width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
-                      style={{ transition: 'all .5s ease-out' }}
-                    />
+                    <ItemLabel>Organizations</ItemLabel>
                   </motion.div>
-                </ItemIcon>
-                <motion.div
-                  animate={
-                    pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
-                  }
-                >
-                  <ItemLabel>Organizations</ItemLabel>
-                </motion.div>
-              </Item>
+                </Item>
+              </Link>
             </Items>
           </Column>
 
