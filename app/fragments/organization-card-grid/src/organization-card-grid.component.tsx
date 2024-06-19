@@ -1,3 +1,5 @@
+'use client'
+
 import { useTheme }                  from '@emotion/react'
 
 import React                         from 'react'
@@ -16,11 +18,7 @@ export const OrganizationCardGrid: FC<PropsWithChildren<OrganizationCardGridProp
   const theme = useTheme() as ThemeType
 
   return (
-    <GridAutoRows
-      rowHeight={theme.spaces.superBiggest}
-      columns={theme.spaces.s2}
-      maxColumnWidth={theme.spaces.hardcore}
-    >
+    <GridAutoRows rowHeight='auto' columns={theme.spaces.s2} maxColumnWidth={theme.spaces.hardcore}>
       {children}
     </GridAutoRows>
   )

@@ -1,10 +1,10 @@
 import { styleFn } from 'styled-system'
 
-export const createBaseImageBlockStyles: styleFn = ({ theme }) =>
+export const createBaseImageBlockStyles: styleFn = () =>
   ({ borderRadius }) => ({
     display: 'block',
-    height: theme.spaces.fullWidth,
-    width: theme.spaces.fullWidth,
+    height: '100%',
+    width: '100%',
     objectFit: 'cover',
     borderRadius,
   })

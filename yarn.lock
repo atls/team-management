@@ -166,6 +166,61 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/add-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/add-member-modal-fragment@workspace:app/fragments/add-member-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/add-member-to-organization-modal-fragment@workspace:*, @app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/add-member-to-organization-modal"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@faker-js/faker": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/animated-card@workspace:*, @app/animated-card@workspace:app/fragments/app-animated-card":
   version: 0.0.0-use.local
   resolution: "@app/animated-card@workspace:app/fragments/app-animated-card"
@@ -186,6 +241,51 @@ __metadata:
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/base-layout-fragment@workspace:*, @app/base-layout-fragment@workspace:app/fragments/base-layout":
+  version: 0.0.0-use.local
+  resolution: "@app/base-layout-fragment@workspace:app/fragments/base-layout"
+  dependencies:
+    "@app/theme-selector": "workspace:*"
+    "@app/users-title": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@ui/layout": "workspace:*"
+    "@ui/sidebar": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/dashboard-redirect-page@workspace:*, @app/dashboard-redirect-page@workspace:app/pages/dashboard-redirect-page":
+  version: 0.0.0-use.local
+  resolution: "@app/dashboard-redirect-page@workspace:app/pages/dashboard-redirect-page"
+  dependencies:
+    "@app/dashboard-redirect": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/dashboard-redirect@workspace:*, @app/dashboard-redirect@workspace:app/fragments/dashboard-redirect":
+  version: 0.0.0-use.local
+  resolution: "@app/dashboard-redirect@workspace:app/fragments/dashboard-redirect"
+  dependencies:
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -230,6 +330,57 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/organization-card-fragment@workspace:*, @app/organization-card-fragment@workspace:app/fragments/organization-card":
+  version: 0.0.0-use.local
+  resolution: "@app/organization-card-fragment@workspace:app/fragments/organization-card"
+  dependencies:
+    "@app/add-member-to-organization-modal-fragment": "workspace:*"
+    "@app/users-modal": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/button": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/organization-card-grid-fragment@workspace:*, @app/organization-card-grid-fragment@workspace:app/fragments/organization-card-grid":
+  version: 0.0.0-use.local
+  resolution: "@app/organization-card-grid-fragment@workspace:app/fragments/organization-card-grid"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/organizations-modal@workspace:app/fragments/app-organizations-modal":
   version: 0.0.0-use.local
   resolution: "@app/organizations-modal@workspace:app/fragments/app-organizations-modal"
@@ -248,6 +399,25 @@ __metadata:
     "@emotion/react": "*"
     react: "*"
     react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/organizations-page@workspace:*, @app/organizations-page@workspace:app/pages/organizations-page":
+  version: 0.0.0-use.local
+  resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
+  dependencies:
+    "@app/organization-card-fragment": "workspace:*"
+    "@app/organization-card-grid-fragment": "workspace:*"
+    "@app/theme-selector": "workspace:*"
+    "@faker-js/faker": "npm:8.4.1"
+    "@ui/sidebar": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@faker-js/faker": "*"
+    react: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -293,6 +463,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
+    "@app/base-layout-fragment": "workspace:*"
+    "@app/dashboard-redirect-page": "workspace:*"
+    "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/node": "npm:20.12.12"
@@ -307,22 +480,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/theme-selector@workspace:app/fragments/app-theme-selector":
+"@app/theme-selector@workspace:*, @app/theme-selector@workspace:app/fragments/app-theme-selector":
   version: 0.0.0-use.local
   resolution: "@app/theme-selector@workspace:app/fragments/app-theme-selector"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/switch": "workspace:*"
     "@ui/theme": "workspace:*"
     react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
+    "@emotion/styled": "*"
     react: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -383,18 +561,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/users-modal@workspace:app/fragments/app-users-modal":
+"@app/users-modal@workspace:*, @app/users-modal@workspace:app/fragments/app-users-modal":
   version: 0.0.0-use.local
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
+    "@faker-js/faker": "npm:8.4.1"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/divider": "workspace:*"
+    "@ui/dropdown": "workspace:*"
     "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
@@ -403,15 +584,17 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
+    "@faker-js/faker": "*"
     react: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
 
-"@app/users-title@workspace:app/fragments/app-users-title":
+"@app/users-title@workspace:*, @app/users-title@workspace:app/fragments/app-users-title":
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
+    "@app/add-member-modal-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -1531,6 +1714,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:8.4.1":
+  version: 8.4.1
+  resolution: "@faker-js/faker@npm:8.4.1"
+  checksum: 10/5983c2ea64f26055ad6648de748878e11ebe2fb751e3c7435ae141cdffabc2dccfe4c4f49da69a3d2add71e21b415c683ac5fba196fab0d5ed6779fbec436c80
+  languageName: node
+  linkType: hard
+
 "@formatjs/ecma402-abstract@npm:2.0.0":
   version: 2.0.0
   resolution: "@formatjs/ecma402-abstract@npm:2.0.0"
@@ -1621,107 +1811,6 @@ __metadata:
   checksum: 10/1d4e60cfb3edecb51a5f8dd2c2b1c784c1a9bfcbc1b6240323d8009e5f375e5c526c9eb19149b42e0e50f6a473e9709378071658ed25a62dc3923dd7fc6a2843
   languageName: node
   linkType: hard
-
-"@fragments/add-member-modal@workspace:app/fragments/add-member-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/add-member-modal@workspace:app/fragments/add-member-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    "@ui/utils": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal":
-  version: 0.0.0-use.local
-  resolution: "@fragments/add-member-to-organization-modal@workspace:app/fragments/add-member-to-organization-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid":
-  version: 0.0.0-use.local
-  resolution: "@fragments/organization-card-grid@workspace:app/fragments/organization-card-grid"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@ui/layout": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/organization-card@workspace:app/fragments/organization-card":
-  version: 0.0.0-use.local
-  resolution: "@fragments/organization-card@workspace:app/fragments/organization-card"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/image": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/styled-system": "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
 
 "@humanwhocodes/config-array@npm:^0.11.13, @humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
@@ -3184,6 +3273,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
@@ -3198,7 +3288,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/dropdown@workspace:ui/dropdown":
+"@ui/dropdown@workspace:*, @ui/dropdown@workspace:ui/dropdown":
   version: 0.0.0-use.local
   resolution: "@ui/dropdown@workspace:ui/dropdown"
   dependencies:
@@ -3293,6 +3383,7 @@ __metadata:
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -3423,7 +3514,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/sidebar@workspace:ui/sidebar":
+"@ui/sidebar@workspace:*, @ui/sidebar@workspace:ui/sidebar":
   version: 0.0.0-use.local
   resolution: "@ui/sidebar@workspace:ui/sidebar"
   dependencies:
@@ -3465,6 +3556,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/icons": "workspace:*"
+    "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.3.1"
     react-laag: "npm:2.0.5"
@@ -3511,6 +3603,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"

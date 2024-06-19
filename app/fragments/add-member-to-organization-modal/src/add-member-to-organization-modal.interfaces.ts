@@ -1,5 +1,7 @@
 export interface AddMemberToOrganizationModalProps {
   open: boolean
+  onBackdropClick: VoidFunction
+  organizationId: number
 }
 
 export type SelectedUsersType = Array<number>

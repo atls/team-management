@@ -1,16 +1,14 @@
 {
   "name": "@app/registration-page",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
-  "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "react": "*",
-    "react-dom": "*"
+  "main": "src/index.ts",
+  "dependencies": {
+    "@app/registration": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
@@ -18,7 +16,9 @@
     "@types/react-dom": "18.3.0",
     "react-intl": "6.6.8"
   },
-  "dependencies": {
-    "@app/registration": "workspace:*"
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

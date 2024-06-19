@@ -14,6 +14,12 @@ const flexConfig: Config = {
     property: 'columnGap',
     transform: (value) => (typeof value === 'number' ? `${value}px` : value),
   },
+  gridColumn: {
+    property: 'gridColumn',
+  },
+  backgroundColor: {
+    property: 'backgroundColor',
+  },
 }
 
 export const flexStyles = system(flexConfig)

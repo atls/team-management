@@ -1,10 +1,12 @@
-import { Background } from '@ui/background'
+'use client'
+
 import { useTheme }   from '@emotion/react'
 
 import React          from 'react'
 import { useIntl }    from 'react-intl'
 
 import { MainLogo }   from '@app/main-logo'
+import { Background } from '@ui/background'
 import { Button }     from '@ui/button'
 import { GitHubIcon } from '@ui/icons'
 import { Box }        from '@ui/layout'
@@ -25,6 +27,7 @@ const Registration: React.FC = () => {
             <Text
               fontSize={theme.fontSizes.normal.semiIncreased}
               fontWeight={theme.fontWeights.medium}
+              color={theme.colors.white}
             >
               {formatMessage({ id: 'registration-page.login-button' })}
             </Text>

@@ -59,11 +59,9 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
         </Box>
       )}
       <Column gap={theme.spaces.zero}>
-        <Text fontSize='small.semiLarge' color={theme.colors.GRAY_1600}>
-          {primaryInfo}
-        </Text>
+        <Text fontSize='small.semiLarge'>{primaryInfo}</Text>
         {secondaryInfo && (
-          <Text fontSize='small.default' color={theme.colors.GRAY_1000}>
+          <Text fontSize='small.default' color={theme.colors.text.secondary}>
             {secondaryInfo}
           </Text>
         )}

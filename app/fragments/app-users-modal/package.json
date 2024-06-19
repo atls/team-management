@@ -1,33 +1,37 @@
 {
   "name": "@app/users-modal",
   "version": "0.0.1",
-  "type": "module",
   "private": true,
-  "main": "src/index.ts",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "react": "*",
-    "react-intl": "*"
-  },
-  "devDependencies": {
-    "@emotion/react": "11.11.4",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "18.3.0",
-    "react-intl": "6.6.8"
-  },
+  "main": "src/index.ts",
   "dependencies": {
     "@ui/avatar": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
     "@ui/divider": "workspace:*",
+    "@ui/dropdown": "workspace:*",
     "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
     "@ui/scroll": "workspace:*",
     "@ui/text": "workspace:0.0.1",
     "@ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@faker-js/faker": "8.4.1",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "18.3.0",
+    "react-intl": "6.6.8"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@faker-js/faker": "*",
+    "react": "*",
+    "react-intl": "*"
   }
 }

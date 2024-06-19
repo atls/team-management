@@ -1,3 +1,1 @@
-export interface OrganizationCardGridProps {
-  children: JSX.Element
-}
+export interface OrganizationCardGridProps {}

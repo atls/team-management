@@ -3,6 +3,7 @@ import { useTheme }           from '@emotion/react'
 
 import React                  from 'react'
 import { FC }                 from 'react'
+import { motion }             from 'framer-motion'
 import { useRef }             from 'react'
 
 import { Avatar }             from '@ui/avatar'
@@ -23,7 +24,7 @@ import { ItemIcon }           from './item/icon/index.js'
 import { Item }               from './item/index.js'
 import { ItemLabel }          from './item/label/index.js'
 import { Items }              from './items-list/index.js'
-import { Pinner }              from './pinner/index.js'
+import { Pinner }             from './pinner/index.js'
 import { SidebarProps }       from './sidebar.interfaces.js'
 import { SwitchWrapper }      from './switch/index.js'
 import { Wrapper }            from './wrapper/index.js'
@@ -42,7 +43,9 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
     <>
       <Pinner opened={pinned}>
         <SwitchWrapper onClick={handleClick}>
-          <ArrowChevronIcon />
+          <motion.div animate={pinned ? { rotate: '180deg' } : { rotate: '0deg' }}>
+            <ArrowChevronIcon />
+          </motion.div>
         </SwitchWrapper>
       </Pinner>
       <Wrapper pinned={pinned}>
@@ -50,36 +53,60 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
           <Expander opened={pinned}>
             <Column
               justifyContent='space-between'
-              height={theme.spaces.fullWidth}
+              // height={theme.spaces.fullVh}
               marginTop={theme.spaces.small}
             >
-              <Box margin={theme.spaces.t20autob0}>
-                <Logo />
-              </Box>
-
+              <motion.div animate={pinned ? { marginLeft: '20px' } : { marginLeft: '25px' }}>
+                <Box margin={theme.spaces.t20autob0} width={190}>
+                  <Logo />
+                </Box>
+              </motion.div>
               <Items>
                 <Item active={false} href='/'>
                   <ItemIcon>
-                    <DashboardIcon
-                      height={theme.spaces.semiRegular}
-                      width={theme.spaces.semiRegular}
-                    />
+                    <motion.div
+                      animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    >
+                      <DashboardIcon
+                        height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        style={{ transition: 'all .5s ease-out' }}
+                      />
+                    </motion.div>
                   </ItemIcon>
-                  <ItemLabel>Dashboard</ItemLabel>
+                  <motion.div
+                    animate={
+                      pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
+                    }
+                  >
+                    <ItemLabel>Dashboard</ItemLabel>
+                  </motion.div>
                 </Item>
+
                 <Item active href='/'>
                   <ItemIcon>
-                    <OrgamizationsIcon
-                      height={theme.spaces.semiRegular}
-                      width={theme.spaces.semiRegular}
-                    />
+                    <motion.div
+                      animate={pinned ? { width: '18px' } : { width: '26px', margin: '-40px' }}
+                    >
+                      <OrgamizationsIcon
+                        height={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        width={pinned ? theme.spaces.semiRegular : theme.spaces.largest}
+                        style={{ transition: 'all .5s ease-out' }}
+                      />
+                    </motion.div>
                   </ItemIcon>
-                  <ItemLabel>Organizations</ItemLabel>
+                  <motion.div
+                    animate={
+                      pinned ? { transform: 'translate(0px)' } : { transform: 'translate(50px)' }
+                    }
+                  >
+                    <ItemLabel>Organizations</ItemLabel>
+                  </motion.div>
                 </Item>
               </Items>
             </Column>
 
-            <Column alignItems='center'>
+            <Column alignItems='center' height='auto'>
               <Divider
                 weight={1}
                 backgroundColor={theme.colors.lightgrey}
@@ -89,16 +116,22 @@ const Sidebar: FC<SidebarProps> = ({ src, name, email }) => {
               <Row
                 alignItems='center'
                 minWidth={theme.spaces.largeSemiDefault}
-                margin={theme.spaces.miniReduced}
+                padding={theme.spaces.miniReduced}
                 justifyContent='space-between'
               >
-                <Avatar
-                  size={theme.spaces.increased}
-                  image
-                  notification={false}
-                  src={src}
-                  alt='avatar'
-                />
+                <motion.div
+                  animate={
+                    pinned ? { marginLeft: '8px' } : { marginLeft: '70px', marginRight: '50px' }
+                  }
+                >
+                  <Avatar
+                    size={theme.spaces.increased}
+                    image
+                    notification={false}
+                    src={src}
+                    alt='avatar'
+                  />
+                </motion.div>
                 <Column>
                   <Text fontSize='small.semiLarge'>{name}</Text>
                   <Text fontSize='small.default'>{email}</Text>

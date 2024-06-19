@@ -1,21 +1,36 @@
-const WHITE = '#FFFFFF'
-const GRAY_100 = '#F2F2F2'
-const GRAY_200 = '#E4E4E4'
-const GRAY_300 = '#D7D7D7'
-const GRAY_400 = '#C9C9C9'
-const GRAY_1000 = '#797979'
-const GRAY_1400 = '#434343'
-const GRAY_1600 = '#282828'
+import { colorsConstants } from './colors.constants.js'
 
-const BLUE_0 = '#F5F9FF'
-const BLUE_100 = '#C5DCFD'
-const BLUE_400 = '#508EE9'
+const { WHITE } = colorsConstants
+const { GRAY_0 } = colorsConstants
+const { GRAY_100 } = colorsConstants
+const { GRAY_200 } = colorsConstants
+const { GRAY_300 } = colorsConstants
+const { GRAY_400 } = colorsConstants
+const { GRAY_800 } = colorsConstants
+const { GRAY_1000 } = colorsConstants
+const { GRAY_1600 } = colorsConstants
 
-const RED_400 = '#E95050'
+const { BLUE_0 } = colorsConstants
+const { BLUE_100 } = colorsConstants
+const { BLUE_400 } = colorsConstants
 
-const BLACK_50 = '00000080'
+const { RED_400 } = colorsConstants
+
+const { BLACK_50 } = colorsConstants
 
 const colors = {
+  divider: GRAY_300,
+  text: {
+    primary: GRAY_1600,
+    secondary: GRAY_1000,
+  },
+  baseLayout: {
+    background: GRAY_0,
+  },
+  addMemberModal: {
+    addIcon: GRAY_1600,
+    buttonText: GRAY_800,
+  },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
   GRAY_300,
@@ -131,14 +146,13 @@ const colors = {
   cherrywood: 'rgba(97, 32, 19, 0.20)',
   dune: 'rgba(37, 37, 37, 0.20)',
   input: {
-    light: {
-      backgroundColor: GRAY_200,
-      fontColor: GRAY_1600,
-    },
-    dark: {
-      backgroundColor: GRAY_1400,
-      fontColor: WHITE,
-    },
+    backgroundColor: GRAY_200,
+    fontColor: GRAY_1600,
+  },
+  selectInput: {
+    selectedItem: GRAY_300,
+    suggestedItemsContainer: BLUE_0,
+    suggestedItem: WHITE,
   },
   modal: {
     childContainer: WHITE,

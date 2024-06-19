@@ -14,5 +14,5 @@ export const shapeSelectedItemBoxStyles: styleFn = ({ theme }) => ({
 })
 
 export const appearanceSelectedItemBoxStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.GRAY_300,
+  backgroundColor: theme.colors.selectInput.selectedItem,
 })

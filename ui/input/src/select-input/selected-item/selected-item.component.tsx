@@ -36,7 +36,7 @@ export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
 
   return (
     <SelectedItemBox onClick={(e) => handleDeleteSelectedItem(e, selectedItemData)}>
-      <RemoveIcon cursor='pointer' width={theme.spaces.micro} />
+      <RemoveIcon cursor='pointer' width={theme.spaces.micro} color={theme.colors.text.primary} />
       <Text fontSize='small.semiLarge' wordBreak='keep-all'>
         {primaryInfo}
       </Text>
