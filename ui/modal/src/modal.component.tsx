@@ -7,6 +7,8 @@ import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { MouseEventHandler } from 'react'
 
+import { ThemeType }         from '@ui/theme'
+
 import { Backdrop }          from './backdrop/index.js'
 import { ChildContainer }    from './child-container/index.js'
 import { Container }         from './container/index.js'
@@ -18,11 +20,16 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
   width,
   padding,
   onBackdropClick,
+  top,
+  left,
+  bottom,
+  right,
+  position,
 }) => {
   const childrenContainerHandler: MouseEventHandler<HTMLDivElement> = (e) => {
     e.stopPropagation()
   }
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
   return (
     <Condition match={open}>
@@ -33,6 +40,11 @@ const Modal: FC<PropsWithChildren<ModalProps>> = ({
             onClick={childrenContainerHandler}
             width={width || theme.spaces.superExtra}
             padding={padding || theme.spaces.paddingsNormal}
+            top={top}
+            left={left}
+            bottom={bottom}
+            right={right}
+            position={position}
           >
             {children}
           </ChildContainer>

@@ -1,8 +1,19 @@
 export interface UserCardProps {
-  name?: string
-  position?: string
-  time?: string
-  organizations?: string
+  name: string
+  position: string
   avatar: string
-  checked?: boolean
+  organizations: string | number
+  organizationsData: Organization[]
+  time: string
+  services: CheckboxInt[]
+}
+
+interface Organization {
+  name: string
+  organizationLogo: string
+}
+export interface CheckboxInt {
+  id: number
+  name: string
+  checked: boolean
 }

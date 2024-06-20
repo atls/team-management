@@ -13,10 +13,12 @@
     "react-intl": "6.6.8"
   },
   "devDependencies": {
-    "@app/base-layout-fragment": "workspace:*",
-    "@app/dashboard-redirect-page": "workspace:*",
+    "@app/base-layout": "workspace:*",
+    "@app/index-page": "workspace:*",
+    "@app/loading": "workspace:*",
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
+    "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",

@@ -22,23 +22,24 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
   date,
   open,
   notifiaction,
+  onBackdropClick,
 }) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   return (
     <Modal
+      top={theme.spaces.huge}
+      left='auto'
+      bottom='auto'
+      right={theme.spaces.mini}
       open={open}
+      position='absolute'
       width={theme.spaces.largeSemiLargeIncreased}
-      onBackdropClick={() => undefined as void}
+      onBackdropClick={onBackdropClick}
     >
       <Column>
-        <Text
-          maxWidth={theme.spaces.superBiggest}
-          marginBottom={theme.spaces.micro}
-          fontSize='medium.semiReduced'
-          color='GRAY_1600'
-        >
+        <Text marginBottom={theme.spaces.micro} fontSize='medium.semiReduced' color='GRAY_1600'>
           {formatMessage({ id: 'notifications-modal.title' })}
         </Text>
         <Scroll height={theme.spaces.largeSemiDecreased}>
@@ -76,12 +77,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
         </Scroll>
 
         <Box justifyContent='center'>
-          <Text
-            color='indigo'
-            maxWidth={theme.spaces.superBiggest}
-            marginBottom={theme.spaces.micro}
-            fontSize='normal.semiDefault'
-          >
+          <Text color='indigo' marginBottom={theme.spaces.micro} fontSize='normal.semiDefault'>
             {formatMessage({ id: 'notifications-modal.mark-all-read' })}
           </Text>
         </Box>

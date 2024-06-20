@@ -13,9 +13,14 @@ import { Modal }                   from '@ui/modal'
 import { Text }                    from '@ui/text'
 import { ThemeType }               from '@ui/theme'
 
+import { Organization }            from './organizations-modal.interfaces.js'
 import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
-const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, img, open }) => {
+const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
+  organizationsData,
+  open,
+  onBackdropClick,
+}) => {
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
@@ -24,7 +29,7 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, im
       open={open}
       width={theme.spaces.superExtraIncreased}
       padding={theme.spaces.large}
-      onBackdropClick={() => undefined as void}
+      onBackdropClick={onBackdropClick}
     >
       <Column>
         <Text
@@ -41,7 +46,9 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({ organization, im
           alignItems='flex-start'
           maxWidth={theme.spaces.largeDefaultIncreased}
         >
-          <AnimatedCard img={img} organization={organization} />
+          {organizationsData.map((org: Organization) => (
+            <AnimatedCard img={org.organizationLogo} organization={org.name} />
+          ))}
         </Box>
 
         <Box justifyContent='flex-end'>

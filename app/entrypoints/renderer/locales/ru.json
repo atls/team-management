@@ -20,5 +20,6 @@
   "users-modal.subTitle": "Участники",
   "users-modal.button-remove": "Удалить",
   "users-title.title": "Команда",
-  "registration-page.login-button": "Войти с помощью GitHub"
+  "registration-page.login-button": "Войти с помощью GitHub",
+  "preloader.text": "Загрузка..."
 }

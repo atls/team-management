@@ -31,7 +31,7 @@ export const Avatar: FC<AvatarProps> = ({
       padding={padding}
     >
       <Condition match={image}>
-        <NextImage src={src} alt={alt} />
+        <NextImage src={src} alt={alt} width={40} height={40} />
       </Condition>
     </ContainerWrapper>
   </Box>
