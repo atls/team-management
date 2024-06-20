@@ -18,7 +18,12 @@ import { ThemeType }              from '@ui/theme'
 
 import { githubAuthRedirectHook } from './github-auth.hook.js'
 
-const Registration: React.FC = () => {
+const RegistrationClient: React.FC = () => {
+  console.log(window.location.href)
+  let currentUrl = new URL(window.location.href)
+  const code = currentUrl.searchParams.get('code')
+  console.log(code)
+
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
   const router = useRouter()
@@ -49,4 +54,4 @@ const Registration: React.FC = () => {
   )
 }
 
-export { Registration }
+export { RegistrationClient }
