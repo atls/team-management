@@ -1,0 +1,14 @@
+{
+  "name": "@globals/data",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@octokit/auth-oauth-user": "5.1.1"
+  },
+  "peerDependencies": {
+    "@octokit/auth-oauth-user": "*"
+  }
+}
