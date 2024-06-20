@@ -50,7 +50,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
       <Column flexDirection='column' gap={theme.spaces.large}>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
-          {formatMessage({ id: 'add-member-to-organization-modal.header' })}
+          {formatMessage({ id: 'app-add-member-to-organization-modal.header' })}
         </Text>
         <SelectInput
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
@@ -65,7 +65,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           rowGap={theme.spaces.large}
         >
           <Text fontSize='normal.semiIncreased' width='100%'>
-            {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
+            {formatMessage({ id: 'app-add-member-to-organization-modal.teams' })}
           </Text>
           <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
           <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
@@ -80,7 +80,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             size='middlingRoundedPadding'
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              {formatMessage({ id: 'add-member-to-organization-modal.button' })}
+              {formatMessage({ id: 'app-add-member-to-organization-modal.button' })}
             </Text>
           </Button>
         </Row>

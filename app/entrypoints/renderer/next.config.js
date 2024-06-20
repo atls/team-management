@@ -8,6 +8,14 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 export default {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+  },
   experimental: {
     externalDir: true,
     outputFileTracingRoot: join(__dirname, './'),

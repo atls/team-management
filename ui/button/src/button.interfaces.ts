@@ -1,6 +1,7 @@
 import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 
 export type ButtonVariant =
+  | 'blackSolidBackgroundButton'
   | 'blackBackgroundButton'
   | 'whiteBackgroundButton'
   | 'blueBackgroundButton'
@@ -13,6 +14,7 @@ export type ButtonSize =
   | 'smallRoundedPadding'
   | 'bigRoundedPadding'
   | 'microRoundedPadding'
+  | 'microIncreasedRoundedPadding'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant

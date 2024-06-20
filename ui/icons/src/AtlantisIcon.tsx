@@ -5,7 +5,7 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces.js'
 
-export const AtlantisIcon = (props: IconProps) => {
+export const AtlantisIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg
@@ -88,4 +88,4 @@ export const AtlantisIcon = (props: IconProps) => {
       </defs>
     </svg>
   )
-}
+})

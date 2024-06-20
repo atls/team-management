@@ -59,7 +59,9 @@ export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropC
   return (
     <Modal open={open} padding={theme.spaces.increased} onBackdropClick={onBackdropClick}>
       <Column gap={theme.spaces.moderate}>
-        <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
+        <Text fontSize='normal.increased'>
+          {formatMessage({ id: 'app-add-member-modal.header' })}
+        </Text>
         {inputValues.map((_inputValue: string, index: number) => (
           <AddMemberModalInput
             inputIndex={index}
@@ -99,7 +101,7 @@ export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropC
             size='middlingRoundedPadding'
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              {formatMessage({ id: 'add-member-modal.invite' })}
+              {formatMessage({ id: 'app-add-member-modal.invite' })}
             </Text>
           </Button>
         </Row>

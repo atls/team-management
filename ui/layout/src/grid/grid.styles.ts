@@ -17,9 +17,9 @@ const gridAutoRowsConfig: Config = {
   },
 }
 
-export const baseGridAutoRowsStyles: styleFn = ({ theme }) => ({
+export const baseGridAutoRowsStyles: styleFn = ({ theme, gap }) => ({
   display: 'grid',
-  gap: theme.spaces.semiLarge,
+  gap: gap ?? theme.spaces.semiLarge,
   gridAutoFlow: 'row',
   alignContent: 'center',
   justifyContent: 'center',

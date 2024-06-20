@@ -1,30 +1,48 @@
-import { useTheme }      from '@emotion/react'
+'use client'
 
-import React             from 'react'
-import { FC }            from 'react'
+import { useTheme }           from '@emotion/react'
 
-import { Card }          from '@ui/card'
-import { Checkbox }      from '@ui/checkbox'
-import { Divider }       from '@ui/divider'
-import { DiscordIcon }   from '@ui/icons'
-import { OrgWhiteIcon }  from '@ui/icons'
-import { GitHubIcon }    from '@ui/icons'
-import { TimerIcon }     from '@ui/icons'
-import { TelegramIcon }  from '@ui/icons'
-import { NextImage }     from '@ui/image'
-import { Box }           from '@ui/layout'
-import { Row }           from '@ui/layout'
-import { Column }        from '@ui/layout'
-import { Line }          from '@ui/progress'
-import { Scroll }        from '@ui/scroll'
-import { Tag }           from '@ui/tag'
-import { Text }          from '@ui/text'
-import { ThemeType }     from '@ui/theme'
+import React                  from 'react'
+import { FC }                 from 'react'
+import { useState }           from 'react'
 
-import { UserCardProps } from './user-card.interface.js'
+import { OrganizationsModal } from '@app/organizations-modal'
+import { Button }             from '@ui/button'
+import { Card }               from '@ui/card'
+import { Checkbox }           from '@ui/checkbox'
+import { Divider }            from '@ui/divider'
+import { OrgWhiteIcon }       from '@ui/icons'
+import { TimerIcon }          from '@ui/icons'
+import { NextImage }          from '@ui/image'
+import { Box }                from '@ui/layout'
+import { GridAutoRows }       from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Line }               from '@ui/progress'
+import { Scroll }             from '@ui/scroll'
+import { Tag }                from '@ui/tag'
+import { Text }               from '@ui/text'
+import { ThemeType }          from '@ui/theme'
 
-const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avatar, checked }) => {
+import { ICONS }              from './user-card.constants.js'
+import { CheckboxInt }        from './user-card.interface.js'
+import { UserCardProps }      from './user-card.interface.js'
+
+const UserCard: FC<UserCardProps> = ({
+  name,
+  position,
+  time,
+  organizations,
+  organizationsData,
+  avatar,
+  services,
+}) => {
   const theme = useTheme() as ThemeType
+  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+  const handleOrganizations = () => {
+    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
+  }
+
   return (
     <Card
       width={theme.spaces.largeSemiIncreased}
@@ -34,13 +52,20 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
       alignItems='flex-start'
     >
       <Column>
-        <Column
+        <Box
           position='relative'
           width={theme.spaces.largeSemiIncreased}
           height={theme.spaces.largeDefault}
         >
-          <NextImage src={avatar} borderRadius={theme.radii.tl24tr24} alt='avatar' />
-          <Column
+          <NextImage
+            src={avatar}
+            borderRadius={theme.radii.tl24tr24}
+            width={theme.spaces.largeSemiIncreased}
+            height={theme.spaces.largeDefault}
+            alt='avatar'
+          />
+          <Box
+            flexDirection='column'
             position='absolute'
             marginTop={theme.spaces.largeSemiDecreased}
             alignItems='flex-start'
@@ -66,18 +91,17 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
               width={theme.spaces.fullWidth}
               padding={theme.spaces.t0rbl12}
             >
-              <Tag
-                height={theme.spaces.moderate}
-                width={theme.spaces.big}
-                backgroundColor={theme.backgrounds.darkGray}
-                borderRadius={theme.radii.f7}
-                color={theme.colors.white}
+              <Button
+                size='microIncreasedRoundedPadding'
+                shape='rectangle'
+                variant='blackSolidBackgroundButton'
+                onClick={handleOrganizations}
               >
-                <Text margin={theme.spaces.t0r6lb0} color={theme.colors.white}>
+                <Text color={theme.colors.white} fontSize='normal.semiDefault'>
                   {organizations}
                 </Text>
                 <OrgWhiteIcon width={theme.spaces.micro} />
-              </Tag>
+              </Button>
               <Tag
                 padding={theme.spaces.miniReduced}
                 height={theme.spaces.moderate}
@@ -91,8 +115,8 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                 </Text>
               </Tag>
             </Row>
-          </Column>
-        </Column>
+          </Box>
+        </Box>
         <Row>
           <Line
             percent={20}
@@ -109,83 +133,26 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
             20%
           </Text>
         </Row>
-
-        <Scroll>
-          <Box maxHeight={theme.spaces.largeSemiNormal}>
-            <Column
-              width={theme.spaces.fullWidth}
-              flexBasis={theme.spaces.fullHalfReduced}
-              margin={theme.spaces.t8r2b6l12}
+        <Box padding={theme.spaces.t8lr6b12}>
+          <Scroll height={theme.spaces.gigantIncreased}>
+            <GridAutoRows
+              columnGap={theme.spaces.miniDefault}
+              columns={theme.spaces.s2}
+              maxColumnWidth={theme.spaces.semiSuperExtra}
+              gap={theme.spaces.zero}
             >
-              <Column
-                maxWidth={theme.spaces.largeSemi}
-                padding={theme.spaces.t1r5b2l5}
-                maxHeight={theme.spaces.small}
-              >
-                <Checkbox labelPosition='start' checked={checked}>
-                  <Row marginRight='auto'>
-                    <GitHubIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
-                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
-                      Git
-                    </Text>
-                  </Row>
-                </Checkbox>
-                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
-                  <Divider
-                    weight={theme.spaces.nano}
-                    backgroundColor={theme.backgrounds.lightGray}
-                  />
-                </Box>
-              </Column>
-            </Column>
-
-            <Column
-              width={theme.spaces.fullWidth}
-              flexBasis={theme.spaces.fullHalfReduced}
-              margin={theme.spaces.t8r2b6l12}
-            >
-              <Column
-                maxWidth={theme.spaces.largeSemi}
-                padding={theme.spaces.t1r5b2l5}
-                maxHeight={theme.spaces.small}
-              >
-                <Checkbox labelPosition='start' checked={checked}>
-                  <Row marginRight='auto'>
-                    <TelegramIcon
-                      width={theme.spaces.semiMedium}
-                      height={theme.spaces.semiMedium}
-                    />
-                    <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
-                      Telegram
-                    </Text>
-                  </Row>
-                </Checkbox>
-                <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
-                  <Divider
-                    weight={theme.spaces.nano}
-                    backgroundColor={theme.backgrounds.lightGray}
-                  />
-                </Box>
-              </Column>
-
-              <Column
-                width={theme.spaces.fullWidth}
-                flexBasis={theme.spaces.fullHalfReduced}
-                margin={theme.spaces.t8r2b6l12}
-              >
+              {services.map((checkbox: CheckboxInt, index) => (
                 <Column
+                  key={checkbox.id}
                   maxWidth={theme.spaces.largeSemi}
                   padding={theme.spaces.t1r5b2l5}
-                  maxHeight={theme.spaces.small}
+                  height={theme.spaces.moderate}
                 >
-                  <Checkbox labelPosition='start' checked={checked}>
+                  <Checkbox labelPosition='start' checked={checkbox.checked}>
                     <Row marginRight='auto'>
-                      <DiscordIcon
-                        width={theme.spaces.semiMedium}
-                        height={theme.spaces.semiMedium}
-                      />
+                      {ICONS[index]}
                       <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
-                        Discord
+                        {checkbox.name}
                       </Text>
                     </Row>
                   </Checkbox>
@@ -196,11 +163,16 @@ const UserCard: FC<UserCardProps> = ({ name, position, time, organizations, avat
                     />
                   </Box>
                 </Column>
-              </Column>
-            </Column>
-          </Box>
-        </Scroll>
+              ))}
+            </GridAutoRows>
+          </Scroll>
+        </Box>
       </Column>
+      <OrganizationsModal
+        open={isOrganizationsModalOpen}
+        onBackdropClick={handleOrganizations}
+        organizationsData={organizationsData}
+      />
     </Card>
   )
 }

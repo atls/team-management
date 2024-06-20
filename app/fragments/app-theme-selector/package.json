@@ -8,6 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/notifications-modal": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/layout": "workspace:*",
