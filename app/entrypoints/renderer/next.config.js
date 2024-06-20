@@ -12,11 +12,10 @@ export default {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'robohash.org',
+        hostname: '**',
       },
     ],
   },
-
   experimental: {
     externalDir: true,
     outputFileTracingRoot: join(__dirname, './'),
