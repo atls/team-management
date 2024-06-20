@@ -1,40 +1,27 @@
 'use client'
 
-import { useTheme }   from '@emotion/react'
+import { useTheme }               from '@emotion/react'
 
-import React          from 'react'
+import React                      from 'react'
 // @ts-ignore:next-line
-import { useRouter }  from 'next/navigation'
-import { useIntl }    from 'react-intl'
+import { useRouter }              from 'next/navigation'
+import { useIntl }                from 'react-intl'
 
-import { MainLogo }   from '@app/main-logo'
-import { Background } from '@ui/background'
-import { Button }     from '@ui/button'
-import { GitHubIcon } from '@ui/icons'
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { ThemeType }  from '@ui/theme'
+import { MainLogo }               from '@app/main-logo'
+import { Background }             from '@ui/background'
+import { Button }                 from '@ui/button'
+import { GitHubIcon }             from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Text }                   from '@ui/text'
+import { ThemeType }              from '@ui/theme'
+
+import { githubAuthRedirectHook } from './github-auth.hook.js'
 
 const Registration: React.FC = () => {
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
-
   const router = useRouter()
-
-  const currentUrl = new URL(window.location.href)
-
-  const gitHubAuthBaseUrl = 'https://github.com/login/oauth/authorize'
-  const gitHubAuthUrl = new URL('', gitHubAuthBaseUrl)
-
-  if (!process.env.NEXT_PUBLIC_GH_CLIENT_ID) throw new Error('need github cliend id')
-  gitHubAuthUrl.searchParams.set('client_id', process.env.NEXT_PUBLIC_GH_CLIENT_ID)
-
-  gitHubAuthUrl.searchParams.set('redirect_uri', `${currentUrl.origin}/api/github`)
-
-  const authButtonClickHandler = async () => {
-    router.replace(gitHubAuthUrl.href)
-  }
 
   return (
     <Background backgroundUrl='url(/Bg.png)'>
@@ -45,7 +32,7 @@ const Registration: React.FC = () => {
             variant='blackBackgroundButton'
             shape='rectangle'
             size='bigRoundedPadding'
-            onClick={authButtonClickHandler}
+            onClick={() => githubAuthRedirectHook(router)}
           >
             <GitHubIcon width={theme.spaces.bigDecreased} height={theme.spaces.bigDecreased} />
             <Text
