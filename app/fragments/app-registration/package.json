@@ -9,6 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/main-logo": "workspace:*",
+    "@globals/data": "workspace:*",
     "@ui/background": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
