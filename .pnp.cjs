@@ -102,6 +102,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:app/pages/users-page"\
     },\
     {\
+      "name": "@globals/data",\
+      "reference": "workspace:globals/data"\
+    },\
+    {\
       "name": "@ui/avatar",\
       "reference": "workspace:ui/avatar"\
     },\
@@ -219,6 +223,7 @@ const RAW_RUNTIME_STATE =
     ["@app/users-modal", ["virtual:1c2e05c3045e72b582ea14f300ebc51c9efbabe4bd2b39797ee52f88ebdef087f6c705012a3fee399378edcc2364f330d1c9f79d2b4f41235f1094df2b4f3503#workspace:app/fragments/app-users-modal", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:app/fragments/app-users-modal", "workspace:app/fragments/app-users-modal"]],\
     ["@app/users-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page", "workspace:app/pages/users-page"]],\
     ["@app/users-title", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:app/fragments/app-users-title", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:app/fragments/app-users-title", "workspace:app/fragments/app-users-title"]],\
+    ["@globals/data", ["virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data", "workspace:globals/data"]],\
     ["@ui/avatar", ["virtual:0c725c07879c46cc40fec4183eb3e1a1c605e53876391762f1df52e574eee32d9b4dbd28691a90e51a0305d405fa29eccad623be3ce6fe986a16d8d223d47984#workspace:ui/avatar", "virtual:481440e9fcaefcaf5e4aadc448f9a10fc4805b8d7ce75df54526600784bb5337c9d01f58071564e16e586bf14d9343ac3c19abcc4e59cbf7735f31577469a892#workspace:ui/avatar", "virtual:6f072cb25c8571e52042d4ef03485a8513ce3fff603e6ca03ada28cdae96fc64f304d1c9166738e96330efff40007e7cbc45f5c30b79d80869aea7ecdd29bb6a#workspace:ui/avatar", "virtual:7ae719e1ff7496436b53b6c4efec34a71f4d0130b6290e9286ecb29a1940fee696b89acff5a583b09f11545aa0404818a9fb6b876f46be6137681e389815c40a#workspace:ui/avatar", "virtual:9fac9e3a8ab2ee419c9a8e4c51d30e681b903fd0ed7acca5db6ce51c4463a212c799f0acfaa4a1e87adf2fb2b5bc435a6e05794a91918d21c8ef518f1d7f94df#workspace:ui/avatar", "virtual:e638095173f04580c2ab97fface872e070b090feea9065809b69a616b54d2f8cef2120849ef7b28780f1d0367e1336044cea4f9600853c255ffe62ea7a9d6185#workspace:ui/avatar", "workspace:ui/avatar"]],\
     ["@ui/background", ["virtual:bab840902431193d5bf4d02662a21578a63ec20e9a89ebb767689df64c3a9349a86b79824df9a94f326bbf3ad35c32b5140399e4be75b9a88a87c1598817b7b8#workspace:ui/background", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:ui/background", "workspace:ui/background"]],\
     ["@ui/button", ["virtual:08a9fecbb8afa8d30aec63bcd6727a0d43939a4d03f51cb7a0d8f64a7416d60b53ff914e3e851a548d07e130ade8ea01735c7b9b4acd990de8d383cf18d290fb#workspace:ui/button", "virtual:209c9636f71a6ea21774b537eeb4a5e90c70a908e2a7c713875f332377dfe55e00a7ed2779584cb707a7e70c407f722859e441616776bca7b47e1c881d179bee#workspace:ui/button", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:ui/button", "virtual:697c17e2d2fcb4691116223387f8bdada9a3a5c85a9fd678a2f1dbb4f28b29963a9221b7928d1a60f673eff114ee44ba1485bc48851740fe07fbb65bdd87aea5#workspace:ui/button", "virtual:6c42e522a67ba46327baef79493ce2c5cfb1f594d5712b9e896463b1a8a09475125341a36e5ab45a6cb3f85cbb59890c7c4aea679a91fd64376f5565f72b8fab#workspace:ui/button", "virtual:6ec2f30da1fac88192d31ee2664563f04521a52ec0b895ac8774e80a8c7ae27ad8de2eff2a70735ee916d0cad63f5e53102572df69e9460cec87af5c18b685b7#workspace:ui/button", "virtual:74350f4969baa1ddf9f41dff09272cccbf1276ca004bcaa735ff39b063ab338fe8da05290c747d374f301ee9bd66430b00f80fc7fe3d8dc776d83f09a4fa704d#workspace:ui/button", "virtual:a23dd37b90ca1d78e82bb3d9d1cd37e3bd509049031c5ec1cc541ac82ad584d1e6589d34a89aa5644e371648aef360e9b46bf301463b403f464963dd4f22c3d8#workspace:ui/button", "virtual:aae0a6a51e77311dacded04207cf2911a1dcb898d2fdd9677130a9a5ea08e36378e567659d79be6eef80389958eb1cf99fd61f69c7f21286eb05ec3582550f48#workspace:ui/button", "virtual:c8a5f42b1f8eab5e43bd139e7b362f54fcc4bb16867fe91c428467e3f5721c9f7c63e16d2fbde13744b05d7a54fc94e1546c031a5f68bd3d98a5a1756d1f9301#workspace:ui/button", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#workspace:ui/button", "workspace:ui/button"]],\
@@ -806,8 +811,11 @@ const RAW_RUNTIME_STATE =
           ["@app/users-title", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:app/fragments/app-users-title"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
+          ["@types/octokit__graphql", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/layout", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:ui/layout"],\
@@ -819,6 +827,7 @@ const RAW_RUNTIME_STATE =
           "@emotion/react",\
           "@types/emotion__react",\
           "@types/emotion__styled",\
+          "@types/octokit__graphql",\
           "@types/react-dom",\
           "@types/react",\
           "react-dom",\
@@ -834,6 +843,8 @@ const RAW_RUNTIME_STATE =
           ["@app/users-title", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:app/fragments/app-users-title"],\
           ["@emotion/react", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.4"],\
           ["@emotion/styled", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@octokit/graphql", "npm:8.1.1"],\
           ["@ui/layout", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:ui/layout"],\
           ["@ui/sidebar", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:ui/sidebar"],\
           ["react", "npm:18.3.1"],\
@@ -1371,6 +1382,7 @@ const RAW_RUNTIME_STATE =
           ["@app/registration", "virtual:e35b1c0c5c772556e82fc566b1633dea74dabc56e95a367c3dac1091c059f1571a921e6ce366a5f38d631e30d3ebba01fbe8e45d8d73584e7403cb5801bce8ac#workspace:app/fragments/app-registration"],\
           ["@app/main-logo", "virtual:bab840902431193d5bf4d02662a21578a63ec20e9a89ebb767689df64c3a9349a86b79824df9a94f326bbf3ad35c32b5140399e4be75b9a88a87c1598817b7b8#workspace:app/fragments/app-main-logo"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1400,6 +1412,7 @@ const RAW_RUNTIME_STATE =
           ["@app/registration", "virtual:e5849c9aaf38a5ccaa4ebdac038494d07ced0ae4df2a95bae2f99e3d4a28033fbcb7e3a9e653427aad3c12c3641aa8052709b1a60cf8300ed4a0dbbf7f95fcac#workspace:app/fragments/app-registration"],\
           ["@app/main-logo", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:app/fragments/app-main-logo"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1429,6 +1442,7 @@ const RAW_RUNTIME_STATE =
           ["@app/registration", "workspace:app/fragments/app-registration"],\
           ["@app/main-logo", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:app/fragments/app-main-logo"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/background", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:ui/background"],\
@@ -5848,6 +5862,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@globals/data", [\
+      ["virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data", {\
+        "packageLocation": "./.yarn/__virtual__/@globals-data-virtual-17e1ea87ca/1/globals/data/",\
+        "packageDependencies": [\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@octokit/auth-oauth-user", "npm:5.1.1"],\
+          ["@types/octokit__auth-oauth-user", null]\
+        ],\
+        "packagePeers": [\
+          "@types/octokit__auth-oauth-user"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:globals/data", {\
+        "packageLocation": "./globals/data/",\
+        "packageDependencies": [\
+          ["@globals/data", "workspace:globals/data"],\
+          ["@octokit/auth-oauth-user", "npm:5.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@graphql-typed-document-node/core", [\
       ["npm:3.2.0", {\
         "packageLocation": "./.yarn/cache/@graphql-typed-document-node-core-npm-3.2.0-505adb1e90-fa44443acc.zip/node_modules/@graphql-typed-document-node/core/",\
@@ -6418,6 +6454,120 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@npmcli/fs", "npm:3.1.1"],\
           ["semver", "npm:7.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/auth-oauth-device", [\
+      ["npm:7.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-auth-oauth-device-npm-7.1.1-c9984544b4-a7ff0c190a.zip/node_modules/@octokit/auth-oauth-device/",\
+        "packageDependencies": [\
+          ["@octokit/auth-oauth-device", "npm:7.1.1"],\
+          ["@octokit/oauth-methods", "npm:5.1.2"],\
+          ["@octokit/request", "npm:9.1.1"],\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["universal-user-agent", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/auth-oauth-user", [\
+      ["npm:5.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-auth-oauth-user-npm-5.1.1-a258c23865-b583f373d8.zip/node_modules/@octokit/auth-oauth-user/",\
+        "packageDependencies": [\
+          ["@octokit/auth-oauth-user", "npm:5.1.1"],\
+          ["@octokit/auth-oauth-device", "npm:7.1.1"],\
+          ["@octokit/oauth-methods", "npm:5.1.2"],\
+          ["@octokit/request", "npm:9.1.1"],\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["universal-user-agent", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/endpoint", [\
+      ["npm:10.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-endpoint-npm-10.1.1-ac8c51d408-6b8991b278.zip/node_modules/@octokit/endpoint/",\
+        "packageDependencies": [\
+          ["@octokit/endpoint", "npm:10.1.1"],\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["universal-user-agent", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/graphql", [\
+      ["npm:8.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-graphql-npm-8.1.1-2d1a29021f-d8b3941e6a.zip/node_modules/@octokit/graphql/",\
+        "packageDependencies": [\
+          ["@octokit/graphql", "npm:8.1.1"],\
+          ["@octokit/request", "npm:9.1.1"],\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["universal-user-agent", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/oauth-authorization-url", [\
+      ["npm:7.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-oauth-authorization-url-npm-7.1.1-f99568b3b9-3ef5ef3fe9.zip/node_modules/@octokit/oauth-authorization-url/",\
+        "packageDependencies": [\
+          ["@octokit/oauth-authorization-url", "npm:7.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/oauth-methods", [\
+      ["npm:5.1.2", {\
+        "packageLocation": "./.yarn/cache/@octokit-oauth-methods-npm-5.1.2-3dc246f8f5-8ed3a3d1ab.zip/node_modules/@octokit/oauth-methods/",\
+        "packageDependencies": [\
+          ["@octokit/oauth-methods", "npm:5.1.2"],\
+          ["@octokit/oauth-authorization-url", "npm:7.1.1"],\
+          ["@octokit/request", "npm:9.1.1"],\
+          ["@octokit/request-error", "npm:6.1.1"],\
+          ["@octokit/types", "npm:13.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/openapi-types", [\
+      ["npm:22.2.0", {\
+        "packageLocation": "./.yarn/cache/@octokit-openapi-types-npm-22.2.0-ce9f704019-0471b0c789.zip/node_modules/@octokit/openapi-types/",\
+        "packageDependencies": [\
+          ["@octokit/openapi-types", "npm:22.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/request", [\
+      ["npm:9.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-request-npm-9.1.1-2763b16395-aef47d8575.zip/node_modules/@octokit/request/",\
+        "packageDependencies": [\
+          ["@octokit/request", "npm:9.1.1"],\
+          ["@octokit/endpoint", "npm:10.1.1"],\
+          ["@octokit/request-error", "npm:6.1.1"],\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["universal-user-agent", "npm:7.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/request-error", [\
+      ["npm:6.1.1", {\
+        "packageLocation": "./.yarn/cache/@octokit-request-error-npm-6.1.1-16d75cf50a-cae7bc4078.zip/node_modules/@octokit/request-error/",\
+        "packageDependencies": [\
+          ["@octokit/request-error", "npm:6.1.1"],\
+          ["@octokit/types", "npm:13.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@octokit/types", [\
+      ["npm:13.5.0", {\
+        "packageLocation": "./.yarn/cache/@octokit-types-npm-13.5.0-9d89476548-d2aeebc1d8.zip/node_modules/@octokit/types/",\
+        "packageDependencies": [\
+          ["@octokit/types", "npm:13.5.0"],\
+          ["@octokit/openapi-types", "npm:22.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20571,6 +20721,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["unique-slug", "npm:4.0.0"],\
           ["imurmurhash", "npm:0.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["universal-user-agent", [\
+      ["npm:7.0.2", {\
+        "packageLocation": "./.yarn/cache/universal-user-agent-npm-7.0.2-38e50a3e53-3f02cb6de0.zip/node_modules/universal-user-agent/",\
+        "packageDependencies": [\
+          ["universal-user-agent", "npm:7.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
