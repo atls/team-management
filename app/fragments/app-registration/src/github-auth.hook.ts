@@ -1,18 +1,17 @@
 // @ts-ignore:next-line
-import { useRouter }        from 'next/navigation'
+import { useRouter }   from 'next/navigation'
 
-import { GH_AUTH_BASE_URL } from './registration.constants.js'
+import { GH_AUTH_URL } from './registration.constants.js'
 
 export const githubAuthRedirectHook = (router: typeof useRouter) => {
-  let gitHubAuthUrl = new URL('', GH_AUTH_BASE_URL)
-  let currentUrl = new URL(window.location.href)
+  const CURRENT_URL = new URL(window.location.href)
 
-  const NEXT_PUBLIC_GH_CLIENT_ID = process.env.NEXT_PUBLIC_GH_CLIENT_ID
+  const GH_CLIENT_ID = process.env.NEXT_PUBLIC_GH_CLIENT_ID
 
-  if (!NEXT_PUBLIC_GH_CLIENT_ID) throw new Error('need github cliend id')
-  gitHubAuthUrl.searchParams.set('client_id', NEXT_PUBLIC_GH_CLIENT_ID)
+  if (!GH_CLIENT_ID) throw new Error('need github cliend id')
+  GH_AUTH_URL.searchParams.set('client_id', GH_CLIENT_ID)
 
-  gitHubAuthUrl.searchParams.set('redirect_uri', `${currentUrl.origin}/registration/getcode`)
+  GH_AUTH_URL.searchParams.set('redirect_uri', `${CURRENT_URL.origin}/registration/getcode`)
 
-  router.replace(gitHubAuthUrl.href)
+  router.replace(GH_AUTH_URL.href)
 }
