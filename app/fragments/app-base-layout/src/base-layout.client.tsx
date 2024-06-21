@@ -17,12 +17,16 @@ import { EMAIL }             from './base-layout.constants.js'
 import { NAME }              from './base-layout.constants.js'
 import { BaseLayoutProps }   from './base-layout.interfaces.js'
 
-export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({ children }) => {
+export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
+  children,
+  ...baseLayoutData
+}) => {
   const theme: any = useTheme()
+  const { name, avatarUrl, email } = baseLayoutData
 
   return (
     <Row backgroundColor={theme.colors.baseLayout.background}>
-      <Sidebar name={NAME} email={EMAIL} src={AVATAR} />
+      <Sidebar name={name} email={email} src={avatarUrl} />
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
         <Column

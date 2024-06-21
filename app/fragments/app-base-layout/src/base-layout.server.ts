@@ -5,6 +5,7 @@ import { cookies } from 'next/headers'
 export const BaseLayoutServer = async () => {
   const token = cookies().get('token').value
   // TODO redirect to registration if token not exist
+  // TODO middleware
 
   const graphqlWithAuth = graphql.defaults({
     headers: {
@@ -22,5 +23,6 @@ export const BaseLayoutServer = async () => {
     }
   `)
 
-  console.log(response)
+  const { viewer } = response
+  return viewer
 }

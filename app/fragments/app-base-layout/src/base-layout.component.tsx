@@ -3,5 +3,5 @@ import { BaseLayoutServer } from './base-layout.server.js'
 
 export const BaseLayout = async ({ children }) => {
   const baseLayoutData = await BaseLayoutServer()
-  return <BaseLayoutClient>{children}</BaseLayoutClient>
+  return <BaseLayoutClient {...baseLayoutData}>{children}</BaseLayoutClient>
 }
