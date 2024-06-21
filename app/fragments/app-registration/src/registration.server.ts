@@ -10,24 +10,22 @@ export async function RegistrationServerGet(request: Request) {
 
   const code = searchParams.get('code')
 
-  let token: string
-
-  if (code) {
-    const auth = createOAuthUserAuth({
-      clientId: process.env.NEXT_PUBLIC_GH_CLIENT_ID,
-      clientSecret: process.env.NEXT_PUBLIC_GH_CLIENT_SECRET,
-      code,
-    })
-
-    const authResult = await auth()
-    token = authResult.token
-  } else {
-    throw new Error('auth error')
+  if (!code) {
+    throw new Error('auth error; code not recived from github')
   }
 
-  if (token) cookies().set('token', token)
-  // TODO locales
-  else throw new Error('auth error')
+  // env checks on root layout
+  const auth = createOAuthUserAuth({
+    clientId: process.env.NEXT_PUBLIC_GH_CLIENT_ID as string,
+    clientSecret: process.env.NEXT_PUBLIC_GH_CLIENT_SECRET as string,
+    code,
+  })
+
+  const { token } = await auth()
+  if (!token) {
+    throw new Error('auth error; token not recived from octokit auth func')
+  }
+  cookies().set('token', token)
 
   const redirectUrl = new URL(request.url)
   return redirect(redirectUrl.origin)
