@@ -9,7 +9,6 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/main-logo": "workspace:*",
-    "@globals/data": "workspace:*",
     "@ui/background": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
@@ -19,12 +18,14 @@
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
+    "@octokit/auth-oauth-user": "5.1.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "18.3.0",
     "react-intl": "6.6.8"
   },
   "peerDependencies": {
     "@emotion/react": "*",
+    "@octokit/auth-oauth-user": "*",
     "react": "*",
     "react-dom": "*"
   }
