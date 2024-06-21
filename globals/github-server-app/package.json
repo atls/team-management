@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/privates": "workspace:*"
+    "@globals/utils": "workspace:*"
   },
   "devDependencies": {
     "@octokit/app": "15.1.0"
