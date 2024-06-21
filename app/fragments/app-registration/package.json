@@ -18,14 +18,14 @@
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@octokit/auth-oauth-user": "5.1.1",
+    "@octokit/auth-app": "7.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "18.3.0",
     "react-intl": "6.6.8"
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@octokit/auth-oauth-user": "*",
+    "@octokit/auth-app": "*",
     "react": "*",
     "react-dom": "*"
   }

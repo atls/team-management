@@ -6,11 +6,11 @@ export const BaseLayoutServer = async () => {
   const token = cookies().get('token').value
   // TODO redirect to registration if token not exist
 
-  const graphqlWithAuth = graphql.defaults({
-    headers: {
-      authorization: `token ${token}`,
-    },
-  })
+  // const graphqlWithAuth = graphql.defaults({
+  //   headers: {
+  //     authorization: `token ${token}`,
+  //   },
+  // })
 
   //   const response = await graphqlWithAuth(`
   //   {
@@ -27,11 +27,11 @@ export const BaseLayoutServer = async () => {
   // `)
 
   // TODO query in query
-  const response = await graphqlWithAuth(`
-	  {
-	    viewer { login, name, email, avatarUrl }
-	  }
-	`)
+  //   const response = await graphqlWithAuth(`
+  //   {
+  //     viewer { login, name, email, avatarUrl }
+  //   }
+  // `)
 
-  console.log(response)
+  // console.log(response)
 }
