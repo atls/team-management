@@ -9,6 +9,7 @@ import messages          from '../../locales/ru.json'
 
 const RootLayout = ({ children }) => {
   if (!process.env.NEXT_PUBLIC_GH_CLIENT_ID) throw new Error('need github cliend id')
+  if (!process.env.NEXT_PUBLIC_GH_CLIENT_SECRET) throw new Error('need github cliend secret')
 
   return (
     <html>
