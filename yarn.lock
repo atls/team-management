@@ -483,7 +483,6 @@ __metadata:
   dependencies:
     "@app/main-logo": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@octokit/auth-app": "npm:7.1.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/background": "workspace:*"
@@ -495,7 +494,6 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@octokit/auth-app": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -511,9 +509,10 @@ __metadata:
     "@app/loading": "workspace:*"
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
+    "@app/root-layout": "workspace:*"
     "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@octokit/app": "npm:15.1.0"
+    "@endpoints/github-auth-cookie": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -524,6 +523,27 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
     typescript: "npm:5.2.2"
+  languageName: unknown
+  linkType: soft
+
+"@app/root-layout@workspace:*, @app/root-layout@workspace:app/fragments/app-root-layout":
+  version: 0.0.0-use.local
+  resolution: "@app/root-layout@workspace:app/fragments/app-root-layout"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@github-server-app/utils": "workspace:*"
+    "@globals/locales": "workspace:*"
+    "@globals/utils": "workspace:*"
+    "@octokit/app": "npm:15.1.0"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/theme": "workspace:*"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -1746,6 +1766,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@endpoints/github-auth-cookie@workspace:*, @endpoints/github-auth-cookie@workspace:endpoints/github-auth-cookie":
+  version: 0.0.0-use.local
+  resolution: "@endpoints/github-auth-cookie@workspace:endpoints/github-auth-cookie"
+  dependencies:
+    "@globals/utils": "workspace:*"
+    "@octokit/auth-app": "npm:7.1.0"
+  peerDependencies:
+    "@octokit/auth-app": "*"
+  languageName: unknown
+  linkType: soft
+
 "@eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.4.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -1892,6 +1923,40 @@ __metadata:
   checksum: 10/1d4e60cfb3edecb51a5f8dd2c2b1c784c1a9bfcbc1b6240323d8009e5f375e5c526c9eb19149b42e0e50f6a473e9709378071658ed25a62dc3923dd7fc6a2843
   languageName: node
   linkType: hard
+
+"@github-server-app/utils@workspace:*, @github-server-app/utils@workspace:globals/github-server-app":
+  version: 0.0.0-use.local
+  resolution: "@github-server-app/utils@workspace:globals/github-server-app"
+  dependencies:
+    "@globals/privates": "workspace:*"
+    "@octokit/app": "npm:15.1.0"
+  peerDependencies:
+    "@octokit/app": "*"
+  languageName: unknown
+  linkType: soft
+
+"@globals/locales@workspace:*, @globals/locales@workspace:globals/locales":
+  version: 0.0.0-use.local
+  resolution: "@globals/locales@workspace:globals/locales"
+  languageName: unknown
+  linkType: soft
+
+"@globals/privates@workspace:*, @globals/privates@workspace:globals/privates":
+  version: 0.0.0-use.local
+  resolution: "@globals/privates@workspace:globals/privates"
+  languageName: unknown
+  linkType: soft
+
+"@globals/utils@workspace:*, @globals/utils@workspace:globals/utils":
+  version: 0.0.0-use.local
+  resolution: "@globals/utils@workspace:globals/utils"
+  dependencies:
+    "@globals/privates": "workspace:*"
+    "@octokit/auth-app": "npm:7.1.0"
+  peerDependencies:
+    "@octokit/auth-app": "*"
+  languageName: unknown
+  linkType: soft
 
 "@graphql-typed-document-node/core@npm:^3.1.1":
   version: 3.2.0
