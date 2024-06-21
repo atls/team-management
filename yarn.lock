@@ -289,7 +289,6 @@ __metadata:
     "@app/users-title": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
-    "@globals/data": "workspace:*"
     "@octokit/graphql": "npm:8.1.1"
     "@ui/layout": "workspace:*"
     "@ui/sidebar": "workspace:*"
@@ -484,7 +483,7 @@ __metadata:
   dependencies:
     "@app/main-logo": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@globals/data": "workspace:*"
+    "@octokit/auth-oauth-user": "npm:5.1.1"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/background": "workspace:*"
@@ -496,6 +495,7 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
+    "@octokit/auth-oauth-user": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1891,16 +1891,6 @@ __metadata:
   checksum: 10/1d4e60cfb3edecb51a5f8dd2c2b1c784c1a9bfcbc1b6240323d8009e5f375e5c526c9eb19149b42e0e50f6a473e9709378071658ed25a62dc3923dd7fc6a2843
   languageName: node
   linkType: hard
-
-"@globals/data@workspace:*, @globals/data@workspace:globals/data":
-  version: 0.0.0-use.local
-  resolution: "@globals/data@workspace:globals/data"
-  dependencies:
-    "@octokit/auth-oauth-user": "npm:5.1.1"
-  peerDependencies:
-    "@octokit/auth-oauth-user": "*"
-  languageName: unknown
-  linkType: soft
 
 "@graphql-typed-document-node/core@npm:^3.1.1":
   version: 3.2.0
