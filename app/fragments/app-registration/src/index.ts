@@ -1,2 +1,1 @@
-export * from './registration.client.js'
-export * from './registration.server.js'
+export * from './registration.component.js'
