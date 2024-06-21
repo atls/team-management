@@ -6,32 +6,21 @@ export const BaseLayoutServer = async () => {
   const token = cookies().get('token').value
   // TODO redirect to registration if token not exist
 
-  // const graphqlWithAuth = graphql.defaults({
-  //   headers: {
-  //     authorization: `token ${token}`,
-  //   },
-  // })
-
-  //   const response = await graphqlWithAuth(`
-  //   {
-  //     repository(owner: "octokit", name: "graphql.js") {
-  //       issues(last: 3) {
-  //         edges {
-  //           node {
-  //             title
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const graphqlWithAuth = graphql.defaults({
+    headers: {
+      authorization: `token ${token}`,
+    },
+  })
 
   // TODO query in query
-  //   const response = await graphqlWithAuth(`
-  //   {
-  //     viewer { login, name, email, avatarUrl }
-  //   }
-  // `)
+  // не понимаю почему для того, чтобы  увидел мой Email, нужно добавлять его в профиль.
+  // oAuth app вообще не возвращал мне Email
 
-  // console.log(response)
+  const response = await graphqlWithAuth(`
+    {
+      viewer { login, name, avatarUrl, email }
+    }
+  `)
+
+  console.log(response)
 }

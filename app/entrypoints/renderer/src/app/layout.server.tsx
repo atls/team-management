@@ -29,7 +29,7 @@ export const RootLayoutServer = async () => {
   const { data } = await app.octokit.request('/app')
   console.log('authenticated as %s', data.name)
 
-  for await (const { installation } of app.eachInstallation.iterator()) {
-    console.log(installation)
-  }
+  // for await (const { installation } of app.eachInstallation.iterator()) {
+  //   console.log(installation)
+  // }
 }
