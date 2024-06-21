@@ -1,0 +1,19 @@
+{
+  "name": "@github-server-app/utils",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@globals/privates": "workspace:*"
+  },
+  "devDependencies": {
+    "@octokit/app": "15.1.0"
+  },
+  "peerDependencies": {
+    "@octokit/app": "*"
+  }
+}
