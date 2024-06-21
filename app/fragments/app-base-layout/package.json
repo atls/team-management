@@ -11,7 +11,6 @@
   "dependencies": {
     "@app/theme-selector": "workspace:*",
     "@app/users-title": "workspace:*",
-    "@globals/data": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/sidebar": "workspace:*"
   },
