@@ -4,7 +4,9 @@
   "license": "BSD 3-Clause",
   "workspaces": [
     "app/**/*",
-    "ui/**/*"
+    "ui/**/*",
+    "globals/**/*",
+    "endpoints/**/*"
   ],
   "devDependencies": {
     "@atls/code-service": "0.1.4",

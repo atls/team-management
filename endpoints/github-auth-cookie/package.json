@@ -1,0 +1,19 @@
+{
+  "name": "@endpoints/github-auth-cookie",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@globals/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@octokit/auth-app": "7.1.0"
+  },
+  "peerDependencies": {
+    "@octokit/auth-app": "*"
+  }
+}
