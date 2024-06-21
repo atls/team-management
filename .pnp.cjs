@@ -1550,6 +1550,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@github-server-app/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app"],\
           ["@globals/locales", "workspace:globals/locales"],\
+          ["@globals/privates", "workspace:globals/privates"],\
           ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
           ["@octokit/app", "npm:15.1.0"],\
           ["@types/emotion__react", null],\
@@ -1580,6 +1581,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
           ["@github-server-app/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app"],\
           ["@globals/locales", "workspace:globals/locales"],\
+          ["@globals/privates", "workspace:globals/privates"],\
           ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
           ["@octokit/app", "npm:15.1.0"],\
           ["@types/react", "npm:18.3.3"],\

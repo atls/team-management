@@ -533,6 +533,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@github-server-app/utils": "workspace:*"
     "@globals/locales": "workspace:*"
+    "@globals/privates": "workspace:*"
     "@globals/utils": "workspace:*"
     "@octokit/app": "npm:15.1.0"
     "@types/react": "npm:^18.3.3"
