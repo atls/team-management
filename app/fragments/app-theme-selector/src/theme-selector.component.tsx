@@ -31,7 +31,11 @@ const ThemeSelector: React.FC = () => {
         variant='whiteBackgroundButton'
         onClick={handleNotificationsModal}
       >
-        <NotificationsIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
+        <NotificationsIcon
+          color={theme.colors.text.primary}
+          width={theme.spaces.semiRegular}
+          height={theme.spaces.semiRegular}
+        />
       </Button>
       <ThemeSwitch />
 

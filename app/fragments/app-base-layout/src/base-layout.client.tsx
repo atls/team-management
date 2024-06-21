@@ -21,7 +21,7 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({ child
   const theme: any = useTheme()
 
   return (
-    <Row backgroundColor={theme.backgrounds.main}>
+    <Row backgroundColor={theme.colors.baseLayout.background}>
       <Sidebar name={NAME} email={EMAIL} src={AVATAR} />
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
