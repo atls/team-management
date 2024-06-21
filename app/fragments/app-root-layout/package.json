@@ -1,0 +1,29 @@
+{
+  "name": "@app/root-layout",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@github-server-app/utils": "workspace:*",
+    "@globals/locales": "workspace:*",
+    "@globals/utils": "workspace:*",
+    "@ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@octokit/app": "15.1.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react-intl": "6.6.8"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-intl": "*"
+  }
+}
