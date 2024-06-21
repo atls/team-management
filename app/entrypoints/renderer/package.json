@@ -20,9 +20,10 @@
     "@app/loading": "workspace:*",
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
+    "@app/root-layout": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
-    "@octokit/app": "15.1.0",
+    "@endpoints/github-auth-cookie": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
@@ -30,7 +31,6 @@
     "next": "14.1.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-intl": "6.6.8",
     "typescript": "5.2.2"
   }
 }
