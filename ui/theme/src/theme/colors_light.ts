@@ -19,6 +19,9 @@ const { RED_400 } = colorsConstants
 const { BLACK_50 } = colorsConstants
 
 const colors = {
+  sidebar: {
+    email: GRAY_800,
+  },
   divider: GRAY_300,
   text: {
     primary: GRAY_1600,

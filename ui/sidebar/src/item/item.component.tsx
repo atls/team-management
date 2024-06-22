@@ -1,9 +1,26 @@
-import styled                   from '@emotion/styled'
+import styled                          from '@emotion/styled'
 
-import { ItemElement }          from './item.element.js'
-import { baseItemStyles }       from './item.styles.js'
-import { ifActiveItemModifier } from './item.styles.js'
+import Link                            from 'next/link'
+import React                           from 'react'
+import { FC }                          from 'react'
 
-const Item = styled(ItemElement)(baseItemStyles, ifActiveItemModifier())
+import { Row }                         from '@ui/layout'
 
-export { Item }
+import { baseSidebarItemStyles }       from './item.styles.js'
+import { shapeSidebarItemStyles }      from './item.styles.js'
+import { appearanceSidebarItemStyles } from './item.styles.js'
+
+const SidebarItemWrapper = styled(Link)(
+  baseSidebarItemStyles,
+  shapeSidebarItemStyles,
+  appearanceSidebarItemStyles
+)
+
+// TODO interface
+export const SidebarItem: FC<any> = ({ title, href }) => {
+  return (
+    <SidebarItemWrapper href={href}>
+      <Row>{title}</Row>
+    </SidebarItemWrapper>
+  )
+}
