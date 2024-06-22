@@ -110,12 +110,12 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:endpoints/github-auth-cookie"\
     },\
     {\
-      "name": "@globals/data",\
-      "reference": "workspace:globals/data"\
+      "name": "@endpoints/logout",\
+      "reference": "workspace:endpoints/logout"\
     },\
     {\
-      "name": "@github-server-app/utils",\
-      "reference": "workspace:globals/github-server-app"\
+      "name": "@globals/data",\
+      "reference": "workspace:globals/data"\
     },\
     {\
       "name": "@globals/locales",\
@@ -245,7 +245,7 @@ const RAW_RUNTIME_STATE =
     ["@app/users-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page", "workspace:app/pages/users-page"]],\
     ["@app/users-title", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:app/fragments/app-users-title", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:app/fragments/app-users-title", "workspace:app/fragments/app-users-title"]],\
     ["@endpoints/github-auth-cookie", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie", "workspace:endpoints/github-auth-cookie"]],\
-    ["@github-server-app/utils", ["virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app", "workspace:globals/github-server-app"]],\
+    ["@endpoints/logout", ["workspace:endpoints/logout"]],\
     ["@globals/data", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data", "workspace:globals/data"]],\
     ["@globals/locales", ["workspace:globals/locales"]],\
     ["@globals/utils", ["virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils", "virtual:cda405ffd8c2ef23ff875fa6a609a5eb75e41fb900ae28003718fa964857401931e045ed5467257f0b85d5ed2734d2483c32b5afc0188e191cc99d7acb38e9b3#workspace:globals/utils", "workspace:globals/utils"]],\
@@ -1526,6 +1526,7 @@ const RAW_RUNTIME_STATE =
           ["@app/users-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@endpoints/github-auth-cookie", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie"],\
+          ["@endpoints/logout", "workspace:endpoints/logout"],\
           ["@types/node", "npm:20.12.12"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1546,7 +1547,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/root-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-root-layout"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
-          ["@github-server-app/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app"],\
           ["@globals/locales", "workspace:globals/locales"],\
           ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
           ["@octokit/app", "npm:15.1.0"],\
@@ -1576,7 +1576,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/root-layout", "workspace:app/fragments/app-root-layout"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
-          ["@github-server-app/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app"],\
           ["@globals/locales", "workspace:globals/locales"],\
           ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
           ["@octokit/app", "npm:15.1.0"],\
@@ -6462,6 +6461,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@endpoints/logout", [\
+      ["workspace:endpoints/logout", {\
+        "packageLocation": "./endpoints/logout/",\
+        "packageDependencies": [\
+          ["@endpoints/logout", "workspace:endpoints/logout"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@eslint-community/eslint-utils", [\
       ["npm:4.4.0", {\
         "packageLocation": "./.yarn/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
@@ -6676,31 +6684,6 @@ const RAW_RUNTIME_STATE =
           ["tslib", "npm:2.6.3"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@github-server-app/utils", [\
-      ["virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app", {\
-        "packageLocation": "./.yarn/__virtual__/@github-server-app-utils-virtual-10329706e1/1/globals/github-server-app/",\
-        "packageDependencies": [\
-          ["@github-server-app/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/github-server-app"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
-          ["@octokit/app", "npm:15.1.0"],\
-          ["@types/octokit__app", null]\
-        ],\
-        "packagePeers": [\
-          "@octokit/app",\
-          "@types/octokit__app"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["workspace:globals/github-server-app", {\
-        "packageLocation": "./globals/github-server-app/",\
-        "packageDependencies": [\
-          ["@github-server-app/utils", "workspace:globals/github-server-app"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
-          ["@octokit/app", "npm:15.1.0"]\
-        ],\
-        "linkType": "SOFT"\
       }]\
     ]],\
     ["@globals/data", [\

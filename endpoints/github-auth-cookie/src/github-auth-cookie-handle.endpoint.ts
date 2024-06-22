@@ -1,6 +1,4 @@
-// @ts-ignore:next-line
 import { cookies }            from 'next/headers'
-// @ts-ignore:next-line
 import { redirect }           from 'next/navigation'
 
 import { getGithubAuthToken } from '@globals/utils'

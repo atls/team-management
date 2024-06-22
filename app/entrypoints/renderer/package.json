@@ -24,6 +24,7 @@
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@endpoints/github-auth-cookie": "workspace:*",
+    "@endpoints/logout": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
