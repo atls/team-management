@@ -11,20 +11,19 @@
   "dependencies": {
     "@app/theme-selector": "workspace:*",
     "@app/users-title": "workspace:*",
+    "@globals/data": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/sidebar": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
-    "@octokit/graphql": "8.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "@octokit/graphql": "*",
     "react": "*",
     "react-dom": "*"
   }
