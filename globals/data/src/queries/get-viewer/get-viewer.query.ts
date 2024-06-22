@@ -1,17 +1,16 @@
-import { gql } from '../../__generated__/index.ts'
+// https://the-guild.dev/graphql/codegen/docs/config-reference/documents-field
+// import React from 'react'
+// import { gql } from 'graphql-tag'
 
-// gql возвращает пустой объект, не могу понять почему
-
-// const GET_VIEWER = gql(`
-//     query GetViewer {
-//       viewer { login, name, avatarUrl, email }
-//     }
-// `)
-
-const GET_VIEWER = `
-    query GetViewer {
-      viewer { login, name, avatarUrl, email }
+const GET_VIEWER = /* GraphQL */ `
+  query GetViewer {
+    viewer {
+      login
+      name
+      avatarUrl
+      email
     }
+  }
 `
 
 export { GET_VIEWER }
