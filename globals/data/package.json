@@ -1,0 +1,22 @@
+{
+  "name": "@globals/data",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "scripts": {
+    "generate": "graphql-codegen --config ./src/codegen.ts"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.2",
+    "@graphql-codegen/client-preset": "4.2.4",
+    "@graphql-codegen/typescript": "4.0.6",
+    "@graphql-codegen/typescript-resolvers": "4.0.6",
+    "@graphql-typed-document-node/core": "3.2.0",
+    "@octokit/graphql": "8.1.1",
+    "graphql": "15.8.0"
+  },
+  "peerDependencies": {
+    "@octokit/graphql": "*",
+    "graphql": "*",
+    "react": "*"
+  }
+}
