@@ -153,9 +153,9 @@ const Sidebar: React.FC<SidebarProps> = ({ src, name, email }) => {
                 <Text fontSize='small.default'>{email}</Text>
               </Column>
               <Box>
-							<Link href='/logout' >
-                <LogOutIcon height={theme.spaces.large} width={theme.spaces.large} />
-							</Link>
+                <Link href='/logout'>
+                  <LogOutIcon height={theme.spaces.large} width={theme.spaces.large} />
+                </Link>
               </Box>
             </Row>
           </Column>

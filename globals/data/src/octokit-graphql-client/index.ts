@@ -1,1 +1,1 @@
-export * from './octokit-graphql-client.js'
+export * from './octokit-graphql-client/index.js'

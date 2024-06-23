@@ -290,6 +290,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@globals/data": "workspace:*"
+    "@octokit/graphql": "npm:8.1.1"
     "@ui/layout": "workspace:*"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
@@ -297,6 +298,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@octokit/graphql": "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -2662,7 +2664,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/apollo-engine-loader@npm:^8.0.0":
+"@graphql-tools/apollo-engine-loader@npm:8.0.1, @graphql-tools/apollo-engine-loader@npm:^8.0.0":
   version: 8.0.1
   resolution: "@graphql-tools/apollo-engine-loader@npm:8.0.1"
   dependencies:
@@ -12860,6 +12862,7 @@ __metadata:
     "@atls/config-eslint": "npm:0.0.12"
     "@atls/config-jest": "npm:0.0.18"
     "@atls/prettier-plugin": "npm:0.0.8"
+    "@graphql-tools/apollo-engine-loader": "npm:8.0.1"
     "@jest/core": "npm:29.7.0"
     "@types/eslint": "npm:^8.56.10"
     "@types/jest": "npm:29.5.12"
