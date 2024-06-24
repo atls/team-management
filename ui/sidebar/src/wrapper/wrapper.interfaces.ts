@@ -1,12 +1,12 @@
 type StatesType = {
   isSidebarOpened: boolean
-  setSidebarOpened: VoidFunction
+  setSidebarOpened: (arg0: boolean) => void
   isSidebarVisible: boolean
-  setSidebarVisible: VoidFunction
+  setSidebarVisible: (arg0: boolean) => void
 }
 
 export interface WrapperProps {
-  children: JSX.Element
+  children: JSX.Element[]
   states: StatesType
 }
 

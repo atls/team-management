@@ -21,6 +21,10 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
   const theme: any = useTheme()
   const { name, avatarUrl, email } = baseLayoutData
 
+  if (!name || !avatarUrl || !email) {
+    throw new Error('not all data recived')
+  }
+
   return (
     <Row backgroundColor={theme.colors.baseLayout.background}>
       <Sidebar name={name} email={email} src={avatarUrl} />

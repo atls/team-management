@@ -1,6 +1,7 @@
 import styled                  from '@emotion/styled'
 import { useTheme }            from '@emotion/react'
 
+// @ts-ignore:next-line
 import Link                    from 'next/link'
 import React                   from 'react'
 import { FC }                  from 'react'
@@ -16,11 +17,7 @@ import { ThemeType }           from '@ui/theme'
 
 import { SidebarStateContext } from '../sidebar.context.js'
 import { ViewerProps }         from './viewer.interfaces.js'
-import { ViewerWrapperProps }  from './viewer.interfaces.js'
 import { shapeStyles }         from './viewer.styles.js'
-
-// const WrapperElement = styled(Column)(
-// )
 
 const ViewerWrapper = styled<any>(Row)(shapeStyles)
 
@@ -32,7 +29,7 @@ export const Viewer: FC<ViewerProps> = ({ name, email, avatarSrc }) => {
   return (
     <ViewerWrapper isSidebarOpened={isSidebarOpened}>
       <Link href='/'>
-        <Avatar size={40} src={avatarSrc} image={true} alt='authentificated user avatar' />
+        <Avatar size={40} src={avatarSrc} image alt='authentificated user avatar' />
       </Link>
       <Condition match={isSidebarOpened}>
         <Column maxWidth={theme.spaces.giant}>

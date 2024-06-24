@@ -2,6 +2,7 @@ import { useTheme }                 from '@emotion/react'
 
 import React                        from 'react'
 import { FC }                       from 'react'
+// @ts-ignore:next-line
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
 

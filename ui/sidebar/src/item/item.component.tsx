@@ -1,6 +1,7 @@
 import styled                          from '@emotion/styled'
 import { useTheme }                    from '@emotion/react'
 
+// @ts-ignore:next-line
 import Link                            from 'next/link'
 import React                           from 'react'
 import { FC }                          from 'react'

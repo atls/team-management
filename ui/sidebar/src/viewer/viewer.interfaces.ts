@@ -1,5 +1,3 @@
-import { Row } from '@ui/layout'
-
 export interface ViewerProps {
   name: string
   email: string
