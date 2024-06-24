@@ -1,3 +1,4 @@
+import styled                  from '@emotion/styled'
 import { useTheme }            from '@emotion/react'
 
 import React                   from 'react'
@@ -10,24 +11,20 @@ import { Box }                 from '@ui/layout'
 import { ThemeType }           from '@ui/theme'
 
 import { SidebarStateContext } from '../sidebar.context.js'
+import { PinProps }            from './pin.interfaces.js'
+import { baseStyles }          from './pin.styles.js'
+import { shapeStyles }         from './pin.styles.js'
+import { appearanceStyles }    from './pin.styles.js'
 
-// TODO open/closed
-export const Pin: FC<any> = ({ visibleHook }) => {
+const PinElement = styled(Box)(baseStyles, shapeStyles, appearanceStyles)
+
+export const Pin: FC<PinProps> = ({ visibleHook }) => {
   const theme = useTheme() as ThemeType
 
   const isSidebarOpened = useContext(SidebarStateContext)
 
   return (
-    <Box
-      zIndex={theme.spaces.s1500}
-      cursor='pointer'
-      marginRight={-16}
-      alignSelf='end'
-      backgroundColor={theme.colors.white}
-      boxShadow={theme.shadows.moorena}
-      borderRadius={theme.radii.f5}
-      onClick={visibleHook}
-    >
+    <PinElement onClick={visibleHook}>
       <Box
         width={theme.spaces.moderate}
         height={theme.spaces.moderate}
@@ -36,6 +33,6 @@ export const Pin: FC<any> = ({ visibleHook }) => {
       >
         {isSidebarOpened ? <ChevroneLeftIcon /> : <ChevroneRightIcon />}
       </Box>
-    </Box>
+    </PinElement>
   )
 }

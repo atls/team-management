@@ -14,6 +14,7 @@ import { Text }                        from '@ui/text'
 import { ThemeType }                   from '@ui/theme'
 
 import { SidebarStateContext }         from '../sidebar.context.js'
+import { SidebarItemProps }            from './item.interfaces.js'
 import { baseSidebarItemStyles }       from './item.styles.js'
 import { shapeSidebarItemStyles }      from './item.styles.js'
 import { appearanceSidebarItemStyles } from './item.styles.js'
@@ -24,8 +25,7 @@ const SidebarItemWrapper = styled(Link)(
   appearanceSidebarItemStyles
 )
 
-// TODO interface
-export const SidebarItem: FC<any> = ({ title, href, active, icon }) => {
+export const SidebarItem: FC<SidebarItemProps> = ({ title, href, active, icon }) => {
   const theme = useTheme() as ThemeType
   const [hover, hoverProps] = useHover()
 

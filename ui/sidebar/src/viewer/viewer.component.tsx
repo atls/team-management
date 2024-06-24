@@ -1,3 +1,4 @@
+import styled                  from '@emotion/styled'
 import { useTheme }            from '@emotion/react'
 
 import Link                    from 'next/link'
@@ -14,23 +15,22 @@ import { Text }                from '@ui/text'
 import { ThemeType }           from '@ui/theme'
 
 import { SidebarStateContext } from '../sidebar.context.js'
+import { ViewerProps }         from './viewer.interfaces.js'
+import { ViewerWrapperProps }  from './viewer.interfaces.js'
+import { shapeStyles }         from './viewer.styles.js'
 
-// TODO open/closed
-export const Viewer: FC<any> = ({ name, email, avatarSrc }) => {
+// const WrapperElement = styled(Column)(
+// )
+
+const ViewerWrapper = styled<any>(Row)(shapeStyles)
+
+// TODO прокинуть url на профиль GH
+export const Viewer: FC<ViewerProps> = ({ name, email, avatarSrc }) => {
   const theme = useTheme() as ThemeType
-
   const isSidebarOpened = useContext(SidebarStateContext)
 
-  // TODO прокинуть url на профиль GH
-
   return (
-    <Row
-      width={isSidebarOpened ? theme.spaces.largeSemiDecreased : 'min-content'}
-      gap={theme.spaces.semiMedium}
-      padding='0 20px'
-      justifyContent='space-between'
-      alignItems='center'
-    >
+    <ViewerWrapper isSidebarOpened={isSidebarOpened}>
       <Link href='/'>
         <Avatar size={40} src={avatarSrc} image={true} alt='authentificated user avatar' />
       </Link>
@@ -45,6 +45,6 @@ export const Viewer: FC<any> = ({ name, email, avatarSrc }) => {
           <LogOutIcon width={theme.spaces.large} height={theme.spaces.large} />
         </Link>
       </Condition>
-    </Row>
+    </ViewerWrapper>
   )
 }

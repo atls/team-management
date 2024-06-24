@@ -8,7 +8,7 @@ import { Logo }                from '@ui/logo'
 import { SidebarStateContext } from '../sidebar.context.js'
 
 // TODO interface
-export const AtlantisLogo: FC<any> = () => {
+export const AtlantisLogo: FC = () => {
   const isSidebarOpened = useContext(SidebarStateContext)
 
   return (
