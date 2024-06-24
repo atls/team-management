@@ -10,6 +10,9 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
+    "@apollo/client": "3.10.5",
+    "@globals/data": "workspace:*",
+    "graphql": "16.8.2",
     "react-intl": "6.6.8"
   },
   "devDependencies": {

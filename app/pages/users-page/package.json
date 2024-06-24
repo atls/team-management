@@ -9,11 +9,14 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/user-card": "workspace:*",
-    "@app/users-grid": "workspace:*"
+    "@app/users-grid": "workspace:*",
+    "octokit": "4.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "3.10.5",
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
+    "@globals/data": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "18.3.0",
     "@types/styled-system": "5.1.22",
@@ -22,6 +25,7 @@
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "@types/styled-system": "*",

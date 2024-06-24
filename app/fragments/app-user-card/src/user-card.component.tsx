@@ -141,7 +141,7 @@ const UserCard: FC<UserCardProps> = ({
               maxColumnWidth={theme.spaces.semiSuperExtra}
               gap={theme.spaces.zero}
             >
-              {services.map((checkbox: CheckboxInt, index) => (
+              {services?.map((checkbox: CheckboxInt, index) => (
                 <Column
                   key={checkbox.id}
                   maxWidth={theme.spaces.largeSemi}

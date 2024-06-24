@@ -25,6 +25,7 @@ export const BaseLayout: FC<PropsWithChildren<BaseLayoutProps>> = ({ children })
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
         <Column
+          width='100%'
           maxWidth={theme.spaces.extraSuperLarge}
           margin={theme.spaces.horizontalAutoMargin}
           minHeight={theme.spaces.fullVh}
