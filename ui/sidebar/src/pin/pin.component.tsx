@@ -12,13 +12,10 @@ import { ThemeType }           from '@ui/theme'
 import { SidebarStateContext } from '../sidebar.context.js'
 
 // TODO open/closed
-export const Pin: FC<any> = ({ setSidebarState }) => {
+export const Pin: FC<any> = ({ visibleHook }) => {
   const theme = useTheme() as ThemeType
 
   const isSidebarOpened = useContext(SidebarStateContext)
-  const handlePinClick = () => {
-    setSidebarState(!isSidebarOpened)
-  }
 
   return (
     <Box
@@ -29,7 +26,7 @@ export const Pin: FC<any> = ({ setSidebarState }) => {
       backgroundColor={theme.colors.white}
       boxShadow={theme.shadows.moorena}
       borderRadius={theme.radii.f5}
-      onClick={handlePinClick}
+      onClick={visibleHook}
     >
       <Box
         width={theme.spaces.moderate}

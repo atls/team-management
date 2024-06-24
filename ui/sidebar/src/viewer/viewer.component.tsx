@@ -25,6 +25,7 @@ export const Viewer: FC<any> = ({ name, email, avatarSrc }) => {
 
   return (
     <Row
+      width={isSidebarOpened ? theme.spaces.largeSemiDecreased : 'min-content'}
       gap={theme.spaces.semiMedium}
       padding='0 20px'
       justifyContent='space-between'
