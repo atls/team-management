@@ -1,1 +1,2 @@
-export * as messages from './locales/ru.json'
+import messages from './locales/ru.json'
+export { messages }

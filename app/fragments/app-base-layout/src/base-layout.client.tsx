@@ -12,9 +12,6 @@ import { Row }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Sidebar }           from '@ui/sidebar'
 
-import { AVATAR }            from './base-layout.constants.js'
-import { EMAIL }             from './base-layout.constants.js'
-import { NAME }              from './base-layout.constants.js'
 import { BaseLayoutProps }   from './base-layout.interfaces.js'
 
 export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({

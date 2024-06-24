@@ -8,6 +8,9 @@
     "globals/**/*",
     "endpoints/**/*"
   ],
+  "dependencies": {
+    "@graphql-tools/apollo-engine-loader": "8.0.1"
+  },
   "devDependencies": {
     "@atls/code-service": "0.1.4",
     "@atls/config-eslint": "0.0.12",
