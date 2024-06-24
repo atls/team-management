@@ -5,7 +5,7 @@ import React         from 'react'
 
 import { IconProps } from '../icons.interfaces.js'
 
-export const OrgamizationsIcon = React.memo((props: IconProps) => {
+export const OrganizationsIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()
   return (
     <svg

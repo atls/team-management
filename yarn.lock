@@ -5071,6 +5071,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/avatar": "workspace:*"
+    "@ui/condition": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -5079,6 +5080,7 @@ __metadata:
     "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"
     react: "npm:18.3.1"
+    react-laag: "npm:2.0.5"
     styled-system: "npm:5.1.5"
     styled-tools: "npm:1.7.2"
   peerDependencies:
@@ -5087,6 +5089,7 @@ __metadata:
     framer-motion: "*"
     react: "*"
     react-dom: "*"
+    react-laag: "*"
     styled-system: "*"
     styled-tools: "*"
   languageName: unknown
