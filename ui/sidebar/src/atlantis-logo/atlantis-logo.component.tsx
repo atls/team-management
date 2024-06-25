@@ -8,12 +8,12 @@ import { Logo }                from '@ui/logo'
 import { SidebarStateContext } from '../sidebar.context.js'
 
 // TODO interface
-export const AtlantisLogo: FC = () => {
+export const AtlantisLogo: FC = ({ activeTheme }) => {
   const isSidebarOpened = useContext(SidebarStateContext)
 
   return (
     <Box width='100%' justifyContent='center'>
-      <Logo variant={isSidebarOpened ? 'base' : 'small'} />
+      <Logo variant={isSidebarOpened ? 'base' : 'small'} activeTheme={activeTheme} />
     </Box>
   )
 }

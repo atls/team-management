@@ -11,7 +11,7 @@ export const shapeStyles: styleFn = ({ theme }) => ({
 })
 
 export const appearanceStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.sidebar.pinBackground,
   boxShadow: theme.shadows.moorena,
   borderRadius: theme.radii.f5,
 })

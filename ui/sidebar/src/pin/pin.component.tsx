@@ -23,6 +23,8 @@ export const Pin: FC<PinProps> = ({ visibleHook }) => {
 
   const isSidebarOpened = useContext(SidebarStateContext)
 
+  const ICON_COLOR = theme.colors.sidebar.iconColor
+
   return (
     <PinElement onClick={visibleHook}>
       <Box
@@ -31,7 +33,11 @@ export const Pin: FC<PinProps> = ({ visibleHook }) => {
         justifyContent='center'
         alignItems='center'
       >
-        {isSidebarOpened ? <ChevroneLeftIcon /> : <ChevroneRightIcon />}
+        {isSidebarOpened ? (
+          <ChevroneLeftIcon color={ICON_COLOR} />
+        ) : (
+          <ChevroneRightIcon color={ICON_COLOR} />
+        )}
       </Box>
     </PinElement>
   )

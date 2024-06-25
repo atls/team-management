@@ -20,7 +20,7 @@ import { Wrapper }                  from './wrapper/index.js'
 import { changeSidebarVisibleHook } from './sidebar.hooks.js'
 import { itemList }                 from './wrapper/wrapper.constants.js'
 
-export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc }) => {
+export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc, githubUrl }) => {
   const theme = useTheme() as ThemeType
   const pathname = usePathname()
 
@@ -37,7 +37,7 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc }) => {
   return (
     <SidebarStateContext.Provider value={isSidebarOpened}>
       <Wrapper states={states}>
-        <AtlantisLogo />
+        <AtlantisLogo activeTheme={theme.colors.activeTheme} />
         <Column gap={theme.spaces.miniIncreased}>
           {itemList.map((itemData) => (
             <SidebarItem {...itemData} active={pathname === itemData.href} />
@@ -45,7 +45,7 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc }) => {
         </Column>
         <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
         <SidebarDivider />
-        <Viewer name={name} email={email} avatarSrc={avatarSrc} />
+        <Viewer name={name} email={email} avatarSrc={avatarSrc} githubUrl={githubUrl} />
       </Wrapper>
     </SidebarStateContext.Provider>
   )

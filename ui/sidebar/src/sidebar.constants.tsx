@@ -4,7 +4,11 @@ import { OrganizationsIcon } from '@ui/icons'
 
 export const itemList = [
   { title: 'Users', href: '/users' },
-  { title: 'Organizations', href: '/organizations', icon: <OrganizationsIcon /> },
+  {
+    title: 'Organizations',
+    href: '/organizations',
+    icon: <OrganizationsIcon />,
+  },
 ]
 
 export const motionVariants = {

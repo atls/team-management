@@ -22,13 +22,13 @@ import { shapeStyles }         from './viewer.styles.js'
 const ViewerWrapper = styled<any>(Row)(shapeStyles)
 
 // TODO прокинуть url на профиль GH
-export const Viewer: FC<ViewerProps> = ({ name, email, avatarSrc }) => {
+export const Viewer: FC<ViewerProps> = ({ name, email, avatarSrc, githubUrl }) => {
   const theme = useTheme() as ThemeType
   const isSidebarOpened = useContext(SidebarStateContext)
 
   return (
     <ViewerWrapper isSidebarOpened={isSidebarOpened}>
-      <Link href='/'>
+      <Link href={githubUrl} target='_blank'>
         <Avatar size={40} src={avatarSrc} image alt='authentificated user avatar' />
       </Link>
       <Condition match={isSidebarOpened}>

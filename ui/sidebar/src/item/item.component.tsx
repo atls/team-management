@@ -32,6 +32,8 @@ export const SidebarItem: FC<SidebarItemProps> = ({ title, href, active, icon })
 
   const isSidebarOpened = useContext(SidebarStateContext)
 
+  const ICON_COLOR = theme.colors.sidebar.iconColor
+
   return (
     <SidebarItemWrapper
       isSidebarOpened={isSidebarOpened}
@@ -46,7 +48,11 @@ export const SidebarItem: FC<SidebarItemProps> = ({ title, href, active, icon })
         justifyContent={isSidebarOpened ? 'flex-start' : 'center'}
       >
         {icon || (
-          <DashboardIcon width={theme.spaces.semiRegular} height={theme.spaces.semiRegular} />
+          <DashboardIcon
+            width={theme.spaces.semiRegular}
+            height={theme.spaces.semiRegular}
+            color={ICON_COLOR}
+          />
         )}
         <Condition match={isSidebarOpened}>
           <Text fontSize='normal.semiDefault'>{title}</Text>

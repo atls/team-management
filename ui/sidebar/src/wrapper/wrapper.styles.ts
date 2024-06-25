@@ -26,5 +26,5 @@ const openedShapeStyles: styleFn = ({ theme }) => ({
 export const shapeSidebarStyles = ifProp('isSidebarOpened', openedShapeStyles, closedShapeStyles)
 
 export const appearanceSidebarStyles: styleFn = ({ theme }) => ({
-  backgroundColor: theme.colors.white,
+  backgroundColor: theme.colors.sidebar.background,
 })

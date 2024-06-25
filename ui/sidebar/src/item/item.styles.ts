@@ -27,24 +27,24 @@ const baseAppearanceStyles: styleFn = ({ theme }) => ({
   borderRightColor: 'transparent',
   borderRightWidth: theme.spaces.semiTiny,
   borderLeftStyle: 'solid',
-  borderLeftColor: theme.colors.white,
+  borderLeftColor: theme.colors.sidebar.background,
   borderLeftWidth: theme.spaces.semiTiny,
 })
 
 const defaultAppearanceStyles: styleFn = ({ theme }) => ({
   ...baseAppearanceStyles({ theme }),
-  borderLeftColor: theme.colors.sidebar.sidebarItem.border.base,
+  borderLeftColor: theme.colors.sidebar.background,
 })
 
 const hoverAppearanceStyles: styleFn = ({ theme }) => ({
   ...baseAppearanceStyles({ theme }),
-  borderLeftColor: theme.colors.sidebar.sidebarItem.border.active,
+  borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,
 })
 
 const activeAppearanceStyles: styleFn = ({ theme }) => ({
   ...baseAppearanceStyles({ theme }),
-  backgroundColor: theme.colors.sidebar.sidebarItem.background,
-  borderLeftColor: theme.colors.sidebar.sidebarItem.border.active,
+  backgroundColor: theme.colors.sidebar.sidebarItem.backgroundSelected,
+  borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,
 })
 
 export const appearanceSidebarItemStyles = ifProp(
