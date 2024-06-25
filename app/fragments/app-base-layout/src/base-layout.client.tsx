@@ -19,7 +19,8 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
   ...baseLayoutData
 }) => {
   const theme: any = useTheme()
-  const { name, avatarUrl, email, url: githubUrl } = baseLayoutData
+  const { name, avatarUrl, email, url } = baseLayoutData
+  const githubUrl = url
 
   if (!name || !avatarUrl || !email || !githubUrl) {
     throw new Error('not all data recived')

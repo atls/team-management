@@ -31406,13 +31406,7 @@ export type GetViewerQueryVariables = Exact<{ [key: string]: never }>
 
 export type GetViewerQuery = {
   __typename?: 'Query'
-  viewer: {
-    __typename?: 'User'
-    login: string
-    name?: string | null
-    avatarUrl: any
-    email: string
-  }
+  viewer: { __typename?: 'User'; name?: string | null; avatarUrl: any; email: string; url: any }
 }
 
 export const GetViewerDocument = {
@@ -31431,10 +31425,10 @@ export const GetViewerDocument = {
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
-                { kind: 'Field', name: { kind: 'Name', value: 'login' } },
                 { kind: 'Field', name: { kind: 'Name', value: 'name' } },
                 { kind: 'Field', name: { kind: 'Name', value: 'avatarUrl' } },
                 { kind: 'Field', name: { kind: 'Name', value: 'email' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'url' } },
               ],
             },
           },

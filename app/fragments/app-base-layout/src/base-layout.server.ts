@@ -15,9 +15,6 @@ export const BaseLayoutServer = async () => {
     const { viewer } = (await client(GET_VIEWER)) as GraphQlQueryResponseData
     return viewer
   } catch (e: any) {
-    // есть тип GraphqlResponseError
-    // он не подходит, тк мне прилетает ошибка запроса:
-    // bad creditentials. как её обрабатывать не понимаю
     if (e.status === 401) {
       redirect('/registration')
     }
