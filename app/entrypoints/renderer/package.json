@@ -10,11 +10,12 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
-    "@apollo/client": "3.10.5",
     "graphql": "16.8.2",
     "react-intl": "6.6.8"
   },
   "devDependencies": {
+    "@api/github-auth-cookie": "workspace:*",
+    "@api/logout": "workspace:*",
     "@app/base-layout": "workspace:*",
     "@app/index-page": "workspace:*",
     "@app/loading": "workspace:*",
@@ -23,8 +24,6 @@
     "@app/root-layout": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
-    "@endpoints/github-auth-cookie": "workspace:*",
-    "@endpoints/logout": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",

@@ -2,7 +2,6 @@ import { CodegenConfig } from '@graphql-codegen/cli'
 
 const config: CodegenConfig = {
   schema: 'https://docs.github.com/public/fpt/schema.docs.graphql',
-  // this assumes that all your source files are in a top-level `src/` directory - you might need to adjust this to your file structure
   documents: ['src/**/*.{ts, js}'],
   generates: {
     './src/__generated__/': {
@@ -13,7 +12,6 @@ const config: CodegenConfig = {
       },
     },
   },
-  // ignoreNoDocuments: true,
 }
 
 export default config

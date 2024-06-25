@@ -4,9 +4,8 @@ import React             from 'react'
 import { IntlProvider }  from 'react-intl'
 
 import { ThemeProvider } from '@ui/theme'
-import { messages }      from '@globals/locales'
 
-export const RootLayoutClient = ({ children }) => (
+export const RootLayoutClient = ({ children, messages }) => (
   <html>
     <body>
       <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>

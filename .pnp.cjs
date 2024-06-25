@@ -14,6 +14,14 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
+      "name": "@api/github-auth-cookie",\
+      "reference": "workspace:api/github-auth-cookie"\
+    },\
+    {\
+      "name": "@api/logout",\
+      "reference": "workspace:api/logout"\
+    },\
+    {\
       "name": "@app/renderer-entrypoint",\
       "reference": "workspace:app/entrypoints/renderer"\
     },\
@@ -106,24 +114,12 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:app/pages/users-page"\
     },\
     {\
-      "name": "@endpoints/github-auth-cookie",\
-      "reference": "workspace:endpoints/github-auth-cookie"\
-    },\
-    {\
-      "name": "@endpoints/logout",\
-      "reference": "workspace:endpoints/logout"\
-    },\
-    {\
       "name": "@globals/data",\
       "reference": "workspace:globals/data"\
     },\
     {\
-      "name": "@globals/locales",\
-      "reference": "workspace:globals/locales"\
-    },\
-    {\
-      "name": "@globals/utils",\
-      "reference": "workspace:globals/utils"\
+      "name": "@globals/privates",\
+      "reference": "workspace:globals/privates"\
     },\
     {\
       "name": "@ui/avatar",\
@@ -221,6 +217,8 @@ const RAW_RUNTIME_STATE =
   "enableTopLevelFallback": true,\
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
+    ["@api/github-auth-cookie", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:api/github-auth-cookie", "workspace:api/github-auth-cookie"]],\
+    ["@api/logout", ["workspace:api/logout"]],\
     ["@app/add-member-modal-fragment", ["virtual:697c17e2d2fcb4691116223387f8bdada9a3a5c85a9fd678a2f1dbb4f28b29963a9221b7928d1a60f673eff114ee44ba1485bc48851740fe07fbb65bdd87aea5#workspace:app/fragments/app-add-member-modal", "virtual:c10c23b6e04237c9c7e06a5b99b3d680c3a705b36f6a04c6680d75ee0ba5cbe8fa7b8910f610354c41be4db50611a556576ae676a28f2399923a9bb7e1bf9eef#workspace:app/fragments/app-add-member-modal", "virtual:c8a5f42b1f8eab5e43bd139e7b362f54fcc4bb16867fe91c428467e3f5721c9f7c63e16d2fbde13744b05d7a54fc94e1546c031a5f68bd3d98a5a1756d1f9301#workspace:app/fragments/app-add-member-modal", "workspace:app/fragments/app-add-member-modal"]],\
     ["@app/add-member-to-organization-modal-fragment", ["virtual:1c2e05c3045e72b582ea14f300ebc51c9efbabe4bd2b39797ee52f88ebdef087f6c705012a3fee399378edcc2364f330d1c9f79d2b4f41235f1094df2b4f3503#workspace:app/fragments/app-add-member-to-organization-modal", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:app/fragments/app-add-member-to-organization-modal", "workspace:app/fragments/app-add-member-to-organization-modal"]],\
     ["@app/animated-card", ["virtual:128ebbddbda784051b5888b9bdd43182ab58ad6c17786018537893863ca58e53880bc482662e09634f3261f9b86507d2fe8e82c936562843cd3f61688f15ac7a#workspace:app/fragments/app-animated-card", "virtual:56966134acd46b54a7faa199a9b2afc6c4c30e7e013b160f4d72b05e51d6e1b4a93568ee49447ecc1347aed1e75a0fdc131eeb260b9437e1062d4db270592176#workspace:app/fragments/app-animated-card", "workspace:app/fragments/app-animated-card"]],\
@@ -244,11 +242,8 @@ const RAW_RUNTIME_STATE =
     ["@app/users-modal", ["virtual:1c2e05c3045e72b582ea14f300ebc51c9efbabe4bd2b39797ee52f88ebdef087f6c705012a3fee399378edcc2364f330d1c9f79d2b4f41235f1094df2b4f3503#workspace:app/fragments/app-users-modal", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:app/fragments/app-users-modal", "workspace:app/fragments/app-users-modal"]],\
     ["@app/users-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page", "workspace:app/pages/users-page"]],\
     ["@app/users-title", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:app/fragments/app-users-title", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:app/fragments/app-users-title", "workspace:app/fragments/app-users-title"]],\
-    ["@endpoints/github-auth-cookie", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie", "workspace:endpoints/github-auth-cookie"]],\
-    ["@endpoints/logout", ["workspace:endpoints/logout"]],\
     ["@globals/data", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data", "workspace:globals/data"]],\
-    ["@globals/locales", ["workspace:globals/locales"]],\
-    ["@globals/utils", ["virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils", "virtual:cda405ffd8c2ef23ff875fa6a609a5eb75e41fb900ae28003718fa964857401931e045ed5467257f0b85d5ed2734d2483c32b5afc0188e191cc99d7acb38e9b3#workspace:globals/utils", "workspace:globals/utils"]],\
+    ["@globals/privates", ["virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates", "workspace:globals/privates"]],\
     ["@ui/avatar", ["virtual:0c725c07879c46cc40fec4183eb3e1a1c605e53876391762f1df52e574eee32d9b4dbd28691a90e51a0305d405fa29eccad623be3ce6fe986a16d8d223d47984#workspace:ui/avatar", "virtual:6f072cb25c8571e52042d4ef03485a8513ce3fff603e6ca03ada28cdae96fc64f304d1c9166738e96330efff40007e7cbc45f5c30b79d80869aea7ecdd29bb6a#workspace:ui/avatar", "virtual:7ae719e1ff7496436b53b6c4efec34a71f4d0130b6290e9286ecb29a1940fee696b89acff5a583b09f11545aa0404818a9fb6b876f46be6137681e389815c40a#workspace:ui/avatar", "virtual:9fac9e3a8ab2ee419c9a8e4c51d30e681b903fd0ed7acca5db6ce51c4463a212c799f0acfaa4a1e87adf2fb2b5bc435a6e05794a91918d21c8ef518f1d7f94df#workspace:ui/avatar", "virtual:e638095173f04580c2ab97fface872e070b090feea9065809b69a616b54d2f8cef2120849ef7b28780f1d0367e1336044cea4f9600853c255ffe62ea7a9d6185#workspace:ui/avatar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#workspace:ui/avatar", "workspace:ui/avatar"]],\
     ["@ui/background", ["virtual:bab840902431193d5bf4d02662a21578a63ec20e9a89ebb767689df64c3a9349a86b79824df9a94f326bbf3ad35c32b5140399e4be75b9a88a87c1598817b7b8#workspace:ui/background", "virtual:cdf87704c0338c8e91f5d9700a86c0d1c05338e7444d9ac1e9180fdd3893a21dc4afe2c974d0507fb3b7cca0c06b6259db04d44230430cc8b4447700b276a331#workspace:ui/background", "workspace:ui/background"]],\
     ["@ui/button", ["virtual:08a9fecbb8afa8d30aec63bcd6727a0d43939a4d03f51cb7a0d8f64a7416d60b53ff914e3e851a548d07e130ade8ea01735c7b9b4acd990de8d383cf18d290fb#workspace:ui/button", "virtual:209c9636f71a6ea21774b537eeb4a5e90c70a908e2a7c713875f332377dfe55e00a7ed2779584cb707a7e70c407f722859e441616776bca7b47e1c881d179bee#workspace:ui/button", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:ui/button", "virtual:697c17e2d2fcb4691116223387f8bdada9a3a5c85a9fd678a2f1dbb4f28b29963a9221b7928d1a60f673eff114ee44ba1485bc48851740fe07fbb65bdd87aea5#workspace:ui/button", "virtual:6c42e522a67ba46327baef79493ce2c5cfb1f594d5712b9e896463b1a8a09475125341a36e5ab45a6cb3f85cbb59890c7c4aea679a91fd64376f5565f72b8fab#workspace:ui/button", "virtual:6ec2f30da1fac88192d31ee2664563f04521a52ec0b895ac8774e80a8c7ae27ad8de2eff2a70735ee916d0cad63f5e53102572df69e9460cec87af5c18b685b7#workspace:ui/button", "virtual:74350f4969baa1ddf9f41dff09272cccbf1276ca004bcaa735ff39b063ab338fe8da05290c747d374f301ee9bd66430b00f80fc7fe3d8dc776d83f09a4fa704d#workspace:ui/button", "virtual:a23dd37b90ca1d78e82bb3d9d1cd37e3bd509049031c5ec1cc541ac82ad584d1e6589d34a89aa5644e371648aef360e9b46bf301463b403f464963dd4f22c3d8#workspace:ui/button", "virtual:aae0a6a51e77311dacded04207cf2911a1dcb898d2fdd9677130a9a5ea08e36378e567659d79be6eef80389958eb1cf99fd61f69c7f21286eb05ec3582550f48#workspace:ui/button", "virtual:c8a5f42b1f8eab5e43bd139e7b362f54fcc4bb16867fe91c428467e3f5721c9f7c63e16d2fbde13744b05d7a54fc94e1546c031a5f68bd3d98a5a1756d1f9301#workspace:ui/button", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#workspace:ui/button", "workspace:ui/button"]],\
@@ -285,7 +280,6 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
-          ["@graphql-tools/apollo-engine-loader", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:8.0.1"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -479,56 +473,37 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@apollo/client", [\
-      ["npm:3.10.5", {\
-        "packageLocation": "./.yarn/cache/@apollo-client-npm-3.10.5-d3a2496af3-586d06bd7c.zip/node_modules/@apollo/client/",\
+    ["@api/github-auth-cookie", [\
+      ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:api/github-auth-cookie", {\
+        "packageLocation": "./.yarn/__virtual__/@api-github-auth-cookie-virtual-fa466bfe02/1/api/github-auth-cookie/",\
         "packageDependencies": [\
-          ["@apollo/client", "npm:3.10.5"]\
+          ["@api/github-auth-cookie", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:api/github-auth-cookie"],\
+          ["@globals/privates", "virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates"],\
+          ["@octokit/auth-app", "npm:7.1.0"],\
+          ["@types/octokit__auth-app", null]\
+        ],\
+        "packagePeers": [\
+          "@types/octokit__auth-app"\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:3.10.5", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-client-virtual-84ad3e3fb2/0/cache/@apollo-client-npm-3.10.5-d3a2496af3-586d06bd7c.zip/node_modules/@apollo/client/",\
+      ["workspace:api/github-auth-cookie", {\
+        "packageLocation": "./api/github-auth-cookie/",\
         "packageDependencies": [\
-          ["@apollo/client", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:3.10.5"],\
-          ["@graphql-typed-document-node/core", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:3.2.0"],\
-          ["@types/graphql", null],\
-          ["@types/graphql-ws", null],\
-          ["@types/react", "npm:18.3.3"],\
-          ["@types/react-dom", "npm:18.3.0"],\
-          ["@types/subscriptions-transport-ws", null],\
-          ["@wry/caches", "npm:1.0.1"],\
-          ["@wry/equality", "npm:0.5.7"],\
-          ["@wry/trie", "npm:0.5.0"],\
-          ["graphql", "npm:16.8.2"],\
-          ["graphql-tag", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:2.12.6"],\
-          ["graphql-ws", null],\
-          ["hoist-non-react-statics", "npm:3.3.2"],\
-          ["optimism", "npm:0.18.0"],\
-          ["prop-types", "npm:15.8.1"],\
-          ["react", "npm:18.3.1"],\
-          ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"],\
-          ["rehackt", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:0.1.0"],\
-          ["response-iterator", "npm:0.2.6"],\
-          ["subscriptions-transport-ws", null],\
-          ["symbol-observable", "npm:4.0.0"],\
-          ["ts-invariant", "npm:0.10.3"],\
-          ["tslib", "npm:2.6.3"],\
-          ["zen-observable-ts", "npm:1.2.5"]\
+          ["@api/github-auth-cookie", "workspace:api/github-auth-cookie"],\
+          ["@globals/privates", "virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates"],\
+          ["@octokit/auth-app", "npm:7.1.0"]\
         ],\
-        "packagePeers": [\
-          "@types/graphql-ws",\
-          "@types/graphql",\
-          "@types/react-dom",\
-          "@types/react",\
-          "@types/subscriptions-transport-ws",\
-          "graphql-ws",\
-          "graphql",\
-          "react-dom",\
-          "react",\
-          "subscriptions-transport-ws"\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@api/logout", [\
+      ["workspace:api/logout", {\
+        "packageLocation": "./api/logout/",\
+        "packageDependencies": [\
+          ["@api/logout", "workspace:api/logout"]\
         ],\
-        "linkType": "HARD"\
+        "linkType": "SOFT"\
       }]\
     ]],\
     ["@app/add-member-modal-fragment", [\
@@ -1521,7 +1496,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./app/entrypoints/renderer/",\
         "packageDependencies": [\
           ["@app/renderer-entrypoint", "workspace:app/entrypoints/renderer"],\
-          ["@apollo/client", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:3.10.5"],\
+          ["@api/github-auth-cookie", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:api/github-auth-cookie"],\
+          ["@api/logout", "workspace:api/logout"],\
           ["@app/base-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout"],\
           ["@app/index-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page"],\
           ["@app/loading", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-loading"],\
@@ -1530,8 +1506,6 @@ const RAW_RUNTIME_STATE =
           ["@app/root-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-root-layout"],\
           ["@app/users-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
-          ["@endpoints/github-auth-cookie", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie"],\
-          ["@endpoints/logout", "workspace:endpoints/logout"],\
           ["@types/node", "npm:20.12.12"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1552,8 +1526,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/root-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-root-layout"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
-          ["@globals/locales", "workspace:globals/locales"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
+          ["@globals/privates", "virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates"],\
           ["@octokit/app", "npm:15.1.0"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -1581,8 +1554,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/root-layout", "workspace:app/fragments/app-root-layout"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
-          ["@globals/locales", "workspace:globals/locales"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
+          ["@globals/privates", "virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates"],\
           ["@octokit/app", "npm:15.1.0"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -2158,7 +2130,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@ardatan-sync-fetch-npm-0.0.1-77efa386d1-ee21741bad.zip/node_modules/@ardatan/sync-fetch/",\
         "packageDependencies": [\
           ["@ardatan/sync-fetch", "npm:0.0.1"],\
-          ["node-fetch", "virtual:77efa386d167b369532bc7e0ab14d821af0a0ad652012828641b263bff9a95bafaeb34b17f60c56751fb541d995efec119783cb5afaf99038e6024a42da78969#npm:2.7.0"]\
+          ["node-fetch", "virtual:71c3c0570974c795b79987bb85d4a29514e196f75c7ca2bb56e80f88177e71cbbb73c9a0f02e781c6ccd33e5e8542eb2d0a05fb7aad876eea2872ec6993aa554#npm:2.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6442,39 +6414,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@endpoints/github-auth-cookie", [\
-      ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie", {\
-        "packageLocation": "./.yarn/__virtual__/@endpoints-github-auth-cookie-virtual-0ba27a5392/1/endpoints/github-auth-cookie/",\
-        "packageDependencies": [\
-          ["@endpoints/github-auth-cookie", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:endpoints/github-auth-cookie"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
-          ["@types/octokit__auth-app", null]\
-        ],\
-        "packagePeers": [\
-          "@types/octokit__auth-app"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["workspace:endpoints/github-auth-cookie", {\
-        "packageLocation": "./endpoints/github-auth-cookie/",\
-        "packageDependencies": [\
-          ["@endpoints/github-auth-cookie", "workspace:endpoints/github-auth-cookie"],\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
-          ["@octokit/auth-app", "npm:7.1.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@endpoints/logout", [\
-      ["workspace:endpoints/logout", {\
-        "packageLocation": "./endpoints/logout/",\
-        "packageDependencies": [\
-          ["@endpoints/logout", "workspace:endpoints/logout"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
     ["@eslint-community/eslint-utils", [\
       ["npm:4.4.0", {\
         "packageLocation": "./.yarn/cache/@eslint-community-eslint-utils-npm-4.4.0-d1791bd5a3-8d70bcdcd8.zip/node_modules/@eslint-community/eslint-utils/",\
@@ -6757,32 +6696,11 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
-    ["@globals/locales", [\
-      ["workspace:globals/locales", {\
-        "packageLocation": "./globals/locales/",\
+    ["@globals/privates", [\
+      ["virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates", {\
+        "packageLocation": "./.yarn/__virtual__/@globals-privates-virtual-043f5d553f/1/globals/privates/",\
         "packageDependencies": [\
-          ["@globals/locales", "workspace:globals/locales"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@globals/utils", [\
-      ["virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils", {\
-        "packageLocation": "./.yarn/__virtual__/@globals-utils-virtual-ad98c98a80/1/globals/utils/",\
-        "packageDependencies": [\
-          ["@globals/utils", "virtual:ca4000c068b816508d0f1080f02eec64a193f0c5a70fa80e3bec1ae0c56af9945dd8ef62c9721683b7280b9c9ddb459193d29a8cc2f495cf5534480f44b0c82f#workspace:globals/utils"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
-          ["@types/octokit__auth-app", null]\
-        ],\
-        "packagePeers": [\
-          "@types/octokit__auth-app"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:cda405ffd8c2ef23ff875fa6a609a5eb75e41fb900ae28003718fa964857401931e045ed5467257f0b85d5ed2734d2483c32b5afc0188e191cc99d7acb38e9b3#workspace:globals/utils", {\
-        "packageLocation": "./.yarn/__virtual__/@globals-utils-virtual-f4105a198f/1/globals/utils/",\
-        "packageDependencies": [\
-          ["@globals/utils", "virtual:cda405ffd8c2ef23ff875fa6a609a5eb75e41fb900ae28003718fa964857401931e045ed5467257f0b85d5ed2734d2483c32b5afc0188e191cc99d7acb38e9b3#workspace:globals/utils"],\
+          ["@globals/privates", "virtual:169bcfea65ac06ed56013d58639973139b4e05ac5b79570b973049473f0441f8388d9ed7866e1326a2c5c6f6ef7567398fe656ba5b318f5fbcc4412e11052d3c#workspace:globals/privates"],\
           ["@octokit/auth-app", "npm:7.1.0"],\
           ["@types/octokit__auth-app", null]\
         ],\
@@ -6792,10 +6710,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["workspace:globals/utils", {\
-        "packageLocation": "./globals/utils/",\
+      ["workspace:globals/privates", {\
+        "packageLocation": "./globals/privates/",\
         "packageDependencies": [\
-          ["@globals/utils", "virtual:cda405ffd8c2ef23ff875fa6a609a5eb75e41fb900ae28003718fa964857401931e045ed5467257f0b85d5ed2734d2483c32b5afc0188e191cc99d7acb38e9b3#workspace:globals/utils"],\
+          ["@globals/privates", "workspace:globals/privates"],\
           ["@octokit/auth-app", "npm:7.1.0"]\
         ],\
         "linkType": "SOFT"\
@@ -7288,23 +7206,6 @@ const RAW_RUNTIME_STATE =
           ["@graphql-tools/apollo-engine-loader", "npm:8.0.1"]\
         ],\
         "linkType": "SOFT"\
-      }],\
-      ["virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:8.0.1", {\
-        "packageLocation": "./.yarn/__virtual__/@graphql-tools-apollo-engine-loader-virtual-f1d1be5b39/0/cache/@graphql-tools-apollo-engine-loader-npm-8.0.1-e976011c0d-4baef5a8fd.zip/node_modules/@graphql-tools/apollo-engine-loader/",\
-        "packageDependencies": [\
-          ["@graphql-tools/apollo-engine-loader", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:8.0.1"],\
-          ["@ardatan/sync-fetch", "npm:0.0.1"],\
-          ["@graphql-tools/utils", "virtual:f1d1be5b39be91b7b37176ab018f78e95d989ce78b4585036c8720757732c0da4923682fecea040598c94bea6b48f7ee860740c927e466f8834e013530191f65#npm:10.2.2"],\
-          ["@types/graphql", null],\
-          ["@whatwg-node/fetch", "npm:0.9.18"],\
-          ["graphql", null],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql",\
-          "graphql"\
-        ],\
-        "linkType": "HARD"\
       }],\
       ["virtual:eb7aeb6204921f8fd9eb4f04328a3024bb53103b2032f3b6729dc7eab5776b553653fe7a672dc06cd8d384192b6c5bacb2ebd8f3f590c860e58795b80ebe594c#npm:8.0.1", {\
         "packageLocation": "./.yarn/__virtual__/@graphql-tools-apollo-engine-loader-virtual-c844ad843d/0/cache/@graphql-tools-apollo-engine-loader-npm-8.0.1-e976011c0d-4baef5a8fd.zip/node_modules/@graphql-tools/apollo-engine-loader/",\
@@ -7925,23 +7826,6 @@ const RAW_RUNTIME_STATE =
           "graphql"\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["virtual:f1d1be5b39be91b7b37176ab018f78e95d989ce78b4585036c8720757732c0da4923682fecea040598c94bea6b48f7ee860740c927e466f8834e013530191f65#npm:10.2.2", {\
-        "packageLocation": "./.yarn/__virtual__/@graphql-tools-utils-virtual-5fcead225b/0/cache/@graphql-tools-utils-npm-10.2.2-df253ea243-3251409f8c.zip/node_modules/@graphql-tools/utils/",\
-        "packageDependencies": [\
-          ["@graphql-tools/utils", "virtual:f1d1be5b39be91b7b37176ab018f78e95d989ce78b4585036c8720757732c0da4923682fecea040598c94bea6b48f7ee860740c927e466f8834e013530191f65#npm:10.2.2"],\
-          ["@graphql-typed-document-node/core", "virtual:5fcead225bfe8e2fa3cf80deff41969bcdde46c819d6e9dbd575f5e8385bc16423ceaf94f14547af2bc5517ce25b405cc734a56228fe3766699863edea798ffc#npm:3.2.0"],\
-          ["@types/graphql", null],\
-          ["cross-inspect", "npm:1.0.0"],\
-          ["dset", "npm:3.1.3"],\
-          ["graphql", null],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql",\
-          "graphql"\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@graphql-tools/wrap", [\
@@ -7985,32 +7869,6 @@ const RAW_RUNTIME_STATE =
           ["@graphql-typed-document-node/core", "virtual:17e1ea87ca71c9eb25a83b0094cd823091c553638059ac89085d4de2105a29372f32d4041b09919fe5ddeef2a31f825f98f8f2656d201f68ac89bc16ea70e9ec#npm:3.2.0"],\
           ["@types/graphql", null],\
           ["graphql", "npm:15.8.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql",\
-          "graphql"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:5fcead225bfe8e2fa3cf80deff41969bcdde46c819d6e9dbd575f5e8385bc16423ceaf94f14547af2bc5517ce25b405cc734a56228fe3766699863edea798ffc#npm:3.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/@graphql-typed-document-node-core-virtual-5bb163fc37/0/cache/@graphql-typed-document-node-core-npm-3.2.0-505adb1e90-fa44443acc.zip/node_modules/@graphql-typed-document-node/core/",\
-        "packageDependencies": [\
-          ["@graphql-typed-document-node/core", "virtual:5fcead225bfe8e2fa3cf80deff41969bcdde46c819d6e9dbd575f5e8385bc16423ceaf94f14547af2bc5517ce25b405cc734a56228fe3766699863edea798ffc#npm:3.2.0"],\
-          ["@types/graphql", null],\
-          ["graphql", null]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql",\
-          "graphql"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:3.2.0", {\
-        "packageLocation": "./.yarn/__virtual__/@graphql-typed-document-node-core-virtual-5c890125b7/0/cache/@graphql-typed-document-node-core-npm-3.2.0-505adb1e90-fa44443acc.zip/node_modules/@graphql-typed-document-node/core/",\
-        "packageDependencies": [\
-          ["@graphql-typed-document-node/core", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:3.2.0"],\
-          ["@types/graphql", null],\
-          ["graphql", "npm:16.8.2"]\
         ],\
         "packagePeers": [\
           "@types/graphql",\
@@ -14504,54 +14362,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@wry/caches", [\
-      ["npm:1.0.1", {\
-        "packageLocation": "./.yarn/cache/@wry-caches-npm-1.0.1-45c77e1362-055f592ee5.zip/node_modules/@wry/caches/",\
-        "packageDependencies": [\
-          ["@wry/caches", "npm:1.0.1"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@wry/context", [\
-      ["npm:0.7.4", {\
-        "packageLocation": "./.yarn/cache/@wry-context-npm-0.7.4-0b17b268ac-70d648949a.zip/node_modules/@wry/context/",\
-        "packageDependencies": [\
-          ["@wry/context", "npm:0.7.4"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@wry/equality", [\
-      ["npm:0.5.7", {\
-        "packageLocation": "./.yarn/cache/@wry-equality-npm-0.5.7-09bfcd77c8-69dccf33c0.zip/node_modules/@wry/equality/",\
-        "packageDependencies": [\
-          ["@wry/equality", "npm:0.5.7"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@wry/trie", [\
-      ["npm:0.4.3", {\
-        "packageLocation": "./.yarn/cache/@wry-trie-npm-0.4.3-0b589ed648-106e021125.zip/node_modules/@wry/trie/",\
-        "packageDependencies": [\
-          ["@wry/trie", "npm:0.4.3"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:0.5.0", {\
-        "packageLocation": "./.yarn/cache/@wry-trie-npm-0.5.0-fdc79454e2-578a08f3a9.zip/node_modules/@wry/trie/",\
-        "packageDependencies": [\
-          ["@wry/trie", "npm:0.5.0"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["@xtuc/ieee754", [\
       ["npm:1.2.0", {\
         "packageLocation": "./.yarn/cache/@xtuc-ieee754-npm-1.2.0-ec0ce4e025-ab033b0329.zip/node_modules/@xtuc/ieee754/",\
@@ -16935,7 +16745,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/cross-fetch-npm-3.1.8-71c3c05709-ac8c4ca87d.zip/node_modules/cross-fetch/",\
         "packageDependencies": [\
           ["cross-fetch", "npm:3.1.8"],\
-          ["node-fetch", "virtual:77efa386d167b369532bc7e0ab14d821af0a0ad652012828641b263bff9a95bafaeb34b17f60c56751fb541d995efec119783cb5afaf99038e6024a42da78969#npm:2.7.0"]\
+          ["node-fetch", "virtual:71c3c0570974c795b79987bb85d4a29514e196f75c7ca2bb56e80f88177e71cbbb73c9a0f02e781c6ccd33e5e8542eb2d0a05fb7aad876eea2872ec6993aa554#npm:2.7.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -19166,20 +18976,6 @@ const RAW_RUNTIME_STATE =
           ["graphql-tag", "virtual:6642d91e25e66ba81a245a0dd50f034a0a70b9c4b7ff46d3505628f6ebd80818e2e855e8a147b7aeaff2c144c128af9ee2486317ed7e316bbdbb6e3c480914ea#npm:2.12.6"],\
           ["@types/graphql", null],\
           ["graphql", "npm:15.8.0"],\
-          ["tslib", "npm:2.6.3"]\
-        ],\
-        "packagePeers": [\
-          "@types/graphql",\
-          "graphql"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:2.12.6", {\
-        "packageLocation": "./.yarn/__virtual__/graphql-tag-virtual-fe3f0cd426/0/cache/graphql-tag-npm-2.12.6-99a5a7f6de-23a2bc1d3f.zip/node_modules/graphql-tag/",\
-        "packageDependencies": [\
-          ["graphql-tag", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:2.12.6"],\
-          ["@types/graphql", null],\
-          ["graphql", "npm:16.8.2"],\
           ["tslib", "npm:2.6.3"]\
         ],\
         "packagePeers": [\
@@ -21576,10 +21372,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:77efa386d167b369532bc7e0ab14d821af0a0ad652012828641b263bff9a95bafaeb34b17f60c56751fb541d995efec119783cb5afaf99038e6024a42da78969#npm:2.7.0", {\
-        "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-4e54b4081e/0/cache/node-fetch-npm-2.7.0-587d57004e-b24f8a3dc9.zip/node_modules/node-fetch/",\
+      ["virtual:71c3c0570974c795b79987bb85d4a29514e196f75c7ca2bb56e80f88177e71cbbb73c9a0f02e781c6ccd33e5e8542eb2d0a05fb7aad876eea2872ec6993aa554#npm:2.7.0", {\
+        "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-749a5a9668/0/cache/node-fetch-npm-2.7.0-587d57004e-b24f8a3dc9.zip/node_modules/node-fetch/",\
         "packageDependencies": [\
-          ["node-fetch", "virtual:77efa386d167b369532bc7e0ab14d821af0a0ad652012828641b263bff9a95bafaeb34b17f60c56751fb541d995efec119783cb5afaf99038e6024a42da78969#npm:2.7.0"],\
+          ["node-fetch", "virtual:71c3c0570974c795b79987bb85d4a29514e196f75c7ca2bb56e80f88177e71cbbb73c9a0f02e781c6ccd33e5e8542eb2d0a05fb7aad876eea2872ec6993aa554#npm:2.7.0"],\
           ["@types/encoding", null],\
           ["encoding", null],\
           ["whatwg-url", "npm:5.0.0"]\
@@ -21797,19 +21593,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["onetime", "npm:5.1.2"],\
           ["mimic-fn", "npm:2.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["optimism", [\
-      ["npm:0.18.0", {\
-        "packageLocation": "./.yarn/cache/optimism-npm-0.18.0-9416c5a934-b461968008.zip/node_modules/optimism/",\
-        "packageDependencies": [\
-          ["optimism", "npm:0.18.0"],\
-          ["@wry/caches", "npm:1.0.1"],\
-          ["@wry/context", "npm:0.7.4"],\
-          ["@wry/trie", "npm:0.4.3"],\
-          ["tslib", "npm:2.6.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22894,28 +22677,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["rehackt", [\
-      ["npm:0.1.0", {\
-        "packageLocation": "./.yarn/cache/rehackt-npm-0.1.0-7bb788765d-c81adead82.zip/node_modules/rehackt/",\
-        "packageDependencies": [\
-          ["rehackt", "npm:0.1.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:0.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/rehackt-virtual-5e446fd339/0/cache/rehackt-npm-0.1.0-7bb788765d-c81adead82.zip/node_modules/rehackt/",\
-        "packageDependencies": [\
-          ["rehackt", "virtual:84ad3e3fb232f90bcdc2d1ffe633ff9725f5e4f6f6bcf12622db0016e5a552fb8b3ba96919e9b4674848c8b1d7c5868910d69e4b1b66ecbe6f80473b9f2fe86c#npm:0.1.0"],\
-          ["@types/react", "npm:18.3.3"],\
-          ["react", "npm:18.3.1"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["relay-runtime", [\
       ["npm:12.0.0", {\
         "packageLocation": "./.yarn/cache/relay-runtime-npm-12.0.0-48b91c47fc-d6211e8206.zip/node_modules/relay-runtime/",\
@@ -23025,15 +22786,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/resolve.exports-npm-2.0.2-f59b42bbe5-f1cc0b6680.zip/node_modules/resolve.exports/",\
         "packageDependencies": [\
           ["resolve.exports", "npm:2.0.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["response-iterator", [\
-      ["npm:0.2.6", {\
-        "packageLocation": "./.yarn/cache/response-iterator-npm-0.2.6-c70879657b-ef7c74693e.zip/node_modules/response-iterator/",\
-        "packageDependencies": [\
-          ["response-iterator", "npm:0.2.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23940,15 +23692,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["symbol-observable", [\
-      ["npm:4.0.0", {\
-        "packageLocation": "./.yarn/cache/symbol-observable-npm-4.0.0-5c36594410-983aef3912.zip/node_modules/symbol-observable/",\
-        "packageDependencies": [\
-          ["symbol-observable", "npm:4.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["tapable", [\
       ["npm:2.2.1", {\
         "packageLocation": "./.yarn/cache/tapable-npm-2.2.1-8cf5ff3039-1769336dd2.zip/node_modules/tapable/",\
@@ -24007,7 +23750,6 @@ const RAW_RUNTIME_STATE =
           ["@atls/config-eslint", "npm:0.0.12"],\
           ["@atls/config-jest", "npm:0.0.18"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
-          ["@graphql-tools/apollo-engine-loader", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:8.0.1"],\
           ["@jest/core", "virtual:6e14d428612e69ba1f1cd965c50d893c3a832997ae986391d0ed82d6bfce0d211bb70199647e6df4297a75eb8e9b4183caaea00b6278779f2c38bbf61382d10b#npm:29.7.0"],\
           ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
@@ -24246,16 +23988,6 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/typescript",\
           "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["ts-invariant", [\
-      ["npm:0.10.3", {\
-        "packageLocation": "./.yarn/cache/ts-invariant-npm-0.10.3-4657a5b439-bb07d56fe4.zip/node_modules/ts-invariant/",\
-        "packageDependencies": [\
-          ["ts-invariant", "npm:0.10.3"],\
-          ["tslib", "npm:2.6.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -25232,25 +24964,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["yoga-layout-prebuilt", "npm:1.10.0"],\
           ["@types/yoga-layout", "npm:1.9.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["zen-observable", [\
-      ["npm:0.8.15", {\
-        "packageLocation": "./.yarn/cache/zen-observable-npm-0.8.15-3bec99c19c-30eac3f405.zip/node_modules/zen-observable/",\
-        "packageDependencies": [\
-          ["zen-observable", "npm:0.8.15"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["zen-observable-ts", [\
-      ["npm:1.2.5", {\
-        "packageLocation": "./.yarn/cache/zen-observable-ts-npm-1.2.5-4ddaa0e233-2384cf92a6.zip/node_modules/zen-observable-ts/",\
-        "packageDependencies": [\
-          ["zen-observable-ts", "npm:1.2.5"],\
-          ["zen-observable", "npm:0.8.15"]\
         ],\
         "linkType": "HARD"\
       }]\

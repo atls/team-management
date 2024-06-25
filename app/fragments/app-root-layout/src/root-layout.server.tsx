@@ -1,7 +1,5 @@
-import { checkPrivateKey } from '@globals/utils'
-import { checkEnvs }       from '@globals/utils'
+import { checkEnvs } from '@globals/privates'
 
 export const RootLayoutServer = async () => {
-  checkPrivateKey()
   checkEnvs()
 }

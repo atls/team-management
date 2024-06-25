@@ -1,3 +1,3 @@
-import { logoutHandle as GET } from '@endpoints/logout'
+import { logoutHandle as GET } from '@api/logout'
 
 export { GET }

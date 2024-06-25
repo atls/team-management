@@ -3,7 +3,7 @@ import { cookies }            from 'next/headers'
 // @ts-ignore:next-line
 import { redirect }           from 'next/navigation'
 
-import { getGithubAuthToken } from '@globals/utils'
+import { getGithubAuthToken } from '@globals/privates'
 
 import { COOKIE_EXPIRES }     from './github-auth-cookie-handle.constants.js'
 

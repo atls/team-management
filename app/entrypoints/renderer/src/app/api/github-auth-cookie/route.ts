@@ -1,3 +1,3 @@
-import { githubAuthCookieHandle as GET } from '@endpoints/github-auth-cookie'
+import { githubAuthCookieHandle as GET } from '@api/github-auth-cookie'
 
 export { GET }
