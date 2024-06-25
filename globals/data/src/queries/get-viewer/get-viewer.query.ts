@@ -5,6 +5,7 @@ const GET_VIEWER = /* GraphQL */ `
       name
       avatarUrl
       email
+      url
     }
   }
 `

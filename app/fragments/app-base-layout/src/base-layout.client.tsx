@@ -19,15 +19,15 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
   ...baseLayoutData
 }) => {
   const theme: any = useTheme()
-  const { name, avatarUrl, email } = baseLayoutData
+  const { name, avatarUrl, email, url: githubUrl } = baseLayoutData
 
-  if (!name || !avatarUrl || !email) {
+  if (!name || !avatarUrl || !email || !githubUrl) {
     throw new Error('not all data recived')
   }
 
   return (
     <Row backgroundColor={theme.colors.baseLayout.background}>
-      <Sidebar name={name} email={email} src={avatarUrl} />
+      <Sidebar name={name} email={email} src={avatarUrl} githubUrl={githubUrl} />
       <Column alignItems='center' flex={1}>
         <ThemeSelector />
         <Column
