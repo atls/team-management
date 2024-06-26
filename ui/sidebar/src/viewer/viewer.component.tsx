@@ -21,22 +21,29 @@ import { shapeStyles }         from './viewer.styles.js'
 
 const ViewerWrapper = styled<any>(Row)(shapeStyles)
 
-// TODO прокинуть url на профиль GH
-export const Viewer: FC<ViewerProps> = ({ name, email, avatarSrc, githubUrl }) => {
+export const Viewer: FC<ViewerProps> = ({ name, email, avatarUrl, url }) => {
   const theme = useTheme() as ThemeType
   const isSidebarOpened = useContext(SidebarStateContext)
 
   return (
     <ViewerWrapper isSidebarOpened={isSidebarOpened}>
-      <Link href={githubUrl} target='_blank'>
-        <Avatar size={40} src={avatarSrc} image alt='authentificated user avatar' />
-      </Link>
+      <Condition match={Boolean(avatarUrl)}>
+        <Link href={url || '/'} target='_blank'>
+          <Avatar size={40} src={avatarUrl} image alt='authentificated user avatar' />
+        </Link>
+      </Condition>
+
       <Condition match={isSidebarOpened}>
         <Column maxWidth={theme.spaces.giant}>
-          <Text fontSize='small.semiLarge'>{name}</Text>
-          <Text fontSize='small.default' color={theme.colors.sidebar.email} wordBreak='break-all'>
-            {email}
-          </Text>
+          <Condition match={Boolean(name)}>
+            <Text fontSize='small.semiLarge'>{name}</Text>
+          </Condition>
+
+          <Condition match={Boolean(email)}>
+            <Text fontSize='small.default' color={theme.colors.sidebar.email} wordBreak='break-all'>
+              {email}
+            </Text>
+          </Condition>
         </Column>
         <Link href='logout'>
           <LogOutIcon width={theme.spaces.large} height={theme.spaces.large} />

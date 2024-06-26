@@ -20,7 +20,7 @@ import { Wrapper }                  from './wrapper/index.js'
 import { changeSidebarVisibleHook } from './sidebar.hooks.js'
 import { itemList }                 from './wrapper/wrapper.constants.js'
 
-export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc, githubUrl }) => {
+export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
   const theme = useTheme() as ThemeType
   const pathname = usePathname()
 
@@ -45,7 +45,7 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, src: avatarSrc, githubU
         </Column>
         <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
         <SidebarDivider />
-        <Viewer name={name} email={email} avatarSrc={avatarSrc} githubUrl={githubUrl} />
+        <Viewer name={name} email={email} avatarUrl={avatarUrl} url={url} />
       </Wrapper>
     </SidebarStateContext.Provider>
   )

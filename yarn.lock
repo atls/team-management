@@ -5023,6 +5023,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@globals/data": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/avatar": "workspace:*"
     "@ui/condition": "workspace:*"

@@ -1,6 +1,5 @@
-export interface SidebarProps {
-  name: string
-  email: string
-  src: string
-  githubUrl: string
-}
+import type { GetViewerQuery } from '@globals/data'
+
+type ViewerProps = GetViewerQuery['viewer']
+
+export interface SidebarProps extends ViewerProps {}
