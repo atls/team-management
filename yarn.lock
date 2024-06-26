@@ -166,23 +166,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@api/github-auth-cookie@workspace:*, @api/github-auth-cookie@workspace:api/github-auth-cookie":
-  version: 0.0.0-use.local
-  resolution: "@api/github-auth-cookie@workspace:api/github-auth-cookie"
-  dependencies:
-    "@globals/privates": "workspace:*"
-    "@octokit/auth-app": "npm:7.1.0"
-  peerDependencies:
-    "@octokit/auth-app": "*"
-  languageName: unknown
-  linkType: soft
-
-"@api/logout@workspace:*, @api/logout@workspace:api/logout":
-  version: 0.0.0-use.local
-  resolution: "@api/logout@workspace:api/logout"
-  languageName: unknown
-  linkType: soft
-
 "@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal":
   version: 0.0.0-use.local
   resolution: "@app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal"
@@ -284,6 +267,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/github-auth-cookie-api@workspace:*, @app/github-auth-cookie-api@workspace:app/api/github-auth-cookie":
+  version: 0.0.0-use.local
+  resolution: "@app/github-auth-cookie-api@workspace:app/api/github-auth-cookie"
+  dependencies:
+    "@globals/data": "workspace:*"
+    "@octokit/auth-app": "npm:7.1.0"
+  peerDependencies:
+    "@octokit/auth-app": "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/index-page@workspace:*, @app/index-page@workspace:app/pages/index-page":
   version: 0.0.0-use.local
   resolution: "@app/index-page@workspace:app/pages/index-page"
@@ -307,6 +301,12 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/logout-api@workspace:*, @app/logout-api@workspace:app/api/logout":
+  version: 0.0.0-use.local
+  resolution: "@app/logout-api@workspace:app/api/logout"
   languageName: unknown
   linkType: soft
 
@@ -484,11 +484,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/renderer-entrypoint@workspace:app/entrypoints/renderer"
   dependencies:
-    "@api/github-auth-cookie": "workspace:*"
-    "@api/logout": "workspace:*"
     "@app/base-layout": "workspace:*"
+    "@app/github-auth-cookie-api": "workspace:*"
     "@app/index-page": "workspace:*"
     "@app/loading": "workspace:*"
+    "@app/logout-api": "workspace:*"
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/root-layout": "workspace:*"
@@ -512,7 +512,7 @@ __metadata:
   resolution: "@app/root-layout@workspace:app/fragments/app-root-layout"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@globals/privates": "workspace:*"
+    "@globals/environment": "workspace:*"
     "@octokit/app": "npm:15.1.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -2298,22 +2298,20 @@ __metadata:
     "@graphql-codegen/typescript": "npm:4.0.6"
     "@graphql-codegen/typescript-resolvers": "npm:4.0.6"
     "@graphql-typed-document-node/core": "npm:3.2.0"
+    "@octokit/auth-app": "npm:7.1.0"
     "@octokit/graphql": "npm:8.1.1"
     graphql: "npm:15.8.0"
   peerDependencies:
+    "@octokit/auth-app": "*"
     "@octokit/graphql": "*"
     graphql: "*"
     react: "*"
   languageName: unknown
   linkType: soft
 
-"@globals/privates@workspace:*, @globals/privates@workspace:globals/privates":
+"@globals/environment@workspace:*, @globals/environment@workspace:globals/environment":
   version: 0.0.0-use.local
-  resolution: "@globals/privates@workspace:globals/privates"
-  dependencies:
-    "@octokit/auth-app": "npm:7.1.0"
-  peerDependencies:
-    "@octokit/auth-app": "*"
+  resolution: "@globals/environment@workspace:globals/environment"
   languageName: unknown
   linkType: soft
 

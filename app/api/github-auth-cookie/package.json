@@ -1,5 +1,5 @@
 {
-  "name": "@api/github-auth-cookie",
+  "name": "@app/github-auth-cookie-api",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/privates": "workspace:*"
+    "@globals/data": "workspace:*"
   },
   "devDependencies": {
     "@octokit/auth-app": "7.1.0"

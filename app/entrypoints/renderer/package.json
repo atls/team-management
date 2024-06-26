@@ -14,11 +14,11 @@
     "react-intl": "6.6.8"
   },
   "devDependencies": {
-    "@api/github-auth-cookie": "workspace:*",
-    "@api/logout": "workspace:*",
     "@app/base-layout": "workspace:*",
+    "@app/github-auth-cookie-api": "workspace:*",
     "@app/index-page": "workspace:*",
     "@app/loading": "workspace:*",
+    "@app/logout-api": "workspace:*",
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
     "@app/root-layout": "workspace:*",

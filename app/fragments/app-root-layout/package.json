@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/privates": "workspace:*",
+    "@globals/environment": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {
