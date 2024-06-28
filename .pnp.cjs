@@ -221,7 +221,7 @@ const RAW_RUNTIME_STATE =
     ["@app/add-member-to-organization-modal-fragment", ["virtual:1c2e05c3045e72b582ea14f300ebc51c9efbabe4bd2b39797ee52f88ebdef087f6c705012a3fee399378edcc2364f330d1c9f79d2b4f41235f1094df2b4f3503#workspace:app/fragments/app-add-member-to-organization-modal", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:app/fragments/app-add-member-to-organization-modal", "workspace:app/fragments/app-add-member-to-organization-modal"]],\
     ["@app/animated-card", ["virtual:128ebbddbda784051b5888b9bdd43182ab58ad6c17786018537893863ca58e53880bc482662e09634f3261f9b86507d2fe8e82c936562843cd3f61688f15ac7a#workspace:app/fragments/app-animated-card", "virtual:56966134acd46b54a7faa199a9b2afc6c4c30e7e013b160f4d72b05e51d6e1b4a93568ee49447ecc1347aed1e75a0fdc131eeb260b9437e1062d4db270592176#workspace:app/fragments/app-animated-card", "workspace:app/fragments/app-animated-card"]],\
     ["@app/base-layout", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout", "workspace:app/fragments/app-base-layout"]],\
-    ["@app/github-auth-cookie-api", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/api/github-auth-cookie", "workspace:app/api/github-auth-cookie"]],\
+    ["@app/github-auth-cookie-api", ["workspace:app/api/github-auth-cookie"]],\
     ["@app/index-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page", "workspace:app/pages/index-page"]],\
     ["@app/loading", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-loading", "workspace:app/fragments/app-loading"]],\
     ["@app/logout-api", ["workspace:app/api/logout"]],\
@@ -822,25 +822,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@app/github-auth-cookie-api", [\
-      ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/api/github-auth-cookie", {\
-        "packageLocation": "./.yarn/__virtual__/@app-github-auth-cookie-api-virtual-37744de26d/1/app/api/github-auth-cookie/",\
-        "packageDependencies": [\
-          ["@app/github-auth-cookie-api", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/api/github-auth-cookie"],\
-          ["@globals/data", "virtual:2e7eb16855255990563681ae3091e897654f9b88bd543bb0f0d2e10af447346ea7d88df6672f7b772328de2dab3a7eedc110caa53cf2de8eef9aaf29780b4161#workspace:globals/data"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
-          ["@types/octokit__auth-app", null]\
-        ],\
-        "packagePeers": [\
-          "@types/octokit__auth-app"\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["workspace:app/api/github-auth-cookie", {\
         "packageLocation": "./app/api/github-auth-cookie/",\
         "packageDependencies": [\
           ["@app/github-auth-cookie-api", "workspace:app/api/github-auth-cookie"],\
-          ["@globals/data", "virtual:2e7eb16855255990563681ae3091e897654f9b88bd543bb0f0d2e10af447346ea7d88df6672f7b772328de2dab3a7eedc110caa53cf2de8eef9aaf29780b4161#workspace:globals/data"],\
-          ["@octokit/auth-app", "npm:7.1.0"]\
+          ["@globals/data", "virtual:2e7eb16855255990563681ae3091e897654f9b88bd543bb0f0d2e10af447346ea7d88df6672f7b772328de2dab3a7eedc110caa53cf2de8eef9aaf29780b4161#workspace:globals/data"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1497,7 +1483,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/renderer-entrypoint", "workspace:app/entrypoints/renderer"],\
           ["@app/base-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout"],\
-          ["@app/github-auth-cookie-api", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/api/github-auth-cookie"],\
+          ["@app/github-auth-cookie-api", "workspace:app/api/github-auth-cookie"],\
           ["@app/index-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page"],\
           ["@app/loading", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-loading"],\
           ["@app/logout-api", "workspace:app/api/logout"],\
@@ -6640,19 +6626,15 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
-          ["@types/octokit__auth-app", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", null],\
           ["graphql", "npm:15.8.0"],\
           ["react", null]\
         ],\
         "packagePeers": [\
-          "@octokit/auth-app",\
           "@types/graphql",\
-          "@types/octokit__auth-app",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6668,10 +6650,8 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
-          ["@types/octokit__auth-app", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", null],\
           ["graphql", "npm:15.8.0"],\
@@ -6680,7 +6660,6 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@octokit/graphql",\
           "@types/graphql",\
-          "@types/octokit__auth-app",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6696,10 +6675,8 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
-          ["@types/octokit__auth-app", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", "npm:18.3.3"],\
           ["graphql", "npm:15.8.0"],\
@@ -6708,7 +6685,6 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@octokit/graphql",\
           "@types/graphql",\
-          "@types/octokit__auth-app",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6724,7 +6700,6 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
-          ["@octokit/auth-app", "npm:7.1.0"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["graphql", "npm:15.8.0"]\
         ],\

@@ -272,9 +272,6 @@ __metadata:
   resolution: "@app/github-auth-cookie-api@workspace:app/api/github-auth-cookie"
   dependencies:
     "@globals/data": "workspace:*"
-    "@octokit/auth-app": "npm:7.1.0"
-  peerDependencies:
-    "@octokit/auth-app": "*"
   languageName: unknown
   linkType: soft
 
@@ -2298,11 +2295,9 @@ __metadata:
     "@graphql-codegen/typescript": "npm:4.0.6"
     "@graphql-codegen/typescript-resolvers": "npm:4.0.6"
     "@graphql-typed-document-node/core": "npm:3.2.0"
-    "@octokit/auth-app": "npm:7.1.0"
     "@octokit/graphql": "npm:8.1.1"
     graphql: "npm:15.8.0"
   peerDependencies:
-    "@octokit/auth-app": "*"
     "@octokit/graphql": "*"
     graphql: "*"
     react: "*"
@@ -3482,7 +3477,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/auth-app@npm:7.1.0, @octokit/auth-app@npm:^7.0.0":
+"@octokit/auth-app@npm:^7.0.0":
   version: 7.1.0
   resolution: "@octokit/auth-app@npm:7.1.0"
   dependencies:
