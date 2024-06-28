@@ -1,14 +1,19 @@
-import { createAppAuth } from '@octokit/auth-app'
-
 export const getGithubAuthToken = async (code: string) => {
-  const auth = createAppAuth({
-    appId: process.env.GH_APP_ID as string,
-    privateKey: process.env.GH_APP_PRIVATE as string,
-    clientId: process.env.NEXT_PUBLIC_GH_CLIENT_ID as string,
-    clientSecret: process.env.NEXT_PUBLIC_GH_CLIENT_SECRET as string,
+  const fetchUrl = new URL('https://github.com/login/oauth/access_token')
+  fetchUrl.searchParams.set('client_id', process.env.NEXT_PUBLIC_GH_CLIENT_ID as string)
+  fetchUrl.searchParams.set('client_secret', process.env.NEXT_PUBLIC_GH_CLIENT_SECRET as string)
+  fetchUrl.searchParams.set('code', code)
+
+  const response = await fetch(fetchUrl, {
+    method: 'post',
+    headers: {
+      Accept: 'application/json',
+    },
   })
 
-  const userAuthentication = await auth({ type: 'oauth-user', code })
-  const { token } = userAuthentication
+  const userAuth = await response.json()
+
+  const { access_token: token } = userAuth
+
   return token
 }

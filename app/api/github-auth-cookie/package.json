@@ -9,11 +9,5 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:*"
-  },
-  "devDependencies": {
-    "@octokit/auth-app": "7.1.0"
-  },
-  "peerDependencies": {
-    "@octokit/auth-app": "*"
   }
 }

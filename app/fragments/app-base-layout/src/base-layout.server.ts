@@ -12,7 +12,9 @@ export const BaseLayoutServer = async () => {
   const token = cookies().get('token').value
   try {
     const client = octokitGraphqlClient(token)
-    const { viewer } = (await client(GET_VIEWER)) as GetViewerQuery
+    const response = (await client(GET_VIEWER)) as GetViewerQuery
+
+    const { viewer } = response
     return viewer
   } catch (e: any) {
     if (e.status === 401) {
