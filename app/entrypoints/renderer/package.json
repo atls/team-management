@@ -10,14 +10,18 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
+    "graphql": "16.8.2",
     "react-intl": "6.6.8"
   },
   "devDependencies": {
     "@app/base-layout": "workspace:*",
+    "@app/github-auth-cookie-api": "workspace:*",
     "@app/index-page": "workspace:*",
     "@app/loading": "workspace:*",
+    "@app/logout-api": "workspace:*",
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
+    "@app/root-layout": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@types/node": "20.12.12",
@@ -27,7 +31,6 @@
     "next": "14.1.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-intl": "6.6.8",
     "typescript": "5.2.2"
   }
 }

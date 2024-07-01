@@ -1,1 +1,1 @@
-export { default } from './registration.page.js'
+export { RegistrationClient } from '@app/registration'

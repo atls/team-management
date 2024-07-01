@@ -1,27 +1,54 @@
-import { CSSObject } from '@emotion/css'
+import { styleFn } from 'styled-system'
+import { ifProp }  from 'styled-tools'
 
-import { styleFn }   from 'styled-system'
-import { ifProp }    from 'styled-tools'
-
-import { theme }     from '@ui/theme'
-
-export const baseItemStyles: CSSObject = {
-  width: theme.space.full,
-  height: theme.space.mediumSemiDefault,
-  position: 'relative',
-  display: 'flex',
-  alignItems: 'center',
-  marginTop: theme.space.miniReduced,
+export const baseSidebarItemStyles: styleFn = ({ theme }) => ({
   textDecoration: 'none',
-  boxSizing: 'border-box',
-  color: theme.colors.black,
-  padding: theme.space.tb4lr40,
-}
+})
 
-export const activeItemStyles: CSSObject = {
-  borderLeft: '3px solid #387ADD',
-  backgroundColor: theme.backgrounds.ghostWhite,
-}
+// TODO add padding to spaces
+const openedShapeStyles: styleFn = ({ theme }) => ({
+  padding: theme.spaces.miniIncreased,
+  paddingLeft: theme.spaces.increased,
+})
 
-export const ifActiveItemModifier = (styles?: CSSObject | styleFn) =>
-  ifProp('active', [activeItemStyles, styles])
+const closedShapeStyles: styleFn = ({ theme }) => ({
+  padding: theme.spaces.miniIncreased,
+  justifyContent: 'center',
+})
+
+export const shapeSidebarItemStyles = ifProp(
+  'isSidebarOpened',
+  openedShapeStyles,
+  closedShapeStyles
+)
+
+const baseAppearanceStyles: styleFn = ({ theme }) => ({
+  borderRightStyle: 'solid',
+  borderRightColor: 'transparent',
+  borderRightWidth: theme.spaces.semiTiny,
+  borderLeftStyle: 'solid',
+  borderLeftColor: theme.colors.sidebar.background,
+  borderLeftWidth: theme.spaces.semiTiny,
+})
+
+const defaultAppearanceStyles: styleFn = ({ theme }) => ({
+  ...baseAppearanceStyles({ theme }),
+  borderLeftColor: theme.colors.sidebar.background,
+})
+
+const hoverAppearanceStyles: styleFn = ({ theme }) => ({
+  ...baseAppearanceStyles({ theme }),
+  borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,
+})
+
+const activeAppearanceStyles: styleFn = ({ theme }) => ({
+  ...baseAppearanceStyles({ theme }),
+  backgroundColor: theme.colors.sidebar.sidebarItem.backgroundSelected,
+  borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,
+})
+
+export const appearanceSidebarItemStyles = ifProp(
+  'active',
+  activeAppearanceStyles,
+  ifProp('hover', hoverAppearanceStyles, defaultAppearanceStyles)
+)

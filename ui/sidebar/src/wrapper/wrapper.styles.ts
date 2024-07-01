@@ -1,21 +1,30 @@
-import { CSSObject } from '@emotion/css'
+import { styleFn } from 'styled-system'
+import { ifProp }  from 'styled-tools'
 
-import { styleFn }   from 'styled-system'
-import { ifProp }    from 'styled-tools'
-
-import { theme }     from '@ui/theme'
-
-export const baseWrapperStyles: CSSObject = {
+export const baseSidebarStyles: styleFn = ({ theme }) => ({
   position: 'sticky',
-  display: 'flex',
+  top: theme.spaces.zero,
+  zIndex: theme.spaces.s1400,
+})
+
+const baseShapeStyles: styleFn = ({ theme }) => ({
   height: theme.spaces.fullVh,
-  width: theme.space.mediumIncreased,
-  top: 0,
-}
+  padding: '30px 0 30px',
+  gap: theme.spaces.moderate,
+})
 
-export const pinnedWrapperStyles: CSSObject = {
-  width: 'initial',
-}
+const closedShapeStyles: styleFn = ({ theme }) => ({
+  ...baseShapeStyles({ theme }),
+  width: theme.spaces.huge,
+})
 
-export const ifPinnedWrapperModifier = (styles?: CSSObject | styleFn) =>
-  ifProp('pinned', [pinnedWrapperStyles, styles])
+const openedShapeStyles: styleFn = ({ theme }) => ({
+  ...baseShapeStyles({ theme }),
+  width: theme.spaces.largeSemiDecreased,
+})
+
+export const shapeSidebarStyles = ifProp('isSidebarOpened', openedShapeStyles, closedShapeStyles)
+
+export const appearanceSidebarStyles: styleFn = ({ theme }) => ({
+  backgroundColor: theme.colors.sidebar.background,
+})

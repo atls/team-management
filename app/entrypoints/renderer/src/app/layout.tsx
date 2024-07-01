@@ -1,20 +1,10 @@
-'use client'
+import React          from 'react'
 
-import React             from 'react'
-import { IntlProvider }  from 'react-intl'
+import BaseRootLayout from '@app/root-layout'
 
-import { ThemeProvider } from '@ui/theme'
+import messages       from '../../locales/ru.json'
 
-import messages          from '../../locales/ru.json'
-
-const RootLayout = ({ children }) => (
-  <html>
-    <body>
-      <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
-        <ThemeProvider>{children}</ThemeProvider>
-      </IntlProvider>
-    </body>
-  </html>
-)
+// @ts-expect-error Async Server Component
+const RootLayout = ({ children }) => <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
 
 export default RootLayout
