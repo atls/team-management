@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client'
+import { gql } from '../../__generated__/index.js'
 
-export const USERS = gql`
-  query {
+export const GET_USERS = /* GraphQL */ `
+  query Orgs {
     organization(login: "ssagg-test") {
       name
       teams(first: 100, after: null) {
@@ -26,3 +26,4 @@ export const USERS = gql`
     }
   }
 `
+// )
