@@ -5,7 +5,8 @@ import type { NextRequest } from 'next/server'
 import { NextResponse }     from 'next/server'
 
 export const middleware = (request: NextRequest) => {
-  if (!request.cookies.has('token')) {
+  const { TOKEN_COOKIE_NAME } = process.env
+  if (!request.cookies.has(TOKEN_COOKIE_NAME as string)) {
     return NextResponse.redirect(new URL('/registration', request.url))
   }
   return NextResponse.next()
