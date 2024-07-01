@@ -1,8 +1,6 @@
 import { REQUIRED_ENV_VAR_NAMES } from './check-envs.constants.js'
 
-const getEnvErrorMessage = (envVar) => {
-  return `need "${envVar}" env variable`
-}
+const getEnvErrorMessage = (envVar) => `need "${envVar}" env variable`
 
 export const checkEnvs = () => {
   for (const ENV_VAR_NAME of REQUIRED_ENV_VAR_NAMES) {
