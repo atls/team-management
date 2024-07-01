@@ -10,7 +10,7 @@ export const githubAuthRedirectHook = (router: typeof useRouter) => {
   const GH_CLIENT_ID = process.env.NEXT_PUBLIC_GH_CLIENT_ID as string
 
   GH_AUTH_URL.searchParams.set('client_id', GH_CLIENT_ID)
-  GH_AUTH_URL.searchParams.append('scope', GH_AUTH_SCOPES)
+  GH_AUTH_URL.searchParams.set('scope', GH_AUTH_SCOPES)
 
   GH_AUTH_URL.searchParams.set('redirect_uri', `${CURRENT_URL.origin}/api/github-auth-cookie`)
 
