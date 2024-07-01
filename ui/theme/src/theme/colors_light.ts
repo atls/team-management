@@ -19,6 +19,7 @@ const { RED_400 } = colorsConstants
 const { BLACK_50 } = colorsConstants
 
 const colors = {
+  ...colorsConstants,
   activeTheme: 'light',
   icon: GRAY_1600,
   sidebar: {
