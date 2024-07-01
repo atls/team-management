@@ -1,10 +1,11 @@
-export const getGithubAuthToken = async (code: string) => {
-  const fetchUrl = new URL('https://github.com/login/oauth/access_token')
-  fetchUrl.searchParams.set('client_id', process.env.NEXT_PUBLIC_GH_CLIENT_ID as string)
-  fetchUrl.searchParams.set('client_secret', process.env.NEXT_PUBLIC_GH_CLIENT_SECRET as string)
-  fetchUrl.searchParams.set('code', code)
+import { GH_TOKEN_URL } from './get-github-auth-token.constants.js'
 
-  const response = await fetch(fetchUrl, {
+export const getGithubAuthToken = async (code: string) => {
+  GH_TOKEN_URL.searchParams.set('client_id', process.env.NEXT_PUBLIC_GH_CLIENT_ID as string)
+  GH_TOKEN_URL.searchParams.set('client_secret', process.env.NEXT_PUBLIC_GH_CLIENT_SECRET as string)
+  GH_TOKEN_URL.searchParams.set('code', code)
+
+  const response = await fetch(GH_TOKEN_URL, {
     method: 'post',
     headers: {
       Accept: 'application/json',
