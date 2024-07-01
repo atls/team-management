@@ -1,5 +1,6 @@
 export interface BaseLayoutProps {
-  name?: string
+  name?: string | null | undefined
   email?: string
-  avatar?: string
+  avatarUrl?: string
+  url?: string
 }

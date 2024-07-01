@@ -98,6 +98,7 @@ export const spaces = {
   t20autob0: '20px auto 0',
   t241rl12b12: '241px 12px 12px 12px',
   t0rbl12: '0 12px 12px 12px',
+  v0h20: '0 20px',
   t1r5b2l5: '1px 5px 2px 5px',
   tb3rl0: '3px 0 3px 0',
   t8r2b6l12: '8px 2px 6px 12px',
@@ -108,6 +109,7 @@ export const spaces = {
   t0r21bl0: '0 21px 0 0',
   t8lr6b12: '8px 6px 12px',
   t24r24b0l0: '24px 24px 0 0',
+  v8h16: '8px 16px',
   mediumDefault: 50,
   mediumIncreased: 80,
 

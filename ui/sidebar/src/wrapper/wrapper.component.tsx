@@ -1,9 +1,46 @@
-import styled                      from '@emotion/styled'
+import styled                        from '@emotion/styled'
 
-import { WrapperElement }          from './wrapper.element.js'
-import { ifPinnedWrapperModifier } from './wrapper.styles.js'
-import { baseWrapperStyles }       from './wrapper.styles.js'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { PropsWithChildren }         from 'react'
+import { motion }                    from 'framer-motion'
 
-const Wrapper = styled(WrapperElement)(baseWrapperStyles, ifPinnedWrapperModifier())
+import { Column }                    from '@ui/layout'
 
-export { Wrapper }
+import { WrapperProps }              from './wrapper.interfaces.js'
+import { MotionWrapperElementProps } from './wrapper.interfaces.js'
+import { motionVariants }            from './wrapper.constants.js'
+import { animationCompleteHook }     from './wrapper.hooks.js'
+import { baseSidebarStyles }         from './wrapper.styles.js'
+import { shapeSidebarStyles }        from './wrapper.styles.js'
+import { appearanceSidebarStyles }   from './wrapper.styles.js'
+
+const WrapperElement = styled(Column)(
+  baseSidebarStyles,
+  shapeSidebarStyles,
+  appearanceSidebarStyles
+)
+
+const MotionSidebarWrapper = motion<MotionWrapperElementProps>(WrapperElement)
+
+export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({ children, states }) => {
+  const { isSidebarOpened, setSidebarOpened, isSidebarVisible, setSidebarVisible } = states
+
+  return (
+    <MotionSidebarWrapper
+      isSidebarOpened={isSidebarOpened}
+      onAnimationComplete={() =>
+        animationCompleteHook({
+          isSidebarOpened,
+          setSidebarOpened,
+          isSidebarVisible,
+          setSidebarVisible,
+        })
+      }
+      animate={isSidebarVisible ? 'visible' : 'invisible'}
+      variants={motionVariants}
+    >
+      {children}
+    </MotionSidebarWrapper>
+  )
+}

@@ -1,1 +1,2 @@
-export { default } from '@app/registration-page'
+import { RegistrationClient } from '@app/registration-page'
+export default RegistrationClient
