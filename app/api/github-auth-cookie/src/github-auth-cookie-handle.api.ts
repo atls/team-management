@@ -6,29 +6,31 @@ import { redirect }            from 'next/navigation'
 import { getGithubAuthToken }  from '@globals/data'
 
 import { COOKIE_EXPIRES_WEEK } from './github-auth-cookie-handle.constants.js'
+import { RU_MESSAGES }         from './github-auth-cookie-handle.messages.js'
 
 export async function githubAuthCookieHandle(request: Request) {
-  const { searchParams } = new URL(request.url)
-  const code = searchParams.get('code')
+  const REQUEST_URL = new URL(request.url)
+  const REQUEST_ORIGIN = REQUEST_URL.origin
+  const { searchParams } = REQUEST_URL
+  const CODE = searchParams.get('code')
 
-  if (code) {
+  const REGISTRATION_URL = new URL('/registration', REQUEST_ORIGIN)
+
+  if (CODE) {
     try {
-      const token = await getGithubAuthToken(code)
+      const TOKEN = await getGithubAuthToken(CODE)
 
       const { TOKEN_COOKIE_NAME } = process.env
-      cookies().set(TOKEN_COOKIE_NAME as string, token, {
+      cookies().set(TOKEN_COOKIE_NAME as string, TOKEN, {
         expires: Date.now() + COOKIE_EXPIRES_WEEK,
       })
-
-      const requestUrl = new URL(request.url)
-      return redirect(requestUrl.origin)
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
-      throw new Error('github auth TOKEN hasnt recived')
+      REGISTRATION_URL.searchParams.set('errorMessage', RU_MESSAGES.tokenError)
+      return redirect(REGISTRATION_URL.href)
     }
   }
 
-  const requestUrl = new URL(request.url)
-  const registratoinUrl = new URL(requestUrl.origin, '/registration')
-  return redirect(registratoinUrl.href)
+  return redirect(REQUEST_ORIGIN)
 }
