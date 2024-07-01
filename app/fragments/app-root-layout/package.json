@@ -9,6 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/environment": "workspace:*",
+    "@ui/error-message": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {
