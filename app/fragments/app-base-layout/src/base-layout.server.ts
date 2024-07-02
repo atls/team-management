@@ -1,10 +1,10 @@
-import type { GetViewerQuery }  from '@globals/data'
-
 // @ts-ignore:next-line
 import { cookies }              from 'next/headers'
 // @ts-ignore:next-line
 import { redirect }             from 'next/navigation'
 
+import { GET_USERS }            from '@globals/data'
+import { GetViewerQuery }       from '@globals/data'
 import { GET_VIEWER }           from '@globals/data'
 import { octokitGraphqlClient } from '@globals/data'
 
@@ -14,7 +14,8 @@ export const BaseLayoutServer = async () => {
   try {
     const client = octokitGraphqlClient(token)
     const response = (await client(GET_VIEWER)) as GetViewerQuery
-
+    // const response2 = await client(GET_USERS)
+    // console.log(response2)
     const { viewer } = response
     return viewer
   } catch (e: any) {

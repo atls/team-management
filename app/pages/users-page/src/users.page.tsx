@@ -1,32 +1,37 @@
 'use client'
 
-import { graphql }          from '@octokit/graphql'
+import React                    from 'react'
+// @ts-ignore:next-line
+import { cookies }              from 'next/headers'
 
-import React                from 'react'
-import { Octokit }          from 'octokit'
+import { UserCard }             from '@app/user-card'
+import { UsersGrid }            from '@app/users-grid'
+import { GET_USERS }            from '@globals/data'
+import { octokitGraphqlClient } from '@globals/data'
 
-import client               from '@globals/data'
-import { UserCard }         from '@app/user-card'
-import { UsersGrid }        from '@app/users-grid'
-import { GET_USERS }        from '@globals/data'
-import { useOrganizations } from '@globals/data'
-
-import { UserData }         from './users.interfaces.js'
+import { UserData }             from './users.interfaces.js'
 
 const Users: React.FC = async () => {
-  const octokit = new Octokit({
-    auth: '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',
-  })
-  const { dataOrg } = useOrganizations()
-  console.log(dataOrg)
-  const orgData = await octokit.graphql(GET_USERS)
+  const { TOKEN_COOKIE_NAME } = process.env
+  // const token = cookies().get(TOKEN_COOKIE_NAME as string).value
+
+  const token =
+    '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'
+  const client = octokitGraphqlClient(token)
+
+  // const { dataOrg } = useOrganizations()
+
+  const orgData = await client(GET_USERS)
+
   console.log(orgData)
-  const allUsers = orgData.organization.teams.nodes[0].members.nodes
-  // console.log(allUsers)
+  const dict = {}
+  const teams = orgData.organization.teams.nodes.map((org) => org)
+  const teamMembers = teams.flatMap((team) => team.members.nodes)
+  const uniqUsers = teamMembers.filter(({ id }) => !dict[id] && (dict[id] = 1))
 
   return (
     <UsersGrid>
-      {allUsers?.map((user) => (
+      {uniqUsers?.map((user) => (
         <UserCard
           key={user?.id}
           avatar={user?.avatarUrl}

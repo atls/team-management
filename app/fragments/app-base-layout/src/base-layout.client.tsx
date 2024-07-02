@@ -31,6 +31,7 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
         <Column
           maxWidth={theme.spaces.extraSuperLarge}
           margin={theme.spaces.horizontalAutoMargin}
+          padding={'0 20px 0'}
           gap={theme.spaces.large}
           justifyContent='flex-start'
           alignItems='flex-start'

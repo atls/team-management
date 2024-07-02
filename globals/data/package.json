@@ -13,11 +13,13 @@
     "@graphql-codegen/typescript-resolvers": "4.0.6",
     "@graphql-typed-document-node/core": "3.2.0",
     "@octokit/graphql": "8.1.1",
-    "graphql": "15.8.0"
+    "graphql": "15.8.0",
+    "octokit": "4.0.2"
   },
   "peerDependencies": {
     "@octokit/graphql": "*",
     "graphql": "*",
+    "octokit": "*",
     "react": "*"
   }
 }
