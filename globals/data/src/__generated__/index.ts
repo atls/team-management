@@ -1,3 +1,2 @@
-export * from './fragment-masking.js'
-export * from './graphql.js'
-export * from './gql.js'
+export * from "./fragment-masking";
+export * from "./gql";
