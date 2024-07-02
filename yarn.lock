@@ -428,6 +428,7 @@ __metadata:
     "@app/organization-card-grid-fragment": "workspace:*"
     "@app/theme-selector": "workspace:*"
     "@faker-js/faker": "npm:8.4.1"
+    "@globals/data": "workspace:*"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"

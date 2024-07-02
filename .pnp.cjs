@@ -1335,6 +1335,7 @@ const RAW_RUNTIME_STATE =
           ["@app/organization-card-grid-fragment", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/app-organization-card-grid"],\
           ["@app/theme-selector", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/app-theme-selector"],\
           ["@faker-js/faker", "npm:8.4.1"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/styled-system", null],\
@@ -1359,6 +1360,7 @@ const RAW_RUNTIME_STATE =
           ["@app/organization-card-grid-fragment", "virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:app/fragments/app-organization-card-grid"],\
           ["@app/theme-selector", "virtual:ca9304aaa144daf7672bf46f125963ee2a294dcce3e9fc7e63b1c6475038612cfb03bfcde4e2dfcce83ec07e3ba7ea44203ac4fddf33b6ee728995b9b84bbdbe#workspace:app/fragments/app-theme-selector"],\
           ["@faker-js/faker", "npm:8.4.1"],\
+          ["@globals/data", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:globals/data"],\
           ["@ui/sidebar", "virtual:63934ca82384adee32294b423f9995ab17c77e577e146a692094f48024661f4f336907dfc20a17d5ba2966b4ced2a882aad38721518b07bad18e4859338efc44#workspace:ui/sidebar"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:18.3.1"],\
