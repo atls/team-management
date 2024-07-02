@@ -15,7 +15,7 @@ const Users: React.FC = async () => {
   const { TOKEN_COOKIE_NAME } = process.env
   // const token = cookies().get(TOKEN_COOKIE_NAME as string).value
   const { NEXT_MY_TOKEN } = process.env
-  const token = NEXT_MY_TOKEN
+  const token = '234d7e0689b3f86506133b082896aa95c6fdf341'
   const client = octokitGraphqlClient(token as string)
 
   // const { dataOrg } = useOrganizations()
