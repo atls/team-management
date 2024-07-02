@@ -14,10 +14,9 @@ import { UserData }             from './users.interfaces.js'
 const Users: React.FC = async () => {
   const { TOKEN_COOKIE_NAME } = process.env
   // const token = cookies().get(TOKEN_COOKIE_NAME as string).value
-
-  const token =
-    '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'
-  const client = octokitGraphqlClient(token)
+  const { NEXT_MY_TOKEN } = process.env
+  const token = NEXT_MY_TOKEN
+  const client = octokitGraphqlClient(token as string)
 
   // const { dataOrg } = useOrganizations()
 
