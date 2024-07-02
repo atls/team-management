@@ -1,5 +1,5 @@
 export interface OrganizationsModalProps {
-  organizationsData: Organization[]
+  organizationsData?: Organization[]
   open: boolean
   onBackdropClick: () => void
 }
@@ -7,4 +7,5 @@ export interface OrganizationsModalProps {
 export interface Organization {
   name: string
   organizationLogo: string
+  avatarUrl: string
 }

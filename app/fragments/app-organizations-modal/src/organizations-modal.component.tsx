@@ -46,8 +46,8 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
           alignItems='flex-start'
           maxWidth={theme.spaces.largeDefaultIncreased}
         >
-          {organizationsData.map((org: Organization) => (
-            <AnimatedCard img={org.organizationLogo} organization={org.name} />
+          {organizationsData?.map((org: Organization) => (
+            <AnimatedCard img={org.avatarUrl} organization={org.name} />
           ))}
         </Box>
 

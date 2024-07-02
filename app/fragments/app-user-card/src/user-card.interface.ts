@@ -1,11 +1,11 @@
 export interface UserCardProps {
   name: string
-  position: string
+  position?: string
   avatar: string
-  organizations: string | number
-  organizationsData: Organization[]
-  time: string
-  services: CheckboxInt[]
+  organizations?: string | number
+  organizationsData?: Organization[]
+  time?: string
+  services?: CheckboxInt[]
 }
 
 interface Organization {
