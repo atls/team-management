@@ -1,14 +1,14 @@
-import React                       from 'react'
-import { FC }                      from 'react'
+import React                        from 'react'
+import { FC }                       from 'react'
 
-import { OrganizationCard }        from '@app/organization-card-fragment'
-import { OrganizationDataType }    from '@app/organization-card-fragment'
-import { OrganizationCardGrid }    from '@app/organization-card-grid-fragment'
+import { OrganizationCard }         from '@app/organization-card-fragment'
+import { OrganizationDataType }     from '@app/organization-card-fragment'
+import { OrganizationCardGrid }     from '@app/organization-card-grid-fragment'
 
-import { ORGANIZATIONS_TEST_DATA } from './organizations-page.constants.js'
+import { getOrganizationsPageData } from './get-organizations-page-data.js'
 
-const OrganizationsPage: FC = () => {
-  const organizationsData = ORGANIZATIONS_TEST_DATA
+const OrganizationsPage: FC = async () => {
+  const organizationsData = await getOrganizationsPageData()
 
   return (
     <OrganizationCardGrid>
