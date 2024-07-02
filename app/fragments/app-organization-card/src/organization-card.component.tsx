@@ -25,11 +25,11 @@ import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
-    organizationId,
-    organizationTitle,
-    organizationDescription,
-    organizationMembersQuantity,
-    organizationCoverSrc,
+    id: organizationId,
+    name: organizationTitle,
+    description: organizationDescription,
+    membersWithRole: { totalCount: organizationMembersQuantity },
+    avatarUrl: organizationCoverSrc,
   } = organizationData
 
   const [isAddMemberToOrganizationModalOpen, setAddMemberToOrganizationModalOpen] =
