@@ -12,6 +12,7 @@
     "@app/organization-card-grid-fragment": "workspace:*",
     "@app/theme-selector": "workspace:*",
     "@globals/data": "workspace:*",
+    "@globals/interfaces": "workspace:*",
     "@ui/sidebar": "workspace:*"
   },
   "devDependencies": {

@@ -5,7 +5,7 @@ import { OrganizationCard }         from '@app/organization-card-fragment'
 import { OrganizationDataType }     from '@app/organization-card-fragment'
 import { OrganizationCardGrid }     from '@app/organization-card-grid-fragment'
 
-import { getOrganizationsPageData } from './get-organizations-page-data.js'
+import { getOrganizationsPageData } from './get-organizations-page-data.hook.js'
 
 const OrganizationsPage: FC = async () => {
   const organizationsData = await getOrganizationsPageData()
