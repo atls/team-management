@@ -11,6 +11,7 @@ const GET_VIEWER_ORGANIZATIONS = /* GraphQL */ `
           membersWithRole(first: $organizationMembersLimit) {
             totalCount
           }
+          viewerCanAdminister
           description
           avatarUrl
         }
@@ -20,3 +21,9 @@ const GET_VIEWER_ORGANIZATIONS = /* GraphQL */ `
 `
 
 export { GET_VIEWER_ORGANIZATIONS }
+
+// TODO проверь, замени
+// totalCount
+// nodes {
+// 	id
+// }
