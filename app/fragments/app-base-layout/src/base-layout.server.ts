@@ -14,8 +14,8 @@ export const BaseLayoutServer = async () => {
   try {
     const client = octokitGraphqlClient(token)
     const response = (await client(GET_VIEWER)) as GetViewerQuery
-    const response2 = await client(GET_USERS)
-    console.log(response2)
+    // const response2 = await client(GET_USERS)
+    // console.log(response2)
     const { viewer } = response
     return viewer
   } catch (e: any) {

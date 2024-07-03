@@ -15,22 +15,21 @@ const Users: React.FC = async () => {
   const { TOKEN_COOKIE_NAME } = process.env
   // const token = cookies().get(TOKEN_COOKIE_NAME as string).value
   const { NEXT_MY_TOKEN } = process.env
-  const token = '234d7e0689b3f86506133b082896aa95c6fdf341'
-  const client = octokitGraphqlClient(token as string)
+  const token =
+    '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'
+  const client = octokitGraphqlClient(token)
 
   // const { dataOrg } = useOrganizations()
 
   const orgData = await client(GET_USERS)
 
   console.log(orgData)
-  const dict = {}
-  const teams = orgData.organization.teams.nodes.map((org) => org)
-  const teamMembers = teams.flatMap((team) => team.members.nodes)
-  const uniqUsers = teamMembers.filter(({ id }) => !dict[id] && (dict[id] = 1))
+  const users = orgData.organization.membersWithRole.nodes
+  console.log(users)
 
   return (
     <UsersGrid>
-      {uniqUsers?.map((user) => (
+      {users?.map((user) => (
         <UserCard
           key={user?.id}
           avatar={user?.avatarUrl}
