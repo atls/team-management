@@ -2,9 +2,10 @@ import styled      from '@emotion/styled'
 
 import { styleFn } from 'styled-system'
 
-export const scrollContainerBaseStyles: styleFn = ({ theme, height }) => ({
+export const scrollContainerBaseStyles: styleFn = ({ theme, height, maxHeight }) => ({
   width: theme.spaces.fullWidth,
   height,
+  maxHeight,
   overflowY: 'scroll',
   scrollbarWidth: 'thin',
   scrollbarColor: theme.colors.scroll.default.scrollbarColor,
