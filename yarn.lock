@@ -356,6 +356,7 @@ __metadata:
     "@app/users-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@globals/interfaces": "workspace:*"
     "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
@@ -429,6 +430,7 @@ __metadata:
     "@app/theme-selector": "workspace:*"
     "@faker-js/faker": "npm:8.4.1"
     "@globals/data": "workspace:*"
+    "@globals/interfaces": "workspace:*"
     "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -621,11 +623,14 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@faker-js/faker": "npm:8.4.1"
+    "@globals/data": "workspace:*"
+    "@globals/interfaces": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
+    "@ui/condition": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/dropdown": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -2309,6 +2314,12 @@ __metadata:
 "@globals/environment@workspace:*, @globals/environment@workspace:globals/environment":
   version: 0.0.0-use.local
   resolution: "@globals/environment@workspace:globals/environment"
+  languageName: unknown
+  linkType: soft
+
+"@globals/interfaces@workspace:*, @globals/interfaces@workspace:globals/interfaces":
+  version: 0.0.0-use.local
+  resolution: "@globals/interfaces@workspace:globals/interfaces"
   languageName: unknown
   linkType: soft
 
