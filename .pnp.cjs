@@ -11921,6 +11921,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:a33664746157e6f8fb5ebaea83ea1206ddf784b549b21a1f00149cc4f62cc675aec07c1dd3fc44c6c1b2efbd964771a408c4e1cf5c4a92fcc3b99369b84baf52#npm:0.1.1"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -11963,6 +11964,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:632aaeeaa6ddeeffd8347e5b713e2d49ac17bf33010abc77daa85820c1deab7063ccdb53276a65fefcfe53a9d12b3b94c5de50e756562c8c6cc3f817ce3670bc#npm:0.1.1"],\
           ["@emotion/react", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.4"],\
           ["@emotion/styled", "virtual:000bc53a6de20a3b411663b45549a3b6d809d1edfa87bd86e4608125212e9392482d38331d6aa107d7cf2d71f10a22eae12a37a98999f20c198287bf172ab0e5#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -12005,6 +12007,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:a33664746157e6f8fb5ebaea83ea1206ddf784b549b21a1f00149cc4f62cc675aec07c1dd3fc44c6c1b2efbd964771a408c4e1cf5c4a92fcc3b99369b84baf52#npm:0.1.1"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -12046,6 +12049,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:a33664746157e6f8fb5ebaea83ea1206ddf784b549b21a1f00149cc4f62cc675aec07c1dd3fc44c6c1b2efbd964771a408c4e1cf5c4a92fcc3b99369b84baf52#npm:0.1.1"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -12087,6 +12091,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:a2094a29ba4c1e47a6d3e55d8967f8323b321305487ba9e9d459b30eada755dbd426222cd6ae691dd74f029be89fda6092faeedbae41b8047263bd389dfb66e5#npm:0.1.1"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
           ["@emotion/styled", "virtual:6df492214aef7de2c9fc34809e9b7a0b931551a0df294bb3e406e88816a1d4c20cd5ca864a740a6dd53ff063c1769ca96cc1ca879b0eea77de6cbf954d021def#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -12129,6 +12134,7 @@ const RAW_RUNTIME_STATE =
           ["@atls-ui-parts/layout", "virtual:9ee213c5482b05bf4c74cca522a2297d3335673d2f0d5fad9d7989e73aee1d19373b97715aa2dd9827306693487b0821a9b5f8fcbd1ea187186f27bb1dbb267f#npm:0.1.1"],\
           ["@emotion/react", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.4"],\
           ["@emotion/styled", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.5"],\
+          ["@globals/data", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:globals/data"],\
           ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/condition", "virtual:e638095173f04580c2ab97fface872e070b090feea9065809b69a616b54d2f8cef2120849ef7b28780f1d0367e1336044cea4f9600853c255ffe62ea7a9d6185#workspace:ui/condition"],\
           ["@ui/icons", "virtual:209c9636f71a6ea21774b537eeb4a5e90c70a908e2a7c713875f332377dfe55e00a7ed2779584cb707a7e70c407f722859e441616776bca7b47e1c881d179bee#workspace:ui/icons"],\
