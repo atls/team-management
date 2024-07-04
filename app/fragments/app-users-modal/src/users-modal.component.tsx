@@ -49,8 +49,11 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
   }, [open])
 
   const handlerDeleteMemberClick = (removeMemberId: number) => {
-    const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
-    setMembersData(newMembersData)
+    // TODO query to delete member -> than delete from cli
+    console.log(removeMemberId)
+
+    // const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
+    // setMembersData(newMembersData)
   }
 
   // IDEA передавать в список количество сотрудников и забивать пустыми элементами.
@@ -81,6 +84,7 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
             <Member
               memberData={memberData}
               onDeleteMemberClick={handlerDeleteMemberClick}
+              viewerCanAdminister={viewerCanAdminister}
               devider={!(memberIndex === membersData.length - 1)}
             />
           ))}

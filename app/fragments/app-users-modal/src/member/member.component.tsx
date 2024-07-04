@@ -16,7 +16,12 @@ import { ThemeType }      from '@ui/theme'
 import { MemberDorpdown } from './member-dropdown/member-dropdown.component.js'
 
 // TODO interface
-export const Member: FC<any> = memo(({ memberData, onDeleteMemberClick, devider = true }) => {
+export const Member: FC<any> = memo(({
+  memberData,
+  onDeleteMemberClick,
+  devider = true,
+  viewerCanAdminister,
+}) => {
   const {
     id: memberId,
     url: memberUrl,
@@ -25,10 +30,9 @@ export const Member: FC<any> = memo(({ memberData, onDeleteMemberClick, devider 
     avatarUrl: memberAvatarSrc,
   } = memberData
 
-  console.log(memberData)
-
   const theme = useTheme() as ThemeType
 
+  // TODO url to user profile on text
   /* TODO change text to locales */
   /* TODO if administer -> dropdown button */
 
@@ -58,7 +62,9 @@ export const Member: FC<any> = memo(({ memberData, onDeleteMemberClick, devider 
             </Text>
           </Column>
         </Box>
-        <MemberDorpdown memberId={memberId} onDeleteMemberClick={onDeleteMemberClick} />
+        <Condition match={viewerCanAdminister}>
+          <MemberDorpdown memberId={memberId} onDeleteMemberClick={onDeleteMemberClick} />
+        </Condition>
       </Row>
       <Condition match={devider}>
         <Box height={theme.spaces.miniReduced} width='100%'>
