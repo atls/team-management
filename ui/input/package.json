@@ -8,6 +8,7 @@
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
     "@atls-ui-parts/layout": "0.1.1",
+    "@globals/data": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",

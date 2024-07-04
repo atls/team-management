@@ -10,7 +10,7 @@ import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 
-import { InputValueDispatchContext }        from '../select-input.context.js'
+import { InputValueDispatchContext }        from '../github-search-users-input.context.js'
 import { SelectedItemsDispatchContext }     from '../selected-items/index.js'
 import { SuggestedItemsDispatchContext }    from '../suggested-items/index.js'
 import { SuggestedItemProps }               from './suggested-item.interfaces.js'

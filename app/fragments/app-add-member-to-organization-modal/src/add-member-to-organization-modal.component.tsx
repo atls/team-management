@@ -4,10 +4,11 @@ import React                                 from 'react'
 import { FC }                                from 'react'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
+import { useEffect }                         from 'react'
 import { useIntl }                           from 'react-intl'
 
 import { Button }                            from '@ui/button'
-import { SelectInput }                       from '@ui/input'
+import { GithubSearchUsersInput }            from '@ui/input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
@@ -42,9 +43,19 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
+  // TODO у каждой организации могут быть разные команды
+  // нужно выводить свитчи в зависимости от тех команд, которые есть в организации
+
+  // TODO button click hook
+  // - добавление юсера в организацию и конкретную команду
+  // - если не выбранна команда, можно добавлять юсера просто в организацию.
+  // в общее лобби
+
   useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
-  const usersData = USERS_TEST_DATA
+  useEffect(() => {
+    console.log(selectedUsers)
+  }, [selectedUsers])
 
   return (
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
@@ -52,9 +63,8 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
           {formatMessage({ id: 'add-member-to-organization-modal.header' })}
         </Text>
-        <SelectInput
+        <GithubSearchUsersInput
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
-          searchItems={usersData}
           parentHook={setSelectedUsers}
         />
         <Row
