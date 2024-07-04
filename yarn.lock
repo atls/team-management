@@ -201,6 +201,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@faker-js/faker": "npm:8.4.1"
+    "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"

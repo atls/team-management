@@ -622,6 +622,7 @@ const RAW_RUNTIME_STATE =
           ["@app/add-member-to-organization-modal-fragment", "virtual:1c2e05c3045e72b582ea14f300ebc51c9efbabe4bd2b39797ee52f88ebdef087f6c705012a3fee399378edcc2364f330d1c9f79d2b4f41235f1094df2b4f3503#workspace:app/fragments/app-add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@faker-js/faker", "npm:8.4.1"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -653,6 +654,7 @@ const RAW_RUNTIME_STATE =
           ["@app/add-member-to-organization-modal-fragment", "virtual:58f397877da013abe61c6e7b4095c72ca7be8e5d813013270ecf6035449f7f974dc3b7b307cc067a9cb066604ead62db52c701899a2ae69a81a53f8c422f04b4#workspace:app/fragments/app-add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@faker-js/faker", "npm:8.4.1"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/faker-js__faker", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -683,6 +685,7 @@ const RAW_RUNTIME_STATE =
           ["@app/add-member-to-organization-modal-fragment", "workspace:app/fragments/app-add-member-to-organization-modal"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@faker-js/faker", "npm:8.4.1"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/button", "virtual:6ec2f30da1fac88192d31ee2664563f04521a52ec0b895ac8774e80a8c7ae27ad8de2eff2a70735ee916d0cad63f5e53102572df69e9460cec87af5c18b685b7#workspace:ui/button"],\
