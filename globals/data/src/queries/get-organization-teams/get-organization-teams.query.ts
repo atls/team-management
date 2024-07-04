@@ -1,17 +1,13 @@
 // TODO добавить количество участников в запрос
-// TODO add linit to query on cli
 
-const GET_ORGANIZATION_MEMBERS = /* GraphQL */ `
+const GET_ORGANIZATION_TEAMS = /* GraphQL */ `
   query GetOrganizationMembers($organizationId: ID!) {
     node(id: $organizationId) {
       ... on Organization {
-        membersWithRole(first: 100) {
+        teams(first: 16) {
           nodes {
             id
-            url
-            avatarUrl
             name
-            bio
           }
         }
       }
@@ -19,4 +15,4 @@ const GET_ORGANIZATION_MEMBERS = /* GraphQL */ `
   }
 `
 
-export { GET_ORGANIZATION_MEMBERS }
+export { GET_ORGANIZATION_TEAMS }

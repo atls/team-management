@@ -15,12 +15,12 @@ import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
 
-import { USERS_TEST_DATA }                   from './add-member-to-organization-modal.constants.js'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
 import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
+import { getOrganizatoinTeamsData }          from './get-organizations-team.hook.js'
 import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
@@ -34,12 +34,13 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const [isButtonActive, setButtonActive] = useState<boolean>(false)
   const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
   const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
+  const [teamsData, setTeamsData] = useState([])
 
-  const handlerSwitch: HandlerSwitchType = (state, category) => {
-    if (checkedSwitches.includes(category as never)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
+  const handlerSwitch: HandlerSwitchType = (state, teamId) => {
+    if (checkedSwitches.includes(teamId as never)) {
+      setCheckedSwitches(checkedSwitches.filter((c) => c !== (teamId as never)))
     } else {
-      setCheckedSwitches(checkedSwitches.concat([category as never]))
+      setCheckedSwitches(checkedSwitches.concat([teamId as never]))
     }
   }
 
@@ -53,9 +54,18 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
 
+  // TODO зачем этот эффект?
   useEffect(() => {
-    console.log(selectedUsers)
+    // console.log(selectedUsers)
   }, [selectedUsers])
+
+  useEffect(() => {
+    if (open) {
+      getOrganizatoinTeamsData(organizationId).then((responseTeamsData) => {
+        setTeamsData(responseTeamsData)
+      })
+    }
+  }, [open])
 
   return (
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
@@ -77,10 +87,9 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           <Text fontSize='normal.semiIncreased' width='100%'>
             {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
           </Text>
-          <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
-          <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
-          <TeamSwitch teamName='Backend' onChange={(e) => handlerSwitch(e, 'backend')} />
-          <TeamSwitch teamName={`Guest's`} onChange={(e) => handlerSwitch(e, 'guests')} />
+          {teamsData.map(({ id: teamId, name: teamName }) => (
+            <TeamSwitch teamName={teamName} onChange={(e) => handlerSwitch(e, teamId)} />
+          ))}
         </Row>
         <Row justifyContent='end'>
           <Button

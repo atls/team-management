@@ -6,6 +6,7 @@
   "type": "module",
   "main": "src/index.ts",
   "dependencies": {
+    "@globals/data": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/input": "workspace:*",
     "@ui/layout": "workspace:*",
