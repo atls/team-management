@@ -34,6 +34,10 @@ export const ErrorMessageProvider: FC<ErrorMessageProps> = ({ children }) => {
     }
   }, [])
 
+  useEffect(() => {
+    setHide(false)
+  }, [errorMessage])
+
   setTimeout(() => {
     setHide(true)
   }, HIDE_DELAY_15SEC)

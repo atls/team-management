@@ -19,6 +19,7 @@ import { errorMessageReducer }         from './error-message.reducer.js'
 export const ErrorMessage: FC<ErrorMessageProps> = ({ errorText, errorCode }) => {
   const [isHide, setHide] = useState(false)
 
+  // TODO delete file
   const [errorMessage, errorMessageDispatch] = useReducer(errorMessageReducer, [])
 
   setTimeout(() => {
