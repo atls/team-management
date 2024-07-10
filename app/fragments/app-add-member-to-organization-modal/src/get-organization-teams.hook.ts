@@ -14,11 +14,13 @@ export const getOrganizatoinTeamsData = (organizationId) => {
       const response = await client(GET_ORGANIZATION_TEAMS, {
         organizationId,
       })
+
       const {
         node: {
           teams: { nodes: teamsData },
         },
       } = response
+
       resolve(teamsData)
     } catch (e) {
       // TODO catch error
