@@ -205,6 +205,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
+    "@ui/error-message": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
