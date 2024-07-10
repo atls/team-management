@@ -5,9 +5,11 @@ import { FC }                                from 'react'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
+import { useContext }                        from 'react'
 import { useIntl }                           from 'react-intl'
 
 import { Button }                            from '@ui/button'
+import { ErrorMessageDispatchContext }       from '@ui/error-message'
 import { GithubSearchUsersInput }            from '@ui/input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
@@ -32,6 +34,8 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
 
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
@@ -55,20 +59,36 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     // TODO change var name
     const token = document.cookie.split('=').at(-1)
 
-    for (const selectedUser of selectedUsers) {
-      const { githubUserId } = selectedUser
+    try {
+      throw new Error('invite user error')
+      for (const selectedUser of selectedUsers) {
+        const { githubUserId } = selectedUser
 
-      await inviteMemberToOrgaization({
-        token,
-        organizationLogin,
-        githubUserId,
-        teamIds: checkedSwitches,
+        await inviteMemberToOrgaization({
+          token,
+          organizationLogin,
+          githubUserId,
+          teamIds: checkedSwitches,
+        })
+      }
+      // TODO оповестить юсера об успешном выполнении запроса
+      onBackdropClick()
+    } catch (e) {
+      console.error(e.message)
+      errorMessageDispatch({
+        type: 'set',
+        // errorMessage: { text: 'test-error-text', code: 777 },
+        //     eslint-disable-next-line react-hooks/exhaustive-deps
+        errorMessage: { text: e.message },
       })
+      // TODO оповестить юсера об ошибке
+
+      // как лучше сделать вывод ошибок на клиент?
+      // в каждом trycatch блоке выводить ошибку через dispatch или на самом высоком уровне сделать обертку?
+      // можно объекту ошибки дать специальное свойство, напрмер ui
+      // ошибки с этим свойством будут отображаться в интерфейсе
     }
   }
-
-  // TODO у каждой организации могут быть разные команды
-  // нужно выводить свитчи в зависимости от тех команд, которые есть в организации
 
   // TODO button click hook
   // - добавление юсера в организацию и конкретную команду
@@ -79,11 +99,12 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   // TODO зачем этот эффект?
   useEffect(() => {
-    console.log(selectedUsers)
+    if (selectedUsers.length) {
+      setButtonActive(true)
+    }
   }, [selectedUsers])
 
   useEffect(() => {
-    console.log(organizationData)
     if (open) {
       getOrganizatoinTeamsData(organizationId).then((responseTeamsData) => {
         console.log(responseTeamsData)
@@ -118,7 +139,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         </Row>
         <Row justifyContent='end'>
           <Button
-            // disabled={!isButtonActive}
+            disabled={!isButtonActive}
             horizontalLocation='right'
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'

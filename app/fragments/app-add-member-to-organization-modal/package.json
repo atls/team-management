@@ -8,6 +8,7 @@
   "dependencies": {
     "@globals/data": "workspace:*",
     "@ui/button": "workspace:*",
+    "@ui/error-message": "workspace:*",
     "@ui/input": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
