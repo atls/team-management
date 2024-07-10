@@ -6,6 +6,7 @@ const GET_VIEWER_ORGANIZATIONS = /* GraphQL */ `
       organizations(first: $organizationsLimit) {
         nodes {
           id
+          login
           name
           url
           membersWithRole(first: $organizationMembersLimit) {

@@ -5,6 +5,7 @@ const SEARCH_USER = /* GraphQL */ `
         node {
           ... on User {
             id
+            databaseId
             name
             avatarUrl
             email

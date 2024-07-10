@@ -7,6 +7,7 @@ const GET_ORGANIZATION_TEAMS = /* GraphQL */ `
         teams(first: 16) {
           nodes {
             id
+            databaseId
             name
           }
         }

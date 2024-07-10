@@ -8,6 +8,7 @@ const GET_ORGANIZATION_MEMBERS = /* GraphQL */ `
         membersWithRole(first: 100) {
           nodes {
             id
+            login
             url
             avatarUrl
             name
