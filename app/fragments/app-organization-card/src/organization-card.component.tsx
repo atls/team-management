@@ -116,7 +116,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
             </Button>
 
             <AddMemberToOrganizationModal
-              organizationId={organizationId}
+              organizationData={organizationData}
               open={isAddMemberToOrganizationModalOpen}
               onBackdropClick={handlerAddOrganizationMemberClick}
             />
