@@ -12,9 +12,9 @@ export const inviteMemberToOrgaization = async ({
     auth: token,
   })
 
-	      console.log(token)
-      console.log(organizationLogin)
-      console.log(githubUserId)
+  console.log(token)
+  console.log(organizationLogin)
+  console.log(githubUserId)
 
   await octokit.request('POST /orgs/{org}/invitations', {
     org: organizationLogin,
