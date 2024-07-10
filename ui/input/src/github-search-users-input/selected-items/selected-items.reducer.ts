@@ -4,7 +4,9 @@ export function selectedItemsReducer(selectedItems, action) {
       return [...selectedItems, action.itemData]
     }
     case 'deleted': {
-      return selectedItems.filter((selectedItem) => selectedItem.id !== action.itemData.id)
+      return selectedItems.filter(
+        (selectedItem) => selectedItem.githubUserId !== action.itemData.githubUserId
+      )
     }
     default: {
       throw new Error(`Unknown action: ${action.type}`)
