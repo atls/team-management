@@ -14,33 +14,53 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
+import { inviteMemberToOrgaization }         from '@globals/data'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
 import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
-import { getOrganizatoinTeamsData }          from './get-organizations-team.hook.js'
+import { getOrganizatoinTeamsData }          from './get-organization-teams.hook.js'
 import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
   onBackdropClick,
-  organizationId,
+  organizationData,
 }) => {
+  const { id: organizationId } = organizationData
+  const { login: organizationLogin } = organizationData
+
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState<boolean>(false)
   const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
   const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
+  // const [selectedTeams, setSelectedTeams] = useState<SelectedUsersType>([])
   const [teamsData, setTeamsData] = useState([])
 
   const handlerSwitch: HandlerSwitchType = (state, teamId) => {
+    console.log(teamId)
+
     if (checkedSwitches.includes(teamId as never)) {
       setCheckedSwitches(checkedSwitches.filter((c) => c !== (teamId as never)))
     } else {
       setCheckedSwitches(checkedSwitches.concat([teamId as never]))
+    }
+  }
+
+  const handlerInviteButtonClick = async () => {
+    // TODO change var name
+    console.log(checkedSwitches)
+
+    const token = document.cookie.split('=').at(-1)
+
+    for (const selectedUser of selectedUsers) {
+      const { githubUserId } = selectedUser
+
+      await inviteMemberToOrgaization({ token, organizationLogin, githubUserId })
     }
   }
 
@@ -56,12 +76,14 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   // TODO зачем этот эффект?
   useEffect(() => {
-    // console.log(selectedUsers)
+    console.log(selectedUsers)
   }, [selectedUsers])
 
   useEffect(() => {
+    console.log(organizationData)
     if (open) {
       getOrganizatoinTeamsData(organizationId).then((responseTeamsData) => {
+        console.log(responseTeamsData)
         setTeamsData(responseTeamsData)
       })
     }
@@ -87,16 +109,17 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           <Text fontSize='normal.semiIncreased' width='100%'>
             {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
           </Text>
-          {teamsData.map(({ id: teamId, name: teamName }) => (
+          {teamsData.map(({ databaseId: teamId, name: teamName }) => (
             <TeamSwitch teamName={teamName} onChange={(e) => handlerSwitch(e, teamId)} />
           ))}
         </Row>
         <Row justifyContent='end'>
           <Button
-            disabled={!isButtonActive}
+            // disabled={!isButtonActive}
             horizontalLocation='right'
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
+            onClick={handlerInviteButtonClick}
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               {formatMessage({ id: 'add-member-to-organization-modal.button' })}
