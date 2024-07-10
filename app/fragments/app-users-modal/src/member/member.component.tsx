@@ -24,6 +24,7 @@ export const Member: FC<any> = memo(({
 }) => {
   const {
     id: memberId,
+    login: memberLogin,
     url: memberUrl,
     name: memberName,
     bio: memberDescription,
@@ -63,7 +64,7 @@ export const Member: FC<any> = memo(({
           </Column>
         </Box>
         <Condition match={viewerCanAdminister}>
-          <MemberDorpdown memberId={memberId} onDeleteMemberClick={onDeleteMemberClick} />
+          <MemberDorpdown memberLogin={memberLogin} onDeleteMemberClick={onDeleteMemberClick} />
         </Condition>
       </Row>
       <Condition match={devider}>

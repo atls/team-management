@@ -15,6 +15,7 @@ import { Modal }                      from '@ui/modal'
 import { Scroll }                     from '@ui/scroll'
 import { Text }                       from '@ui/text'
 import { ThemeType }                  from '@ui/theme'
+import { removeOrganizationMember }   from '@globals/data'
 
 import { Member }                     from './member/index.js'
 import { MemberDataType }             from './users-modal.interfaces.js'
@@ -24,7 +25,8 @@ import { getOrganizatoinMembersData } from './get-organization-members-data.hook
 const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizationData }) => {
   const {
     id: organizationId,
-    name: organizationTitle,
+    login: organizationLogin,
+    name: organizationName,
     description: organizationDescription,
     membersWithRole: { totalCount: membersCount },
     avatarUrl: organizationCoverSrc,
@@ -42,18 +44,24 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
   // TODO вынести в хук
   useEffect(() => {
     if (open && !membersData.length) {
-      getOrganizatoinMembersData(organizationId, setMembersData).then((responseMemebersData) => {
+      getOrganizatoinMembersData(organizationId).then((responseMemebersData) => {
         setMembersData(responseMemebersData)
       })
     }
   }, [open])
 
-  const handlerDeleteMemberClick = (removeMemberId: number) => {
+  const handlerDeleteMemberClick = (removeMemberLogin: string) => {
     // TODO query to delete member -> than delete from cli
-    console.log(removeMemberId)
+    // TODO get token from cli to helpers
+    const token = document.cookie.split('=').at(-1)
 
-    // const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
-    // setMembersData(newMembersData)
+    removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(
+      () => {
+        console.log('after success remove')
+        // const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
+        // setMembersData(newMembersData)
+      }
+    )
   }
 
   // IDEA передавать в список количество сотрудников и забивать пустыми элементами.
@@ -72,7 +80,7 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
             <ImageBlock src={organizationCoverSrc} alt='organization-cover' />
           </Box>
           <Text maxWidth={theme.spaces.extraLargeDecreased} fontSize='normal.increased'>
-            {organizationTitle}
+            {organizationName}
             {organizationDescription && `, ${organizationDescription}`}
           </Text>
         </Row>

@@ -7,17 +7,20 @@ export const getOrganizatoinMembersData = (organizationId) => {
   const { TOKEN_COOKIE_NAME } = process.env
 
   const token = document.cookie.split('=').at(-1)
+
   return new Promise(async (resolve, reject) => {
     const client = octokitGraphqlClient(token)
     try {
       const response = await client(GET_ORGANIZATION_MEMBERS, {
         organizationId,
       })
+
       const {
         node: {
           membersWithRole: { nodes: membersData },
         },
       } = response
+
       resolve(membersData)
     } catch (e) {
       // TODO catch error
