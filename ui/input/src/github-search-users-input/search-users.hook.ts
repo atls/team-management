@@ -26,10 +26,17 @@ export const getSearchedUsers = async ({ searchQuery }) => {
       })
 
       const users = filtredNodes.map(({ node }) => {
-        const { id: nodeId, name: primaryInfo, email: secondaryInfo, avatarUrl: imageSrc } = node
+        const {
+          id: nodeId,
+          databaseId: githubUserId,
+          name: primaryInfo,
+          email: secondaryInfo,
+          avatarUrl: imageSrc,
+        } = node
 
         return {
           nodeId,
+          githubUserId,
           primaryInfo,
           secondaryInfo,
           imageSrc,
