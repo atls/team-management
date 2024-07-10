@@ -2303,9 +2303,11 @@ __metadata:
     "@graphql-codegen/typescript": "npm:4.0.6"
     "@graphql-codegen/typescript-resolvers": "npm:4.0.6"
     "@graphql-typed-document-node/core": "npm:3.2.0"
+    "@octokit/core": "npm:6.1.2"
     "@octokit/graphql": "npm:8.1.1"
     graphql: "npm:15.8.0"
   peerDependencies:
+    "@octokit/core": "*"
     "@octokit/graphql": "*"
     graphql: "*"
     react: "*"
@@ -3562,7 +3564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^6.0.0, @octokit/core@npm:^6.1.2":
+"@octokit/core@npm:6.1.2, @octokit/core@npm:^6.0.0, @octokit/core@npm:^6.1.2":
   version: 6.1.2
   resolution: "@octokit/core@npm:6.1.2"
   dependencies:

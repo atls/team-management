@@ -6657,8 +6657,10 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
+          ["@octokit/core", "npm:6.1.2"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
+          ["@types/octokit__core", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", null],\
           ["graphql", "npm:15.8.0"],\
@@ -6666,6 +6668,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@types/graphql",\
+          "@types/octokit__core",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6681,8 +6684,10 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
+          ["@octokit/core", "npm:6.1.2"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
+          ["@types/octokit__core", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", null],\
           ["graphql", "npm:15.8.0"],\
@@ -6691,6 +6696,7 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@octokit/graphql",\
           "@types/graphql",\
+          "@types/octokit__core",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6706,8 +6712,10 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
+          ["@octokit/core", "npm:6.1.2"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
+          ["@types/octokit__core", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", "npm:18.3.3"],\
           ["graphql", "npm:15.8.0"],\
@@ -6716,6 +6724,7 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@octokit/graphql",\
           "@types/graphql",\
+          "@types/octokit__core",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6731,8 +6740,10 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
+          ["@octokit/core", "npm:6.1.2"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["@types/graphql", null],\
+          ["@types/octokit__core", null],\
           ["@types/octokit__graphql", null],\
           ["@types/react", "npm:18.3.3"],\
           ["graphql", "npm:15.8.0"],\
@@ -6740,6 +6751,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@types/graphql",\
+          "@types/octokit__core",\
           "@types/octokit__graphql",\
           "@types/react",\
           "react"\
@@ -6755,6 +6767,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-codegen/typescript-resolvers", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:4.0.6"],\
           ["@graphql-typed-document-node/core", "virtual:98198eb3641abfed5e526998f06c91d580ade142c115563c330f4c922a4ee45b26ee87ea885b3215c93aa5d9413200612ba6e7d7c947283c5ad6967a371be3a1#npm:3.2.0"],\
+          ["@octokit/core", "npm:6.1.2"],\
           ["@octokit/graphql", "npm:8.1.1"],\
           ["graphql", "npm:15.8.0"]\
         ],\
