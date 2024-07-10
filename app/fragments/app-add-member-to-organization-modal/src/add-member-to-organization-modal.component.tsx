@@ -53,14 +53,17 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   const handlerInviteButtonClick = async () => {
     // TODO change var name
-    console.log(checkedSwitches)
-
     const token = document.cookie.split('=').at(-1)
 
     for (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
 
-      await inviteMemberToOrgaization({ token, organizationLogin, githubUserId })
+      await inviteMemberToOrgaization({
+        token,
+        organizationLogin,
+        githubUserId,
+        teamIds: checkedSwitches,
+      })
     }
   }
 
