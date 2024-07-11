@@ -1,4 +1,4 @@
 export interface ErrorMessageProps {
-  errorText: string
+  errorText?: string
   errorCode?: number
 }

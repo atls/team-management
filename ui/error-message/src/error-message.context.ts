@@ -1,6 +1,6 @@
-import { createContext } from 'react'
+import { createContext }     from 'react'
 
-// TODO interface
-// {errorText: '', errorCode: ''}
-export const ErrorMessageContext = createContext(null)
-export const ErrorMessageDispatchContext = createContext(null)
+import { ErrorMessageProps } from './error-message.interfaces.js'
+
+export const ErrorMessageContext = createContext<ErrorMessageProps>({})
+export const ErrorMessageDispatchContext = createContext<any>(null)
