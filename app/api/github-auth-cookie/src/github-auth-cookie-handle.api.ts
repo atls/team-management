@@ -20,7 +20,7 @@ export async function githubAuthCookieHandle(request: Request) {
     try {
       const TOKEN = await getGithubAuthToken(CODE)
 
-      const { TOKEN_COOKIE_NAME } = process.env
+      const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME
       cookies().set(TOKEN_COOKIE_NAME as string, TOKEN, {
         expires: Date.now() + COOKIE_EXPIRES_WEEK,
       })

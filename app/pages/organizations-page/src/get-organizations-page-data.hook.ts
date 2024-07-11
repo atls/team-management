@@ -9,8 +9,8 @@ import { ORGANIZATIONS_LIMIT }              from './organizations-page.constants
 import { ORGANIZATION_MEMBERS_LIMIT }       from './organizations-page.constants.js'
 
 export const getOrganizationsPageData = async () => {
-  const { TOKEN_COOKIE_NAME } = process.env
-  const token = cookies().get(TOKEN_COOKIE_NAME as string).value
+  const { NEXT_PUBLIC_TOKEN_COOKIE_NAME } = process.env
+  const token = cookies().get(NEXT_PUBLIC_TOKEN_COOKIE_NAME as string).value
   try {
     const client = octokitGraphqlClient(token)
     const response = (await client(GET_VIEWER_ORGANIZATIONS, {

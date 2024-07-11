@@ -1,18 +1,21 @@
+import { getCookieClient }        from '@globals/helpers'
+
 import { GET_ORGANIZATION_TEAMS } from '@globals/data'
 import { octokitGraphqlClient }   from '@globals/data'
 
-export const getOrganizatoinTeamsData = (organizationId) => {
-  // TODO use token name from ENV to get cookie from client
-  // TODO better cookie string split
-  // TODO cookie split func to global/helpers
-  const { TOKEN_COOKIE_NAME } = process.env
+const ORGANIZATION_TEAMS_LIMIT = 16
 
-  const token = document.cookie.split('=').at(-1)
+export const getOrganizatoinTeamsData = (organizationId) => {
+  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME
+  const { [TOKEN_COOKIE_NAME]: token } = getCookieClient(document)
+
   return new Promise(async (resolve, reject) => {
     const client = octokitGraphqlClient(token)
+
     try {
       const response = await client(GET_ORGANIZATION_TEAMS, {
         organizationId,
+        organizationTeamsLimit: ORGANIZATION_TEAMS_LIMIT,
       })
 
       const {

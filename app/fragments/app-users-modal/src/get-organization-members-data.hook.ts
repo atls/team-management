@@ -4,7 +4,7 @@ import { octokitGraphqlClient }     from '@globals/data'
 export const getOrganizatoinMembersData = (organizationId) => {
   // TODO use token name from ENV to get cookie from client
   // TODO better cookie string split
-  const { TOKEN_COOKIE_NAME } = process.env
+  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME as string
 
   const token = document.cookie.split('=').at(-1)
 

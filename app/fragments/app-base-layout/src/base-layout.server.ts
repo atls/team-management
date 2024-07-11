@@ -9,8 +9,9 @@ import { GET_VIEWER }           from '@globals/data'
 import { octokitGraphqlClient } from '@globals/data'
 
 export const BaseLayoutServer = async () => {
-  const { TOKEN_COOKIE_NAME } = process.env
-  const token = cookies().get(TOKEN_COOKIE_NAME as string).value
+  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME as string
+  const token = cookies().get(TOKEN_COOKIE_NAME).value
+
   try {
     const client = octokitGraphqlClient(token)
     const response = (await client(GET_VIEWER)) as GetViewerQuery
