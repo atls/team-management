@@ -1,17 +1,22 @@
-import { SEARCH_USER }          from '@globals/data'
-import { octokitGraphqlClient } from '@globals/data'
+import { getCookieClient }               from '@globals/helpers'
 
-const SEARCH_LIMIT = 8
+import { useContext }                    from 'react'
 
-export const getSearchedUsers = async ({ searchQuery }) => {
-  // TODO search delay
+import { SEARCH_USER }                   from '@globals/data'
+import { octokitGraphqlClient }          from '@globals/data'
 
-  const token = document.cookie.split('=').at(-1)
+import { SEARCH_USERS_LIMIT }            from './github-search-users-input.constants.js'
+import { SuggestedItemsDispatchContext } from './suggested-items/index.js'
+
+export const getSearchedUsers = async ({ searchQuery, suggestedItemsDispatch }) => {
+  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME
+  const { [TOKEN_COOKIE_NAME]: token } = getCookieClient(document)
+
   return new Promise(async (resolve, reject) => {
     const client = octokitGraphqlClient(token)
     try {
       const response = await client(SEARCH_USER, {
-        searchLimit: SEARCH_LIMIT,
+        searchLimit: SEARCH_USERS_LIMIT,
         searchQuery,
       })
 
@@ -25,7 +30,7 @@ export const getSearchedUsers = async ({ searchQuery }) => {
         return !!Object.keys(node).length
       })
 
-      const users = filtredNodes.map(({ node }) => {
+      const matchedUsers = filtredNodes.map(({ node }) => {
         const {
           id: nodeId,
           databaseId: githubUserId,
@@ -43,7 +48,13 @@ export const getSearchedUsers = async ({ searchQuery }) => {
         }
       })
 
-      resolve(users)
+      suggestedItemsDispatch({
+        type: 'change',
+        suggestedItems: matchedUsers,
+      })
+
+      resolve()
+      // resolve(users)
     } catch (e) {
       // TODO catch error
       // TODO render error on cli
