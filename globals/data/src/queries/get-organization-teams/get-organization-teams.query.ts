@@ -1,10 +1,8 @@
-// TODO добавить количество участников в запрос
-
 const GET_ORGANIZATION_TEAMS = /* GraphQL */ `
-  query GetOrganizationMembers($organizationId: ID!) {
+  query GetOrganizationMembers($organizationId: ID!, $organizationTeamsLimit: Int!) {
     node(id: $organizationId) {
       ... on Organization {
-        teams(first: 16) {
+        teams(first: $organizationTeamsLimit) {
           nodes {
             id
             databaseId
