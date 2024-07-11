@@ -16,7 +16,6 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
-import { inviteMemberToOrgaization }         from '@globals/data'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
@@ -24,7 +23,7 @@ import { CheckedSwitchesType }               from './add-member-to-organization-
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
 import { getOrganizatoinTeamsData }          from './get-organization-teams.hook.js'
-import { useButtonActiveHook }               from './use-button-active.hook.js'
+import { inviteButtonClickHook }             from './invite-button-click.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -40,64 +39,26 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState<boolean>(false)
-  const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
+  // const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
   const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
-  // const [selectedTeams, setSelectedTeams] = useState<SelectedUsersType>([])
+  const [selectedTeams, setSelectedTeams] = useState<SelectedUsersType>([])
   const [teamsData, setTeamsData] = useState([])
 
   const handlerSwitch: HandlerSwitchType = (state, teamId) => {
-    console.log(teamId)
-
-    if (checkedSwitches.includes(teamId as never)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c !== (teamId as never)))
+    if (selectedTeams.includes(teamId as never)) {
+      setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
     } else {
-      setCheckedSwitches(checkedSwitches.concat([teamId as never]))
+      setSelectedTeams(selectedTeams.concat([teamId as never]))
     }
   }
 
-  const handlerInviteButtonClick = async () => {
-    // TODO change var name
-    const token = document.cookie.split('=').at(-1)
+  const inviteButtonClickHandler = inviteButtonClickHook({
+    errorMessageDispatch,
+    selectedUsers,
+    selectedTeams,
+    onBackdropClick,
+  })
 
-    try {
-      throw new Error('invite user error')
-      for (const selectedUser of selectedUsers) {
-        const { githubUserId } = selectedUser
-
-        await inviteMemberToOrgaization({
-          token,
-          organizationLogin,
-          githubUserId,
-          teamIds: checkedSwitches,
-        })
-      }
-      // TODO оповестить юсера об успешном выполнении запроса
-      onBackdropClick()
-    } catch (e) {
-      console.error(e.message)
-      errorMessageDispatch({
-        type: 'set',
-        // errorMessage: { text: 'test-error-text', code: 777 },
-        //     eslint-disable-next-line react-hooks/exhaustive-deps
-        errorMessage: { text: e.message },
-      })
-      // TODO оповестить юсера об ошибке
-
-      // как лучше сделать вывод ошибок на клиент?
-      // в каждом trycatch блоке выводить ошибку через dispatch или на самом высоком уровне сделать обертку?
-      // можно объекту ошибки дать специальное свойство, напрмер ui
-      // ошибки с этим свойством будут отображаться в интерфейсе
-    }
-  }
-
-  // TODO button click hook
-  // - добавление юсера в организацию и конкретную команду
-  // - если не выбранна команда, можно добавлять юсера просто в организацию.
-  // в общее лобби
-
-  useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
-
-  // TODO зачем этот эффект?
   useEffect(() => {
     if (selectedUsers.length) {
       setButtonActive(true)
@@ -107,7 +68,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   useEffect(() => {
     if (open) {
       getOrganizatoinTeamsData(organizationId).then((responseTeamsData) => {
-        console.log(responseTeamsData)
         setTeamsData(responseTeamsData)
       })
     }
@@ -143,7 +103,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             horizontalLocation='right'
             variant='blueBackgroundButton'
             size='middlingRoundedPadding'
-            onClick={handlerInviteButtonClick}
+            onClick={inviteButtonClickHandler}
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               {formatMessage({ id: 'add-member-to-organization-modal.button' })}
