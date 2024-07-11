@@ -200,8 +200,8 @@ __metadata:
   resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@faker-js/faker": "npm:8.4.1"
     "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
@@ -216,7 +216,6 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
-    "@faker-js/faker": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -2318,6 +2317,12 @@ __metadata:
 "@globals/environment@workspace:*, @globals/environment@workspace:globals/environment":
   version: 0.0.0-use.local
   resolution: "@globals/environment@workspace:globals/environment"
+  languageName: unknown
+  linkType: soft
+
+"@globals/helpers@workspace:*, @globals/helpers@workspace:globals/helpers":
+  version: 0.0.0-use.local
+  resolution: "@globals/helpers@workspace:globals/helpers"
   languageName: unknown
   linkType: soft
 
@@ -4894,6 +4899,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
