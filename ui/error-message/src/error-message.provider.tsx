@@ -1,7 +1,9 @@
 import { useTheme }                    from '@emotion/react'
 
 import React                           from 'react'
+import { PropsWithChildren }           from 'react'
 import { FC }                          from 'react'
+import { PropsWithChildren }           from 'react'
 import { useState }                    from 'react'
 import { useReducer }                  from 'react'
 import { useEffect }                   from 'react'
@@ -14,22 +16,21 @@ import { ThemeType }                   from '@ui/theme'
 import { HIDE_DELAY_15SEC }            from './error-message.constants.js'
 import { ErrorMessageContext }         from './error-message.context.js'
 import { ErrorMessageDispatchContext } from './error-message.context.js'
-import { ErrorMessageProps }           from './error-message.interfaces.js'
-import { checkErrorHook }              from './check-error.hook.js'
+import { checkUrlErrorHook }           from './check-url-error.hook.js'
 import { errorMessageReducer }         from './error-message.reducer.js'
 
-export const ErrorMessageProvider: FC<ErrorMessageProps> = ({ children }) => {
-  const [isHide, setHide] = useState(false)
+export const ErrorMessageProvider: FC<PropsWithChildren> = ({ children }) => {
+  const theme = useTheme() as ThemeType
 
+  const [isHide, setHide] = useState(false)
   const [errorMessage, errorMessageDispatch] = useReducer(errorMessageReducer, [])
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       errorMessageDispatch({
         type: 'set',
-        // errorMessage: { text: 'test-error-text', code: 777 },
         //     eslint-disable-next-line react-hooks/exhaustive-deps
-        errorMessage: checkErrorHook(),
+        errorMessage: checkUrlErrorHook(),
       })
     }
   }, [])
@@ -38,11 +39,13 @@ export const ErrorMessageProvider: FC<ErrorMessageProps> = ({ children }) => {
     setHide(false)
   }, [errorMessage])
 
-  setTimeout(() => {
-    setHide(true)
-  }, HIDE_DELAY_15SEC)
-
-  const theme = useTheme() as ThemeType
+  useEffect(() => {
+    if (!isHide) {
+      setTimeout(() => {
+        setHide(true)
+      }, HIDE_DELAY_15SEC)
+    }
+  }, [isHide])
 
   return (
     <ErrorMessageContext.Provider value={errorMessage}>
@@ -63,7 +66,7 @@ export const ErrorMessageProvider: FC<ErrorMessageProps> = ({ children }) => {
             >
               <Text color={theme.colors.white}>
                 {errorMessage.text}
-                {errorMessage.code && ` : ${errorMessage.code}`}
+                {errorMessage.code ? ` : ${errorMessage.code}` : ''}
               </Text>
             </Box>
           </Box>
