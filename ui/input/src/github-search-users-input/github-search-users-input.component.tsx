@@ -13,7 +13,6 @@ import { useLayer }                      from 'react-laag'
 
 import { Box }                           from '@ui/layout'
 
-import { SEARCH_DELAY_MS }               from './github-search-users-input.constants.js'
 import { InputValueContext }             from './github-search-users-input.context.js'
 import { InputValueDispatchContext }     from './github-search-users-input.context.js'
 import { SelectInputProps }              from './github-search-users-input.interfaces.js'
@@ -26,6 +25,7 @@ import { SuggestedItemsDispatchContext } from './suggested-items/index.js'
 import { shapeStyles }                   from '../input.styles.js'
 import { appearanceStyles }              from '../input.styles.js'
 import { inputValueReducer }             from './github-search-users-input.reducer.js'
+import { inputChangeHook }               from './input-change.hook.js'
 import { getSearchedUsers }              from './search-users.hook.js'
 import { selectedItemsReducer }          from './selected-items/index.js'
 import { suggestedItemsReducer }         from './suggested-items/index.js'
@@ -44,7 +44,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   const theme: any = useTheme()
   const inputRef = useRef(null) as any
 
-  const [isClientTyping, setClientTyping] = useState(false)
+  const [isClientTyping, setClientTyping] = useState<boolean>(false)
   const [activeSearchTimeoutId, setActiveSearchTimeoutId] = useState<number>(0)
 
   const [selectedItems, selectedItemsDispatch] = useReducer(selectedItemsReducer, [])
@@ -64,35 +64,16 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
     triggerOffset: theme.spaces.zero,
   })
 
-  // TODO searchItems not used
-  // TODO timeout to helpers
-  // TODO separate search to hook
-  // TODO search delay to const
-
-  const handleInputChange = async (e) => {
-    const inputValueString = e.target.value
-
-    if (!isClientTyping) {
-      setClientTyping(true)
-    }
-
-    inputValueDispatch({
-      type: 'set',
-      inputValue: inputValueString,
+  const handleInputChange = async (e) =>
+    inputChangeHook({
+      e,
+      isClientTyping,
+      setClientTyping,
+      inputValueDispatch,
+      suggestedItemsDispatch,
+      activeSearchTimeoutId,
+      setActiveSearchTimeoutId,
     })
-
-    if (!inputValueString) {
-      suggestedItemsDispatch({
-        type: 'clean',
-      })
-    }
-
-    clearTimeout(activeSearchTimeoutId)
-    const timeoutId = setTimeout(async () => {
-      setClientTyping(false)
-    }, SEARCH_DELAY_MS)
-    setActiveSearchTimeoutId(timeoutId)
-  }
 
   useEffect(() => {
     if (!isClientTyping) {

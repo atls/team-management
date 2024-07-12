@@ -1,16 +1,11 @@
-import { getCookieClient }               from '@globals/helpers'
+import { SEARCH_USER }          from '@globals/data'
+import { octokitGraphqlClient } from '@globals/data'
+import { getTokenCookie }       from '@globals/helpers'
 
-import { useContext }                    from 'react'
-
-import { SEARCH_USER }                   from '@globals/data'
-import { octokitGraphqlClient }          from '@globals/data'
-
-import { SEARCH_USERS_LIMIT }            from './github-search-users-input.constants.js'
-import { SuggestedItemsDispatchContext } from './suggested-items/index.js'
+import { SEARCH_USERS_LIMIT }   from './github-search-users-input.constants.js'
 
 export const getSearchedUsers = async ({ searchQuery, suggestedItemsDispatch }) => {
-  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME
-  const { [TOKEN_COOKIE_NAME]: token } = getCookieClient(document)
+  const token = getTokenCookie(document)
 
   return new Promise(async (resolve, reject) => {
     const client = octokitGraphqlClient(token)
