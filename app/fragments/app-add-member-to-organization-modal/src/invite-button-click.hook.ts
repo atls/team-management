@@ -1,4 +1,5 @@
 import { inviteMemberToOrgaization } from '@globals/data'
+import { getTokenCookie }            from '@globals/helpers'
 
 export const inviteButtonClickHook = async ({
   errorMessageDispatch,
@@ -7,17 +8,15 @@ export const inviteButtonClickHook = async ({
   selectedTeams,
   onBackdropClick,
 }) => {
-  // TODO change var name
-
-  // TODO cookie from helpers
-  const token = document.cookie.split('=').at(-1)
+  const token = getTokenCookie(document)
 
   try {
     for (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
 
       await inviteMemberToOrgaization({
-        token,
+        // token,
+        token: '123',
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
@@ -27,13 +26,12 @@ export const inviteButtonClickHook = async ({
     // TODO нужно ли оповещать юсера об успешном выполнении запроса?
 
     onBackdropClick()
-  } catch (e) {
+  } catch (e: any) {
+    console.error(e)
+
     errorMessageDispatch({
       type: 'set',
-      //     eslint-disable-next-line react-hooks/exhaustive-deps
-      errorMessage: { text: e.message },
+      errorMessage: { text: e.message, code: e.status || 0 },
     })
-    console.error(e.message)
-    // TODO оповестить юсера об ошибке
   }
 }

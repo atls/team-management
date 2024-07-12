@@ -19,11 +19,11 @@ import { ThemeType }                         from '@ui/theme'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
-import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
-import { getOrganizatoinTeamsData }          from './get-organization-teams.hook.js'
+import { getOrganizatoinTeamsHook }          from './get-organization-teams.hook.js'
 import { inviteButtonClickHook }             from './invite-button-click.hook.js'
+import { setButtonActiveHook }               from './set-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -33,15 +33,16 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
 
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  // const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  // console.log(errorMessageDispatch)
 
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState<boolean>(false)
-  // const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
   const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
-  const [selectedTeams, setSelectedTeams] = useState<SelectedUsersType>([])
+  // TODO interface
+  const [selectedTeams, setSelectedTeams] = useState<SelectedTeamsType>([])
   const [teamsData, setTeamsData] = useState([])
 
   const handlerSwitch: HandlerSwitchType = (state, teamId) => {
@@ -52,26 +53,22 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
-  const inviteButtonClickHandler = inviteButtonClickHook({
-    errorMessageDispatch,
-    selectedUsers,
-    selectedTeams,
-    onBackdropClick,
-  })
+  const inviteButtonClickHandler = () =>
+    inviteButtonClickHook({
+      errorMessageDispatch,
+      organizationLogin,
+      selectedUsers,
+      selectedTeams,
+      onBackdropClick,
+    })
 
-  useEffect(() => {
-    if (selectedUsers.length) {
-      setButtonActive(true)
-    }
-  }, [selectedUsers])
+  useEffect(() => setButtonActiveHook({ selectedUsers, setButtonActive }), [selectedUsers])
 
-  useEffect(() => {
-    if (open) {
-      getOrganizatoinTeamsData(organizationId).then((responseTeamsData) => {
-        setTeamsData(responseTeamsData)
-      })
-    }
-  }, [open])
+  useEffect(
+    () => getOrganizatoinTeamsHook({ open, organizationId, teamsData, setTeamsData }),
+
+    [open]
+  )
 
   return (
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
