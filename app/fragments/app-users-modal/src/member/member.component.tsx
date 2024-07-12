@@ -1,5 +1,7 @@
 import { useTheme }       from '@emotion/react'
 
+// @ts-ignore:next-line
+import Link               from 'next/link'
 import React              from 'react'
 import { FC }             from 'react'
 import { memo }           from 'react'
@@ -14,16 +16,15 @@ import { Text }           from '@ui/text'
 import { ThemeType }      from '@ui/theme'
 
 import { MemberDorpdown } from './member-dropdown/member-dropdown.component.js'
+import { MemberProps }    from './member.interfaces.js'
 
-// TODO interface
-export const Member: FC<any> = memo(({
+export const Member: FC<MemberProps> = memo(({
   memberData,
   onDeleteMemberClick,
   devider = true,
   viewerCanAdminister,
 }) => {
   const {
-    id: memberId,
     login: memberLogin,
     url: memberUrl,
     name: memberName,
@@ -32,10 +33,6 @@ export const Member: FC<any> = memo(({
   } = memberData
 
   const theme = useTheme() as ThemeType
-
-  // TODO url to user profile on text
-  /* TODO change text to locales */
-  /* TODO if administer -> dropdown button */
 
   return (
     <Box
@@ -50,7 +47,9 @@ export const Member: FC<any> = memo(({
             borderRadius={theme.spaces.bigDecreased}
             overflow='hidden'
           >
-            <ImageBlock src={memberAvatarSrc} alt='member-avatar' />
+            <Link href={memberUrl || '/'} target='_blank'>
+              <ImageBlock src={memberAvatarSrc} alt='member-avatar' />
+            </Link>
           </Box>
           <Column>
             <Text fontSize='normal.semiDefault'>{memberName}</Text>

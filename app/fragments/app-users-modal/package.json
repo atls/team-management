@@ -9,6 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:*",
+    "@globals/helpers": "workspace:*",
     "@globals/interfaces": "workspace:*",
     "@ui/avatar": "workspace:*",
     "@ui/button": "workspace:*",
@@ -16,6 +17,7 @@
     "@ui/condition": "workspace:*",
     "@ui/divider": "workspace:*",
     "@ui/dropdown": "workspace:*",
+    "@ui/error-message": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",

@@ -1,26 +1,28 @@
-import { useTheme }                   from '@emotion/react'
+import { useTheme }                    from '@emotion/react'
 
-import React                          from 'react'
-import { FC }                         from 'react'
-import { memo }                       from 'react'
-import { useState }                   from 'react'
-import { useEffect }                  from 'react'
-import { useIntl }                    from 'react-intl'
+import React                           from 'react'
+import { FC }                          from 'react'
+import { memo }                        from 'react'
+import { useState }                    from 'react'
+import { useEffect }                   from 'react'
+import { useContext }                  from 'react'
+import { useIntl }                     from 'react-intl'
 
-import { ImageBlock }                 from '@ui/image'
-import { Box }                        from '@ui/layout'
-import { Row }                        from '@ui/layout'
-import { Column }                     from '@ui/layout'
-import { Modal }                      from '@ui/modal'
-import { Scroll }                     from '@ui/scroll'
-import { Text }                       from '@ui/text'
-import { ThemeType }                  from '@ui/theme'
-import { removeOrganizationMember }   from '@globals/data'
+import { ErrorMessageDispatchContext } from '@ui/error-message'
+import { ImageBlock }                  from '@ui/image'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Modal }                       from '@ui/modal'
+import { Scroll }                      from '@ui/scroll'
+import { Text }                        from '@ui/text'
+import { ThemeType }                   from '@ui/theme'
 
-import { Member }                     from './member/index.js'
-import { MemberDataType }             from './users-modal.interfaces.js'
-import { UsersModalProps }            from './users-modal.interfaces.js'
-import { getOrganizatoinMembersData } from './get-organization-members-data.hook.js'
+import { Member }                      from './member/index.js'
+import { MemberDataType }              from './users-modal.interfaces.js'
+import { UsersModalProps }             from './users-modal.interfaces.js'
+import { getOrganizationMembersHook }  from './get-organization-members.hook.js'
+import { removeMemberHook }            from './remove-member.hook.js'
 
 const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizationData }) => {
   const {
@@ -28,44 +30,39 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
     login: organizationLogin,
     name: organizationName,
     description: organizationDescription,
-    membersWithRole: { totalCount: membersCount },
+    membersWithRole: { totalCount: initMembersCount },
     avatarUrl: organizationCoverSrc,
     viewerCanAdminister,
   } = organizationData
-
-  // TODO administer to dropdown button
 
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   // TODO interface
   const [membersData, setMembersData] = useState([])
+  const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
-  // TODO вынести в хук
   useEffect(() => {
-    if (open && !membersData.length) {
-      getOrganizatoinMembersData(organizationId).then((responseMemebersData) => {
-        setMembersData(responseMemebersData)
-      })
-    }
-  }, [open])
+    setMembersCount(membersData.length)
+  }, [membersData])
 
-  const handlerDeleteMemberClick = (removeMemberLogin: string) => {
-    // TODO query to delete member -> than delete from cli
-    // TODO get token from cli to helpers
-    const token = document.cookie.split('=').at(-1)
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  console.log(errorMessageDispatch)
 
-    removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(
-      () => {
-        console.log('after success remove')
-        // const newMembersData = membersData.filter(({ memberId }) => memberId !== removeMemberId)
-        // setMembersData(newMembersData)
-      }
-    )
-  }
+  useEffect(
+    () =>
+      getOrganizationMembersHook({
+        open,
+        membersData,
+        organizationId,
+        setMembersData,
+        errorMessageDispatch,
+      }),
+    [open]
+  )
 
-  // IDEA передавать в список количество сотрудников и забивать пустыми элементами.
-  // IDEA после того, как приходят данные менять пустышки на реальные данные
+  const handlerRemoveMemberClick = (removeMemberLogin: string) =>
+    removeMemberHook({ organizationLogin, membersData, setMembersData, removeMemberLogin })
 
   return (
     <Modal
@@ -91,7 +88,7 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
           {membersData.map((memberData: MemberDataType, memberIndex) => (
             <Member
               memberData={memberData}
-              onDeleteMemberClick={handlerDeleteMemberClick}
+              onDeleteMemberClick={handlerRemoveMemberClick}
               viewerCanAdminister={viewerCanAdminister}
               devider={!(memberIndex === membersData.length - 1)}
             />
