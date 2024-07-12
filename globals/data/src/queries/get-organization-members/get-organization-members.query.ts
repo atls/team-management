@@ -2,10 +2,10 @@
 // TODO add linit to query on cli
 
 const GET_ORGANIZATION_MEMBERS = /* GraphQL */ `
-  query GetOrganizationMembers($organizationId: ID!) {
+  query GetOrganizationMembers($organizationId: ID!, $organizationMembersLimit: Int!) {
     node(id: $organizationId) {
       ... on Organization {
-        membersWithRole(first: 100) {
+        membersWithRole(first: $organizationMembersLimit) {
           nodes {
             id
             login
