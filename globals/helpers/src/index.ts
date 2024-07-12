@@ -1,1 +1,1 @@
-export * from './get-cookie-client.helper.js'
+export * from './client-cookie.helper.js'
