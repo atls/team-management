@@ -24,7 +24,15 @@ import { UsersModalProps }             from './users-modal.interfaces.js'
 import { getOrganizationMembersHook }  from './get-organization-members.hook.js'
 import { removeMemberHook }            from './remove-member.hook.js'
 
-const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizationData }) => {
+export const UsersModal: FC<UsersModalProps> = memo(({
+  open,
+  onBackdropClick,
+  organizationData,
+}) => {
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  console.log('dispatch on users modal: ')
+  console.log(errorMessageDispatch)
+
   const {
     id: organizationId,
     login: organizationLogin,
@@ -43,23 +51,19 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
   useEffect(() => {
-    setMembersCount(membersData.length)
-  }, [membersData])
-
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
-  console.log(errorMessageDispatch)
-
-  useEffect(
-    () =>
+    if (open) {
+      console.log('open effect')
+      setMembersCount(membersData.length)
       getOrganizationMembersHook({
         open,
         membersData,
         organizationId,
         setMembersData,
+        setError,
         errorMessageDispatch,
-      }),
-    [open]
-  )
+      })
+    }
+  }, [open])
 
   const handlerRemoveMemberClick = (removeMemberLogin: string) =>
     removeMemberHook({ organizationLogin, membersData, setMembersData, removeMemberLogin })
@@ -98,5 +102,3 @@ const UsersModal: FC<UsersModalProps> = memo(({ open, onBackdropClick, organizat
     </Modal>
   )
 })
-
-export { UsersModal }

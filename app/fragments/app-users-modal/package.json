@@ -23,7 +23,7 @@
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
     "@ui/scroll": "workspace:*",
-    "@ui/text": "workspace:0.0.1",
+    "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {

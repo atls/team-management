@@ -2,10 +2,10 @@ import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
 import { FC }                                from 'react'
+import { useContext }                        from 'react'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
-import { useContext }                        from 'react'
 import { useIntl }                           from 'react-intl'
 
 import { Button }                            from '@ui/button'
@@ -33,8 +33,9 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
 
-  // const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
-  // console.log(errorMessageDispatch)
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  console.log('dispatch on add member modal: ')
+  console.log(errorMessageDispatch)
 
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
@@ -55,7 +56,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
-      errorMessageDispatch,
       organizationLogin,
       selectedUsers,
       selectedTeams,

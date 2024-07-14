@@ -9,13 +9,11 @@ export const getOrganizationMembersHook = ({
   membersData,
   organizationId,
   setMembersData,
+  setError,
   errorMessageDispatch,
 }) => {
-  return
   if (open && !membersData.length) {
     const token = getTokenCookie(document)
-
-    // console.log(errorMessageDispatch)
 
     const getOrganizationPromise = () =>
       new Promise(async (resolve, reject) => {
@@ -36,17 +34,26 @@ export const getOrganizationMembersHook = ({
 
           resolve(membersData)
         } catch (e: any) {
-          console.error(e)
+          console.log('error in promise')
+          // setError(e)
+          throw e
 
-          errorMessageDispatch({
-            type: 'set',
-            errorMessage: { text: e.message, code: e.status || 0 },
-          })
+          // errorMessageDispatch({
+          //   type: 'set',
+          //   errorMessage: { text: e.message, code: e.status || 0 },
+          // })
         }
       })
 
-    getOrganizationPromise().then((responseMemebersData) => {
-      setMembersData(responseMemebersData)
-    })
+    getOrganizationPromise()
+      .then((responseMemebersData) => {
+        setMembersData(responseMemebersData)
+      })
+      .catch((e) => {
+        console.log('error outter promise')
+        throw e
+      })
+
+    return
   }
 }

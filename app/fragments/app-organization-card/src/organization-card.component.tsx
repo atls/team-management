@@ -23,7 +23,6 @@ import { ThemeType }                    from '@ui/theme'
 import { Members }                      from './members/index.js'
 import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
-// TODO разнести кнопки с их модалками по компонентам
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
     id: organizationId,
@@ -97,8 +96,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <UsersModal
               open={isUsersModalOpen}
-              onBackdropClick={handlerUsersModalClick}
               organizationData={organizationData}
+              onBackdropClick={handlerUsersModalClick}
             />
 
             <Button
@@ -116,9 +115,9 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
             </Button>
 
             <AddMemberToOrganizationModal
-              organizationData={organizationData}
               open={isAddMemberToOrganizationModalOpen}
               onBackdropClick={handlerAddOrganizationMemberClick}
+              organizationData={organizationData}
             />
           </Row>
         </Column>

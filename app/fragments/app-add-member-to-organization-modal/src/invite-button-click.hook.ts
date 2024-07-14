@@ -2,7 +2,6 @@ import { inviteMemberToOrgaization } from '@globals/data'
 import { getTokenCookie }            from '@globals/helpers'
 
 export const inviteButtonClickHook = async ({
-  errorMessageDispatch,
   organizationLogin,
   selectedUsers,
   selectedTeams,
@@ -28,10 +27,6 @@ export const inviteButtonClickHook = async ({
     onBackdropClick()
   } catch (e: any) {
     console.error(e)
-
-    errorMessageDispatch({
-      type: 'set',
-      errorMessage: { text: e.message, code: e.status || 0 },
-    })
+    // TODO error to client
   }
 }

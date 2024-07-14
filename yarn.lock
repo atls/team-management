@@ -361,6 +361,7 @@ __metadata:
     "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
+    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -387,6 +388,7 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@ui/error-message": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
@@ -641,7 +643,7 @@ __metadata:
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
@@ -4836,11 +4838,13 @@ __metadata:
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
+    react-error-boundary: "npm:4.0.13"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+    react-error-boundary: "*"
   languageName: unknown
   linkType: soft
 
@@ -11649,6 +11653,17 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10/3f4b73a3aa083091173b29812b10394dd06f4ac06aff410b74702cfb3aa29d7b0ced208aab92d5272919b612e5cda21aeb1d54191848cf6e46e9e354f3541f81
+  languageName: node
+  linkType: hard
+
+"react-error-boundary@npm:4.0.13":
+  version: 4.0.13
+  resolution: "react-error-boundary@npm:4.0.13"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+  peerDependencies:
+    react: ">=16.13.1"
+  checksum: 10/28fdf498a58621e21d93978c61719c52455bc00b778080259c5830fe003736153469ebc84f243d7989567b1196e25648c7592f7c8e47de47fcd7d12b875879b9
   languageName: node
   linkType: hard
 
