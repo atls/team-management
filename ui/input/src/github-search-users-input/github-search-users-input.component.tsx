@@ -9,8 +9,10 @@ import { forwardRef }                    from 'react'
 import { useRef }                        from 'react'
 import { useEffect }                     from 'react'
 import { useState }                      from 'react'
+import { useContext }                    from 'react'
 import { useLayer }                      from 'react-laag'
 
+import { ErrorMessageDispatchContext }   from '@ui/error-message'
 import { Box }                           from '@ui/layout'
 
 import { InputValueContext }             from './github-search-users-input.context.js'
@@ -50,6 +52,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   const [selectedItems, selectedItemsDispatch] = useReducer(selectedItemsReducer, [])
   const [suggestedItems, suggestedItemsDispatch] = useReducer(suggestedItemsReducer, [])
   const [inputValue, inputValueDispatch] = useReducer(inputValueReducer, '')
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext) as VoidFunction
 
   const handlerClickContainer = () => {
     if (inputRef?.current) inputRef.current.focus()
@@ -77,7 +80,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
 
   useEffect(() => {
     if (!isClientTyping) {
-      getSearchedUsers({ searchQuery: inputValue, suggestedItemsDispatch })
+      getSearchedUsers({ searchQuery: inputValue, suggestedItemsDispatch, errorMessageDispatch })
     }
   }, [isClientTyping])
 

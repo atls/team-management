@@ -1,1 +1,1 @@
-export const HIDE_DELAY_15SEC = 1000 * 15
+export const HIDE_DELAY_5SEC = 1000 * 5

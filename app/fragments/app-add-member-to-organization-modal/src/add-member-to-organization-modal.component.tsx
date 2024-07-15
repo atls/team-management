@@ -8,6 +8,8 @@ import { useState }                          from 'react'
 import { useEffect }                         from 'react'
 import { useIntl }                           from 'react-intl'
 
+import { GetOrganizationTeamsQuery }         from '@globals/data'
+import { GetOrganizationMembersQuery }       from '@globals/data'
 import { Button }                            from '@ui/button'
 import { ErrorMessageDispatchContext }       from '@ui/error-message'
 import { GithubSearchUsersInput }            from '@ui/input'
@@ -37,9 +39,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { formatMessage } = useIntl()
 
   const [isButtonActive, setButtonActive] = useState<boolean>(false)
-  const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
-  // TODO interface
-  const [selectedTeams, setSelectedTeams] = useState<SelectedTeamsType>([])
+
+  const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
+  const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
+
   const [teamsData, setTeamsData] = useState([])
 
   const handlerSwitch: HandlerSwitchType = (state, teamId) => {

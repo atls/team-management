@@ -1,22 +1,25 @@
-import { useTheme }          from '@emotion/react'
+import { useTheme }                   from '@emotion/react'
 
-import React                 from 'react'
-import { FC }                from 'react'
-import { useEffect }         from 'react'
-import { useState }          from 'react'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { useEffect }                  from 'react'
+import { useState }                   from 'react'
 
-import { Condition }         from '@ui/condition'
-import { Box }               from '@ui/layout'
-import { Text }              from '@ui/text'
-import { ThemeType }         from '@ui/theme'
+import { Condition }                  from '@ui/condition'
+import { Box }                        from '@ui/layout'
+import { Text }                       from '@ui/text'
+import { ThemeType }                  from '@ui/theme'
 
-import { HIDE_DELAY_15SEC }  from './error-message.constants.js'
-import { checkUrlErrorHook } from './check-url-error.hook.js'
+import { HIDE_DELAY_5SEC }            from './error-message.constants.js'
+import { ErrorMessageComponentProps } from './error-message.interfaces.js'
+import { checkUrlErrorHook }          from './check-url-error.hook.js'
 
-// TODO interface
-export const ErrorMessage: FC<any> = ({ errorMessage, errorMessageDispatch }) => {
+export const ErrorMessage: FC<ErrorMessageComponentProps> = ({
+  errorMessage,
+  errorMessageDispatch,
+}) => {
   const theme = useTheme() as ThemeType
-  const [isHide, setHide] = useState(false)
+  const [isHide, setHide] = useState<boolean>(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -36,7 +39,7 @@ export const ErrorMessage: FC<any> = ({ errorMessage, errorMessageDispatch }) =>
     if (!isHide) {
       setTimeout(() => {
         setHide(true)
-      }, HIDE_DELAY_15SEC)
+      }, HIDE_DELAY_5SEC)
     }
   }, [isHide])
 

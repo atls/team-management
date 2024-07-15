@@ -14,11 +14,11 @@ export const ErrorMessageProvider: FC<PropsWithChildren> = ({ children }) => {
   const [errorMessage, errorMessageDispatch] = useReducer(errorMessageReducer, {})
 
   return (
-    <ErrorMessageContext.Provider value={errorMessage}>
-      <ErrorMessageDispatchContext.Provider value={errorMessageDispatch}>
+    <ErrorMessageDispatchContext.Provider value={errorMessageDispatch}>
+      <ErrorMessageContext.Provider value={errorMessage}>
         <ErrorMessage errorMessage={errorMessage} errorMessageDispatch={errorMessageDispatch} />
         {children}
-      </ErrorMessageDispatchContext.Provider>
-    </ErrorMessageContext.Provider>
+      </ErrorMessageContext.Provider>
+    </ErrorMessageDispatchContext.Provider>
   )
 }

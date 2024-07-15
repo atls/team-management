@@ -7,8 +7,9 @@ import { AtlantisIcon }      from '@ui/icons'
 import { AtlantisSmallIcon } from '@ui/icons'
 import { ThemeType }         from '@ui/theme'
 
-// TODO interfaces
-const Logo: FC<any> = ({ variant, activeTheme }) => {
+import { LogoProps }         from './logo.interfaces.js'
+
+const Logo: FC<LogoProps> = ({ variant, activeTheme }) => {
   const theme = useTheme() as ThemeType
 
   if (activeTheme === 'dark') {
@@ -35,6 +36,7 @@ const Logo: FC<any> = ({ variant, activeTheme }) => {
   if (variant === 'small') {
     return <AtlantisSmallIcon width={theme.spaces.large} height={theme.spaces.large} />
   }
+
   return <AtlantisIcon width={theme.spaces.semiSuperExtra} height={theme.spaces.large} />
 }
 export { Logo }

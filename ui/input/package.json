@@ -4,6 +4,9 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
@@ -11,6 +14,7 @@
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@ui/condition": "workspace:*",
+    "@ui/error-message": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
@@ -31,6 +35,8 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@types/styled-system": "*",
+    "@ui/error-message": "*",
     "react": "*",
     "react-dom": "*",
     "react-laag": "*",

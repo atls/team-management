@@ -1,5 +1,5 @@
 const GET_ORGANIZATION_TEAMS = /* GraphQL */ `
-  query GetOrganizationMembers($organizationId: ID!, $organizationTeamsLimit: Int!) {
+  query GetOrganizationTeams($organizationId: ID!, $organizationTeamsLimit: Int!) {
     node(id: $organizationId) {
       ... on Organization {
         teams(first: $organizationTeamsLimit) {

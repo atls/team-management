@@ -5,7 +5,6 @@ export const baseSidebarItemStyles: styleFn = ({ theme }) => ({
   textDecoration: 'none',
 })
 
-// TODO add padding to spaces
 const openedShapeStyles: styleFn = ({ theme }) => ({
   padding: theme.spaces.miniIncreased,
   paddingLeft: theme.spaces.increased,

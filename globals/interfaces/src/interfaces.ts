@@ -1,3 +1,6 @@
+// TODO нужны ли нам эти типы, если data приходит с query,
+// а типы для query генерируются?
+
 export type OrganizationDataType = {
   id: number
   login: string

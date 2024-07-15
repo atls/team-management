@@ -4,7 +4,11 @@ import { getTokenCookie }       from '@globals/helpers'
 
 import { SEARCH_USERS_LIMIT }   from './github-search-users-input.constants.js'
 
-export const getSearchedUsers = async ({ searchQuery, suggestedItemsDispatch }) => {
+export const getSearchedUsers = async ({
+  searchQuery,
+  suggestedItemsDispatch,
+  errorMessageDispatch,
+}) => {
   const token = getTokenCookie(document)
 
   return new Promise(async (resolve, reject) => {
@@ -49,11 +53,12 @@ export const getSearchedUsers = async ({ searchQuery, suggestedItemsDispatch }) 
       })
 
       resolve()
-      // resolve(users)
     } catch (e) {
-      // TODO catch error
-      // TODO render error on cli
       console.error(e)
+      errorMessageDispatch({
+        type: 'set',
+        errorMessage: { text: e.message, code: e.status || 0 },
+      })
     }
   })
 }

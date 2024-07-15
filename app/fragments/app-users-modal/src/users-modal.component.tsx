@@ -8,6 +8,7 @@ import { useEffect }                   from 'react'
 import { useContext }                  from 'react'
 import { useIntl }                     from 'react-intl'
 
+import { GetOrganizationMembersQuery } from '@globals/data'
 import { ErrorMessageDispatchContext } from '@ui/error-message'
 import { ImageBlock }                  from '@ui/image'
 import { Box }                         from '@ui/layout'
@@ -42,11 +43,10 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
-  // TODO members data interface
-  const [membersData, setMembersData] = useState([])
+  const [membersData, setMembersData] = useState<Array<GetOrganizationMembersQuery>>([])
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext) as VoidFunction
 
   useEffect(() => {
     if (open && !membersData.length) {

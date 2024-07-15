@@ -22,7 +22,7 @@ export const inviteButtonClickHook = async ({
       })
     }
 
-    // TODO нужно ли оповещать юсера об успешном выполнении запроса?
+    // TODO оповещение юсера об успешном чтото там, проверь вторую модалку тоже на эту тему
 
     onBackdropClick()
   } catch (e: any) {

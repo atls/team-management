@@ -1,6 +1,3 @@
-// TODO добавить количество участников в запрос
-// TODO add linit to query on cli
-
 const GET_ORGANIZATION_MEMBERS = /* GraphQL */ `
   query GetOrganizationMembers($organizationId: ID!, $organizationMembersLimit: Int!) {
     node(id: $organizationId) {

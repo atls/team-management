@@ -385,19 +385,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid"
   dependencies:
+    "@app/organization-card-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/error-message": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
+    react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -426,19 +432,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
   dependencies:
-    "@app/organization-card-fragment": "workspace:*"
     "@app/organization-card-grid-fragment": "workspace:*"
-    "@app/theme-selector": "workspace:*"
-    "@faker-js/faker": "npm:8.4.1"
-    "@globals/data": "workspace:*"
-    "@globals/interfaces": "workspace:*"
-    "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
-    "@faker-js/faker": "*"
     react: "*"
+    react-dom: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -623,7 +623,6 @@ __metadata:
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@faker-js/faker": "npm:8.4.1"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
     "@globals/interfaces": "workspace:*"
@@ -2197,13 +2196,6 @@ __metadata:
   version: 8.57.0
   resolution: "@eslint/js@npm:8.57.0"
   checksum: 10/3c501ce8a997cf6cbbaf4ed358af5492875e3550c19b9621413b82caa9ae5382c584b0efa79835639e6e0ddaa568caf3499318e5bdab68643ef4199dce5eb0a0
-  languageName: node
-  linkType: hard
-
-"@faker-js/faker@npm:8.4.1":
-  version: 8.4.1
-  resolution: "@faker-js/faker@npm:8.4.1"
-  checksum: 10/5983c2ea64f26055ad6648de748878e11ebe2fb751e3c7435ae141cdffabc2dccfe4c4f49da69a3d2add71e21b415c683ac5fba196fab0d5ed6779fbec436c80
   languageName: node
   linkType: hard
 
@@ -4908,6 +4900,7 @@ __metadata:
     "@globals/helpers": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
+    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -4922,6 +4915,8 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    "@ui/error-message": "*"
     react: "*"
     react-dom: "*"
     react-laag: "*"
