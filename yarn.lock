@@ -361,7 +361,6 @@ __metadata:
     "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
-    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -388,7 +387,6 @@ __metadata:
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
-    "@ui/error-message": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
@@ -645,11 +643,13 @@ __metadata:
     "@ui/scroll": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@faker-js/faker": "*"
     react: "*"
+    react-dom: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
