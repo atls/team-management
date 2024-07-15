@@ -11,10 +11,7 @@ import { ErrorMessageDispatchContext } from './error-message.context.js'
 import { errorMessageReducer }         from './error-message.reducer.js'
 
 export const ErrorMessageProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [errorMessage, errorMessageDispatch] = useReducer(errorMessageReducer, {
-    text: 'test error text',
-    code: 201,
-  })
+  const [errorMessage, errorMessageDispatch] = useReducer(errorMessageReducer, {})
 
   return (
     <ErrorMessageContext.Provider value={errorMessage}>
