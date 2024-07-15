@@ -29,10 +29,6 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   onBackdropClick,
   organizationData,
 }) => {
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
-  console.log('dispatch on users modal: ')
-  console.log(errorMessageDispatch)
-
   const {
     id: organizationId,
     login: organizationLogin,
@@ -46,20 +42,20 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
-  // TODO interface
+  // TODO members data interface
   const [membersData, setMembersData] = useState([])
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+
   useEffect(() => {
-    if (open) {
-      console.log('open effect')
-      setMembersCount(membersData.length)
+    if (open && !membersData.length) {
+      setMembersCount(initMembersCount)
       getOrganizationMembersHook({
         open,
         membersData,
         organizationId,
         setMembersData,
-        setError,
         errorMessageDispatch,
       })
     }
