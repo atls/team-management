@@ -4,37 +4,41 @@ import { getTokenCookie }         from '@globals/helpers'
 
 const ORGANIZATION_TEAMS_LIMIT = 16
 
-export const getOrganizatoinTeamsHook = ({ open, organizationId, teamsData, setTeamsData }) => {
-  if (open && !teamsData.length) {
-    const token = getTokenCookie(document)
+export const getOrganizatoinTeamsHook = ({
+  organizationId,
+  setTeamsData,
+  errorMessageDispatch,
+}) => {
+  const token = getTokenCookie(document)
 
-    const getOrganizatoinTeamsPromise = () => {
-      return new Promise(async (resolve, reject) => {
-        const client = octokitGraphqlClient(token)
+  const getOrganizatoinTeamsPromise = () => {
+    return new Promise(async (resolve, reject) => {
+      const client = octokitGraphqlClient(token)
 
-        try {
-          const response = await client(GET_ORGANIZATION_TEAMS, {
-            organizationId,
-            organizationTeamsLimit: ORGANIZATION_TEAMS_LIMIT,
-          })
+      try {
+        const response = await client(GET_ORGANIZATION_TEAMS, {
+          organizationId,
+          organizationTeamsLimit: ORGANIZATION_TEAMS_LIMIT,
+        })
 
-          const {
-            node: {
-              teams: { nodes: teamsData },
-            },
-          } = response
+        const {
+          node: {
+            teams: { nodes: teamsData },
+          },
+        } = response
 
-          resolve(teamsData)
-        } catch (e) {
-          // TODO catch error
-          // TODO render error on cli
-          console.error(e)
-        }
-      })
-    }
-
-    getOrganizatoinTeamsPromise().then((responseTeamsData) => {
-      setTeamsData(responseTeamsData)
+        resolve(teamsData)
+      } catch (e) {
+        console.error(e)
+        errorMessageDispatch({
+          type: 'set',
+          errorMessage: { text: e.message, code: e.status || 0 },
+        })
+      }
     })
   }
+
+  getOrganizatoinTeamsPromise().then((responseTeamsData) => {
+    setTeamsData(responseTeamsData)
+  })
 }

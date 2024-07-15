@@ -6,6 +6,7 @@ export const inviteButtonClickHook = async ({
   selectedUsers,
   selectedTeams,
   onBackdropClick,
+  errorMessageDispatch,
 }) => {
   const token = getTokenCookie(document)
 
@@ -14,8 +15,7 @@ export const inviteButtonClickHook = async ({
       const { githubUserId } = selectedUser
 
       await inviteMemberToOrgaization({
-        // token,
-        token: '123',
+        token,
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
@@ -27,6 +27,9 @@ export const inviteButtonClickHook = async ({
     onBackdropClick()
   } catch (e: any) {
     console.error(e)
-    // TODO error to client
+    errorMessageDispatch({
+      type: 'set',
+      errorMessage: { text: e.message, code: e.status || 0 },
+    })
   }
 }

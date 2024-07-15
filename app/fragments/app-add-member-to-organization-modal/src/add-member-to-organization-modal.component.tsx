@@ -33,10 +33,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
 
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
-  console.log('dispatch on add member modal: ')
-  console.log(errorMessageDispatch)
-
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
@@ -54,21 +50,30 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
+  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+
+  useEffect(() => setButtonActiveHook({ selectedUsers, setButtonActive }), [selectedUsers])
+
+  useEffect(() => {
+    if (open && !teamsData.length) {
+      return getOrganizatoinTeamsHook({
+        open,
+        organizationId,
+        teamsData,
+        setTeamsData,
+        errorMessageDispatch,
+      })
+    }
+  }, [open])
+
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
       organizationLogin,
       selectedUsers,
       selectedTeams,
       onBackdropClick,
+      errorMessageDispatch,
     })
-
-  useEffect(() => setButtonActiveHook({ selectedUsers, setButtonActive }), [selectedUsers])
-
-  useEffect(
-    () => getOrganizatoinTeamsHook({ open, organizationId, teamsData, setTeamsData }),
-
-    [open]
-  )
 
   return (
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
