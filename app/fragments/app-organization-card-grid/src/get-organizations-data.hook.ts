@@ -10,8 +10,8 @@ import { ORGANIZATION_MEMBERS_LIMIT }       from './organizations-page.constants
 export const getOrganizationsData = ({ setOrganizationsData, errorMessageDispatch }) => {
   const token = getTokenCookie(document)
 
-  const getOrganizationsDataPromise = () => {
-    return new Promise(async (resolve, reject) => {
+  const getOrganizationsDataPromise = async () =>
+    new Promise((resolve, reject) => {
       try {
         const client = octokitGraphqlClient(token)
         const response = (await client(GET_VIEWER_ORGANIZATIONS, {
@@ -27,6 +27,7 @@ export const getOrganizationsData = ({ setOrganizationsData, errorMessageDispatc
 
         resolve(nodes)
       } catch (e: any) {
+        // eslint-disable-next-line no-console
         console.error(e)
         errorMessageDispatch({
           type: 'set',
@@ -34,7 +35,6 @@ export const getOrganizationsData = ({ setOrganizationsData, errorMessageDispatc
         })
       }
     })
-  }
 
   getOrganizationsDataPromise().then((responseOrganizationsData) => {
     setOrganizationsData(responseOrganizationsData)

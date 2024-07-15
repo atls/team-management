@@ -4,7 +4,6 @@ import { useTheme }                    from '@emotion/react'
 
 import React                           from 'react'
 import { FC }                          from 'react'
-import { PropsWithChildren }           from 'react'
 import { memo }                        from 'react'
 import { useState }                    from 'react'
 import { useEffect }                   from 'react'
@@ -16,10 +15,9 @@ import { ErrorMessageDispatchContext } from '@ui/error-message'
 import { GridAutoRows }                from '@ui/layout'
 import { ThemeType }                   from '@ui/theme'
 
-import { OrganizationCardGridProps }   from './organization-card-grid.interfaces.js'
 import { getOrganizationsData }        from './get-organizations-data.hook.js'
 
-export const OrganizationCardGrid: FC<PropsWithChildren> = memo(({ children }) => {
+export const OrganizationCardGrid: FC = memo(() => {
   const theme = useTheme() as ThemeType
 
   const [organizationsData, setOrganizationsData] = useState<Array<GetViewerOrganizationsQuery>>([])
@@ -27,11 +25,13 @@ export const OrganizationCardGrid: FC<PropsWithChildren> = memo(({ children }) =
 
   useEffect(() => {
     if (!organizationsData.length) {
+      //     eslint-disable-next-line react-hooks/exhaustive-deps
       return getOrganizationsData({
         setOrganizationsData,
         errorMessageDispatch,
       })
     }
+    return
   }, [])
 
   return (

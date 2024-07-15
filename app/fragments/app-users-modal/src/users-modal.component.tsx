@@ -50,6 +50,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
 
   useEffect(() => {
     if (open && !membersData.length) {
+      //     eslint-disable-next-line react-hooks/exhaustive-deps
       setMembersCount(initMembersCount)
       getOrganizationMembersHook({
         open,

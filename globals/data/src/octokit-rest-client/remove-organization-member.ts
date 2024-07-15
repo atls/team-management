@@ -5,8 +5,6 @@ export const removeOrganizationMember = async ({ token, organizationLogin, membe
     auth: token,
   })
 
-  console.log(token, organizationLogin, memberLogin)
-
   await octokit.request(`DELETE /orgs/${organizationLogin}/members/${memberLogin}`, {
     org: organizationLogin,
     username: memberLogin,

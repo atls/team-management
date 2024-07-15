@@ -11,7 +11,7 @@ export const getSearchedUsers = async ({
 }) => {
   const token = getTokenCookie(document)
 
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const client = octokitGraphqlClient(token)
     try {
       const response = await client(SEARCH_USER, {
@@ -25,9 +25,7 @@ export const getSearchedUsers = async ({
         },
       } = response
 
-      const filtredNodes = nodes.filter(({ node }) => {
-        return !!Object.keys(node).length
-      })
+      const filtredNodes = nodes.filter(({ node }) => !!Object.keys(node).length)
 
       const matchedUsers = filtredNodes.map(({ node }) => {
         const {
@@ -54,6 +52,7 @@ export const getSearchedUsers = async ({
 
       resolve()
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
       errorMessageDispatch({
         type: 'set',

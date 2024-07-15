@@ -23,7 +23,6 @@ import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
-    id: organizationId,
     name: organizationTitle,
     description: organizationDescription,
     membersWithRole: { totalCount: membersCount },
