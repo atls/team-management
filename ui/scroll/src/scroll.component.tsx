@@ -1,6 +1,5 @@
 import React                 from 'react'
 import { PropsWithChildren } from 'react'
-import { maxHeight }         from 'styled-system'
 
 import { ScrollProps }       from './scroll.interface.js'
 import { ScrollContainer }   from './scroll.styles.js'

@@ -1,5 +1,6 @@
-import { DeviderProps as BaseDeviderProps } from '@atls-ui-proto/divider'
+import { DividerProps as BaseDeviderProps } from '@atls-ui-proto/divider'
 
 export interface DividerProps extends BaseDeviderProps {
-  backgroundColor: sring
+  height?: number
+  backgroundColor?: string
 }

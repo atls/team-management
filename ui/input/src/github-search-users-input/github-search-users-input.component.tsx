@@ -39,7 +39,6 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   onChange,
   onChangeNative,
   errorText,
-  searchItems,
   parentHook,
   ...props
 }) => {
@@ -82,7 +81,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
     if (!isClientTyping) {
       getSearchedUsers({ searchQuery: inputValue, suggestedItemsDispatch, errorMessageDispatch })
     }
-  }, [isClientTyping])
+  }, [isClientTyping, errorMessageDispatch, inputValue])
 
   useEffect(() => {
     parentHook(selectedItems)

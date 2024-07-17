@@ -1,4 +1,5 @@
 import { SEARCH_USER }          from '@globals/data'
+import { SearchUserQuery }      from '@globals/data'
 import { octokitGraphqlClient } from '@globals/data'
 import { getTokenCookie }       from '@globals/helpers'
 
@@ -11,37 +12,44 @@ export const getSearchedUsers = async ({
 }) => {
   const token = getTokenCookie(document)
 
-  return new Promise((resolve, reject) => {
+  const setSearchedUsers = async () => {
     const client = octokitGraphqlClient(token)
-    try {
-      const response = await client(SEARCH_USER, {
-        searchLimit: SEARCH_USERS_LIMIT,
-        searchQuery,
-      })
 
+    const response = (await client(SEARCH_USER, {
+      searchLimit: SEARCH_USERS_LIMIT,
+      searchQuery,
+    })) as SearchUserQuery
+
+    if (response && response.search && response.search.edges?.length) {
       const {
         search: {
           edges: [...nodes],
         },
       } = response
 
-      const filtredNodes = nodes.filter(({ node }) => !!Object.keys(node).length)
+      const filtredNodes = nodes.filter((nodeParams) => {
+        if (nodeParams?.node) {
+          return !!Object.keys(nodeParams.node).length
+        }
+      })
 
-      const matchedUsers = filtredNodes.map(({ node }) => {
-        const {
-          id: nodeId,
-          databaseId: githubUserId,
-          name: primaryInfo,
-          email: secondaryInfo,
-          avatarUrl: imageSrc,
-        } = node
+      const matchedUsers = filtredNodes.map((nodeParams) => {
+        if (nodeParams?.node) {
+          const {
+            id: nodeId,
+            databaseId: githubUserId,
+            name: primaryInfo,
+            email: secondaryInfo,
+            avatarUrl: imageSrc,
+          } = nodeParams.node
 
-        return {
-          nodeId,
-          githubUserId,
-          primaryInfo,
-          secondaryInfo,
-          imageSrc,
+          return {
+            nodeId,
+            githubUserId,
+            primaryInfo,
+            secondaryInfo,
+            imageSrc,
+          }
         }
       })
 
@@ -49,9 +57,14 @@ export const getSearchedUsers = async ({
         type: 'change',
         suggestedItems: matchedUsers,
       })
+    }
+  }
 
+  return new Promise<void>((resolve, reject) => {
+    try {
+      setSearchedUsers()
       resolve()
-    } catch (e) {
+    } catch (e: any) {
       // eslint-disable-next-line no-console
       console.error(e)
       errorMessageDispatch({

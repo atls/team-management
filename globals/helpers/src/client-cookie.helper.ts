@@ -2,7 +2,7 @@ type DocumentType = typeof document
 type CookieObjType = Record<string, string>
 
 export const getAllCookieClient = (document: DocumentType): CookieObjType => {
-  let resultCookitObj = {}
+  const resultCookitObj = {}
 
   const cookieString = document.cookie
   const cookieRecordArray = cookieString.split(';')

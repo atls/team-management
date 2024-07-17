@@ -628,6 +628,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -658,6 +659,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-intl", null],\
@@ -690,6 +692,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/button", "virtual:dbc5a667a4b41cd6aea4fac78774f24caf8e7a48d7ea3e76ece2775b091f1c45f6096928c3173a43948001e035b1587f49814bb9fba2caf0a1c3d4b4e61ea416#workspace:ui/button"],\
@@ -1206,6 +1209,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1233,6 +1237,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1262,6 +1267,7 @@ const RAW_RUNTIME_STATE =
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/interfaces", "workspace:globals/interfaces"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/error-message", "virtual:105a8c24ae646595a88586e28b8fb54d3004a1373a48e202a04d1bdf1bed6b28c8a9c3a6be87be59d7d8635316521fb0b53f8cef6a58853a065c8a2daa060894#workspace:ui/error-message"],\

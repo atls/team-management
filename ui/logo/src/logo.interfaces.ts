@@ -1,6 +1,6 @@
 import { ThemeVariantType } from '@ui/theme'
 
-type LogoVariants = 'small'
+type LogoVariants = 'base' | 'small'
 
 export interface LogoProps {
   variant?: LogoVariants

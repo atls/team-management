@@ -13,8 +13,7 @@ export const inviteButtonClickHook = async ({
   try {
     for (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
-
-      await inviteMemberToOrgaization({
+      inviteMemberToOrgaization({
         token,
         organizationLogin,
         githubUserId,

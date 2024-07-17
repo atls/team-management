@@ -8,7 +8,7 @@ import { ThemeType }              from '@ui/theme'
 
 import { DividerProps }           from './divider.interfaces.js'
 
-export const Divider: FC<any> = (props) => {
+export const Divider: FC<DividerProps> = (props) => {
   const { backgroundColor } = props
   const theme = useTheme() as ThemeType
   return <BaseDivider {...props} backgroundColor={backgroundColor || theme.colors.divider} />

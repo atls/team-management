@@ -7,36 +7,28 @@ import { getTokenCookie }                   from '@globals/helpers'
 import { ORGANIZATIONS_LIMIT }              from './organizations-page.constants.js'
 import { ORGANIZATION_MEMBERS_LIMIT }       from './organizations-page.constants.js'
 
-export const getOrganizationsData = ({ setOrganizationsData, errorMessageDispatch }) => {
-  const token = getTokenCookie(document)
+export const getOrganizationsData = async ({ setOrganizationsData, errorMessageDispatch }) => {
+  try {
+    const token = getTokenCookie(document)
+    const client = octokitGraphqlClient(token)
+    const response = (await client(GET_VIEWER_ORGANIZATIONS, {
+      organizationsLimit: ORGANIZATIONS_LIMIT,
+      organizationMembersLimit: ORGANIZATION_MEMBERS_LIMIT,
+    })) as GetViewerOrganizationsQuery
 
-  const getOrganizationsDataPromise = async () =>
-    new Promise((resolve, reject) => {
-      try {
-        const client = octokitGraphqlClient(token)
-        const response = (await client(GET_VIEWER_ORGANIZATIONS, {
-          organizationsLimit: ORGANIZATIONS_LIMIT,
-          organizationMembersLimit: ORGANIZATION_MEMBERS_LIMIT,
-        })) as GetViewerOrganizationsQuery
+    const {
+      viewer: {
+        organizations: { nodes: responseOrganizationsData },
+      },
+    } = response
 
-        const {
-          viewer: {
-            organizations: { nodes },
-          },
-        } = response
-
-        resolve(nodes)
-      } catch (e: any) {
-        // eslint-disable-next-line no-console
-        console.error(e)
-        errorMessageDispatch({
-          type: 'set',
-          errorMessage: { text: e.message, code: e.status || 0 },
-        })
-      }
-    })
-
-  getOrganizationsDataPromise().then((responseOrganizationsData) => {
     setOrganizationsData(responseOrganizationsData)
-  })
+  } catch (e: any) {
+    // eslint-disable-next-line no-console
+    console.error(e)
+    errorMessageDispatch({
+      type: 'set',
+      errorMessage: { text: e.message, code: e.status || 0 },
+    })
+  }
 }

@@ -12,6 +12,7 @@
     "@app/organization-card-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
+    "@globals/interfaces": "workspace:*",
     "@ui/error-message": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/theme": "workspace:*"

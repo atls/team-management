@@ -8,7 +8,6 @@ import { useEffect }                   from 'react'
 import { useContext }                  from 'react'
 import { useIntl }                     from 'react-intl'
 
-import { GetOrganizationMembersQuery } from '@globals/data'
 import { ErrorMessageDispatchContext } from '@ui/error-message'
 import { ImageBlock }                  from '@ui/image'
 import { Box }                         from '@ui/layout'
@@ -20,7 +19,6 @@ import { Text }                        from '@ui/text'
 import { ThemeType }                   from '@ui/theme'
 
 import { Member }                      from './member/index.js'
-import { MemberDataType }              from './users-modal.interfaces.js'
 import { UsersModalProps }             from './users-modal.interfaces.js'
 import { getOrganizationMembersHook }  from './get-organization-members.hook.js'
 import { removeMemberHook }            from './remove-member.hook.js'
@@ -43,24 +41,22 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
-  const [membersData, setMembersData] = useState<Array<GetOrganizationMembersQuery>>([])
+  // TODO interface
+  const [membersData, setMembersData] = useState<Array<any>>([])
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
   const errorMessageDispatch = useContext(ErrorMessageDispatchContext) as VoidFunction
 
   useEffect(() => {
     if (open && !membersData.length) {
-      //     eslint-disable-next-line react-hooks/exhaustive-deps
       setMembersCount(initMembersCount)
       getOrganizationMembersHook({
-        open,
-        membersData,
         organizationId,
         setMembersData,
         errorMessageDispatch,
       })
     }
-  }, [open])
+  }, [open, errorMessageDispatch, initMembersCount, membersData, organizationId])
 
   const handlerRemoveMemberClick = (removeMemberLogin: string) =>
     removeMemberHook({ organizationLogin, membersData, setMembersData, removeMemberLogin })
@@ -86,7 +82,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
           {formatMessage({ id: 'users-modal.subTitle' })} ({membersCount})
         </Text>
         <Scroll maxHeight={theme.spaces.superExtraIncreasedDefault}>
-          {membersData.map((memberData: MemberDataType, memberIndex) => (
+          {membersData.map((memberData, memberIndex) => (
             <Member
               memberData={memberData}
               onDeleteMemberClick={handlerRemoveMemberClick}

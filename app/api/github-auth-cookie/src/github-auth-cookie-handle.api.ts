@@ -24,7 +24,7 @@ export async function githubAuthCookieHandle(request: Request) {
       cookies().set(TOKEN_COOKIE_NAME as string, TOKEN, {
         expires: Date.now() + COOKIE_EXPIRES_WEEK,
       })
-    } catch (e) {
+    } catch (e: any) {
       // eslint-disable-next-line no-console
       console.error(e)
       REGISTRATION_URL.searchParams.set('errorMessage', RU_MESSAGES.tokenError)

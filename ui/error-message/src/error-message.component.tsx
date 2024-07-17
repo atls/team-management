@@ -25,11 +25,10 @@ export const ErrorMessage: FC<ErrorMessageComponentProps> = ({
     if (typeof window !== 'undefined') {
       errorMessageDispatch({
         type: 'set',
-        //     eslint-disable-next-line react-hooks/exhaustive-deps
         errorMessage: checkUrlErrorHook(),
       })
     }
-  }, [])
+  }, [errorMessageDispatch])
 
   useEffect(() => {
     setHide(false)

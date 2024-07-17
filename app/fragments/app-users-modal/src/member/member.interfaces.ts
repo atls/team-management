@@ -2,7 +2,7 @@ import { OrganizationMemberDataType } from '@globals/interfaces'
 
 export interface MemberProps {
   memberData: OrganizationMemberDataType
-  onDeleteMemberClick: VoidFunction
+  onDeleteMemberClick: (removeMemberLogin: string) => void
   devider: boolean
   viewerCanAdminister: boolean
 }

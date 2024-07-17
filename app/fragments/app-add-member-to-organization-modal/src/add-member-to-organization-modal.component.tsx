@@ -20,7 +20,6 @@ import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
-import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
 import { getOrganizatoinTeamsHook }          from './get-organization-teams.hook.js'
@@ -59,15 +58,13 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   useEffect(() => {
     if (open && !teamsData.length) {
-      return getOrganizatoinTeamsHook({
-        open,
+      getOrganizatoinTeamsHook({
         organizationId,
-        teamsData,
         setTeamsData,
         errorMessageDispatch,
       })
     }
-  }, [open])
+  }, [open, errorMessageDispatch, organizationId, teamsData])
 
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
