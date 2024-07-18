@@ -6,13 +6,22 @@ export const removeMemberHook = ({
   removeMemberLogin,
   membersData,
   setMembersData,
+  toastNotificationDispatch,
 }) => {
   const token = getTokenCookie(document)
 
-  removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(
-    () => {
-      const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
-      setMembersData(newMembersData)
-    }
-  )
+  const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
+  setMembersData(newMembersData)
+
+  toastNotificationDispatch({
+    type: 'set',
+    errorMessage: { text: 'test message', code: 777 || 0 },
+  })
+
+  // removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(
+  //   () => {
+  //     const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
+  //     setMembersData(newMembersData)
+  //   }
+  // )
 }

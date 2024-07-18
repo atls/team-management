@@ -25,7 +25,8 @@
     "@ui/modal": "workspace:*",
     "@ui/scroll": "workspace:*",
     "@ui/text": "workspace:*",
-    "@ui/theme": "workspace:*"
+    "@ui/theme": "workspace:*",
+    "@ui/toast-notification": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
@@ -37,6 +38,7 @@
   },
   "peerDependencies": {
     "@emotion/react": "*",
+    "@ui/toast-notification": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"
