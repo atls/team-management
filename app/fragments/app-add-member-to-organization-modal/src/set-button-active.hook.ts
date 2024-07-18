@@ -1,7 +1,9 @@
-export const setButtonActiveHook = ({ selectedUsers, setButtonActive }) => {
+export const setButtonActiveHook = ({ modalButtonState, selectedUsers, setModalButtonState }) => {
   if (selectedUsers.length) {
-    setButtonActive(true)
+    setModalButtonState('active')
   } else {
-    setButtonActive(false)
+    if (modalButtonState !== 'successed') {
+      setModalButtonState('disabled')
+    }
   }
 }

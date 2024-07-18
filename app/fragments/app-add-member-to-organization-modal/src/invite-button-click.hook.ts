@@ -7,6 +7,7 @@ export const inviteButtonClickHook = async ({
   selectedTeams,
   onBackdropClick,
   errorMessageDispatch,
+  setModalButtonState,
 }) => {
   const token = getTokenCookie(document)
 
@@ -18,12 +19,10 @@ export const inviteButtonClickHook = async ({
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
+        errorMessageDispatch,
       })
     }
-
-    // TODO оповещение юсера об успешном чтото там, проверь вторую модалку тоже на эту тему
-
-    onBackdropClick()
+    setModalButtonState('successed')
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)

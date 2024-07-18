@@ -10,7 +10,6 @@ import { useIntl }                           from 'react-intl'
 
 import { GetOrganizationTeamsQuery }         from '@globals/data'
 import { GetOrganizationMembersQuery }       from '@globals/data'
-import { Button }                            from '@ui/button'
 import { ErrorMessageDispatchContext }       from '@ui/error-message'
 import { GithubSearchUsersInput }            from '@ui/input'
 import { Row }                               from '@ui/layout'
@@ -21,6 +20,7 @@ import { ThemeType }                         from '@ui/theme'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
+import { ModalButton }                       from './modal-button/modal-button.component.js'
 import { TeamSwitch }                        from './team-switch/index.js'
 import { getOrganizatoinTeamsHook }          from './get-organization-teams.hook.js'
 import { inviteButtonClickHook }             from './invite-button-click.hook.js'
@@ -37,7 +37,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
-  const [isButtonActive, setButtonActive] = useState<boolean>(false)
+  // const [isButtonActive, setButtonActive] = useState<boolean>(false)
+  // TODO button state interfaces
+  // disabled, active, successed
+  const [modalButtonState, setModalButtonState] = useState('disabled')
 
   const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
@@ -54,9 +57,13 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 
   const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
 
-  useEffect(() => setButtonActiveHook({ selectedUsers, setButtonActive }), [selectedUsers])
+  useEffect(
+    () => setButtonActiveHook({ modalButtonState, selectedUsers, setModalButtonState }),
+    [selectedUsers]
+  )
 
   useEffect(() => {
+    setModalButtonState('disabled')
     if (open && !teamsData.length) {
       getOrganizatoinTeamsHook({
         organizationId,
@@ -70,9 +77,11 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     inviteButtonClickHook({
       organizationLogin,
       selectedUsers,
+      setSelectedUsers,
       selectedTeams,
       onBackdropClick,
       errorMessageDispatch,
+      setModalButtonState,
     })
 
   return (
@@ -82,6 +91,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           {formatMessage({ id: 'add-member-to-organization-modal.header' })}
         </Text>
         <GithubSearchUsersInput
+          modalButtonState={modalButtonState}
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
           parentHook={setSelectedUsers}
         />
@@ -100,17 +110,12 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           ))}
         </Row>
         <Row justifyContent='end'>
-          <Button
-            disabled={!isButtonActive}
-            horizontalLocation='right'
-            variant='blueBackgroundButton'
-            size='middlingRoundedPadding'
-            onClick={inviteButtonClickHandler}
-          >
-            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              {formatMessage({ id: 'add-member-to-organization-modal.button' })}
-            </Text>
-          </Button>
+          <ModalButton
+            theme={theme}
+            formatMessage={formatMessage}
+            modalButtonState={modalButtonState}
+            inviteButtonClickHandler={inviteButtonClickHandler}
+          />
         </Row>
       </Column>
     </Modal>
