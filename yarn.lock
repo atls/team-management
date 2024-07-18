@@ -199,6 +199,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal"
   dependencies:
+    "@app/invite-button": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
@@ -207,6 +208,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
     "@ui/error-message": "workspace:*"
+    "@ui/icons": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
@@ -286,6 +288,30 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/invite-button@workspace:*, @app/invite-button@workspace:app/fragments/app-invite-button":
+  version: 0.0.0-use.local
+  resolution: "@app/invite-button@workspace:app/fragments/app-invite-button"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -644,11 +670,13 @@ __metadata:
     "@ui/scroll": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
+    "@ui/toast-notification": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -5176,6 +5204,30 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/toast-notification@workspace:*, @ui/toast-notification@workspace:ui/toast-notification":
+  version: 0.0.0-use.local
+  resolution: "@ui/toast-notification@workspace:ui/toast-notification"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/condition": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-error-boundary: "npm:4.0.13"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-error-boundary: "*"
   languageName: unknown
   linkType: soft
 
