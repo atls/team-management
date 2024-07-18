@@ -5,6 +5,7 @@
   "add-member-to-organization-modal.header": "Добавить сотрудника в организацию",
   "add-member-to-organization-modal.teams": "Команды организации",
   "add-member-to-organization-modal.button": "Пригласить",
+  "add-member-to-organization-modal.success-button": "Успешно",
   "add-member-to-organization-modal_input.placeholder": "Team member",
   "organization-card_member.one": "member",
   "organization-card_member.many": "members",
