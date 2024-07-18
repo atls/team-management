@@ -38,6 +38,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   value,
   onChange,
   onChangeNative,
+  modalButtonState,
   errorText,
   parentHook,
   ...props
@@ -86,6 +87,14 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   useEffect(() => {
     parentHook(selectedItems)
   }, [parentHook, selectedItems])
+
+  useEffect(() => {
+    if (modalButtonState === 'successed' && selectedItems.length) {
+      selectedItemsDispatch({
+        type: 'clean',
+      })
+    }
+  }, [modalButtonState])
 
   return (
     <SuggestedItemsContext.Provider value={suggestedItems}>

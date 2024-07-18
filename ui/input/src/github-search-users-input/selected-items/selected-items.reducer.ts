@@ -3,6 +3,9 @@ export function selectedItemsReducer(selectedItems, action) {
     case 'added': {
       return [...selectedItems, action.itemData]
     }
+    case 'clean': {
+      return []
+    }
     case 'deleted': {
       return selectedItems.filter(
         (selectedItem) => selectedItem.githubUserId !== action.itemData.githubUserId
