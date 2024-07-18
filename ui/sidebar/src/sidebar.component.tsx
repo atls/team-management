@@ -8,6 +8,7 @@ import { useState }                 from 'react'
 
 import { Column }                   from '@ui/layout'
 import { ThemeType }                from '@ui/theme'
+import { ThemeVariantType }         from '@ui/theme'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
 import { SidebarItem }              from './item/index.js'
@@ -37,7 +38,7 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
   return (
     <SidebarStateContext.Provider value={isSidebarOpened}>
       <Wrapper states={states}>
-        <AtlantisLogo activeTheme={theme.colors.activeTheme} />
+        <AtlantisLogo activeTheme={theme.colors.activeTheme as ThemeVariantType} />
         <Column gap={theme.spaces.miniIncreased}>
           {itemList.map((itemData) => (
             <SidebarItem {...itemData} active={pathname === itemData.href} />

@@ -27,29 +27,24 @@ export const getSearchedUsers = async ({
         },
       } = response
 
-      const filtredNodes = nodes.filter((nodeParams) => {
-        if (nodeParams?.node) {
-          return !!Object.keys(nodeParams.node).length
-        }
-      })
+      const filtredNodes = nodes.filter((nodeParams: any) => !!Object.keys(nodeParams.node).length)
 
-      const matchedUsers = filtredNodes.map((nodeParams) => {
-        if (nodeParams?.node) {
-          const {
-            id: nodeId,
-            databaseId: githubUserId,
-            name: primaryInfo,
-            email: secondaryInfo,
-            avatarUrl: imageSrc,
-          } = nodeParams.node
+      const matchedUsers = filtredNodes.map((nodeParams: any) => {
+        const { node } = nodeParams
+        const {
+          id: nodeId,
+          databaseId: githubUserId,
+          name: primaryInfo,
+          email: secondaryInfo,
+          avatarUrl: imageSrc,
+        } = node
 
-          return {
-            nodeId,
-            githubUserId,
-            primaryInfo,
-            secondaryInfo,
-            imageSrc,
-          }
+        return {
+          nodeId,
+          githubUserId,
+          primaryInfo,
+          secondaryInfo,
+          imageSrc,
         }
       })
 

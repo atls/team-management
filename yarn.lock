@@ -4900,6 +4900,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
+    "@octokit/graphql": "npm:8.1.1"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/error-message": "workspace:*"
@@ -4917,6 +4918,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@octokit/graphql": "*"
     "@types/styled-system": "*"
     "@ui/error-message": "*"
     react: "*"
