@@ -9,11 +9,13 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/invite-button": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@globals/interfaces": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/error-message": "workspace:*",
+    "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",

@@ -1,3 +1,5 @@
+import { InviteButtonStateType }             from '@app/invite-button'
+import { InviteButton }                      from '@app/invite-button'
 import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
@@ -20,7 +22,6 @@ import { ThemeType }                         from '@ui/theme'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
-import { ModalButton }                       from './modal-button/modal-button.component.js'
 import { TeamSwitch }                        from './team-switch/index.js'
 import { getOrganizatoinTeamsHook }          from './get-organization-teams.hook.js'
 import { inviteButtonClickHook }             from './invite-button-click.hook.js'
@@ -37,10 +38,8 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
-  // const [isButtonActive, setButtonActive] = useState<boolean>(false)
   // TODO button state interfaces
-  // disabled, active, successed
-  const [modalButtonState, setModalButtonState] = useState('disabled')
+  const [modalButtonState, setModalButtonState] = useState<ModalButtonType>('disabled')
 
   const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
@@ -110,9 +109,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           ))}
         </Row>
         <Row justifyContent='end'>
-          <ModalButton
-            theme={theme}
-            formatMessage={formatMessage}
+          <InviteButton
             modalButtonState={modalButtonState}
             inviteButtonClickHandler={inviteButtonClickHandler}
           />

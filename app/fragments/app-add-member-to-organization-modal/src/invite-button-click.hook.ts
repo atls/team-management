@@ -5,7 +5,6 @@ export const inviteButtonClickHook = async ({
   organizationLogin,
   selectedUsers,
   selectedTeams,
-  onBackdropClick,
   errorMessageDispatch,
   setModalButtonState,
 }) => {
@@ -19,12 +18,25 @@ export const inviteButtonClickHook = async ({
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
-        errorMessageDispatch,
+      }).catch((e) => {
+        // TODO
+        // странный момент?
+        // если не делаю этот catch, то ошибка падает в глобальный catch
+        // ошибку ПРОМИСА можно выводить както в общий поток?
+        // или ошибку промиса ловим отдельно, ошибку общего потока - отдельно?
+
+        console.log('error on response on hook')
+        errorMessageDispatch({
+          type: 'set',
+          errorMessage: { text: e.message, code: e.status || 0 },
+        })
       })
     }
+
     setModalButtonState('successed')
   } catch (e: any) {
     // eslint-disable-next-line no-console
+    console.log('outter error on hook')
     console.error(e)
     errorMessageDispatch({
       type: 'set',
