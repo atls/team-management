@@ -14,6 +14,7 @@ export const colorsConstants = {
   BLUE_0: '#F5F9FF',
   BLUE_100: '#C5DCFD',
   BLUE_400: '#508EE9',
+  BLUE_700: '#1B5AB8',
 
   RED_400: '#E95050',
   RED_600: '#CD2727',

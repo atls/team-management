@@ -12,6 +12,7 @@ const { GRAY_1600 } = colorsConstants
 const { BLUE_0 } = colorsConstants
 const { BLUE_100 } = colorsConstants
 const { BLUE_400 } = colorsConstants
+const { BLUE_700 } = colorsConstants
 
 const { RED_400 } = colorsConstants
 
