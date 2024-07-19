@@ -7,7 +7,7 @@ import { getTokenCookie }                   from '@globals/helpers'
 import { ORGANIZATIONS_LIMIT }              from './organizations-page.constants.js'
 import { ORGANIZATION_MEMBERS_LIMIT }       from './organizations-page.constants.js'
 
-export const getOrganizationsData = async ({ setOrganizationsData, errorMessageDispatch }) => {
+export const getOrganizationsData = async ({ setOrganizationsData, toastNotificationDispatch }) => {
   try {
     const token = getTokenCookie(document)
     const client = octokitGraphqlClient(token)
@@ -26,9 +26,9 @@ export const getOrganizationsData = async ({ setOrganizationsData, errorMessageD
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    errorMessageDispatch({
+    toastNotificationDispatch({
       type: 'notify',
-      errorMessage: { text: e.message, code: e.status || 0 },
+      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
     })
   }
 }
