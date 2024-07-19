@@ -28,7 +28,7 @@ export const ButtonElement = styled('button')<any>(
 )
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
-  { children, active, ...props },
+  { children, active, hoverDisabled, ...props },
   ref
 ) => {
   const [hover, hoverProps] = useHover()
@@ -36,7 +36,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
   if (props.horizontalLocation === 'right') {
     return (
       <ButtonElement
-        hover={hover}
+        hover={!hoverDisabled && hover}
         pressed={pressed || active}
         onMouseDown={() => setPressed(true)}
         onMouseUp={() => setPressed(false)}

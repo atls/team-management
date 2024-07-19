@@ -18,6 +18,7 @@ export type ButtonSize =
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
+  hoverDisabled?: boolean
   size?: ButtonSize
   active?: boolean
   boxShadow?: string
