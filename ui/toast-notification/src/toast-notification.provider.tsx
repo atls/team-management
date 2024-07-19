@@ -12,15 +12,12 @@ import { toastNotificationReducer }         from './toast-notification.reducer.j
 
 export const ToastNotificationProvider: FC<PropsWithChildren> = ({ children }) => {
   const [toastNotification, toastNotificationDispatch] = useReducer(toastNotificationReducer, {})
-  const { type, text, code } = toastNotification
 
   return (
     <ToastNotificationDispatchContext.Provider value={toastNotificationDispatch}>
       <ToastNotificationContext.Provider value={toastNotification}>
         <ToastNotification
-          type={type}
-          text={text}
-          code={code}
+          notificationData={toastNotification}
           toastNotificationDispatch={toastNotificationDispatch}
         />
         {children}

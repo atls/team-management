@@ -26,13 +26,13 @@ const AbsoluteContainer = styled<any>(Box)(
 const NotificationContainer = styled<any>(Box)(notificationContainerStyles)
 
 export const ToastNotification: FC<ToastNotificationComponentProps> = ({
-  type,
-  text,
-  code,
+  notificationData,
   toastNotificationDispatch,
 }) => {
   const theme = useTheme() as ThemeType
   const [isHide, setHide] = useState<boolean>(false)
+
+  const { type, text, code } = notificationData
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -44,26 +44,26 @@ export const ToastNotification: FC<ToastNotificationComponentProps> = ({
   }, [toastNotificationDispatch])
 
   useEffect(() => {
-    console.log(type)
     setHide(false)
   }, [text])
 
   useEffect(() => {
     if (!isHide) {
       setTimeout(() => {
-        // TODO удалить текст объекта для того,
-        // чтобы можно было закидывать следующий тост
         setHide(true)
+        toastNotificationDispatch({
+          type: 'clean',
+        })
       }, HIDE_DELAY_5SEC)
     }
-  }, [isHide])
+  }, [isHide, toastNotificationDispatch])
 
   return (
     <Condition match={Boolean(text && !isHide)}>
       <AbsoluteContainer>
         <NotificationContainer type={type}>
           <Text color={theme.colors.white}>
-            <div dangerouslySetInnerHTML={{ __html: text }} />
+            {text && <div dangerouslySetInnerHTML={{ __html: text }} />}
             {code ? ` : ${code}` : ''}
           </Text>
         </NotificationContainer>

@@ -1,17 +1,22 @@
-export interface ToastNotificationProps {
+type ToastNotificationType = 'base' | 'error'
+
+export type ToastNotificationProps = {
+  type?: ToastNotificationType
   text?: string
   code?: number
 }
 
-type DispatchType = 'set'
+type DispatchType = 'notify' | 'clean'
+
+type DispatchFuncType = ({
+  type,
+  toastNotification,
+}: {
+  type: DispatchType
+  toastNotification?: ToastNotificationProps
+}) => void
 
 export interface ToastNotificationComponentProps {
-  toastNotification: ToastNotificationProps
-  toastNotificationDispatch: ({
-    type,
-    toastNotification,
-  }: {
-    type: DispatchType
-    toastNotification: ToastNotificationProps
-  }) => void
+  notificationData: ToastNotificationProps
+  toastNotificationDispatch: DispatchFuncType
 }
