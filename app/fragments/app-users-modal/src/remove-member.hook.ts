@@ -14,8 +14,8 @@ export const removeMemberHook = ({
   setMembersData(newMembersData)
 
   toastNotificationDispatch({
-    type: 'set',
-    errorMessage: { text: 'test message', code: 777 || 0 },
+    type: 'notify',
+    toastNotification: { type: 'base', text: 'test message', code: 777 || 0 },
   })
 
   // removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(

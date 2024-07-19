@@ -1,4 +1,3 @@
-import { ToastNotificationDispatchContext } from '@ui/toast-notification'
 import { useTheme }                         from '@emotion/react'
 
 import React                                from 'react'
@@ -9,7 +8,6 @@ import { useEffect }                        from 'react'
 import { useContext }                       from 'react'
 import { useIntl }                          from 'react-intl'
 
-import { ErrorMessageDispatchContext }      from '@ui/error-message'
 import { ImageBlock }                       from '@ui/image'
 import { Box }                              from '@ui/layout'
 import { Row }                              from '@ui/layout'
@@ -18,6 +16,7 @@ import { Modal }                            from '@ui/modal'
 import { Scroll }                           from '@ui/scroll'
 import { Text }                             from '@ui/text'
 import { ThemeType }                        from '@ui/theme'
+import { ToastNotificationDispatchContext } from '@ui/toast-notification'
 
 import { Member }                           from './member/index.js'
 import { UsersModalProps }                  from './users-modal.interfaces.js'
@@ -47,12 +46,6 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
   const toastNotificationDispatch = useContext(ToastNotificationDispatchContext) as VoidFunction
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext) as VoidFunction
-
-  console.log('toastdispatch:')
-  console.log(toastNotificationDispatch)
-  console.log('errormessagedispatch:')
-  console.log(errorMessageDispatch)
 
   useEffect(() => {
     if (open && !membersData.length) {

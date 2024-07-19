@@ -18,7 +18,6 @@
     "@ui/condition": "workspace:*",
     "@ui/divider": "workspace:*",
     "@ui/dropdown": "workspace:*",
-    "@ui/error-message": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
@@ -38,7 +37,8 @@
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@ui/toast-notification": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"
