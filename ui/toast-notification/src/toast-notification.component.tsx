@@ -63,7 +63,7 @@ export const ToastNotification: FC<ToastNotificationComponentProps> = ({
       <AbsoluteContainer>
         <NotificationContainer type={type}>
           <Text color={theme.colors.white}>
-            {text}
+            <div dangerouslySetInnerHTML={{ __html: text }} />
             {code ? ` : ${code}` : ''}
           </Text>
         </NotificationContainer>
