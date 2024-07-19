@@ -207,7 +207,6 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
-    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -215,6 +214,7 @@ __metadata:
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -419,9 +419,9 @@ __metadata:
     "@globals/interfaces": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/error-message": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -545,8 +545,8 @@ __metadata:
     "@octokit/app": "npm:15.1.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/error-message": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/toast-notification": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
@@ -662,7 +662,6 @@ __metadata:
     "@ui/condition": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/dropdown": "workspace:*"
-    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
@@ -676,7 +675,8 @@ __metadata:
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@ui/toast-notification": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -4846,30 +4846,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/error-message@workspace:*, @ui/error-message@workspace:ui/error-message":
-  version: 0.0.0-use.local
-  resolution: "@ui/error-message@workspace:ui/error-message"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/condition": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-error-boundary: "npm:4.0.13"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    react-error-boundary: "*"
-  languageName: unknown
-  linkType: soft
-
 "@ui/icons@workspace:*, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
@@ -4931,12 +4907,12 @@ __metadata:
     "@octokit/graphql": "npm:8.1.1"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
-    "@ui/error-message": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@ui/toast-notification": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -4948,7 +4924,7 @@ __metadata:
     "@emotion/styled": "*"
     "@octokit/graphql": "*"
     "@types/styled-system": "*"
-    "@ui/error-message": "*"
+    "@ui/toast-notification": "*"
     react: "*"
     react-dom: "*"
     react-laag: "*"
@@ -5221,13 +5197,13 @@ __metadata:
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    react-error-boundary: "npm:4.0.13"
+    styled-tools: "npm:1.7.2"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
-    react-error-boundary: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -11704,17 +11680,6 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10/3f4b73a3aa083091173b29812b10394dd06f4ac06aff410b74702cfb3aa29d7b0ced208aab92d5272919b612e5cda21aeb1d54191848cf6e46e9e354f3541f81
-  languageName: node
-  linkType: hard
-
-"react-error-boundary@npm:4.0.13":
-  version: 4.0.13
-  resolution: "react-error-boundary@npm:4.0.13"
-  dependencies:
-    "@babel/runtime": "npm:^7.12.5"
-  peerDependencies:
-    react: ">=16.13.1"
-  checksum: 10/28fdf498a58621e21d93978c61719c52455bc00b778080259c5830fe003736153469ebc84f243d7989567b1196e25648c7592f7c8e47de47fcd7d12b875879b9
   languageName: node
   linkType: hard
 
