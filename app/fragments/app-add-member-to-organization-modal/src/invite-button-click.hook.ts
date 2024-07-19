@@ -5,7 +5,7 @@ export const inviteButtonClickHook = async ({
   organizationLogin,
   selectedUsers,
   selectedTeams,
-  errorMessageDispatch,
+  toastNotificationDispatch,
   setModalButtonState,
 }) => {
   const token = getTokenCookie(document)
@@ -25,10 +25,10 @@ export const inviteButtonClickHook = async ({
         // ошибку ПРОМИСА можно выводить както в общий поток?
         // или ошибку промиса ловим отдельно, ошибку общего потока - отдельно?
 
-        console.log('error on response on hook')
-        errorMessageDispatch({
-          type: 'set',
-          errorMessage: { text: e.message, code: e.status || 0 },
+        console.error(e)
+        toastNotificationDispatch({
+          type: 'notify',
+          toastNotification: { text: e.message, code: e.status || 0 },
         })
       })
     }
@@ -38,8 +38,8 @@ export const inviteButtonClickHook = async ({
     // eslint-disable-next-line no-console
     console.log('outter error on hook')
     console.error(e)
-    errorMessageDispatch({
-      type: 'set',
+    toastNotificationDispatch({
+      type: 'notify',
       errorMessage: { text: e.message, code: e.status || 0 },
     })
   }

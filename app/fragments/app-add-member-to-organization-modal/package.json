@@ -14,14 +14,14 @@
     "@globals/helpers": "workspace:*",
     "@globals/interfaces": "workspace:*",
     "@ui/button": "workspace:*",
-    "@ui/error-message": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
     "@ui/switch": "workspace:*",
     "@ui/text": "workspace:*",
-    "@ui/theme": "workspace:*"
+    "@ui/theme": "workspace:*",
+    "@ui/toast-notification": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

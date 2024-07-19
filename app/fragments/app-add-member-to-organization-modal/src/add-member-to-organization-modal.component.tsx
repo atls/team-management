@@ -1,5 +1,3 @@
-import { InviteButtonStateType }             from '@app/invite-button'
-import { InviteButton }                      from '@app/invite-button'
 import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
@@ -10,15 +8,17 @@ import { useState }                          from 'react'
 import { useEffect }                         from 'react'
 import { useIntl }                           from 'react-intl'
 
+import { InviteButtonStateType }             from '@app/invite-button'
+import { InviteButton }                      from '@app/invite-button'
 import { GetOrganizationTeamsQuery }         from '@globals/data'
 import { GetOrganizationMembersQuery }       from '@globals/data'
-import { ErrorMessageDispatchContext }       from '@ui/error-message'
 import { GithubSearchUsersInput }            from '@ui/input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
+import { ToastNotificationDispatchContext }  from '@ui/toast-notification'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
@@ -54,7 +54,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
-  const errorMessageDispatch = useContext(ErrorMessageDispatchContext)
+  const toastNotificationDispatch = useContext(ToastNotificationDispatchContext)
 
   useEffect(
     () => setButtonActiveHook({ modalButtonState, selectedUsers, setModalButtonState }),
@@ -67,10 +67,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
       getOrganizatoinTeamsHook({
         organizationId,
         setTeamsData,
-        errorMessageDispatch,
+        toastNotificationDispatch,
       })
     }
-  }, [open, errorMessageDispatch, organizationId, teamsData])
+  }, [open, toastNotificationDispatch, organizationId, teamsData])
 
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
@@ -79,7 +79,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
       setSelectedUsers,
       selectedTeams,
       onBackdropClick,
-      errorMessageDispatch,
+      toastNotificationDispatch,
       setModalButtonState,
     })
 
