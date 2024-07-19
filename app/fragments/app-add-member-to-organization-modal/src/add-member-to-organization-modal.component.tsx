@@ -38,8 +38,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme = useTheme() as ThemeType
   const { formatMessage } = useIntl()
 
-  // TODO button state interfaces
-  const [modalButtonState, setModalButtonState] = useState<ModalButtonType>('disabled')
+  const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
 
   const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
@@ -57,12 +56,12 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const toastNotificationDispatch = useContext(ToastNotificationDispatchContext)
 
   useEffect(
-    () => setButtonActiveHook({ modalButtonState, selectedUsers, setModalButtonState }),
-    [selectedUsers]
+    () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
+    [selectedUsers, inviteButtonState]
   )
 
   useEffect(() => {
-    setModalButtonState('disabled')
+    setInviteButtonState('disabled')
     if (open && !teamsData.length) {
       getOrganizatoinTeamsHook({
         organizationId,
@@ -75,12 +74,10 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
       organizationLogin,
-      selectedUsers,
-      setSelectedUsers,
       selectedTeams,
-      onBackdropClick,
       toastNotificationDispatch,
-      setModalButtonState,
+      selectedUsers,
+      setInviteButtonState,
     })
 
   return (
@@ -90,7 +87,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           {formatMessage({ id: 'add-member-to-organization-modal.header' })}
         </Text>
         <GithubSearchUsersInput
-          modalButtonState={modalButtonState}
+          modalButtonState={inviteButtonState}
           placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
           parentHook={setSelectedUsers}
         />
@@ -110,7 +107,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
         </Row>
         <Row justifyContent='end'>
           <InviteButton
-            modalButtonState={modalButtonState}
+            inviteButtonState={inviteButtonState}
             inviteButtonClickHandler={inviteButtonClickHandler}
           />
         </Row>

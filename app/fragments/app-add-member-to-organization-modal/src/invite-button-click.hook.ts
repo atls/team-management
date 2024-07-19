@@ -3,10 +3,10 @@ import { getTokenCookie }            from '@globals/helpers'
 
 export const inviteButtonClickHook = async ({
   organizationLogin,
-  selectedUsers,
   selectedTeams,
   toastNotificationDispatch,
-  setModalButtonState,
+  selectedUsers,
+  setInviteButtonState,
 }) => {
   const token = getTokenCookie(document)
 
@@ -20,27 +20,24 @@ export const inviteButtonClickHook = async ({
         teamIds: selectedTeams,
       }).catch((e) => {
         // TODO
-        // странный момент?
-        // если не делаю этот catch, то ошибка падает в глобальный catch
-        // ошибку ПРОМИСА можно выводить както в общий поток?
-        // или ошибку промиса ловим отдельно, ошибку общего потока - отдельно?
+        // Можно ли выводить ошибку промиса в основной поток?
 
+        // eslint-disable-next-line no-console
         console.error(e)
         toastNotificationDispatch({
           type: 'notify',
-          toastNotification: { text: e.message, code: e.status || 0 },
+          toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
         })
       })
     }
 
-    setModalButtonState('successed')
+    setInviteButtonState('successed')
   } catch (e: any) {
     // eslint-disable-next-line no-console
-    console.log('outter error on hook')
     console.error(e)
     toastNotificationDispatch({
       type: 'notify',
-      errorMessage: { text: e.message, code: e.status || 0 },
+      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
     })
   }
 }

@@ -8,7 +8,7 @@ const ORGANIZATION_TEAMS_LIMIT = 16
 export const getOrganizatoinTeamsHook = async ({
   organizationId,
   setTeamsData,
-  errorMessageDispatch,
+  toastNotificationDispatch,
 }) => {
   try {
     const token = getTokenCookie(document)
@@ -31,9 +31,9 @@ export const getOrganizatoinTeamsHook = async ({
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    errorMessageDispatch({
+    toastNotificationDispatch({
       type: 'notify',
-      errorMessage: { text: e.message, code: e.status || 0 },
+      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
     })
   }
 }
