@@ -14,12 +14,12 @@
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@ui/condition": "workspace:*",
-    "@ui/error-message": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*",
+    "@ui/toast-notification": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "@emotion/styled": "*",
     "@octokit/graphql": "*",
     "@types/styled-system": "*",
-    "@ui/error-message": "*",
+    "@ui/toast-notification": "*",
     "react": "*",
     "react-dom": "*",
     "react-laag": "*",
