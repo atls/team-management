@@ -1,17 +1,17 @@
 'use client'
 
-import React                    from 'react'
-import { IntlProvider }         from 'react-intl'
+import React                         from 'react'
+import { IntlProvider }              from 'react-intl'
 
-import { ErrorMessageProvider } from '@ui/error-message'
-import { ThemeProvider }        from '@ui/theme'
+import { ThemeProvider }             from '@ui/theme'
+import { ToastNotificationProvider } from '@ui/toast-notification'
 
 export const RootLayoutClient = ({ children, messages }) => (
   <html>
     <body>
       <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
         <ThemeProvider>
-          <ErrorMessageProvider>{children}</ErrorMessageProvider>
+          <ToastNotificationProvider>{children}</ToastNotificationProvider>
         </ThemeProvider>
       </IntlProvider>
     </body>

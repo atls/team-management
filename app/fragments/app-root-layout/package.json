@@ -9,8 +9,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/environment": "workspace:*",
-    "@ui/error-message": "workspace:*",
-    "@ui/theme": "workspace:*"
+    "@ui/theme": "workspace:*",
+    "@ui/toast-notification": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
