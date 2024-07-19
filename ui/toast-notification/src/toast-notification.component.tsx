@@ -1,3 +1,4 @@
+import styled                              from '@emotion/styled'
 import { useTheme }                        from '@emotion/react'
 
 import React                               from 'react'
@@ -13,9 +14,21 @@ import { ThemeType }                       from '@ui/theme'
 import { HIDE_DELAY_5SEC }                 from './toast-notification.constants.js'
 import { ToastNotificationComponentProps } from './toast-notification.interfaces.js'
 import { checkUrlErrorHook }               from './check-url-error.hook.js'
+import { baseAbsoluteConteinerStyles }     from './toast-notification.styles.js'
+import { shapeAbsoluteContainerStyles }    from './toast-notification.styles.js'
+import { notificationContainerStyles }     from './toast-notification.styles.js'
+
+const AbsoluteContainer = styled<any>(Box)(
+  baseAbsoluteConteinerStyles,
+  shapeAbsoluteContainerStyles
+)
+
+const NotificationContainer = styled<any>(Box)(notificationContainerStyles)
 
 export const ToastNotification: FC<ToastNotificationComponentProps> = ({
-  toastNotification,
+  type,
+  text,
+  code,
   toastNotificationDispatch,
 }) => {
   const theme = useTheme() as ThemeType
@@ -24,45 +37,37 @@ export const ToastNotification: FC<ToastNotificationComponentProps> = ({
   useEffect(() => {
     if (typeof window !== 'undefined') {
       toastNotificationDispatch({
-        type: 'set',
+        type: 'notify',
         toastNotification: checkUrlErrorHook(),
       })
     }
   }, [toastNotificationDispatch])
 
   useEffect(() => {
+    console.log(type)
     setHide(false)
-  }, [toastNotification])
+  }, [text])
 
   useEffect(() => {
     if (!isHide) {
       setTimeout(() => {
+        // TODO удалить текст объекта для того,
+        // чтобы можно было закидывать следующий тост
         setHide(true)
       }, HIDE_DELAY_5SEC)
     }
   }, [isHide])
 
   return (
-    <Condition match={Boolean(toastNotification.text && !isHide)}>
-      <Box
-        position='fixed'
-        zIndex={theme.spaces.s1500}
-        bottom={theme.spaces.moderate}
-        width='100%'
-        justifyContent='center'
-      >
-        <Box
-          width='fit-content'
-          backgroundColor={theme.colors.RED_600}
-          padding={theme.spaces.v8h16}
-          borderRadius={theme.radii.f20}
-        >
+    <Condition match={Boolean(text && !isHide)}>
+      <AbsoluteContainer>
+        <NotificationContainer type={type}>
           <Text color={theme.colors.white}>
-            {toastNotification.text}
-            {toastNotification.code ? ` : ${toastNotification.code}` : ''}
+            {text}
+            {code ? ` : ${code}` : ''}
           </Text>
-        </Box>
-      </Box>
+        </NotificationContainer>
+      </AbsoluteContainer>
     </Condition>
   )
 }

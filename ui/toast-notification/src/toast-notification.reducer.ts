@@ -1,6 +1,6 @@
 export function toastNotificationReducer(toastNotification, action) {
   switch (action.type) {
-    case 'set': {
+    case 'notify': {
       return action.toastNotification
     }
     case 'clean': {
