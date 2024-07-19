@@ -27,7 +27,7 @@ export const getOrganizationsData = async ({ setOrganizationsData, errorMessageD
     // eslint-disable-next-line no-console
     console.error(e)
     errorMessageDispatch({
-      type: 'set',
+      type: 'notify',
       errorMessage: { text: e.message, code: e.status || 0 },
     })
   }

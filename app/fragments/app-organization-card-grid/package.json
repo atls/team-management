@@ -13,9 +13,9 @@
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@globals/interfaces": "workspace:*",
-    "@ui/error-message": "workspace:*",
     "@ui/layout": "workspace:*",
-    "@ui/theme": "workspace:*"
+    "@ui/theme": "workspace:*",
+    "@ui/toast-notification": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
