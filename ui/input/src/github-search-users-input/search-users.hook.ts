@@ -8,13 +8,13 @@ import { SEARCH_USERS_LIMIT }   from './github-search-users-input.constants.js'
 export const getSearchedUsers = async ({
   searchQuery,
   suggestedItemsDispatch,
-  errorMessageDispatch,
+  toastNotificationDispatch,
 }) => {
   const token = getTokenCookie(document)
 
-  const setSearchedUsers = async () => {
-    const client = octokitGraphqlClient(token)
+  const client = octokitGraphqlClient(token)
 
+  try {
     const response = (await client(SEARCH_USER, {
       searchLimit: SEARCH_USERS_LIMIT,
       searchQuery,
@@ -53,19 +53,12 @@ export const getSearchedUsers = async ({
         suggestedItems: matchedUsers,
       })
     }
+  } catch (e: any) {
+    // eslint-disable-next-line no-console
+    console.error(e)
+    toastNotificationDispatch({
+      type: 'notify',
+      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
+    })
   }
-
-  return new Promise<void>((resolve, reject) => {
-    try {
-      setSearchedUsers()
-      resolve()
-    } catch (e: any) {
-      // eslint-disable-next-line no-console
-      console.error(e)
-      errorMessageDispatch({
-        type: 'notify',
-        errorMessage: { text: e.message, code: e.status || 0 },
-      })
-    }
-  })
 }
