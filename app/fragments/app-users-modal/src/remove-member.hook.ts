@@ -10,8 +10,8 @@ export const removeMemberHook = ({
 }) => {
   const token = getTokenCookie(document)
 
-  removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin }).then(
-    () => {
+  removeOrganizationMember({ token, memberLogin: removeMemberLogin, organizationLogin })
+    .then(() => {
       const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
       setMembersData(newMembersData)
       toastNotificationDispatch({
@@ -21,6 +21,18 @@ export const removeMemberHook = ({
           text: `Пользователь <b>${removeMemberLogin}</b> удален из <b>${organizationLogin}</b>`,
         },
       })
-    }
-  )
+    })
+    .catch((e) => {
+      // eslint-disable-next-line no-console
+      console.error(e)
+
+      toastNotificationDispatch({
+        type: 'notify',
+        toastNotification: {
+          type: 'error',
+          text: e.message,
+          code: e.code,
+        },
+      })
+    })
 }
