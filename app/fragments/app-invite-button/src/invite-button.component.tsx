@@ -26,7 +26,7 @@ export const InviteButton: FC<InviteButtonProps> = ({
   return inviteButtonState === 'successed' ? (
     <Button
       horizontalLocation='right'
-      hover={false}
+      hoverDisabled
       variant='whiteBackgroundButton'
       size='middlingRoundedPadding'
     >
