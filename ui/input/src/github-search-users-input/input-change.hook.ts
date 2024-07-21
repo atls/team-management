@@ -11,6 +11,10 @@ export const inputChangeHook = ({
 }) => {
   const inputValueString = e.target.value
 
+  suggestedItemsDispatch({
+    type: 'clean',
+  })
+
   if (!isClientTyping) {
     setClientTyping(true)
   }

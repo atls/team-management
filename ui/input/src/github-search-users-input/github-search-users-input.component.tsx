@@ -1,36 +1,35 @@
-import styled                               from '@emotion/styled'
-import { RawInput }                         from '@atls-ui-parts/input'
-import { useTheme }                         from '@emotion/react'
+import styled                            from '@emotion/styled'
+import { RawInput }                      from '@atls-ui-parts/input'
+import { useTheme }                      from '@emotion/react'
 
-import React                                from 'react'
-import { ForwardRefRenderFunction }         from 'react'
-import { useReducer }                       from 'react'
-import { forwardRef }                       from 'react'
-import { useRef }                           from 'react'
-import { useEffect }                        from 'react'
-import { useState }                         from 'react'
-import { useContext }                       from 'react'
-import { useLayer }                         from 'react-laag'
+import React                             from 'react'
+import { ForwardRefRenderFunction }      from 'react'
+import { useReducer }                    from 'react'
+import { forwardRef }                    from 'react'
+import { useRef }                        from 'react'
+import { useEffect }                     from 'react'
+import { useState }                      from 'react'
+import { useLayer }                      from 'react-laag'
 
-import { Box }                              from '@ui/layout'
-import { ToastNotificationDispatchContext } from '@ui/toast-notification'
+import { Box }                           from '@ui/layout'
+import { useToast }                      from '@ui/toast-notification'
 
-import { InputValueContext }                from './github-search-users-input.context.js'
-import { InputValueDispatchContext }        from './github-search-users-input.context.js'
-import { SelectInputProps }                 from './github-search-users-input.interfaces.js'
-import { SelectedItemsDispatchContext }     from './selected-items/index.js'
-import { SelectedItems }                    from './selected-items/index.js'
-import { SelectedItemsContext }             from './selected-items/index.js'
-import { SuggestedItemsContainer }          from './suggested-items-container/index.js'
-import { SuggestedItemsContext }            from './suggested-items/index.js'
-import { SuggestedItemsDispatchContext }    from './suggested-items/index.js'
-import { shapeStyles }                      from '../input.styles.js'
-import { appearanceStyles }                 from '../input.styles.js'
-import { inputValueReducer }                from './github-search-users-input.reducer.js'
-import { inputChangeHook }                  from './input-change.hook.js'
-import { getSearchedUsers }                 from './search-users.hook.js'
-import { selectedItemsReducer }             from './selected-items/index.js'
-import { suggestedItemsReducer }            from './suggested-items/index.js'
+import { InputValueContext }             from './github-search-users-input.context.js'
+import { InputValueDispatchContext }     from './github-search-users-input.context.js'
+import { SelectInputProps }              from './github-search-users-input.interfaces.js'
+import { SelectedItemsDispatchContext }  from './selected-items/index.js'
+import { SelectedItems }                 from './selected-items/index.js'
+import { SelectedItemsContext }          from './selected-items/index.js'
+import { SuggestedItemsContainer }       from './suggested-items-container/index.js'
+import { SuggestedItemsContext }         from './suggested-items/index.js'
+import { SuggestedItemsDispatchContext } from './suggested-items/index.js'
+import { shapeStyles }                   from '../input.styles.js'
+import { appearanceStyles }              from '../input.styles.js'
+import { getSearchedUsers }              from './get-searched-users.hook.js'
+import { inputValueReducer }             from './github-search-users-input.reducer.js'
+import { inputChangeHook }               from './input-change.hook.js'
+import { selectedItemsReducer }          from './selected-items/index.js'
+import { suggestedItemsReducer }         from './suggested-items/index.js'
 
 const InputBox = styled(Box)(shapeStyles, appearanceStyles)
 
@@ -52,7 +51,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   const [selectedItems, selectedItemsDispatch] = useReducer(selectedItemsReducer, [])
   const [suggestedItems, suggestedItemsDispatch] = useReducer(suggestedItemsReducer, [])
   const [inputValue, inputValueDispatch] = useReducer(inputValueReducer, '')
-  const toastNotificationDispatch = useContext(ToastNotificationDispatchContext) as VoidFunction
+  const toast = useToast()
 
   const handlerClickContainer = () => {
     if (inputRef?.current) inputRef.current.focus()
@@ -79,14 +78,14 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
     })
 
   useEffect(() => {
-    if (!isClientTyping) {
+    if (!isClientTyping && !suggestedItems.length) {
       getSearchedUsers({
         searchQuery: inputValue,
         suggestedItemsDispatch,
-        toastNotificationDispatch,
+        toast,
       })
     }
-  }, [isClientTyping, toastNotificationDispatch, inputValue])
+  }, [isClientTyping, suggestedItems, toast, inputValue])
 
   useEffect(() => {
     parentHook(selectedItems)

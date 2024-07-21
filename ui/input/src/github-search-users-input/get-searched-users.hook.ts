@@ -5,13 +5,8 @@ import { getTokenCookie }       from '@globals/helpers'
 
 import { SEARCH_USERS_LIMIT }   from './github-search-users-input.constants.js'
 
-export const getSearchedUsers = async ({
-  searchQuery,
-  suggestedItemsDispatch,
-  toastNotificationDispatch,
-}) => {
+export const getSearchedUsers = async ({ searchQuery, suggestedItemsDispatch, toast }) => {
   const token = getTokenCookie(document)
-
   const client = octokitGraphqlClient(token)
 
   try {
@@ -56,9 +51,6 @@ export const getSearchedUsers = async ({
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    toastNotificationDispatch({
-      type: 'notify',
-      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
-    })
+    toast.error(e.message, e.status)
   }
 }
