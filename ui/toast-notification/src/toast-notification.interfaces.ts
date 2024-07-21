@@ -8,7 +8,7 @@ export type ToastNotificationProps = {
 
 type DispatchType = 'notify' | 'clean'
 
-type DispatchFuncType = ({
+export type DispatchFuncType = ({
   type,
   toastNotification,
 }: {
