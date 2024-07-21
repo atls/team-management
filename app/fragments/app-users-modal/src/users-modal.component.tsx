@@ -1,27 +1,26 @@
-import { useTheme }                         from '@emotion/react'
+import { useTheme }                   from '@emotion/react'
 
-import React                                from 'react'
-import { FC }                               from 'react'
-import { memo }                             from 'react'
-import { useState }                         from 'react'
-import { useEffect }                        from 'react'
-import { useContext }                       from 'react'
-import { useIntl }                          from 'react-intl'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { memo }                       from 'react'
+import { useState }                   from 'react'
+import { useEffect }                  from 'react'
+import { useIntl }                    from 'react-intl'
 
-import { ImageBlock }                       from '@ui/image'
-import { Box }                              from '@ui/layout'
-import { Row }                              from '@ui/layout'
-import { Column }                           from '@ui/layout'
-import { Modal }                            from '@ui/modal'
-import { Scroll }                           from '@ui/scroll'
-import { Text }                             from '@ui/text'
-import { ThemeType }                        from '@ui/theme'
-import { ToastNotificationDispatchContext } from '@ui/toast-notification'
+import { ImageBlock }                 from '@ui/image'
+import { Box }                        from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Modal }                      from '@ui/modal'
+import { Scroll }                     from '@ui/scroll'
+import { Text }                       from '@ui/text'
+import { ThemeType }                  from '@ui/theme'
+import { useToast }                   from '@ui/toast-notification'
 
-import { Member }                           from './member/index.js'
-import { UsersModalProps }                  from './users-modal.interfaces.js'
-import { getOrganizationMembersHook }       from './get-organization-members.hook.js'
-import { removeMemberHook }                 from './remove-member.hook.js'
+import { Member }                     from './member/index.js'
+import { UsersModalProps }            from './users-modal.interfaces.js'
+import { getOrganizationMembersHook } from './get-organization-members.hook.js'
+import { removeMemberHook }           from './remove-member.hook.js'
 
 export const UsersModal: FC<UsersModalProps> = memo(({
   open,
@@ -45,7 +44,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   const [membersData, setMembersData] = useState<Array<any>>([])
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
-  const toastNotificationDispatch = useContext(ToastNotificationDispatchContext) as VoidFunction
+  const toast = useToast()
 
   useEffect(() => {
     if (open && !membersData.length) {
@@ -53,10 +52,10 @@ export const UsersModal: FC<UsersModalProps> = memo(({
       getOrganizationMembersHook({
         organizationId,
         setMembersData,
-        toastNotificationDispatch,
+        toast,
       })
     }
-  }, [open, toastNotificationDispatch, initMembersCount, membersData, organizationId])
+  }, [open, toast, initMembersCount, membersData, organizationId])
 
   const handlerRemoveMemberClick = (removeMemberLogin: string) =>
     removeMemberHook({
@@ -64,7 +63,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
       membersData,
       setMembersData,
       removeMemberLogin,
-      toastNotificationDispatch,
+      toast,
     })
 
   return (

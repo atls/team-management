@@ -5,11 +5,7 @@ import { getTokenCookie }              from '@globals/helpers'
 
 const MEMBERS_LIMIT = 32
 
-export const getOrganizationMembersHook = async ({
-  organizationId,
-  setMembersData,
-  toastNotificationDispatch,
-}) => {
+export const getOrganizationMembersHook = async ({ organizationId, setMembersData, toast }) => {
   try {
     const token = getTokenCookie(document)
     const client = octokitGraphqlClient(token)
@@ -31,9 +27,6 @@ export const getOrganizationMembersHook = async ({
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    toastNotificationDispatch({
-      type: 'notify',
-      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
-    })
+    toast(e.message, e.status)
   }
 }

@@ -2,7 +2,6 @@ import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
 import { FC }                                from 'react'
-import { useContext }                        from 'react'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
@@ -18,7 +17,7 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
-import { ToastNotificationDispatchContext }  from '@ui/toast-notification'
+import { useToast }                          from '@ui/toast-notification'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
@@ -53,7 +52,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     }
   }
 
-  const toastNotificationDispatch = useContext(ToastNotificationDispatchContext)
+  const toast = useToast()
 
   useEffect(
     () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
@@ -61,21 +60,20 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   )
 
   useEffect(() => {
-    setInviteButtonState('disabled')
     if (open && !teamsData.length) {
       getOrganizatoinTeamsHook({
         organizationId,
         setTeamsData,
-        toastNotificationDispatch,
+        toast,
       })
     }
-  }, [open, toastNotificationDispatch, organizationId, teamsData])
+  }, [open, toast, organizationId, teamsData])
 
   const inviteButtonClickHandler = () =>
     inviteButtonClickHook({
       organizationLogin,
       selectedTeams,
-      toastNotificationDispatch,
+      toast,
       selectedUsers,
       setInviteButtonState,
     })

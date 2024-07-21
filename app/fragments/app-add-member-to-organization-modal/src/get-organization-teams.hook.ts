@@ -5,11 +5,7 @@ import { getTokenCookie }            from '@globals/helpers'
 
 const ORGANIZATION_TEAMS_LIMIT = 16
 
-export const getOrganizatoinTeamsHook = async ({
-  organizationId,
-  setTeamsData,
-  toastNotificationDispatch,
-}) => {
+export const getOrganizatoinTeamsHook = async ({ organizationId, setTeamsData, toast }) => {
   try {
     const token = getTokenCookie(document)
     const client = octokitGraphqlClient(token)
@@ -31,9 +27,6 @@ export const getOrganizatoinTeamsHook = async ({
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    toastNotificationDispatch({
-      type: 'notify',
-      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
-    })
+    toast.error(e.message, e.status)
   }
 }

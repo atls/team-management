@@ -6,7 +6,7 @@ export const removeMemberHook = ({
   removeMemberLogin,
   membersData,
   setMembersData,
-  toastNotificationDispatch,
+  toast,
 }) => {
   const token = getTokenCookie(document)
 
@@ -14,25 +14,11 @@ export const removeMemberHook = ({
     .then(() => {
       const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
       setMembersData(newMembersData)
-      toastNotificationDispatch({
-        type: 'notify',
-        toastNotification: {
-          type: 'base',
-          text: `Пользователь <b>${removeMemberLogin}</b> удален из <b>${organizationLogin}</b>`,
-        },
-      })
+      toast.notify(`Пользователь <b>${removeMemberLogin}</b> удален из <b>${organizationLogin}</b>`)
     })
     .catch((e) => {
       // eslint-disable-next-line no-console
       console.error(e)
-
-      toastNotificationDispatch({
-        type: 'notify',
-        toastNotification: {
-          type: 'error',
-          text: e.message,
-          code: e.code,
-        },
-      })
+      toast.error(e.message, e.code)
     })
 }

@@ -4,7 +4,7 @@ import { getTokenCookie }            from '@globals/helpers'
 export const inviteButtonClickHook = async ({
   organizationLogin,
   selectedTeams,
-  toastNotificationDispatch,
+  toast,
   selectedUsers,
   setInviteButtonState,
 }) => {
@@ -24,10 +24,7 @@ export const inviteButtonClickHook = async ({
 
         // eslint-disable-next-line no-console
         console.error(e)
-        toastNotificationDispatch({
-          type: 'notify',
-          toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
-        })
+        toast.error(e.message, e.status)
       })
     }
 
@@ -35,9 +32,6 @@ export const inviteButtonClickHook = async ({
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    toastNotificationDispatch({
-      type: 'notify',
-      toastNotification: { type: 'error', text: e.message, code: e.status || 0 },
-    })
+    toast.error(e.message, e.status)
   }
 }
