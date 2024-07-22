@@ -8,7 +8,6 @@
   "dependencies": {
     "@app/add-member-to-organization-modal-fragment": "workspace:*",
     "@app/users-modal": "workspace:*",
-    "@globals/interfaces": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",

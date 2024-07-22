@@ -9,10 +9,10 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/github-users-search": "workspace:*",
     "@app/invite-button": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@globals/interfaces": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
