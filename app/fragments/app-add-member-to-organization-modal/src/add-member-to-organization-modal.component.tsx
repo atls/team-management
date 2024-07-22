@@ -2,10 +2,10 @@ import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
 import { FC }                                from 'react'
+import { FormattedMessage }                  from 'react-intl'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
-import { useIntl }                           from 'react-intl'
 
 import { InviteButtonStateType }             from '@app/invite-button'
 import { InviteButton }                      from '@app/invite-button'
@@ -35,7 +35,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { login: organizationLogin } = organizationData
 
   const theme = useTheme() as ThemeType
-  const { formatMessage } = useIntl()
 
   const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
 
@@ -82,11 +81,11 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
     <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
       <Column flexDirection='column' gap={theme.spaces.large}>
         <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
-          {formatMessage({ id: 'add-member-to-organization-modal.header' })}
+          <FormattedMessage id='add-member-to-organization-modal.header' />
         </Text>
         <GithubSearchUsersInput
           modalButtonState={inviteButtonState}
-          placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
+          placeholder={<FormattedMessage id='add-member-to-organization-modal_input.placeholder' />}
           parentHook={setSelectedUsers}
         />
         <Row
@@ -97,7 +96,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
           rowGap={theme.spaces.large}
         >
           <Text fontSize='normal.semiIncreased' width='100%'>
-            {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
+            <FormattedMessage id='add-member-to-organization-modal.teams' />
           </Text>
           {teamsData.map(({ databaseId: teamId, name: teamName }) => (
             <TeamSwitch teamName={teamName} onChange={(e) => handlerSwitch(e, teamId)} />

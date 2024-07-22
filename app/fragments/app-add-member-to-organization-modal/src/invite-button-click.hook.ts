@@ -1,5 +1,6 @@
-import { inviteMemberToOrgaization } from '@globals/data'
-import { getTokenCookie }            from '@globals/helpers'
+import { inviteMemberToOrgaizationQuery } from '@globals/data'
+import { octokitRestClient }              from '@globals/data'
+import { getTokenCookie }                 from '@globals/helpers'
 
 export const inviteButtonClickHook = async ({
   organizationLogin,
@@ -11,14 +12,17 @@ export const inviteButtonClickHook = async ({
   const token = getTokenCookie(document)
 
   try {
+    const restClient = octokitRestClient(token)
     for (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
-      inviteMemberToOrgaization({
-        token,
+
+      const query = inviteMemberToOrgaizationQuery({
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
-      }).catch((e) => {
+      })
+
+      restClient(...query).catch((e) => {
         // TODO
         // Можно ли выводить ошибку промиса в основной поток?
 
