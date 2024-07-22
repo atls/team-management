@@ -4,7 +4,7 @@ import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
 import { FC }                from 'react'
-import { useIntl }           from 'react-intl'
+import { FormattedMessage }  from 'react-intl'
 
 import { Button }            from '@ui/button'
 import { SuccessIcon }       from '@ui/icons'
@@ -18,7 +18,6 @@ export const InviteButton: FC<InviteButtonProps> = ({
   inviteButtonClickHandler,
 }) => {
   const theme = useTheme() as ThemeType
-  const { formatMessage } = useIntl()
 
   const SUCCESS_COLOR = theme.colors.BLUE_400
   const ICON_SIZE = theme.spaces.semiRegular
@@ -32,7 +31,7 @@ export const InviteButton: FC<InviteButtonProps> = ({
     >
       <SuccessIcon width={ICON_SIZE} height={ICON_SIZE} color={SUCCESS_COLOR} />
       <Text fontSize='normal.semiDefault' fontWeight='normal' color={SUCCESS_COLOR}>
-        {formatMessage({ id: 'add-member-to-organization-modal.success-button' })}
+        <FormattedMessage id='add-member-to-organization-modal.success-button' />
       </Text>
     </Button>
   ) : (
@@ -44,7 +43,7 @@ export const InviteButton: FC<InviteButtonProps> = ({
       onClick={inviteButtonClickHandler}
     >
       <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-        {formatMessage({ id: 'add-member-to-organization-modal.button' })}
+        <FormattedMessage id='add-member-to-organization-modal.button' />
       </Text>
     </Button>
   )

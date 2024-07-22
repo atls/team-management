@@ -1,18 +1,17 @@
-import { useTheme }       from '@emotion/react'
+import { useTheme }         from '@emotion/react'
 
-import React              from 'react'
-import { useState }       from 'react'
-import { useIntl }        from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useState }         from 'react'
 
-import { AddMemberModal } from '@app/add-member-modal-fragment'
-import { Button }         from '@ui/button'
-import { AddIcon }        from '@ui/icons'
-import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { ThemeType }      from '@ui/theme'
+import { AddMemberModal }   from '@app/add-member-modal-fragment'
+import { Button }           from '@ui/button'
+import { AddIcon }          from '@ui/icons'
+import { Row }              from '@ui/layout'
+import { Text }             from '@ui/text'
+import { ThemeType }        from '@ui/theme'
 
 const UsersTitle: React.FC = () => {
-  const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   const [isAddMemberModalOpen, setAddMemberModalOpen] = useState(false)
@@ -23,7 +22,9 @@ const UsersTitle: React.FC = () => {
 
   return (
     <Row maxWidth={theme.spaces.largeDefaultDecreased} gap={theme.spaces.largest}>
-      <Text fontSize='medium.semiIncreased'>{formatMessage({ id: 'users-title.title' })}</Text>
+      <Text fontSize='medium.semiIncreased'>
+        <FormattedMessage id='users-title.title' />
+      </Text>
       <Button
         boxShadow={theme.shadows?.black}
         shape='circle'

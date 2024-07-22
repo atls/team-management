@@ -2,7 +2,7 @@ import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
 import { FC }                      from 'react'
-import { useIntl }                 from 'react-intl'
+import { FormattedMessage }        from 'react-intl'
 
 import { Avatar }                  from '@ui/avatar'
 import { Divider }                 from '@ui/divider'
@@ -24,7 +24,6 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
   notifiaction,
   onBackdropClick,
 }) => {
-  const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   return (
@@ -40,7 +39,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
     >
       <Column>
         <Text marginBottom={theme.spaces.micro} fontSize='medium.semiReduced' color='GRAY_1600'>
-          {formatMessage({ id: 'notifications-modal.title' })}
+          <FormattedMessage id='notifications-modal.title' />
         </Text>
         <Scroll height={theme.spaces.largeSemiDecreased}>
           <Box
@@ -78,7 +77,7 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
 
         <Box justifyContent='center'>
           <Text color='indigo' marginBottom={theme.spaces.micro} fontSize='normal.semiDefault'>
-            {formatMessage({ id: 'notifications-modal.mark-all-read' })}
+            <FormattedMessage id='notifications-modal.mark-all-read' />
           </Text>
         </Box>
       </Column>

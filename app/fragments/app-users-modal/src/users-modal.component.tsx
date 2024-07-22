@@ -2,10 +2,10 @@ import { useTheme }                   from '@emotion/react'
 
 import React                          from 'react'
 import { FC }                         from 'react'
+import { FormattedMessage }           from 'react-intl'
 import { memo }                       from 'react'
 import { useState }                   from 'react'
 import { useEffect }                  from 'react'
-import { useIntl }                    from 'react-intl'
 
 import { ImageBlock }                 from '@ui/image'
 import { Box }                        from '@ui/layout'
@@ -14,6 +14,7 @@ import { Column }                     from '@ui/layout'
 import { Modal }                      from '@ui/modal'
 import { Scroll }                     from '@ui/scroll'
 import { Text }                       from '@ui/text'
+import { Space }                      from '@ui/text'
 import { ThemeType }                  from '@ui/theme'
 import { useToast }                   from '@ui/toast-notification'
 
@@ -37,7 +38,6 @@ export const UsersModal: FC<UsersModalProps> = memo(({
     viewerCanAdminister,
   } = organizationData
 
-  const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   // TODO interface
@@ -84,7 +84,8 @@ export const UsersModal: FC<UsersModalProps> = memo(({
           </Text>
         </Row>
         <Text maxWidth={theme.spaces.largeSemiDecreasedDefault} fontSize='medium.semiIncreased'>
-          {formatMessage({ id: 'users-modal.subTitle' })} ({membersCount})
+          <FormattedMessage id='users-modal.subTitle' />
+          <Space />({membersCount})
         </Text>
         <Scroll maxHeight={theme.spaces.superExtraIncreasedDefault}>
           {membersData.map((memberData, memberIndex) => (

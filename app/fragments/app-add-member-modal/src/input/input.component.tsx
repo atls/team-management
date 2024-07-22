@@ -1,7 +1,7 @@
 import React                        from 'react'
 import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
 import { useState }                 from 'react'
-import { useIntl }                  from 'react-intl'
 
 import { BaseInput }                from '@ui/input'
 import { emailValidator }           from '@ui/utils'
@@ -15,8 +15,6 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputValues,
   setInputValues,
 }) => {
-  const { formatMessage } = useIntl()
-
   const INPUT_PROPS = {
     placeholder: 'me@torinasakura.name',
   }
@@ -29,7 +27,7 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
     if (inputValueString) {
       const isEmailValid = emailValidator(inputValueString)
       if (!isEmailValid) {
-        setErrorText(formatMessage({ id: 'add-member-modal_input.invalid-email' }))
+        setErrorText(<FormattedMessage id='add-member-modal_input.invalid-email' />)
       } else {
         setErrorText('')
       }

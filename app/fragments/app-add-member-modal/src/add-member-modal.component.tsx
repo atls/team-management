@@ -2,9 +2,9 @@ import { useTheme }                from '@emotion/react'
 
 import React                       from 'react'
 import { FC }                      from 'react'
+import { FormattedMessage }        from 'react-intl'
 import { memo }                    from 'react'
 import { useState }                from 'react'
-import { useIntl }                 from 'react-intl'
 
 import { Button }                  from '@ui/button'
 import { AddIcon }                 from '@ui/icons'
@@ -29,8 +29,6 @@ import { useButtonActiveHook }     from './use-button-active.hook.js'
 
 export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const theme = useTheme() as ThemeType
-
-  const { formatMessage } = useIntl()
 
   const ICON_PROPS = {
     width: theme.spaces.large,
@@ -59,7 +57,7 @@ export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropC
   return (
     <Modal open={open} padding={theme.spaces.increased} onBackdropClick={onBackdropClick}>
       <Column gap={theme.spaces.moderate}>
-        <Text fontSize='normal.increased'>{formatMessage({ id: 'add-member-modal.header' })}</Text>
+        <Text fontSize='normal.increased'>{<FormattedMessage id='add-member-modal.header' />}</Text>
         {inputValues.map((_inputValue: string, index: number) => (
           <AddMemberModalInput
             inputIndex={index}
@@ -99,7 +97,7 @@ export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropC
             size='middlingRoundedPadding'
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              {formatMessage({ id: 'add-member-modal.invite' })}
+              <FormattedMessage id='add-member-modal.invite' />
             </Text>
           </Button>
         </Row>
