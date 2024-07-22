@@ -13,7 +13,7 @@ import { ThemeType }                       from '@ui/theme'
 
 import { HIDE_DELAY_5SEC }                 from './toast-notification.constants.js'
 import { ToastNotificationComponentProps } from './toast-notification.interfaces.js'
-import { checkUrlErrorHook }               from './check-url-error.hook.js'
+import { checkUrlErrorHook }               from './hooks/check-url-error.hook.js'
 import { baseAbsoluteConteinerStyles }     from './toast-notification.styles.js'
 import { shapeAbsoluteContainerStyles }    from './toast-notification.styles.js'
 import { notificationContainerStyles }     from './toast-notification.styles.js'

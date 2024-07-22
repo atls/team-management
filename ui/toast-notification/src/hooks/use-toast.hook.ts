@@ -1,7 +1,7 @@
 import { useContext }                       from 'react'
 
-import { ToastNotificationDispatchContext } from './toast-notification.context.js'
-import { DispatchFuncType }                 from './toast-notification.interfaces.js'
+import { ToastNotificationDispatchContext } from '../context/index.js'
+import { DispatchFuncType }                 from '../toast-notification.interfaces.js'
 
 export const useToast = () => {
   const toastNotificationDispatch = useContext(ToastNotificationDispatchContext) as DispatchFuncType
