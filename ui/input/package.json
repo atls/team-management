@@ -4,28 +4,21 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
     "@atls-ui-parts/layout": "0.1.1",
-    "@globals/data": "workspace:*",
-    "@globals/helpers": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*",
-    "@ui/toast-notification": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
     "@emotion/styled": "11.11.5",
-    "@octokit/graphql": "8.1.1",
     "@types/styled-system": "^5.1.22",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -36,9 +29,6 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "@octokit/graphql": "*",
-    "@types/styled-system": "*",
-    "@ui/toast-notification": "*",
     "react": "*",
     "react-dom": "*",
     "react-laag": "*",
