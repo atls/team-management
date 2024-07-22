@@ -16,3 +16,15 @@ export type UseButtonActiveHookType = (
   checkedSwitches: CheckedSwitchesType,
   setButtonActive: Function
 ) => void
+
+// TODO team interface
+// TODO selectedUsers interface
+export interface inviteButtonDataType {
+  organizationLogin: string
+  selectedTeams: Array<any>
+  toast: VoidFunction
+  selectedUsers: Array<any>
+  setInviteButtonState: VoidFunction
+}
+
+export interface inviteButtonClickHookInterface = (inviteButtonDataType) => Promise<void>

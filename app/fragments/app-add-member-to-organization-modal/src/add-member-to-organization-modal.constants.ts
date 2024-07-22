@@ -1,0 +1,1 @@
+export const ORGANIZATION_TEAMS_LIMIT = 16

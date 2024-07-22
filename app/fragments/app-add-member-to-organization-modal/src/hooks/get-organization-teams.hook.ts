@@ -3,7 +3,7 @@ import { GetOrganizationTeamsQuery } from '@globals/data'
 import { octokitGraphqlClient }      from '@globals/data'
 import { getTokenCookie }            from '@globals/helpers'
 
-const ORGANIZATION_TEAMS_LIMIT = 16
+import { ORGANIZATION_TEAMS_LIMIT }  from '../add-member-to-organization-modal.constants.js'
 
 export const getOrganizatoinTeamsHook = async ({ organizationId, setTeamsData, toast }) => {
   try {

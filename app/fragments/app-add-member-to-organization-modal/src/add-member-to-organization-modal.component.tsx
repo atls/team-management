@@ -22,9 +22,9 @@ import { useToast }                          from '@ui/toast-notification'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { TeamSwitch }                        from './team-switch/index.js'
-import { getOrganizatoinTeamsHook }          from './get-organization-teams.hook.js'
-import { inviteButtonClickHook }             from './invite-button-click.hook.js'
-import { setButtonActiveHook }               from './set-button-active.hook.js'
+import { getOrganizatoinTeamsHook }          from './hooks/index.js'
+import { inviteButtonClickHook }             from './hooks/index.js'
+import { setButtonActiveHook }               from './hooks/index.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -34,13 +34,12 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
 
+  const toast = useToast()
   const theme = useTheme() as ThemeType
 
   const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
-
   const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
-
   const [teamsData, setTeamsData] = useState([])
 
   const handlerSwitch: HandlerSwitchType = (state, teamId) => {
@@ -50,8 +49,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
       setSelectedTeams(selectedTeams.concat([teamId as never]))
     }
   }
-
-  const toast = useToast()
 
   useEffect(
     () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),

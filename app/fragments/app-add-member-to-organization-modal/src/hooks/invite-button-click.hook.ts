@@ -2,7 +2,9 @@ import { inviteMemberToOrgaizationQuery } from '@globals/data'
 import { octokitRestClient }              from '@globals/data'
 import { getTokenCookie }                 from '@globals/helpers'
 
-export const inviteButtonClickHook = async ({
+import { inviteButtonClickHookInterface } from '../add-member-to-organization-modal.interfaces.js'
+
+export const inviteButtonClickHook: inviteButtonClickHookInterface = async ({
   organizationLogin,
   selectedTeams,
   toast,
@@ -13,7 +15,7 @@ export const inviteButtonClickHook = async ({
 
   try {
     const restClient = octokitRestClient(token)
-    for (const selectedUser of selectedUsers) {
+    for await (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
 
       const query = inviteMemberToOrgaizationQuery({
@@ -22,14 +24,7 @@ export const inviteButtonClickHook = async ({
         teamIds: selectedTeams,
       })
 
-      restClient(...query).catch((e) => {
-        // TODO
-        // Можно ли выводить ошибку промиса в основной поток?
-
-        // eslint-disable-next-line no-console
-        console.error(e)
-        toast.error(e.message, e.status)
-      })
+      await restClient(...query)
     }
 
     setInviteButtonState('successed')
