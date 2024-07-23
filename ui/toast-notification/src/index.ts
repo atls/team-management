@@ -1,2 +1,2 @@
-export * from './context/index.js'
-export * from './hooks/use-toast.hook.js'
+export * from './toast-notification.component.js'
+export * from './toast-notification.interfaces.js'
