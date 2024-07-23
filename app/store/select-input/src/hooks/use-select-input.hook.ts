@@ -35,10 +35,10 @@ export const useSelectInput = () => {
         type: 'clean',
       })
     },
-    setSuggestedItems: (suggestedItems) => {
+    setSuggestedItems: (newSuggestedItems) => {
       suggestedItemsDispatch({
         type: 'change',
-        suggestedItems: suggestedItems,
+        suggestedItems: newSuggestedItems,
       })
     },
   }
