@@ -1,4 +1,4 @@
-import type { OrganizationDataType } from '@globals/interfaces'
+import type { OrganizationDataType } from '@globals/data'
 
 export interface UsersModalProps {
   open: boolean

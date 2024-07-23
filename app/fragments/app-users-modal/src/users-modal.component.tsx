@@ -7,6 +7,7 @@ import { memo }                       from 'react'
 import { useState }                   from 'react'
 import { useEffect }                  from 'react'
 
+import { OrganizationMemberType }     from '@globals/data'
 import { ImageBlock }                 from '@ui/image'
 import { Box }                        from '@ui/layout'
 import { Row }                        from '@ui/layout'
@@ -39,12 +40,10 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   } = organizationData
 
   const theme = useTheme() as ThemeType
-
-  // TODO interface
-  const [membersData, setMembersData] = useState<Array<any>>([])
-  const [membersCount, setMembersCount] = useState<number>(initMembersCount)
-
   const toast = useToast()
+
+  const [membersData, setMembersData] = useState<Array<OrganizationMemberType>>([])
+  const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
   useEffect(() => {
     if (open && !membersData.length) {

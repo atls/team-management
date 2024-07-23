@@ -1,12 +1,17 @@
 import { GET_ORGANIZATION_MEMBERS }    from '@globals/data'
 import { GetOrganizationMembersQuery } from '@globals/data'
+import { OrganizationMemberType }      from '@globals/data'
 import { octokitGraphqlClient }        from '@globals/data'
 import { getTokenCookie }              from '@globals/helpers'
 
 import { MEMBERS_LIMIT }               from '../users-modal.constants.js'
+import { GetOrganizationMembersType }  from './get-organization-members.interface.js'
 
-// TODO interface
-export const getOrganizationMembersHook = async ({ organizationId, setMembersData, toast }) => {
+export const getOrganizationMembersHook: GetOrganizationMembersType = async ({
+  organizationId,
+  setMembersData,
+  toast,
+}) => {
   try {
     const token = getTokenCookie(document)
     const client = octokitGraphqlClient(token)
@@ -23,11 +28,11 @@ export const getOrganizationMembersHook = async ({ organizationId, setMembersDat
         },
       } = response
 
-      setMembersData(membersData)
+      setMembersData(membersData as OrganizationMemberType)
     }
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
-    toast(e.message, e.status)
+    toast.error(e.message, e.status)
   }
 }

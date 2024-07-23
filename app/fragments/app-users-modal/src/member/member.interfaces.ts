@@ -1,7 +1,7 @@
-import { OrganizationMemberDataType } from '@globals/interfaces'
+import { OrganizationMemberType } from '@globals/data'
 
 export interface MemberProps {
-  memberData: OrganizationMemberDataType
+  memberData: OrganizationMemberType
   onDeleteMemberClick: (removeMemberLogin: string) => void
   devider: boolean
   viewerCanAdminister: boolean
