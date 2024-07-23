@@ -1,3 +1,4 @@
+// TODO interface
 export const setButtonActiveHook = ({ inviteButtonState, selectedUsers, setInviteButtonState }) => {
   if (selectedUsers.length && inviteButtonState !== 'successed') {
     setInviteButtonState('active')

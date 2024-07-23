@@ -5,6 +5,7 @@ import { getTokenCookie }            from '@globals/helpers'
 
 import { ORGANIZATION_TEAMS_LIMIT }  from '../add-member-to-organization-modal.constants.js'
 
+// TODO interface
 export const getOrganizatoinTeamsHook = async ({ organizationId, setTeamsData, toast }) => {
   try {
     const token = getTokenCookie(document)

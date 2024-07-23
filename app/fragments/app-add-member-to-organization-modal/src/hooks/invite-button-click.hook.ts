@@ -4,6 +4,7 @@ import { getTokenCookie }                 from '@globals/helpers'
 
 import { inviteButtonClickHookInterface } from '../add-member-to-organization-modal.interfaces.js'
 
+// TODO interface
 export const inviteButtonClickHook: inviteButtonClickHookInterface = async ({
   organizationLogin,
   selectedTeams,
