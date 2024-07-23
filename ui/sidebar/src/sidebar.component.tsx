@@ -6,7 +6,7 @@ import { FC }                       from 'react'
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
 
-import { Column }                   from '@ui/layout'
+import { Box }                      from '@ui/layout'
 import { ThemeType }                from '@ui/theme'
 import { ThemeVariantType }         from '@ui/theme'
 
@@ -39,11 +39,11 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
     <SidebarStateContext.Provider value={isSidebarOpened}>
       <Wrapper states={states}>
         <AtlantisLogo activeTheme={theme.colors.activeTheme as ThemeVariantType} />
-        <Column gap={theme.spaces.miniIncreased}>
+        <Box height='100%' flexDirection='column' gap={theme.spaces.miniIncreased}>
           {itemList.map((itemData) => (
             <SidebarItem {...itemData} active={pathname === itemData.href} />
           ))}
-        </Column>
+        </Box>
         <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
         <SidebarDivider />
         <Viewer name={name} email={email} avatarUrl={avatarUrl} url={url} />

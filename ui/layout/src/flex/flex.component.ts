@@ -8,6 +8,6 @@ import { flexStyles }           from './flex.styles.js'
 
 export const Row = styled(BaseRow)<FlexProps>(flexStyles)
 
-export const Column = styled(BaseColumn)<FlexProps>(flexStyles)
+export const Column = styled(BaseColumn)<FlexProps>(flexStyles, { height: 'auto' })
 
 export { BoxProps }
