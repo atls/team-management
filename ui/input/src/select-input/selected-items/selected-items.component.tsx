@@ -1,8 +1,7 @@
-import { SelectedItemsContext } from '@store/select-input'
-
 import React                    from 'react'
 import { useContext }           from 'react'
 
+import { SelectedItemsContext } from '@store/select-input'
 import { Condition }            from '@ui/condition'
 
 import { SelectedItem }         from '../selected-item/index.js'

@@ -1,11 +1,11 @@
 import styled                              from '@emotion/styled'
-import { SelectedItemsDispatchContext }    from '@store/select-input'
 import { useTheme }                        from '@emotion/react'
 
 import React                               from 'react'
 import { FC }                              from 'react'
 import { useContext }                      from 'react'
 
+import { SelectedItemsDispatchContext }    from '@store/select-input'
 import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'

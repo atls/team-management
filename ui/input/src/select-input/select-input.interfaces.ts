@@ -8,9 +8,10 @@ interface SearchItemProps {
 }
 
 export interface SelectInputProps extends BaseInputProps {
+  placeholder?: string
   value?: string
-  searchItems: Array<SearchItemProps>
-  parentHook: Function
+  searchItems?: Array<SearchItemProps>
+  parentHook?: Function
   onChange?: VoidFunction
   onChangeNative?: VoidFunction
   errorText?: string
