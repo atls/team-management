@@ -3,7 +3,7 @@ import { switchProp } from 'styled-tools'
 
 export const baseAbsoluteConteinerStyles: styleFn = ({ theme }) => ({
   position: 'fixed',
-  zIndex: theme.spaces.s1500,
+  zIndex: theme.spaces.s1600,
   bottom: theme.spaces.moderate,
   justifyContent: 'center',
 })
