@@ -1,5 +1,10 @@
-// TODO interface
-export const setButtonActiveHook = ({ inviteButtonState, selectedUsers, setInviteButtonState }) => {
+import { SetButtonActiveType } from './set-button-active.interface.js'
+
+export const setButtonActiveHook: SetButtonActiveType = ({
+  inviteButtonState,
+  selectedUsers,
+  setInviteButtonState,
+}) => {
   if (selectedUsers.length && inviteButtonState !== 'successed') {
     setInviteButtonState('active')
   } else if (!selectedUsers.length) {

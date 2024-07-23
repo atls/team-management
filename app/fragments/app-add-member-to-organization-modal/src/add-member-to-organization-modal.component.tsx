@@ -1,3 +1,6 @@
+import type { OrganizationTeamType }         from '@globals/data'
+import type { OrganizationMemberType }       from '@globals/data'
+
 import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
@@ -5,12 +8,9 @@ import { FC }                                from 'react'
 import { FormattedMessage }                  from 'react-intl'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
-import { useEffect }                         from 'react'
 
 import { InviteButtonStateType }             from '@app/invite-button'
 import { InviteButton }                      from '@app/invite-button'
-import { GetOrganizationTeamsQuery }         from '@globals/data'
-import { GetOrganizationMembersQuery }       from '@globals/data'
 import { SelectInputProvider }               from '@store/select-input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
@@ -19,13 +19,10 @@ import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
 import { useToast }                          from '@store/toast-notification'
 
+import { AddMemberToOrganizationHook }       from './add-member-to-organization-modal.hook.js'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
-import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
 import { GithubUsersSearch }                 from './github-users-search/index.js'
 import { TeamSwitch }                        from './team-switch/index.js'
-import { getOrganizatoinTeamsHook }          from './hooks/index.js'
-import { inviteButtonClickHook }             from './hooks/index.js'
-import { setButtonActiveHook }               from './hooks/index.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -39,41 +36,23 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme = useTheme() as ThemeType
 
   const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
-  const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
-  const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
-  const [teamsData, setTeamsData] = useState([])
+  const [selectedUsers, setSelectedUsers] = useState<Array<OrganizationMemberType>>([])
+  const [selectedTeams, setSelectedTeams] = useState<Array<OrganizationTeamType>>([])
+  const [teamsData, setTeamsData] = useState<Array<OrganizationTeamType>>([])
 
-  useEffect(
-    () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
-    [selectedUsers, inviteButtonState]
-  )
-
-  useEffect(() => {
-    if (open && !teamsData.length) {
-      getOrganizatoinTeamsHook({
-        organizationId,
-        setTeamsData,
-        toast,
-      })
-    }
-  }, [open, toast, organizationId, teamsData])
-
-  const inviteButtonClickHandler = () =>
-    inviteButtonClickHook({
-      organizationLogin,
-      selectedTeams,
-      toast,
-      selectedUsers,
-      setInviteButtonState,
-    })
-
-  const handlerSwitch: HandlerSwitchType = (state, teamId) => {
-    if (selectedTeams.includes(teamId as never)) {
-      setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
-    } else {
-      setSelectedTeams(selectedTeams.concat([teamId as never]))
-    }
-  }
+  const { switchHandler, inviteButtonClickHandler } = AddMemberToOrganizationHook({
+    open,
+    toast,
+    teamsData,
+    setTeamsData,
+    organizationId,
+    organizationLogin,
+    inviteButtonState,
+    selectedUsers,
+    setInviteButtonState,
+    selectedTeams,
+    setSelectedTeams,
+  })
 
   return (
     <SelectInputProvider>
@@ -94,7 +73,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
               <FormattedMessage id='add-member-to-organization-modal.teams' />
             </Text>
             {teamsData.map(({ databaseId: teamId, name: teamName }) => (
-              <TeamSwitch teamName={teamName} onChange={(e) => handlerSwitch(e, teamId)} />
+              <TeamSwitch teamName={teamName} onChange={(e) => switchHandler(e, teamId)} />
             ))}
           </Row>
           <Row justifyContent='end'>

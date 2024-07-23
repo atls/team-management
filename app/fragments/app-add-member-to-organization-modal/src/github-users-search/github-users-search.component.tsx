@@ -1,18 +1,18 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { useState }         from 'react'
-import { useEffect }        from 'react'
-import { useIntl }          from 'react-intl'
+import React                    from 'react'
+import { FC }                   from 'react'
+import { useState }             from 'react'
+import { useEffect }            from 'react'
+import { useIntl }              from 'react-intl'
 
-import { SelectInput }      from '@ui/input'
-import { useSelectInput }   from '@store/select-input'
-import { useToast }         from '@store/toast-notification'
+import { SelectInput }          from '@ui/input'
+import { useSelectInput }       from '@store/select-input'
+import { useToast }             from '@store/toast-notification'
 
-import { getSearchedUsers } from './hooks/index.js'
-import { inputChangeHook }  from './hooks/index.js'
+import { GithubUserSearchType } from './github-users-search.interface.js'
+import { getSearchedUsers }     from './hooks/index.js'
+import { inputChangeHook }      from './hooks/index.js'
 
-// TODO interface
-export const GithubUsersSearch: FC<any> = ({ setSelectedUsersParentHook }) => {
+export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersParentHook }) => {
   const { formatMessage } = useIntl()
   const toast = useToast
 
@@ -32,7 +32,7 @@ export const GithubUsersSearch: FC<any> = ({ setSelectedUsersParentHook }) => {
       activeSearchTimeoutId,
       setActiveSearchTimeoutId,
     })
-  }, [inputValue])
+  }, [inputValue, activeSearchTimeoutId, isClientTyping])
 
   useEffect(() => {
     if (!isClientTyping && inputValue) {
@@ -45,16 +45,15 @@ export const GithubUsersSearch: FC<any> = ({ setSelectedUsersParentHook }) => {
     } else if (!inputValue.length) {
       cleanSuggestedItems()
     }
-  }, [isClientTyping])
+  }, [isClientTyping, cleanSuggestedItems, inputValue, setSuggestedItems, toast])
 
   useEffect(() => {
     setSelectedUsersParentHook(selectedItems)
-  }, [selectedItems])
+  }, [selectedItems, setSelectedUsersParentHook])
 
   return (
     <SelectInput
       placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
-      // parentHook={setSelectedUsers}
     />
   )
 }

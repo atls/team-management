@@ -1,11 +1,10 @@
+import type { InviteButtonClickType }     from './invite-button-click.interface.js'
+
 import { inviteMemberToOrgaizationQuery } from '@globals/data'
 import { octokitRestClient }              from '@globals/data'
 import { getTokenCookie }                 from '@globals/helpers'
 
-import { inviteButtonClickHookInterface } from '../add-member-to-organization-modal.interfaces.js'
-
-// TODO interface
-export const inviteButtonClickHook: inviteButtonClickHookInterface = async ({
+export const inviteButtonClickHook: InviteButtonClickType = async ({
   organizationLogin,
   selectedTeams,
   toast,
@@ -23,7 +22,7 @@ export const inviteButtonClickHook: inviteButtonClickHookInterface = async ({
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,
-      })
+      }) as [any]
 
       await restClient(...query)
     }

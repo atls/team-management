@@ -1,12 +1,17 @@
 import { GET_ORGANIZATION_TEAMS }    from '@globals/data'
 import { GetOrganizationTeamsQuery } from '@globals/data'
+import { OrganizationTeamType }      from '@globals/data'
 import { octokitGraphqlClient }      from '@globals/data'
 import { getTokenCookie }            from '@globals/helpers'
 
 import { ORGANIZATION_TEAMS_LIMIT }  from '../add-member-to-organization-modal.constants.js'
+import { GetOrganizationTeamsType }  from './get-organization-teams.interface.js'
 
-// TODO interface
-export const getOrganizatoinTeamsHook = async ({ organizationId, setTeamsData, toast }) => {
+export const getOrganizatoinTeamsHook: GetOrganizationTeamsType = async ({
+  organizationId,
+  setTeamsData,
+  toast,
+}) => {
   try {
     const token = getTokenCookie(document)
     const client = octokitGraphqlClient(token)
@@ -23,7 +28,7 @@ export const getOrganizatoinTeamsHook = async ({ organizationId, setTeamsData, t
         },
       } = response
 
-      setTeamsData(teamsData)
+      setTeamsData(teamsData as OrganizationTeamType)
     }
   } catch (e: any) {
     // eslint-disable-next-line no-console
