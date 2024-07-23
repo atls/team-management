@@ -9,6 +9,7 @@ import { useState }             from 'react'
 import { useEffect }            from 'react'
 
 import { OrganizationCard }     from '@app/organization-card-fragment'
+import { OrganizationDataType } from '@globals/data'
 import { GridAutoRows }         from '@ui/layout'
 import { ThemeType }            from '@ui/theme'
 import { useToast }             from '@store/toast-notification'
@@ -18,8 +19,6 @@ import { getOrganizationsData } from './hooks/index.js'
 export const OrganizationCardGrid: FC = memo(() => {
   const theme = useTheme() as ThemeType
   const toast = useToast()
-
-  toast.notify('blablabla')
 
   const [organizationsData, setOrganizationsData] = useState<Array<OrganizationDataType>>([])
 
