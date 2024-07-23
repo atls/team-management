@@ -16,12 +16,12 @@ import { Scroll }                     from '@ui/scroll'
 import { Text }                       from '@ui/text'
 import { Space }                      from '@ui/text'
 import { ThemeType }                  from '@ui/theme'
-import { useToast }                   from '@ui/toast-notification'
+import { useToast }                   from '@store/toast-notification'
 
 import { Member }                     from './member/index.js'
 import { UsersModalProps }            from './users-modal.interfaces.js'
-import { getOrganizationMembersHook } from './get-organization-members.hook.js'
-import { removeMemberHook }           from './remove-member.hook.js'
+import { getOrganizationMembersHook } from './hooks/index.js'
+import { removeMemberHook }           from './hooks/index.js'
 
 export const UsersModal: FC<UsersModalProps> = memo(({
   open,

@@ -3,8 +3,8 @@
 import React                         from 'react'
 import { IntlProvider }              from 'react-intl'
 
+import { ToastNotificationProvider } from '@store/toast-notification'
 import { ThemeProvider }             from '@ui/theme'
-import { ToastNotificationProvider } from '@ui/toast-notification'
 
 export const RootLayoutClient = ({ children, messages }) => (
   <html>

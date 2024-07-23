@@ -1,6 +1,7 @@
 import { removeOrganizationMember } from '@globals/data'
 import { getTokenCookie }           from '@globals/helpers'
 
+// TODO interface
 export const removeMemberHook = ({
   organizationLogin,
   removeMemberLogin,

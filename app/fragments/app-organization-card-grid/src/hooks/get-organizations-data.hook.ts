@@ -4,9 +4,10 @@ import { GET_VIEWER_ORGANIZATIONS }         from '@globals/data'
 import { octokitGraphqlClient }             from '@globals/data'
 import { getTokenCookie }                   from '@globals/helpers'
 
-import { ORGANIZATIONS_LIMIT }              from './organizations-page.constants.js'
-import { ORGANIZATION_MEMBERS_LIMIT }       from './organizations-page.constants.js'
+import { ORGANIZATIONS_LIMIT }              from '../organizations-page.constants.js'
+import { ORGANIZATION_MEMBERS_LIMIT }       from '../organizations-page.constants.js'
 
+// TODO interface
 export const getOrganizationsData = async ({ setOrganizationsData, toast }) => {
   try {
     const token = getTokenCookie(document)
