@@ -12,6 +12,7 @@ import { ThemeVariantType }         from '@ui/theme'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
 import { SidebarItem }              from './item/index.js'
+import { OrganizatoinSettings }     from './organization-settings/index.js'
 import { Pin }                      from './pin/index.js'
 import { SidebarDivider }           from './sidebar-divider/index.js'
 import { SidebarStateContext }      from './sidebar.context.js'
@@ -47,6 +48,7 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
         <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
         <SidebarDivider />
         <Viewer name={name} email={email} avatarUrl={avatarUrl} url={url} />
+        <OrganizatoinSettings theme={theme} isSidebarOpened={isSidebarOpened} />
       </Wrapper>
     </SidebarStateContext.Provider>
   )
