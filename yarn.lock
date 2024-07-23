@@ -203,7 +203,8 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@globals/interfaces": "workspace:*"
+    "@store/select-input": "workspace:*"
+    "@store/toast-notification": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
@@ -214,11 +215,11 @@ __metadata:
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
-    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
+    "@store/select-input": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -384,7 +385,7 @@ __metadata:
     "@app/users-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
-    "@globals/interfaces": "workspace:*"
+    "@globals/data": "workspace:*"
     "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
@@ -416,12 +417,11 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@globals/interfaces": "workspace:*"
+    "@store/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
-    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -543,10 +543,10 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/environment": "workspace:*"
     "@octokit/app": "npm:15.1.0"
+    "@store/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/theme": "workspace:*"
-    "@ui/toast-notification": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
@@ -653,7 +653,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@globals/interfaces": "workspace:*"
+    "@store/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
@@ -669,7 +669,6 @@ __metadata:
     "@ui/scroll": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
-    "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -2352,12 +2351,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@globals/interfaces@workspace:*, @globals/interfaces@workspace:globals/interfaces":
-  version: 0.0.0-use.local
-  resolution: "@globals/interfaces@workspace:globals/interfaces"
-  languageName: unknown
-  linkType: soft
-
 "@graphql-codegen/add@npm:^5.0.2, @graphql-codegen/add@npm:^5.0.3":
   version: 5.0.3
   resolution: "@graphql-codegen/add@npm:5.0.3"
@@ -3820,6 +3813,56 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@store/select-input@workspace:*, @store/select-input@workspace:app/store/select-input":
+  version: 0.0.0-use.local
+  resolution: "@store/select-input@workspace:app/store/select-input"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/input": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@store/toast-notification@workspace:*, @store/toast-notification@workspace:app/store/toast-notification":
+  version: 0.0.0-use.local
+  resolution: "@store/toast-notification@workspace:app/store/toast-notification"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/toast-notification": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
 "@styled-system/background@npm:^5.1.2":
   version: 5.1.2
   resolution: "@styled-system/background@npm:5.1.2"
@@ -4902,9 +4945,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
-    "@globals/data": "workspace:*"
-    "@globals/helpers": "workspace:*"
-    "@octokit/graphql": "npm:8.1.1"
+    "@store/select-input": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -4912,7 +4953,6 @@ __metadata:
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
-    "@ui/toast-notification": "workspace:*"
     "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -4922,9 +4962,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
-    "@octokit/graphql": "*"
-    "@types/styled-system": "*"
-    "@ui/toast-notification": "*"
+    "@store/select-input": "*"
     react: "*"
     react-dom: "*"
     react-laag: "*"
