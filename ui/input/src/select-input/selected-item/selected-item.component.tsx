@@ -1,4 +1,5 @@
 import styled                              from '@emotion/styled'
+import { SelectedItemsDispatchContext }    from '@store/select-input'
 import { useTheme }                        from '@emotion/react'
 
 import React                               from 'react'
@@ -9,7 +10,6 @@ import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 
-import { SelectedItemsDispatchContext }    from '../selected-items/index.js'
 import { SelectedItemProps }               from './selected-item.interface.js'
 import { baseSelectedItemBoxStyles }       from './selected-item.styles.js'
 import { shapeSelectedItemBoxStyles }      from './selected-item.styles.js'

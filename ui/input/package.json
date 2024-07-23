@@ -8,6 +8,7 @@
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
     "@atls-ui-parts/layout": "0.1.1",
+    "@store/select-input": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
@@ -29,6 +30,7 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@store/select-input": "*",
     "react": "*",
     "react-dom": "*",
     "react-laag": "*",

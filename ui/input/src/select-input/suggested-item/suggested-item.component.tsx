@@ -1,5 +1,9 @@
 import styled                               from '@emotion/styled'
+import { InputValueDispatchContext }        from '@store/select-input'
+import { SelectedItemsDispatchContext }     from '@store/select-input'
+import { SuggestedItemsDispatchContext }    from '@store/select-input'
 import { useTheme }                         from '@emotion/react'
+import { useSelectInput }                   from '@store/select-input'
 
 import React                                from 'react'
 import { FC }                               from 'react'
@@ -10,9 +14,6 @@ import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 
-import { InputValueDispatchContext }        from '../select-input.context.js'
-import { SelectedItemsDispatchContext }     from '../selected-items/index.js'
-import { SuggestedItemsDispatchContext }    from '../suggested-items/index.js'
 import { SuggestedItemProps }               from './suggested-item.interfaces.js'
 import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
 import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles.js'
@@ -28,6 +29,7 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   const { primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
 
   const theme: any = useTheme()
+  const selectInput = useSelectInput()
 
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext) as any
   const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext) as any
