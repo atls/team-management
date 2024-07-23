@@ -6,24 +6,22 @@ import { FormattedMessage }                  from 'react-intl'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
 import { useEffect }                         from 'react'
-import { useIntl }                           from 'react-intl'
 
-import { GithubUsersSearch }                 from '@app/github-users-search'
 import { InviteButtonStateType }             from '@app/invite-button'
 import { InviteButton }                      from '@app/invite-button'
 import { GetOrganizationTeamsQuery }         from '@globals/data'
 import { GetOrganizationMembersQuery }       from '@globals/data'
-import { SelectInputProvider }               from '@ui/input'
+import { SelectInputProvider }               from '@store/select-input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
-import { useSelectInput }                    from '@ui/input'
-import { useToast }                          from '@ui/toast-notification'
+import { useToast }                          from '@store/toast-notification'
 
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
+import { GithubUsersSearch }                 from './github-users-search/index.js'
 import { TeamSwitch }                        from './team-switch/index.js'
 import { getOrganizatoinTeamsHook }          from './hooks/index.js'
 import { inviteButtonClickHook }             from './hooks/index.js'
@@ -36,7 +34,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
 }) => {
   const { id: organizationId } = organizationData
   const { login: organizationLogin } = organizationData
-  const { formatMessage } = useIntl()
 
   const toast = useToast()
   const theme = useTheme() as ThemeType
@@ -45,14 +42,6 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const [selectedUsers, setSelectedUsers] = useState<Array<GetOrganizationMembersQuery>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<GetOrganizationTeamsQuery>>([])
   const [teamsData, setTeamsData] = useState([])
-
-  const handlerSwitch: HandlerSwitchType = (state, teamId) => {
-    if (selectedTeams.includes(teamId as never)) {
-      setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
-    } else {
-      setSelectedTeams(selectedTeams.concat([teamId as never]))
-    }
-  }
 
   useEffect(
     () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
@@ -78,14 +67,22 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
       setInviteButtonState,
     })
 
+  const handlerSwitch: HandlerSwitchType = (state, teamId) => {
+    if (selectedTeams.includes(teamId as never)) {
+      setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
+    } else {
+      setSelectedTeams(selectedTeams.concat([teamId as never]))
+    }
+  }
+
   return (
     <SelectInputProvider>
       <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
-        <Column flexDirection='column' gap={theme.spaces.large}>
+        <Column gap={theme.spaces.large}>
           <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
             <FormattedMessage id='add-member-to-organization-modal.header' />
           </Text>
-          <GithubUsersSearch />
+          <GithubUsersSearch setSelectedUsersParentHook={setSelectedUsers} />
           <Row
             flexDirection='row'
             flexWrap='wrap'
