@@ -23,6 +23,9 @@ export const GlobalStyles = () => (
         display: flex;
         flex-direction: column;
       }
+      #layers {
+        z-index: 1600;
+      }
     `}
   />
 )
