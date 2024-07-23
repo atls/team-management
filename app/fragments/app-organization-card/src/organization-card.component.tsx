@@ -1,3 +1,5 @@
+import type { OrganizationDataType }    from '@globals/data'
+
 import { useTheme }                     from '@emotion/react'
 
 import React                            from 'react'
@@ -93,7 +95,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <UsersModal
               open={isUsersModalOpen}
-              organizationData={organizationData}
+              organizationData={organizationData as OrganizationDataType}
               onBackdropClick={handlerUsersModalClick}
             />
 
@@ -114,7 +116,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
             <AddMemberToOrganizationModal
               open={isAddMemberToOrganizationModalOpen}
               onBackdropClick={handlerAddOrganizationMemberClick}
-              organizationData={organizationData}
+              organizationData={organizationData as OrganizationDataType}
             />
           </Row>
         </Column>
