@@ -57,7 +57,9 @@ export const AddMemberModal: FC<AddMemberModalProps> = memo(({ open, onBackdropC
   return (
     <Modal open={open} padding={theme.spaces.increased} onBackdropClick={onBackdropClick}>
       <Column gap={theme.spaces.moderate}>
-        <Text fontSize='normal.increased'>{<FormattedMessage id='add-member-modal.header' />}</Text>
+        <Text fontSize='normal.increased'>
+          <FormattedMessage id='add-member-modal.header' />
+        </Text>
         {inputValues.map((_inputValue: string, index: number) => (
           <AddMemberModalInput
             inputIndex={index}
