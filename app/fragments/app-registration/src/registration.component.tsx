@@ -24,7 +24,7 @@ const RegistrationClient: React.FC = () => {
 
   return (
     <Background backgroundUrl='url(/Bg.png)'>
-      <Column margin={theme.spaces.tb180lra} height='auto'>
+      <Column margin={theme.spaces.tb180lra} height='100%' justifyContent='space-between'>
         <MainLogo />
         <Box justifyContent='center'>
           <Button
