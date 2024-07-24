@@ -3,6 +3,7 @@ import { useEffect }               from 'react'
 import { HandleAddInputClickType } from './invite-member-modal.interfaces.js'
 import { HandlerSwitchType }       from './invite-member-modal.interfaces.js'
 import { changeButtonHook }        from './hooks/index.js'
+import { sendInviteEmailHook }     from './hooks/index.js'
 
 export const InviteMemberModalHook = ({
   checkedSwitches,
@@ -27,9 +28,9 @@ export const InviteMemberModalHook = ({
     setInputValues(inputValues.concat(''))
   }
 
-  const inviteButtonClickHandler = () => {
+  const inviteButtonClickHandler = async () => {
+    await sendInviteEmailHook({ emails: inputValues, selectedInvites: checkedSwitches })
     setInviteButtonState('successed')
-    console.log('invite')
   }
 
   return { switchHandler, addInputClickHandler, inviteButtonClickHandler }
