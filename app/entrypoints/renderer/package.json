@@ -12,6 +12,7 @@
   "dependencies": {
     "@stores/toast-notification": "workspace:*",
     "graphql": "16.8.2",
+    "nodemailer": "6.9.14",
     "react-intl": "6.6.8"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@app/organizations-page": "workspace:*",
     "@app/registration-page": "workspace:*",
     "@app/root-layout": "workspace:*",
+    "@app/send-invite-mail-api": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
     "@stores/toast-notification": "workspace:*",
