@@ -51,5 +51,5 @@ export const getSearchedUsers = async ({ searchQuery, toast }) => {
     toast.error(e.message, e.status)
   }
 
-  return null
+  return []
 }
