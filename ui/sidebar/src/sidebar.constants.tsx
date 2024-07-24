@@ -2,6 +2,8 @@ import React                 from 'react'
 
 import { OrganizationsIcon } from '@ui/icons'
 
+export const OAUTH_SETTINGS_URL = `https://github.com/settings/connections/applications/${process.env.NEXT_PUBLIC_GH_CLIENT_ID}`
+
 export const itemList = [
   { title: 'Users', href: '/users' },
   {

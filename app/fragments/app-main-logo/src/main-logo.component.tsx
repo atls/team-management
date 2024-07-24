@@ -1,15 +1,14 @@
-import { useTheme }     from '@emotion/react'
+import { useTheme }         from '@emotion/react'
 
-import React            from 'react'
-import { useIntl }      from 'react-intl'
+import React                from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { AtlantisIcon } from '@ui/icons'
-import { Column }       from '@ui/layout'
-import { Text }         from '@ui/text'
-import { ThemeType }    from '@ui/theme'
+import { AtlantisIcon }     from '@ui/icons'
+import { Column }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { ThemeType }        from '@ui/theme'
 
 const MainLogo: React.FC = () => {
-  const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
 
   return (
@@ -20,7 +19,7 @@ const MainLogo: React.FC = () => {
         color={theme.colors.GRAY_1600}
         marginTop={theme.spaces.miderateIncreased}
       >
-        {formatMessage({ id: 'logo-title' })}
+        <FormattedMessage id='logo-title' />
       </Text>
     </Column>
   )

@@ -2,15 +2,20 @@
   "name": "@app/users-modal",
   "version": "0.0.1",
   "private": true,
+  "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@globals/data": "workspace:*",
+    "@globals/helpers": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/avatar": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",
+    "@ui/condition": "workspace:*",
     "@ui/divider": "workspace:*",
     "@ui/dropdown": "workspace:*",
     "@ui/icons": "workspace:*",
@@ -18,20 +23,23 @@
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
     "@ui/scroll": "workspace:*",
-    "@ui/text": "workspace:0.0.1",
+    "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@faker-js/faker": "8.4.1",
     "@types/react": "^18.3.2",
     "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-intl": "6.6.8"
   },
   "peerDependencies": {
     "@emotion/react": "*",
-    "@faker-js/faker": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
     "react": "*",
+    "react-dom": "*",
     "react-intl": "*"
   }
 }

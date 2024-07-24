@@ -11,7 +11,7 @@ export const baseChildContainerStyles: styleFn = ({
   position: position ?? 'fixed',
   display: 'flex',
   flexDirection: 'column',
-  zIndex: theme.spaces.s1400,
+  zIndex: theme.spaces.s1500,
   bottom: bottom ?? theme.spaces.zero,
   top: top ?? theme.spaces.zero,
   left: left ?? theme.spaces.zero,

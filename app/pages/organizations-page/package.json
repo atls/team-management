@@ -2,26 +2,23 @@
   "name": "@app/organizations-page",
   "version": "0.0.1",
   "private": true,
+  "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/organization-card-fragment": "workspace:*",
-    "@app/organization-card-grid-fragment": "workspace:*",
-    "@app/theme-selector": "workspace:*",
-    "@ui/sidebar": "workspace:*"
+    "@app/organization-card-grid-fragment": "workspace:*"
   },
   "devDependencies": {
-    "@faker-js/faker": "8.4.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "styled-system": "5.1.5"
   },
   "peerDependencies": {
-    "@faker-js/faker": "*",
     "react": "*",
+    "react-dom": "*",
     "styled-system": "*"
   }
 }

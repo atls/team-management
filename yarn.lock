@@ -199,11 +199,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal"
   dependencies:
+    "@app/invite-button": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@faker-js/faker": "npm:8.4.1"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
+    "@stores/select-input": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
     "@ui/input": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
@@ -214,7 +219,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
-    "@faker-js/faker": "*"
+    "@stores/select-input": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -287,6 +292,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/invite-button@workspace:*, @app/invite-button@workspace:app/fragments/app-invite-button":
+  version: 0.0.0-use.local
+  resolution: "@app/invite-button@workspace:app/fragments/app-invite-button"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/loading@workspace:*, @app/loading@workspace:app/fragments/app-loading":
   version: 0.0.0-use.local
   resolution: "@app/loading@workspace:app/fragments/app-loading"
@@ -356,6 +385,7 @@ __metadata:
     "@app/users-modal": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@globals/data": "workspace:*"
     "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
@@ -383,19 +413,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid"
   dependencies:
+    "@app/organization-card-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
+    react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -424,17 +460,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
   dependencies:
-    "@app/organization-card-fragment": "workspace:*"
     "@app/organization-card-grid-fragment": "workspace:*"
-    "@app/theme-selector": "workspace:*"
-    "@faker-js/faker": "npm:8.4.1"
-    "@ui/sidebar": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
-    "@faker-js/faker": "*"
     react: "*"
+    react-dom: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -511,9 +543,9 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/environment": "workspace:*"
     "@octokit/app": "npm:15.1.0"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/error-message": "workspace:*"
     "@ui/theme": "workspace:*"
     react-intl: "npm:6.6.8"
   peerDependencies:
@@ -619,12 +651,15 @@ __metadata:
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
   dependencies:
     "@emotion/react": "npm:11.11.4"
-    "@faker-js/faker": "npm:8.4.1"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
+    "@ui/condition": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/dropdown": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -632,13 +667,17 @@ __metadata:
     "@ui/layout": "workspace:*"
     "@ui/modal": "workspace:*"
     "@ui/scroll": "workspace:*"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
     "@emotion/react": "*"
-    "@faker-js/faker": "*"
+    "@types/react": "*"
+    "@types/react-dom": "*"
     react: "*"
+    react-dom: "*"
     react-intl: "*"
   languageName: unknown
   linkType: soft
@@ -2189,13 +2228,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@faker-js/faker@npm:8.4.1":
-  version: 8.4.1
-  resolution: "@faker-js/faker@npm:8.4.1"
-  checksum: 10/5983c2ea64f26055ad6648de748878e11ebe2fb751e3c7435ae141cdffabc2dccfe4c4f49da69a3d2add71e21b415c683ac5fba196fab0d5ed6779fbec436c80
-  languageName: node
-  linkType: hard
-
 "@formatjs/ecma402-abstract@npm:2.0.0":
   version: 2.0.0
   resolution: "@formatjs/ecma402-abstract@npm:2.0.0"
@@ -2296,9 +2328,11 @@ __metadata:
     "@graphql-codegen/typescript": "npm:4.0.6"
     "@graphql-codegen/typescript-resolvers": "npm:4.0.6"
     "@graphql-typed-document-node/core": "npm:3.2.0"
+    "@octokit/core": "npm:6.1.2"
     "@octokit/graphql": "npm:8.1.1"
     graphql: "npm:15.8.0"
   peerDependencies:
+    "@octokit/core": "*"
     "@octokit/graphql": "*"
     graphql: "*"
     react: "*"
@@ -2308,6 +2342,12 @@ __metadata:
 "@globals/environment@workspace:*, @globals/environment@workspace:globals/environment":
   version: 0.0.0-use.local
   resolution: "@globals/environment@workspace:globals/environment"
+  languageName: unknown
+  linkType: soft
+
+"@globals/helpers@workspace:*, @globals/helpers@workspace:globals/helpers":
+  version: 0.0.0-use.local
+  resolution: "@globals/helpers@workspace:globals/helpers"
   languageName: unknown
   linkType: soft
 
@@ -3549,7 +3589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/core@npm:^6.0.0, @octokit/core@npm:^6.1.2":
+"@octokit/core@npm:6.1.2, @octokit/core@npm:^6.0.0, @octokit/core@npm:^6.1.2":
   version: 6.1.2
   resolution: "@octokit/core@npm:6.1.2"
   dependencies:
@@ -3772,6 +3812,56 @@ __metadata:
   checksum: 10/78155c7bd866a85df85e22028e046b8d46cf3e840f72260954f5e3ed5bd97d66c595524305a6841ffb3f681a08f6e5cef572a2cce5442a8a232dc29fb409b83e
   languageName: node
   linkType: hard
+
+"@stores/select-input@workspace:*, @stores/select-input@workspace:stores/select-input":
+  version: 0.0.0-use.local
+  resolution: "@stores/select-input@workspace:stores/select-input"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/input": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@stores/toast-notification@workspace:*, @stores/toast-notification@workspace:stores/toast-notification":
+  version: 0.0.0-use.local
+  resolution: "@stores/toast-notification@workspace:stores/toast-notification"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/toast-notification": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
+  languageName: unknown
+  linkType: soft
 
 "@styled-system/background@npm:^5.1.2":
   version: 5.1.2
@@ -4799,28 +4889,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/error-message@workspace:*, @ui/error-message@workspace:ui/error-message":
-  version: 0.0.0-use.local
-  resolution: "@ui/error-message@workspace:ui/error-message"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/condition": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
 "@ui/icons@workspace:*, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
@@ -4877,6 +4945,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@stores/select-input": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -4893,6 +4962,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@stores/select-input": "*"
     react: "*"
     react-dom: "*"
     react-laag: "*"
@@ -5148,6 +5218,34 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/toast-notification@workspace:*, @ui/toast-notification@workspace:ui/toast-notification":
+  version: 0.0.0-use.local
+  resolution: "@ui/toast-notification@workspace:ui/toast-notification"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/condition": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    styled-system: "npm:5.1.5"
+    styled-tools: "npm:1.7.2"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 

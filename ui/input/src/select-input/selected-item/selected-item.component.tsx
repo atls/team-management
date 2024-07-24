@@ -5,11 +5,11 @@ import React                               from 'react'
 import { FC }                              from 'react'
 import { useContext }                      from 'react'
 
+import { SelectedItemsDispatchContext }    from '@stores/select-input'
 import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 
-import { SelectedItemsDispatchContext }    from '../selected-items/index.js'
 import { SelectedItemProps }               from './selected-item.interface.js'
 import { baseSelectedItemBoxStyles }       from './selected-item.styles.js'
 import { shapeSelectedItemBoxStyles }      from './selected-item.styles.js'

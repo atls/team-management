@@ -1,90 +1,89 @@
+import type { OrganizationTeamType }         from '@globals/data'
+import type { OrganizationMemberType }       from '@globals/data'
+
 import { useTheme }                          from '@emotion/react'
 
 import React                                 from 'react'
 import { FC }                                from 'react'
+import { FormattedMessage }                  from 'react-intl'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
-import { useIntl }                           from 'react-intl'
 
-import { Button }                            from '@ui/button'
-import { SelectInput }                       from '@ui/input'
+import { InviteButtonStateType }             from '@app/invite-button'
+import { InviteButton }                      from '@app/invite-button'
+import { SelectInputProvider }               from '@stores/select-input'
 import { Row }                               from '@ui/layout'
 import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
+import { useToast }                          from '@stores/toast-notification'
 
-import { USERS_TEST_DATA }                   from './add-member-to-organization-modal.constants.js'
+import { AddMemberToOrganizationHook }       from './add-member-to-organization-modal.hook.js'
 import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
-import { SelectedUsersType }                 from './add-member-to-organization-modal.interfaces.js'
-import { CheckedSwitchesType }               from './add-member-to-organization-modal.interfaces.js'
-import { HandlerSwitchType }                 from './add-member-to-organization-modal.interfaces.js'
+import { GithubUsersSearch }                 from './github-users-search/index.js'
 import { TeamSwitch }                        from './team-switch/index.js'
-import { useButtonActiveHook }               from './use-button-active.hook.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
   onBackdropClick,
-  organizationId,
+  organizationData,
 }) => {
+  const { id: organizationId } = organizationData
+  const { login: organizationLogin } = organizationData
+
+  const toast = useToast()
   const theme = useTheme() as ThemeType
-  const { formatMessage } = useIntl()
 
-  const [isButtonActive, setButtonActive] = useState<boolean>(false)
-  const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
-  const [selectedUsers, setSelectedUsers] = useState<SelectedUsersType>([])
+  const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
+  const [selectedUsers, setSelectedUsers] = useState<Array<OrganizationMemberType>>([])
+  const [selectedTeams, setSelectedTeams] = useState<Array<OrganizationTeamType>>([])
+  const [teamsData, setTeamsData] = useState<Array<OrganizationTeamType>>([])
 
-  const handlerSwitch: HandlerSwitchType = (state, category) => {
-    if (checkedSwitches.includes(category as never)) {
-      setCheckedSwitches(checkedSwitches.filter((c) => c !== (category as never)))
-    } else {
-      setCheckedSwitches(checkedSwitches.concat([category as never]))
-    }
-  }
-
-  useButtonActiveHook(selectedUsers, checkedSwitches, setButtonActive)
-
-  const usersData = USERS_TEST_DATA
+  const { switchHandler, inviteButtonClickHandler } = AddMemberToOrganizationHook({
+    open,
+    toast,
+    teamsData,
+    setTeamsData,
+    organizationId,
+    organizationLogin,
+    inviteButtonState,
+    selectedUsers,
+    setInviteButtonState,
+    selectedTeams,
+    setSelectedTeams,
+  })
 
   return (
-    <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
-      <Column flexDirection='column' gap={theme.spaces.large}>
-        <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
-          {formatMessage({ id: 'add-member-to-organization-modal.header' })}
-        </Text>
-        <SelectInput
-          placeholder={formatMessage({ id: 'add-member-to-organization-modal_input.placeholder' })}
-          searchItems={usersData}
-          parentHook={setSelectedUsers}
-        />
-        <Row
-          flexDirection='row'
-          flexWrap='wrap'
-          padding={theme.spaces.micro}
-          justifyContent='space-between'
-          rowGap={theme.spaces.large}
-        >
-          <Text fontSize='normal.semiIncreased' width='100%'>
-            {formatMessage({ id: 'add-member-to-organization-modal.teams' })}
+    <SelectInputProvider>
+      <Modal open={open} width={theme.spaces.superPuperExtra} onBackdropClick={onBackdropClick}>
+        <Column gap={theme.spaces.large}>
+          <Text fontSize='medium.semiReduced' fontWeight='normal' padding={theme.spaces.micro}>
+            <FormattedMessage id='add-member-to-organization-modal.header' />
           </Text>
-          <TeamSwitch teamName='Design' onChange={(e) => handlerSwitch(e, 'design')} />
-          <TeamSwitch teamName='Frontend' onChange={(e) => handlerSwitch(e, 'frontend')} />
-          <TeamSwitch teamName='Backend' onChange={(e) => handlerSwitch(e, 'backend')} />
-          <TeamSwitch teamName={`Guest's`} onChange={(e) => handlerSwitch(e, 'guests')} />
-        </Row>
-        <Row justifyContent='end'>
-          <Button
-            disabled={!isButtonActive}
-            horizontalLocation='right'
-            variant='blueBackgroundButton'
-            size='middlingRoundedPadding'
+          <GithubUsersSearch setSelectedUsersParentHook={setSelectedUsers} />
+          <Row
+            flexDirection='row'
+            flexWrap='wrap'
+            padding={theme.spaces.micro}
+            justifyContent='space-between'
+            rowGap={theme.spaces.large}
           >
-            <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
-              {formatMessage({ id: 'add-member-to-organization-modal.button' })}
+            <Text fontSize='normal.semiIncreased' width='100%'>
+              <FormattedMessage id='add-member-to-organization-modal.teams' />
             </Text>
-          </Button>
-        </Row>
-      </Column>
-    </Modal>
+            {teamsData.map(({ databaseId: teamId, name: teamName }) => (
+              <TeamSwitch teamName={teamName} onChange={(e) => switchHandler(e, teamId)} />
+            ))}
+          </Row>
+          <Row justifyContent='end'>
+            <InviteButton
+              inviteButtonState={inviteButtonState}
+              inviteButtonClickHandler={inviteButtonClickHandler}
+            />
+          </Row>
+        </Column>
+      </Modal>
+    </SelectInputProvider>
   )
 })

@@ -3,9 +3,9 @@
 import { useTheme }               from '@emotion/react'
 
 import React                      from 'react'
+import { FormattedMessage }       from 'react-intl'
 // @ts-ignore:next-line
 import { useRouter }              from 'next/navigation'
-import { useIntl }                from 'react-intl'
 
 import { MainLogo }               from '@app/main-logo'
 import { Background }             from '@ui/background'
@@ -20,12 +20,11 @@ import { githubAuthRedirectHook } from './github-auth.hook.js'
 
 const RegistrationClient: React.FC = () => {
   const theme = useTheme() as ThemeType
-  const { formatMessage } = useIntl()
   const router = useRouter()
 
   return (
     <Background backgroundUrl='url(/Bg.png)'>
-      <Column margin={theme.spaces.tb180lra} height='auto'>
+      <Column margin={theme.spaces.tb180lra} height='100%' justifyContent='space-between'>
         <MainLogo />
         <Box justifyContent='center'>
           <Button
@@ -40,7 +39,7 @@ const RegistrationClient: React.FC = () => {
               fontWeight={theme.fontWeights.medium}
               color={theme.colors.white}
             >
-              {formatMessage({ id: 'registration-page.login-button' })}
+              <FormattedMessage id='registration-page.login-button' />
             </Text>
           </Button>
         </Box>

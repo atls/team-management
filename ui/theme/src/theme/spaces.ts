@@ -86,6 +86,7 @@ export const spaces = {
   s1300: 1300,
   s1400: 1400,
   s1500: 1500,
+  s1600: 1600,
   v14h12: '14px 12px',
   none: 0,
   nano: 1,
@@ -110,6 +111,7 @@ export const spaces = {
   t8lr6b12: '8px 6px 12px',
   t24r24b0l0: '24px 24px 0 0',
   v8h16: '8px 16px',
+  v8h12: '8px 12px',
   mediumDefault: 50,
   mediumIncreased: 80,
 

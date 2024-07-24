@@ -4,7 +4,7 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "generate": "graphql-codegen --config ./src/codegen.ts"
+    "generate": "graphql-codegen-esm --config ./src/codegen.ts"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.2",
@@ -12,10 +12,12 @@
     "@graphql-codegen/typescript": "4.0.6",
     "@graphql-codegen/typescript-resolvers": "4.0.6",
     "@graphql-typed-document-node/core": "3.2.0",
+    "@octokit/core": "6.1.2",
     "@octokit/graphql": "8.1.1",
     "graphql": "15.8.0"
   },
   "peerDependencies": {
+    "@octokit/core": "*",
     "@octokit/graphql": "*",
     "graphql": "*",
     "react": "*"

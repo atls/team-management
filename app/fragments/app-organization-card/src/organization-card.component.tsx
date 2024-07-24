@@ -1,4 +1,4 @@
-'use client'
+import type { OrganizationDataType }    from '@globals/data'
 
 import { useTheme }                     from '@emotion/react'
 
@@ -25,11 +25,11 @@ import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
-    organizationId,
-    organizationTitle,
-    organizationDescription,
-    organizationMembersQuantity,
-    organizationCoverSrc,
+    name: organizationTitle,
+    description: organizationDescription,
+    membersWithRole: { totalCount: membersCount },
+    avatarUrl: organizationCoverSrc,
+    viewerCanAdminister,
   } = organizationData
 
   const [isAddMemberToOrganizationModalOpen, setAddMemberToOrganizationModalOpen] =
@@ -74,8 +74,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
               </Text>
             </Condition>
             <Row gap={theme.spaces.semiTiny} alignItems='center'>
-              <Condition match={Boolean(organizationMembersQuantity)}>
-                <Members quantity={organizationMembersQuantity} />
+              <Condition match={Boolean(membersCount)}>
+                <Members quantity={membersCount} />
               </Condition>
             </Row>
           </Column>
@@ -95,8 +95,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <UsersModal
               open={isUsersModalOpen}
+              organizationData={organizationData as OrganizationDataType}
               onBackdropClick={handlerUsersModalClick}
-              organizationData={organizationData}
             />
 
             <Button
@@ -104,6 +104,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
               size='middlingRoundedPadding'
               variant='blueBackgroundButton'
               onClick={handlerAddOrganizationMemberClick}
+              disabled={!viewerCanAdminister}
             >
               <AddIcon
                 color='white'
@@ -113,9 +114,9 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
             </Button>
 
             <AddMemberToOrganizationModal
-              organizationId={organizationId}
               open={isAddMemberToOrganizationModalOpen}
               onBackdropClick={handlerAddOrganizationMemberClick}
+              organizationData={organizationData as OrganizationDataType}
             />
           </Row>
         </Column>

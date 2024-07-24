@@ -2,8 +2,8 @@ import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'
 import { FC }                from 'react'
+import { FormattedMessage }  from 'react-intl'
 import { motion }            from 'framer-motion'
-import { useIntl }           from 'react-intl'
 
 import { Button }            from '@ui/button'
 import { RemoveIcon }        from '@ui/icons'
@@ -16,7 +16,6 @@ import { ThemeType }         from '@ui/theme'
 import { AnimatedCardProps } from './animated-card.interfaces.js'
 
 const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
-  const { formatMessage } = useIntl()
   const theme = useTheme() as ThemeType
   const [openMenu, setOpenMenu] = React.useState<boolean>(false)
 
@@ -64,7 +63,7 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
 
         <Box marginTop={theme.spaces.medium} justifyContent='space-between'>
           <Text maxWidth={theme.spaces.largeDecreased} fontSize='small.semiLarge'>
-            {formatMessage({ id: 'confirm-deleting-organization.warning' })}
+            <FormattedMessage id='confirm-deleting-organization.warning' />
           </Text>
           <Button
             onClick={removeOrganization}
@@ -72,14 +71,14 @@ const AnimatedCard: FC<AnimatedCardProps> = ({ img, organization }) => {
             size='middlingRoundedPadding'
             variant='lightBlueBackgroundButton'
           >
-            {formatMessage({ id: 'confirm-deleting-organization.yes' })}
+            <FormattedMessage id='confirm-deleting-organization.yes' />
           </Button>
           <Button
             onClick={handleDelete}
             size='middlingRoundedPadding'
             variant='lightBlueBackgroundButton'
           >
-            {formatMessage({ id: 'confirm-deleting-organization.no' })}
+            <FormattedMessage id='confirm-deleting-organization.no' />
           </Button>
         </Box>
       </Column>

@@ -6,11 +6,13 @@ import { FC }                       from 'react'
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
 
-import { Column }                   from '@ui/layout'
+import { Box }                      from '@ui/layout'
 import { ThemeType }                from '@ui/theme'
+import { ThemeVariantType }         from '@ui/theme'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
 import { SidebarItem }              from './item/index.js'
+import { OrganizatoinSettings }     from './organization-settings/index.js'
 import { Pin }                      from './pin/index.js'
 import { SidebarDivider }           from './sidebar-divider/index.js'
 import { SidebarStateContext }      from './sidebar.context.js'
@@ -37,15 +39,16 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
   return (
     <SidebarStateContext.Provider value={isSidebarOpened}>
       <Wrapper states={states}>
-        <AtlantisLogo activeTheme={theme.colors.activeTheme} />
-        <Column gap={theme.spaces.miniIncreased}>
+        <AtlantisLogo activeTheme={theme.colors.activeTheme as ThemeVariantType} />
+        <Box height='100%' flexDirection='column' gap={theme.spaces.miniIncreased}>
           {itemList.map((itemData) => (
             <SidebarItem {...itemData} active={pathname === itemData.href} />
           ))}
-        </Column>
+        </Box>
         <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
         <SidebarDivider />
         <Viewer name={name} email={email} avatarUrl={avatarUrl} url={url} />
+        <OrganizatoinSettings theme={theme} isSidebarOpened={isSidebarOpened} />
       </Wrapper>
     </SidebarStateContext.Provider>
   )

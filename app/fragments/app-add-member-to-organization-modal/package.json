@@ -4,9 +4,18 @@
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/invite-button": "workspace:*",
+    "@globals/data": "workspace:*",
+    "@globals/helpers": "workspace:*",
+    "@stores/select-input": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/button": "workspace:*",
+    "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
@@ -16,7 +25,6 @@
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",
-    "@faker-js/faker": "8.4.1",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "react": "18.3.1",
@@ -24,7 +32,7 @@
     "react-intl": "6.6.8"
   },
   "peerDependencies": {
-    "@faker-js/faker": "*",
+    "@stores/select-input": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

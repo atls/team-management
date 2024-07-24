@@ -1,10 +1,4 @@
-export type OrganizationDataType = {
-  organizationId: number
-  organizationTitle: string
-  organizationDescription: string
-  organizationMembersQuantity: number
-  organizationCoverSrc: string
-}
+import type { OrganizationDataType } from '@globals/data'
 
 export interface OrganizationCardProps {
   organizationData: OrganizationDataType

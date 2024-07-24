@@ -11,7 +11,7 @@ import { ThemeType }           from '@ui/theme'
 
 import { MemberDorpdownProps } from './member-dropdown.interfaces.js'
 
-export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberId, onDeleteMemberClick }) => {
+export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberLogin, onDeleteMemberClick }) => {
   const theme = useTheme() as ThemeType
   return (
     <Dropdown>
@@ -19,7 +19,7 @@ export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberId, onDeleteMemb
         alignItems='center'
         gap={theme.spaces.s4}
         cursor='pointer'
-        onClick={() => onDeleteMemberClick(memberId)}
+        onClick={() => onDeleteMemberClick(memberLogin)}
       >
         <WrongOutlineIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
         <Text fontSize='small.semiLarge' color='red'>

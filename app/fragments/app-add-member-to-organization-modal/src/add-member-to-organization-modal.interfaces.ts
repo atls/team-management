@@ -1,7 +1,9 @@
+import type { OrganizationDataType } from '@globals/data'
+
 export interface AddMemberToOrganizationModalProps {
   open: boolean
   onBackdropClick: VoidFunction
-  organizationId: number
+  organizationData: OrganizationDataType
 }
 
 export type SelectedUsersType = Array<number>

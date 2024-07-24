@@ -13,6 +13,7 @@ const { GRAY_1600 } = colorsConstants
 const { BLUE_0 } = colorsConstants
 const { BLUE_100 } = colorsConstants
 const { BLUE_400 } = colorsConstants
+const { BLUE_700 } = colorsConstants
 
 const { RED_400 } = colorsConstants
 
@@ -51,6 +52,7 @@ const colors = {
   GRAY_1000,
   GRAY_1600,
   RED_400,
+  BLUE_700,
   black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',

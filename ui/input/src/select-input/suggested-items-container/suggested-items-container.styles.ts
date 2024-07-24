@@ -1,7 +1,7 @@
 import { styleFn } from 'styled-system'
 
 export const baseSuggestedItemsContainerBoxStyles: styleFn = ({ theme }) => ({
-  zIndex: theme.spaces.s1500,
+  zIndex: theme.spaces.s1600,
   gap: theme.spaces.tiny,
   flexWrap: 'wrap',
 })

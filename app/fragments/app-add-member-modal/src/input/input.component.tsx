@@ -15,11 +15,10 @@ export const AddMemberModalInput: FC<AddMemberModalInputProps> = ({
   inputValues,
   setInputValues,
 }) => {
-  const { formatMessage } = useIntl()
-
   const INPUT_PROPS = {
     placeholder: 'me@torinasakura.name',
   }
+  const { formatMessage } = useIntl()
 
   const [errorText, setErrorText] = useState('')
 

@@ -4,8 +4,10 @@ import { PropsWithChildren } from 'react'
 import { ScrollProps }       from './scroll.interface.js'
 import { ScrollContainer }   from './scroll.styles.js'
 
-const Scroll: React.FC<PropsWithChildren<ScrollProps>> = ({ children, height }) => (
-  <ScrollContainer height={height}>{children}</ScrollContainer>
+const Scroll: React.FC<PropsWithChildren<ScrollProps>> = ({ children, height, maxHeight }) => (
+  <ScrollContainer height={height} maxHeight={maxHeight}>
+    {children}
+  </ScrollContainer>
 )
 
 export { Scroll }
