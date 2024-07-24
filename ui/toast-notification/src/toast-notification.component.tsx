@@ -3,7 +3,6 @@ import { useTheme }                        from '@emotion/react'
 
 import React                               from 'react'
 import { FC }                              from 'react'
-import { useEffect }                       from 'react'
 import { useState }                        from 'react'
 
 import { Condition }                       from '@ui/condition'
@@ -11,9 +10,8 @@ import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 import { ThemeType }                       from '@ui/theme'
 
-import { HIDE_DELAY_5SEC }                 from './toast-notification.constants.js'
+import { ToastNotificationHook }           from './toast-notification.hook.js'
 import { ToastNotificationComponentProps } from './toast-notification.interfaces.js'
-import { checkUrlErrorHook }               from './hooks/check-url-error.hook.js'
 import { baseAbsoluteConteinerStyles }     from './toast-notification.styles.js'
 import { shapeAbsoluteContainerStyles }    from './toast-notification.styles.js'
 import { notificationContainerStyles }     from './toast-notification.styles.js'
@@ -34,29 +32,7 @@ export const ToastNotification: FC<ToastNotificationComponentProps> = ({
 
   const { type, text, code } = notificationData
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      toastNotificationDispatch({
-        type: 'notify',
-        toastNotification: checkUrlErrorHook(),
-      })
-    }
-  }, [toastNotificationDispatch])
-
-  useEffect(() => {
-    setHide(false)
-  }, [text])
-
-  useEffect(() => {
-    if (!isHide) {
-      setTimeout(() => {
-        setHide(true)
-        toastNotificationDispatch({
-          type: 'clean',
-        })
-      }, HIDE_DELAY_5SEC)
-    }
-  }, [isHide, toastNotificationDispatch])
+  ToastNotificationHook({ toastNotificationDispatch, isHide, setHide, text })
 
   return (
     <Condition match={Boolean(text && !isHide)}>
