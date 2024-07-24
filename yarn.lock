@@ -166,35 +166,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@app/add-member-modal-fragment@workspace:*, @app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal":
-  version: 0.0.0-use.local
-  resolution: "@app/add-member-modal-fragment@workspace:app/fragments/app-add-member-modal"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/input": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/modal": "workspace:*"
-    "@ui/switch": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    "@ui/utils": "workspace:*"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-intl: "npm:6.6.8"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
 "@app/add-member-to-organization-modal-fragment@workspace:*, @app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal":
   version: 0.0.0-use.local
   resolution: "@app/add-member-to-organization-modal-fragment@workspace:app/fragments/app-add-member-to-organization-modal"
@@ -310,6 +281,38 @@ __metadata:
     "@emotion/react": "*"
     "@types/react": "*"
     "@types/react-dom": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/invite-member-modal-fragment@workspace:*, @app/invite-member-modal-fragment@workspace:app/fragments/app-invite-member-modal":
+  version: 0.0.0-use.local
+  resolution: "@app/invite-member-modal-fragment@workspace:app/fragments/app-invite-member-modal"
+  dependencies:
+    "@app/invite-button": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@stores/toast-notification": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/modal": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@stores/toast-notification": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -523,6 +526,7 @@ __metadata:
     "@app/root-layout": "workspace:*"
     "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
+    "@stores/toast-notification": "workspace:*"
     "@types/node": "npm:20.12.12"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -711,7 +715,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/users-title@workspace:app/fragments/app-users-title"
   dependencies:
-    "@app/add-member-modal-fragment": "workspace:*"
+    "@app/invite-member-modal-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -2351,6 +2355,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@globals/mail@workspace:globals/mail":
+  version: 0.0.0-use.local
+  resolution: "@globals/mail@workspace:globals/mail"
+  dependencies:
+    "@types/nodemailer": "npm:^6"
+    nodemailer: "npm:6.9.14"
+  languageName: unknown
+  linkType: soft
+
 "@graphql-codegen/add@npm:^5.0.2, @graphql-codegen/add@npm:^5.0.3":
   version: 5.0.3
   resolution: "@graphql-codegen/add@npm:5.0.3"
@@ -3842,24 +3855,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stores/toast-notification@workspace:stores/toast-notification"
   dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
     "@ui/toast-notification": "workspace:*"
     react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/styled-system": "*"
     react: "*"
-    react-dom: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -4459,6 +4459,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10/5c8daed0c672e824c36d31312377fc4dddf3e91006fadad719527bb2bd710d4207193c1c7034da9d2d6cbc03da89d3693c86207f751540c18a7d38802040fbd9
+  languageName: node
+  linkType: hard
+
+"@types/nodemailer@npm:^6":
+  version: 6.4.15
+  resolution: "@types/nodemailer@npm:6.4.15"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/1b400b694ed1bc51c242a719de44b484911481596c288407fff18b81ee76945d2d0c6e411371dfa4293747ebf4146a1f0df0e188ff7b9d2adaccd1183dfa1c2c
   languageName: node
   linkType: hard
 
@@ -11012,6 +11021,13 @@ __metadata:
   version: 0.7.3
   resolution: "node-watch@npm:0.7.3"
   checksum: 10/40165fe737d928d06b4957f5d7924cea4c4b58d2e696986f48b6d6c26d33fda474b6f5a0cd554a31985c2184524d70c280db61c933739ff6dc5a71e990fe2dff
+  languageName: node
+  linkType: hard
+
+"nodemailer@npm:6.9.14":
+  version: 6.9.14
+  resolution: "nodemailer@npm:6.9.14"
+  checksum: 10/749d1a3ef440d6147c37ad850f5be065d55d87cd46a4470372d4e443593838a5ddd78c69623817a804ddede3212fa28ac069b5b8266e892b27e1dcff75103def
   languageName: node
   linkType: hard
 
