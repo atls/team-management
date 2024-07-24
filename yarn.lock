@@ -203,8 +203,8 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@store/select-input": "workspace:*"
-    "@store/toast-notification": "workspace:*"
+    "@stores/select-input": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:*"
@@ -219,7 +219,7 @@ __metadata:
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
   peerDependencies:
-    "@store/select-input": "*"
+    "@stores/select-input": "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
@@ -417,7 +417,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@store/toast-notification": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
@@ -543,7 +543,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/environment": "workspace:*"
     "@octokit/app": "npm:15.1.0"
-    "@store/toast-notification": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@ui/theme": "workspace:*"
@@ -653,7 +653,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@store/toast-notification": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/avatar": "workspace:*"
@@ -3813,9 +3813,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@store/select-input@workspace:*, @store/select-input@workspace:app/store/select-input":
+"@stores/select-input@workspace:*, @stores/select-input@workspace:stores/select-input":
   version: 0.0.0-use.local
-  resolution: "@store/select-input@workspace:app/store/select-input"
+  resolution: "@stores/select-input@workspace:stores/select-input"
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
@@ -3838,9 +3838,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@store/toast-notification@workspace:*, @store/toast-notification@workspace:app/store/toast-notification":
+"@stores/toast-notification@workspace:*, @stores/toast-notification@workspace:stores/toast-notification":
   version: 0.0.0-use.local
-  resolution: "@store/toast-notification@workspace:app/store/toast-notification"
+  resolution: "@stores/toast-notification@workspace:stores/toast-notification"
   dependencies:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
@@ -4945,7 +4945,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
-    "@store/select-input": "workspace:*"
+    "@stores/select-input": "workspace:*"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -4962,7 +4962,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
-    "@store/select-input": "*"
+    "@stores/select-input": "*"
     react: "*"
     react-dom: "*"
     react-laag: "*"
