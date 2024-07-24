@@ -1,1 +1,1 @@
-export * from './get-transporter.mail.js'
+export * from './templates/index.js'

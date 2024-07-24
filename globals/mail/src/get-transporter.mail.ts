@@ -1,4 +1,4 @@
-import nodemailder from 'nodemailer'
+import nodemailer from 'nodemailer'
 
 // TODO separate values into env
 export const transporter = nodemailer.createTransport({
@@ -6,7 +6,7 @@ export const transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // Use `true` for port 465, `false` for all other ports
   auth: {
-    user: 'maddison53@ethereal.email',
-    pass: 'jn7jnAPss4f63QBp6D',
+    user: 'gonzalo20@ethereal.email',
+    pass: 'd4P4DrQy9QtWuvCe8F',
   },
 })
