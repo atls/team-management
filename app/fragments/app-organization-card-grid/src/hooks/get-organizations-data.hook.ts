@@ -15,7 +15,13 @@ export const getOrganizationsData: GetOrganizationDataType = async ({
 }) => {
   try {
     const token = getTokenCookie(document)
+
+    if (!token) {
+      throw new Error(`Error with token ${token}`)
+    }
+
     const client = octokitGraphqlClient(token)
+
     const response = (await client(GET_VIEWER_ORGANIZATIONS, {
       organizationsLimit: ORGANIZATIONS_LIMIT,
       organizationMembersLimit: ORGANIZATION_MEMBERS_LIMIT,
