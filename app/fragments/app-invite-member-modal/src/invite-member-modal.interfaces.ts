@@ -1,4 +1,4 @@
-export interface AddMemberModalProps {
+export interface InviteMemberModalProps {
   open: boolean
   onBackdropClick: VoidFunction
 }

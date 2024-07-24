@@ -1,11 +1,16 @@
 {
-  "name": "@app/add-member-modal-fragment",
+  "name": "@app/invite-member-modal-fragment",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/invite-button": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
@@ -28,6 +33,7 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "@stores/toast-notification": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"
