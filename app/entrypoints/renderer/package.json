@@ -10,6 +10,7 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
+    "@stores/toast-notification": "workspace:*",
     "graphql": "16.8.2",
     "react-intl": "6.6.8"
   },
@@ -24,6 +25,7 @@
     "@app/root-layout": "workspace:*",
     "@app/users-page": "workspace:*",
     "@emotion/react": "11.11.4",
+    "@stores/toast-notification": "workspace:*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
