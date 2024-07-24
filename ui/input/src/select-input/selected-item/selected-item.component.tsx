@@ -5,7 +5,7 @@ import React                               from 'react'
 import { FC }                              from 'react'
 import { useContext }                      from 'react'
 
-import { SelectedItemsDispatchContext }    from '@store/select-input'
+import { SelectedItemsDispatchContext }    from '@stores/select-input'
 import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'

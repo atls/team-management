@@ -1,6 +1,6 @@
 import { Octokit } from '@octokit/core'
 
-export const octokitRestClient = (token: string) => {
+export const createOctokitRestClient = (token: string) => {
   const octokit = new Octokit({
     auth: token,
   })

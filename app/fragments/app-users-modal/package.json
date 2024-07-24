@@ -11,7 +11,7 @@
   "dependencies": {
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@store/toast-notification": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/avatar": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/card": "workspace:*",

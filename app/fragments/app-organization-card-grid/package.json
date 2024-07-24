@@ -12,7 +12,7 @@
     "@app/organization-card-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@store/toast-notification": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/theme": "workspace:*"
   },

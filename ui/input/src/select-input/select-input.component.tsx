@@ -9,7 +9,7 @@ import { useRef }                   from 'react'
 import { useLayer }                 from 'react-laag'
 
 import { Box }                      from '@ui/layout'
-import { useSelectInput }           from '@store/select-input'
+import { useSelectInput }           from '@stores/select-input'
 
 import { SelectInputProps }         from './select-input.interfaces.js'
 import { SelectedItems }            from './selected-items/index.js'

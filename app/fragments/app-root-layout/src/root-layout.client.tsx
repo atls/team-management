@@ -3,7 +3,7 @@
 import React                         from 'react'
 import { IntlProvider }              from 'react-intl'
 
-import { ToastNotificationProvider } from '@store/toast-notification'
+import { ToastNotificationProvider } from '@stores/toast-notification'
 import { ThemeProvider }             from '@ui/theme'
 
 export const RootLayoutClient = ({ children, messages }) => (

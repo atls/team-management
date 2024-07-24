@@ -1,5 +1,5 @@
 {
-  "name": "@store/toast-notification",
+  "name": "@stores/toast-notification",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "type": "module",

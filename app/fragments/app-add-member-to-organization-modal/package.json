@@ -12,8 +12,8 @@
     "@app/invite-button": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@store/select-input": "workspace:*",
-    "@store/toast-notification": "workspace:*",
+    "@stores/select-input": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/input": "workspace:*",
@@ -32,7 +32,7 @@
     "react-intl": "6.6.8"
   },
   "peerDependencies": {
-    "@store/select-input": "*",
+    "@stores/select-input": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

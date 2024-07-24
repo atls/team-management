@@ -1,7 +1,7 @@
 import type { InviteButtonClickType }     from './invite-button-click.interface.js'
 
 import { inviteMemberToOrgaizationQuery } from '@globals/data'
-import { octokitRestClient }              from '@globals/data'
+import { createOctokitRestClient }        from '@globals/data'
 import { getTokenCookie }                 from '@globals/helpers'
 
 export const inviteButtonClickHook: InviteButtonClickType = async ({
@@ -14,7 +14,7 @@ export const inviteButtonClickHook: InviteButtonClickType = async ({
   const token = getTokenCookie(document)
 
   try {
-    const restClient = octokitRestClient(token)
+    const restClient = createOctokitRestClient(token)
     for await (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
 

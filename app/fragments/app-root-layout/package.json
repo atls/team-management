@@ -9,7 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/environment": "workspace:*",
-    "@store/toast-notification": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {

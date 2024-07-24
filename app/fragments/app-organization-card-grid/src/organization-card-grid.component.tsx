@@ -12,7 +12,7 @@ import { OrganizationCard }     from '@app/organization-card-fragment'
 import { OrganizationDataType } from '@globals/data'
 import { GridAutoRows }         from '@ui/layout'
 import { ThemeType }            from '@ui/theme'
-import { useToast }             from '@store/toast-notification'
+import { useToast }             from '@stores/toast-notification'
 
 import { getOrganizationsData } from './hooks/index.js'
 

@@ -17,7 +17,7 @@ import { Scroll }                     from '@ui/scroll'
 import { Text }                       from '@ui/text'
 import { Space }                      from '@ui/text'
 import { ThemeType }                  from '@ui/theme'
-import { useToast }                   from '@store/toast-notification'
+import { useToast }                   from '@stores/toast-notification'
 
 import { Member }                     from './member/index.js'
 import { UsersModalProps }            from './users-modal.interfaces.js'

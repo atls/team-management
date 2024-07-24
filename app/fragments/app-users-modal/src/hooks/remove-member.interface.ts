@@ -1,5 +1,5 @@
 import type { OrganizationMemberType } from '@globals/data'
-import type { ToastType }              from '@store/toast-notification'
+import type { ToastType }              from '@stores/toast-notification'
 
 export type RemoveMemberType = ({
   organizationLogin,
