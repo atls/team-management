@@ -1,12 +1,13 @@
 import nodemailer from 'nodemailer'
 
-// TODO separate values into env
+const { SMTP_AUTH_HOST, SMTP_AUTH_PORT, SMTP_AUTH_USER, SMTP_AUTH_PASS } = process.env
+
 export const transporter = nodemailer.createTransport({
-  host: 'smtp.ethereal.email',
-  port: 587,
+  host: SMTP_AUTH_HOST,
+  port: Number(SMTP_AUTH_PORT),
   secure: false, // Use `true` for port 465, `false` for all other ports
   auth: {
-    user: 'gonzalo20@ethereal.email',
-    pass: 'd4P4DrQy9QtWuvCe8F',
+    user: SMTP_AUTH_USER,
+    pass: SMTP_AUTH_PASS,
   },
 })
