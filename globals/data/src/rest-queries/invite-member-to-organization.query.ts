@@ -1,6 +1,6 @@
 const MEMBER_ROLE = 'direct_member'
 
-export const inviteMemberToOrgaizationQuery = ({ organizationLogin, githubUserId, teamIds }) => [
+export const inviteMemberToOrganizationQuery = ({ organizationLogin, githubUserId, teamIds }) => [
   'POST /orgs/{org}/invitations',
   {
     org: organizationLogin,

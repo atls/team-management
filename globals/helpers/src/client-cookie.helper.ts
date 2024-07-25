@@ -1,4 +1,4 @@
-type DocumentType = typeof document
+export type DocumentType = typeof document
 type CookieObjType = Record<string, string>
 
 export const getAllCookieClient = (document: DocumentType): CookieObjType => {

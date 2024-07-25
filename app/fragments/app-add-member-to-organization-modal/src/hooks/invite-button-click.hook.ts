@@ -1,8 +1,8 @@
-import type { InviteButtonClickType }     from './invite-button-click.interface.js'
+import type { InviteButtonClickType }      from './invite-button-click.interface.js'
 
-import { inviteMemberToOrgaizationQuery } from '@globals/data'
-import { createOctokitRestClient }        from '@globals/data'
-import { getTokenCookie }                 from '@globals/helpers'
+import { inviteMemberToOrganizationQuery } from '@globals/data'
+import { createOctokitRestClient }         from '@globals/data'
+import { getTokenCookie }                  from '@globals/helpers'
 
 export const inviteButtonClickHook: InviteButtonClickType = async ({
   organizationLogin,
@@ -18,7 +18,7 @@ export const inviteButtonClickHook: InviteButtonClickType = async ({
     for await (const selectedUser of selectedUsers) {
       const { githubUserId } = selectedUser
 
-      const query = inviteMemberToOrgaizationQuery({
+      const query = inviteMemberToOrganizationQuery({
         organizationLogin,
         githubUserId,
         teamIds: selectedTeams,

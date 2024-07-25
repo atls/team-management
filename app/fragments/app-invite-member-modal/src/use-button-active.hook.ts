@@ -1,7 +1,7 @@
 import { useEffect }               from 'react'
 import { useCallback }             from 'react'
 
-import { UseButtonActiveHookType } from './add-member-modal.interfaces.js'
+import { UseButtonActiveHookType } from './invite-member-modal.interfaces.js'
 
 export const useButtonActiveHook: UseButtonActiveHookType = (checkedSwitches, setButtonActive) => {
   const setButtonActiveFn = (): void => {

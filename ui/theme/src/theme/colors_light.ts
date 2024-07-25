@@ -42,7 +42,7 @@ const colors = {
   baseLayout: {
     background: GRAY_0,
   },
-  addMemberModal: {
+  inviteMemberModal: {
     addIcon: GRAY_1600,
     buttonText: GRAY_800,
   },

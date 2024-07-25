@@ -1,17 +1,18 @@
 'use client'
 
-import { useTheme }          from '@emotion/react'
+import { useTheme }                 from '@emotion/react'
 
-import React                 from 'react'
-import { FC }                from 'react'
-import { FormattedMessage }  from 'react-intl'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { FormattedMessage }         from 'react-intl'
 
-import { Button }            from '@ui/button'
-import { SuccessIcon }       from '@ui/icons'
-import { Text }              from '@ui/text'
-import { ThemeType }         from '@ui/theme'
+import { Button }                   from '@ui/button'
+import { SuccessIcon }              from '@ui/icons'
+import { Text }                     from '@ui/text'
+import { ThemeType }                from '@ui/theme'
 
-import { InviteButtonProps } from './invite-button.interfaces.js'
+import { InviteButtonProps }        from './invite-button.interfaces.js'
+import { getInviteButtonConstants } from './invite-button.constants.js'
 
 export const InviteButton: FC<InviteButtonProps> = ({
   inviteButtonState,
@@ -19,8 +20,7 @@ export const InviteButton: FC<InviteButtonProps> = ({
 }) => {
   const theme = useTheme() as ThemeType
 
-  const SUCCESS_COLOR = theme.colors.BLUE_400
-  const ICON_SIZE = theme.spaces.semiRegular
+  const { SUCCESS_COLOR, ICON_SIZE } = getInviteButtonConstants(theme)
 
   return inviteButtonState === 'successed' ? (
     <Button
