@@ -7,12 +7,9 @@ import { memo }                   from 'react'
 import { useState }               from 'react'
 
 import { InviteButton }           from '@app/invite-button'
+import { InviteButtonStateType }  from '@app/invite-button'
 import { Button }                 from '@ui/button'
 import { AddIcon }                from '@ui/icons'
-import { GitHubIcon }             from '@ui/icons'
-import { FigmaIcon }              from '@ui/icons'
-import { DiscordIcon }            from '@ui/icons'
-import { TelegramIcon }           from '@ui/icons'
 import { Row }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Modal }                  from '@ui/modal'
@@ -26,18 +23,18 @@ import { InviteMemberModalHook }  from './invite-member-modal.hook.js'
 import { InputValuesType }        from './invite-member-modal.interfaces.js'
 import { InviteMemberModalProps } from './invite-member-modal.interfaces.js'
 import { CheckedSwitchesType }    from './invite-member-modal.interfaces.js'
-import { getIconProps }           from './ivnite-member-modal.constants.js'
+import { getSwitchList }          from './ivnite-member-modal.constants.js'
 
 // TODO change button to invite button fragment
 export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const toast = useToast()
   const theme = useTheme() as ThemeType
 
-  const [inviteButtonState, setInviteButtonState] = useState('disabled')
+  const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
   const [checkedSwitches, setCheckedSwitches] = useState<CheckedSwitchesType>([])
   const [inputValues, setInputValues] = useState<InputValuesType>([''])
 
-  const ICON_PROPS = getIconProps(theme)
+  const SWITCH_DATA_LIST = getSwitchList(theme)
 
   const { switchHandler, addInputClickHandler, inviteButtonClickHandler } = InviteMemberModalHook({
     toast,
@@ -75,18 +72,9 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
           </Button>
         </Row>
         <Row justifyContent='space-between'>
-          <IconSwitch onChange={(e) => switchHandler(e, 'github')}>
-            <GitHubIcon {...ICON_PROPS} />
-          </IconSwitch>
-          <IconSwitch onChange={(e) => switchHandler(e, 'figma')}>
-            <FigmaIcon {...ICON_PROPS} />
-          </IconSwitch>
-          <IconSwitch onChange={(e) => switchHandler(e, 'discord')}>
-            <DiscordIcon {...ICON_PROPS} />
-          </IconSwitch>
-          <IconSwitch onChange={(e) => switchHandler(e, 'telegram')}>
-            <TelegramIcon {...ICON_PROPS} />
-          </IconSwitch>
+          {SWITCH_DATA_LIST.map(({ icon, switchData }) => (
+            <IconSwitch onChange={(e) => switchHandler(e, switchData)}>{icon}</IconSwitch>
+          ))}
         </Row>
         <Row justifyContent='end'>
           <InviteButton

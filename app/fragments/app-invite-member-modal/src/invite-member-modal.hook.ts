@@ -6,6 +6,7 @@ import { changeButtonHook }        from './hooks/index.js'
 import { sendInviteEmailHook }     from './hooks/index.js'
 
 export const InviteMemberModalHook = ({
+  toast,
   checkedSwitches,
   setCheckedSwitches,
   inputValues,
@@ -29,8 +30,32 @@ export const InviteMemberModalHook = ({
   }
 
   const inviteButtonClickHandler = async () => {
-    await sendInviteEmailHook({ emails: inputValues, selectedInvites: checkedSwitches })
-    setInviteButtonState('successed')
+    let ghOrgName = ''
+    const selectedInvites = []
+
+    for (const checkedSwitch of checkedSwitches) {
+      try {
+        new URL(checkedSwitch)
+        selectedInvites.push(checkedSwitch)
+      } catch (_) {
+        ghOrgName = checkedSwitch
+      }
+    }
+
+    try {
+      if (ghOrgName) {
+        // TODO
+        // отправить запрос на отправление инвайта гитхаб
+      }
+      if (selectedInvites.length) {
+        await sendInviteEmailHook({ emails: inputValues, selectedInvites })
+      }
+      setInviteButtonState('successed')
+    } catch (e: any) {
+      console.error(e)
+      console.log(e)
+      toast.error(e.message, e.code)
+    }
   }
 
   return { switchHandler, addInputClickHandler, inviteButtonClickHandler }
