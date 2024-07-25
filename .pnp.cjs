@@ -22,6 +22,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:app/api/logout"\
     },\
     {\
+      "name": "@app/send-invite-mail-api",\
+      "reference": "workspace:app/api/send-invite-mail"\
+    },\
+    {\
       "name": "@app/renderer-entrypoint",\
       "reference": "workspace:app/entrypoints/renderer"\
     },\
@@ -260,6 +264,7 @@ const RAW_RUNTIME_STATE =
     ["@app/registration-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/registration-page", "workspace:app/pages/registration-page"]],\
     ["@app/renderer-entrypoint", ["workspace:app/entrypoints/renderer"]],\
     ["@app/root-layout", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-root-layout", "workspace:app/fragments/app-root-layout"]],\
+    ["@app/send-invite-mail-api", ["workspace:app/api/send-invite-mail"]],\
     ["@app/theme-selector", ["virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:app/fragments/app-theme-selector", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:app/fragments/app-theme-selector", "workspace:app/fragments/app-theme-selector"]],\
     ["@app/user-badge", ["workspace:app/fragments/app-user-badge"]],\
     ["@app/user-card", ["virtual:9f78aa73040a6549299b357175467c38368676c1b6405c3c1268b70c53815f9de6f3761ce6eec8fe3e07621aded2d3138876e8670c6424158e1293da8acc1c02#workspace:app/fragments/app-user-card", "virtual:b0e6a5c63670b3cd58d6eb91d8697feb05b0ee39aa7dd9d2ed6720ffa170f8db3030b2b0ad3b87584678b8c0de4ae85b65d628476d0ca72dad1cde9320db9efa#workspace:app/fragments/app-user-card", "workspace:app/fragments/app-user-card"]],\
@@ -916,6 +921,8 @@ const RAW_RUNTIME_STATE =
           ["@app/invite-button", "virtual:077bb1f1c33e965ca9c208c00aaa5df78e7b23a5150cfb317f4838a067566af7f0e5e1c57299ed861091873ecab0165a5a48e862f560af75fe3ac2775bc461c7#workspace:app/fragments/app-invite-button"],\
           ["@emotion/react", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:11.11.4"],\
           ["@emotion/styled", "virtual:000bc53a6de20a3b411663b45549a3b6d809d1edfa87bd86e4608125212e9392482d38331d6aa107d7cf2d71f10a22eae12a37a98999f20c198287bf172ab0e5#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@globals/helpers", "workspace:globals/helpers"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -956,6 +963,8 @@ const RAW_RUNTIME_STATE =
           ["@app/invite-button", "virtual:b466cf4a83a4ba2c6a2bef9d441fbda96d985b55453b0ae71e21ff65f4651ffc31c7e0df37750c34266d30c29ef516dc7329134675733be82c52323f374a132c#workspace:app/fragments/app-invite-button"],\
           ["@emotion/react", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:11.11.4"],\
           ["@emotion/styled", "virtual:6df492214aef7de2c9fc34809e9b7a0b931551a0df294bb3e406e88816a1d4c20cd5ca864a740a6dd53ff063c1769ca96cc1ca879b0eea77de6cbf954d021def#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@globals/helpers", "workspace:globals/helpers"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -995,6 +1004,8 @@ const RAW_RUNTIME_STATE =
           ["@app/invite-button", "virtual:b4f3ec5dfc4cbca397b8af27c40bf42555b7c36575bfe993cc0571715d918bbd8a3522ac518b22865055a6417134a6f31a539e972ebbaa5f90af58082fd9c408#workspace:app/fragments/app-invite-button"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@globals/helpers", "workspace:globals/helpers"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/emotion__styled", null],\
@@ -1035,6 +1046,8 @@ const RAW_RUNTIME_STATE =
           ["@app/invite-button", "virtual:b4f3ec5dfc4cbca397b8af27c40bf42555b7c36575bfe993cc0571715d918bbd8a3522ac518b22865055a6417134a6f31a539e972ebbaa5f90af58082fd9c408#workspace:app/fragments/app-invite-button"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@emotion/styled", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#npm:11.11.5"],\
+          ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
+          ["@globals/helpers", "workspace:globals/helpers"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1686,6 +1699,7 @@ const RAW_RUNTIME_STATE =
           ["@app/organizations-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/organizations-page"],\
           ["@app/registration-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/registration-page"],\
           ["@app/root-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-root-layout"],\
+          ["@app/send-invite-mail-api", "workspace:app/api/send-invite-mail"],\
           ["@app/users-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/users-page"],\
           ["@emotion/react", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:11.11.4"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
@@ -1695,6 +1709,7 @@ const RAW_RUNTIME_STATE =
           ["@ui/theme", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:ui/theme"],\
           ["graphql", "npm:16.8.2"],\
           ["next", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:14.1.0"],\
+          ["nodemailer", "npm:6.9.14"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:18.3.1"],\
           ["react-intl", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#npm:6.6.8"],\
@@ -1745,6 +1760,16 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/theme", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#workspace:ui/theme"],\
           ["react-intl", "virtual:f019405e28686c3ee139dac1d628e0ae8ba461a583d9fab0a2e7cd4b96b74a42ee951cf72ce29872f9f8143f1df614e02c975d49ee287983b93164ced402666f#npm:6.6.8"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@app/send-invite-mail-api", [\
+      ["workspace:app/api/send-invite-mail", {\
+        "packageLocation": "./app/api/send-invite-mail/",\
+        "packageDependencies": [\
+          ["@app/send-invite-mail-api", "workspace:app/api/send-invite-mail"],\
+          ["@globals/mail", "workspace:globals/mail"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -7010,6 +7035,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./globals/mail/",\
         "packageDependencies": [\
           ["@globals/mail", "workspace:globals/mail"],\
+          ["@types/mjml", "npm:4.7.4"],\
           ["@types/nodemailer", "npm:6.4.15"],\
           ["nodemailer", "npm:6.9.14"]\
         ],\
@@ -9982,6 +10008,25 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-minimatch-npm-5.1.2-aab9c394d3-94db5060d2.zip/node_modules/@types/minimatch/",\
         "packageDependencies": [\
           ["@types/minimatch", "npm:5.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/mjml", [\
+      ["npm:4.7.4", {\
+        "packageLocation": "./.yarn/cache/@types-mjml-npm-4.7.4-bb43eaf4dd-097b46f6d7.zip/node_modules/@types/mjml/",\
+        "packageDependencies": [\
+          ["@types/mjml", "npm:4.7.4"],\
+          ["@types/mjml-core", "npm:4.15.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/mjml-core", [\
+      ["npm:4.15.0", {\
+        "packageLocation": "./.yarn/cache/@types-mjml-core-npm-4.15.0-462cc5d198-a66fc4b850.zip/node_modules/@types/mjml-core/",\
+        "packageDependencies": [\
+          ["@types/mjml-core", "npm:4.15.0"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -294,6 +294,8 @@ __metadata:
     "@app/invite-button": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
     "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -524,6 +526,7 @@ __metadata:
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/root-layout": "workspace:*"
+    "@app/send-invite-mail-api": "workspace:*"
     "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@stores/toast-notification": "workspace:*"
@@ -533,6 +536,7 @@ __metadata:
     "@ui/theme": "workspace:*"
     graphql: "npm:16.8.2"
     next: "npm:14.1.0"
+    nodemailer: "npm:6.9.14"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -557,6 +561,14 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/send-invite-mail-api@workspace:*, @app/send-invite-mail-api@workspace:app/api/send-invite-mail":
+  version: 0.0.0-use.local
+  resolution: "@app/send-invite-mail-api@workspace:app/api/send-invite-mail"
+  dependencies:
+    "@globals/mail": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -2355,10 +2367,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@globals/mail@workspace:globals/mail":
+"@globals/mail@workspace:*, @globals/mail@workspace:globals/mail":
   version: 0.0.0-use.local
   resolution: "@globals/mail@workspace:globals/mail"
   dependencies:
+    "@types/mjml": "npm:^4"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:6.9.14"
   languageName: unknown
@@ -4432,6 +4445,22 @@ __metadata:
   version: 5.1.2
   resolution: "@types/minimatch@npm:5.1.2"
   checksum: 10/94db5060d20df2b80d77b74dd384df3115f01889b5b6c40fa2dfa27cfc03a68fb0ff7c1f2a0366070263eb2e9d6bfd8c87111d4bc3ae93c3f291297c1bf56c85
+  languageName: node
+  linkType: hard
+
+"@types/mjml-core@npm:*":
+  version: 4.15.0
+  resolution: "@types/mjml-core@npm:4.15.0"
+  checksum: 10/a66fc4b85043484812c0c9499a7a7c1e6ba22e6d05f2feddbd366d8ac4aa85e197b1ee3c88b6c655adc6d0bca9a06186dcca9fcb4025d48933f6781d53a922d1
+  languageName: node
+  linkType: hard
+
+"@types/mjml@npm:^4":
+  version: 4.7.4
+  resolution: "@types/mjml@npm:4.7.4"
+  dependencies:
+    "@types/mjml-core": "npm:*"
+  checksum: 10/097b46f6d79c02c6d17681d5722bd476f7df7418666673d187824c30994847cd2909bdb0351a878b0690ff5e7bf096a9216e12910c82cba9b88a4ce1b45d803b
   languageName: node
   linkType: hard
 
