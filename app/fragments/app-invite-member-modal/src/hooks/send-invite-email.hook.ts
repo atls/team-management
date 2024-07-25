@@ -6,7 +6,7 @@ export const sendInviteEmailHook = async ({ emails, selectedInvites }) => {
   })
   const responseText = await response.text()
   if (response.status !== 200) {
-    const error = new Error(responseText)
+    const error = new Error(responseText) as any
     error.code = response.status
     throw error
   }

@@ -1,5 +1,4 @@
-import { InviteButtonStateType } from '@ui/invite-button'
-
+import { InviteButtonStateType } from '@app/invite-button'
 import { InputProps }            from '@ui/input'
 
 import { InputValuesType }       from '../invite-member-modal.interfaces.js'

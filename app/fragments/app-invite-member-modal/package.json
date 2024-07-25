@@ -10,6 +10,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/invite-button": "workspace:*",
+    "@globals/data": "workspace:*",
+    "@globals/helpers": "workspace:*",
     "@stores/toast-notification": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/icons": "workspace:*",
