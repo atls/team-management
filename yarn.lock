@@ -360,7 +360,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/member-card@workspace:app/fragments/app-member-card":
+"@app/member-card@workspace:*, @app/member-card@workspace:app/fragments/app-member-card":
   version: 0.0.0-use.local
   resolution: "@app/member-card@workspace:app/fragments/app-member-card"
   dependencies:
@@ -372,6 +372,7 @@ __metadata:
     "@ui/button": "workspace:*"
     "@ui/card": "workspace:*"
     "@ui/checkbox": "workspace:*"
+    "@ui/condition": "workspace:*"
     "@ui/divider": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/image": "workspace:*"
@@ -396,7 +397,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/member-cards-grid@workspace:app/fragments/app-member-cards-grid"
   dependencies:
+    "@app/member-card": "workspace:*"
     "@emotion/react": "npm:11.11.4"
+    "@globals/data": "workspace:*"
+    "@globals/helpers": "workspace:*"
+    "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
@@ -453,9 +458,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/organization-card-fragment@workspace:*, @app/organization-card-fragment@workspace:app/fragments/app-organization-card":
+"@app/organization-card@workspace:*, @app/organization-card@workspace:app/fragments/app-organization-card":
   version: 0.0.0-use.local
-  resolution: "@app/organization-card-fragment@workspace:app/fragments/app-organization-card"
+  resolution: "@app/organization-card@workspace:app/fragments/app-organization-card"
   dependencies:
     "@app/add-member-to-organization-modal-fragment": "workspace:*"
     "@app/users-modal": "workspace:*"
@@ -489,7 +494,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organization-cards-grid@workspace:app/fragments/app-organization-cards-grid"
   dependencies:
-    "@app/organization-card-fragment": "workspace:*"
+    "@app/organization-card": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
@@ -963,20 +968,6 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
   checksum: 10/a43c325f09638270d086375520b39d10297db5e00146edd56108a2b5e6a0411bbc9437482f89498fe6a91520ea8df6391033abc566df32113e7456fa35147016
-  languageName: node
-  linkType: hard
-
-"@atls-ui-parts/progress@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/progress@npm:0.1.1"
-  peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  checksum: 10/9475390a009d9d5461a0b1506fc9000b9346224359bee572808d533da7984836bdb4efcccf3e09c794e0bcc1ccc6ef791789835fbee337cd5772dd7f16790ad4
   languageName: node
   linkType: hard
 
@@ -5099,10 +5090,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/progress@workspace:ui/progress"
   dependencies:
-    "@atls-ui-parts/progress": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@types/styled-system": "npm:^5.1.22"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
