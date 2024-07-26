@@ -19,17 +19,15 @@ import { Label }             from './label/index.js'
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
+  checked,
   labelPosition = 'end',
   ...props
 }) => {
   const theme = useTheme() as ThemeType
-  const [checked, setChecked] = useState<boolean>(false)
-  const handleCheckbox = () => {
-    setChecked((prev) => !prev)
-  }
+
   return (
-    <Container labelPosition={labelPosition} onClick={handleCheckbox} {...props}>
-      <HiddenInput type='checkbox' checked={checked} onChange={handleCheckbox} />
+    <Container labelPosition={labelPosition} {...props}>
+      <HiddenInput type='checkbox' checked={checked} />
       <Box>
         <Check checked={checked}>
           <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
