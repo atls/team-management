@@ -9,7 +9,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/organization-card-fragment": "workspace:*",
+    "@app/organization-card": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@stores/toast-notification": "workspace:*",
