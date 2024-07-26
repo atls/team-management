@@ -1,1 +1,1 @@
-export * from '@atls-ui-parts/progress'
+export * from './progress.component.js'
