@@ -1,182 +1,95 @@
 'use client'
 
-import { useTheme }           from '@emotion/react'
+import { useTheme }                  from '@emotion/react'
 
-import React                  from 'react'
-import { FC }                 from 'react'
-import { useState }           from 'react'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useState }                  from 'react'
 
-import { OrganizationsModal } from '@app/organizations-modal'
-import { Button }             from '@ui/button'
-import { Card }               from '@ui/card'
-import { Checkbox }           from '@ui/checkbox'
-import { Divider }            from '@ui/divider'
-import { OrgWhiteIcon }       from '@ui/icons'
-import { TimerIcon }          from '@ui/icons'
-import { NextImage }          from '@ui/image'
-import { Box }                from '@ui/layout'
-import { GridAutoRows }       from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Line }               from '@ui/progress'
-import { Scroll }             from '@ui/scroll'
-import { Tag }                from '@ui/tag'
-import { Text }               from '@ui/text'
-import { ThemeType }          from '@ui/theme'
+import { OrganizationsModal }        from '@app/organizations-modal'
+import { Button }                    from '@ui/button'
+import { Card }                      from '@ui/card'
+import { Checkbox }                  from '@ui/checkbox'
+import { Divider }                   from '@ui/divider'
+import { OrgWhiteIcon }              from '@ui/icons'
+import { TimerIcon }                 from '@ui/icons'
+import { ImageBlock }                from '@ui/image'
+import { Box }                       from '@ui/layout'
+import { GridAutoRows }              from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Progress }                  from '@ui/progress'
+import { Scroll }                    from '@ui/scroll'
+import { Tag }                       from '@ui/tag'
+import { Text }                      from '@ui/text'
+import { ThemeType }                 from '@ui/theme'
 
-import { ICONS }              from './user-card.constants.js'
-import { CheckboxInt }        from './user-card.interface.js'
-import { UserCardProps }      from './user-card.interface.js'
+import { ICONS }                     from './member-card.constants.js'
+import { CheckboxInt }               from './member-card.interface.js'
+import { MemberCardProps }           from './member-card.interface.js'
+import { OnbordingConditionElement } from './onbording-condition-element/index.js'
+import { getOnbordingConditionList } from './member-card.constants.js'
 
-const MemberCard: FC<MemberCardProps> = ({
-  name,
-  position,
-  time,
-  organizations,
-  organizationsData,
-  avatar,
-  services,
-}) => {
+export const MemberCard: FC<MemberCardProps> = ({ memberData }) => {
+  const { avatarUrl, bio, id, name, url } = memberData
+
+  console.log(memberData)
+
   const theme = useTheme() as ThemeType
 
-  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+  const onbordingConditionList = getOnbordingConditionList({ theme })
 
-  const handleOrganizations = () => {
-    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
-  }
+  const proressPercent = 80
 
+  // TODO
+  // разнеси по компонентам
+  // стили тоже разнеси по файлам
   return (
-    <Card
-      width={theme.spaces.largeSemiIncreased}
-      height={theme.spaces.largeIncreased}
-      boxShadow={theme.shadows.nero}
+    <Box
+      overflow='hidden'
+      flexDirection='column'
+      backgroundColor={theme.colors.white}
       borderRadius={theme.radii.f24}
-      alignItems='flex-start'
+      boxShadow={theme.shadows.diesel}
     >
-      <Column>
+      <Box height={theme.spaces.largeDefault} position='relative' alignItems='flex-end'>
+        <ImageBlock src={avatarUrl} alt='user-avatar' />
         <Box
-          position='relative'
-          width={theme.spaces.largeSemiIncreased}
-          height={theme.spaces.largeDefault}
+          width='100%'
+          position='absolute'
+          padding={theme.spaces.large}
+          flexDirection='column'
+          gap={theme.spaces.micro}
         >
-          <NextImage
-            src={avatar}
-            borderRadius={theme.radii.tl24tr24}
-            width={theme.spaces.largeSemiIncreased}
-            height={theme.spaces.largeDefault}
-            alt='avatar'
-          />
-          <Box
-            flexDirection='column'
-            position='absolute'
-            marginTop={theme.spaces.largeSemiDecreased}
-            alignItems='flex-start'
-            width={theme.spaces.fullWidth}
-            height={theme.spaces.fullWidth}
-            margin='auto'
-            padding={theme.spaces.t241rl12b12}
-          >
-            <Column
-              alignItems='flex-start'
-              padding={theme.spaces.miniIncreased}
-              width={theme.spaces.fullWidth}
-            >
-              <Text color={theme.colors.white} fontSize='medium.semiDefault'>
-                {name}
-              </Text>
-              <Text color={theme.colors.white} fontSize='normal.semiDefault'>
-                {position}
-              </Text>
-            </Column>
-            <Row
-              justifyContent='space-between'
-              width={theme.spaces.fullWidth}
-              padding={theme.spaces.t0rbl12}
-            >
-              <Button
-                size='microIncreasedRoundedPadding'
-                shape='rectangle'
-                variant='blackSolidBackgroundButton'
-                onClick={handleOrganizations}
-              >
-                <Text color={theme.colors.white} fontSize='normal.semiDefault'>
-                  {organizations}
-                </Text>
-                <OrgWhiteIcon width={theme.spaces.micro} />
-              </Button>
-              <Tag
-                padding={theme.spaces.miniReduced}
-                height={theme.spaces.moderate}
-                width={theme.spaces.largeReduced}
-                backgroundColor={theme.backgrounds.white}
-                borderRadius={theme.radii.f19}
-              >
-                <TimerIcon width={theme.spaces.regular} height={theme.spaces.medium} />
-                <Text fontSize='small.semiLarge' color={theme.colors.GRAY_1600}>
-                  {time}
-                </Text>
-              </Tag>
-            </Row>
-          </Box>
+          <Column>
+            <Text color={theme.colors.white} fontSize='medium.semiDefault'>
+              {name}
+            </Text>
+            <Text color={theme.colors.GRAY_300} fontSize='normal.semiDefault'>
+              {bio}
+            </Text>
+          </Column>
+          <Row justifyContent='space-between'>
+            <Box>organization</Box>
+            <Box>timew</Box>
+          </Row>
         </Box>
-        <Row>
-          <Line
-            percent={20}
-            strokeColor={[{ direction: 'to left', from: '#005ACF', to: '#D2DAFF' }]}
-            strokeWeight={theme.spaces.medium}
-            trailColor={theme.colors.BLUE_0}
+      </Box>
+      <Progress percentage={proressPercent} />
+      <Box
+        maxHeight={theme.spaces.largeSemiNormal}
+        padding={theme.spaces.t8h16b16}
+        flexWrap='wrap'
+        justifyContent='space-between'
+      >
+        {onbordingConditionList.map((conditionData, conditionIndex) => (
+          <OnbordingConditionElement
+            conditionData={conditionData}
+            checked={false}
+            divider={!(conditionIndex === onbordingConditionList.length - 1)}
           />
-          <Text
-            margin={theme.spaces.t2l0b23r0}
-            // style={{ position: 'absolute' }}
-            fontSize='small.default'
-            color={theme.colors.white}
-          >
-            20%
-          </Text>
-        </Row>
-        <Box padding={theme.spaces.t8lr6b12}>
-          <Scroll height={theme.spaces.gigantIncreased}>
-            <GridAutoRows
-              columnGap={theme.spaces.miniDefault}
-              columns={theme.spaces.s2}
-              maxColumnWidth={theme.spaces.semiSuperExtra}
-              gap={theme.spaces.zero}
-            >
-              {services.map((checkbox: CheckboxInt, index) => (
-                <Column
-                  key={checkbox.id}
-                  maxWidth={theme.spaces.largeSemi}
-                  padding={theme.spaces.t1r5b2l5}
-                  height={theme.spaces.moderate}
-                >
-                  <Checkbox labelPosition='start' checked={checkbox.checked}>
-                    <Row marginRight='auto'>
-                      {ICONS[index]}
-                      <Text fontSize='small.default' margin={theme.spaces.tlb0r11}>
-                        {checkbox.name}
-                      </Text>
-                    </Row>
-                  </Checkbox>
-                  <Box padding={theme.spaces.tb3rl0} marginTop={theme.spaces.nanoIncreased}>
-                    <Divider
-                      weight={theme.spaces.nano}
-                      backgroundColor={theme.backgrounds.lightGray}
-                    />
-                  </Box>
-                </Column>
-              ))}
-            </GridAutoRows>
-          </Scroll>
-        </Box>
-      </Column>
-      <OrganizationsModal
-        open={isOrganizationsModalOpen}
-        onBackdropClick={handleOrganizations}
-        organizationsData={organizationsData}
-      />
-    </Card>
+        ))}
+      </Box>
+    </Box>
   )
 }
-
-export { UserCard }
