@@ -1,5 +1,5 @@
 {
-  "name": "@app/user-card",
+  "name": "@app/member-card",
   "version": "0.0.1",
   "private": true,
   "type": "module",

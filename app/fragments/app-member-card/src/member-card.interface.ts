@@ -1,4 +1,4 @@
-export interface UserCardProps {
+export interface MemberCardProps {
   name: string
   position: string
   avatar: string
@@ -12,6 +12,7 @@ interface Organization {
   name: string
   organizationLogo: string
 }
+
 export interface CheckboxInt {
   id: number
   name: string

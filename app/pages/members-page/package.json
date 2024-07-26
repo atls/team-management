@@ -1,5 +1,5 @@
 {
-  "name": "@app/users-page",
+  "name": "@app/members-page",
   "version": "0.0.1",
   "private": true,
   "type": "module",
@@ -8,8 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/user-card": "workspace:*",
-    "@app/users-grid": "workspace:*"
+    "@app/member-cards-grid": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

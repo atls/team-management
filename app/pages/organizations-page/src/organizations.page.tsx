@@ -1,8 +1,16 @@
-import React                    from 'react'
-import { FC }                   from 'react'
+import { OrganizationCardsGrid }      from '@app/organization-cards-grid'
 
-import { OrganizationCardGrid } from '@app/organization-card-grid-fragment'
+import React                          from 'react'
+import { FC }                         from 'react'
 
-const OrganizationsPage: FC = () => <OrganizationCardGrid />
+import { ORGANIZATIONS_LIMIT }        from './organizations.constants.js'
+import { ORGANIZATION_MEMBERS_LIMIT } from './organizations.constants.js'
+
+const OrganizationsPage: FC = () => (
+  <OrganizationCardsGrid
+    organizationsLimit={ORGANIZATIONS_LIMIT}
+    organizationMembersLimit={ORGANIZATION_MEMBERS_LIMIT}
+  />
+)
 
 export default OrganizationsPage

@@ -16,7 +16,10 @@ import { useToast }             from '@stores/toast-notification'
 
 import { getOrganizationsData } from './hooks/index.js'
 
-export const OrganizationCardGrid: FC = memo(() => {
+export const OrganizationCardsGrid: FC = memo(({
+  organizationsLimit,
+  organizationMembersLimit,
+}) => {
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
@@ -25,6 +28,8 @@ export const OrganizationCardGrid: FC = memo(() => {
   useEffect(() => {
     if (!organizationsData.length) {
       getOrganizationsData({
+        organizationsLimit,
+        organizationMembersLimit,
         setOrganizationsData,
         toast,
       })

@@ -10,7 +10,7 @@ import { memo }              from 'react'
 import { GridAutoRows }      from '@ui/layout'
 import { ThemeType }         from '@ui/theme'
 
-const UsersGrid: FC<PropsWithChildren> = memo(({ children }) => {
+const MemberCardsGrid: FC<PropsWithChildren> = memo(({ children }) => {
   const theme = useTheme() as ThemeType
   return (
     <GridAutoRows
@@ -22,4 +22,4 @@ const UsersGrid: FC<PropsWithChildren> = memo(({ children }) => {
     </GridAutoRows>
   )
 })
-export { UsersGrid }
+export { MemberCardsGrid }

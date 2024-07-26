@@ -19,8 +19,8 @@ import { SidebarStateContext }      from './sidebar.context.js'
 import { SidebarProps }             from './sidebar.interfaces.js'
 import { Viewer }                   from './viewer/viewer.component.js'
 import { Wrapper }                  from './wrapper/index.js'
+import { itemList }                 from './sidebar.constants.js'
 import { changeSidebarVisibleHook } from './sidebar.hooks.js'
-import { itemList }                 from './wrapper/wrapper.constants.js'
 
 export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
   const theme = useTheme() as ThemeType

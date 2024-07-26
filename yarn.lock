@@ -360,6 +360,77 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@app/member-card@workspace:app/fragments/app-member-card":
+  version: 0.0.0-use.local
+  resolution: "@app/member-card@workspace:app/fragments/app-member-card"
+  dependencies:
+    "@app/organizations-modal": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    "@ui/button": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/checkbox": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/progress": "workspace:*"
+    "@ui/scroll": "workspace:*"
+    "@ui/tag": "workspace:*"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
+    glob: "npm:8.1.0"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@types/styled-system": "*"
+    glob: "*"
+    react: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/member-cards-grid@workspace:*, @app/member-cards-grid@workspace:app/fragments/app-member-cards-grid":
+  version: 0.0.0-use.local
+  resolution: "@app/member-cards-grid@workspace:app/fragments/app-member-cards-grid"
+  dependencies:
+    "@emotion/react": "npm:11.11.4"
+    "@types/react": "npm:^18.3.2"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+  peerDependencies:
+    "@emotion/react": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@app/members-page@workspace:*, @app/members-page@workspace:app/pages/members-page":
+  version: 0.0.0-use.local
+  resolution: "@app/members-page@workspace:app/pages/members-page"
+  dependencies:
+    "@app/member-cards-grid": "workspace:*"
+    "@emotion/react": "npm:11.11.4"
+    "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
+    glob: "npm:8.1.0"
+    react-intl: "npm:6.6.8"
+    styled-system: "npm:5.1.5"
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    "@types/styled-system": "*"
+    glob: "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@app/notifications-modal@workspace:*, @app/notifications-modal@workspace:app/fragments/app-notifications-modal":
   version: 0.0.0-use.local
   resolution: "@app/notifications-modal@workspace:app/fragments/app-notifications-modal"
@@ -414,9 +485,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/organization-card-grid-fragment@workspace:*, @app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid":
+"@app/organization-cards-grid@workspace:*, @app/organization-cards-grid@workspace:app/fragments/app-organization-cards-grid":
   version: 0.0.0-use.local
-  resolution: "@app/organization-card-grid-fragment@workspace:app/fragments/app-organization-card-grid"
+  resolution: "@app/organization-cards-grid@workspace:app/fragments/app-organization-cards-grid"
   dependencies:
     "@app/organization-card-fragment": "workspace:*"
     "@emotion/react": "npm:11.11.4"
@@ -465,7 +536,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
   dependencies:
-    "@app/organization-card-grid-fragment": "workspace:*"
+    "@app/organization-cards-grid": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -523,11 +594,11 @@ __metadata:
     "@app/index-page": "workspace:*"
     "@app/loading": "workspace:*"
     "@app/logout-api": "workspace:*"
+    "@app/members-page": "workspace:*"
     "@app/organizations-page": "workspace:*"
     "@app/registration-page": "workspace:*"
     "@app/root-layout": "workspace:*"
     "@app/send-invite-mail-api": "workspace:*"
-    "@app/users-page": "workspace:*"
     "@emotion/react": "npm:11.11.4"
     "@stores/toast-notification": "workspace:*"
     "@types/node": "npm:20.12.12"
@@ -614,53 +685,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@app/user-card@workspace:*, @app/user-card@workspace:app/fragments/app-user-card":
-  version: 0.0.0-use.local
-  resolution: "@app/user-card@workspace:app/fragments/app-user-card"
-  dependencies:
-    "@app/organizations-modal": "workspace:*"
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:^18.3.2"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
-    "@ui/card": "workspace:*"
-    "@ui/checkbox": "workspace:*"
-    "@ui/divider": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/image": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/progress": "workspace:*"
-    "@ui/scroll": "workspace:*"
-    "@ui/tag": "workspace:*"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/theme": "workspace:*"
-    glob: "npm:8.1.0"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@types/styled-system": "*"
-    glob: "*"
-    react: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@app/users-grid@workspace:*, @app/users-grid@workspace:app/fragments/app-users-grid":
-  version: 0.0.0-use.local
-  resolution: "@app/users-grid@workspace:app/fragments/app-users-grid"
-  dependencies:
-    "@emotion/react": "npm:11.11.4"
-    "@types/react": "npm:^18.3.2"
-    "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:*"
-    "@ui/theme": "workspace:*"
-  peerDependencies:
-    "@emotion/react": "*"
-    react: "*"
-  languageName: unknown
-  linkType: soft
-
 "@app/users-modal@workspace:*, @app/users-modal@workspace:app/fragments/app-users-modal":
   version: 0.0.0-use.local
   resolution: "@app/users-modal@workspace:app/fragments/app-users-modal"
@@ -694,31 +718,6 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-intl: "*"
-  languageName: unknown
-  linkType: soft
-
-"@app/users-page@workspace:*, @app/users-page@workspace:app/pages/users-page":
-  version: 0.0.0-use.local
-  resolution: "@app/users-page@workspace:app/pages/users-page"
-  dependencies:
-    "@app/user-card": "workspace:*"
-    "@app/users-grid": "workspace:*"
-    "@emotion/react": "npm:11.11.4"
-    "@emotion/styled": "npm:11.11.5"
-    "@types/react": "npm:^18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    glob: "npm:8.1.0"
-    react-intl: "npm:6.6.8"
-    styled-system: "npm:5.1.5"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    "@types/styled-system": "*"
-    glob: "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 

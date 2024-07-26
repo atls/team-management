@@ -28,7 +28,7 @@ import { ICONS }              from './user-card.constants.js'
 import { CheckboxInt }        from './user-card.interface.js'
 import { UserCardProps }      from './user-card.interface.js'
 
-const UserCard: FC<UserCardProps> = ({
+const MemberCard: FC<MemberCardProps> = ({
   name,
   position,
   time,
@@ -38,7 +38,9 @@ const UserCard: FC<UserCardProps> = ({
   services,
 }) => {
   const theme = useTheme() as ThemeType
+
   const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
+
   const handleOrganizations = () => {
     setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
   }
