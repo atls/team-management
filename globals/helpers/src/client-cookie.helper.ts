@@ -18,5 +18,6 @@ export const getAllCookieClient = (document: DocumentType): CookieObjType => {
 export const getTokenCookie = (document: DocumentType): string => {
   const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME as string
   const { [TOKEN_COOKIE_NAME]: token } = getAllCookieClient(document)
+  if (!token) throw new Error(`Error with token, it does not exist: ${token}`)
   return token
 }
