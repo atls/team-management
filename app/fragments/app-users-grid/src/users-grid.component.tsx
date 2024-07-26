@@ -14,7 +14,7 @@ const UsersGrid: FC<PropsWithChildren> = memo(({ children }) => {
   const theme = useTheme() as ThemeType
   return (
     <GridAutoRows
-      columns={theme.spaces.normalCount}
+      columns={[theme.spaces.s1, theme.spaces.s2, theme.spaces.semiTiny]}
       maxColumnWidth={theme.spaces.largeSemiIncreased}
       gap={theme.spaces.semiLarge}
     >

@@ -9,7 +9,7 @@ export interface GridAutoRowsProps extends BoxProps {
   children: JSX.Element | ReactNode
   gap?: CSSProperties['gap']
   maxColumnWidth: number
-  columns: number
+  columns: number | Array<number>
   columnGap?: number
   rowHeight?: CSSProperties['gridTemplateColumns']
 }

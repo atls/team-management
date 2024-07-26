@@ -32,7 +32,11 @@ export const OrganizationCardGrid: FC = memo(() => {
   }, [toast, organizationsData])
 
   return (
-    <GridAutoRows rowHeight='auto' columns={theme.spaces.s2} maxColumnWidth={theme.spaces.hardcore}>
+    <GridAutoRows
+      rowHeight='auto'
+      columns={[theme.spaces.s1, theme.spaces.s2, theme.spaces.s2]}
+      maxColumnWidth={theme.spaces.hardcore}
+    >
       {organizationsData.map((organizationData: OrganizationDataType) => (
         <OrganizationCard organizationData={organizationData} />
       ))}
