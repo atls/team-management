@@ -22,7 +22,9 @@ export const OnbordingConditionElement: FC<any> = ({ conditionData, divider, che
     <Column width='calc(50% - 10px)'>
       <Row alignItems='center' gap={theme.spaces.tiny}>
         {conditionIcon}
-        <Text width='100%'>{conditionDisplayName}</Text>
+        <Text width='100%' fontSize='small.default'>
+          {conditionDisplayName}
+        </Text>
         <Checkbox checked={checked} />
       </Row>
       <Condition match={divider}>

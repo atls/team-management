@@ -1,29 +1,33 @@
 'use client'
 
-import styled                        from '@emotion/styled'
-import { useTheme }                  from '@emotion/react'
+import styled                         from '@emotion/styled'
+import { useTheme }                   from '@emotion/react'
 
-import React                         from 'react'
-import { FC }                        from 'react'
-import { useState }                  from 'react'
+import React                          from 'react'
+import { FC }                         from 'react'
+import { useState }                   from 'react'
 
-import { OrganizationsModal }        from '@app/organizations-modal'
-import { TimerIcon }                 from '@ui/icons'
-import { OrganizationsIcon }         from '@ui/icons'
-import { Box }                       from '@ui/layout'
-import { Progress }                  from '@ui/progress'
-import { ThemeType }                 from '@ui/theme'
+import { OrganizationsModal }         from '@app/organizations-modal'
+import { TimerIcon }                  from '@ui/icons'
+import { OrganizationsIcon }          from '@ui/icons'
+import { Box }                        from '@ui/layout'
+import { Progress }                   from '@ui/progress'
+import { ThemeType }                  from '@ui/theme'
 
-import { ImageGrop }                 from './image-group/index.js'
-import { MemberCardProps }           from './member-card.interface.js'
-import { OnbordingConditionElement } from './onbording-condition-element/index.js'
-import { getOnbordingConditionList } from './member-card.constants.js'
-import { baseStyles }                from './member-card.styles.js'
-import { shapeStyles }               from './member-card.styles.js'
-import { appearanceStyles }          from './member-card.styles.js'
+import { ImageGrop }                  from './image-group/index.js'
+import { MemberCardProps }            from './member-card.interface.js'
+import { OnbordingConditionElement }  from './onbording-condition-element/index.js'
+import { getMemberOrganizationsData } from './helpers/index.js'
+import { getOnbordingConditionList }  from './member-card.constants.js'
+import { baseStyles }                 from './member-card.styles.js'
+import { shapeStyles }                from './member-card.styles.js'
+import { appearanceStyles }           from './member-card.styles.js'
 
-export const MemberCard: FC<MemberCardProps> = ({ memberData }) => {
-  const { avatarUrl, bio, id, name, url } = memberData
+export const MemberCard: FC<MemberCardProps> = ({ memberData, organizationsData }) => {
+  const memberOrganizationsInitData = getMemberOrganizationsData({ memberData, organizationsData })
+
+  // TODO interface
+  const memberOrganizationsDataState = useState<any>(memberOrganizationsInitData)
 
   const theme = useTheme() as ThemeType
 
@@ -38,7 +42,10 @@ export const MemberCard: FC<MemberCardProps> = ({ memberData }) => {
   // стили тоже разнеси по файлам
   return (
     <MemberCardContainer>
-      <ImageGrop memberData={memberData} />
+      <ImageGrop
+        memberData={memberData}
+        memberOrganizationsDataState={memberOrganizationsDataState}
+      />
       <Progress percentage={proressPercent} />
       <Box
         maxHeight={theme.spaces.largeSemiNormal}

@@ -16,8 +16,11 @@ import { imageGroupContainerStyles } from './image-group.styles.js'
 import { frontLayerStyles }          from './image-group.styles.js'
 
 // TODO interface
-export const ImageGrop: FC<any> = ({ memberData }) => {
-  const { avatarUrl, name, bio } = memberData
+export const ImageGrop: FC<any> = ({ memberData, memberOrganizationsDataState }) => {
+  const { avatarUrl, name, bio, login: memberLogin } = memberData
+
+  // TODO change it to value
+  const milliseconds = 17000
 
   const ImageGroupContainer = styled(Box)(imageGroupContainerStyles)
   const FrontLayerContainer = styled(Box)(frontLayerStyles)
@@ -28,8 +31,11 @@ export const ImageGrop: FC<any> = ({ memberData }) => {
       <FrontLayerContainer>
         <TextGroup name={name} bio={bio} />
         <Row justifyContent='space-between'>
-          <OrganizationsButton />
-          <Timer />
+          <OrganizationsButton
+            memberLogin={memberLogin}
+            memberOrganizationsDataState={memberOrganizationsDataState}
+          />
+          <Timer initialMilliseconds={milliseconds} />
         </Row>
       </FrontLayerContainer>
     </ImageGroupContainer>
