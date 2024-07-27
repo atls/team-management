@@ -48,6 +48,7 @@ const colors = {
   },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
+  GRAY_100,
   GRAY_300,
   GRAY_1000,
   GRAY_1600,

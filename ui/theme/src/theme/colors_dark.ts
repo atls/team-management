@@ -1,6 +1,7 @@
 import { colorsConstants } from './colors.constants.js'
 
 const { WHITE } = colorsConstants
+const { GRAY_100 } = colorsConstants
 const { GRAY_300 } = colorsConstants
 const { GRAY_400 } = colorsConstants
 const { GRAY_800 } = colorsConstants
@@ -47,6 +48,7 @@ const colors = {
   },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
+  GRAY_100,
   GRAY_300,
   GRAY_1000,
   GRAY_1600,
