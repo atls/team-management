@@ -12,6 +12,8 @@ const GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS = /* GraphQL */ `
           membersWithRole(first: $organizationMembersLimit) {
             nodes {
               id
+              login
+              email
               name
               bio
               url
