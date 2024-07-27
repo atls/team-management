@@ -5,10 +5,12 @@ import { getMembersData }          from './hooks/index.js'
 
 export const MemberCardsGridHook: MemberCardsGridHookType = ({
   toast,
-  membersData,
   organizationsLimit,
   organizationMembersLimit,
+  membersData,
   setMembersData,
+  organizationsData,
+  setOrganizationsData,
 }) => {
   useEffect(() => {
     if (!membersData.length) {
@@ -16,6 +18,7 @@ export const MemberCardsGridHook: MemberCardsGridHookType = ({
         organizationsLimit,
         organizationMembersLimit,
         setMembersData,
+        setOrganizationsData,
         toast,
       })
     }

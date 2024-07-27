@@ -25,13 +25,16 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
 
   // TODO interface
   const [membersData, setMembersData] = useState<Array<any>>([])
+  const [organizationsData, setOrganizationsData] = useState<Array<any>>([])
 
   MemberCardsGridHook({
     toast,
-    membersData,
     organizationsLimit,
     organizationMembersLimit,
+    membersData,
     setMembersData,
+    organizationsData,
+    setOrganizationsData,
   })
 
   // TODO interfaces

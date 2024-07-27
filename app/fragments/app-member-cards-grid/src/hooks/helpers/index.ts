@@ -1,1 +1,2 @@
-export * from './get-unique-members.helper.js'
+export * from './get-unique-items.helper.js'
+export * from './link-member-to-organizations.helper.js'

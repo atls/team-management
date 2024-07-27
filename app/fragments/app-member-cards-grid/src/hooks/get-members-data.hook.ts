@@ -4,11 +4,14 @@ import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS } from '@globals/data'
 import { octokitGraphqlClient }                     from '@globals/data'
 import { getTokenCookie }                           from '@globals/helpers'
 
-import { getUniqueMembers }                         from './helpers/index.js'
+import { getUniqueItems }                           from './helpers/index.js'
+import { fillMemberToOrganizations }                from './helpers/index.js'
+import { linkMemberToOrganizations }                from './helpers/index.js'
 
 export const getMembersData: GetMembersDataType = async ({
   toast,
   setMembersData,
+  setOrganizationsData,
   organizationsLimit,
   organizationMembersLimit,
 }) => {
@@ -29,18 +32,35 @@ export const getMembersData: GetMembersDataType = async ({
     } = response
 
     const allMembersData = []
+    const allOrganizationsData = []
+    const memberOrganizations = []
+
     for (const organizationData of organizationsData) {
-      const {
+      let {
         membersWithRole: { nodes: organizationMembersData },
       } = organizationData
+
+      // TODO вынеси функцию
+      for (const memberData of organizationMembersData) {
+        fillMemberToOrganizations({
+          memberData,
+          organizationData,
+          memberOrganizations,
+        })
+      }
+
       allMembersData.push(...organizationMembersData)
+
+      delete organizationData.membersWithRole
+      allOrganizationsData.push(organizationData)
     }
 
-    const uniqueMembersData = getUniqueMembers(allMembersData)
+    const uniqueMembersData = getUniqueItems(allMembersData)
+    const linkedMembersData = linkMemberToOrganizations({ uniqueMembersData, memberOrganizations })
+    const uniqueOrganizationsData = getUniqueItems(allOrganizationsData)
 
-    // TODO set organizations data
-
-    setMembersData(uniqueMembersData)
+    setMembersData(linkedMembersData)
+    setOrganizationsData(uniqueOrganizationsData)
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
