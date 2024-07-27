@@ -115,6 +115,7 @@ export const spaces = {
   v8h12: '8px 12px',
   t8h16b16: '8px 16px 16px',
   v0h24: '0px 24px',
+  t0h24b128: '0px 24px 128px',
   mediumDefault: 50,
   mediumIncreased: 80,
 
