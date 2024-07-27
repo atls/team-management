@@ -27,7 +27,7 @@ const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
 
   return (
     <Container labelPosition={labelPosition} {...props}>
-      <HiddenInput type='checkbox' checked={checked} />
+      <HiddenInput type='checkbox' defaultChecked={checked} />
       <Box>
         <Check checked={checked}>
           <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>

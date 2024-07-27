@@ -49,7 +49,7 @@ export const MemberCard: FC<MemberCardProps> = ({ memberData }) => {
         {onbordingConditionList.map((conditionData, conditionIndex) => (
           <OnbordingConditionElement
             conditionData={conditionData}
-            checked={false}
+            checked={true}
             divider={!(conditionIndex === onbordingConditionList.length - 1)}
           />
         ))}
