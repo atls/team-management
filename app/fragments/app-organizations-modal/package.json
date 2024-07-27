@@ -8,7 +8,13 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@globals/data": "workspace:*",
+    "@globals/helpers": "workspace:*",
+    "@stores/toast-notification": "workspace:*",
     "@ui/button": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/modal": "workspace:*",
     "@ui/text": "workspace:0.0.1",
