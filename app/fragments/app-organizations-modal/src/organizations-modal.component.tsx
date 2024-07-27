@@ -5,7 +5,6 @@ import { FC }                      from 'react'
 import { FormattedMessage }        from 'react-intl'
 import { memo }                    from 'react'
 
-import { AnimatedCard }            from '@app/animated-card'
 import { Button }                  from '@ui/button'
 import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
