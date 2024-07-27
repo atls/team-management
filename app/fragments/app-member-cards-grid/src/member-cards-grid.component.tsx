@@ -45,7 +45,7 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
       gap={theme.spaces.semiLarge}
     >
       {membersData.map((memberData) => (
-        <MemberCard memberData={memberData} />
+        <MemberCard memberData={memberData} organizationsData={organizationsData} />
       ))}
     </GridAutoRows>
   )
