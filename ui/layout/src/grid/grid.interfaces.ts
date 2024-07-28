@@ -19,5 +19,5 @@ export interface GridAutoRowsContainerProps extends BoxProps {
   gap?: CSSProperties['gap']
   columnGap?: CSSProperties['columnGap']
   rowHeight?: CSSProperties['gridTemplateColumns']
-  gridTemplateColumns?: CSSProperties['gridTemplateColumns']
+  gridTemplateColumns?: string | Array<string>
 }

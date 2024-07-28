@@ -4,8 +4,6 @@ import { Box }                        from '@atls-ui-parts/layout'
 import React                          from 'react'
 import { FC }                         from 'react'
 import { PropsWithChildren }          from 'react'
-import { useEffect }                  from 'react'
-import { useState }                   from 'react'
 
 import { GridAutoRowsProps }          from './grid.interfaces.js'
 import { GridAutoRowsContainerProps } from './grid.interfaces.js'
@@ -20,14 +18,13 @@ const GridAutoRowsContainer = styled(Box)<PropsWithChildren<GridAutoRowsContaine
 export const GridAutoRows: FC<PropsWithChildren<GridAutoRowsProps>> = (props) => {
   const { children, columns, maxColumnWidth, ...otherProps } = props
 
-  const getCssPropString = (columnsQuantity: number) => {
-    return `repeat(${columnsQuantity}, minmax(auto, ${maxColumnWidth}px))`
-  }
+  const getCssPropString = (columnsQuantity: number | Array<number>): string =>
+    `repeat(${columnsQuantity}, minmax(auto, ${maxColumnWidth}px))`
 
   let gridTemplateColumns: string | Array<string> = ''
 
   if (columns && maxColumnWidth) {
-    if (columns.length) {
+    if (Array.isArray(columns)) {
       gridTemplateColumns = []
       for (const column of columns) {
         gridTemplateColumns.push(getCssPropString(column))
