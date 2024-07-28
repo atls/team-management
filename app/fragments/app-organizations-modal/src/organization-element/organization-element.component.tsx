@@ -1,27 +1,28 @@
-import { useTheme }                from '@emotion/react'
+import type { OrganizationElementProps } from './organization-element.interfaces.js'
 
-import React                       from 'react'
-import { FC }                      from 'react'
-import { useState }                from 'react'
+import { useTheme }                      from '@emotion/react'
 
-import { ToastType }               from '@stores/toast-notification'
-import { Button }                  from '@ui/button'
-import { Condition }               from '@ui/condition'
-import { RemoveIcon }              from '@ui/icons'
-import { ImageBlock }              from '@ui/image'
-import { Box }                     from '@ui/layout'
-import { Row }                     from '@ui/layout'
-import { Column }                  from '@ui/layout'
-import { Text }                    from '@ui/text'
-import { ThemeType }               from '@ui/theme'
-import { useToast }                from '@stores/toast-notification'
+import React                             from 'react'
+import { FC }                            from 'react'
+import { useState }                      from 'react'
 
-import { OrganizationElementHook } from './organization-element.hook.js'
-import { RemoveRequestGroup }      from './remove-request-group/index.js'
-import { getConstats }             from './organization-element.constants.js'
+import { ToastType }                     from '@stores/toast-notification'
+import { Button }                        from '@ui/button'
+import { Condition }                     from '@ui/condition'
+import { RemoveIcon }                    from '@ui/icons'
+import { ImageBlock }                    from '@ui/image'
+import { Box }                           from '@ui/layout'
+import { Row }                           from '@ui/layout'
+import { Column }                        from '@ui/layout'
+import { Text }                          from '@ui/text'
+import { ThemeType }                     from '@ui/theme'
+import { useToast }                      from '@stores/toast-notification'
 
-// TODO interface
-export const OrganizationElement: FC<any> = ({
+import { OrganizationElementHook }       from './organization-element.hook.js'
+import { RemoveRequestGroup }            from './remove-request-group/index.js'
+import { getConstats }                   from './organization-element.constants.js'
+
+export const OrganizationElement: FC<OrganizationElementProps> = ({
   organizationsData,
   organizationData,
   setOrganizationsData,
@@ -42,7 +43,6 @@ export const OrganizationElement: FC<any> = ({
     setRemoveRequestOpen,
   })
 
-  console.log(organizationData)
   return (
     <Column
       overflow='hidden'

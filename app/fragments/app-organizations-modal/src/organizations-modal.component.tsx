@@ -5,8 +5,6 @@ import { FC }                      from 'react'
 import { FormattedMessage }        from 'react-intl'
 import { memo }                    from 'react'
 
-import { Button }                  from '@ui/button'
-import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { Modal }                   from '@ui/modal'
 import { Text }                    from '@ui/text'
@@ -51,8 +49,6 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
             />
           ))}
         </Column>
-
-        <Box justifyContent='flex-end'></Box>
       </Column>
     </Modal>
   )

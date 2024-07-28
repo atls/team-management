@@ -12,18 +12,14 @@ export const OrganizationElementHook = ({
     setRemoveRequestOpen(!isRemoveRequestOpen)
   }
 
-  const removeOrganizationHandler = ({ organizationLogin }) => {
-    return removeMemberFromOrganization({
+  const removeOrganizationHandler = ({ organizationLogin }) =>
+    removeMemberFromOrganization({
       toast,
+      removeMemberLogin: memberLogin,
       organizationLogin,
       organizationsData,
       setOrganizationsData,
     })
-    // TODO set organizations on parent
-    // TODO if organizaitons length = 0, then delete from list
-    console.log(`remove from organization ${organizationLogin}`)
-    console.log(memberLogin)
-  }
 
   return { changeRemoveRequestStateHandler, removeOrganizationHandler }
 }

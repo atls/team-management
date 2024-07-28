@@ -1,18 +1,19 @@
-import { useTheme }         from '@emotion/react'
+import type { RemoveRequestGroupProps } from './remove-request-group.interfaces.js'
 
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
+import { useTheme }                     from '@emotion/react'
 
-import { Button }           from '@ui/button'
-import { Row }              from '@ui/layout'
-import { Text }             from '@ui/text'
-import { ThemeType }        from '@ui/theme'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { FormattedMessage }             from 'react-intl'
 
-import { BUTTON_PROPS }     from './remove-request-group.constants.js'
+import { Button }                       from '@ui/button'
+import { Row }                          from '@ui/layout'
+import { Text }                         from '@ui/text'
+import { ThemeType }                    from '@ui/theme'
 
-// TODO interfaces
-export const RemoveRequestGroup: FC<any> = ({
+import { BUTTON_PROPS }                 from './remove-request-group.constants.js'
+
+export const RemoveRequestGroup: FC<RemoveRequestGroupProps> = ({
   organizationLogin,
   changeRemoveRequestStateHandler,
   removeOrganizationHandler,
