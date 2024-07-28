@@ -1,7 +1,7 @@
-import { OrganizationCardsGrid }      from '@app/organization-cards-grid'
-
 import React                          from 'react'
 import { FC }                         from 'react'
+
+import { OrganizationCardsGrid }      from '@app/organization-cards-grid'
 
 import { ORGANIZATIONS_LIMIT }        from './organizations.constants.js'
 import { ORGANIZATION_MEMBERS_LIMIT } from './organizations.constants.js'
