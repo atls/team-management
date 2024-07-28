@@ -4,7 +4,6 @@ import { useTheme }          from '@emotion/react'
 import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
-import { useState }          from 'react'
 
 import { Condition }         from '@ui/condition'
 import { CheckIcon }         from '@ui/icons'
