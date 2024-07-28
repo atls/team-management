@@ -54,6 +54,7 @@ const colors = {
   GRAY_1600,
   RED_400,
   BLUE_700,
+  BLACK_40: 'rgba(0, 0, 0, 0.4)',
   black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',
