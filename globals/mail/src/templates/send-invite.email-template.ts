@@ -1,15 +1,22 @@
-import { sendMail } from '../send-mail.mail.js'
-import { getHtml }  from './send-invite.layout-template.js'
+import type { MailTemplateType } from './template.interfaces.js'
 
-const MAIL_TEXT = 'atlantis-invite-text'
-const MAIL_SUBJECT = 'atlantis-invite-subject'
-const MAIL_FROM = process.env.SMTP_AUTH_USER
+import { MAIL_TEXT }             from './send-invite.constants.js'
+import { MAIL_SUBJECT }          from './send-invite.constants.js'
+import { MAIL_FROM }             from './send-invite.constants.js'
+import { sendMail }              from '../send-mail.mail.js'
+import { getHtml }               from './send-invite.layout-template.js'
 
-export const sendInviteMail = ({ emails, selectedInvites }) => {
+export const sendInviteMail = ({
+  emails,
+  selectedInvites,
+}: {
+  emails: Array<string>
+  selectedInvites: Array<string>
+}) => {
   const emailsString = emails.join(', ')
   const html = getHtml(selectedInvites)
 
-  const mailTemplate = {
+  const mailTemplate: MailTemplateType = {
     from: MAIL_FROM,
     to: emailsString,
     subject: MAIL_SUBJECT,
