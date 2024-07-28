@@ -19,9 +19,9 @@ export const removeMemberHook: RemoveMemberType = async ({
     const query = removeOrganizationMemberQuery({
       memberLogin: removeMemberLogin,
       organizationLogin,
-    })
+    }) as [any]
 
-    await restClient(query as any)
+    await restClient(...query)
 
     const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
     setMembersData(newMembersData)
