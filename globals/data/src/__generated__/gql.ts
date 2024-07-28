@@ -18,6 +18,8 @@ const documents = {
     types.GetOrganizationMembersDocument,
   '\n  query GetOrganizationTeams($organizationId: ID!, $organizationTeamsLimit: Int!) {\n    node(id: $organizationId) {\n      ... on Organization {\n        teams(first: $organizationTeamsLimit) {\n          nodes {\n            id\n            databaseId\n            name\n          }\n        }\n      }\n    }\n  }\n':
     types.GetOrganizationTeamsDocument,
+  '\n  query GetViewerAllOrganizationsAllMembers(\n    $organizationsLimit: Int!\n    $organizationMembersLimit: Int!\n  ) {\n    viewer {\n      organizations(first: $organizationsLimit) {\n        nodes {\n          id\n          login\n          name\n          url\n          viewerCanAdminister\n          avatarUrl\n          membersWithRole(first: $organizationMembersLimit) {\n            nodes {\n              id\n              login\n              email\n              name\n              bio\n              url\n              avatarUrl\n            }\n          }\n        }\n      }\n    }\n  }\n':
+    types.GetViewerAllOrganizationsAllMembersDocument,
   '\n  query GetViewerOrganizations($organizationsLimit: Int!, $organizationMembersLimit: Int!) {\n    viewer {\n      organizations(first: $organizationsLimit) {\n        nodes {\n          id\n          login\n          name\n          url\n          membersWithRole(first: $organizationMembersLimit) {\n            totalCount\n          }\n          viewerCanAdminister\n          description\n          avatarUrl\n        }\n      }\n    }\n  }\n':
     types.GetViewerOrganizationsDocument,
   '\n  query GetViewer {\n    viewer {\n      name\n      avatarUrl\n      email\n      url\n    }\n  }\n':
@@ -52,6 +54,12 @@ export function gql(
 export function gql(
   source: '\n  query GetOrganizationTeams($organizationId: ID!, $organizationTeamsLimit: Int!) {\n    node(id: $organizationId) {\n      ... on Organization {\n        teams(first: $organizationTeamsLimit) {\n          nodes {\n            id\n            databaseId\n            name\n          }\n        }\n      }\n    }\n  }\n'
 ): (typeof documents)['\n  query GetOrganizationTeams($organizationId: ID!, $organizationTeamsLimit: Int!) {\n    node(id: $organizationId) {\n      ... on Organization {\n        teams(first: $organizationTeamsLimit) {\n          nodes {\n            id\n            databaseId\n            name\n          }\n        }\n      }\n    }\n  }\n']
+/**
+ * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
+ */
+export function gql(
+  source: '\n  query GetViewerAllOrganizationsAllMembers(\n    $organizationsLimit: Int!\n    $organizationMembersLimit: Int!\n  ) {\n    viewer {\n      organizations(first: $organizationsLimit) {\n        nodes {\n          id\n          login\n          name\n          url\n          viewerCanAdminister\n          avatarUrl\n          membersWithRole(first: $organizationMembersLimit) {\n            nodes {\n              id\n              login\n              email\n              name\n              bio\n              url\n              avatarUrl\n            }\n          }\n        }\n      }\n    }\n  }\n'
+): (typeof documents)['\n  query GetViewerAllOrganizationsAllMembers(\n    $organizationsLimit: Int!\n    $organizationMembersLimit: Int!\n  ) {\n    viewer {\n      organizations(first: $organizationsLimit) {\n        nodes {\n          id\n          login\n          name\n          url\n          viewerCanAdminister\n          avatarUrl\n          membersWithRole(first: $organizationMembersLimit) {\n            nodes {\n              id\n              login\n              email\n              name\n              bio\n              url\n              avatarUrl\n            }\n          }\n        }\n      }\n    }\n  }\n']
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
