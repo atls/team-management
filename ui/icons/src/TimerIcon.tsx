@@ -1,6 +1,5 @@
 import { useTheme }  from '@emotion/react'
 
-/* eslint-disable */
 import React         from 'react'
 
 import { IconProps } from '../icons.interfaces.js'
