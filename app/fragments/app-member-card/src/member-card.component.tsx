@@ -1,63 +1,64 @@
 'use client'
 
-import styled                         from '@emotion/styled'
-import { useTheme }                   from '@emotion/react'
+import type { MemberCardProps }            from './member-card.interfaces.js'
+import type { OnbordingConditionDataType } from './onbording-condition-element/index.js'
+import type { OrganizationMemberType }     from '@globals/data'
 
-import React                          from 'react'
-import { FC }                         from 'react'
-import { useState }                   from 'react'
+import styled                              from '@emotion/styled'
+import { useTheme }                        from '@emotion/react'
 
-import { OrganizationsModal }         from '@app/organizations-modal'
-import { TimerIcon }                  from '@ui/icons'
-import { OrganizationsIcon }          from '@ui/icons'
-import { Box }                        from '@ui/layout'
-import { Progress }                   from '@ui/progress'
-import { ThemeType }                  from '@ui/theme'
+import React                               from 'react'
+import { FC }                              from 'react'
+import { useState }                        from 'react'
 
-import { ImageGrop }                  from './image-group/index.js'
-import { MemberCardProps }            from './member-card.interface.js'
-import { OnbordingConditionElement }  from './onbording-condition-element/index.js'
-import { getMemberOrganizationsData } from './helpers/index.js'
-import { getOnbordingConditionList }  from './member-card.constants.js'
-import { baseStyles }                 from './member-card.styles.js'
-import { shapeStyles }                from './member-card.styles.js'
-import { appearanceStyles }           from './member-card.styles.js'
+import { Box }                             from '@ui/layout'
+import { Progress }                        from '@ui/progress'
+import { ThemeType }                       from '@ui/theme'
 
-export const MemberCard: FC<MemberCardProps> = ({ memberData, organizationsData }) => {
-  const memberOrganizationsInitData = getMemberOrganizationsData({ memberData, organizationsData })
+import { ImageGrop }                       from './image-group/index.js'
+import { OnbordingConditionElement }       from './onbording-condition-element/index.js'
+import { getProgressbarPercents }          from './helpers/index.js'
+import { getMemberOrganizationsData }      from './helpers/index.js'
+import { baseStyles }                      from './member-card.styles.js'
+import { shapeStyles }                     from './member-card.styles.js'
+import { appearanceStyles }                from './member-card.styles.js'
 
-  // TODO interface
-  const memberOrganizationsDataState = useState<any>(memberOrganizationsInitData)
+const MemberCardContainer = styled(Box)(baseStyles, shapeStyles, appearanceStyles)
 
+export const MemberCard: FC<MemberCardProps> = ({
+  timerMilliseconds,
+  memberData,
+  organizationsData,
+}) => {
   const theme = useTheme() as ThemeType
+  const { onbordingData } = memberData
 
-  // TODO calculate it:
-  const proressPercent = 80
-  const onbordingConditionList = getOnbordingConditionList({ theme })
+  const memberOrganizationsInitData = getMemberOrganizationsData({ memberData, organizationsData })
+  const memberOrganizationsDataState = useState(memberOrganizationsInitData)
 
-  const MemberCardContainer = styled(Box)(baseStyles, shapeStyles, appearanceStyles)
+  const progressPercent = getProgressbarPercents(onbordingData)
 
-  // TODO
-  // разнеси по компонентам
-  // стили тоже разнеси по файлам
   return (
     <MemberCardContainer>
       <ImageGrop
-        memberData={memberData}
+        memberData={memberData as OrganizationMemberType}
         memberOrganizationsDataState={memberOrganizationsDataState}
+        timerMilliseconds={timerMilliseconds}
       />
-      <Progress percentage={proressPercent} />
+      <Progress percentage={progressPercent} />
       <Box
         maxHeight={theme.spaces.largeSemiNormal}
         padding={theme.spaces.t8h16b16}
         flexWrap='wrap'
         justifyContent='space-between'
       >
-        {onbordingConditionList.map((conditionData, conditionIndex) => (
+        {onbordingData.map((
+          onbordingConditionData: OnbordingConditionDataType,
+          conditionIndex: number
+        ) => (
           <OnbordingConditionElement
-            conditionData={conditionData}
-            checked={true}
-            divider={!(conditionIndex === onbordingConditionList.length - 1)}
+            conditionData={onbordingConditionData}
+            divider={!(conditionIndex === onbordingData.length - 1)}
           />
         ))}
       </Box>

@@ -1,13 +1,14 @@
+import type { ImageGroupProps }      from './image-group.interfaces.js'
+
 import styled                        from '@emotion/styled'
 
 import React                         from 'react'
 import { FC }                        from 'react'
 
+import { Condition }                 from '@ui/condition'
 import { ImageBlock }                from '@ui/image'
 import { Box }                       from '@ui/layout'
-import { Column }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
 
 import { OrganizationsButton }       from './organizations-button/index.js'
 import { TextGroup }                 from './text-group/index.js'
@@ -15,12 +16,12 @@ import { Timer }                     from './timer/index.js'
 import { imageGroupContainerStyles } from './image-group.styles.js'
 import { frontLayerStyles }          from './image-group.styles.js'
 
-// TODO interface
-export const ImageGrop: FC<any> = ({ memberData, memberOrganizationsDataState }) => {
+export const ImageGrop: FC<ImageGroupProps> = ({
+  memberData,
+  memberOrganizationsDataState,
+  timerMilliseconds,
+}) => {
   const { avatarUrl, name, bio, login: memberLogin } = memberData
-
-  // TODO change it to value
-  const milliseconds = 17000
 
   const ImageGroupContainer = styled(Box)(imageGroupContainerStyles)
   const FrontLayerContainer = styled(Box)(frontLayerStyles)
@@ -35,7 +36,9 @@ export const ImageGrop: FC<any> = ({ memberData, memberOrganizationsDataState })
             memberLogin={memberLogin}
             memberOrganizationsDataState={memberOrganizationsDataState}
           />
-          <Timer initialMilliseconds={milliseconds} />
+          <Condition match={Boolean(timerMilliseconds)}>
+            <Timer initialMilliseconds={timerMilliseconds as number} />
+          </Condition>
         </Row>
       </FrontLayerContainer>
     </ImageGroupContainer>

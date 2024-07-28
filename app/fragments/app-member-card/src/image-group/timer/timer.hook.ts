@@ -1,10 +1,14 @@
+import type { TimerHookType } from './timer.interfaces.js'
+
 import { useEffect }          from 'react'
 
 import { formatMilliseconds } from './helpers/index.js'
 
-// TODO interface
-export const TimerHook = ({ currentMilliseconds, setCurrentMilliseconds, setFormattedTime }) => {
-  // TODO to hooks
+export const TimerHook: TimerHookType = ({
+  currentMilliseconds,
+  setCurrentMilliseconds,
+  setFormattedTime,
+}) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentMilliseconds(currentMilliseconds + 1000)
@@ -15,5 +19,5 @@ export const TimerHook = ({ currentMilliseconds, setCurrentMilliseconds, setForm
   useEffect(() => {
     const formattedTime = formatMilliseconds(currentMilliseconds)
     setFormattedTime(formattedTime)
-  }, [currentMilliseconds])
+  }, [currentMilliseconds, setFormattedTime])
 }

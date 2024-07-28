@@ -1,14 +1,15 @@
-import { useTheme }  from '@emotion/react'
+import type { TextGroupType } from './text-group.interfaces.ts'
+import type { ThemeType }     from '@ui/theme'
 
-import React         from 'react'
-import { FC }        from 'react'
+import { useTheme }           from '@emotion/react'
 
-import { Column }    from '@ui/layout'
-import { Text }      from '@ui/text'
-import { ThemeType } from '@ui/theme'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-// TODO interface
-export const TextGroup: FC<any> = ({ name, bio }) => {
+import { Column }             from '@ui/layout'
+import { Text }               from '@ui/text'
+
+export const TextGroup: FC<TextGroupType> = ({ name, bio }) => {
   const theme = useTheme() as ThemeType
 
   return (

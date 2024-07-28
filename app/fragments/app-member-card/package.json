@@ -9,6 +9,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/organizations-modal": "workspace:*",
+    "@globals/constants": "workspace:*",
+    "@globals/data": "workspace:*",
     "@ui/button": "workspace:*",
     "@ui/checkbox": "workspace:*",
     "@ui/condition": "workspace:*",

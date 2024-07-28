@@ -1,23 +1,29 @@
-import { useTheme }           from '@emotion/react'
+import type { OrganizationsButtonType } from './organizations-button.interfaces.js'
 
-import React                  from 'react'
-import { FC }                 from 'react'
-import { useState }           from 'react'
+import { useTheme }                     from '@emotion/react'
 
-import { OrganizationsModal } from '@app/organizations-modal'
-import { Button }             from '@ui/button'
-import { OrganizationsIcon }  from '@ui/icons'
-import { Text }               from '@ui/text'
-import { ThemeType }          from '@ui/theme'
+import React                            from 'react'
+import { FC }                           from 'react'
+import { useState }                     from 'react'
 
-import { getConstants }       from './organizations-button.constants.js'
+import { OrganizationsModal }           from '@app/organizations-modal'
+import { Button }                       from '@ui/button'
+import { OrganizationsIcon }            from '@ui/icons'
+import { Text }                         from '@ui/text'
+import { ThemeType }                    from '@ui/theme'
 
-// TODO interface
-export const OrganizationsButton: FC<any> = ({ memberOrganizationsDataState, memberLogin }) => {
+import { getConstants }                 from './organizations-button.constants.js'
+
+export const OrganizationsButton: FC<OrganizationsButtonType> = ({
+  memberOrganizationsDataState,
+  memberLogin,
+}) => {
   const theme = useTheme() as ThemeType
 
   const [memberOrganizationsData, setMemberOrganizationsData] = memberOrganizationsDataState
   const [isOrganizationsModalOpen, setOrganizationsModalOpen] = useState<boolean>(false)
+
+  if (!memberOrganizationsData) throw new Error('member organizaions data')
 
   const organizationsModalHandler = () => {
     setOrganizationsModalOpen(!isOrganizationsModalOpen)
