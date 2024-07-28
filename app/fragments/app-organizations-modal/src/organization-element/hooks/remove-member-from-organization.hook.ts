@@ -4,6 +4,7 @@ import { getTokenCookie }                from '@globals/helpers'
 
 export const removeMemberFromOrganization = async ({
   toast,
+  removeMemberLogin,
   organizationLogin,
   organizationsData,
   setOrganizationsData,
@@ -11,22 +12,20 @@ export const removeMemberFromOrganization = async ({
   const token = getTokenCookie(document)
 
   try {
-    // const restClient = createOctokitRestClient(token)
-    //
-    // const query = removeOrganizationMemberQuery({
-    //   memberLogin: removeMemberLogin,
-    //   organizationLogin,
-    // })
+    const restClient = createOctokitRestClient(token)
 
-    // await restClient(query as any)
+    const query = removeOrganizationMemberQuery({
+      memberLogin: removeMemberLogin,
+      organizationLogin,
+    }) as [any]
 
-    console.log(organizationsData)
+    await restClient(...query)
 
     const newOrganizationsData = organizationsData.filter(
       ({ login }) => login !== organizationLogin
     )
+
     setOrganizationsData(newOrganizationsData)
-    // toast.notify(`Пользователь <b>${removeMemberLogin}</b> удален из <b>${organizationLogin}</b>`)
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
