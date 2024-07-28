@@ -1,14 +1,15 @@
-import { useTheme }  from '@emotion/react'
+import type { ProgressProps } from './progress.interfaces.js'
 
-import React         from 'react'
+import { useTheme }           from '@emotion/react'
 
-import { Box }       from '@ui/layout'
-import { Text }      from '@ui/text'
-import { ThemeType } from '@ui/theme'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-// TODO interfaces
+import { Box }                from '@ui/layout'
+import { Text }               from '@ui/text'
+import { ThemeType }          from '@ui/theme'
 
-export const Progress = ({ percentage }) => {
+export const Progress: FC<ProgressProps> = ({ percentage }) => {
   const theme = useTheme() as ThemeType
 
   return (
