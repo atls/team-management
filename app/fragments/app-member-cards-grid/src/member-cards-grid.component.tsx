@@ -1,20 +1,22 @@
 'use client'
 
-import type { MemberCardsGridProps } from './member-cards-grid.interfaces.js'
+import type { MemberCardsGridProps }        from './member-cards-grid.interfaces.js'
+import type { MemberWithOnbordingDataType } from '@app/member-card'
+import type { OrganizationDataType }        from '@globals/data'
 
-import { useTheme }                  from '@emotion/react'
+import { useTheme }                         from '@emotion/react'
 
-import React                         from 'react'
-import { FC }                        from 'react'
-import { memo }                      from 'react'
-import { useState }                  from 'react'
+import React                                from 'react'
+import { FC }                               from 'react'
+import { memo }                             from 'react'
+import { useState }                         from 'react'
 
-import { MemberCard }                from '@app/member-card'
-import { GridAutoRows }              from '@ui/layout'
-import { ThemeType }                 from '@ui/theme'
-import { useToast }                  from '@stores/toast-notification'
+import { MemberCard }                       from '@app/member-card'
+import { GridAutoRows }                     from '@ui/layout'
+import { ThemeType }                        from '@ui/theme'
+import { useToast }                         from '@stores/toast-notification'
 
-import { MemberCardsGridHook }       from './member-cards-grid.hook.js'
+import { MemberCardsGridHook }              from './member-cards-grid.hook.js'
 
 const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
   organizationsLimit,
@@ -23,9 +25,12 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
-  // TODO interface
-  const [membersData, setMembersData] = useState<Array<any>>([])
-  const [organizationsData, setOrganizationsData] = useState<Array<any>>([])
+  // const [pendingMembersData, setPendingMembersData] = useState<Array<OrganizationMemberType>>([])
+  const pendingMembersData = []
+
+  // TODO member with onbording data interface
+  const [membersData, setMembersData] = useState<Array<MemberWithOnbordingDataType>>([])
+  const [organizationsData, setOrganizationsData] = useState<Array<OrganizationDataType>>([])
 
   MemberCardsGridHook({
     toast,
@@ -37,13 +42,21 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
     setOrganizationsData,
   })
 
-  // TODO interfaces
+  const timerMilliseconds = 17000
+
   return (
     <GridAutoRows
       columns={[theme.spaces.s1, theme.spaces.s2, theme.spaces.semiTiny]}
       maxColumnWidth={theme.spaces.largeSemiIncreased}
       gap={theme.spaces.semiLarge}
     >
+      {pendingMembersData.map((memberData) => (
+        <MemberCard
+          memberData={memberData}
+          organizationsData={organizationsData}
+          timerMilliseconds={timerMilliseconds}
+        />
+      ))}
       {membersData.map((memberData) => (
         <MemberCard memberData={memberData} organizationsData={organizationsData} />
       ))}

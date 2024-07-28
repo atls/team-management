@@ -9,21 +9,27 @@ export const MemberCardsGridHook: MemberCardsGridHookType = ({
   organizationMembersLimit,
   membersData,
   setMembersData,
-  organizationsData,
+  // organizationsData,
   setOrganizationsData,
 }) => {
   useEffect(() => {
     if (!membersData.length) {
       getMembersData({
+        toast,
         organizationsLimit,
         organizationMembersLimit,
         setMembersData,
         setOrganizationsData,
-        toast,
       })
     }
-  }, [membersData])
+  }, [
+    membersData,
+    organizationMembersLimit,
+    organizationsLimit,
+    setMembersData,
+    setOrganizationsData,
+    toast,
+  ])
 
   // TODO get pending members data
-  // TODO set organizations data by 1st query
 }

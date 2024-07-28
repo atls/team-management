@@ -9,6 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@app/member-card": "workspace:*",
+    "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
     "@stores/toast-notification": "workspace:*",

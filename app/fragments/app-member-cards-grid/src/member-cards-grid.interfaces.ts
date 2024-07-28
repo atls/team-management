@@ -1,4 +1,6 @@
-import type { ToastType } from '@stores/toast-notification'
+import type { MemberWithOnbordingDataType } from '@app/member-card'
+import type { OrganizationDataType }        from '@globals/data'
+import type { ToastType }                   from '@stores/toast-notification'
 
 export type MemberCardsGridProps = {
   organizationsLimit: number
@@ -8,15 +10,17 @@ export type MemberCardsGridProps = {
 export type MemberCardsGridHookType = ({
   toast,
   membersData,
+  setMembersData,
+  organizationsData,
+  setOrganizationsData,
   organizationsLimit,
   organizationMembersLimit,
-  setMembersData,
 }: {
   toast: ToastType
-  // TODO interface
-  membersData: any
+  membersData: Array<MemberWithOnbordingDataType>
+  setMembersData: (memberData: Array<MemberWithOnbordingDataType>) => void
+  organizationsData: Array<OrganizationDataType>
+  setOrganizationsData: (organizationsData: Array<OrganizationDataType>) => void
   organizationsLimit: number
   organizationMembersLimit: number
-  // TODO interface
-  setMembersData: (memberData: any) => void
 }) => void
