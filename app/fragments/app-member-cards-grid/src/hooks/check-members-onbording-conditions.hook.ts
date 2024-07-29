@@ -1,14 +1,35 @@
-import { CONDITION_ICON_NAMES } from '@globals/constants'
+import { CONDITION_ICON_NAMES }      from '@globals/constants'
 
-export const checkMembersOnbordingConditions = ({ membersData, organizationsData }) => {
+import { checkGithubDefaultAvatar }  from './check-github-default-avatar.hook.js'
+import { getDiscordServerMembers }   from './get-discord-server-members.hook.js'
+import { getFigmaTeamCollaborators } from './get-figma-collaborators.hook.js'
+import { getTelegramChannelMembers } from './get-telegram-channel-members.hook.js'
+
+export const checkMembersOnbordingConditions = async ({ membersData, organizationsData }) => {
+  // TODO move telegram discord, figma to globals services-data
   // const telegramMembers = []
   // const figmaMembers = []
   // const discordMembers = []
 
   const { githubIconName, discordIconName, figmaIconName, telegramIconName } = CONDITION_ICON_NAMES
 
-  const resultMembersData = membersData.map((memberData) => {
+  const discordServerMembers = await getDiscordServerMembers()
+  console.log(discordServerMembers)
+
+  const figmaTeamId = '1180582603387288055'
+  const figmaCollaborators = await getFigmaTeamCollaborators(figmaTeamId)
+  console.log(figmaCollaborators)
+
+  // const telegramChannelMembers = await getTelegramChannelMembers()
+
+  const resultMembersData = await membersData.map((memberData) => {
+    // console.log(memberData)
+    const { avatarUrl } = memberData
+
+    // const isGithubAvatarGenerated = await checkGithubDefaultAvatar(avatarUrl)
+
     const memberWithOnbordingData = memberData
+
     memberWithOnbordingData.onbordingData = [
       {
         // TODO сверка из списка организаций с организацией из env
@@ -71,5 +92,5 @@ export const checkMembersOnbordingConditions = ({ membersData, organizationsData
     return memberWithOnbordingData
   })
 
-  return resultMembersData
+  return await resultMembersData
 }

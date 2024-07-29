@@ -58,7 +58,7 @@ export const getMembersData: GetMembersDataType = async ({
       membersData_all.push(...membersData_organization)
 
       // delete organizationData.membersWithRole
-      organizationsData_all.push(organizationsData_response)
+      organizationsData_all.push(organizationData)
     }
 
     const membersData_unique: any[] = getUniqueItems(membersData_all)
@@ -69,7 +69,7 @@ export const getMembersData: GetMembersDataType = async ({
 
     const organizationsData_unique: any = getUniqueItems(organizationsData_all)
 
-    const membersData_withOnbordingData: any = checkMembersOnbordingConditions({
+    const membersData_withOnbordingData: any = await checkMembersOnbordingConditions({
       membersData: membersData_withOrganizations,
       organizationsData: organizationsData_unique,
     })
