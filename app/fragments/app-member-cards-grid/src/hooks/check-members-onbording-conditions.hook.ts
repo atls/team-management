@@ -1,7 +1,7 @@
 import { CONDITION_ICON_NAMES }      from '@globals/constants'
 
 import { checkGithubDefaultAvatar }  from './check-github-default-avatar.hook.js'
-import { getDiscordServerMembers }   from './get-discord-server-members.hook.js'
+// import { getDiscordServerMembers }   from './get-discord-server-members.hook.js'
 import { getFigmaTeamCollaborators } from './get-figma-collaborators.hook.js'
 import { getTelegramChannelMembers } from './get-telegram-channel-members.hook.js'
 
@@ -13,8 +13,8 @@ export const checkMembersOnbordingConditions = async ({ membersData, organizatio
 
   const { githubIconName, discordIconName, figmaIconName, telegramIconName } = CONDITION_ICON_NAMES
 
-  const discordServerMembers = await getDiscordServerMembers()
-  console.log(discordServerMembers)
+  // const discordServerMembers = await getDiscordServerMembers()
+  // console.log(discordServerMembers)
 
   const figmaTeamId = '1180582603387288055'
   const figmaCollaborators = await getFigmaTeamCollaborators(figmaTeamId)
