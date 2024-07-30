@@ -4,7 +4,9 @@ import type { GetViewerAllOrganizationsAllMembersQuery } from '@globals/data'
 import type { OrganizationMemberType }                   from '@globals/data'
 
 import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS }      from '@globals/data'
+import { createOctokitRestClient }                       from '@globals/data'
 import { octokitGraphqlClient }                          from '@globals/data'
+import { getGithubOrganizationMembersWithout2fa }        from '@globals/data'
 import { getTokenCookie }                                from '@globals/helpers'
 
 import { checkMembersOnbordingConditions }               from './check-members-onbording-conditions.hook.js'
@@ -20,6 +22,7 @@ export const getMembersData: GetMembersDataType = async ({
 }) => {
   try {
     const token = getTokenCookie(document)
+
     const client = octokitGraphqlClient(token)
 
     const response = (await client(GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS, {
@@ -29,13 +32,28 @@ export const getMembersData: GetMembersDataType = async ({
 
     const organizationsData_response = response.viewer.organizations.nodes
 
+    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+    const membersInDefaultOrganization = []
+
+    const restClient = createOctokitRestClient(token)
+    const query = getGithubOrganizationMembersWithout2fa({
+      organizatoinName: defaultOrganizationName,
+    }) as [any]
+
+    const restResponse = await restClient(...query)
+
+    const membersWithou2fa = []
+
+    if (restResponse.data.length) {
+      for (const { id: memberId } of restResponse.data) {
+        membersWithou2fa.push(memberId)
+      }
+    }
+
     // TODO interfaces
     const membersData_all: any[] = []
     const organizationsData_all: any[] = []
     const memberOrganizations: Record<string, Array<string>> = {}
-
-    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
-    const membersInDefaultOrganization = []
 
     if (!organizationsData_response?.length) return
 
@@ -83,6 +101,7 @@ export const getMembersData: GetMembersDataType = async ({
       membersData: membersData_withOrganizations,
       organizationsData: organizationsData_unique,
       membersInDefaultOrganization,
+      membersWithou2fa,
     })
 
     // TODO interface
