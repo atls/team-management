@@ -35,7 +35,7 @@ export const INIT_ONBORDING_DATA = [
   {
     // в issue есть док
     conditionName: 'github2fa',
-    conditionState: false,
+    conditionState: true,
     conditionDisplayName: '2FA',
     conditionIconName: githubIconName,
   },
