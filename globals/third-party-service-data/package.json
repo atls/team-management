@@ -1,0 +1,12 @@
+{
+  "name": "@globals/third-party-service-data",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "devDependencies": {
+    "discord.js": "14.15.3"
+  }
+}

@@ -134,6 +134,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:globals/mail"\
     },\
     {\
+      "name": "@globals/third-party-service-data",\
+      "reference": "workspace:globals/third-party-service-data"\
+    },\
+    {\
       "name": "@stores/select-input",\
       "reference": "workspace:stores/select-input"\
     },\
@@ -263,6 +267,7 @@ const RAW_RUNTIME_STATE =
     ["@globals/environment", ["workspace:globals/environment"]],\
     ["@globals/helpers", ["workspace:globals/helpers"]],\
     ["@globals/mail", ["workspace:globals/mail"]],\
+    ["@globals/third-party-service-data", ["workspace:globals/third-party-service-data"]],\
     ["@stores/select-input", ["virtual:4eb424a80fd8baef48f546462dfff7858f61d27736d6e5590aa1da9a8d6554ebe690d446724478be8f48fa6129b0844345c71e18877b69da10ba1cdd8c067319#workspace:stores/select-input", "virtual:7198dc7097d0aafa72e615efa77f8adea927a469d612a0b9d139ec08ec2791fc52ddb8fd476379ddc985394509a1e35b253e68a18cbb8863795aaa682a9aa0c6#workspace:stores/select-input", "virtual:d6dfc87025d125f6f368531bec76576affc762754122082f6e4012d53690e0aa6795430b1064e301d164cf2788b31c3df200b8be28f6dd5f6f346cb54d787e08#workspace:stores/select-input", "workspace:stores/select-input"]],\
     ["@stores/toast-notification", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification", "workspace:stores/toast-notification"]],\
     ["@ui/avatar", ["virtual:0c725c07879c46cc40fec4183eb3e1a1c605e53876391762f1df52e574eee32d9b4dbd28691a90e51a0305d405fa29eccad623be3ce6fe986a16d8d223d47984#workspace:ui/avatar", "virtual:4e0a7dea37cd1a0a22d497aae35c37226b024a6ce15795b705ab302335982a1329b91070260ce56660c8f074ba68ca0707ea928aa7bc9b0102fe1249a1f778d7#workspace:ui/avatar", "virtual:6f072cb25c8571e52042d4ef03485a8513ce3fff603e6ca03ada28cdae96fc64f304d1c9166738e96330efff40007e7cbc45f5c30b79d80869aea7ecdd29bb6a#workspace:ui/avatar", "virtual:7ae719e1ff7496436b53b6c4efec34a71f4d0130b6290e9286ecb29a1940fee696b89acff5a583b09f11545aa0404818a9fb6b876f46be6137681e389815c40a#workspace:ui/avatar", "virtual:94e655da43027a8570a351adc301f430de527d219daf10e774613483a07455e450d800b0c324ee278da79a995d6cb3f6e34e2d934cb05e7d9cc60029cb5f62ab#workspace:ui/avatar", "virtual:9fac9e3a8ab2ee419c9a8e4c51d30e681b903fd0ed7acca5db6ce51c4463a212c799f0acfaa4a1e87adf2fb2b5bc435a6e05794a91918d21c8ef518f1d7f94df#workspace:ui/avatar", "virtual:ad2244ba11bc5d6e066d4997546ff086a08a0dc86a0753dfaee57ab9edf09b3574d5038124623c3128b58a0ccb1b466b9b7c9f49576b2cb6f5fcd7fd3bca38a6#workspace:ui/avatar", "virtual:e638095173f04580c2ab97fface872e070b090feea9065809b69a616b54d2f8cef2120849ef7b28780f1d0367e1336044cea4f9600853c255ffe62ea7a9d6185#workspace:ui/avatar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#workspace:ui/avatar", "workspace:ui/avatar"]],\
@@ -1201,13 +1206,13 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/layout", "virtual:0c725c07879c46cc40fec4183eb3e1a1c605e53876391762f1df52e574eee32d9b4dbd28691a90e51a0305d405fa29eccad623be3ce6fe986a16d8d223d47984#workspace:ui/layout"],\
           ["@ui/theme", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:ui/theme"],\
-          ["discord.js", "npm:14.15.3"],\
           ["react", "npm:18.3.1"]\
         ],\
         "packagePeers": [\
@@ -1227,13 +1232,13 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:c32be3764e6b3cd3e2fe9c3a22a5fbdead69cfd5508534ad66b01880634792e895b1dab160aa1a2f4fe56036ae75a84c779f8d2924d87f303f84ebab1f7dea48#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/layout", "virtual:28aebd1cd73a3724a6a1ffdcfe4ce0edd200ad5cb2231326eb23de14ee36a0ffe2717195a5115b8e279d2e400070e50b0d17097480fa7527592153de5ed7b340#workspace:ui/layout"],\
           ["@ui/theme", "virtual:6fc7672638e07fe3f57dff86239c5c3a2cde1734e92433397aa6f416f3d082c26bdf743c55f461a90f368129681f08afafb70c363c552e2c70d484c9e2d73827#workspace:ui/theme"],\
-          ["discord.js", "npm:14.15.3"],\
           ["react", null]\
         ],\
         "packagePeers": [\
@@ -1253,12 +1258,12 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:c32be3764e6b3cd3e2fe9c3a22a5fbdead69cfd5508534ad66b01880634792e895b1dab160aa1a2f4fe56036ae75a84c779f8d2924d87f303f84ebab1f7dea48#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
+          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@ui/layout", "virtual:28aebd1cd73a3724a6a1ffdcfe4ce0edd200ad5cb2231326eb23de14ee36a0ffe2717195a5115b8e279d2e400070e50b0d17097480fa7527592153de5ed7b340#workspace:ui/layout"],\
-          ["@ui/theme", "virtual:6fc7672638e07fe3f57dff86239c5c3a2cde1734e92433397aa6f416f3d082c26bdf743c55f461a90f368129681f08afafb70c363c552e2c70d484c9e2d73827#workspace:ui/theme"],\
-          ["discord.js", "npm:14.15.3"]\
+          ["@ui/theme", "virtual:6fc7672638e07fe3f57dff86239c5c3a2cde1734e92433397aa6f416f3d082c26bdf743c55f461a90f368129681f08afafb70c363c552e2c70d484c9e2d73827#workspace:ui/theme"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -7020,6 +7025,16 @@ const RAW_RUNTIME_STATE =
           ["@types/mjml", "npm:4.7.4"],\
           ["@types/nodemailer", "npm:6.4.15"],\
           ["nodemailer", "npm:6.9.14"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@globals/third-party-service-data", [\
+      ["workspace:globals/third-party-service-data", {\
+        "packageLocation": "./globals/third-party-service-data/",\
+        "packageDependencies": [\
+          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
+          ["discord.js", "npm:14.15.3"]\
         ],\
         "linkType": "SOFT"\
       }]\

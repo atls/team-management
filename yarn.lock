@@ -381,12 +381,12 @@ __metadata:
     "@globals/constants": "workspace:*"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
+    "@globals/third-party-service-data": "workspace:*"
     "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
-    discord.js: "npm:14.15.3"
   peerDependencies:
     "@emotion/react": "*"
     react: "*"
@@ -2415,6 +2415,14 @@ __metadata:
     "@types/mjml": "npm:^4"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:6.9.14"
+  languageName: unknown
+  linkType: soft
+
+"@globals/third-party-service-data@workspace:*, @globals/third-party-service-data@workspace:globals/third-party-service-data":
+  version: 0.0.0-use.local
+  resolution: "@globals/third-party-service-data@workspace:globals/third-party-service-data"
+  dependencies:
+    discord.js: "npm:14.15.3"
   languageName: unknown
   linkType: soft
 

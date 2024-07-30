@@ -1,13 +1,10 @@
-import { Client }            from 'discord.js'
-import { GatewayIntentBits } from 'discord.js'
-import { Partials }          from 'discord.js'
+import { Client }            from 'discord'
+import { GatewayIntentBits } from 'discord'
+import { Partials }          from 'discord'
 
 export const getDiscordServerMembers = async () => {
-  // Вставьте сюда ваш токен
-  // TODO to envs
-  const TOKEN = 'e8f2de5b4f11678f64b1febf48cd3af0f2c341d745e7fa4713f30664524f5d24'
-  // Вставьте сюда ID вашего сервера
-  const GUILD_ID = '293555502728871936'
+  const API_TOKEN = process.env.NEXT_PUBLIC_DISCORD_API_TOKEN as string
+  const GUILD_ID = process.env.NEXT_PUBLIC_DISCORD_GUILD_ID as string
 
   const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers],
@@ -29,5 +26,5 @@ export const getDiscordServerMembers = async () => {
     client.destroy()
   })
 
-  client.login(TOKEN)
+  client.login(API_TOKEN)
 }

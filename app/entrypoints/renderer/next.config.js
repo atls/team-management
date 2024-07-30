@@ -33,6 +33,14 @@ export default {
         resource.request = resource.request.replace('.js', '')
       })
     )
+
+    // discord.js not resolve some packages
+    // https://github.com/discordjs/discord.js/issues/9592
+    // webpackConfig.module.rules.push({
+    //   test: /\.node$/,
+    //   loader: 'node-loader',
+    // })
+
     return webpackConfig
   },
   output: 'standalone',
