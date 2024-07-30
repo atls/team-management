@@ -1,12 +1,12 @@
-import { getDiscordServerMembers } from '@globals/third-party-service-data'
+// import { getDiscordServerMembers } from '@globals/third-party-service-data'
 
-import { CONDITION_ICON_NAMES }    from '@globals/constants'
+import { CONDITION_ICON_NAMES } from '@globals/constants'
 
 export const checkMembersOnbordingConditions = async ({ membersData, organizationsData }) => {
   const { githubIconName, discordIconName, figmaIconName, telegramIconName } = CONDITION_ICON_NAMES
 
-  const discordServerMembers = await getDiscordServerMembers()
-  console.log(discordServerMembers)
+  // const discordServerMembers = await getDiscordServerMembers()
+  // console.log(discordServerMembers)
 
   const resultMembersData = await membersData.map((memberData) => {
     // console.log(memberData)

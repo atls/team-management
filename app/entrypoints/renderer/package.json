@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@app/base-layout": "workspace:*",
+    "@app/get-discord-server-members-api": "workspace:*",
     "@app/github-auth-cookie-api": "workspace:*",
     "@app/index-page": "workspace:*",
     "@app/loading": "workspace:*",

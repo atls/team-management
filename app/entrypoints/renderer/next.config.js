@@ -24,9 +24,10 @@ export default {
   compiler: {
     styledComponents: true,
   },
-  webpack: (webpackConfig, { webpack }) => {
+  webpack: (webpackConfig, { webpack, isServer }) => {
+    // в названии пакета есть ".js", поэтому меняю регекс
     webpackConfig.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(new RegExp(/\.js$/), function (
+      new webpack.NormalModuleReplacementPlugin(new RegExp(/^(\.{1,2}\/)+\S*\.js$/), function (
         /** @type {{ request: string }} */
         resource
       ) {
@@ -34,12 +35,12 @@ export default {
       })
     )
 
-    // discord.js not resolve some packages
+    // discord.js not resolve zLib-sync without it
     // https://github.com/discordjs/discord.js/issues/9592
-    // webpackConfig.module.rules.push({
-    //   test: /\.node$/,
-    //   loader: 'node-loader',
-    // })
+    webpackConfig.module.rules.push({
+      test: /\.node$/,
+      loader: 'node-loader',
+    })
 
     return webpackConfig
   },

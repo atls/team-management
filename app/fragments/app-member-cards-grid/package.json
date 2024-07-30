@@ -12,7 +12,6 @@
     "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@globals/third-party-service-data": "workspace:*",
     "@stores/toast-notification": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/theme": "workspace:*"

@@ -14,6 +14,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:."\
     },\
     {\
+      "name": "@app/get-discord-server-members-api",\
+      "reference": "workspace:app/api/get-discord-server-members"\
+    },\
+    {\
       "name": "@app/github-auth-cookie-api",\
       "reference": "workspace:app/api/github-auth-cookie"\
     },\
@@ -239,6 +243,7 @@ const RAW_RUNTIME_STATE =
   "fallbackExclusionList": [\
     ["@app/add-member-to-organization-modal-fragment", ["virtual:e71c030bcbb1738e68954b07d6046404e0d81f404fd073dcb1fe990671ddd25b6c8a1ac09100c5f91e2b9392064c0ea590f93acc3a21dbed43918dfa5f2b36bc#workspace:app/fragments/app-add-member-to-organization-modal", "virtual:e948276caa94ac175a046b53782143cb7519da337ec2db23c858040f116a0c51a5dd1c8ce7ee15cacd322fa864d18438212733062aad2695e34e0dc8686f8c78#workspace:app/fragments/app-add-member-to-organization-modal", "workspace:app/fragments/app-add-member-to-organization-modal"]],\
     ["@app/base-layout", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout", "workspace:app/fragments/app-base-layout"]],\
+    ["@app/get-discord-server-members-api", ["workspace:app/api/get-discord-server-members"]],\
     ["@app/github-auth-cookie-api", ["workspace:app/api/github-auth-cookie"]],\
     ["@app/index-page", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page", "workspace:app/pages/index-page"]],\
     ["@app/invite-button", ["virtual:077bb1f1c33e965ca9c208c00aaa5df78e7b23a5150cfb317f4838a067566af7f0e5e1c57299ed861091873ecab0165a5a48e862f560af75fe3ac2775bc461c7#workspace:app/fragments/app-invite-button", "virtual:7198dc7097d0aafa72e615efa77f8adea927a469d612a0b9d139ec08ec2791fc52ddb8fd476379ddc985394509a1e35b253e68a18cbb8863795aaa682a9aa0c6#workspace:app/fragments/app-invite-button", "virtual:b466cf4a83a4ba2c6a2bef9d441fbda96d985b55453b0ae71e21ff65f4651ffc31c7e0df37750c34266d30c29ef516dc7329134675733be82c52323f374a132c#workspace:app/fragments/app-invite-button", "virtual:b4f3ec5dfc4cbca397b8af27c40bf42555b7c36575bfe993cc0571715d918bbd8a3522ac518b22865055a6417134a6f31a539e972ebbaa5f90af58082fd9c408#workspace:app/fragments/app-invite-button", "workspace:app/fragments/app-invite-button"]],\
@@ -267,7 +272,7 @@ const RAW_RUNTIME_STATE =
     ["@globals/environment", ["workspace:globals/environment"]],\
     ["@globals/helpers", ["workspace:globals/helpers"]],\
     ["@globals/mail", ["workspace:globals/mail"]],\
-    ["@globals/third-party-service-data", ["workspace:globals/third-party-service-data"]],\
+    ["@globals/third-party-service-data", ["virtual:2afd3a8728bd63a1139abd02da73f27b8b8df6c188ae50b819ceb0cec496f8193d590810378454546f5a1e74429f5197f2634e90cf8dead56ff4b245313e55d1#workspace:globals/third-party-service-data", "workspace:globals/third-party-service-data"]],\
     ["@stores/select-input", ["virtual:4eb424a80fd8baef48f546462dfff7858f61d27736d6e5590aa1da9a8d6554ebe690d446724478be8f48fa6129b0844345c71e18877b69da10ba1cdd8c067319#workspace:stores/select-input", "virtual:7198dc7097d0aafa72e615efa77f8adea927a469d612a0b9d139ec08ec2791fc52ddb8fd476379ddc985394509a1e35b253e68a18cbb8863795aaa682a9aa0c6#workspace:stores/select-input", "virtual:d6dfc87025d125f6f368531bec76576affc762754122082f6e4012d53690e0aa6795430b1064e301d164cf2788b31c3df200b8be28f6dd5f6f346cb54d787e08#workspace:stores/select-input", "workspace:stores/select-input"]],\
     ["@stores/toast-notification", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification", "workspace:stores/toast-notification"]],\
     ["@ui/avatar", ["virtual:0c725c07879c46cc40fec4183eb3e1a1c605e53876391762f1df52e574eee32d9b4dbd28691a90e51a0305d405fa29eccad623be3ce6fe986a16d8d223d47984#workspace:ui/avatar", "virtual:4e0a7dea37cd1a0a22d497aae35c37226b024a6ce15795b705ab302335982a1329b91070260ce56660c8f074ba68ca0707ea928aa7bc9b0102fe1249a1f778d7#workspace:ui/avatar", "virtual:6f072cb25c8571e52042d4ef03485a8513ce3fff603e6ca03ada28cdae96fc64f304d1c9166738e96330efff40007e7cbc45f5c30b79d80869aea7ecdd29bb6a#workspace:ui/avatar", "virtual:7ae719e1ff7496436b53b6c4efec34a71f4d0130b6290e9286ecb29a1940fee696b89acff5a583b09f11545aa0404818a9fb6b876f46be6137681e389815c40a#workspace:ui/avatar", "virtual:94e655da43027a8570a351adc301f430de527d219daf10e774613483a07455e450d800b0c324ee278da79a995d6cb3f6e34e2d934cb05e7d9cc60029cb5f62ab#workspace:ui/avatar", "virtual:9fac9e3a8ab2ee419c9a8e4c51d30e681b903fd0ed7acca5db6ce51c4463a212c799f0acfaa4a1e87adf2fb2b5bc435a6e05794a91918d21c8ef518f1d7f94df#workspace:ui/avatar", "virtual:ad2244ba11bc5d6e066d4997546ff086a08a0dc86a0753dfaee57ab9edf09b3574d5038124623c3128b58a0ccb1b466b9b7c9f49576b2cb6f5fcd7fd3bca38a6#workspace:ui/avatar", "virtual:e638095173f04580c2ab97fface872e070b090feea9065809b69a616b54d2f8cef2120849ef7b28780f1d0367e1336044cea4f9600853c255ffe62ea7a9d6185#workspace:ui/avatar", "virtual:fe6c95fec1add923ef770caa19fd3955076d4c7924ab2cd85630aa1a9a8075c0fa57442900658cfb44ffb14b8a5ff85bd3b3f79853979a7a80ebce08bd7b01c7#workspace:ui/avatar", "workspace:ui/avatar"]],\
@@ -645,6 +650,16 @@ const RAW_RUNTIME_STATE =
           ["@ui/sidebar", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#workspace:ui/sidebar"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:74b10b415f5a808f9b1231098eed72b020eafd57bd2f31c0db7c6f53a4d9265c8d18c9bb4a6d0b877f7edd4405e22c5d5fd580c45a11f47b35d9e3c08fcdf261#npm:18.3.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@app/get-discord-server-members-api", [\
+      ["workspace:app/api/get-discord-server-members", {\
+        "packageLocation": "./app/api/get-discord-server-members/",\
+        "packageDependencies": [\
+          ["@app/get-discord-server-members-api", "workspace:app/api/get-discord-server-members"],\
+          ["@globals/third-party-service-data", "virtual:2afd3a8728bd63a1139abd02da73f27b8b8df6c188ae50b819ceb0cec496f8193d590810378454546f5a1e74429f5197f2634e90cf8dead56ff4b245313e55d1#workspace:globals/third-party-service-data"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1206,7 +1221,6 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:b1ceb2ab86f2e0a8e724da37c4c6b41b324aaa306ed4f27d78726f9c8927972740ee3c022d2cc98f33ce28f63513e556cd0c50f5a551e3bec3f8c06cf6cb77b1#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
-          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -1232,7 +1246,6 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:c32be3764e6b3cd3e2fe9c3a22a5fbdead69cfd5508534ad66b01880634792e895b1dab160aa1a2f4fe56036ae75a84c779f8d2924d87f303f84ebab1f7dea48#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
-          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/emotion__react", null],\
           ["@types/react", "npm:18.3.3"],\
@@ -1258,7 +1271,6 @@ const RAW_RUNTIME_STATE =
           ["@globals/constants", "workspace:globals/constants"],\
           ["@globals/data", "virtual:c32be3764e6b3cd3e2fe9c3a22a5fbdead69cfd5508534ad66b01880634792e895b1dab160aa1a2f4fe56036ae75a84c779f8d2924d87f303f84ebab1f7dea48#workspace:globals/data"],\
           ["@globals/helpers", "workspace:globals/helpers"],\
-          ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
           ["@stores/toast-notification", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:stores/toast-notification"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -1847,6 +1859,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@app/renderer-entrypoint", "workspace:app/entrypoints/renderer"],\
           ["@app/base-layout", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout"],\
+          ["@app/get-discord-server-members-api", "workspace:app/api/get-discord-server-members"],\
           ["@app/github-auth-cookie-api", "workspace:app/api/github-auth-cookie"],\
           ["@app/index-page", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/pages/index-page"],\
           ["@app/loading", "virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-loading"],\
@@ -7030,11 +7043,31 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@globals/third-party-service-data", [\
+      ["virtual:2afd3a8728bd63a1139abd02da73f27b8b8df6c188ae50b819ceb0cec496f8193d590810378454546f5a1e74429f5197f2634e90cf8dead56ff4b245313e55d1#workspace:globals/third-party-service-data", {\
+        "packageLocation": "./.yarn/__virtual__/@globals-third-party-service-data-virtual-8cd9a1abbe/1/globals/third-party-service-data/",\
+        "packageDependencies": [\
+          ["@globals/third-party-service-data", "virtual:2afd3a8728bd63a1139abd02da73f27b8b8df6c188ae50b819ceb0cec496f8193d590810378454546f5a1e74429f5197f2634e90cf8dead56ff4b245313e55d1#workspace:globals/third-party-service-data"],\
+          ["@types/node", "npm:22.0.0"],\
+          ["@types/ts-node", null],\
+          ["@types/zlib-sync", null],\
+          ["discord.js", "npm:14.15.3"],\
+          ["ts-node", "virtual:8cd9a1abbec52bb83a96b535a0b0ad38d74ac3df05b83ff41f023f9ccab1859231812d4ca1e6f5aefcb1196d3ad4b795d34e099698d6ca4294b02265597cda6a#npm:9.1.1"],\
+          ["zlib-sync", "npm:0.1.9"]\
+        ],\
+        "packagePeers": [\
+          "@types/ts-node",\
+          "@types/zlib-sync"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["workspace:globals/third-party-service-data", {\
         "packageLocation": "./globals/third-party-service-data/",\
         "packageDependencies": [\
           ["@globals/third-party-service-data", "workspace:globals/third-party-service-data"],\
-          ["discord.js", "npm:14.15.3"]\
+          ["@types/node", "npm:22.0.0"],\
+          ["discord.js", "npm:14.15.3"],\
+          ["ts-node", "virtual:8cd9a1abbec52bb83a96b535a0b0ad38d74ac3df05b83ff41f023f9ccab1859231812d4ca1e6f5aefcb1196d3ad4b795d34e099698d6ca4294b02265597cda6a#npm:9.1.1"],\
+          ["zlib-sync", "npm:0.1.9"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -9932,6 +9965,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/node", "npm:20.14.2"],\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:22.0.0", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-22.0.0-5a106da8ed-7142a13ef1.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.0.0"],\
+          ["undici-types", "npm:6.11.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -16808,6 +16849,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["arg", [\
+      ["npm:4.1.3", {\
+        "packageLocation": "./.yarn/cache/arg-npm-4.1.3-1748b966a8-969b491082.zip/node_modules/arg/",\
+        "packageDependencies": [\
+          ["arg", "npm:4.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["argparse", [\
       ["npm:1.0.10", {\
         "packageLocation": "./.yarn/cache/argparse-npm-1.0.10-528934e59d-c6a621343a.zip/node_modules/argparse/",\
@@ -17951,6 +18001,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["create-require", [\
+      ["npm:1.1.1", {\
+        "packageLocation": "./.yarn/cache/create-require-npm-1.1.1-839884ca2e-a9a1503d43.zip/node_modules/create-require/",\
+        "packageDependencies": [\
+          ["create-require", "npm:1.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cross-fetch", [\
       ["npm:3.1.8", {\
         "packageLocation": "./.yarn/cache/cross-fetch-npm-3.1.8-71c3c05709-ac8c4ca87d.zip/node_modules/cross-fetch/",\
@@ -18305,6 +18364,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["diff", [\
+      ["npm:4.0.2", {\
+        "packageLocation": "./.yarn/cache/diff-npm-4.0.2-73133c7102-ec09ec2101.zip/node_modules/diff/",\
+        "packageDependencies": [\
+          ["diff", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:5.2.0", {\
         "packageLocation": "./.yarn/cache/diff-npm-5.2.0-f523a581f3-01b7b440f8.zip/node_modules/diff/",\
         "packageDependencies": [\
@@ -22428,6 +22494,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["nan", [\
+      ["npm:2.20.0", {\
+        "packageLocation": "./.yarn/unplugged/nan-npm-2.20.0-5b5be83e88/node_modules/nan/",\
+        "packageDependencies": [\
+          ["nan", "npm:2.20.0"],\
+          ["node-gyp", "npm:10.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["nanoid", [\
       ["npm:3.3.7", {\
         "packageLocation": "./.yarn/cache/nanoid-npm-3.3.7-98824ba130-ac1eb60f61.zip/node_modules/nanoid/",\
@@ -25302,6 +25378,34 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["ts-node", [\
+      ["npm:9.1.1", {\
+        "packageLocation": "./.yarn/cache/ts-node-npm-9.1.1-4ad31da228-7fd8da71dd.zip/node_modules/ts-node/",\
+        "packageDependencies": [\
+          ["ts-node", "npm:9.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:8cd9a1abbec52bb83a96b535a0b0ad38d74ac3df05b83ff41f023f9ccab1859231812d4ca1e6f5aefcb1196d3ad4b795d34e099698d6ca4294b02265597cda6a#npm:9.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/ts-node-virtual-93686f7ed5/0/cache/ts-node-npm-9.1.1-4ad31da228-7fd8da71dd.zip/node_modules/ts-node/",\
+        "packageDependencies": [\
+          ["ts-node", "virtual:8cd9a1abbec52bb83a96b535a0b0ad38d74ac3df05b83ff41f023f9ccab1859231812d4ca1e6f5aefcb1196d3ad4b795d34e099698d6ca4294b02265597cda6a#npm:9.1.1"],\
+          ["@types/typescript", null],\
+          ["arg", "npm:4.1.3"],\
+          ["create-require", "npm:1.1.1"],\
+          ["diff", "npm:4.0.2"],\
+          ["make-error", "npm:1.3.6"],\
+          ["source-map-support", "npm:0.5.21"],\
+          ["typescript", null],\
+          ["yn", "npm:3.1.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/typescript",\
+          "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["tsconfig-paths", [\
       ["npm:3.15.0", {\
         "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.15.0-ff68930e0e-2041beaedc.zip/node_modules/tsconfig-paths/",\
@@ -25515,6 +25619,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/undici-types-npm-5.26.5-de4f7c7bb9-0097779d94.zip/node_modules/undici-types/",\
         "packageDependencies": [\
           ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:6.11.1", {\
+        "packageLocation": "./.yarn/cache/undici-types-npm-6.11.1-3a2172800d-bdee4c3d67.zip/node_modules/undici-types/",\
+        "packageDependencies": [\
+          ["undici-types", "npm:6.11.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -26202,6 +26313,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["yn", [\
+      ["npm:3.1.1", {\
+        "packageLocation": "./.yarn/cache/yn-npm-3.1.1-8ad4259784-2c487b0e14.zip/node_modules/yn/",\
+        "packageDependencies": [\
+          ["yn", "npm:3.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["yocto-queue", [\
       ["npm:0.1.0", {\
         "packageLocation": "./.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-f77b3d8d00.zip/node_modules/yocto-queue/",\
@@ -26217,6 +26337,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["yoga-layout-prebuilt", "npm:1.10.0"],\
           ["@types/yoga-layout", "npm:1.9.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["zlib-sync", [\
+      ["npm:0.1.9", {\
+        "packageLocation": "./.yarn/unplugged/zlib-sync-npm-0.1.9-5014e6858d/node_modules/zlib-sync/",\
+        "packageDependencies": [\
+          ["zlib-sync", "npm:0.1.9"],\
+          ["nan", "npm:2.20.0"],\
+          ["node-gyp", "npm:10.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
