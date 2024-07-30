@@ -6,6 +6,7 @@ export const checkMembersOnbordingConditions = async ({
   membersData,
   organizationsData,
   membersInDefaultOrganization,
+  membersWithou2fa,
 }) => {
   // const discordServerMembers = await getDiscordServerMembers()
   // console.log(discordServerMembers)
@@ -29,8 +30,16 @@ export const checkMembersOnbordingConditions = async ({
       })
     }
 
-    console.log(memberData.name)
-    console.log(memberData.onbordingData[0].conditionState)
+    if (membersWithou2fa.includes(memberId)) {
+      memberWithOnbordingData.onbordingData.forEach((conditionData, conditionIndex) => {
+        if (conditionData.conditionName === 'github2fa') {
+          memberWithOnbordingData.onbordingData[conditionIndex] = {
+            ...conditionData,
+            conditionState: false,
+          }
+        }
+      })
+    }
 
     return memberWithOnbordingData
   })
