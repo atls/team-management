@@ -34,12 +34,22 @@ export const getMembersData: GetMembersDataType = async ({
     const organizationsData_all: any[] = []
     const memberOrganizations: Record<string, Array<string>> = {}
 
-    // memberId:
-    // const membersInDefaultOrganization = []
+    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+    const membersInDefaultOrganization = []
 
     if (!organizationsData_response?.length) return
 
     for (const organizationData of organizationsData_response) {
+      if (organizationData.name === defaultOrganizationName) {
+        const {
+          membersWithRole: { nodes: organizationMembers },
+        } = organizationData
+
+        for (const { id: memberId } of organizationMembers) {
+          membersInDefaultOrganization.push(memberId)
+        }
+      }
+
       const membersData_organization = organizationData?.membersWithRole
         .nodes as Array<OrganizationMemberType>
 
@@ -72,6 +82,7 @@ export const getMembersData: GetMembersDataType = async ({
     const membersData_withOnbordingData: any = await checkMembersOnbordingConditions({
       membersData: membersData_withOrganizations,
       organizationsData: organizationsData_unique,
+      membersInDefaultOrganization,
     })
 
     // TODO interface
