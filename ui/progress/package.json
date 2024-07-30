@@ -12,6 +12,7 @@
     "dist"
   ],
   "dependencies": {
+    "@ui/condition": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*"
