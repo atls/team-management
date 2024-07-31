@@ -10,15 +10,11 @@
     "start": "node dist/src/index.cjs"
   },
   "dependencies": {
-    "@discordjs/next": "0.1.1-dev.1673526225-a580768.0",
-    "discord.js": "14.15.3",
     "graphql": "16.8.2",
-    "react-intl": "6.6.8",
-    "zlib-sync": "0.1.9"
+    "react-intl": "6.6.8"
   },
   "devDependencies": {
     "@app/base-layout": "workspace:*",
-    "@app/get-discord-server-members-api": "workspace:*",
     "@app/github-auth-cookie-api": "workspace:*",
     "@app/index-page": "workspace:*",
     "@app/loading": "workspace:*",
