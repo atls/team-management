@@ -1,0 +1,38 @@
+{
+  "name": "@app/onbording-condition-element",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@globals/constants": "workspace:*",
+    "@globals/data": "workspace:*",
+    "@ui/checkbox": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/divider": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@types/react": "^18.3.2",
+    "@types/react-dom": "18.3.0",
+    "@types/styled-system": "5.1.22",
+    "glob": "8.1.0",
+    "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/styled-system": "*",
+    "glob": "*",
+    "react": "*",
+    "styled-system": "*"
+  }
+}
