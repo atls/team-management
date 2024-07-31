@@ -1,4 +1,4 @@
-import type { OnbordingConditionDataType } from '../onbording-condition-element/index.js'
+import type { OnbordingConditionDataType } from '@app/onbording-condition-element'
 
 export const getProgressbarPercents = (onbordingData: Array<OnbordingConditionDataType>) => {
   const allOnbordingConditionLength = onbordingData.length

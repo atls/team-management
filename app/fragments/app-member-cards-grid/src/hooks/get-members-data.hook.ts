@@ -1,11 +1,10 @@
 import type { GetMembersDataType }                       from './get-members-data.interfaces.js'
 /* eslint-disable @typescript-eslint/naming-convention */
 import type { GetViewerAllOrganizationsAllMembersQuery } from '@globals/data'
-import type { OrganizationMemberType }                   from '@globals/data'
+import type { OrganizationMemberDataType }               from '@globals/data'
+import type { OrganizationDataType }                     from '@globals/data'
 
 import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS }      from '@globals/data'
-import { OrganizationMemberDataType }                    from '@globals/data'
-import { OrganizationDataType }                          from '@globals/data'
 import { octokitGraphqlClient }                          from '@globals/data'
 import { getTokenCookie }                                from '@globals/helpers'
 
@@ -43,60 +42,64 @@ export const getMembersData: GetMembersDataType = async ({
     const membersInDefaultOrganization: Array<string> = []
 
     for (const organizationData of organizationsData_response) {
-      if (!organizationData) continue
-      const {
-        membersWithRole: { nodes: organizationMembers },
-      } = organizationData
-      if (!organizationMembers) continue
+      if (organizationData) {
+        const {
+          membersWithRole: { nodes: organizationMembers },
+        } = organizationData
 
-      for (const { id: memberId } of organizationMembers as any) {
-        if (organizationData.name === defaultOrganizationName) {
-          membersInDefaultOrganization.push(memberId)
+        if (organizationMembers) {
+          for (const { id: memberId } of organizationMembers as any) {
+            if (organizationData.name === defaultOrganizationName) {
+              membersInDefaultOrganization.push(memberId)
+            }
+          }
+
+          const {
+            membersWithRole: { nodes: membersData_organization },
+          } = organizationData
+
+          if (membersData_organization) {
+            for (const memberData of membersData_organization) {
+              if (memberData) {
+                const memberId = memberData.id
+                const { id: organizationId } = organizationData
+
+                if (!memberOrganizations[memberId]) {
+                  memberOrganizations[memberId] = []
+                }
+
+                memberOrganizations[memberId].push(organizationId)
+
+                if (organizationData.name === defaultOrganizationName) {
+                  membersInDefaultOrganization.push(memberId)
+                }
+              }
+            }
+
+            membersData_all.push(...(membersData_organization as Array<OrganizationMemberDataType>))
+
+            // delete organizationData.membersWithRole
+            organizationsData_all.push(organizationData as OrganizationDataType)
+          }
         }
       }
-
-      const {
-        membersWithRole: { nodes: membersData_organization },
-      } = organizationData
-
-      if (!membersData_organization) continue
-
-      for (const { id: memberId } of membersData_organization) {
-        const { id: organizationId } = organizationData
-
-        if (!memberOrganizations[memberId]) {
-          memberOrganizations[memberId] = []
-        }
-
-        memberOrganizations[memberId].push(organizationId)
-
-        if (organizationData.name === defaultOrganizationName) {
-          membersInDefaultOrganization.push(memberId)
-        }
-      }
-
-      membersData_all.push(...membersData_organization)
-
-      // delete organizationData.membersWithRole
-      organizationsData_all.push(organizationData)
     }
 
-    const membersData_unique: any[] = getUniqueItems(membersData_all)
-    const membersData_withOrganizations = linkMemberToOrganizations({
-      membersData_unique,
-      memberOrganizations,
-    })
+    const membersData_unique: Array<OrganizationMemberDataType> = getUniqueItems(membersData_all)
+    const membersData_withOrganizations: Array<OrganizationMemberDataType> =
+      linkMemberToOrganizations({
+        membersData_unique,
+        memberOrganizations,
+      })
 
     const organizationsData_unique: any = getUniqueItems(organizationsData_all)
 
     const membersData_withOnbordingData: any = await checkMembersOnbordingConditions({
       membersData: membersData_withOrganizations,
-      organizationsData: organizationsData_unique,
       membersInDefaultOrganization,
       membersWithou2fa,
     })
 
-    // TODO interface
     setMembersData(membersData_withOnbordingData)
     setOrganizationsData(organizationsData_unique)
   } catch (e: any) {

@@ -8,6 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@app/onbording-condition-element": "workspace:*",
     "@app/organizations-modal": "workspace:*",
     "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",

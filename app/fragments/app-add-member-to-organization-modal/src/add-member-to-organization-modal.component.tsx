@@ -1,5 +1,5 @@
 import type { OrganizationTeamType }         from '@globals/data'
-import type { OrganizationMemberType }       from '@globals/data'
+import type { OrganizationMemberDataType }   from '@globals/data'
 
 import { useTheme }                          from '@emotion/react'
 
@@ -36,7 +36,7 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
   const theme = useTheme() as ThemeType
 
   const [inviteButtonState, setInviteButtonState] = useState<InviteButtonStateType>('disabled')
-  const [selectedUsers, setSelectedUsers] = useState<Array<OrganizationMemberType>>([])
+  const [selectedUsers, setSelectedUsers] = useState<Array<OrganizationMemberDataType>>([])
   const [selectedTeams, setSelectedTeams] = useState<Array<OrganizationTeamType>>([])
   const [teamsData, setTeamsData] = useState<Array<OrganizationTeamType>>([])
 

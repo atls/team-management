@@ -30,7 +30,9 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
 }) => {
   const theme = useTheme() as ThemeType
   const toast = useToast() as ToastType
+
   const [isRemoveRequestOpen, setRemoveRequestOpen] = useState<boolean>(false)
+
   const { login: organizationLogin, avatarUrl, name, viewerCanAdminister } = organizationData
   const { ICON_PROPS } = getConstats({ theme })
 

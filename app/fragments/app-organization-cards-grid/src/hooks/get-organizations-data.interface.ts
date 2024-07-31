@@ -8,7 +8,7 @@ export type GetOrganizationsDataType = ({
   organizationMembersLimit,
 }: {
   toast: ToastType
-  setOrganizationsData: (organizationData: OrganizationDataType) => void
+  setOrganizationsData: (organizationData: Array<OrganizationDataType>) => void
   organizationsLimit: number
   organizationMembersLimit: number
 }) => void

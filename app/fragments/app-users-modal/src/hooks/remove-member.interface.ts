@@ -1,5 +1,5 @@
-import type { OrganizationMemberType } from '@globals/data'
-import type { ToastType }              from '@stores/toast-notification'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { ToastType }                  from '@stores/toast-notification'
 
 export type RemoveMemberType = ({
   organizationLogin,
@@ -10,7 +10,7 @@ export type RemoveMemberType = ({
 }: {
   organizationLogin: string
   removeMemberLogin: string
-  membersData: Array<OrganizationMemberType>
-  setMembersData: (newMembersData: Array<OrganizationMemberType>) => void
+  membersData: Array<OrganizationMemberDataType>
+  setMembersData: (newMembersData: Array<OrganizationMemberDataType>) => void
   toast: ToastType
 }) => void

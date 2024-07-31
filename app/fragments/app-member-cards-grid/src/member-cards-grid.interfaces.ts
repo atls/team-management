@@ -1,4 +1,4 @@
-import type { MemberWithOnbordingDataType } from '@app/member-card'
+import type { MemberWithOnbordingDataType } from '@globals/data'
 import type { OrganizationDataType }        from '@globals/data'
 import type { ToastType }                   from '@stores/toast-notification'
 

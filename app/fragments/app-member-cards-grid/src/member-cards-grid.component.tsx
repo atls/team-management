@@ -1,7 +1,7 @@
 'use client'
 
 import type { MemberCardsGridProps }        from './member-cards-grid.interfaces.js'
-import type { MemberWithOnbordingDataType } from '@app/member-card'
+import type { MemberWithOnbordingDataType } from '@globals/data'
 import type { OrganizationDataType }        from '@globals/data'
 
 import { useTheme }                         from '@emotion/react'

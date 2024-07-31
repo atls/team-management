@@ -1,8 +1,7 @@
 'use client'
 
 import type { MemberCardProps }            from './member-card.interfaces.js'
-import type { OnbordingConditionDataType } from './onbording-condition-element/index.js'
-import type { OrganizationMemberType }     from '@globals/data'
+import type { OnbordingConditionDataType } from '@app/onbording-condition-element'
 
 import styled                              from '@emotion/styled'
 import { useTheme }                        from '@emotion/react'
@@ -11,12 +10,12 @@ import React                               from 'react'
 import { FC }                              from 'react'
 import { useState }                        from 'react'
 
+import { OnbordingConditionElement }       from '@app/onbording-condition-element'
 import { Box }                             from '@ui/layout'
 import { Progress }                        from '@ui/progress'
 import { ThemeType }                       from '@ui/theme'
 
 import { ImageGrop }                       from './image-group/index.js'
-import { OnbordingConditionElement }       from './onbording-condition-element/index.js'
 import { getProgressbarPercents }          from './helpers/index.js'
 import { getMemberOrganizationsData }      from './helpers/index.js'
 import { baseStyles }                      from './member-card.styles.js'
@@ -41,7 +40,7 @@ export const MemberCard: FC<MemberCardProps> = ({
   return (
     <MemberCardContainer>
       <ImageGrop
-        memberData={memberData as OrganizationMemberType}
+        memberData={memberData}
         memberOrganizationsDataState={memberOrganizationsDataState}
         timerMilliseconds={timerMilliseconds}
       />

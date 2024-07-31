@@ -28,7 +28,7 @@ export const getOrganizatoinTeamsHook: GetOrganizationTeamsType = async ({
         },
       } = response
 
-      setTeamsData(teamsData as OrganizationTeamType)
+      setTeamsData(teamsData as Array<OrganizationTeamType>)
     }
   } catch (e: any) {
     // eslint-disable-next-line no-console

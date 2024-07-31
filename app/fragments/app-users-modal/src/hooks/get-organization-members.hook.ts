@@ -1,6 +1,6 @@
 import { GET_ORGANIZATION_MEMBERS }    from '@globals/data'
 import { GetOrganizationMembersQuery } from '@globals/data'
-import { OrganizationMemberType }      from '@globals/data'
+import { OrganizationMemberDataType }  from '@globals/data'
 import { octokitGraphqlClient }        from '@globals/data'
 import { getTokenCookie }              from '@globals/helpers'
 
@@ -28,7 +28,7 @@ export const getOrganizationMembersHook: GetOrganizationMembersType = async ({
         },
       } = response
 
-      setMembersData(membersData as OrganizationMemberType)
+      setMembersData(membersData as Array<OrganizationMemberDataType>)
     }
   } catch (e: any) {
     // eslint-disable-next-line no-console

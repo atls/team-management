@@ -16,7 +16,7 @@ export const inviteButtonClickHook: InviteButtonClickType = async ({
   try {
     const restClient = createOctokitRestClient(token)
     for await (const selectedUser of selectedUsers) {
-      const { githubUserId } = selectedUser
+      const { id: githubUserId } = selectedUser
 
       const query = inviteMemberToOrganizationQuery({
         organizationLogin,

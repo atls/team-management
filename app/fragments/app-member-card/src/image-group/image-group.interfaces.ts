@@ -1,10 +1,10 @@
-import type { OrganizationMemberType } from '@globals/data'
-import type { OrganizationDataType }   from '@globals/data'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { OrganizationDataType }       from '@globals/data'
 
-import { useState }                    from 'react'
+import { useState }                        from 'react'
 
 export type ImageGroupProps = {
-  memberData: OrganizationMemberType
+  memberData: OrganizationMemberDataType
   memberOrganizationsDataState: ReturnType<typeof useState<Array<OrganizationDataType>>>
   timerMilliseconds?: number
 }

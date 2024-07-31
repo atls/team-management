@@ -30,7 +30,9 @@ export const ImageGrop: FC<ImageGroupProps> = ({
     <ImageGroupContainer>
       <ImageBlock src={avatarUrl} alt='user-avatar' />
       <FrontLayerContainer>
-        <TextGroup name={name} bio={bio} />
+        <Condition match={Boolean(name)}>
+          <TextGroup name={name as string} bio={bio as string} />
+        </Condition>
         <Row justifyContent='space-between'>
           <OrganizationsButton
             memberLogin={memberLogin}
