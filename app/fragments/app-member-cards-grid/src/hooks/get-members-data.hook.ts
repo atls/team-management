@@ -4,12 +4,13 @@ import type { GetViewerAllOrganizationsAllMembersQuery } from '@globals/data'
 import type { OrganizationMemberType }                   from '@globals/data'
 
 import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS }      from '@globals/data'
-import { createOctokitRestClient }                       from '@globals/data'
+import { OrganizationMemberDataType }                    from '@globals/data'
+import { OrganizationDataType }                          from '@globals/data'
 import { octokitGraphqlClient }                          from '@globals/data'
-import { getGithubOrganizationMembersWithout2fa }        from '@globals/data'
 import { getTokenCookie }                                from '@globals/helpers'
 
 import { checkMembersOnbordingConditions }               from './check-members-onbording-conditions.hook.js'
+import { getMembersWithout2fa }                          from './get-members-withot-2fa.hook.js'
 import { getUniqueItems }                                from './helpers/index.js'
 import { linkMemberToOrganizations }                     from './helpers/index.js'
 
@@ -31,56 +32,47 @@ export const getMembersData: GetMembersDataType = async ({
     })) as GetViewerAllOrganizationsAllMembersQuery
 
     const organizationsData_response = response.viewer.organizations.nodes
-
-    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
-    const membersInDefaultOrganization = []
-
-    const restClient = createOctokitRestClient(token)
-    const query = getGithubOrganizationMembersWithout2fa({
-      organizatoinName: defaultOrganizationName,
-    }) as [any]
-
-    const restResponse = await restClient(...query)
-
-    const membersWithou2fa = []
-
-    if (restResponse.data.length) {
-      for (const { id: memberId } of restResponse.data) {
-        membersWithou2fa.push(memberId)
-      }
-    }
-
-    // TODO interfaces
-    const membersData_all: any[] = []
-    const organizationsData_all: any[] = []
-    const memberOrganizations: Record<string, Array<string>> = {}
-
     if (!organizationsData_response?.length) return
 
-    for (const organizationData of organizationsData_response) {
-      if (organizationData.name === defaultOrganizationName) {
-        const {
-          membersWithRole: { nodes: organizationMembers },
-        } = organizationData
+    const membersData_all: Array<OrganizationMemberDataType> = []
+    const organizationsData_all: Array<OrganizationDataType> = []
+    const memberOrganizations: Record<string, Array<string>> = {}
 
-        for (const { id: memberId } of organizationMembers) {
+    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+    const membersWithou2fa = await getMembersWithout2fa(token)
+    const membersInDefaultOrganization: Array<string> = []
+
+    for (const organizationData of organizationsData_response) {
+      if (!organizationData) continue
+      const {
+        membersWithRole: { nodes: organizationMembers },
+      } = organizationData
+      if (!organizationMembers) continue
+
+      for (const { id: memberId } of organizationMembers as any) {
+        if (organizationData.name === defaultOrganizationName) {
           membersInDefaultOrganization.push(memberId)
         }
       }
 
-      const membersData_organization = organizationData?.membersWithRole
-        .nodes as Array<OrganizationMemberType>
+      const {
+        membersWithRole: { nodes: membersData_organization },
+      } = organizationData
 
-      for (const memberData of membersData_organization) {
-        const { id: memberId } = memberData
-        // TODO interface
-        const { id: organizationId } = organizationData as any
+      if (!membersData_organization) continue
+
+      for (const { id: memberId } of membersData_organization) {
+        const { id: organizationId } = organizationData
 
         if (!memberOrganizations[memberId]) {
           memberOrganizations[memberId] = []
         }
 
         memberOrganizations[memberId].push(organizationId)
+
+        if (organizationData.name === defaultOrganizationName) {
+          membersInDefaultOrganization.push(memberId)
+        }
       }
 
       membersData_all.push(...membersData_organization)

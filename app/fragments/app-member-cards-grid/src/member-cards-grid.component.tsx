@@ -25,10 +25,8 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
-  // const [pendingMembersData, setPendingMembersData] = useState<Array<OrganizationMemberType>>([])
   const pendingMembersData = []
 
-  // TODO member with onbording data interface
   const [membersData, setMembersData] = useState<Array<MemberWithOnbordingDataType>>([])
   const [organizationsData, setOrganizationsData] = useState<Array<OrganizationDataType>>([])
 
