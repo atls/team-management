@@ -1,8 +1,7 @@
-import type { RemoveMemberType }         from './remove-member.interface.js'
+import type { RemoveMemberType }            from './remove-member.interface.js'
 
-import { createOctokitRestClient }       from '@globals/data'
-import { removeOrganizationMemberQuery } from '@globals/data'
-import { getTokenCookie }                from '@globals/helpers'
+import { removeOrganizationMemberGetQuery } from '@globals/data'
+import { requestOctokitRestData }           from '@globals/data'
 
 export const removeMemberHook: RemoveMemberType = async ({
   organizationLogin,
@@ -11,17 +10,13 @@ export const removeMemberHook: RemoveMemberType = async ({
   setMembersData,
   toast,
 }) => {
-  const token = getTokenCookie(document)
-
   try {
-    const restClient = createOctokitRestClient(token)
-
-    const query = removeOrganizationMemberQuery({
+    const query = removeOrganizationMemberGetQuery({
       memberLogin: removeMemberLogin,
       organizationLogin,
-    }) as [any]
+    })
 
-    await restClient(...query)
+    await requestOctokitRestData(document, query)
 
     const newMembersData = membersData.filter(({ login }) => login !== removeMemberLogin)
     setMembersData(newMembersData)

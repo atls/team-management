@@ -1,6 +1,12 @@
+import type { GetRestQueryType } from '../index.js'
+
 const MEMBER_ROLE = 'direct_member'
 
-export const inviteMemberToOrganizationQuery = ({ organizationLogin, githubUserId, teamIds }) => [
+export const inviteMemberToOrganizationGetQuery: GetRestQueryType = ({
+  organizationLogin,
+  githubUserId,
+  teamIds,
+}) => [
   'POST /orgs/{org}/invitations',
   {
     org: organizationLogin,

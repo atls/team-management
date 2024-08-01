@@ -4,12 +4,12 @@ import type { GetViewerAllOrganizationsAllMembersQuery } from '@globals/data'
 import type { OrganizationMemberDataType }               from '@globals/data'
 import type { OrganizationDataType }                     from '@globals/data'
 
+import { getMembersWithout2fa }                          from '@globals/third-party'
+
 import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS }      from '@globals/data'
-import { octokitGraphqlClient }                          from '@globals/data'
-import { getTokenCookie }                                from '@globals/helpers'
+import { requestOctokitGraphqlData }                     from '@globals/data'
 
 import { checkMembersOnbordingConditions }               from './check-members-onbording-conditions.hook.js'
-import { getMembersWithout2fa }                          from './get-members-withot-2fa.hook.js'
 import { getUniqueItems }                                from './helpers/index.js'
 import { linkMemberToOrganizations }                     from './helpers/index.js'
 
@@ -21,14 +21,14 @@ export const getMembersData: GetMembersDataType = async ({
   organizationMembersLimit,
 }) => {
   try {
-    const token = getTokenCookie(document)
-
-    const client = octokitGraphqlClient(token)
-
-    const response = (await client(GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS, {
-      organizationsLimit,
-      organizationMembersLimit,
-    })) as GetViewerAllOrganizationsAllMembersQuery
+    const response = (await requestOctokitGraphqlData(
+      document,
+      GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS,
+      {
+        organizationsLimit,
+        organizationMembersLimit,
+      }
+    )) as GetViewerAllOrganizationsAllMembersQuery
 
     const organizationsData_response = response.viewer.organizations.nodes
     if (!organizationsData_response?.length) return
@@ -38,7 +38,7 @@ export const getMembersData: GetMembersDataType = async ({
     const memberOrganizations: Record<string, Array<string>> = {}
 
     const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
-    const membersWithou2fa = await getMembersWithout2fa(token)
+    const membersWithou2fa = await getMembersWithout2fa(document)
     const membersInDefaultOrganization: Array<string> = []
 
     for (const organizationData of organizationsData_response) {

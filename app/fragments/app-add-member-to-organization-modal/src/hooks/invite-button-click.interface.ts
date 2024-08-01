@@ -10,7 +10,7 @@ export type InviteButtonClickType = ({
   setInviteButtonState,
 }: {
   organizationLogin: string
-  selectedTeams: Array<OrganizationTeamType>
+  selectedTeams: string
   toast: ToastType
   selectedUsers: Array<OrganizationMemberDataType>
   setInviteButtonState: (state: string) => void

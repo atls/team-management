@@ -1,6 +1,11 @@
+import type { GetRestQueryType } from '../index.js'
+
 const MEMBER_ROLE = 'direct_member'
 
-export const inviteMemberToOrgaizationEmailQuery = ({ organizatoinName, memberEmailAdress }) => [
+export const inviteMemberToOrgaizationEmailGetQuery: GetRestQueryType = ({
+  organizatoinName,
+  memberEmailAdress,
+}) => [
   'POST /orgs/{org}/invitations',
   {
     org: organizatoinName,
