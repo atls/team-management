@@ -1,6 +1,6 @@
-import { Octokit }                     from '@octokit/core'
+import type { CreateOctokitRestClientType } from '../octokit-rest.interfaces.js'
 
-import { CreateOctokitRestClientType } from './create-octokit-rest-client.interface.js'
+import { Octokit }                          from '@octokit/core'
 
 export const createOctokitRestClient: CreateOctokitRestClientType = (token: string) => {
   const octokit = new Octokit({

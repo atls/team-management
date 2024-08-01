@@ -1,4 +1,5 @@
-import type { Endpoints } from '@octokit/types'
+import type { Endpoints }        from '@octokit/types'
+import type { RequestInterface } from '@octokit/types'
 
 export type DocumentType = typeof document
 
@@ -14,3 +15,5 @@ export type RequestOctokitRestDataType = (
 ) => Promise<EndpointResponseType>
 
 export type GetRestQueryType = (queryValues: Record<string, string>) => QueryType
+
+export type CreateOctokitRestClientType = (token: string) => RequestInterface<object>
