@@ -1,12 +1,18 @@
-import React            from 'react'
+import type { GetOnbordingConditionListType } from './member-card.interfaces.js'
 
-import { GitHubIcon }   from '@ui/icons'
-import { TelegramIcon } from '@ui/icons'
-import { FigmaIcon }    from '@ui/icons'
-import { DiscordIcon }  from '@ui/icons'
-import { ThemeType }    from '@ui/theme'
+import React                                  from 'react'
 
-export const getOnbordingConditionList = ({ theme }: { theme: ThemeType }) => {
+import { GitHubIcon }                         from '@ui/icons'
+import { TelegramIcon }                       from '@ui/icons'
+import { FigmaIcon }                          from '@ui/icons'
+import { DiscordIcon }                        from '@ui/icons'
+import { ThemeType }                          from '@ui/theme'
+
+export const getOnbordingConditionList: GetOnbordingConditionListType = ({
+  theme,
+}: {
+  theme: ThemeType
+}) => {
   const ICON_PROPS = { with: theme.spaces.semiMedium, height: theme.spaces.semiMedium }
 
   const onbordingConditionList = [

@@ -1,6 +1,6 @@
-import type { OnbordingConditionDataType } from '@app/onbording-condition-element'
+import type { GetProgressbarPercentsType } from './get-progressbar-percents.interface.js'
 
-export const getProgressbarPercents = (onbordingData: Array<OnbordingConditionDataType>) => {
+export const getProgressbarPercents: GetProgressbarPercentsType = (onbordingData) => {
   const allOnbordingConditionLength = onbordingData.length
   const checkedOnbordingConditionLength = onbordingData.filter(
     ({ conditionState }) => conditionState

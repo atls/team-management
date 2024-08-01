@@ -16,7 +16,7 @@ import { Timer }                     from './timer/index.js'
 import { imageGroupContainerStyles } from './image-group.styles.js'
 import { frontLayerStyles }          from './image-group.styles.js'
 
-export const ImageGrop: FC<ImageGroupProps> = ({
+export const ImageGroup: FC<ImageGroupProps> = ({
   memberData,
   memberOrganizationsDataState,
   timerMilliseconds,
