@@ -1,7 +1,7 @@
 import type { Endpoints }        from '@octokit/types'
 import type { RequestInterface } from '@octokit/types'
 
-export type DocumentType = typeof document
+type DocumentType = typeof document
 
 type EndpointType = Endpoints[keyof Endpoints]
 export type EndpointParametersType = EndpointType['parameters']

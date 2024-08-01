@@ -1,4 +1,3 @@
-import type { OrganizationTeamType }       from '@globals/data'
 import type { OrganizationMemberDataType } from '@globals/data'
 import type { ToastType }                  from '@stores/toast-notification'
 
