@@ -1,6 +1,8 @@
-import { graphql } from '@octokit/graphql'
+import type { CreateOctokitGraphqlClientType } from '../octokit-graphql.interfaces.js'
 
-export const createOctokitGraphqlClient = (token: string) => {
+import { graphql }                             from '@octokit/graphql'
+
+export const createOctokitGraphqlClient: CreateOctokitGraphqlClientType = (token: string) => {
   const graphqlClient = graphql.defaults({
     headers: {
       authorization: `token ${token}`,
