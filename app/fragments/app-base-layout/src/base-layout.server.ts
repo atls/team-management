@@ -19,9 +19,9 @@ export const BaseLayoutServer = async () => {
     const { viewer } = response
     return viewer
   } catch (e: any) {
-    if (e.status === 401) {
-      redirect('/registration')
-    }
-    throw e
+    // eslint-disable-next-line no-console
+    console.error(e)
+    redirect('/registration')
+    return {}
   }
 }
