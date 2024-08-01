@@ -1,10 +1,8 @@
-import type { GetOrganizationsDataType }    from './get-organizations-data.interface.js'
-import type { GetViewerOrganizationsQuery } from '@globals/data'
-import type { OrganizationDataType }        from '@globals/data'
+import type { GetOrganizationsDataType } from './get-organizations-data.interface.js'
+import type { OrganizationDataType }     from '@globals/data'
 
-import { GET_VIEWER_ORGANIZATIONS }         from '@globals/data'
-import { octokitGraphqlClient }             from '@globals/data'
-import { getTokenCookie }                   from '@globals/helpers'
+import { GET_VIEWER_ORGANIZATIONS }      from '@globals/data'
+import { requestOctokitGraphqlData }     from '@globals/data'
 
 export const getOrganizationsData: GetOrganizationsDataType = async ({
   organizationsLimit,
@@ -13,13 +11,10 @@ export const getOrganizationsData: GetOrganizationsDataType = async ({
   toast,
 }) => {
   try {
-    const token = getTokenCookie(document)
-    const client = octokitGraphqlClient(token)
-
-    const response = (await client(GET_VIEWER_ORGANIZATIONS, {
+    const response = await requestOctokitGraphqlData(document, GET_VIEWER_ORGANIZATIONS, {
       organizationsLimit,
       organizationMembersLimit,
-    })) as GetViewerOrganizationsQuery
+    })
 
     const {
       viewer: {
