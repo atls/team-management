@@ -46,10 +46,10 @@ export const InviteMemberModalHook = ({
 
     try {
       if (ghOrgName) {
-        sendInviteEmailGhApiHook({ document, inputValues, ghOrgName })
+        sendInviteEmailGhApiHook({ document, inputValues, ghOrgName, toast })
       }
       if (selectedInvites.length) {
-        await sendInviteEmailHook({ emails: inputValues, selectedInvites })
+        sendInviteEmailHook({ emails: inputValues, selectedInvites, toast })
       }
       setInviteButtonState('successed')
     } catch (e: any) {
