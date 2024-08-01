@@ -8,6 +8,6 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/data": "workspace:*"
+    "@globals/third-party": "workspace:*"
   }
 }
