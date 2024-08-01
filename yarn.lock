@@ -224,7 +224,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/github-auth-cookie-api@workspace:app/api/github-auth-cookie"
   dependencies:
-    "@globals/data": "workspace:*"
+    "@globals/third-party": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -382,6 +382,7 @@ __metadata:
     "@globals/constants": "workspace:*"
     "@globals/data": "workspace:*"
     "@globals/helpers": "workspace:*"
+    "@globals/third-party": "workspace:*"
     "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -2450,6 +2451,7 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@app/onbording-condition-element": "workspace:*"
+    "@globals/helpers": "workspace:*"
     "@graphql-codegen/cli": "npm:5.0.2"
     "@graphql-codegen/client-preset": "npm:4.2.4"
     "@graphql-codegen/typescript": "npm:4.0.6"
@@ -2457,6 +2459,7 @@ __metadata:
     "@graphql-typed-document-node/core": "npm:3.2.0"
     "@octokit/core": "npm:6.1.2"
     "@octokit/graphql": "npm:8.1.1"
+    "@octokit/types": "npm:13.5.0"
     graphql: "npm:15.8.0"
   peerDependencies:
     "@octokit/core": "*"
@@ -2485,6 +2488,14 @@ __metadata:
     "@types/mjml": "npm:^4"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:6.9.14"
+  languageName: unknown
+  linkType: soft
+
+"@globals/third-party@workspace:*, @globals/third-party@workspace:globals/third-party":
+  version: 0.0.0-use.local
+  resolution: "@globals/third-party@workspace:globals/third-party"
+  dependencies:
+    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -3913,7 +3924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^13.0.0, @octokit/types@npm:^13.1.0, @octokit/types@npm:^13.4.1, @octokit/types@npm:^13.5.0":
+"@octokit/types@npm:13.5.0, @octokit/types@npm:^13.0.0, @octokit/types@npm:^13.1.0, @octokit/types@npm:^13.4.1, @octokit/types@npm:^13.5.0":
   version: 13.5.0
   resolution: "@octokit/types@npm:13.5.0"
   dependencies:
