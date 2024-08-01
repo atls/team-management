@@ -1,23 +1,23 @@
 'use client'
 
-import type { MemberCardsGridProps }        from './member-cards-grid.interfaces.js'
-import type { MemberWithOnbordingDataType } from '@globals/data'
-import type { OrganizationDataType }        from '@globals/data'
+import type { MemberCardsGridProps }            from './use-get-members-data.interfaces.js'
+import type { MemberWithOrganizationsDataType } from '@app/member-card'
+import type { OrganizationDataType }            from '@globals/data'
 
-import { useTheme }                         from '@emotion/react'
+import { useTheme }                             from '@emotion/react'
 
-import React                                from 'react'
-import { FC }                               from 'react'
-import { memo }                             from 'react'
-import { useState }                         from 'react'
+import React                                    from 'react'
+import { FC }                                   from 'react'
+import { memo }                                 from 'react'
+import { useState }                             from 'react'
 
-import { MemberCard }                       from '@app/member-card'
-import { GridAutoRows }                     from '@ui/layout'
-import { ThemeType }                        from '@ui/theme'
-import { useToast }                         from '@stores/toast-notification'
+import { MemberCard }                           from '@app/member-card'
+import { GridAutoRows }                         from '@ui/layout'
+import { ThemeType }                            from '@ui/theme'
+import { useToast }                             from '@stores/toast-notification'
 
-import { MOCK_PENDING_MEMBER_TIMER }        from './member-cards-grid.constants.js'
-import { MemberCardsGridHook }              from './member-cards-grid.hook.js'
+import { MOCK_PENDING_MEMBER_TIMER }            from './member-cards-grid.constants.js'
+import { useGetMembersDataHook }                from './use-get-members-data.hook.js'
 
 const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
   organizationsLimit,
@@ -28,10 +28,10 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
 
   const pendingMembersData = []
 
-  const [membersData, setMembersData] = useState<Array<MemberWithOnbordingDataType>>([])
+  const [membersData, setMembersData] = useState<Array<MemberWithOrganizationsDataType>>([])
   const [organizationsData, setOrganizationsData] = useState<Array<OrganizationDataType>>([])
 
-  MemberCardsGridHook({
+  useGetMembersDataHook({
     toast,
     organizationsLimit,
     organizationMembersLimit,

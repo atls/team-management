@@ -1,5 +1,5 @@
-export const linkMemberToOrganizations = ({ membersData_unique, memberOrganizations }) => {
-  const linkedMembersData = membersData_unique.map((memberData) => {
+export const linkMemberToOrganizations = ({ uniqueMembersData, memberOrganizations }) => {
+  const linkedMembersData = uniqueMembersData.map((memberData) => {
     const { id: memberId } = memberData
     return {
       ...memberData,

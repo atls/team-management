@@ -7,7 +7,7 @@ export type MemberCardsGridProps = {
   organizationMembersLimit: number
 }
 
-export type MemberCardsGridHookType = ({
+export type UseGetMembersDataHookType = ({
   toast,
   membersData,
   setMembersData,
