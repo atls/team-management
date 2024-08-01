@@ -1,6 +1,6 @@
-import { createOctokitRestClient }       from '@globals/data'
-import { removeOrganizationMemberQuery } from '@globals/data'
-import { getTokenCookie }                from '@globals/helpers'
+import { createOctokitRestClient }          from '@globals/data'
+import { removeOrganizationMemberGetQuery } from '@globals/data'
+import { getTokenCookie }                   from '@globals/helpers'
 
 export const removeMemberFromOrganization = async ({
   toast,
@@ -14,10 +14,10 @@ export const removeMemberFromOrganization = async ({
   try {
     const restClient = createOctokitRestClient(token)
 
-    const query = removeOrganizationMemberQuery({
+    const query = removeOrganizationMemberGetQuery({
       memberLogin: removeMemberLogin,
       organizationLogin,
-    }) as [any]
+    })
 
     await restClient(...query)
 
