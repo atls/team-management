@@ -16,6 +16,7 @@ import { GridAutoRows }                     from '@ui/layout'
 import { ThemeType }                        from '@ui/theme'
 import { useToast }                         from '@stores/toast-notification'
 
+import { MOCK_PENDING_MEMBER_TIMER }        from './member-cards-grid.constants.js'
 import { MemberCardsGridHook }              from './member-cards-grid.hook.js'
 
 const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
@@ -40,8 +41,6 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
     setOrganizationsData,
   })
 
-  const timerMilliseconds = 17000
-
   return (
     <GridAutoRows
       columns={[theme.spaces.s1, theme.spaces.s2, theme.spaces.semiTiny]}
@@ -52,7 +51,7 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
         <MemberCard
           memberData={memberData}
           organizationsData={organizationsData}
-          timerMilliseconds={timerMilliseconds}
+          timerMilliseconds={MOCK_PENDING_MEMBER_TIMER}
         />
       ))}
       {membersData.map((memberData) => (

@@ -9,7 +9,6 @@ export const MemberCardsGridHook: MemberCardsGridHookType = ({
   organizationMembersLimit,
   membersData,
   setMembersData,
-  // organizationsData,
   setOrganizationsData,
 }) => {
   useEffect(() => {
