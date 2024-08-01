@@ -19,18 +19,25 @@ export const getOnbordingConditionIcon: GetOnbordingConditionIconType = ({
   const ICON_PROPS = { with: theme.spaces.semiMedium, height: theme.spaces.semiMedium }
 
   let conditionIcon: JSX.Element
-  if (conditionIconName === githubIconName) {
-    conditionIcon = <GitHubIcon {...ICON_PROPS} />
-  } else if (conditionIconName === discordIconName) {
-    conditionIcon = <DiscordIcon {...ICON_PROPS} />
-  } else if (conditionIconName === figmaIconName) {
-    conditionIcon = <FigmaIcon {...ICON_PROPS} />
-  } else if (conditionIconName === telegramIconName) {
-    conditionIcon = <TelegramIcon {...ICON_PROPS} />
-  } else {
-    // eslint-disable-next-line no-console
-    console.log(`for onbordingCondition ${conditionName} icon not selected, used default`)
-    conditionIcon = <TeamIcon {...ICON_PROPS} />
+
+  switch (conditionIconName) {
+    case githubIconName:
+      conditionIcon = <GitHubIcon {...ICON_PROPS} />
+      break
+    case discordIconName:
+      conditionIcon = <DiscordIcon {...ICON_PROPS} />
+      break
+    case figmaIconName:
+      conditionIcon = <FigmaIcon {...ICON_PROPS} />
+      break
+    case telegramIconName:
+      conditionIcon = <TelegramIcon {...ICON_PROPS} />
+      break
+    default:
+      // eslint-disable-next-line no-console
+      console.log(`for onbordingCondition ${conditionName} icon not selected, used default`)
+      conditionIcon = <TeamIcon {...ICON_PROPS} />
+      break
   }
 
   return conditionIcon
