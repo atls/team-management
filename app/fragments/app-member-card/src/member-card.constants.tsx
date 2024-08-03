@@ -6,13 +6,8 @@ import { GitHubIcon }                         from '@ui/icons'
 import { TelegramIcon }                       from '@ui/icons'
 import { FigmaIcon }                          from '@ui/icons'
 import { DiscordIcon }                        from '@ui/icons'
-import { ThemeType }                          from '@ui/theme'
 
-export const getOnbordingConditionList: GetOnbordingConditionListType = ({
-  theme,
-}: {
-  theme: ThemeType
-}) => {
+export const getOnbordingConditionList: GetOnbordingConditionListType = ({ theme }) => {
   const ICON_PROPS = { with: theme.spaces.semiMedium, height: theme.spaces.semiMedium }
 
   const onbordingConditionList = [
