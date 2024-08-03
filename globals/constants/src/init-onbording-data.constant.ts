@@ -10,22 +10,21 @@ export const INIT_ONBORDING_DATA = [
     conditionIconName: githubIconName,
   },
   {
-    // TODO нет данных collaborators по предложенному ендпоинту
+    // TODO cant get collaborators data by figma rest api endpoint
     conditionName: 'atlsFigmaTeam',
     conditionState: false,
     conditionDisplayName: 'Figma',
     conditionIconName: figmaIconName,
   },
   {
-    // TODO для запроса мембера из телеграм-группы нужен user_id
-    // имея username, получить его мы не можем без взаимодействия с ботом
+    // TODO cant check group membership without telegram-user-id
     conditionName: 'atlsTelegramGroup',
     conditionState: false,
     conditionDisplayName: 'Telegram',
     conditionIconName: telegramIconName,
   },
   {
-    // TODO в процессе. ошибка пакета
+    // TODO discord.js package error
     conditionName: 'atlsDiscordGroup',
     conditionState: false,
     conditionDisplayName: 'Discord',
@@ -38,16 +37,15 @@ export const INIT_ONBORDING_DATA = [
     conditionIconName: githubIconName,
   },
   {
-    // TODO уточнить информацию, кактоможно сделать
+    // TODO
     conditionName: 'github2gpg',
     conditionState: false,
     conditionDisplayName: 'GPG',
     conditionIconName: githubIconName,
   },
   {
-    // TODO если добавить к url аватара querParam s,
-    // то у генерируемого аватара не будет меняться размер
-    // у пользовательского, персонального аватара изменится размер
+    // TODO needs to check generated avatar and user-uploaded
+    // generated avatar dont resizes on s=size url searchParam
     conditionName: 'githubAvatar',
     conditionState: false,
     conditionDisplayName: 'Avatar',
