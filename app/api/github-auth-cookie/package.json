@@ -8,6 +8,6 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/third-party": "workspace:*"
+    "@globals/github-hooks": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@globals/third-party",
+  "name": "@globals/github-hooks",
   "version": "0.0.1",
   "type": "module",
   "exports": {

@@ -4,7 +4,7 @@ import type { MemberWithOrganizationsDataType } from '@app/member-card'
 import type { OrganizationMemberDataType }      from '@globals/data'
 import type { OrganizationDataType }            from '@globals/data'
 
-import { getMembersWithout2fa }                 from '@globals/third-party'
+import { getMembersWithout2fa }                 from '@globals/github-hooks'
 
 import { getMembersWithOnbordingData }          from './getters/index.js'
 import { getResponseOrganizationsData }         from './getters/index.js'

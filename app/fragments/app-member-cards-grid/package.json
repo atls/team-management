@@ -11,8 +11,8 @@
     "@app/member-card": "workspace:*",
     "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",
+    "@globals/github-hooks": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@globals/third-party": "workspace:*",
     "@stores/toast-notification": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/theme": "workspace:*"
