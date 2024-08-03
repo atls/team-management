@@ -224,7 +224,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@app/github-auth-cookie-api@workspace:app/api/github-auth-cookie"
   dependencies:
-    "@globals/third-party": "workspace:*"
+    "@globals/github-hooks": "workspace:*"
   languageName: unknown
   linkType: soft
 
@@ -381,8 +381,8 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@globals/constants": "workspace:*"
     "@globals/data": "workspace:*"
+    "@globals/github-hooks": "workspace:*"
     "@globals/helpers": "workspace:*"
-    "@globals/third-party": "workspace:*"
     "@stores/toast-notification": "workspace:*"
     "@types/react": "npm:^18.3.2"
     "@types/react-dom": "npm:18.3.0"
@@ -2475,6 +2475,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@globals/github-hooks@workspace:*, @globals/github-hooks@workspace:globals/github-hooks":
+  version: 0.0.0-use.local
+  resolution: "@globals/github-hooks@workspace:globals/github-hooks"
+  dependencies:
+    "@globals/data": "workspace:*"
+  languageName: unknown
+  linkType: soft
+
 "@globals/helpers@workspace:*, @globals/helpers@workspace:globals/helpers":
   version: 0.0.0-use.local
   resolution: "@globals/helpers@workspace:globals/helpers"
@@ -2488,14 +2496,6 @@ __metadata:
     "@types/mjml": "npm:^4"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:6.9.14"
-  languageName: unknown
-  linkType: soft
-
-"@globals/third-party@workspace:*, @globals/third-party@workspace:globals/third-party":
-  version: 0.0.0-use.local
-  resolution: "@globals/third-party@workspace:globals/third-party"
-  dependencies:
-    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 
