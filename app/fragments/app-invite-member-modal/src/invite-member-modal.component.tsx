@@ -25,7 +25,6 @@ import { InviteMemberModalProps } from './invite-member-modal.interfaces.js'
 import { CheckedSwitchesType }    from './invite-member-modal.interfaces.js'
 import { getSwitchList }          from './ivnite-member-modal.constants.js'
 
-// TODO change button to invite button fragment
 export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const toast = useToast()
   const theme = useTheme() as ThemeType

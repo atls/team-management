@@ -12,7 +12,10 @@
     "dist"
   ],
   "dependencies": {
-    "@atls-ui-parts/progress": "0.1.1"
+    "@ui/condition": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.11.4",

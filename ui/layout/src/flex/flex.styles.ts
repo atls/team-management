@@ -20,6 +20,9 @@ const flexConfig: Config = {
   backgroundColor: {
     property: 'backgroundColor',
   },
+  borderRadius: {
+    property: 'borderRadius',
+  },
 }
 
 export const flexStyles = system(flexConfig)

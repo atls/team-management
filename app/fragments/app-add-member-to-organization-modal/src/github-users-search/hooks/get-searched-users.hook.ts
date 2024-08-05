@@ -1,16 +1,12 @@
-import { SEARCH_USER }          from '@globals/data'
-import { SearchUserQuery }      from '@globals/data'
-import { octokitGraphqlClient } from '@globals/data'
-import { getTokenCookie }       from '@globals/helpers'
+import { SEARCH_USER }               from '@globals/data'
+import { SearchUserQuery }           from '@globals/data'
+import { requestOctokitGraphqlData } from '@globals/data'
 
-import { SEARCH_USERS_LIMIT }   from '../github-users-search.constants.js'
+import { SEARCH_USERS_LIMIT }        from '../github-users-search.constants.js'
 
 export const getSearchedUsers = async ({ searchQuery, toast }) => {
-  const token = getTokenCookie(document)
-  const client = octokitGraphqlClient(token)
-
   try {
-    const response = (await client(SEARCH_USER, {
+    const response = (await requestOctokitGraphqlData(document, SEARCH_USER, {
       searchLimit: SEARCH_USERS_LIMIT,
       searchQuery,
     })) as SearchUserQuery

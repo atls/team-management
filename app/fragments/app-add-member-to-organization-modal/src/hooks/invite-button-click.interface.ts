@@ -1,6 +1,5 @@
-import type { OrganizationTeamType }   from '@globals/data'
-import type { OrganizationMemberType } from '@globals/data'
-import type { ToastType }              from '@stores/toast-notification'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { ToastType }                  from '@stores/toast-notification'
 
 export type InviteButtonClickType = ({
   organizationLogin,
@@ -10,8 +9,8 @@ export type InviteButtonClickType = ({
   setInviteButtonState,
 }: {
   organizationLogin: string
-  selectedTeams: Array<OrganizationTeamType>
+  selectedTeams: string
   toast: ToastType
-  selectedUsers: Array<OrganizationMemberType>
+  selectedUsers: Array<OrganizationMemberDataType>
   setInviteButtonState: (state: string) => void
 }) => void

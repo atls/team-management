@@ -16,7 +16,7 @@ export const getSwitchList = (theme: ThemeType) => {
   const SWITCH_DATA_LIST = [
     {
       icon: <GitHubIcon {...ICON_PROPS} />,
-      switchData: process.env.NEXT_PUBLIC_INVITE_GITHUB_ORG_NAME as string,
+      switchData: process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string,
     },
     {
       icon: <FigmaIcon {...ICON_PROPS} />,

@@ -7,7 +7,7 @@ import { memo }                       from 'react'
 import { useState }                   from 'react'
 import { useEffect }                  from 'react'
 
-import { OrganizationMemberType }     from '@globals/data'
+import { OrganizationMemberDataType } from '@globals/data'
 import { ImageBlock }                 from '@ui/image'
 import { Box }                        from '@ui/layout'
 import { Row }                        from '@ui/layout'
@@ -38,11 +38,10 @@ export const UsersModal: FC<UsersModalProps> = memo(({
     avatarUrl: organizationCoverSrc,
     viewerCanAdminister,
   } = organizationData
-
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
-  const [membersData, setMembersData] = useState<Array<OrganizationMemberType>>([])
+  const [membersData, setMembersData] = useState<Array<OrganizationMemberDataType>>([])
   const [membersCount, setMembersCount] = useState<number>(initMembersCount)
 
   useEffect(() => {

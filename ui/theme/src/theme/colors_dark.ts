@@ -1,6 +1,7 @@
 import { colorsConstants } from './colors.constants.js'
 
 const { WHITE } = colorsConstants
+const { GRAY_100 } = colorsConstants
 const { GRAY_300 } = colorsConstants
 const { GRAY_400 } = colorsConstants
 const { GRAY_800 } = colorsConstants
@@ -47,11 +48,13 @@ const colors = {
   },
   gradientLigthBlue: '#005ACF',
   BLUE_0,
+  GRAY_100,
   GRAY_300,
   GRAY_1000,
   GRAY_1600,
   RED_400,
   BLUE_700,
+  BLACK_40: 'rgba(0, 0, 0, 0.4)',
   black: 'rgba(15, 12, 12, 1)',
   white: 'rgb(255, 255, 255)',
   alabaster: 'rgb(252, 252, 252)',

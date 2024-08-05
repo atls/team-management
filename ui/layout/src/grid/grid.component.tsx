@@ -17,10 +17,23 @@ const GridAutoRowsContainer = styled(Box)<PropsWithChildren<GridAutoRowsContaine
 
 export const GridAutoRows: FC<PropsWithChildren<GridAutoRowsProps>> = (props) => {
   const { children, columns, maxColumnWidth, ...otherProps } = props
-  let gridTemplateColumns = ''
+
+  const getCssPropString = (columnsQuantity: number | Array<number>): string =>
+    `repeat(${columnsQuantity}, minmax(auto, ${maxColumnWidth}px))`
+
+  let gridTemplateColumns: string | Array<string> = ''
+
   if (columns && maxColumnWidth) {
-    gridTemplateColumns = `repeat(${columns}, minmax(auto, ${maxColumnWidth}px))`
+    if (Array.isArray(columns)) {
+      gridTemplateColumns = []
+      for (const column of columns) {
+        gridTemplateColumns.push(getCssPropString(column))
+      }
+    } else {
+      gridTemplateColumns = getCssPropString(columns)
+    }
   }
+
   return (
     <GridAutoRowsContainer gridTemplateColumns={gridTemplateColumns} {...otherProps}>
       {children}

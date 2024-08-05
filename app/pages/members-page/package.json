@@ -1,0 +1,32 @@
+{
+  "name": "@app/members-page",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@app/member-cards-grid": "workspace:*"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.11.4",
+    "@emotion/styled": "11.11.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/styled-system": "5.1.22",
+    "glob": "8.1.0",
+    "react-intl": "6.6.8",
+    "styled-system": "5.1.5"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@types/styled-system": "*",
+    "glob": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
+  }
+}

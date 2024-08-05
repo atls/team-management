@@ -1,0 +1,1 @@
+export const MOCK_PENDING_MEMBER_TIMER = 17000

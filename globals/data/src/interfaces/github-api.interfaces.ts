@@ -1,14 +1,27 @@
-import { GetViewerOrganizationsQuery } from '../__generated__/index.js'
-import { GetOrganizationTeamsQuery }   from '../__generated__/index.js'
-import { GetOrganizationMembersQuery } from '../__generated__/index.js'
+import type { GetViewerOrganizationsQuery } from '../__generated__/index.js'
+import type { GetOrganizationTeamsQuery }   from '../__generated__/index.js'
+import type { GetOrganizationMembersQuery } from '../__generated__/index.js'
 
-export type OrganizationDataType =
-  keyof GetViewerOrganizationsQuery['viewer']['organizations']['nodes']
+export type ArrayElement<A> = A extends readonly (infer T)[] ? T : never
 
-type OrganizationTeamsNode = keyof GetOrganizationTeamsQuery['node']
-type OrganizationTeams = OrganizationTeamsNode['teams']
-export type OrganizationTeamType = OrganizationTeams['nodes']
+export type OrganizationDataType = Exclude<
+  ArrayElement<GetViewerOrganizationsQuery['viewer']['organizations']['nodes']>,
+  null
+>
+type OrganizationTeamsNode = Extract<
+  GetOrganizationTeamsQuery['node'],
+  { __typename?: 'Organization' }
+>
+export type OrganizationTeamType = Exclude<
+  ArrayElement<OrganizationTeamsNode['teams']['nodes']>,
+  null
+>
 
-type OrganizationMembersNode = keyof GetOrganizationMembersQuery['node']
-type OrganizationMembersWithRole = OrganizationMembersNode['membersWithRole']
-export type OrganizationMemberType = OrganizationMembersWithRole['nodes']
+type OrganizationMembersNode = Extract<
+  GetOrganizationMembersQuery['node'],
+  { __typename?: 'Organization' }
+>
+export type OrganizationMemberDataType = Exclude<
+  ArrayElement<OrganizationMembersNode['membersWithRole']['nodes']>,
+  null
+>

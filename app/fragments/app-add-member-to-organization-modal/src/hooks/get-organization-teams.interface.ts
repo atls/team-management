@@ -7,6 +7,6 @@ export type GetOrganizationTeamsType = ({
   toast,
 }: {
   organizationId: string
-  setTeamsData: (teamsData: OrganizationTeamType) => void
+  setTeamsData: (teamsData: Array<OrganizationTeamType>) => void
   toast: ToastType
 }) => void

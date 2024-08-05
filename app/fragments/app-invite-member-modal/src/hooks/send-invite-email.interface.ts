@@ -1,1 +1,11 @@
-export type SendInviteEmailHookType = ({ emails }: { emails: Array<string> }) => void
+import type { ToastType } from '@stores/toast-notification'
+
+export type SendInviteEmailHookType = ({
+  emails,
+  selectedInvites,
+  toast,
+}: {
+  emails: Array<string>
+  selectedInvites: Array<string>
+  toast: ToastType
+}) => void

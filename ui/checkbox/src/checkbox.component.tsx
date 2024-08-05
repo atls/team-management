@@ -4,7 +4,6 @@ import { useTheme }          from '@emotion/react'
 import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
-import { useState }          from 'react'
 
 import { Condition }         from '@ui/condition'
 import { CheckIcon }         from '@ui/icons'
@@ -19,17 +18,15 @@ import { Label }             from './label/index.js'
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
+  checked,
   labelPosition = 'end',
   ...props
 }) => {
   const theme = useTheme() as ThemeType
-  const [checked, setChecked] = useState<boolean>(false)
-  const handleCheckbox = () => {
-    setChecked((prev) => !prev)
-  }
+
   return (
-    <Container labelPosition={labelPosition} onClick={handleCheckbox} {...props}>
-      <HiddenInput type='checkbox' checked={checked} onChange={handleCheckbox} />
+    <Container labelPosition={labelPosition} {...props}>
+      <HiddenInput type='checkbox' defaultChecked={checked} />
       <Box>
         <Check checked={checked}>
           <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>

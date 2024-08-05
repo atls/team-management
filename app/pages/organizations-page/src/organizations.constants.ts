@@ -1,0 +1,2 @@
+export const ORGANIZATIONS_LIMIT = 64
+export const ORGANIZATION_MEMBERS_LIMIT = 100

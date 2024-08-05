@@ -1,5 +1,6 @@
 import { backgrounds }           from './backgrounds.js'
 import { borders }               from './borders.js'
+import { breakpoints }           from './breakpoints.js'
 import { colors as colorsDark }  from './colors_dark.js'
 import { colors as colorsLight } from './colors_light.js'
 import { fonts }                 from './fonts.js'
@@ -12,6 +13,7 @@ import { space }                 from './space.js'
 import { spaces }                from './spaces.js'
 
 const baseTheme = {
+  breakpoints,
   backgrounds,
   borders,
   fonts,

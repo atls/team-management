@@ -1,5 +1,6 @@
+import type { TextProps }    from './text.interfaces.js'
+
 import { Text as BaseText }  from '@atls-ui-parts/text'
-import { TextProps }         from '@atls-ui-parts/text'
 import { useTheme }          from '@emotion/react'
 
 import React                 from 'react'

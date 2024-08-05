@@ -1,6 +1,7 @@
 export const spaces = {
   zero: 0,
   minus: -1,
+  s1: 1,
   normalCount: 3,
   s2: 2,
   paddingsNormal: '12px 24px',
@@ -112,12 +113,15 @@ export const spaces = {
   t24r24b0l0: '24px 24px 0 0',
   v8h16: '8px 16px',
   v8h12: '8px 12px',
+  t8h16b16: '8px 16px 16px',
+  v0h24: '0px 24px',
+  t0h24b128: '0px 24px 128px',
   mediumDefault: 50,
   mediumIncreased: 80,
 
   largeReduced: 93,
   largeSemiReduced: 100,
-  largeSemiNormal: 139,
+  largeSemiNormal: 140,
   largeSemiNormalIncreased: 160,
   largeSemi: 185,
 

@@ -9,7 +9,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@app/organization-card-grid-fragment": "workspace:*"
+    "@app/organization-cards-grid": "workspace:*"
   },
   "devDependencies": {
     "react": "18.3.1",

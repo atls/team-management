@@ -9,7 +9,7 @@ import { Column }                    from '@ui/layout'
 
 import { WrapperProps }              from './wrapper.interfaces.js'
 import { MotionWrapperElementProps } from './wrapper.interfaces.js'
-import { motionVariants }            from './wrapper.constants.js'
+import { motionVariants }            from '../sidebar.constants.js'
 import { animationCompleteHook }     from './wrapper.hooks.js'
 import { baseSidebarStyles }         from './wrapper.styles.js'
 import { shapeSidebarStyles }        from './wrapper.styles.js'
