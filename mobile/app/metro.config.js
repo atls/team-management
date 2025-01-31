@@ -1,9 +1,18 @@
-// eslint-disable-next-line
-const { getDefaultConfig } = require('expo/metro-config')
+const { getDefaultConfig } = require('expo/metro-config');
+const path = require('path');
 
-const config = getDefaultConfig(__dirname)
+const config = getDefaultConfig(__dirname);
 
-config.resolver.extraNodeModules.stream = require.resolve('stream-browserify')
-config.resolver.extraNodeModules.buffer = require.resolve('buffer')
+config.resolver.extraNodeModules = {
+  ...config.resolver.extraNodeModules,
+  stream: require.resolve('stream-browserify'),
+  buffer: require.resolve('buffer'),
+};
 
-module.exports = config
+config.projectRoot = __dirname;
+
+config.resolver.nodeModulesPaths = [
+  path.resolve(__dirname, 'node_modules'),
+];
+
+module.exports = config;
