@@ -7,7 +7,8 @@
     "stores/**/*",
     "ui/**/*",
     "globals/**/*",
-    "api/**/*"
+    "api/**/*",
+    "mobile/**/*"
   ],
   "devDependencies": {
     "@atls/code-service": "0.1.4",
