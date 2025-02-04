@@ -1,1 +1,1 @@
-export { SignInScreen as default } from '../../src/screens/sign-in'
+export { OrganizationsScreen as default } from '../../src/screens/organizations'
