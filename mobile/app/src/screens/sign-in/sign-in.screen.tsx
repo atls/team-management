@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import {Box} from '../../ui/layout'
 
-interface SignInProps {
-  navigation: any;
-}
-
-export const SignInScreen: React.FC<SignInProps> = () => {
+export const SignInScreen = () => {
   return (
     <View>
-      <Text>Sign In</Text>
+      <Box height={400} alignItems='center' justifyContent='center'>
+        <Text>Sign In</Text>
+      </Box>
     </View>
   );
 };

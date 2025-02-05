@@ -15,8 +15,4 @@ config.resolver.nodeModulesPaths = [
   path.resolve(__dirname, 'node_modules'),
 ];
 
-config.watchFolders = [
-  path.resolve(__dirname, '../../ui/layout'),
-];
-
 module.exports = config;
