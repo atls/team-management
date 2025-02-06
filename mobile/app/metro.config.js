@@ -13,6 +13,8 @@ config.projectRoot = __dirname;
 
 config.resolver.nodeModulesPaths = [
   path.resolve(__dirname, 'node_modules'),
+  path.resolve(__dirname, 'screens'),
+  path.resolve(__dirname, 'ui'),
 ];
 
 module.exports = config;

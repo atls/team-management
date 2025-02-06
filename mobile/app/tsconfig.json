@@ -2,5 +2,6 @@
   "compilerOptions": {
     "jsx": "preserve"
   },
+  "include": ["app/**/*", "ui/**/*", "screens/**/*"],
   "extends": "expo/tsconfig.base"
 }

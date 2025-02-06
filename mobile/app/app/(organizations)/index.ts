@@ -1,1 +1,0 @@
-export { OrganizationsScreen as default } from '../../src/screens/organizations'

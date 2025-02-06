@@ -1,0 +1,14 @@
+{
+  "name": "@screens/sign-in",
+  "version": "0.0.1",
+  "private": true,
+  "main": "src/index.ts",
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "react-native": "0.73.11"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
