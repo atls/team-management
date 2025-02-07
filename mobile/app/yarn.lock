@@ -3567,6 +3567,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@screens/dashboard@workspace:*, @screens/dashboard@workspace:screens/dashboard":
+  version: 0.0.0-use.local
+  resolution: "@screens/dashboard@workspace:screens/dashboard"
+  dependencies:
+    "@types/react": "npm:^18.3.3"
+    "@ui/layout": "workspace:*"
+    react-native: "npm:0.73.11"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@screens/sign-in@workspace:*, @screens/sign-in@workspace:screens/sign-in":
   version: 0.0.0-use.local
   resolution: "@screens/sign-in@workspace:screens/sign-in"
@@ -4575,6 +4588,7 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:6.6.1"
     "@react-navigation/native": "npm:6.1.18"
     "@react-navigation/stack": "npm:6.4.1"
+    "@screens/dashboard": "workspace:*"
     "@screens/sign-in": "workspace:*"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:18.0.11"
