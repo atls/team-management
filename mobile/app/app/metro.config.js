@@ -9,12 +9,17 @@ config.resolver.extraNodeModules = {
   buffer: require.resolve('buffer'),
 };
 
-config.projectRoot = __dirname;
 
 config.resolver.nodeModulesPaths = [
+  path.resolve(__dirname, '../node_modules'),
   path.resolve(__dirname, 'node_modules'),
-  path.resolve(__dirname, 'screens'),
-  path.resolve(__dirname, 'ui'),
+  path.resolve(__dirname, '../screens/node_modules'),
+  path.resolve(__dirname, '../ui/node_modules'),
 ];
+
+config.watchFolders = [
+  path.resolve(__dirname, '../screens'),
+  path.resolve(__dirname, '../ui'),
+]
 
 module.exports = config;

@@ -3572,6 +3572,7 @@ __metadata:
   resolution: "@screens/sign-in@workspace:screens/sign-in"
   dependencies:
     "@types/react": "npm:^18.3.3"
+    "@ui/layout": "workspace:*"
     react-native: "npm:0.73.11"
   peerDependencies:
     react: "*"
@@ -3846,11 +3847,11 @@ __metadata:
   linkType: hard
 
 "@types/http-proxy@npm:^1.17.8":
-  version: 1.17.15
-  resolution: "@types/http-proxy@npm:1.17.15"
+  version: 1.17.16
+  resolution: "@types/http-proxy@npm:1.17.16"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10/fa86d5397c021f6c824d1143a206009bfb64ff703da32fb30f6176c603daf6c24ce3a28daf26b3945c94dd10f9d76f07ea7a6a2c3e9b710e00ff42da32e08dea
+  checksum: 10/a054ac8f5301acfcfdcec3a775f52dc371180bbe60037906534312f10cceb3799b4a16e46c56c22f9925d078e11dcda1723c38f1ddd124be8169a4cccca69c8c
   languageName: node
   linkType: hard
 
@@ -4565,6 +4566,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:app"
   dependencies:
+    "@babel/core": "npm:7.26.7"
+    "@emotion/native": "npm:11.11.0"
+    "@emotion/react": "npm:11.14.0"
     "@expo/config-plugins": "npm:7.9.2"
     "@expo/webpack-config": "npm:19.0.1"
     "@react-native-async-storage/async-storage": "npm:1.24.0"
@@ -4572,8 +4576,10 @@ __metadata:
     "@react-navigation/native": "npm:6.1.18"
     "@react-navigation/stack": "npm:6.4.1"
     "@screens/sign-in": "workspace:*"
-    "@ui/layout": "workspace:*"
+    "@types/react": "npm:^18.3.3"
+    "@types/react-dom": "npm:18.0.11"
     buffer: "npm:6.0.3"
+    expo: "npm:50.0.21"
     expo-auth-session: "npm:5.4.0"
     expo-constants: "npm:15.4.6"
     expo-device: "npm:5.9.4"
@@ -4587,7 +4593,9 @@ __metadata:
     graphql: "npm:16.10.0"
     graphql-request: "npm:6.1.0"
     graphql-tag: "npm:2.12.6"
+    react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
+    react-native: "npm:0.73.11"
     react-native-deck-swiper: "npm:2.0.17"
     react-native-flash-message: "npm:0.4.2"
     react-native-gesture-handler: "npm:2.14.1"
@@ -4598,6 +4606,7 @@ __metadata:
     react-native-url-polyfill: "npm:2.0.0"
     react-native-web: "npm:0.19.13"
     stream-browserify: "npm:3.0.0"
+    typescript: "npm:5.2.2"
   languageName: unknown
   linkType: soft
 
@@ -5398,7 +5407,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001688":
+"caniuse-lite@npm:^1.0.0":
+  version: 1.0.30001698
+  resolution: "caniuse-lite@npm:1.0.30001698"
+  checksum: 10/108d09b4c1a930fdcc391b6ea61476f3c80cfc83182e8336f727ea748209f1381b4ae0b9fdf9d73bdd56dbab2e3a87ff211a687bd80b6a216589126ac666ae1c
+  languageName: node
+  linkType: hard
+
+"caniuse-lite@npm:^1.0.30001688":
   version: 1.0.30001697
   resolution: "caniuse-lite@npm:1.0.30001697"
   checksum: 10/cd0ca97e71f4157ff3d26990a24122586a973a14086ad43c459c2f0f2f9876b327eee57c2315bb04bd5e826e77d0b6f55723c583c78be0eaf0f3f171afaf7eff
@@ -10861,7 +10877,6 @@ __metadata:
     "@types/react-dom": "npm:18.0.11"
     "@types/react-native": "npm:^0.73.0"
     eslint: "npm:^8.0.0"
-    expo: "npm:50.0.21"
     prettier: "npm:^3.0.0"
     react: "npm:18.3.1"
     react-native: "npm:0.73.11"
@@ -12460,12 +12475,12 @@ __metadata:
   linkType: hard
 
 "react-devtools-core@npm:^6.0.1":
-  version: 6.1.0
-  resolution: "react-devtools-core@npm:6.1.0"
+  version: 6.1.1
+  resolution: "react-devtools-core@npm:6.1.1"
   dependencies:
     shell-quote: "npm:^1.6.1"
     ws: "npm:^7"
-  checksum: 10/16d37ef94624ba120f11ef86e872b61dff779a837e77c2bce4c85640b831438fe10db3f7a63d0fcd35872f1facc13d732dd7e9b0b5fcad4b7fefa9c9c35769d0
+  checksum: 10/0cd89c9c45aab383f98a66f0200ece4738b3f1ea3a6a5c947afc3a822aa22094b69f9bedc6bef5c961a3715ecc8d5350e0d87ad0eb90e4d2c752fb585c51b4f7
   languageName: node
   linkType: hard
 
@@ -14412,7 +14427,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.10.0, terser@npm:^5.15.0, terser@npm:^5.31.1":
+"terser@npm:^5.10.0, terser@npm:^5.31.1":
+  version: 5.38.1
+  resolution: "terser@npm:5.38.1"
+  dependencies:
+    "@jridgewell/source-map": "npm:^0.3.3"
+    acorn: "npm:^8.8.2"
+    commander: "npm:^2.20.0"
+    source-map-support: "npm:~0.5.20"
+  bin:
+    terser: bin/terser
+  checksum: 10/5c32213210e6e07fef2100c231aadf4a7f7be7903cc65daa3edc886075444b940f65991acf30f8b271e13a2f395b81bba1fa248409cc57160315339a40be3e2a
+  languageName: node
+  linkType: hard
+
+"terser@npm:^5.15.0":
   version: 5.38.0
   resolution: "terser@npm:5.38.0"
   dependencies:
