@@ -1,8 +1,13 @@
-import { SignInScreen } from '@screens/sign-in'
+import {Button} from 'react-native'
+import { useRouter } from 'expo-router';
 
 export default function App() {
+  const {push} = useRouter();
   return (
-    <SignInScreen/>
+    <>
+      <Button title='go to sign-in' onPress={()=>push('/sign-in')}/>
+      <Button title='go to dashboard' onPress={()=>push('/dashboard')}/>
+    </>
   );
 }
 
