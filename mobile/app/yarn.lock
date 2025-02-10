@@ -3572,7 +3572,7 @@ __metadata:
   resolution: "@screens/dashboard@workspace:screens/dashboard"
   dependencies:
     "@types/react": "npm:^18.3.3"
-    "@ui/layout": "workspace:*"
+    "@ui-mobile/layout": "workspace:*"
     react-native: "npm:0.73.11"
   peerDependencies:
     react: "*"
@@ -3585,7 +3585,7 @@ __metadata:
   resolution: "@screens/sign-in@workspace:screens/sign-in"
   dependencies:
     "@types/react": "npm:^18.3.3"
-    "@ui/layout": "workspace:*"
+    "@ui-mobile/layout": "workspace:*"
     react-native: "npm:0.73.11"
   peerDependencies:
     react: "*"
@@ -4084,9 +4084,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/layout@workspace:*, @ui/layout@workspace:ui/layout":
+"@ui-mobile/layout@workspace:*, @ui-mobile/layout@workspace:ui/layout":
   version: 0.0.0-use.local
-  resolution: "@ui/layout@workspace:ui/layout"
+  resolution: "@ui-mobile/layout@workspace:ui/layout"
   dependencies:
     "@emotion/native": "npm:11.11.0"
     "@emotion/react": "npm:11.14.0"

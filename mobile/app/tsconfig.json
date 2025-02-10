@@ -1,6 +1,4 @@
 {
-  "compilerOptions": {
-    "jsx": "preserve"
-  },
   "include": ["app/**/*", "ui/**/*", "screens/**/*"],
+  "exclude": [".idea"]
 }
