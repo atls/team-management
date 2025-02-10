@@ -1,11 +1,9 @@
-import React from 'react';
-import { View, Text } from 'react-native';
+import React    from 'react'
+import { Text } from 'react-native'
+import { View } from 'react-native'
 
-export const DashboardScreen = () => {
-  return (
-    <View>
-      <Text>Dashboard</Text>
-    </View>
-  );
-};
-
+export const DashboardScreen = () => (
+  <View>
+    <Text>Dashboard</Text>
+  </View>
+)
