@@ -3,14 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "main": "src/index.ts",
-  "dependencies": {
-    "react-native": "0.73.11"
-  },
   "devDependencies": {
     "@types/react": "^18.3.3",
-    "@ui-mobile/layout": "workspace:*"
+    "@ui-mobile/layout": "workspace:*",
+    "react-native": "0.73.11"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "react-native": "*"
   }
 }

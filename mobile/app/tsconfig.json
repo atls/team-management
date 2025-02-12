@@ -2,9 +2,5 @@
   "compilerOptions": {
     "jsx": "preserve"
   },
-  "paths": {
-    "@ui-mobile/*": ["../ui-mobile/*"],
-    "@screens/*": ["../screens/*"]
-  },
   "extends": "expo/tsconfig.base"
 }
