@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@screens/*": ["../screens/*"]
+    }
   },
   "exclude": [".idea", "node_modules"],
   "extends": "expo/tsconfig.base"
