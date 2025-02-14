@@ -6,7 +6,7 @@ const config = getDefaultConfig(__dirname)
 config.resolver.extraNodeModules = {
   ...config.resolver.extraNodeModules,
   stream: require.resolve('stream-browserify'),
-  buffer: require.resolve('buffer')
+  buffer: require.resolve('buffer'),
 }
 
 config.resolver.nodeModulesPaths = [path.resolve(__dirname, 'node_modules')]
@@ -18,10 +18,14 @@ config.watchFolders = [
 
 config.resolver.resolveRequest = (context, moduleName, platform) => {
   if (moduleName.startsWith('@ui-mobile')) {
-    const modulePath = moduleName.replace('@ui-mobile', path.resolve(__dirname, '../ui-mobile'));
-    return context.resolveRequest(context, modulePath, platform);
+    const modulePath = moduleName.replace('@ui-mobile', path.resolve(__dirname, '../ui-mobile'))
+    return context.resolveRequest(context, modulePath, platform)
   }
-  return context.resolveRequest(context, moduleName, platform);
+  if (moduleName.startsWith('@screens')) {
+    const modulePath = moduleName.replace('@screens', path.resolve(__dirname, '../screens'))
+    return context.resolveRequest(context, modulePath, platform)
+  }
+  return context.resolveRequest(context, moduleName, platform)
 }
 
 module.exports = config
