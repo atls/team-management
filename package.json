@@ -10,9 +10,7 @@
     "ui-mobile/**/*",
     "globals/**/*",
     "api/**/*",
-    "mobile/app/**",
-    "mobile/screens/**/*",
-    "mobile/ui-mobile/**/*"
+    "mobile/**/*"
   ],
   "devDependencies": {
     "@atls/code-runtime": "latest",
