@@ -8,9 +8,7 @@
     "ui/**/*",
     "globals/**/*",
     "api/**/*",
-    "mobile/app/**",
-    "mobile/screens/**/*",
-    "mobile/ui-mobile/**/*"
+    "mobile/**/*"
   ],
   "devDependencies": {
     "@atls/code-service": "0.1.4",
