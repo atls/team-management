@@ -24,13 +24,6 @@
     "target": "ES2022",
     "jsx": "react"
   },
-  "include": [
-    "app/**/*",
-    "ui/**/*",
-    "fragments/**/*",
-    "mobile/app/**",
-    "mobile/screens/**/*",
-    "mobile/ui-mobile/**/*"
-  ],
-  "exclude": [".idea", "mobile/app/.idea", "mobile/app/.expo", "mobile/app/node_modules"]
+  "include": ["app/**/*", "ui/**/*", "fragments/**/*", "mobile/**/*"],
+  "exclude": [".idea"]
 }
