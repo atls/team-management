@@ -2,6 +2,7 @@
   "name": "team-management",
   "private": true,
   "license": "BSD 3-Clause",
+  "type": "module",
   "workspaces": [
     "app/**/*",
     "stores/**/*",
@@ -11,6 +12,7 @@
     "mobile/**/*"
   ],
   "devDependencies": {
+    "@atls/code-runtime": "latest",
     "@atls/code-service": "0.1.4",
     "@atls/config-eslint": "0.0.12",
     "@atls/config-jest": "0.0.18",
@@ -25,7 +27,7 @@
     "prettier": "3.1.1",
     "typescript": "5.2.2"
   },
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.6.0",
   "linterIgnorePatterns": [
     "**/next.config.js"
   ],
