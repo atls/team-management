@@ -3628,6 +3628,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@screens/dashboard@workspace:*, @screens/dashboard@workspace:../screens/dashboard":
+  version: 0.0.0-use.local
+  resolution: "@screens/dashboard@workspace:../screens/dashboard"
+  dependencies:
+    "@types/react": "npm:18.3.3"
+    "@ui-mobile/layout": "workspace:*"
+    react-native: "npm:0.73.11"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
+"@screens/sign-in@workspace:*, @screens/sign-in@workspace:../screens/sign-in":
+  version: 0.0.0-use.local
+  resolution: "@screens/sign-in@workspace:../screens/sign-in"
+  dependencies:
+    "@types/react": "npm:18.3.3"
+    "@ui-mobile/layout": "workspace:*"
+    react-native: "npm:0.73.11"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@segment/loosely-validate-event@npm:^2.0.0":
   version: 2.0.0
   resolution: "@segment/loosely-validate-event@npm:2.0.0"
@@ -4126,6 +4152,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ui-mobile/layout@workspace:*, @ui-mobile/layout@workspace:../ui-mobile/layout":
+  version: 0.0.0-use.local
+  resolution: "@ui-mobile/layout@workspace:../ui-mobile/layout"
+  dependencies:
+    "@emotion/native": "npm:11.11.0"
+    "@emotion/react": "npm:11.14.0"
+    "@types/react": "npm:18.3.3"
+    react-native: "npm:0.73.11"
+  peerDependencies:
+    "@emotion/native": "*"
+    "@emotion/react": "*"
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@urql/core@npm:2.3.6":
   version: 2.3.6
   resolution: "@urql/core@npm:2.3.6"
@@ -4598,6 +4640,8 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:6.6.1"
     "@react-navigation/native": "npm:6.1.18"
     "@react-navigation/stack": "npm:6.4.1"
+    "@screens/dashboard": "workspace:*"
+    "@screens/sign-in": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.0.11"
     "@types/react-native": "npm:0.73.0"

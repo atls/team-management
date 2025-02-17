@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "main": "expo-router/entry",
+  "workspaces": [
+    "../screens/**/*",
+    "../ui-mobile/**/*"
+  ],
   "scripts": {
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -16,6 +20,8 @@
     "@react-navigation/bottom-tabs": "6.6.1",
     "@react-navigation/native": "6.1.18",
     "@react-navigation/stack": "6.4.1",
+    "@screens/dashboard": "workspace:*",
+    "@screens/sign-in": "workspace:*",
     "@types/react": "^18.3.3",
     "buffer": "6.0.3",
     "expo": "50.0.21",
