@@ -1,6 +1,6 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
-import React                                     from 'react'
+import React, { FC, PropsWithChildren, Reducer } from 'react'
 import { useReducer }                            from 'react'
 
 import { GlobalStyles }                          from './global.styles.js'
@@ -8,9 +8,10 @@ import { ActiveThemeContext }                    from './theme.context.js'
 import { ActiveThemeDispatchContext }            from './theme.context.js'
 import { activeThemeReducer }                    from './theme.reducer.js'
 import { lightTheme }                            from './theme/index.js'
+import { ActionType, ThemeType } from './theme.interfaces.js'
 
-export const ThemeProvider = ({ children }) => {
-  const [activeTheme, activeThemeDispatch] = useReducer(activeThemeReducer, lightTheme)
+export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
+  const [activeTheme, activeThemeDispatch] = useReducer<Reducer<ThemeType, ActionType>>(activeThemeReducer, lightTheme)
 
   return (
     <>
