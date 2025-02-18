@@ -1,6 +1,6 @@
-import React         from 'react'
 import { Button }    from 'react-native'
 import { useRouter } from 'expo-router'
+import React         from 'react'
 
 const App = () => {
   const { push } = useRouter()
