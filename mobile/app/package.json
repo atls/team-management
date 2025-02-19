@@ -5,7 +5,7 @@
   "main": "expo-router/entry",
   "workspaces": [
     "../screens/**/*",
-    "../ui-mobile/**/*"
+    "../../ui-mobile/**/*"
   ],
   "scripts": {
     "android": "expo start --android",
