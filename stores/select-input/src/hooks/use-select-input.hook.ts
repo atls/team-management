@@ -1,5 +1,7 @@
 import { useContext }                    from 'react'
 
+import { SuggestedItemProps }            from '@ui/input/src/select-input/suggested-item'
+
 import { InputValueContext }             from '../select-input.context.js'
 import { InputValueDispatchContext }     from '../select-input.context.js'
 import { SelectedItemsDispatchContext }  from '../selected-items/index.js'
@@ -35,7 +37,7 @@ export const useSelectInput = () => {
         type: 'clean',
       })
     },
-    setSuggestedItems: (newSuggestedItems) => {
+    setSuggestedItems: (newSuggestedItems: SuggestedItemProps[]) => {
       suggestedItemsDispatch({
         type: 'change',
         suggestedItems: newSuggestedItems,
