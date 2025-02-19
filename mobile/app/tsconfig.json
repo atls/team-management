@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "exclude": [".idea", "node_modules"],
+  "extends": "expo/tsconfig.base"
+}
