@@ -1,9 +1,7 @@
 import styled                               from '@emotion/styled'
-import { useTheme }                         from '@emotion/react'
-
-import React                                from 'react'
 import { FC }                               from 'react'
 import { useContext }                       from 'react'
+import React                                from 'react'
 
 import { InputValueDispatchContext }        from '@stores/select-input'
 import { SelectedItemsDispatchContext }     from '@stores/select-input'
@@ -12,6 +10,7 @@ import { ImageBlock }                       from '@ui/image'
 import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
+import { useTheme }                         from '@emotion/react'
 
 import { SuggestedItemProps }               from './suggested-item.interfaces.js'
 import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
@@ -33,7 +32,10 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext) as any
   const inputValueDispatch = useContext(InputValueDispatchContext) as any
 
-  function handleAddSelectedItem(e, itemData) {
+  function handleAddSelectedItem(
+    e: React.MouseEvent<HTMLDivElement>,
+    itemData: SuggestedItemProps
+  ) {
     selectedItemsDispatch({
       type: 'added',
       itemData,
@@ -47,7 +49,9 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   }
 
   return (
-    <SuggestedItemBox onClick={(e) => handleAddSelectedItem(e, suggestedItemData)}>
+    <SuggestedItemBox
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => handleAddSelectedItem(e, suggestedItemData)}
+    >
       {imageSrc && (
         <Box
           width={theme.spaces.increased}

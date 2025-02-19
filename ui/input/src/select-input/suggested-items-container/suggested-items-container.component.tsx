@@ -1,7 +1,6 @@
 import styled                                         from '@emotion/styled'
-
-import React                                          from 'react'
 import { FC }                                         from 'react'
+import React                                          from 'react'
 
 import { Condition }                                  from '@ui/condition'
 import { Box }                                        from '@ui/layout'

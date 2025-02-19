@@ -1,5 +1,5 @@
-import React                    from 'react'
 import { useContext }           from 'react'
+import React                    from 'react'
 
 import { SelectedItemsContext } from '@stores/select-input'
 import { Condition }            from '@ui/condition'

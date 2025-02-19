@@ -1,14 +1,15 @@
-import styled                       from '@emotion/styled'
 import { RawInput }                 from '@atls-ui-parts/input'
-import { useTheme }                 from '@emotion/react'
-
-import React                        from 'react'
+import styled                       from '@emotion/styled'
 import { ForwardRefRenderFunction } from 'react'
 import { forwardRef }               from 'react'
 import { useRef }                   from 'react'
 import { useLayer }                 from 'react-laag'
+import React                        from 'react'
+
+import { ChangeEvent }       from 'react'
 
 import { Box }                      from '@ui/layout'
+import { useTheme }                 from '@emotion/react'
 import { useSelectInput }           from '@stores/select-input'
 
 import { SelectInputProps }         from './select-input.interfaces.js'
@@ -48,7 +49,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
     triggerOffset: theme.spaces.zero,
   })
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const inputValueString = e.target.value
     setInputValue(inputValueString)
   }
