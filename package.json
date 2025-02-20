@@ -19,13 +19,13 @@
     "@atls/config-jest": "0.0.18",
     "@atls/prettier-plugin": "0.0.8",
     "@jest/core": "29.7.0",
-    "@types/eslint": "^8.56.10",
-    "@types/jest": "29.5.12",
-    "@types/node": "20.12.12",
-    "@types/react": "^18.3.3",
-    "eslint": "8.57.0",
-    "husky": "9.0.11",
-    "prettier": "3.1.1",
+    "@types/eslint": "^8.56.12",
+    "@types/jest": "29.5.14",
+    "@types/node": "20.17.19",
+    "@types/react": "^18.3.18",
+    "eslint": "8.57.1",
+    "husky": "9.1.7",
+    "prettier": "3.5.1",
     "typescript": "5.2.2"
   },
   "packageManager": "yarn@4.6.0",
@@ -35,5 +35,6 @@
   "skipLibCheck": true,
   "typecheckIgnorePatterns": [
     "**/next-env.d.ts"
-  ]
+  ],
+  "typecheckSkipLibCheck": true
 }

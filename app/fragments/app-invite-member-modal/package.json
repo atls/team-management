@@ -24,13 +24,13 @@
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/react": "11.11.4",
-    "@emotion/styled": "11.11.5",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-intl": "6.6.8"
+    "react-intl": "6.8.9"
   },
   "peerDependencies": {
     "@emotion/react": "*",

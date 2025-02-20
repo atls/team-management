@@ -22,7 +22,7 @@
     "strict": true,
     "sourceMap": false,
     "target": "ES2022",
-    "jsx": "react"
+    "jsx": "react",
   },
   "include": ["app/**/*", "ui/**/*", "fragments/**/*", "mobile/**/*"],
   "exclude": [".idea"]

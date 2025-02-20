@@ -13,11 +13,11 @@
     "@ui/theme": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/react": "11.11.4",
-    "@octokit/app": "15.1.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "18.3.0",
-    "react-intl": "6.6.8"
+    "@emotion/react": "11.14.0",
+    "@octokit/app": "15.1.4",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "18.3.5",
+    "react-intl": "6.8.9"
   },
   "peerDependencies": {
     "@emotion/react": "*",

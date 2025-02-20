@@ -9,15 +9,15 @@
   "devDependencies": {
     "@app/onbording-condition-element": "workspace:*",
     "@globals/helpers": "workspace:*",
-    "@graphql-codegen/cli": "5.0.2",
-    "@graphql-codegen/client-preset": "4.2.4",
-    "@graphql-codegen/typescript": "4.0.6",
-    "@graphql-codegen/typescript-resolvers": "4.0.6",
+    "@graphql-codegen/cli": "5.0.5",
+    "@graphql-codegen/client-preset": "4.6.3",
+    "@graphql-codegen/typescript": "4.1.4",
+    "@graphql-codegen/typescript-resolvers": "4.4.3",
     "@graphql-typed-document-node/core": "3.2.0",
-    "@octokit/core": "6.1.2",
-    "@octokit/graphql": "8.1.1",
-    "@octokit/types": "13.5.0",
-    "graphql": "15.8.0"
+    "@octokit/core": "6.1.4",
+    "@octokit/graphql": "8.2.1",
+    "@octokit/types": "13.8.0",
+    "graphql": "15.10.1"
   },
   "peerDependencies": {
     "@octokit/core": "*",

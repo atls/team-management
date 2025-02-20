@@ -7,7 +7,7 @@
   },
   "main": "src/index.ts",
   "devDependencies": {
-    "@types/react": "18.3.3",
+    "@types/react": "18.3.18",
     "@ui-mobile/layout": "workspace:*",
     "react-native": "0.73.11"
   },
