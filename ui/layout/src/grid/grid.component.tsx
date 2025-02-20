@@ -1,9 +1,8 @@
-import styled                         from '@emotion/styled'
 import { Box }                        from '@atls-ui-parts/layout'
-
-import React                          from 'react'
+import styled                         from '@emotion/styled'
 import { FC }                         from 'react'
 import { PropsWithChildren }          from 'react'
+import React                          from 'react'
 
 import { GridAutoRowsProps }          from './grid.interfaces.js'
 import { GridAutoRowsContainerProps } from './grid.interfaces.js'
