@@ -1,5 +1,4 @@
-import { SelectedItem }                      from '../select-input.interfaces.js'
-
+import { SelectedItem }        from '../select-input.interfaces.js'
 import { SelectedItemsAction } from '../select-input.interfaces.js'
 
 export function selectedItemsReducer(selectedItems: SelectedItem[], action: SelectedItemsAction) {
