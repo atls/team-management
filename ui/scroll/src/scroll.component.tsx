@@ -1,5 +1,5 @@
-import React                 from 'react'
 import { PropsWithChildren } from 'react'
+import React                 from 'react'
 
 import { ScrollProps }       from './scroll.interface.js'
 import { ScrollContainer }   from './scroll.styles.js'

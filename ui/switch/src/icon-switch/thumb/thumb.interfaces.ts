@@ -1,5 +1,4 @@
 import { ThumbElementProps } from '@atls-ui-parts/switch'
-
 import { JSX }               from 'react'
 
 export interface IconThumbElementProps extends ThumbElementProps {

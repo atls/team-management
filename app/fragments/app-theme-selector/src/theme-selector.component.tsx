@@ -1,7 +1,5 @@
-import { useTheme }           from '@emotion/react'
-
-import React                  from 'react'
 import { useState }           from 'react'
+import React                  from 'react'
 
 import { NotificationsModal } from '@app/notifications-modal'
 import { Button }             from '@ui/button'
@@ -9,6 +7,7 @@ import { NotificationsIcon }  from '@ui/icons'
 import { Row }                from '@ui/layout'
 import { ThemeSwitch }        from '@ui/switch'
 import { ThemeType }          from '@ui/theme'
+import { useTheme }           from '@emotion/react'
 
 const ThemeSelector: React.FC = () => {
   const [isNotificationsModalOpen, setIsNotificationsModalOpen] = useState<boolean>(false)

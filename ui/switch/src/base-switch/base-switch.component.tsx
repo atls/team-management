@@ -1,11 +1,10 @@
-import styled                     from '@emotion/styled'
 import { HandleElement }          from '@atls-ui-parts/switch'
 import { baseHandleStyles }       from '@atls-ui-parts/switch'
 import { useSwitch }              from '@atls-ui-parts/switch'
-
-import React                      from 'react'
+import styled                     from '@emotion/styled'
 import { FC }                     from 'react'
 import { useRef }                 from 'react'
+import React                      from 'react'
 
 import { BaseSwitchProps }        from './base-switch.interfaces.js'
 import { ThumbComponent }         from './thumb/thumb.component.js'

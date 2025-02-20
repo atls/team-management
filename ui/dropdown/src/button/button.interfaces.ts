@@ -1,7 +1,7 @@
 import { BoxProps }     from '@atls-ui-parts/layout'
-import { Theme }        from '@emotion/react'
-
 import { TriggerProps } from 'react-laag'
+
+import { Theme }        from '@emotion/react'
 
 export interface DropdownButtonProps extends BoxProps {
   triggerProps: TriggerProps

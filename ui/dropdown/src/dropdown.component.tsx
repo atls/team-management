@@ -1,10 +1,9 @@
 import { Box }               from '@atls-ui-parts/layout'
-
-import React                 from 'react'
 import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
 import { useState }          from 'react'
 import { useLayer }          from 'react-laag'
+import React                 from 'react'
 
 import { DropdownButton }    from './button/button.component.js'
 import { ChildContainer }    from './child-container/index.js'

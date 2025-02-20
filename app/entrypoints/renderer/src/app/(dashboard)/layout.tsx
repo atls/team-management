@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-import React          from 'react'
 import { Suspense }   from 'react'
+import React          from 'react'
 
 import { BaseLayout } from '@app/base-layout'
 import { Loading }    from '@app/loading'

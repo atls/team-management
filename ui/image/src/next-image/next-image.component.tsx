@@ -1,6 +1,6 @@
+import { FC }               from 'react'
 import Image                from 'next/image'
 import React                from 'react'
-import { FC }               from 'react'
 
 import { NextImageProps }   from './next-image.interfaces.js'
 import { NextImageWrapper } from './next-image.styles.js'

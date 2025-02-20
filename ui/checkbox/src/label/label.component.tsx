@@ -1,5 +1,5 @@
-import styled                    from '@emotion/styled'
 import { ConditionalRender }     from '@atls-ui-parts/conditional-render'
+import styled                    from '@emotion/styled'
 
 import { labelAppearanceStyles } from '../checkbox.styles.js'
 import { labelPositionStyles }   from '../checkbox.styles.js'

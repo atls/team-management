@@ -1,11 +1,9 @@
 import type { OrganizationDataType }    from '@globals/data'
 
-import { useTheme }                     from '@emotion/react'
-
-import React                            from 'react'
 import { FC }                           from 'react'
 import { memo }                         from 'react'
 import { useState }                     from 'react'
+import React                            from 'react'
 
 import { AddMemberToOrganizationModal } from '@app/add-member-to-organization-modal-fragment'
 import { UsersModal }                   from '@app/users-modal'
@@ -19,6 +17,7 @@ import { Column }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
 import { Text }                         from '@ui/text'
 import { ThemeType }                    from '@ui/theme'
+import { useTheme }                     from '@emotion/react'
 
 import { Members }                      from './members/index.js'
 import { OrganizationCardProps }        from './organization-card.interfaces.js'

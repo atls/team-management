@@ -6983,6 +6983,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@stores/select-input@workspace:stores/select-input"
   dependencies:
+    "@types/react": "npm:18.3.3"
     "@ui/input": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -8643,6 +8644,7 @@ __metadata:
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
     "@stores/select-input": "workspace:*"
+    "@types/react": "npm:18.3.3"
     "@types/styled-system": "npm:^5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
@@ -8675,6 +8677,7 @@ __metadata:
     "@atls-ui-parts/layout": "npm:0.1.1"
     "@emotion/react": "npm:11.11.4"
     "@emotion/styled": "npm:11.11.5"
+    "@types/react": "npm:18.3.3"
     "@types/styled-system": "npm:^5.1.22"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -8720,6 +8723,7 @@ __metadata:
     "@emotion/styled": "npm:11.11.5"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:5.1.22"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
     framer-motion: "npm:10.16.1"

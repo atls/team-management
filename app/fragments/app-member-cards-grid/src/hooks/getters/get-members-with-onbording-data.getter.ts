@@ -1,5 +1,6 @@
-import type { GetMembersWithOnbordingDataType } from './get-members-with-onbording-data.interface.js'
 import type { MemberWithOrganizationsDataType } from '@app/member-card'
+
+import type { GetMembersWithOnbordingDataType } from './get-members-with-onbording-data.interface.js'
 
 import { INIT_ONBORDING_DATA }                  from '@globals/constants'
 

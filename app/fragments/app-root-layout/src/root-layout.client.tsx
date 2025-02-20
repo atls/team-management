@@ -1,7 +1,7 @@
 'use client'
 
-import React                         from 'react'
 import { IntlProvider }              from 'react-intl'
+import React                         from 'react'
 
 import { ToastNotificationProvider } from '@stores/toast-notification'
 import { ThemeProvider }             from '@ui/theme'

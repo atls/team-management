@@ -1,13 +1,12 @@
-import { useTheme }            from '@emotion/react'
-
-import React                   from 'react'
 import { FC }                  from 'react'
+import React                   from 'react'
 
 import { Dropdown }            from '@ui/dropdown'
 import { WrongOutlineIcon }    from '@ui/icons'
 import { Box }                 from '@ui/layout'
 import { Text }                from '@ui/text'
 import { ThemeType }           from '@ui/theme'
+import { useTheme }            from '@emotion/react'
 
 import { MemberDorpdownProps } from './member-dropdown.interfaces.js'
 

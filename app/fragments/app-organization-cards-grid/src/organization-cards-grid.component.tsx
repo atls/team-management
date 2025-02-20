@@ -1,16 +1,15 @@
 'use client'
 
-import { useTheme }                   from '@emotion/react'
-
-import React                          from 'react'
 import { FC }                         from 'react'
 import { memo }                       from 'react'
 import { useState }                   from 'react'
+import React                          from 'react'
 
 import { OrganizationCard }           from '@app/organization-card'
 import { OrganizationDataType }       from '@globals/data'
 import { GridAutoRows }               from '@ui/layout'
 import { ThemeType }                  from '@ui/theme'
+import { useTheme }                   from '@emotion/react'
 import { useToast }                   from '@stores/toast-notification'
 
 import { OrganizationCardsGridHook }  from './organization-cards-grid.hook.js'

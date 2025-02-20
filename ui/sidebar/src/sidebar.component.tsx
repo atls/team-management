@@ -1,14 +1,13 @@
-import { useTheme }                 from '@emotion/react'
-
-import React                        from 'react'
 import { FC }                       from 'react'
 // @ts-ignore:next-line
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
+import React                        from 'react'
 
 import { Box }                      from '@ui/layout'
 import { ThemeType }                from '@ui/theme'
 import { ThemeVariantType }         from '@ui/theme'
+import { useTheme }                 from '@emotion/react'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
 import { SidebarItem }              from './item/index.js'

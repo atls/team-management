@@ -1,15 +1,14 @@
 import type { TimerProps } from './timer.interfaces.js'
 
-import { useTheme }        from '@emotion/react'
-
-import React               from 'react'
 import { FC }              from 'react'
 import { useState }        from 'react'
+import React               from 'react'
 
 import { Button }          from '@ui/button'
 import { TimerIcon }       from '@ui/icons'
 import { Text }            from '@ui/text'
 import { ThemeType }       from '@ui/theme'
+import { useTheme }        from '@emotion/react'
 
 import { TimerHook }       from './timer.hook.js'
 import { getConstants }    from './timer.constants.js'

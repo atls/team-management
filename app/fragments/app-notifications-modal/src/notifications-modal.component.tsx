@@ -1,8 +1,6 @@
-import { useTheme }                from '@emotion/react'
-
-import React                       from 'react'
 import { FC }                      from 'react'
 import { FormattedMessage }        from 'react-intl'
+import React                       from 'react'
 
 import { Avatar }                  from '@ui/avatar'
 import { Divider }                 from '@ui/divider'
@@ -13,6 +11,7 @@ import { Scroll }                  from '@ui/scroll'
 import { Text }                    from '@ui/text'
 import { Space }                   from '@ui/text'
 import { ThemeType }               from '@ui/theme'
+import { useTheme }                from '@emotion/react'
 
 import { NotificationsModalProps } from './notifications-modal.interfaces.js'
 

@@ -1,14 +1,13 @@
 import styled                              from '@emotion/styled'
-import { useTheme }                        from '@emotion/react'
-
-import React                               from 'react'
 import { FC }                              from 'react'
 import { useState }                        from 'react'
+import React                               from 'react'
 
 import { Condition }                       from '@ui/condition'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 import { ThemeType }                       from '@ui/theme'
+import { useTheme }                        from '@emotion/react'
 
 import { ToastNotificationHook }           from './toast-notification.hook.js'
 import { ToastNotificationComponentProps } from './toast-notification.interfaces.js'

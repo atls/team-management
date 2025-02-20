@@ -1,6 +1,7 @@
-import { darkTheme }  from './theme/index.js'
-import { lightTheme } from './theme/index.js'
-import { ActionType, ThemeType } from './theme.interfaces.js'
+import { ActionType }            from './theme.interfaces.js'
+import { ThemeType } from './theme.interfaces.js'
+import { darkTheme }             from './theme/index.js'
+import { lightTheme }            from './theme/index.js'
 
 export function activeThemeReducer(theme: ThemeType, action: ActionType): ThemeType {
   switch (action.type) {

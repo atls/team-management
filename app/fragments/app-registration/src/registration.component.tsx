@@ -1,11 +1,9 @@
 'use client'
 
-import { useTheme }               from '@emotion/react'
-
-import React                      from 'react'
 import { FormattedMessage }       from 'react-intl'
 // @ts-ignore:next-line
 import { useRouter }              from 'next/navigation'
+import React                      from 'react'
 
 import { MainLogo }               from '@app/main-logo'
 import { Background }             from '@ui/background'
@@ -15,6 +13,7 @@ import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 import { ThemeType }              from '@ui/theme'
+import { useTheme }               from '@emotion/react'
 
 import { githubAuthRedirectHook } from './github-auth.hook.js'
 

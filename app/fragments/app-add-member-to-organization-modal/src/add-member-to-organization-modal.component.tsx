@@ -1,13 +1,11 @@
 import type { OrganizationTeamType }         from '@globals/data'
 import type { OrganizationMemberDataType }   from '@globals/data'
 
-import { useTheme }                          from '@emotion/react'
-
-import React                                 from 'react'
 import { FC }                                from 'react'
 import { FormattedMessage }                  from 'react-intl'
 import { memo }                              from 'react'
 import { useState }                          from 'react'
+import React                                 from 'react'
 
 import { InviteButtonStateType }             from '@app/invite-button'
 import { InviteButton }                      from '@app/invite-button'
@@ -17,6 +15,7 @@ import { Column }                            from '@ui/layout'
 import { Modal }                             from '@ui/modal'
 import { Text }                              from '@ui/text'
 import { ThemeType }                         from '@ui/theme'
+import { useTheme }                          from '@emotion/react'
 import { useToast }                          from '@stores/toast-notification'
 
 import { AddMemberToOrganizationHook }       from './add-member-to-organization-modal.hook.js'

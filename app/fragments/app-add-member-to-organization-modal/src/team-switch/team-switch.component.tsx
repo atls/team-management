@@ -1,13 +1,12 @@
-import { useTheme }          from '@emotion/react'
-
-import React                 from 'react'
 import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
+import React                 from 'react'
 
 import { Row }               from '@ui/layout'
 import { BaseSwitch }        from '@ui/switch'
 import { Text }              from '@ui/text'
 import { ThemeType }         from '@ui/theme'
+import { useTheme }          from '@emotion/react'
 
 import { TeamSwitchProps }   from './team-swtich.interfaces.js'
 

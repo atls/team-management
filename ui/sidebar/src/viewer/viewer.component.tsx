@@ -1,11 +1,9 @@
 import styled                  from '@emotion/styled'
-import { useTheme }            from '@emotion/react'
-
+import { FC }                  from 'react'
+import { useContext }          from 'react'
 // @ts-ignore:next-line
 import Link                    from 'next/link'
 import React                   from 'react'
-import { FC }                  from 'react'
-import { useContext }          from 'react'
 
 import { Avatar }              from '@ui/avatar'
 import { Condition }           from '@ui/condition'
@@ -14,6 +12,7 @@ import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { Text }                from '@ui/text'
 import { ThemeType }           from '@ui/theme'
+import { useTheme }            from '@emotion/react'
 
 import { SidebarStateContext } from '../sidebar.context.js'
 import { ViewerProps }         from './viewer.interfaces.js'

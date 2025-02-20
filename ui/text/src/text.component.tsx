@@ -1,13 +1,12 @@
 import type { TextProps }    from './text.interfaces.js'
 
 import { Text as BaseText }  from '@atls-ui-parts/text'
-import { useTheme }          from '@emotion/react'
-
-import React                 from 'react'
 import { FC }                from 'react'
 import { PropsWithChildren } from 'react'
+import React                 from 'react'
 
 import { ThemeType }         from '@ui/theme'
+import { useTheme }          from '@emotion/react'
 
 export const Text: FC<PropsWithChildren<TextProps>> = ({ color: propsColor, ...props }) => {
   const theme = useTheme() as ThemeType

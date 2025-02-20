@@ -1,10 +1,8 @@
 import type { OrganizationElementProps } from './organization-element.interfaces.js'
 
-import { useTheme }                      from '@emotion/react'
-
-import React                             from 'react'
 import { FC }                            from 'react'
 import { useState }                      from 'react'
+import React                             from 'react'
 
 import { ToastType }                     from '@stores/toast-notification'
 import { Button }                        from '@ui/button'
@@ -16,6 +14,7 @@ import { Row }                           from '@ui/layout'
 import { Column }                        from '@ui/layout'
 import { Text }                          from '@ui/text'
 import { ThemeType }                     from '@ui/theme'
+import { useTheme }                      from '@emotion/react'
 import { useToast }                      from '@stores/toast-notification'
 
 import { OrganizationElementHook }       from './organization-element.hook.js'

@@ -1,8 +1,9 @@
-import type { GetMembersDataType }              from './get-members-data.interfaces.js'
 /* eslint-disable no-continue */
 import type { MemberWithOrganizationsDataType } from '@app/member-card'
 import type { OrganizationMemberDataType }      from '@globals/data'
 import type { OrganizationDataType }            from '@globals/data'
+
+import type { GetMembersDataType }              from './get-members-data.interfaces.js'
 
 import { getMembersWithout2fa }                 from '@globals/github-hooks'
 

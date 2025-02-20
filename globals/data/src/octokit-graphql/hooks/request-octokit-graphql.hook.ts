@@ -1,5 +1,6 @@
-import type { RequestOctokitGraphqlDataType } from '../octokit-graphql.interfaces.js'
 import type { GraphQlQueryResponseData }      from '@octokit/graphql'
+
+import type { RequestOctokitGraphqlDataType } from '../octokit-graphql.interfaces.js'
 
 import { getTokenCookie }                     from '@globals/helpers'
 

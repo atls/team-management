@@ -1,5 +1,6 @@
-import type { GetOrganizationsDataType } from './get-organizations-data.interface.js'
 import type { OrganizationDataType }     from '@globals/data'
+
+import type { GetOrganizationsDataType } from './get-organizations-data.interface.js'
 
 import { GET_VIEWER_ORGANIZATIONS }      from '@globals/data'
 import { requestOctokitGraphqlData }     from '@globals/data'

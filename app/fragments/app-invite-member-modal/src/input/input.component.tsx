@@ -1,7 +1,7 @@
-import React                           from 'react'
 import { FC }                          from 'react'
 import { useState }                    from 'react'
 import { useIntl }                     from 'react-intl'
+import React                           from 'react'
 
 import { BaseInput }                   from '@ui/input'
 

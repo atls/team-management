@@ -1,5 +1,6 @@
-import type { GetMemberOrganizationsDataType } from './get-member-organizations-data.interface.js'
 import type { OrganizationDataType }           from '@globals/data'
+
+import type { GetMemberOrganizationsDataType } from './get-member-organizations-data.interface.js'
 
 export const getMemberOrganizationsData: GetMemberOrganizationsDataType = ({
   memberData,

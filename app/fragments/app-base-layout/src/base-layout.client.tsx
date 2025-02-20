@@ -2,17 +2,16 @@
 
 import type { GetViewerQuery } from '@globals/data'
 
-import { useTheme }            from '@emotion/react'
-
-import React                   from 'react'
 import { FC }                  from 'react'
 import { PropsWithChildren }   from 'react'
+import React                   from 'react'
 
 import { ThemeSelector }       from '@app/theme-selector'
 import { UsersTitle }          from '@app/users-title'
 import { Row }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Sidebar }             from '@ui/sidebar'
+import { useTheme }            from '@emotion/react'
 
 import { BaseLayoutProps }     from './base-layout.interfaces.js'
 

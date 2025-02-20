@@ -1,16 +1,15 @@
 import type { OrganizationsButtonType } from './organizations-button.interfaces.js'
 
-import { useTheme }                     from '@emotion/react'
-
-import React                            from 'react'
 import { FC }                           from 'react'
 import { useState }                     from 'react'
+import React                            from 'react'
 
 import { OrganizationsModal }           from '@app/organizations-modal'
 import { Button }                       from '@ui/button'
 import { OrganizationsIcon }            from '@ui/icons'
 import { Text }                         from '@ui/text'
 import { ThemeType }                    from '@ui/theme'
+import { useTheme }                     from '@emotion/react'
 
 import { getConstants }                 from './organizations-button.constants.js'
 

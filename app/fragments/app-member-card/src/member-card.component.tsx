@@ -1,20 +1,20 @@
 'use client'
 
-import type { MemberCardProps }            from './member-card.interfaces.js'
 import type { OnbordingConditionDataType } from '@globals/data'
 import type { OrganizationDataType }       from '@globals/data'
 
-import styled                              from '@emotion/styled'
-import { useTheme }                        from '@emotion/react'
+import type { MemberCardProps }            from './member-card.interfaces.js'
 
-import React                               from 'react'
+import styled                              from '@emotion/styled'
 import { FC }                              from 'react'
 import { useState }                        from 'react'
+import React                               from 'react'
 
 import { OnbordingConditionElement }       from '@app/onbording-condition-element'
 import { Box }                             from '@ui/layout'
 import { Progress }                        from '@ui/progress'
 import { ThemeType }                       from '@ui/theme'
+import { useTheme }                        from '@emotion/react'
 
 import { ImageGroup }                      from './image-group/index.js'
 import { getProgressbarPercents }          from './getters/index.js'

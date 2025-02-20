@@ -1,9 +1,8 @@
 import styled                        from '@emotion/styled'
-
-import React                         from 'react'
 import { FC }                        from 'react'
 import { PropsWithChildren }         from 'react'
 import { motion }                    from 'framer-motion'
+import React                         from 'react'
 
 import { Column }                    from '@ui/layout'
 

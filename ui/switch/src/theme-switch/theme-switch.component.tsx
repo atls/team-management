@@ -1,12 +1,11 @@
-import styled                         from '@emotion/styled'
 import { HandleElement }              from '@atls-ui-parts/switch'
 import { useSwitch }                  from '@atls-ui-parts/switch'
-
-import React                          from 'react'
+import styled                         from '@emotion/styled'
 import { FC }                         from 'react'
 import { useRef }                     from 'react'
 import { useContext }                 from 'react'
 import { useHover }                   from 'react-laag'
+import React                          from 'react'
 
 import { ActiveThemeDispatchContext } from '@ui/theme'
 

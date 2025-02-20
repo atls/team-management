@@ -1,11 +1,10 @@
-import { useTheme }          from '@emotion/react'
-
-import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
+import React                 from 'react'
 
 import { Box }               from '@ui/layout'
 import { ThemeType }         from '@ui/theme'
+import { useTheme }          from '@emotion/react'
 
 import { BackgroundProps }   from './background.interfaces.js'
 

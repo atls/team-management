@@ -1,9 +1,8 @@
 import type { ImageGroupProps }      from './image-group.interfaces.js'
 
 import styled                        from '@emotion/styled'
-
-import React                         from 'react'
 import { FC }                        from 'react'
+import React                         from 'react'
 
 import { Condition }                 from '@ui/condition'
 import { ImageBlock }                from '@ui/image'

@@ -1,7 +1,7 @@
-import React                from 'react'
 import { FC }               from 'react'
 import { FormattedPlural }  from 'react-intl'
 import { FormattedMessage } from 'react-intl'
+import React                from 'react'
 
 import { TeamIcon }         from '@ui/icons'
 import { Text }             from '@ui/text'

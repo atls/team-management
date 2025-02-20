@@ -1,14 +1,13 @@
 import styled                  from '@emotion/styled'
-import { useTheme }            from '@emotion/react'
-
-import React                   from 'react'
 import { FC }                  from 'react'
 import { useContext }          from 'react'
+import React                   from 'react'
 
 import { ChevroneLeftIcon }    from '@ui/icons'
 import { ChevroneRightIcon }   from '@ui/icons'
 import { Box }                 from '@ui/layout'
 import { ThemeType }           from '@ui/theme'
+import { useTheme }            from '@emotion/react'
 
 import { SidebarStateContext } from '../sidebar.context.js'
 import { PinProps }            from './pin.interfaces.js'

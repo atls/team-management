@@ -1,20 +1,19 @@
 import { HiddenInput }       from '@atls-ui-parts/hidden-input'
-import { useTheme }          from '@emotion/react'
-
-import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
+import React                 from 'react'
 
 import { Condition }         from '@ui/condition'
 import { CheckIcon }         from '@ui/icons'
 import { WrongSolidIcon }    from '@ui/icons'
 import { ThemeType }         from '@ui/theme'
+import { useTheme }          from '@emotion/react'
 
-import CheckboxProps         from './checkbox.interface.js'
 import { Box }               from './box/index.js'
 import { Check }             from './check/index.js'
 import { Container }         from './container/index.js'
 import { Label }             from './label/index.js'
+import CheckboxProps         from './checkbox.interface.js'
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,

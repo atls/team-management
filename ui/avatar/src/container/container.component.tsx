@@ -1,8 +1,7 @@
 import styled                from '@emotion/styled'
-
-import React                 from 'react'
 import { PropsWithChildren } from 'react'
 import { FC }                from 'react'
+import React                 from 'react'
 
 import { AvatarShapeStyles } from '../styles/shape/index.js'
 import { ContainerProps }    from './container.interfaces.js'

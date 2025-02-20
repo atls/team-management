@@ -1,10 +1,8 @@
-import { useTheme }               from '@emotion/react'
-
-import React                      from 'react'
 import { FC }                     from 'react'
 import { FormattedMessage }       from 'react-intl'
 import { memo }                   from 'react'
 import { useState }               from 'react'
+import React                      from 'react'
 
 import { InviteButton }           from '@app/invite-button'
 import { InviteButtonStateType }  from '@app/invite-button'
@@ -16,6 +14,7 @@ import { Modal }                  from '@ui/modal'
 import { IconSwitch }             from '@ui/switch'
 import { Text }                   from '@ui/text'
 import { ThemeType }              from '@ui/theme'
+import { useTheme }               from '@emotion/react'
 import { useToast }               from '@stores/toast-notification'
 
 import { InviteMemberModalInput } from './input/index.js'

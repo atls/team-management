@@ -1,7 +1,7 @@
+import { FC }                        from 'react'
 // @ts-ignore:next-line
 import Link                          from 'next/link'
 import React                         from 'react'
-import { FC }                        from 'react'
 
 import { Condition }                 from '@ui/condition'
 import { SettingsIcon }              from '@ui/icons'

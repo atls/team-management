@@ -1,11 +1,10 @@
-import styled                             from '@emotion/styled'
 import { Box }                            from '@atls-ui-parts/layout'
 import { BoxProps }                       from '@atls-ui-parts/layout'
-
-import React                              from 'react'
+import styled                             from '@emotion/styled'
 import { FC }                             from 'react'
 import { PropsWithChildren }              from 'react'
 import { MouseEventHandler }              from 'react'
+import React                              from 'react'
 
 import { ChildContainerProps }            from './child-container.interfaces.js'
 import { baseChildContainerStyles }       from './child-container.styles.js'

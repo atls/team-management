@@ -1,8 +1,8 @@
-import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
 import { useEffect }            from 'react'
 import { useIntl }              from 'react-intl'
+import React                    from 'react'
 
 import { SelectInput }          from '@ui/input'
 import { useSelectInput }       from '@stores/select-input'

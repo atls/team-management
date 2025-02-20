@@ -1,18 +1,17 @@
 import styled                          from '@emotion/styled'
-import { useTheme }                    from '@emotion/react'
-
-// @ts-ignore:next-line
-import Link                            from 'next/link'
-import React                           from 'react'
 import { FC }                          from 'react'
 import { useContext }                  from 'react'
 import { useHover }                    from 'react-laag'
+// @ts-ignore:next-line
+import Link                            from 'next/link'
+import React                           from 'react'
 
 import { Condition }                   from '@ui/condition'
 import { DashboardIcon }               from '@ui/icons'
 import { Row }                         from '@ui/layout'
 import { Text }                        from '@ui/text'
 import { ThemeType }                   from '@ui/theme'
+import { useTheme }                    from '@emotion/react'
 
 import { SidebarStateContext }         from '../sidebar.context.js'
 import { SidebarItemProps }            from './item.interfaces.js'

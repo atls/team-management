@@ -1,5 +1,4 @@
 import styled      from '@emotion/styled'
-
 import { styleFn } from 'styled-system'
 
 export const scrollContainerBaseStyles: styleFn = ({ theme, height, maxHeight }) => ({

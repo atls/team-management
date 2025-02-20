@@ -1,7 +1,6 @@
 import styled                    from '@emotion/styled'
-
-import React                     from 'react'
 import { FC }                    from 'react'
+import React                     from 'react'
 
 import { ThumbElement }          from './thumb.element.js'
 import { ThumbProps }            from './thumb.interfaces.js'

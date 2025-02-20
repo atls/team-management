@@ -1,9 +1,8 @@
-import styled                  from '@emotion/styled'
 import { ConditionalRender }   from '@atls-ui-parts/conditional-render'
-
-import React                   from 'react'
+import styled                  from '@emotion/styled'
 import { FC }                  from 'react'
 import { useMemo }             from 'react'
+import React                   from 'react'
 
 import { Box }                 from '@ui/layout'
 

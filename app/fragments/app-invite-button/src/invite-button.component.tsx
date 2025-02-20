@@ -1,15 +1,14 @@
 'use client'
 
-import { useTheme }                 from '@emotion/react'
-
-import React                        from 'react'
 import { FC }                       from 'react'
 import { FormattedMessage }         from 'react-intl'
+import React                        from 'react'
 
 import { Button }                   from '@ui/button'
 import { SuccessIcon }              from '@ui/icons'
 import { Text }                     from '@ui/text'
 import { ThemeType }                from '@ui/theme'
+import { useTheme }                 from '@emotion/react'
 
 import { InviteButtonProps }        from './invite-button.interfaces.js'
 import { getInviteButtonConstants } from './invite-button.constants.js'
