@@ -1,5 +1,4 @@
-import { CSSObject } from '@emotion/css'
-
+import { CSSObject } from '@emotion/react'
 import { theme }     from '@ui/theme'
 
 export const baseStyles: CSSObject = {

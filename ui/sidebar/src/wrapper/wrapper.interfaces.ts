@@ -1,4 +1,4 @@
-type StatesType = {
+export type StatesType = {
   isSidebarOpened: boolean
   setSidebarOpened: (arg0: boolean) => void
   isSidebarVisible: boolean
