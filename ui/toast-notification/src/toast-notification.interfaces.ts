@@ -20,3 +20,10 @@ export interface ToastNotificationComponentProps {
   notificationData: ToastNotificationProps
   toastNotificationDispatch: DispatchFuncType
 }
+
+export interface ToastNotificationHookProps {
+  toastNotificationDispatch: DispatchFuncType
+  isHide: boolean
+  setHide: (value: boolean) => void
+  text?: string
+}
