@@ -2,17 +2,17 @@
 
 import type { MemberWithOrganizationsDataType } from '@app/member-card'
 import type { OrganizationDataType }            from '@globals/data'
+import type { ThemeType }                       from '@ui/theme'
+import type { FC }                              from 'react'
 
 import type { MemberCardsGridProps }            from './use-get-members-data.interfaces.js'
 
-import { FC }                                   from 'react'
 import { memo }                                 from 'react'
 import { useState }                             from 'react'
 import React                                    from 'react'
 
 import { MemberCard }                           from '@app/member-card'
 import { GridAutoRows }                         from '@ui/layout'
-import { ThemeType }                            from '@ui/theme'
 import { useTheme }                             from '@emotion/react'
 import { useToast }                             from '@stores/toast-notification'
 

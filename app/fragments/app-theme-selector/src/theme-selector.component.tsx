@@ -1,3 +1,5 @@
+import type { ThemeType }     from '@ui/theme'
+
 import { useState }           from 'react'
 import React                  from 'react'
 
@@ -6,7 +8,6 @@ import { Button }             from '@ui/button'
 import { NotificationsIcon }  from '@ui/icons'
 import { Row }                from '@ui/layout'
 import { ThemeSwitch }        from '@ui/switch'
-import { ThemeType }          from '@ui/theme'
 import { useTheme }           from '@emotion/react'
 
 const ThemeSelector: React.FC = () => {
@@ -40,8 +41,8 @@ const ThemeSelector: React.FC = () => {
 
       <NotificationsModal
         open={isNotificationsModalOpen}
-        onBackdropClick={handleNotificationsModal}
         avatar='/profile.png'
+        onBackdropClick={handleNotificationsModal}
       />
     </Row>
   )

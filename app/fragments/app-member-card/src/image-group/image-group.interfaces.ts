@@ -1,6 +1,6 @@
-import type { MemberWithOrganizationsDataType } from '../member-card.interfaces.js'
+import type { useState }                        from 'react'
 
-import { useState }                             from 'react'
+import type { MemberWithOrganizationsDataType } from '../member-card.interfaces.js'
 
 export type ImageGroupProps = {
   memberData: MemberWithOrganizationsDataType

@@ -1,4 +1,4 @@
-import { OrganizationDataType } from '@globals/data'
+import type { OrganizationDataType } from '@globals/data'
 
 export type OrganizationElementProps = {
   organizationsData: Array<OrganizationDataType>

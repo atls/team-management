@@ -1,18 +1,20 @@
-import { RawInput }                 from '@atls-ui-parts/input'
-import { useChangeValue }           from '@atls-ui-parts/input'
-import styled                       from '@emotion/styled'
-import { ForwardRefRenderFunction } from 'react'
-import { forwardRef }               from 'react'
-import React                        from 'react'
+import type { ForwardRefRenderFunction } from 'react'
 
-import { Box }                      from '@ui/layout'
+import type { BaseInputProps }           from './base-input.interfaces.js'
+import type { BaseInputBoxProps }        from './base-input.interfaces.js'
 
-import { BaseInputProps }           from './base-input.interfaces.js'
-import { BaseInputBoxProps }        from './base-input.interfaces.js'
-import { DeleteButton }             from './delete-button/index.js'
-import { ErrorMessage }             from './error-message/index.js'
-import { shapeStyles }              from '../input.styles.js'
-import { appearanceStyles }         from '../input.styles.js'
+import { RawInput }                      from '@atls-ui-parts/input'
+import { useChangeValue }                from '@atls-ui-parts/input'
+import styled                            from '@emotion/styled'
+import { forwardRef }                    from 'react'
+import React                             from 'react'
+
+import { Box }                           from '@ui/layout'
+
+import { DeleteButton }                  from './delete-button/index.js'
+import { ErrorMessage }                  from './error-message/index.js'
+import { shapeStyles }                   from '../input.styles.js'
+import { appearanceStyles }              from '../input.styles.js'
 
 const BaseInputBox = styled(Box)<BaseInputBoxProps>(shapeStyles, appearanceStyles)
 

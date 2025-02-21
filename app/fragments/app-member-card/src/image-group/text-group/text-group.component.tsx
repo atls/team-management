@@ -1,8 +1,8 @@
 import type { ThemeType }     from '@ui/theme'
+import type { FC }            from 'react'
 
 import type { TextGroupType } from './text-group.interfaces.ts'
 
-import { FC }                 from 'react'
 import React                  from 'react'
 
 import { Column }             from '@ui/layout'

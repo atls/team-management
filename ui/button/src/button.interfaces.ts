@@ -1,20 +1,20 @@
-import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
+import type { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 
 export type ButtonVariant =
-  | 'blackSolidBackgroundButton'
   | 'blackBackgroundButton'
-  | 'whiteBackgroundButton'
+  | 'blackSolidBackgroundButton'
   | 'blueBackgroundButton'
-  | 'transparentBackgroundButton'
   | 'lightBlueBackgroundButton'
+  | 'transparentBackgroundButton'
   | 'transparentBlueBackgroundButton'
+  | 'whiteBackgroundButton'
 
 export type ButtonSize =
+  | 'bigRoundedPadding'
+  | 'microIncreasedRoundedPadding'
+  | 'microRoundedPadding'
   | 'middlingRoundedPadding'
   | 'smallRoundedPadding'
-  | 'bigRoundedPadding'
-  | 'microRoundedPadding'
-  | 'microIncreasedRoundedPadding'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
@@ -24,9 +24,9 @@ export interface ButtonProps extends BaseButtonProps {
   boxShadow?: string
   ref?: any
   iconSvg?: React.ReactNode
-  valueRadius?: string | Record<string, string>
-  valueWidth?: string | Record<string, string>
-  valueHeight?: string | Record<string, string>
-  valueBackground?: string | Record<string, string>
+  valueRadius?: Record<string, string> | string
+  valueWidth?: Record<string, string> | string
+  valueHeight?: Record<string, string> | string
+  valueBackground?: Record<string, string> | string
   horizontalLocation?: 'left' | 'right'
 }

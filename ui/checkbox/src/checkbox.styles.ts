@@ -1,3 +1,5 @@
+import type { styleFn }                  from 'styled-system'
+
 import { createBoxShapeStyles }          from '@atls-ui-parts/checkbox'
 import { createBoxAppearanceStyles }     from '@atls-ui-parts/checkbox'
 import { createCheckBaseStyles }         from '@atls-ui-parts/checkbox'
@@ -8,7 +10,6 @@ import { createContainerPositionStyles } from '@atls-ui-parts/checkbox'
 import { createLabelAppearanceStyles }   from '@atls-ui-parts/checkbox'
 import { createLabelShapeStyles }        from '@atls-ui-parts/checkbox'
 import { createLabelPositionStyles }     from '@atls-ui-parts/checkbox'
-import { styleFn }                       from 'styled-system'
 import { ifProp }                        from 'styled-tools'
 import { prop }                          from 'styled-tools'
 

@@ -1,6 +1,6 @@
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { cookies }  from 'next/headers'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { redirect } from 'next/navigation'
 
 export const logoutHandle = (request: Request) => {

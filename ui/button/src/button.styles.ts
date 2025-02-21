@@ -1,6 +1,7 @@
+import type { styleFn }        from 'styled-system'
+
 import { createShapeStyles }   from '@atls-ui-parts/button'
 import { createContentStyles } from '@atls-ui-parts/button'
-import { styleFn }             from 'styled-system'
 import { prop }                from 'styled-tools'
 import { switchProp }          from 'styled-tools'
 import { ifProp }              from 'styled-tools'

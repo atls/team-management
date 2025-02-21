@@ -1,2 +1,2 @@
 export * from './base-switch.component.js'
-export * from './base-switch.interfaces.js'
+export type * from './base-switch.interfaces.js'

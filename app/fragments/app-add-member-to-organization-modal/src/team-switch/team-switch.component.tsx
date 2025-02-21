@@ -1,14 +1,15 @@
-import { FC }                from 'react'
-import { PropsWithChildren } from 'react'
-import React                 from 'react'
+import type { ThemeType }         from '@ui/theme'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Row }               from '@ui/layout'
-import { BaseSwitch }        from '@ui/switch'
-import { Text }              from '@ui/text'
-import { ThemeType }         from '@ui/theme'
-import { useTheme }          from '@emotion/react'
+import type { TeamSwitchProps }   from './team-swtich.interfaces.js'
 
-import { TeamSwitchProps }   from './team-swtich.interfaces.js'
+import React                      from 'react'
+
+import { Row }                    from '@ui/layout'
+import { BaseSwitch }             from '@ui/switch'
+import { Text }                   from '@ui/text'
+import { useTheme }               from '@emotion/react'
 
 export const TeamSwitch: FC<PropsWithChildren<TeamSwitchProps>> = ({ teamName, onChange }) => {
   const theme = useTheme() as ThemeType

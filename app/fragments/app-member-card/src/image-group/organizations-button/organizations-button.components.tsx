@@ -1,6 +1,8 @@
+import type { ThemeType }               from '@ui/theme'
+import type { FC }                      from 'react'
+
 import type { OrganizationsButtonType } from './organizations-button.interfaces.js'
 
-import { FC }                           from 'react'
 import { useState }                     from 'react'
 import React                            from 'react'
 
@@ -8,7 +10,6 @@ import { OrganizationsModal }           from '@app/organizations-modal'
 import { Button }                       from '@ui/button'
 import { OrganizationsIcon }            from '@ui/icons'
 import { Text }                         from '@ui/text'
-import { ThemeType }                    from '@ui/theme'
 import { useTheme }                     from '@emotion/react'
 
 import { getConstants }                 from './organizations-button.constants.js'
@@ -35,9 +36,9 @@ export const OrganizationsButton: FC<OrganizationsButtonType> = ({
   return (
     <>
       <Button
-        onClick={organizationsModalHandler}
         variant='blackSolidBackgroundButton'
         size='microIncreasedRoundedPadding'
+        onClick={organizationsModalHandler}
       >
         <Text fontSize='normal.semiDefault' color={theme.colors.white}>
           {organizationsQuantity}

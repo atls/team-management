@@ -1,5 +1,6 @@
+import type { styleFn }                               from 'styled-system'
+
 import { baseThumbStyles as hyperionBaseThumbStyles } from '@atls-ui-parts/switch'
-import { styleFn }                                    from 'styled-system'
 import { ifProp }                                     from 'styled-tools'
 
 export const baseThumbStyles: styleFn = ({ theme }) => ({

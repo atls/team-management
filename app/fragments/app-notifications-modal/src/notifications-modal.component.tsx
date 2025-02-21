@@ -1,19 +1,20 @@
-import { FC }                      from 'react'
-import { FormattedMessage }        from 'react-intl'
-import React                       from 'react'
+import type { ThemeType }               from '@ui/theme'
+import type { FC }                      from 'react'
 
-import { Avatar }                  from '@ui/avatar'
-import { Divider }                 from '@ui/divider'
-import { Box }                     from '@ui/layout'
-import { Column }                  from '@ui/layout'
-import { Modal }                   from '@ui/modal'
-import { Scroll }                  from '@ui/scroll'
-import { Text }                    from '@ui/text'
-import { Space }                   from '@ui/text'
-import { ThemeType }               from '@ui/theme'
-import { useTheme }                from '@emotion/react'
+import type { NotificationsModalProps } from './notifications-modal.interfaces.js'
 
-import { NotificationsModalProps } from './notifications-modal.interfaces.js'
+import { FormattedMessage }             from 'react-intl'
+import React                            from 'react'
+
+import { Avatar }                       from '@ui/avatar'
+import { Divider }                      from '@ui/divider'
+import { Box }                          from '@ui/layout'
+import { Column }                       from '@ui/layout'
+import { Modal }                        from '@ui/modal'
+import { Scroll }                       from '@ui/scroll'
+import { Text }                         from '@ui/text'
+import { Space }                        from '@ui/text'
+import { useTheme }                     from '@emotion/react'
 
 const NotificationsModal: FC<NotificationsModalProps> = ({
   avatar,
@@ -48,8 +49,8 @@ const NotificationsModal: FC<NotificationsModalProps> = ({
           >
             <Box marginBottom={theme.spaces.micro}>
               <Avatar
-                size={theme.spaces.bigDecreased}
                 image
+                size={theme.spaces.bigDecreased}
                 notification={notifiaction}
                 src={avatar}
                 alt='avatar'

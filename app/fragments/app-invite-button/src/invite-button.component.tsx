@@ -1,16 +1,18 @@
 'use client'
 
-import { FC }                       from 'react'
+import type { ThemeType }           from '@ui/theme'
+import type { FC }                  from 'react'
+
+import type { InviteButtonProps }   from './invite-button.interfaces.js'
+
 import { FormattedMessage }         from 'react-intl'
 import React                        from 'react'
 
 import { Button }                   from '@ui/button'
 import { SuccessIcon }              from '@ui/icons'
 import { Text }                     from '@ui/text'
-import { ThemeType }                from '@ui/theme'
 import { useTheme }                 from '@emotion/react'
 
-import { InviteButtonProps }        from './invite-button.interfaces.js'
 import { getInviteButtonConstants } from './invite-button.constants.js'
 
 export const InviteButton: FC<InviteButtonProps> = ({
@@ -23,8 +25,8 @@ export const InviteButton: FC<InviteButtonProps> = ({
 
   return inviteButtonState === 'successed' ? (
     <Button
-      horizontalLocation='right'
       hoverDisabled
+      horizontalLocation='right'
       variant='whiteBackgroundButton'
       size='middlingRoundedPadding'
     >

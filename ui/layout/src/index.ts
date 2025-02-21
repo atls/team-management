@@ -4,7 +4,7 @@ import styled                   from '@emotion/styled'
 
 import { flexStyles }           from './flex/flex.styles.js'
 
-export { BoxProps } from '@atls-ui-parts/layout'
+export type { BoxProps } from '@atls-ui-parts/layout'
 
 export const Box = styled(BaseBox)(flexStyles)
 export const Layout = styled(BaseLayout)(flexStyles)

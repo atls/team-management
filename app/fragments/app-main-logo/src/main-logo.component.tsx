@@ -1,10 +1,11 @@
+import type { ThemeType }   from '@ui/theme'
+
 import { FormattedMessage } from 'react-intl'
 import React                from 'react'
 
 import { AtlantisIcon }     from '@ui/icons'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
-import { ThemeType }        from '@ui/theme'
 import { useTheme }         from '@emotion/react'
 
 const MainLogo: React.FC = () => {

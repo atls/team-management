@@ -1,3 +1,3 @@
-import { SwitchProps } from '@atls-ui-parts/switch'
+import type { SwitchProps } from '@atls-ui-parts/switch'
 
-export interface ThemeSwitchProps extends SwitchProps {}
+export type ThemeSwitchProps = SwitchProps

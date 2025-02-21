@@ -1,4 +1,4 @@
-import { StatesType } from './wrapper.interfaces.js'
+import type { StatesType } from './wrapper.interfaces.js'
 
 export const animationCompleteHook = ({
   isSidebarOpened,

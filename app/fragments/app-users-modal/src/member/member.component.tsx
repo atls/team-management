@@ -1,21 +1,23 @@
-import { FC }             from 'react'
-import { memo }           from 'react'
-// @ts-ignore:next-line
-import Link               from 'next/link'
-import React              from 'react'
+import type { ThemeType }   from '@ui/theme'
+import type { FC }          from 'react'
 
-import { Condition }      from '@ui/condition'
-import { Divider }        from '@ui/divider'
-import { ImageBlock }     from '@ui/image'
-import { Box }            from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Text }           from '@ui/text'
-import { ThemeType }      from '@ui/theme'
-import { useTheme }       from '@emotion/react'
+import type { MemberProps } from './member.interfaces.js'
 
-import { MemberDorpdown } from './member-dropdown/member-dropdown.component.js'
-import { MemberProps }    from './member.interfaces.js'
+import { memo }             from 'react'
+// @ts-expect-error:next-line
+import Link                 from 'next/link'
+import React                from 'react'
+
+import { Condition }        from '@ui/condition'
+import { Divider }          from '@ui/divider'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Text }             from '@ui/text'
+import { useTheme }         from '@emotion/react'
+
+import { MemberDorpdown }   from './member-dropdown/member-dropdown.component.js'
 
 export const Member: FC<MemberProps> = memo(({
   memberData,

@@ -1,27 +1,29 @@
-import { FC }                         from 'react'
-import { FormattedMessage }           from 'react-intl'
-import { memo }                       from 'react'
-import { useState }                   from 'react'
-import { useEffect }                  from 'react'
-import React                          from 'react'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { ThemeType }                  from '@ui/theme'
+import type { FC }                         from 'react'
 
-import { OrganizationMemberDataType } from '@globals/data'
-import { ImageBlock }                 from '@ui/image'
-import { Box }                        from '@ui/layout'
-import { Row }                        from '@ui/layout'
-import { Column }                     from '@ui/layout'
-import { Modal }                      from '@ui/modal'
-import { Scroll }                     from '@ui/scroll'
-import { Text }                       from '@ui/text'
-import { Space }                      from '@ui/text'
-import { ThemeType }                  from '@ui/theme'
-import { useTheme }                   from '@emotion/react'
-import { useToast }                   from '@stores/toast-notification'
+import type { UsersModalProps }            from './users-modal.interfaces.js'
 
-import { Member }                     from './member/index.js'
-import { UsersModalProps }            from './users-modal.interfaces.js'
-import { getOrganizationMembersHook } from './hooks/index.js'
-import { removeMemberHook }           from './hooks/index.js'
+import { FormattedMessage }                from 'react-intl'
+import { memo }                            from 'react'
+import { useState }                        from 'react'
+import { useEffect }                       from 'react'
+import React                               from 'react'
+
+import { ImageBlock }                      from '@ui/image'
+import { Box }                             from '@ui/layout'
+import { Row }                             from '@ui/layout'
+import { Column }                          from '@ui/layout'
+import { Modal }                           from '@ui/modal'
+import { Scroll }                          from '@ui/scroll'
+import { Text }                            from '@ui/text'
+import { Space }                           from '@ui/text'
+import { useTheme }                        from '@emotion/react'
+import { useToast }                        from '@stores/toast-notification'
+
+import { Member }                          from './member/index.js'
+import { getOrganizationMembersHook }      from './hooks/index.js'
+import { removeMemberHook }                from './hooks/index.js'
 
 export const UsersModal: FC<UsersModalProps> = memo(({
   open,
@@ -54,7 +56,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
     }
   }, [open, toast, initMembersCount, membersData, organizationId])
 
-  const handlerRemoveMemberClick = (removeMemberLogin: string) =>
+  const handlerRemoveMemberClick = (removeMemberLogin: string) => {
     removeMemberHook({
       organizationLogin,
       membersData,
@@ -62,6 +64,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
       removeMemberLogin,
       toast,
     })
+  }
 
   return (
     <Modal
@@ -77,7 +80,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
           </Box>
           <Text maxWidth={theme.spaces.extraLargeDecreased} fontSize='normal.increased'>
             {organizationName}
-            {organizationDescription && `, ${organizationDescription}`}
+            {!!organizationDescription && `, ${organizationDescription}`}
           </Text>
         </Row>
         <Text maxWidth={theme.spaces.largeSemiDecreasedDefault} fontSize='medium.semiIncreased'>
@@ -88,9 +91,9 @@ export const UsersModal: FC<UsersModalProps> = memo(({
           {membersData.map((memberData, memberIndex) => (
             <Member
               memberData={memberData}
-              onDeleteMemberClick={handlerRemoveMemberClick}
               viewerCanAdminister={viewerCanAdminister}
               devider={!(memberIndex === membersData.length - 1)}
+              onDeleteMemberClick={handlerRemoveMemberClick}
             />
           ))}
         </Scroll>

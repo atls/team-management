@@ -1,4 +1,4 @@
-import { InviteButtonStateType } from '@app/invite-button'
+import type { InviteButtonStateType } from '@app/invite-button'
 
 export interface ChangeButtonHookType {
   inputValues: Array<string>

@@ -1,5 +1,6 @@
-import { styleFn } from 'styled-system'
-import { ifProp }  from 'styled-tools'
+import type { styleFn } from 'styled-system'
+
+import { ifProp }       from 'styled-tools'
 
 export const baseSidebarItemStyles: styleFn = ({ theme }) => ({
   textDecoration: 'none',

@@ -1,6 +1,6 @@
 export type MailTemplateType = {
   from: string
-  to: string | Array<string>
+  to: Array<string> | string
   subject: string
   text: string
   html: string

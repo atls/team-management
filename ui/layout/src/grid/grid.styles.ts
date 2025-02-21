@@ -1,6 +1,7 @@
-import { Config }  from 'styled-system'
-import { styleFn } from 'styled-system'
-import { system }  from 'styled-system'
+import type { Config }  from 'styled-system'
+import type { styleFn } from 'styled-system'
+
+import { system }       from 'styled-system'
 
 const gridAutoRowsConfig: Config = {
   gap: {

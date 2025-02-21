@@ -1,17 +1,19 @@
-import { Layout as BaseLayout } from '@atls-ui-parts/layout'
-import { Box as BaseBox }       from '@atls-ui-parts/layout'
-import { Row as BaseRow }       from '@atls-ui-parts/layout'
-import { Column as BaseColumn } from '@atls-ui-parts/layout'
-import styled                   from '@emotion/styled'
-import { TypographyProps }      from 'styled-system'
-import { typography }           from 'styled-system'
+import type { TypographyProps }    from 'styled-system'
 
-import { LayoutWithGap }        from './styles/index.js'
-import { ColumnWithPosition }   from './styles/index.js'
-import { gapStyles }            from './styles/index.js'
-import { positionStyles }       from './styles/index.js'
+import type { LayoutWithGap }      from './styles/index.js'
+import type { ColumnWithPosition } from './styles/index.js'
 
-type GeneralProps = LayoutWithGap & ColumnWithPosition
+import { Layout as BaseLayout }    from '@atls-ui-parts/layout'
+import { Box as BaseBox }          from '@atls-ui-parts/layout'
+import { Row as BaseRow }          from '@atls-ui-parts/layout'
+import { Column as BaseColumn }    from '@atls-ui-parts/layout'
+import styled                      from '@emotion/styled'
+import { typography }              from 'styled-system'
+
+import { gapStyles }               from './styles/index.js'
+import { positionStyles }          from './styles/index.js'
+
+type GeneralProps = ColumnWithPosition & LayoutWithGap
 
 export const Layout = styled(BaseLayout)<GeneralProps>(gapStyles)
 

@@ -1,15 +1,17 @@
-import { RawInput }                 from '@atls-ui-parts/input'
-import { Box }                      from '@atls-ui-parts/layout'
-import { BoxProps }                 from '@atls-ui-parts/layout'
-import { useChangeValue }           from '@atls-ui-parts/input'
-import styled                       from '@emotion/styled'
-import { ForwardRefRenderFunction } from 'react'
-import { forwardRef }               from 'react'
-import React                        from 'react'
+import type { BoxProps }                 from '@atls-ui-parts/layout'
+import type { ForwardRefRenderFunction } from 'react'
 
-import { InputProps }               from './input.interfaces.js'
-import { shapeStyles }              from './input.styles.js'
-import { appearanceStyles }         from './input.styles.js'
+import type { InputProps }               from './input.interfaces.js'
+
+import { RawInput }                      from '@atls-ui-parts/input'
+import { Box }                           from '@atls-ui-parts/layout'
+import { useChangeValue }                from '@atls-ui-parts/input'
+import styled                            from '@emotion/styled'
+import { forwardRef }                    from 'react'
+import React                             from 'react'
+
+import { shapeStyles }                   from './input.styles.js'
+import { appearanceStyles }              from './input.styles.js'
 
 const InputElement = styled(Box)<BoxProps>(shapeStyles, appearanceStyles)
 

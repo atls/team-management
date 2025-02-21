@@ -1,12 +1,15 @@
-import { FC }                       from 'react'
-// @ts-ignore:next-line
+import type { ThemeType }           from '@ui/theme'
+import type { ThemeVariantType }    from '@ui/theme'
+import type { FC }                  from 'react'
+
+import type { SidebarProps }        from './sidebar.interfaces.js'
+
+// @ts-expect-error:next-line
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
 import React                        from 'react'
 
 import { Box }                      from '@ui/layout'
-import { ThemeType }                from '@ui/theme'
-import { ThemeVariantType }         from '@ui/theme'
 import { useTheme }                 from '@emotion/react'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
@@ -15,7 +18,6 @@ import { OrganizatoinSettings }     from './organization-settings/index.js'
 import { Pin }                      from './pin/index.js'
 import { SidebarDivider }           from './sidebar-divider/index.js'
 import { SidebarStateContext }      from './sidebar.context.js'
-import { SidebarProps }             from './sidebar.interfaces.js'
 import { Viewer }                   from './viewer/viewer.component.js'
 import { Wrapper }                  from './wrapper/index.js'
 import { itemList }                 from './sidebar.constants.js'
@@ -44,7 +46,11 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
             <SidebarItem {...itemData} active={pathname === itemData.href} />
           ))}
         </Box>
-        <Pin visibleHook={() => changeSidebarVisibleHook(setSidebarVisible)} />
+        <Pin
+          visibleHook={() => {
+            changeSidebarVisibleHook(setSidebarVisible)
+          }}
+        />
         <SidebarDivider />
         <Viewer name={name} email={email} avatarUrl={avatarUrl} url={url} />
         <OrganizatoinSettings theme={theme} isSidebarOpened={isSidebarOpened} />

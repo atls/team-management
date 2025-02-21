@@ -1,8 +1,9 @@
-import { FC }         from 'react'
-import { motion }     from 'framer-motion'
-import React          from 'react'
+import type { FC }         from 'react'
 
-import { ThumbProps } from './thumb.interfaces.js'
+import type { ThumbProps } from './thumb.interfaces.js'
+
+import { motion }          from 'framer-motion'
+import React               from 'react'
 
 const thumbMotionVariants = {
   visible: {

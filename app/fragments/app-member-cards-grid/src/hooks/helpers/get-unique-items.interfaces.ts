@@ -1,1 +1,1 @@
-export type GetUniqueItemsType = (allDataItem: any[]) => any[]
+export type GetUniqueItemsType = (allDataItem: Array<any>) => Array<any>

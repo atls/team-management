@@ -1,5 +1,8 @@
+import type { FC }                          from 'react'
+
+import type { SuggestedItemProps }          from './suggested-item.interfaces.js'
+
 import styled                               from '@emotion/styled'
-import { FC }                               from 'react'
 import { useContext }                       from 'react'
 import React                                from 'react'
 
@@ -12,7 +15,6 @@ import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 import { useTheme }                         from '@emotion/react'
 
-import { SuggestedItemProps }               from './suggested-item.interfaces.js'
 import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
 import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles.js'
 import { appearanceSuggestedItemBoxStyles } from './suggested-item.styles.js'
@@ -28,9 +30,9 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
 
   const theme: any = useTheme()
 
-  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext) as any
-  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext) as any
-  const inputValueDispatch = useContext(InputValueDispatchContext) as any
+  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
+  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext)
+  const inputValueDispatch = useContext(InputValueDispatchContext)
 
   function handleAddSelectedItem(
     e: React.MouseEvent<HTMLDivElement>,
@@ -50,9 +52,11 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
 
   return (
     <SuggestedItemBox
-      onClick={(e: React.MouseEvent<HTMLDivElement>) => handleAddSelectedItem(e, suggestedItemData)}
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+        handleAddSelectedItem(e, suggestedItemData)
+      }}
     >
-      {imageSrc && (
+      {!!imageSrc && (
         <Box
           width={theme.spaces.increased}
           height={theme.spaces.increased}
@@ -64,7 +68,7 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
       )}
       <Column gap={theme.spaces.zero}>
         <Text fontSize='small.semiLarge'>{primaryInfo}</Text>
-        {secondaryInfo && (
+        {!!secondaryInfo && (
           <Text fontSize='small.default' color={theme.colors.text.secondary}>
             {secondaryInfo}
           </Text>

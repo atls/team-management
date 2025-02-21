@@ -1,5 +1,6 @@
+import type { styleFn }     from 'styled-system'
+
 import { createBaseStyles } from '@atls-ui-parts/button'
-import { styleFn }          from 'styled-system'
 
 const getBaseStyles = (): styleFn => {
   const baseStyles = createBaseStyles()

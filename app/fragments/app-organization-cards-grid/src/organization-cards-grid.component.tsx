@@ -1,19 +1,21 @@
 'use client'
 
-import { FC }                         from 'react'
-import { memo }                       from 'react'
-import { useState }                   from 'react'
-import React                          from 'react'
+import type { OrganizationDataType }       from '@globals/data'
+import type { ThemeType }                  from '@ui/theme'
+import type { FC }                         from 'react'
 
-import { OrganizationCard }           from '@app/organization-card'
-import { OrganizationDataType }       from '@globals/data'
-import { GridAutoRows }               from '@ui/layout'
-import { ThemeType }                  from '@ui/theme'
-import { useTheme }                   from '@emotion/react'
-import { useToast }                   from '@stores/toast-notification'
+import type { OrganizationCardsGridProps } from './organization-cards-grid.interfaces.js'
 
-import { OrganizationCardsGridHook }  from './organization-cards-grid.hook.js'
-import { OrganizationCardsGridProps } from './organization-cards-grid.interfaces.js'
+import { memo }                            from 'react'
+import { useState }                        from 'react'
+import React                               from 'react'
+
+import { OrganizationCard }                from '@app/organization-card'
+import { GridAutoRows }                    from '@ui/layout'
+import { useTheme }                        from '@emotion/react'
+import { useToast }                        from '@stores/toast-notification'
+
+import { OrganizationCardsGridHook }       from './organization-cards-grid.hook.js'
 
 export const OrganizationCardsGrid: FC<OrganizationCardsGridProps> = memo(({
   organizationsLimit,

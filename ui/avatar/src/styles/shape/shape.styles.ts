@@ -1,6 +1,6 @@
-import { createShapeStyles } from '@atls-ui-parts/avatar'
+import type { AvatarShapeStyles } from './shape.interfaces.js'
 
-import { AvatarShapeStyles } from './shape.interfaces.js'
+import { createShapeStyles }      from '@atls-ui-parts/avatar'
 
 export const getShapeStyles = ({ size, borderWidth, padding, borderRadius }: AvatarShapeStyles) =>
   createShapeStyles({

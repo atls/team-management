@@ -1,7 +1,9 @@
 'use client'
 
+import type { ThemeType }         from '@ui/theme'
+
 import { FormattedMessage }       from 'react-intl'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { useRouter }              from 'next/navigation'
 import React                      from 'react'
 
@@ -12,7 +14,6 @@ import { GitHubIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
-import { ThemeType }              from '@ui/theme'
 import { useTheme }               from '@emotion/react'
 
 import { githubAuthRedirectHook } from './github-auth.hook.js'
@@ -30,7 +31,9 @@ const RegistrationClient: React.FC = () => {
             variant='blackBackgroundButton'
             shape='rectangle'
             size='bigRoundedPadding'
-            onClick={() => githubAuthRedirectHook(router)}
+            onClick={() => {
+              githubAuthRedirectHook(router)
+            }}
           >
             <GitHubIcon width={theme.spaces.bigDecreased} height={theme.spaces.bigDecreased} />
             <Text

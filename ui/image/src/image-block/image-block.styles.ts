@@ -1,7 +1,7 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
 export const createBaseImageBlockStyles: styleFn = () =>
-  (props: { borderRadius?: string | number }) => ({
+  (props: { borderRadius?: number | string }) => ({
     display: 'block',
     width: '100%',
     height: '100%',

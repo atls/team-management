@@ -1,6 +1,6 @@
-import { lightTheme } from './theme/index.js'
+import type { lightTheme } from './theme/index.js'
 
-export type ThemeVariantType = 'light' | 'dark'
+export type ThemeVariantType = 'dark' | 'light'
 
 export type ActionType = { type: 'toggle' }
 

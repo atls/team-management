@@ -1,9 +1,11 @@
-import { FC }               from 'react'
-import Image                from 'next/image'
-import React                from 'react'
+import type { FC }             from 'react'
 
-import { NextImageProps }   from './next-image.interfaces.js'
-import { NextImageWrapper } from './next-image.styles.js'
+import type { NextImageProps } from './next-image.interfaces.js'
+
+import Image                   from 'next/image'
+import React                   from 'react'
+
+import { NextImageWrapper }    from './next-image.styles.js'
 
 const NextImage: FC<NextImageProps> = ({ src, alt, width, height, borderRadius, ...props }) => (
   <NextImageWrapper borderRadius={borderRadius}>

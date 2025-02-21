@@ -1,9 +1,11 @@
-import { GET_ORGANIZATION_MEMBERS }   from '@globals/data'
-import { OrganizationMemberDataType } from '@globals/data'
-import { requestOctokitGraphqlData }  from '@globals/data'
+import type { OrganizationMemberDataType } from '@globals/data'
 
-import { MEMBERS_LIMIT }              from '../users-modal.constants.js'
-import { GetOrganizationMembersType } from './get-organization-members.interface.js'
+import type { GetOrganizationMembersType } from './get-organization-members.interface.js'
+
+import { GET_ORGANIZATION_MEMBERS }        from '@globals/data'
+import { requestOctokitGraphqlData }       from '@globals/data'
+
+import { MEMBERS_LIMIT }                   from '../users-modal.constants.js'
 
 export const getOrganizationMembersHook: GetOrganizationMembersType = async ({
   organizationId,
@@ -16,7 +18,7 @@ export const getOrganizationMembersHook: GetOrganizationMembersType = async ({
       organizationMembersLimit: MEMBERS_LIMIT,
     })
 
-    if (response && response.node && 'membersWithRole' in response.node) {
+    if (response?.node && 'membersWithRole' in response.node) {
       const {
         node: {
           membersWithRole: { nodes: membersData },

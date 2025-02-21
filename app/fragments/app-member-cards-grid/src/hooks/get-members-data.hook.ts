@@ -21,7 +21,7 @@ export const getMembersData: GetMembersDataType = async ({
   organizationMembersLimit,
 }) => {
   try {
-    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME!
 
     const responseOrganizationsData = await getResponseOrganizationsData({
       organizationsLimit,

@@ -1,12 +1,14 @@
-import { FC }                  from 'react'
-import { useContext }          from 'react'
-import React                   from 'react'
+import type { FC }                from 'react'
 
-import { Box }                 from '@ui/layout'
-import { Logo }                from '@ui/logo'
+import type { AtlantisLogoProps } from './atlantis-logo.interfaces.js'
 
-import { SidebarStateContext } from '../sidebar.context.js'
-import { AtlantisLogoProps }   from './atlantis-logo.interfaces.js'
+import { useContext }             from 'react'
+import React                      from 'react'
+
+import { Box }                    from '@ui/layout'
+import { Logo }                   from '@ui/logo'
+
+import { SidebarStateContext }    from '../sidebar.context.js'
 
 export const AtlantisLogo: FC<AtlantisLogoProps> = ({ activeTheme }) => {
   const isSidebarOpened = useContext(SidebarStateContext)

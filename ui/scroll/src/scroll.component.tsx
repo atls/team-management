@@ -1,8 +1,10 @@
-import { PropsWithChildren } from 'react'
-import React                 from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { ScrollProps }       from './scroll.interface.js'
-import { ScrollContainer }   from './scroll.styles.js'
+import type { ScrollProps }       from './scroll.interface.js'
+
+import React                      from 'react'
+
+import { ScrollContainer }        from './scroll.styles.js'
 
 const Scroll: React.FC<PropsWithChildren<ScrollProps>> = ({ children, height, maxHeight }) => (
   <ScrollContainer height={height} maxHeight={maxHeight}>

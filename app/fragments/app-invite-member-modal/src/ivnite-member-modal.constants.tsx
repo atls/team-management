@@ -1,10 +1,11 @@
-import React            from 'react'
+import type { ThemeType } from '@ui/theme'
 
-import { GitHubIcon }   from '@ui/icons'
-import { FigmaIcon }    from '@ui/icons'
-import { DiscordIcon }  from '@ui/icons'
-import { TelegramIcon } from '@ui/icons'
-import { ThemeType }    from '@ui/theme'
+import React              from 'react'
+
+import { GitHubIcon }     from '@ui/icons'
+import { FigmaIcon }      from '@ui/icons'
+import { DiscordIcon }    from '@ui/icons'
+import { TelegramIcon }   from '@ui/icons'
 
 export const getSwitchList = (theme: ThemeType) => {
   const ICON_PROPS = {
@@ -16,19 +17,19 @@ export const getSwitchList = (theme: ThemeType) => {
   const SWITCH_DATA_LIST = [
     {
       icon: <GitHubIcon {...ICON_PROPS} />,
-      switchData: process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string,
+      switchData: process.env.NEXT_PUBLIC_GITHUB_ORG_NAME!,
     },
     {
       icon: <FigmaIcon {...ICON_PROPS} />,
-      switchData: process.env.NEXT_PUBLIC_INVITE_FIGMA_URL as string,
+      switchData: process.env.NEXT_PUBLIC_INVITE_FIGMA_URL!,
     },
     {
       icon: <DiscordIcon {...ICON_PROPS} />,
-      switchData: process.env.NEXT_PUBLIC_INVITE_DISCORD_URL as string,
+      switchData: process.env.NEXT_PUBLIC_INVITE_DISCORD_URL!,
     },
     {
       icon: <TelegramIcon {...ICON_PROPS} />,
-      switchData: process.env.NEXT_PUBLIC_INVITE_TELEGRAM as string,
+      switchData: process.env.NEXT_PUBLIC_INVITE_TELEGRAM!,
     },
   ]
 

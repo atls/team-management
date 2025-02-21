@@ -1,12 +1,13 @@
-import { FC }                from 'react'
+import type { ThemeType }    from '@ui/theme'
+import type { FC }           from 'react'
+
+import type { LogoProps }    from './logo.interfaces.js'
+
 import React                 from 'react'
 
 import { AtlantisIcon }      from '@ui/icons'
 import { AtlantisSmallIcon } from '@ui/icons'
-import { ThemeType }         from '@ui/theme'
 import { useTheme }          from '@emotion/react'
-
-import { LogoProps }         from './logo.interfaces.js'
 
 const Logo: FC<LogoProps> = ({ variant, activeTheme }) => {
   const theme = useTheme() as ThemeType

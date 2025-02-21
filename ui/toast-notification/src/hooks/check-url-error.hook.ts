@@ -1,4 +1,4 @@
-import { ToastNotificationProps } from '../toast-notification.interfaces.js'
+import type { ToastNotificationProps } from '../toast-notification.interfaces.js'
 
 export const checkUrlErrorHook = (): ToastNotificationProps => {
   const CURRENT_URL = new URL(window.location.href)

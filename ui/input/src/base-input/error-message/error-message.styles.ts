@@ -1,4 +1,4 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
 export const baseErrorMessageStyles: styleFn = ({ theme }) => ({
   fontSize: theme.fontSizes.small.increased,

@@ -1,14 +1,15 @@
-import { FC }                  from 'react'
-import React                   from 'react'
+import type { ThemeType }           from '@ui/theme'
+import type { FC }                  from 'react'
 
-import { Dropdown }            from '@ui/dropdown'
-import { WrongOutlineIcon }    from '@ui/icons'
-import { Box }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { ThemeType }           from '@ui/theme'
-import { useTheme }            from '@emotion/react'
+import type { MemberDorpdownProps } from './member-dropdown.interfaces.js'
 
-import { MemberDorpdownProps } from './member-dropdown.interfaces.js'
+import React                        from 'react'
+
+import { Dropdown }                 from '@ui/dropdown'
+import { WrongOutlineIcon }         from '@ui/icons'
+import { Box }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { useTheme }                 from '@emotion/react'
 
 export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberLogin, onDeleteMemberClick }) => {
   const theme = useTheme() as ThemeType
@@ -18,7 +19,9 @@ export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberLogin, onDeleteM
         alignItems='center'
         gap={theme.spaces.s4}
         cursor='pointer'
-        onClick={() => onDeleteMemberClick(memberLogin)}
+        onClick={() => {
+          onDeleteMemberClick(memberLogin)
+        }}
       >
         <WrongOutlineIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
         <Text fontSize='small.semiLarge' color='red'>

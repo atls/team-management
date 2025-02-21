@@ -1,6 +1,9 @@
 import type { OrganizationDataType }    from '@globals/data'
+import type { ThemeType }               from '@ui/theme'
+import type { FC }                      from 'react'
 
-import { FC }                           from 'react'
+import type { OrganizationCardProps }   from './organization-card.interfaces.js'
+
 import { memo }                         from 'react'
 import { useState }                     from 'react'
 import React                            from 'react'
@@ -16,11 +19,9 @@ import { Row }                          from '@ui/layout'
 import { Column }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
 import { Text }                         from '@ui/text'
-import { ThemeType }                    from '@ui/theme'
 import { useTheme }                     from '@emotion/react'
 
 import { Members }                      from './members/index.js'
-import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
@@ -102,8 +103,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
               shape='circle'
               size='middlingRoundedPadding'
               variant='blueBackgroundButton'
-              onClick={handlerAddOrganizationMemberClick}
               disabled={!viewerCanAdminister}
+              onClick={handlerAddOrganizationMemberClick}
             >
               <AddIcon
                 color='white'
@@ -114,8 +115,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <AddMemberToOrganizationModal
               open={isAddMemberToOrganizationModalOpen}
-              onBackdropClick={handlerAddOrganizationMemberClick}
               organizationData={organizationData as OrganizationDataType}
+              onBackdropClick={handlerAddOrganizationMemberClick}
             />
           </Row>
         </Column>

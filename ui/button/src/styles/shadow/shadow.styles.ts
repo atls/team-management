@@ -1,5 +1,6 @@
-import { Config } from 'styled-system'
-import { system } from 'styled-system'
+import type { Config } from 'styled-system'
+
+import { system }      from 'styled-system'
 
 const shadowConfig: Config = {
   boxShadow: {

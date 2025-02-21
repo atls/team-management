@@ -1,10 +1,11 @@
-import styled                from '@emotion/styled'
-import { styleFn }           from 'styled-system'
+import type { styleFn }           from 'styled-system'
 
-import { ImageWrapperProps } from './next-image.interfaces'
+import type { ImageWrapperProps } from './next-image.interfaces'
+
+import styled                     from '@emotion/styled'
 
 export const createBaseNextImageStyles: styleFn = () =>
-  ({ borderRadius }: { borderRadius?: string | number }) => ({
+  ({ borderRadius }: { borderRadius?: number | string }) => ({
     width: '100%',
     height: '100%',
     borderRadius,

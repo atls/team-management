@@ -1,10 +1,12 @@
+import type { ToastType }                from '@stores/toast-notification'
+import type { ThemeType }                from '@ui/theme'
+import type { FC }                       from 'react'
+
 import type { OrganizationElementProps } from './organization-element.interfaces.js'
 
-import { FC }                            from 'react'
 import { useState }                      from 'react'
 import React                             from 'react'
 
-import { ToastType }                     from '@stores/toast-notification'
 import { Button }                        from '@ui/button'
 import { Condition }                     from '@ui/condition'
 import { RemoveIcon }                    from '@ui/icons'
@@ -13,7 +15,6 @@ import { Box }                           from '@ui/layout'
 import { Row }                           from '@ui/layout'
 import { Column }                        from '@ui/layout'
 import { Text }                          from '@ui/text'
-import { ThemeType }                     from '@ui/theme'
 import { useTheme }                      from '@emotion/react'
 import { useToast }                      from '@stores/toast-notification'
 
@@ -28,7 +29,7 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
   memberLogin,
 }) => {
   const theme = useTheme() as ThemeType
-  const toast = useToast() as ToastType
+  const toast = useToast()
 
   const [isRemoveRequestOpen, setRemoveRequestOpen] = useState<boolean>(false)
 
@@ -62,7 +63,7 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
           <ImageBlock src={avatarUrl} />
         </Box>
         <Text width='100%'>{name}</Text>
-        <Condition match={viewerCanAdminister && !isRemoveRequestOpen}>
+        <Condition match={!!viewerCanAdminister && !isRemoveRequestOpen}>
           <Button onClick={changeRemoveRequestStateHandler}>
             <RemoveIcon {...ICON_PROPS} />
           </Button>

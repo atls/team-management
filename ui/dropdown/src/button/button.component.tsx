@@ -1,19 +1,21 @@
-import { Box }                          from '@atls-ui-parts/layout'
-import styled                           from '@emotion/styled'
-import { FC }                           from 'react'
-import { PropsWithChildren }            from 'react'
-import { useHover }                     from 'react-laag'
-import React                            from 'react'
+import type { FC }                           from 'react'
+import type { PropsWithChildren }            from 'react'
 
-import { useTheme }                     from '@emotion/react'
+import type { DropdownButtonProps }          from './button.interfaces.js'
+import type { DropdownButtonContainerProps } from './button.interfaces.js'
+import type { DotTheme }                     from './button.interfaces.js'
 
-import { DropdownButtonProps }          from './button.interfaces.js'
-import { DropdownButtonContainerProps } from './button.interfaces.js'
-import { DotTheme }                     from './button.interfaces.js'
-import { DotComponent }                 from './dot/index.js'
-import { baseButtonStyles }             from './button.styles.js'
-import { sizeButtonStyles }             from './button.styles.js'
-import { appearanceButtonStyles }       from './button.styles.js'
+import { Box }                               from '@atls-ui-parts/layout'
+import styled                                from '@emotion/styled'
+import { useHover }                          from 'react-laag'
+import React                                 from 'react'
+
+import { useTheme }                          from '@emotion/react'
+
+import { DotComponent }                      from './dot/index.js'
+import { baseButtonStyles }                  from './button.styles.js'
+import { sizeButtonStyles }                  from './button.styles.js'
+import { appearanceButtonStyles }            from './button.styles.js'
 
 const DropdownButtonContainer = styled(Box)<DropdownButtonContainerProps>(
   baseButtonStyles,
@@ -34,9 +36,9 @@ export const DropdownButton: FC<PropsWithChildren<DropdownButtonProps>> = ({
   return (
     <DropdownButtonContainer
       {...triggerProps}
-      onClick={onClick}
       pressed={isOpen}
       hover={hover}
+      onClick={onClick}
       {...hoverProps}
     >
       <DotComponent count={theme.spaces?.normalCount || DEFAULT_COUNT} />

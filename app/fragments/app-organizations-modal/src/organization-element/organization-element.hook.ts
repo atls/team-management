@@ -12,7 +12,7 @@ export const OrganizationElementHook = ({
     setRemoveRequestOpen(!isRemoveRequestOpen)
   }
 
-  const removeOrganizationHandler = ({ organizationLogin }) =>
+  const removeOrganizationHandler = async ({ organizationLogin }) =>
     removeMemberFromOrganization({
       toast,
       removeMemberLogin: memberLogin,

@@ -1,10 +1,11 @@
-import { useEffect }                from 'react'
+import type { HandleAddInputClickType } from './invite-member-modal.interfaces.js'
+import type { HandlerSwitchType }       from './invite-member-modal.interfaces.js'
 
-import { HandleAddInputClickType }  from './invite-member-modal.interfaces.js'
-import { HandlerSwitchType }        from './invite-member-modal.interfaces.js'
-import { sendInviteEmailGhApiHook } from './hooks/index.js'
-import { changeButtonHook }         from './hooks/index.js'
-import { sendInviteEmailHook }      from './hooks/index.js'
+import { useEffect }                    from 'react'
+
+import { sendInviteEmailGhApiHook }     from './hooks/index.js'
+import { changeButtonHook }             from './hooks/index.js'
+import { sendInviteEmailHook }          from './hooks/index.js'
 
 export const InviteMemberModalHook = ({
   toast,

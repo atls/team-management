@@ -27,10 +27,9 @@ export const AddMemberToOrganizationHook = ({
     }
   }, [open, toast, organizationId, teamsData, setTeamsData])
 
-  useEffect(
-    () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
-    [selectedUsers, inviteButtonState, setInviteButtonState]
-  )
+  useEffect(() => {
+    setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState })
+  }, [selectedUsers, inviteButtonState, setInviteButtonState])
 
   const switchHandler = (e, teamId) => {
     if (selectedTeams.includes(teamId as never)) {
@@ -40,7 +39,7 @@ export const AddMemberToOrganizationHook = ({
     }
   }
 
-  const inviteButtonClickHandler = () =>
+  const inviteButtonClickHandler = () => {
     inviteButtonClickHook({
       organizationLogin,
       selectedTeams,
@@ -48,6 +47,7 @@ export const AddMemberToOrganizationHook = ({
       selectedUsers,
       setInviteButtonState,
     })
+  }
 
   return {
     switchHandler,

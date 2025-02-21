@@ -1,11 +1,13 @@
+import type { BoxProps }                from '@ui/layout'
+import type { FC }                      from 'react'
+
+import type { ErrorMessageProps }       from './error-message.interfaces.js'
+
 import styled                           from '@emotion/styled'
-import { FC }                           from 'react'
 import React                            from 'react'
 
 import { Box }                          from '@ui/layout'
-import { BoxProps }                     from '@ui/layout'
 
-import { ErrorMessageProps }            from './error-message.interfaces.js'
 import { baseErrorMessageStyles }       from './error-message.styles.js'
 import { appearanceErrorMessageStyles } from './error-message.styles.js'
 

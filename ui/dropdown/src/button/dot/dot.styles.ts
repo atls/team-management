@@ -1,4 +1,4 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
 export const appearanceDotStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.dropdown.dot.background,

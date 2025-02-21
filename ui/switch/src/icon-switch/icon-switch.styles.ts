@@ -1,5 +1,6 @@
-import { styleFn } from 'styled-system'
-import { ifProp }  from 'styled-tools'
+import type { styleFn } from 'styled-system'
+
+import { ifProp }       from 'styled-tools'
 
 const defaultAppearanceHandleStyles: styleFn = ({ theme }) => ({
   backgroundColor: theme.colors.switch.iconSwitch.handle.default,

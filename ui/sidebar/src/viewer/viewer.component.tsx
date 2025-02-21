@@ -1,7 +1,11 @@
+import type { ThemeType }      from '@ui/theme'
+import type { FC }             from 'react'
+
+import type { ViewerProps }    from './viewer.interfaces.js'
+
 import styled                  from '@emotion/styled'
-import { FC }                  from 'react'
 import { useContext }          from 'react'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import Link                    from 'next/link'
 import React                   from 'react'
 
@@ -11,11 +15,9 @@ import { LogOutIcon }          from '@ui/icons'
 import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
 import { Text }                from '@ui/text'
-import { ThemeType }           from '@ui/theme'
 import { useTheme }            from '@emotion/react'
 
 import { SidebarStateContext } from '../sidebar.context.js'
-import { ViewerProps }         from './viewer.interfaces.js'
 import { shapeStyles }         from './viewer.styles.js'
 
 const ViewerWrapper = styled<any>(Row)(shapeStyles)
@@ -28,7 +30,7 @@ export const Viewer: FC<ViewerProps> = ({ name, email, avatarUrl, url }) => {
     <ViewerWrapper isSidebarOpened={isSidebarOpened}>
       <Condition match={Boolean(avatarUrl)}>
         <Link href={url || '/'} target='_blank'>
-          <Avatar size={40} src={avatarUrl} image alt='authentificated user avatar' />
+          <Avatar image size={40} src={avatarUrl} alt='authentificated user avatar' />
         </Link>
       </Condition>
 

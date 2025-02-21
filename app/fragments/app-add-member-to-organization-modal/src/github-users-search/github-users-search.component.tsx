@@ -1,16 +1,18 @@
-import { FC }                   from 'react'
-import { useState }             from 'react'
-import { useEffect }            from 'react'
-import { useIntl }              from 'react-intl'
-import React                    from 'react'
+import type { FC }                   from 'react'
 
-import { SelectInput }          from '@ui/input'
-import { useSelectInput }       from '@stores/select-input'
-import { useToast }             from '@stores/toast-notification'
+import type { GithubUserSearchType } from './github-users-search.interface.js'
 
-import { GithubUserSearchType } from './github-users-search.interface.js'
-import { getSearchedUsers }     from './hooks/index.js'
-import { inputChangeHook }      from './hooks/index.js'
+import { useState }                  from 'react'
+import { useEffect }                 from 'react'
+import { useIntl }                   from 'react-intl'
+import React                         from 'react'
+
+import { SelectInput }               from '@ui/input'
+import { useSelectInput }            from '@stores/select-input'
+import { useToast }                  from '@stores/toast-notification'
+
+import { getSearchedUsers }          from './hooks/index.js'
+import { inputChangeHook }           from './hooks/index.js'
 
 export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersParentHook }) => {
   const { formatMessage } = useIntl()
@@ -33,7 +35,6 @@ export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersPa
       activeSearchTimeoutId,
       setActiveSearchTimeoutId,
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue])
 
   useEffect(() => {
@@ -47,7 +48,6 @@ export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersPa
     } else if (!inputValue.length) {
       cleanSuggestedItems()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isClientTyping])
 
   useEffect(() => {

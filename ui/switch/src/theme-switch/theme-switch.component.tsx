@@ -1,7 +1,10 @@
+import type { FC }                    from 'react'
+
+import type { ThemeSwitchProps }      from './theme-switch.interfaces.js'
+
 import { HandleElement }              from '@atls-ui-parts/switch'
 import { useSwitch }                  from '@atls-ui-parts/switch'
 import styled                         from '@emotion/styled'
-import { FC }                         from 'react'
 import { useRef }                     from 'react'
 import { useContext }                 from 'react'
 import { useHover }                   from 'react-laag'
@@ -9,7 +12,6 @@ import React                          from 'react'
 
 import { ActiveThemeDispatchContext } from '@ui/theme'
 
-import { ThemeSwitchProps }           from './theme-switch.interfaces.js'
 import { ThumbComponent }             from './thumb/thumb.component.js'
 import { baseHandleStyles }           from './theme-switch.styles.js'
 import { sizeHandleStyles }           from './theme-switch.styles.js'
@@ -38,7 +40,7 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ disabled, checked: defaultValue, on
   }
 
   return (
-    <ThemeSwitchContainer ref={node} onClick={changeHandler} hover={hover} {...hoverProps}>
+    <ThemeSwitchContainer ref={node} hover={hover} onClick={changeHandler} {...hoverProps}>
       <ThumbComponent hover={hover} checked={checked} />
     </ThemeSwitchContainer>
   )

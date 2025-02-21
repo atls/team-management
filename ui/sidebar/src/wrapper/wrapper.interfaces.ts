@@ -6,7 +6,7 @@ export type StatesType = {
 }
 
 export interface WrapperProps {
-  children: JSX.Element[]
+  children: Array<JSX.Element>
   states: StatesType
 }
 

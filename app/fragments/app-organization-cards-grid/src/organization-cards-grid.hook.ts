@@ -1,7 +1,8 @@
-import { useEffect }                     from 'react'
+import type { OrganizationCardsGridHookType } from './organization-cards-grid.interfaces.js'
 
-import { OrganizationCardsGridHookType } from './organization-cards-grid.interfaces.js'
-import { getOrganizationsData }          from './hooks/index.js'
+import { useEffect }                          from 'react'
+
+import { getOrganizationsData }               from './hooks/index.js'
 
 export const OrganizationCardsGridHook: OrganizationCardsGridHookType = ({
   organizationsData,

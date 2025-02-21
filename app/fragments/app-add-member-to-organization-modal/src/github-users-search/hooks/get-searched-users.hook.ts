@@ -1,5 +1,6 @@
+import type { SearchUserQuery }      from '@globals/data'
+
 import { SEARCH_USER }               from '@globals/data'
-import { SearchUserQuery }           from '@globals/data'
 import { requestOctokitGraphqlData } from '@globals/data'
 
 import { SEARCH_USERS_LIMIT }        from '../github-users-search.constants.js'
@@ -11,7 +12,7 @@ export const getSearchedUsers = async ({ searchQuery, toast }) => {
       searchQuery,
     })) as SearchUserQuery
 
-    if (response && response.search && response.search.edges?.length) {
+    if (response?.search?.edges?.length) {
       const {
         search: {
           edges: [...nodes],

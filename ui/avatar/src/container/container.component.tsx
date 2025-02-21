@@ -1,12 +1,14 @@
-import styled                from '@emotion/styled'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
-import React                 from 'react'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import { AvatarShapeStyles } from '../styles/shape/index.js'
-import { ContainerProps }    from './container.interfaces.js'
-import { createBaseStyles }  from '../styles/base/index.js'
-import { getShapeStyles }    from '../styles/shape/index.js'
+import type { AvatarShapeStyles } from '../styles/shape/index.js'
+import type { ContainerProps }    from './container.interfaces.js'
+
+import styled                     from '@emotion/styled'
+import React                      from 'react'
+
+import { createBaseStyles }       from '../styles/base/index.js'
+import { getShapeStyles }         from '../styles/shape/index.js'
 
 const Container = styled.div<AvatarShapeStyles>(createBaseStyles, getShapeStyles)
 

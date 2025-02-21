@@ -1,8 +1,8 @@
-import { ReactNode }          from 'react'
-import { ReactPortal }        from 'react'
-import { LayerProps }         from 'react-laag'
+import type { ReactNode }          from 'react'
+import type { ReactPortal }        from 'react'
+import type { LayerProps }         from 'react-laag'
 
-import { SuggestedItemProps } from '../suggested-item/index.js'
+import type { SuggestedItemProps } from '../suggested-item/index.js'
 
 export interface SuggestedItemsContainerProps {
   suggestedItems: Array<SuggestedItemProps>

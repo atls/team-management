@@ -1,7 +1,7 @@
-import { InviteButtonStateType } from '@app/invite-button'
-import { InputProps }            from '@ui/input'
+import type { InviteButtonStateType } from '@app/invite-button'
+import type { InputProps }            from '@ui/input'
 
-import { InputValuesType }       from '../invite-member-modal.interfaces.js'
+import type { InputValuesType }       from '../invite-member-modal.interfaces.js'
 
 export interface InviteMemberModalInputProps extends InputProps {
   inputIndex: number

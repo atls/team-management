@@ -1,21 +1,23 @@
-import { RawInput }                 from '@atls-ui-parts/input'
-import styled                       from '@emotion/styled'
-import { ForwardRefRenderFunction } from 'react'
-import { ChangeEvent }              from 'react'
-import { forwardRef }               from 'react'
-import { useRef }                   from 'react'
-import { useLayer }                 from 'react-laag'
-import React                        from 'react'
+import type { ForwardRefRenderFunction } from 'react'
+import type { ChangeEvent }              from 'react'
 
-import { Box }                      from '@ui/layout'
-import { useTheme }                 from '@emotion/react'
-import { useSelectInput }           from '@stores/select-input'
+import type { SelectInputProps }         from './select-input.interfaces.js'
 
-import { SelectInputProps }         from './select-input.interfaces.js'
-import { SelectedItems }            from './selected-items/index.js'
-import { SuggestedItemsContainer }  from './suggested-items-container/index.js'
-import { shapeStyles }              from '../input.styles.js'
-import { appearanceStyles }         from '../input.styles.js'
+import { RawInput }                      from '@atls-ui-parts/input'
+import styled                            from '@emotion/styled'
+import { forwardRef }                    from 'react'
+import { useRef }                        from 'react'
+import { useLayer }                      from 'react-laag'
+import React                             from 'react'
+
+import { Box }                           from '@ui/layout'
+import { useTheme }                      from '@emotion/react'
+import { useSelectInput }                from '@stores/select-input'
+
+import { SelectedItems }                 from './selected-items/index.js'
+import { SuggestedItemsContainer }       from './suggested-items-container/index.js'
+import { shapeStyles }                   from '../input.styles.js'
+import { appearanceStyles }              from '../input.styles.js'
 
 const InputBox = styled(Box)(shapeStyles, appearanceStyles)
 
@@ -41,7 +43,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
-    isOpen: suggestedItems && suggestedItems.length,
+    isOpen: suggestedItems?.length,
     placement: 'bottom-start',
     overflowContainer: false,
     auto: true,
@@ -54,7 +56,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   }
 
   return (
-    <InputBox {...props} {...triggerProps} onClick={handlerClickContainer} position='relative'>
+    <InputBox {...props} {...triggerProps} position='relative' onClick={handlerClickContainer}>
       <SelectedItems />
       <Box width='max-content' minWidth={theme.spaces.semiSuperExtra}>
         <RawInput ref={inputRef} {...props} value={inputValue} onChange={handleInputChange} />

@@ -1,2 +1,2 @@
 export * from './toast-notification.component.js'
-export * from './toast-notification.interfaces.js'
+export type * from './toast-notification.interfaces.js'

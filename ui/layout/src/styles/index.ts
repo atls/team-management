@@ -1,6 +1,7 @@
-import { CSSProperties } from 'react'
-import { Config }        from 'styled-system'
-import { system }        from 'styled-system'
+import type { CSSProperties } from 'react'
+import type { Config }        from 'styled-system'
+
+import { system }             from 'styled-system'
 
 export interface LayoutWithGap {
   gap?: CSSProperties['gap']

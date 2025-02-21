@@ -4,7 +4,7 @@ import { requestOctokitRestData }                         from '@globals/data'
 import { getGithubOrganizationMembersWithout2faGetQuery } from '@globals/data'
 
 export const getMembersWithout2fa: GetMembersWithout2faType = async (document) => {
-  const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+  const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME!
 
   const membersWithou2fa: Array<string> = []
 

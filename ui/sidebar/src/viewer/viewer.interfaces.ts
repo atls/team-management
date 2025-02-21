@@ -2,7 +2,7 @@ import type { GetViewerQuery } from '@globals/data'
 
 type ViewerQueryProps = GetViewerQuery['viewer']
 
-export interface ViewerProps extends ViewerQueryProps {}
+export type ViewerProps = ViewerQueryProps
 
 export interface ViewerWrapperProps {
   isSidebarOpened: boolean

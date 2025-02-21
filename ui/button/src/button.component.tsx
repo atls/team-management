@@ -1,21 +1,23 @@
-import { Content }           from '@atls-ui-parts/button'
-import styled                from '@emotion/styled'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
-import { forwardRef }        from 'react'
-import { useState }          from 'react'
-import React                 from 'react'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import { useHover }          from '@ui/utils'
+import type { ButtonProps }       from './button.interfaces.js'
 
-import { ButtonProps }       from './button.interfaces.js'
-import { IconAttachment }    from './icon-attachment/index.js'
-import { ButtonShadow }      from './styles/shadow/index.js'
-import { baseStyles }        from './button.styles.js'
-import { shapeStyles }       from './button.styles.js'
-import { contentStyles }     from './button.styles.js'
-import { fillStyles }        from './button.styles.js'
-import { appearanceStyles }  from './styles/index.js'
+import { Content }                from '@atls-ui-parts/button'
+import styled                     from '@emotion/styled'
+import { forwardRef }             from 'react'
+import { useState }               from 'react'
+import React                      from 'react'
+
+import { useHover }               from '@ui/utils'
+
+import { IconAttachment }         from './icon-attachment/index.js'
+import { ButtonShadow }           from './styles/shadow/index.js'
+import { baseStyles }             from './button.styles.js'
+import { shapeStyles }            from './button.styles.js'
+import { contentStyles }          from './button.styles.js'
+import { fillStyles }             from './button.styles.js'
+import { appearanceStyles }       from './styles/index.js'
 
 export const ButtonElement = styled('button')<any>(
   baseStyles,
@@ -37,8 +39,12 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
       <ButtonElement
         hover={!hoverDisabled && hover}
         pressed={pressed || active}
-        onMouseDown={() => setPressed(true)}
-        onMouseUp={() => setPressed(false)}
+        onMouseDown={() => {
+          setPressed(true)
+        }}
+        onMouseUp={() => {
+          setPressed(false)
+        }}
         {...hoverProps}
         {...props}
         ref={ref}
@@ -59,8 +65,12 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
       <ButtonElement
         hover={hover}
         pressed={pressed || active}
-        onMouseDown={() => setPressed(true)}
-        onMouseUp={() => setPressed(false)}
+        onMouseDown={() => {
+          setPressed(true)
+        }}
+        onMouseUp={() => {
+          setPressed(false)
+        }}
         {...hoverProps}
         {...props}
         ref={ref}
@@ -80,8 +90,12 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
     <ButtonElement
       hover={hover}
       pressed={pressed || active}
-      onMouseDown={() => setPressed(true)}
-      onMouseUp={() => setPressed(false)}
+      onMouseDown={() => {
+        setPressed(true)
+      }}
+      onMouseUp={() => {
+        setPressed(false)
+      }}
       {...hoverProps}
       {...props}
       ref={ref}

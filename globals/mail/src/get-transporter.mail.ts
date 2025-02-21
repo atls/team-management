@@ -1,5 +1,6 @@
-import { Transporter } from 'nodemailer'
-import nodemailer      from 'nodemailer'
+import type { Transporter } from 'nodemailer'
+
+import nodemailer           from 'nodemailer'
 
 const { SMTP_AUTH_HOST, SMTP_AUTH_PORT, SMTP_AUTH_USER, SMTP_AUTH_PASS } = process.env
 

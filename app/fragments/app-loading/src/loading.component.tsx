@@ -1,6 +1,7 @@
 'use client'
 
-import { FC }        from 'react'
+import type { FC }   from 'react'
+
 import React         from 'react'
 
 import { Preloader } from '@ui/preloader'

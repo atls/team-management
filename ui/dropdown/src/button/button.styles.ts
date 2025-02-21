@@ -1,6 +1,7 @@
-import { styleFn } from 'styled-system'
-import { prop }    from 'styled-tools'
-import { ifProp }  from 'styled-tools'
+import type { styleFn } from 'styled-system'
+
+import { prop }         from 'styled-tools'
+import { ifProp }       from 'styled-tools'
 
 export const baseButtonStyles: styleFn = ({ theme }) => ({
   cursor: 'pointer',

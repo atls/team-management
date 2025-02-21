@@ -1,2 +1,2 @@
 export * from './member-card.component.js'
-export * from './member-card.interfaces.js'
+export type * from './member-card.interfaces.js'

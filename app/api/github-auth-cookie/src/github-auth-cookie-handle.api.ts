@@ -1,6 +1,6 @@
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { cookies }             from 'next/headers'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { redirect }            from 'next/navigation'
 
 import { getGithubAuthToken }  from '@globals/github-hooks'
@@ -21,7 +21,7 @@ export async function githubAuthCookieHandle(request: Request) {
       const TOKEN = await getGithubAuthToken(CODE)
 
       const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME
-      cookies().set(TOKEN_COOKIE_NAME as string, TOKEN, {
+      cookies().set(TOKEN_COOKIE_NAME!, TOKEN, {
         expires: Date.now() + COOKIE_EXPIRES_WEEK,
       })
     } catch (e: any) {

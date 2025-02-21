@@ -1,4 +1,4 @@
-import { InputProps as BaseInputProps } from '@ui/input'
+import type { InputProps as BaseInputProps } from '@ui/input'
 
 interface SearchItemProps {
   id: number

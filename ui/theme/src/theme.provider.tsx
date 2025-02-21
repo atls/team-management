@@ -1,6 +1,10 @@
-import { FC }                                    from 'react'
-import { PropsWithChildren }                     from 'react'
-import { Reducer }                               from 'react'
+import type { FC }                               from 'react'
+import type { PropsWithChildren }                from 'react'
+import type { Reducer }                          from 'react'
+
+import type { ActionType }                       from './theme.interfaces.js'
+import type { ThemeType }                        from './theme.interfaces.js'
+
 import { useReducer }                            from 'react'
 import React                                     from 'react'
 
@@ -9,8 +13,6 @@ import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 import { GlobalStyles }                          from './global.styles.js'
 import { ActiveThemeContext }                    from './theme.context.js'
 import { ActiveThemeDispatchContext }            from './theme.context.js'
-import { ActionType }                            from './theme.interfaces.js'
-import { ThemeType }                             from './theme.interfaces.js'
 import { activeThemeReducer }                    from './theme.reducer.js'
 import { lightTheme }                            from './theme/index.js'
 
