@@ -1,5 +1,5 @@
 import { OrganizationElementHookProps } from './organization-element.interfaces.js'
-import { OrganizationProps } from './organization-element.interfaces.js'
+import { OrganizationProps }            from './organization-element.interfaces.js'
 import { removeMemberFromOrganization } from './hooks/remove-member-from-organization.hook.js'
 
 export const OrganizationElementHook = ({

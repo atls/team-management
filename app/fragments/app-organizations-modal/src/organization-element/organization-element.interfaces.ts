@@ -1,8 +1,7 @@
 import type { OrganizationDataType } from '@globals/data'
 
 import { Dispatch }                  from 'react'
-
-import { SetStateAction }  from 'react'
+import { SetStateAction }            from 'react'
 
 import { ToastType }                 from '@stores/toast-notification'
 
