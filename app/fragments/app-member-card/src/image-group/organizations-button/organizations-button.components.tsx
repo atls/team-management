@@ -31,7 +31,7 @@ export const OrganizationsButton: FC<OrganizationsButtonType> = ({
 
   const organizationsQuantity = memberOrganizationsData.length
 
-  const { ICON_PROPS } = getConstants({ theme })
+  const { ICON_PROPS } = getConstants(theme)
 
   return (
     <>

@@ -4,8 +4,7 @@ import type { InputProps }            from '@ui/input'
 import type { InputValuesType }       from '../invite-member-modal.interfaces.js'
 
 import { Dispatch }                   from 'react'
-
-import { SetStateAction }   from 'react'
+import { SetStateAction }             from 'react'
 
 interface FormatMessageOpts {
   id: string

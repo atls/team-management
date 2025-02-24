@@ -21,7 +21,7 @@ export const Timer: FC<TimerProps> = ({ initialMilliseconds }) => {
   const theme = useTheme() as ThemeType
 
   TimerHook({ currentMilliseconds, setCurrentMilliseconds, setFormattedTime })
-  const { ICON_PROPS } = getConstants({ theme })
+  const { ICON_PROPS } = getConstants(theme)
 
   return (
     <Button hoverDisabled variant='whiteBackgroundButton' size='smallRoundedPadding'>

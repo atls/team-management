@@ -1,4 +1,4 @@
-export const formatMilliseconds = (milliseconds) => {
+export const formatMilliseconds = (milliseconds: number) => {
   const date = new Date(milliseconds)
 
   const checkTwoSymbols = (symbol: number) => {
