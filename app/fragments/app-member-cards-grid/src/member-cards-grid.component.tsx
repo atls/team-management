@@ -26,7 +26,7 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
-  const pendingMembersData = []
+  const pendingMembersData: Array<MemberWithOrganizationsDataType> = []
 
   const [membersData, setMembersData] = useState<Array<MemberWithOrganizationsDataType>>([])
   const [organizationsData, setOrganizationsData] = useState<Array<OrganizationDataType>>([])
