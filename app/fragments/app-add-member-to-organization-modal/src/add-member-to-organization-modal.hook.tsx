@@ -1,9 +1,12 @@
-import { ChangeEvent, useEffect } from 'react'
+import type { ChangeEvent }                      from 'react'
 
-import { inviteButtonClickHook }    from './hooks/index.js'
-import { getOrganizatoinTeamsHook } from './hooks/index.js'
-import { setButtonActiveHook }      from './hooks/index.js'
-import { AddMemberToOrganizationHookProps } from './add-member-to-organization-modal.interfaces.js'
+import type { AddMemberToOrganizationHookProps } from './add-member-to-organization-modal.interfaces.js'
+
+import { useEffect }                             from 'react'
+
+import { inviteButtonClickHook }                 from './hooks/index.js'
+import { getOrganizatoinTeamsHook }              from './hooks/index.js'
+import { setButtonActiveHook }                   from './hooks/index.js'
 
 export const AddMemberToOrganizationHook = ({
   open,

@@ -1,6 +1,6 @@
-import { emailValidator }       from '@ui/utils'
+import type { ChangeButtonHookType } from './change-button.interface.js'
 
-import { ChangeButtonHookType } from './change-button.interface.js'
+import { emailValidator }            from '@ui/utils'
 
 const checkInputsIsValid = (inputValues: Array<string>) => {
   for (const inputValie of inputValues) {

@@ -95,7 +95,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <UsersModal
               open={isUsersModalOpen}
-              organizationData={organizationData as OrganizationDataType}
+              organizationData={organizationData}
               onBackdropClick={handlerUsersModalClick}
             />
 
@@ -115,7 +115,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <AddMemberToOrganizationModal
               open={isAddMemberToOrganizationModalOpen}
-              organizationData={organizationData as OrganizationDataType}
+              organizationData={organizationData}
               onBackdropClick={handlerAddOrganizationMemberClick}
             />
           </Row>

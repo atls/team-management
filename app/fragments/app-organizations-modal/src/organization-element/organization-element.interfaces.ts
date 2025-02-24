@@ -1,9 +1,7 @@
 import type { OrganizationDataType } from '@globals/data'
-
-import { Dispatch }                  from 'react'
-import { SetStateAction }            from 'react'
-
-import { ToastType }                 from '@stores/toast-notification'
+import type { ToastType }            from '@stores/toast-notification'
+import type { Dispatch }             from 'react'
+import type { SetStateAction }       from 'react'
 
 export type OrganizationElementProps = {
   organizationsData: Array<OrganizationDataType>

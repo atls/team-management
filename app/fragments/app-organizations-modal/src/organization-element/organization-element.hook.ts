@@ -1,6 +1,7 @@
-import { OrganizationElementHookProps } from './organization-element.interfaces.js'
-import { OrganizationProps }            from './organization-element.interfaces.js'
-import { removeMemberFromOrganization } from './hooks/remove-member-from-organization.hook.js'
+import type { OrganizationElementHookProps } from './organization-element.interfaces.js'
+import type { OrganizationProps }            from './organization-element.interfaces.js'
+
+import { removeMemberFromOrganization }      from './hooks/remove-member-from-organization.hook.js'
 
 export const OrganizationElementHook = ({
   toast,
@@ -14,7 +15,7 @@ export const OrganizationElementHook = ({
     setRemoveRequestOpen(!isRemoveRequestOpen)
   }
 
-  const removeOrganizationHandler = async ({ organizationLogin }: OrganizationProps) =>
+  const removeOrganizationHandler = async ({ organizationLogin }: OrganizationProps) => {
     removeMemberFromOrganization({
       toast,
       removeMemberLogin: memberLogin,
@@ -22,6 +23,7 @@ export const OrganizationElementHook = ({
       organizationsData,
       setOrganizationsData,
     })
+  }
 
   return { changeRemoveRequestStateHandler, removeOrganizationHandler }
 }

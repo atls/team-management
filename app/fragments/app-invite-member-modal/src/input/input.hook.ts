@@ -1,9 +1,9 @@
 import type { HandleInputChangeType }  from './input.interfaces.js'
+import type { HandleInputDeleteType }  from './input.interfaces.js'
+import type { InputHookProps }         from './input.interfaces.js'
 
 import { emailValidator }              from '@ui/utils'
 
-import { HandleInputDeleteType }       from './input.interfaces.js'
-import { InputHookProps }              from './input.interfaces.js'
 import { InviteMemberModalInputProps } from './input.interfaces.js'
 import { changeButtonHook }            from '../hooks/index.js'
 

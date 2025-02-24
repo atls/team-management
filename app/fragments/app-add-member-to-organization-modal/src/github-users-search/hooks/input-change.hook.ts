@@ -1,5 +1,6 @@
-import { SEARCH_DELAY_MS } from '../github-users-search.constants.js'
-import { InputChangeProps } from './input-change.interfaces.js'
+import type { InputChangeProps } from './input-change.interfaces.js'
+
+import { SEARCH_DELAY_MS }       from '../github-users-search.constants.js'
 
 export const inputChangeHook = ({
   isClientTyping,

@@ -573,6 +573,7 @@ __metadata:
   resolution: "@app/organizations-page@workspace:app/pages/organizations-page"
   dependencies:
     "@app/organization-cards-grid": "workspace:*"
+    "@types/react": "npm:^18.3.18"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"

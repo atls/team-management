@@ -9,7 +9,7 @@ import React                         from 'react'
 
 import { SelectInput }               from '@ui/input'
 import { useSelectInput }            from '@stores/select-input'
-import { useToast } from '@stores/toast-notification'
+import { useToast }                  from '@stores/toast-notification'
 
 import { getSearchedUsers }          from './hooks/index.js'
 import { inputChangeHook }           from './hooks/index.js'

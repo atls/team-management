@@ -1,8 +1,6 @@
-import { PropsWithChildren } from 'react'
+import type { PropsWithChildren } from 'react'
 
-export interface MessagesType {
-  [key: string]: string
-}
+export type MessagesType = Record<string, string>
 
 export interface RootLayoutProps extends PropsWithChildren {
   messages: MessagesType

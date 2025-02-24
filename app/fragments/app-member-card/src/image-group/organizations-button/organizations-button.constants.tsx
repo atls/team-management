@@ -1,4 +1,4 @@
-import { ThemeType } from '@ui/theme'
+import type { ThemeType } from '@ui/theme'
 
 export const getConstants = (theme: ThemeType) => {
   const ICON_PROPS = {

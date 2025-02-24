@@ -1,7 +1,9 @@
-import type { OrganizationMemberDataType, OrganizationTeamType } from '@globals/data'
+import type { InviteButtonStateType }      from '@app/invite-button'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { OrganizationTeamType }       from '@globals/data'
 import type { ToastType }                  from '@stores/toast-notification'
-import type { InviteButtonStateType } from '@app/invite-button'
-import { Dispatch, SetStateAction } from 'react'
+import type { Dispatch }                   from 'react'
+import type { SetStateAction }             from 'react'
 
 export type InviteButtonClickType = ({
   organizationLogin,

@@ -1,8 +1,12 @@
-import type { OrganizationDataType, OrganizationMemberDataType, OrganizationTeamType } from '@globals/data'
-import { AddMemberToOrganizationHook } from './add-member-to-organization-modal.hook.js'
-import { ToastType } from '@stores/toast-notification'
-import type { InviteButtonStateType } from '@app/invite-button'
-import { Dispatch, SetStateAction } from 'react'
+import type { InviteButtonStateType }      from '@app/invite-button'
+import type { OrganizationDataType }       from '@globals/data'
+import type { OrganizationMemberDataType } from '@globals/data'
+import type { OrganizationTeamType }       from '@globals/data'
+import type { ToastType }                  from '@stores/toast-notification'
+import type { Dispatch }                   from 'react'
+import type { SetStateAction }             from 'react'
+
+import { AddMemberToOrganizationHook }     from './add-member-to-organization-modal.hook.js'
 
 export interface AddMemberToOrganizationModalProps {
   open: boolean
@@ -20,7 +24,6 @@ export type UseButtonActiveHookType = (
   checkedSwitches: CheckedSwitchesType,
   setButtonActive: Function
 ) => void
-
 
 export interface AddMemberToOrganizationHookProps {
   open: boolean

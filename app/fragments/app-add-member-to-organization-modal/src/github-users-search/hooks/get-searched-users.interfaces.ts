@@ -1,6 +1,6 @@
-import { ToastType } from '@stores/toast-notification'
+import type { ToastType } from '@stores/toast-notification'
 
 export interface GetSearchedUsersProps {
-  searchQuery: string,
+  searchQuery: string
   toast: ToastType
 }

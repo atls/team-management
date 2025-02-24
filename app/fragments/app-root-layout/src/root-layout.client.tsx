@@ -1,12 +1,12 @@
 'use client'
 
+import type { RootLayoutProps }      from './root-layout.interfaces.js'
+
 import { IntlProvider }              from 'react-intl'
 import React                         from 'react'
 
 import { ToastNotificationProvider } from '@stores/toast-notification'
 import { ThemeProvider }             from '@ui/theme'
-
-import { RootLayoutProps }           from './root-layout.interfaces.js'
 
 export const RootLayoutClient = ({ children, messages }: RootLayoutProps) => (
   <html>

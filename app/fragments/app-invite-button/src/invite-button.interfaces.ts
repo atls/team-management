@@ -1,4 +1,4 @@
-export type InviteButtonStateType = 'active' | 'disabled' | 'successed' | 'activated'
+export type InviteButtonStateType = 'activated' | 'active' | 'disabled' | 'successed'
 
 export interface InviteButtonProps {
   inviteButtonState: InviteButtonStateType

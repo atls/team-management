@@ -1,8 +1,9 @@
-import React                from 'react'
+import type { RootLayoutProps } from './root-layout.interfaces.js'
 
-import { RootLayoutClient } from './root-layout.client.js'
-import { RootLayoutProps }  from './root-layout.interfaces.js'
-import { RootLayoutServer } from './root-layout.server.js'
+import React                    from 'react'
+
+import { RootLayoutClient }     from './root-layout.client.js'
+import { RootLayoutServer }     from './root-layout.server.js'
 
 const RootLayout = async ({ children, messages }: RootLayoutProps) => {
   await RootLayoutServer()

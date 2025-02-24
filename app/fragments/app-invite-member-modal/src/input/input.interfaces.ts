@@ -1,10 +1,9 @@
 import type { InviteButtonStateType } from '@app/invite-button'
 import type { InputProps }            from '@ui/input'
+import type { Dispatch }              from 'react'
+import type { SetStateAction }        from 'react'
 
 import type { InputValuesType }       from '../invite-member-modal.interfaces.js'
-
-import { Dispatch }                   from 'react'
-import { SetStateAction }             from 'react'
 
 interface FormatMessageOpts {
   id: string

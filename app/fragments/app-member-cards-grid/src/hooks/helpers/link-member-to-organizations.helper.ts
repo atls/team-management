@@ -1,4 +1,4 @@
-import { LinkMemberToOrganizationsProps } from './get-unique-items.interfaces.js'
+import type { LinkMemberToOrganizationsProps } from './get-unique-items.interfaces.js'
 
 export const linkMemberToOrganizations = ({
   uniqueMembersData,
