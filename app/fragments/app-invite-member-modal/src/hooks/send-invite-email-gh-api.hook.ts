@@ -1,7 +1,14 @@
 import { inviteMemberToOrgaizationEmailGetQuery } from '@globals/data'
 import { requestOctokitRestData }                 from '@globals/data'
 
-export const sendInviteEmailGhApiHook = async ({ document, inputValues, ghOrgName, toast }) => {
+import { SendInviteEmailGhApiHookType }           from './send-invite-email-gh-api.interface.js'
+
+export const sendInviteEmailGhApiHook: SendInviteEmailGhApiHookType = async ({
+  document,
+  inputValues,
+  ghOrgName,
+  toast,
+}) => {
   try {
     for await (const email of inputValues) {
       const query = inviteMemberToOrgaizationEmailGetQuery({
