@@ -2,7 +2,9 @@ import { createOctokitRestClient }          from '@globals/data'
 import { removeOrganizationMemberGetQuery } from '@globals/data'
 import { getTokenCookie }                   from '@globals/helpers'
 
-export const removeMemberFromOrganization = async ({
+import { RemoveMemberFromOrganizationType } from './remove-member-from-organization.interface.js'
+
+export const removeMemberFromOrganization: RemoveMemberFromOrganizationType = async ({
   toast,
   removeMemberLogin,
   organizationLogin,

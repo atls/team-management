@@ -34,7 +34,7 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
   const [isRemoveRequestOpen, setRemoveRequestOpen] = useState<boolean>(false)
 
   const { login: organizationLogin, avatarUrl, name, viewerCanAdminister } = organizationData
-  const { ICON_PROPS } = getConstats({ theme })
+  const { ICON_PROPS } = getConstats(theme)
 
   const { changeRemoveRequestStateHandler, removeOrganizationHandler } = OrganizationElementHook({
     toast,

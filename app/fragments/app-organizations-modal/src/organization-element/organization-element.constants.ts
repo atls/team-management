@@ -1,4 +1,6 @@
-export const getConstats = ({ theme }) => {
+import { ThemeType } from '@ui/theme'
+
+export const getConstats = (theme: ThemeType) => {
   const ICON_PROPS = {
     width: theme.spaces.semiRegular,
     height: theme.spaces.semiRegular,
