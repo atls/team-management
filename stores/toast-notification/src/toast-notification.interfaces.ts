@@ -1,5 +1,4 @@
-import { DispatchType }                         from '@ui/toast-notification'
-
+import { DispatchType }           from '@ui/toast-notification'
 import { ToastNotificationProps } from '@ui/toast-notification'
 
 export type Action = {

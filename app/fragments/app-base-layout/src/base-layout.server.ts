@@ -16,6 +16,7 @@ export const BaseLayoutServer = async () => {
     const client = createOctokitGraphqlClient(token)
     const response = await client(GET_VIEWER)
 
+    // @ts-expect-error
     const { viewer } = response
     return viewer
   } catch (e: any) {
