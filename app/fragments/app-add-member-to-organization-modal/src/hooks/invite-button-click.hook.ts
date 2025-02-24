@@ -17,7 +17,7 @@ export const inviteButtonClickHook: InviteButtonClickType = async ({
       const query = inviteMemberToOrganizationGetQuery({
         organizationLogin,
         githubUserId,
-        teamIds: selectedTeams,
+        teamIds: selectedTeams as never,
       })
 
       await requestOctokitRestData(document, query)

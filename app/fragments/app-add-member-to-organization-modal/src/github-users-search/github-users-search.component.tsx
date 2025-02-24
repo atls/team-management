@@ -9,14 +9,14 @@ import React                         from 'react'
 
 import { SelectInput }               from '@ui/input'
 import { useSelectInput }            from '@stores/select-input'
-import { useToast }                  from '@stores/toast-notification'
+import { useToast } from '@stores/toast-notification'
 
 import { getSearchedUsers }          from './hooks/index.js'
 import { inputChangeHook }           from './hooks/index.js'
 
 export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersParentHook }) => {
   const { formatMessage } = useIntl()
-  const toast = useToast
+  const toast = useToast()
 
   const [isClientTyping, setClientTyping] = useState<boolean>(false)
   const [activeSearchTimeoutId, setActiveSearchTimeoutId] = useState<number>(0)

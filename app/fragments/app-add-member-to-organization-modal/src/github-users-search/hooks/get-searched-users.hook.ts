@@ -4,8 +4,9 @@ import { SEARCH_USER }               from '@globals/data'
 import { requestOctokitGraphqlData } from '@globals/data'
 
 import { SEARCH_USERS_LIMIT }        from '../github-users-search.constants.js'
+import { GetSearchedUsersProps } from './get-searched-users.interfaces.js'
 
-export const getSearchedUsers = async ({ searchQuery, toast }) => {
+export const getSearchedUsers = async ({ searchQuery, toast }:GetSearchedUsersProps) => {
   try {
     const response = (await requestOctokitGraphqlData(document, SEARCH_USER, {
       searchLimit: SEARCH_USERS_LIMIT,
