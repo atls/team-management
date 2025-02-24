@@ -6,7 +6,7 @@ export type ToastNotificationProps = {
   code?: number
 }
 
-type DispatchType = 'clean' | 'notify'
+export type DispatchType = 'clean' | 'notify'
 
 export type DispatchFuncType = ({
   type,
