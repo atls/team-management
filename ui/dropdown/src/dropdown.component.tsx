@@ -10,13 +10,13 @@ import { DropdownButton }         from './button/button.component.js'
 import { ChildContainer }         from './child-container/index.js'
 
 export const Dropdown: FC<PropsWithChildren> = ({ children }) => {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
-  const buttonClickHandler = () => {
-    setOpen(!isOpen)
+  const buttonClickHandler = (): void => {
+    setIsOpen(!isOpen)
   }
-  const buttonCloseClickHandler = () => {
-    setOpen(false)
+  const buttonCloseClickHandler = (): void => {
+    setIsOpen(false)
   }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({

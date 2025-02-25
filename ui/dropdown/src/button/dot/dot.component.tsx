@@ -12,4 +12,5 @@ import { appearanceDotStyles } from './dot.styles.js'
 
 const Dot = styled(Box)<BoxProps>(sizeDotStyles, appearanceDotStyles)
 
-export const DotComponent: FC<DotProps> = ({ count }) => Array(count).fill(<Dot />)
+export const DotComponent: FC<DotProps> = ({ count }) =>
+  Array.from({ length: count }, (_, index) => <Dot key={index} />)
