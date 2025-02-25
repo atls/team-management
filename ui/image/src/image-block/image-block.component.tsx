@@ -8,7 +8,7 @@ import React                          from 'react'
 
 import { createBaseImageBlockStyles } from './image-block.styles.js'
 
-const Image = styled.img<ContainerProps>(createBaseImageBlockStyles())
+const Image = styled.img<ContainerProps>(createBaseImageBlockStyles)
 
 export const ImageBlock: FC<PropsWithChildren<ContainerProps>> = ({
   children,
