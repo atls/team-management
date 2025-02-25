@@ -1,3 +1,4 @@
+import type { CSSObject }                from '@emotion/react'
 import type { styleFn }                  from 'styled-system'
 
 import { createBoxShapeStyles }          from '@atls-ui-parts/checkbox'
@@ -61,7 +62,7 @@ export const boxAppearanceStyles = ifProp(
   )
 )
 
-export const containerBaseStyles = createContainerBaseStyles()
+export const containerBaseStyles: CSSObject = createContainerBaseStyles()
 export const containerPositionStyles = createContainerPositionStyles()
 
 export const labelShapeStyles = createLabelShapeStyles({
@@ -75,7 +76,7 @@ export const labelPositionStyles = createLabelPositionStyles({
   margin: '0',
 })
 
-export const checkBaseStyles = createCheckBaseStyles()
+export const checkBaseStyles: CSSObject = createCheckBaseStyles()
 export const checkAppearanceStyles = createCheckAppearanceStyles({
   color: theme.colors.checkbox.checked.background,
 })
