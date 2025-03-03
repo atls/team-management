@@ -1,7 +1,8 @@
-import styled       from '@emotion/native'
-
-import { BaseBox }  from '../base-box.element'
 import type { BoxProps } from './box.interfaces'
+
+import styled            from '@emotion/native'
+
+import { BaseBox }       from '../base-box.element'
 
 export const BoxElement = styled(BaseBox)<BoxProps>`
   flex-direction: ${(props) => props.flexDirection};

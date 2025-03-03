@@ -1,5 +1,4 @@
-import type { SelectedItem }                from '../select-input.interfaces.js'
-
+import type { SelectedItem }  from '../select-input.interfaces.js'
 import type { SuggestedItem } from '../select-input.interfaces.js'
 
 export interface UseSelectedInputOutput {

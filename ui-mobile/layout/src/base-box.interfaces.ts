@@ -6,7 +6,12 @@ export interface BaseBoxProps extends ViewProps {
   flex?: number
   gap?: number
   justifyContent?:
-    'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'space-evenly'
+    | 'center'
+    | 'flex-end'
+    | 'flex-start'
+    | 'space-around'
+    | 'space-between'
+    | 'space-evenly'
   alignItems?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
   overflow?: 'auto' | 'hidden'
 }
