@@ -5,7 +5,7 @@ import { system }      from 'styled-system'
 const shadowConfig: Config = {
   boxShadow: {
     property: 'boxShadow',
-    transform: (value) => (typeof value === 'string' ? `${value}` : value),
+    transform: (value: number | string) => (typeof value === 'string' ? `${value}` : value),
   },
 }
 

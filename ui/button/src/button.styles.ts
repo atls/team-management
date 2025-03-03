@@ -1,3 +1,4 @@
+import type { CSSObject }      from '@emotion/react'
 import type { styleFn }        from 'styled-system'
 
 import { createShapeStyles }   from '@atls-ui-parts/button'
@@ -46,8 +47,8 @@ const microIncreasedRoundedPadding = createShapeStyles({
   paddingRatio: 12,
 })
 
-export const baseStyles = getBaseStyles()
-export const contentStyles = createContentStyles()
+export const baseStyles = getBaseStyles() as CSSObject
+export const contentStyles = createContentStyles() as CSSObject
 
 export const shapeStyles = switchProp(prop('size', 'normal'), {
   middlingRoundedPadding,

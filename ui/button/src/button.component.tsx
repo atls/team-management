@@ -1,25 +1,26 @@
-import type { PropsWithChildren } from 'react'
-import type { FC }                from 'react'
+import type { PropsWithChildren }               from 'react'
 
-import type { ButtonProps }       from './button.interfaces.js'
+import type { ButtonElementProps }              from './button.interfaces.js'
 
-import { Content }                from '@atls-ui-parts/button'
-import styled                     from '@emotion/styled'
-import { forwardRef }             from 'react'
-import { useState }               from 'react'
-import React                      from 'react'
+import type { ButtonProps } from './button.interfaces.js'
 
-import { useHover }               from '@ui/utils'
+import { Content }                              from '@atls-ui-parts/button'
+import styled                                   from '@emotion/styled'
+import { forwardRef }                           from 'react'
+import { useState }                             from 'react'
+import React                                    from 'react'
 
-import { IconAttachment }         from './icon-attachment/index.js'
-import { ButtonShadow }           from './styles/shadow/index.js'
-import { baseStyles }             from './button.styles.js'
-import { shapeStyles }            from './button.styles.js'
-import { contentStyles }          from './button.styles.js'
-import { fillStyles }             from './button.styles.js'
-import { appearanceStyles }       from './styles/index.js'
+import { useHover }                             from '@ui/utils'
 
-export const ButtonElement = styled('button')<any>(
+import { IconAttachment }                       from './icon-attachment/index.js'
+import { ButtonShadow }                         from './styles/shadow/index.js'
+import { baseStyles }                           from './button.styles.js'
+import { shapeStyles }                          from './button.styles.js'
+import { contentStyles }                        from './button.styles.js'
+import { fillStyles }                           from './button.styles.js'
+import { appearanceStyles }                     from './styles/index.js'
+
+export const ButtonElement = styled('button')<ButtonElementProps>(
   baseStyles,
   contentStyles,
   shapeStyles,
@@ -28,7 +29,7 @@ export const ButtonElement = styled('button')<any>(
   ButtonShadow
 )
 
-export const Button: FC<PropsWithChildren<ButtonProps>> = forwardRef((
+export const Button = forwardRef<HTMLButtonElement, PropsWithChildren<ButtonProps>>((
   { children, active, hoverDisabled, ...props },
   ref
 ) => {
