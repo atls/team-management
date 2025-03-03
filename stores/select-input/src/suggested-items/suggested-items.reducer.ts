@@ -1,9 +1,9 @@
-import { Reducer }              from 'react'
+import type { Reducer }              from 'react'
 
-import { SuggestedItem }        from '../select-input.interfaces.js'
-import { SuggestedItemsAction } from '../select-input.interfaces.js'
+import type { SuggestedItem }        from '../select-input.interfaces.js'
+import type { SuggestedItemsAction } from '../select-input.interfaces.js'
 
-export const suggestedItemsReducer: Reducer<SuggestedItem[], SuggestedItemsAction> = (
+export const suggestedItemsReducer: Reducer<Array<SuggestedItem>, SuggestedItemsAction> = (
   suggestedItems,
   action
 ) => {

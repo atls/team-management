@@ -1,7 +1,8 @@
-import { createContext }         from 'react'
+import type { SuggestedItem }                         from '../select-input.interfaces.js'
 
-import { SelectedItemsDispatch } from '../select-input.interfaces.js'
-import { SuggestedItem }         from '../select-input.interfaces.js'
+import type { SuggestedItemsDispatch } from '../select-input.interfaces.js'
 
-export const SuggestedItemsContext = createContext<SuggestedItem[]>([])
-export const SuggestedItemsDispatchContext = createContext<SelectedItemsDispatch | null>(null)
+import { createContext }                              from 'react'
+
+export const SuggestedItemsContext = createContext<Array<SuggestedItem>>([])
+export const SuggestedItemsDispatchContext = createContext<SuggestedItemsDispatch | null>(null)

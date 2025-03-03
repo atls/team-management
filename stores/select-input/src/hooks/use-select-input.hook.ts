@@ -1,6 +1,7 @@
-import { useContext }                    from 'react'
+import type { SuggestedItem }            from '../select-input.interfaces.js'
+import type { UseSelectedInputOutput }   from './use-selected-input.interfaces.js'
 
-import { SuggestedItemProps }            from '@ui/input/src/select-input/suggested-item'
+import { useContext }                    from 'react'
 
 import { InputValueContext }             from '../select-input.context.js'
 import { InputValueDispatchContext }     from '../select-input.context.js'
@@ -9,7 +10,7 @@ import { SelectedItemsContext }          from '../selected-items/index.js'
 import { SuggestedItemsContext }         from '../suggested-items/index.js'
 import { SuggestedItemsDispatchContext } from '../suggested-items/index.js'
 
-export const useSelectInput = () => {
+export const useSelectInput = (): UseSelectedInputOutput => {
   const inputValue = useContext(InputValueContext)
   const inputValueDispatch = useContext(InputValueDispatchContext)
   const selectedItems = useContext(SelectedItemsContext)
@@ -21,24 +22,24 @@ export const useSelectInput = () => {
     inputValue,
     selectedItems,
     suggestedItems,
-    setInputValue: (value: string) => {
-      inputValueDispatch({
+    setInputValue: (value: string): void => {
+      inputValueDispatch?.({
         type: 'set',
         inputValue: value,
       })
     },
-    cleanSelectedItems: () => {
-      selectedItemsDispatch({
+    cleanSelectedItems: (): void => {
+      selectedItemsDispatch?.({
         type: 'clean',
       })
     },
-    cleanSuggestedItems: () => {
-      suggestedItemsDispatch({
+    cleanSuggestedItems: (): void => {
+      suggestedItemsDispatch?.({
         type: 'clean',
       })
     },
-    setSuggestedItems: (newSuggestedItems: SuggestedItemProps[]) => {
-      suggestedItemsDispatch({
+    setSuggestedItems: (newSuggestedItems: Array<SuggestedItem>): void => {
+      suggestedItemsDispatch?.({
         type: 'change',
         suggestedItems: newSuggestedItems,
       })

@@ -1,6 +1,6 @@
-import { Reducer }          from 'react'
+import type { Reducer }          from 'react'
 
-import { InputValueAction } from './select-input.interfaces.js'
+import type { InputValueAction } from './select-input.interfaces.js'
 
 export const inputValueReducer: Reducer<string, InputValueAction> = (state, action) => {
   switch (action.type) {

@@ -1,15 +1,17 @@
-import { FC }                            from 'react'
-import { PropsWithChildren }             from 'react'
+import type { FC }                       from 'react'
+import type { PropsWithChildren }        from 'react'
+
+import type { InputValueAction }         from './select-input.interfaces.js'
+import type { SelectedItem }             from './select-input.interfaces.js'
+import type { SelectedItemsAction }      from './select-input.interfaces.js'
+import type { SuggestedItem }            from './select-input.interfaces.js'
+import type { SuggestedItemsAction }     from './select-input.interfaces.js'
+
 import { useReducer }                    from 'react'
 import React                             from 'react'
 
 import { InputValueContext }             from './select-input.context.js'
 import { InputValueDispatchContext }     from './select-input.context.js'
-import { InputValueAction }              from './select-input.interfaces.js'
-import { SelectedItem }                  from './select-input.interfaces.js'
-import { SelectedItemsAction }           from './select-input.interfaces.js'
-import { SuggestedItem }                 from './select-input.interfaces.js'
-import { SuggestedItemsAction }          from './select-input.interfaces.js'
 import { SelectedItemsContext }          from './selected-items/index.js'
 import { SelectedItemsDispatchContext }  from './selected-items/index.js'
 import { SuggestedItemsDispatchContext } from './suggested-items/index.js'
@@ -20,11 +22,11 @@ import { suggestedItemsReducer }         from './suggested-items/index.js'
 
 export const SelectInputProvider: FC<PropsWithChildren> = ({ children }) => {
   const [selectedItems, selectedItemsDispatch] = useReducer<
-    React.Reducer<SelectedItem[], SelectedItemsAction>
+    React.Reducer<Array<SelectedItem>, SelectedItemsAction>
   >(selectedItemsReducer, [])
 
   const [suggestedItems, suggestedItemsDispatch] = useReducer<
-    React.Reducer<SuggestedItem[], SuggestedItemsAction>
+    React.Reducer<Array<SuggestedItem>, SuggestedItemsAction>
   >(suggestedItemsReducer, [])
 
   const [inputValue, inputValueDispatch] = useReducer<React.Reducer<string, InputValueAction>>(

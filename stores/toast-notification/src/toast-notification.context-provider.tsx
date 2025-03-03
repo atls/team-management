@@ -1,7 +1,8 @@
 'use client'
 
-import { PropsWithChildren }                from 'react'
-import { FC }                               from 'react'
+import type { PropsWithChildren }           from 'react'
+import type { FC }                          from 'react'
+
 import { useReducer }                       from 'react'
 import React                                from 'react'
 

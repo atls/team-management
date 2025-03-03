@@ -1,6 +1,6 @@
-import { ToastNotificationProps } from '@ui/toast-notification'
+import type { ToastNotificationProps } from '@ui/toast-notification'
 
-import { Action }                 from './toast-notification.interfaces.js'
+import type { Action }                 from './toast-notification.interfaces.js'
 
 export function toastNotificationReducer(
   toastNotification: ToastNotificationProps,
@@ -14,7 +14,7 @@ export function toastNotificationReducer(
       return {}
     }
     default: {
-      throw new Error(`Unknown action: ${action.type}`)
+      throw new Error('Unknown action')
     }
   }
 }
