@@ -14,9 +14,11 @@ export interface GridAutoRowsProps extends BoxProps {
 }
 
 export interface GridAutoRowsContainerProps extends BoxProps {
-  color?: any
+  color?: CSSProperties['color']
   gap?: CSSProperties['gap']
   columnGap?: CSSProperties['columnGap']
   rowHeight?: CSSProperties['gridTemplateColumns']
   gridTemplateColumns?: Array<string> | string
 }
+
+export type TransformFunction = (value: number | string) => string

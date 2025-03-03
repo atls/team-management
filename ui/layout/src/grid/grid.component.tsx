@@ -19,7 +19,7 @@ const GridAutoRowsContainer = styled(Box)<PropsWithChildren<GridAutoRowsContaine
 export const GridAutoRows: FC<PropsWithChildren<GridAutoRowsProps>> = (props) => {
   const { children, columns, maxColumnWidth, ...otherProps } = props
 
-  const getCssPropString = (columnsQuantity: Array<number> | number): string =>
+  const getCssPropString = (columnsQuantity: number): string =>
     `repeat(${columnsQuantity}, minmax(auto, ${maxColumnWidth}px))`
 
   let gridTemplateColumns: Array<string> | string = ''

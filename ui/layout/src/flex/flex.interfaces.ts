@@ -7,3 +7,5 @@ export interface FlexProps extends BoxProps {
   rowGap?: CSSProperties['rowGap']
   columnGap?: CSSProperties['columnGap']
 }
+
+export type TransformFunction = (value: number | string) => string
