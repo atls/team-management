@@ -1,7 +1,6 @@
 import type { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
 import type { ButtonHTMLAttributes }           from 'react'
-
-import type { Ref }      from 'react'
+import type { Ref }                            from 'react'
 
 export type ButtonVariant =
   | 'blackBackgroundButton'

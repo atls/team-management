@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { IconProps } from '../icons.interfaces.js'
 
 import React              from 'react'
