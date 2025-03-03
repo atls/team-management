@@ -1,26 +1,25 @@
-import type { ThemeType }                       from '@ui/theme'
-import type { FC }                              from 'react'
+import type { ThemeType }          from '@ui/theme'
+import type { FC }                 from 'react'
 
-import type { ViewerProps }                     from './viewer.interfaces.js'
-
+import type { ViewerProps }        from './viewer.interfaces.js'
 import type { ViewerWrapperProps } from './viewer.interfaces.js'
 
-import styled                                   from '@emotion/styled'
-import { useContext }                           from 'react'
+import styled                      from '@emotion/styled'
+import { useContext }              from 'react'
 // @ts-expect-error:next-line
-import Link                                     from 'next/link'
-import React                                    from 'react'
+import Link                        from 'next/link'
+import React                       from 'react'
 
-import { Avatar }                               from '@ui/avatar'
-import { Condition }                            from '@ui/condition'
-import { LogOutIcon }                           from '@ui/icons'
-import { Column }                               from '@ui/layout'
-import { Row }                                  from '@ui/layout'
-import { Text }                                 from '@ui/text'
-import { useTheme }                             from '@emotion/react'
+import { Avatar }                  from '@ui/avatar'
+import { Condition }               from '@ui/condition'
+import { LogOutIcon }              from '@ui/icons'
+import { Column }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Text }                    from '@ui/text'
+import { useTheme }                from '@emotion/react'
 
-import { SidebarStateContext }                  from '../sidebar.context.js'
-import { shapeStyles }                          from './viewer.styles.js'
+import { SidebarStateContext }     from '../sidebar.context.js'
+import { shapeStyles }             from './viewer.styles.js'
 
 const ViewerWrapper = styled(Row)<ViewerWrapperProps>(shapeStyles)
 

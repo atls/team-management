@@ -30,10 +30,10 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ disabled, checked: defaultValue, on
   const [hover, hoverProps] = useHover()
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
-  const activeThemeDispatch = useContext(ActiveThemeDispatchContext) as any
+  const activeThemeDispatch = useContext(ActiveThemeDispatchContext)
 
-  const changeHandler = () => {
-    activeThemeDispatch({
+  const changeHandler = (): void => {
+    activeThemeDispatch?.({
       type: 'toggle',
     })
     setChecked()

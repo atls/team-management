@@ -13,7 +13,7 @@ import { ThumbComponent }         from './thumb/thumb.component.js'
 import { appearanceHandleStyles } from './base-switch.styles.js'
 import { shapeHandleStyles }      from './base-switch.styles.js'
 
-const BaseSwitchContainer = styled(HandleElement)<any>(
+const BaseSwitchContainer = styled(HandleElement)<BaseSwitchProps>(
   baseHandleStyles,
   appearanceHandleStyles,
   shapeHandleStyles

@@ -12,7 +12,7 @@ import { sizeThumbStyles }        from './thumb.styles.js'
 import { shapeThumbStyles }       from './thumb.styles.js'
 import { appearanceThumbStyles }  from './thumb.styles.js'
 
-const ThumbElementContainer = styled(Box)<any>(
+const ThumbElementContainer = styled(Box)<ThumbElementProps>(
   baseThumbStyles,
   sizeThumbStyles,
   shapeThumbStyles,

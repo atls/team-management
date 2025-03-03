@@ -10,7 +10,11 @@ import { baseThumbStyles }       from './thumb.styles.js'
 import { shapeThumbStyles }      from './thumb.styles.js'
 import { appearanceThumbStyles } from './thumb.styles.js'
 
-const Thumb = styled(ThumbElement)<any>(baseThumbStyles, appearanceThumbStyles, shapeThumbStyles)
+const Thumb = styled(ThumbElement)<ThumbProps>(
+  baseThumbStyles,
+  appearanceThumbStyles,
+  shapeThumbStyles
+)
 
 export const ThumbComponent: FC<ThumbProps> = ({ checked, children }) => (
   <Thumb checked={checked}>{children}</Thumb>
