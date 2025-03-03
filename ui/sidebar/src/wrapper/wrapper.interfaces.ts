@@ -1,3 +1,5 @@
+import type { JSX } from 'react'
+
 export type StatesType = {
   isSidebarOpened: boolean
   setSidebarOpened: (arg0: boolean) => void

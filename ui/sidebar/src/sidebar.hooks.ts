@@ -1,3 +1,3 @@
-export const changeSidebarVisibleHook = (setSidebarVisible: (visible: boolean) => void) => {
+export const changeSidebarVisibleHook = (setSidebarVisible: (visible: boolean) => void): void => {
   setSidebarVisible(false)
 }

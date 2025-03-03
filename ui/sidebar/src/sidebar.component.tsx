@@ -25,16 +25,17 @@ import { changeSidebarVisibleHook } from './sidebar.hooks.js'
 
 export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
   const theme = useTheme() as ThemeType
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const pathname = usePathname()
 
-  const [isSidebarOpened, setSidebarOpened] = useState<boolean>(true)
-  const [isSidebarVisible, setSidebarVisible] = useState<boolean>(true)
+  const [isSidebarOpened, setIsSidebarOpened] = useState<boolean>(true)
+  const [isSidebarVisible, setIsSidebarVisible] = useState<boolean>(true)
 
   const states = {
     isSidebarOpened,
-    setSidebarOpened,
+    setSidebarOpened: setIsSidebarOpened,
     isSidebarVisible,
-    setSidebarVisible,
+    setSidebarVisible: setIsSidebarVisible,
   }
 
   return (
@@ -43,12 +44,12 @@ export const Sidebar: FC<SidebarProps> = ({ name, email, avatarUrl, url }) => {
         <AtlantisLogo activeTheme={theme.colors.activeTheme as ThemeVariantType} />
         <Box height='100%' flexDirection='column' gap={theme.spaces.miniIncreased}>
           {itemList.map((itemData) => (
-            <SidebarItem {...itemData} active={pathname === itemData.href} />
+            <SidebarItem key={itemData.title} {...itemData} active={pathname === itemData.href} />
           ))}
         </Box>
         <Pin
           visibleHook={() => {
-            changeSidebarVisibleHook(setSidebarVisible)
+            changeSidebarVisibleHook(setIsSidebarVisible)
           }}
         />
         <SidebarDivider />

@@ -5,7 +5,7 @@ export const animationCompleteHook = ({
   setSidebarOpened,
   isSidebarVisible,
   setSidebarVisible,
-}: StatesType) => {
+}: StatesType): void => {
   if (!isSidebarVisible) {
     setSidebarOpened(!isSidebarOpened)
   }
