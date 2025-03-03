@@ -29,7 +29,7 @@ export const SuggestedItemsContainer: FC<SuggestedItemsContainerProps> = ({
     {renderLayer(
       <SuggestedItemsContainerBox width={width} {...layerProps}>
         {suggestedItems.map((suggestedItemData) => (
-          <SuggestedItem {...suggestedItemData} />
+          <SuggestedItem key={suggestedItemData.primaryInfo} {...suggestedItemData} />
         ))}
       </SuggestedItemsContainerBox>
     )}

@@ -1,3 +1,4 @@
+import type { ThemeType }                  from '@ui/theme'
 import type { FC }                         from 'react'
 
 import type { SelectedItemProps }          from './selected-item.interface.js'
@@ -25,13 +26,13 @@ const SelectedItemBox = styled(Box)(
 export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
   const { primaryInfo } = selectedItemData
 
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
 
   function handleDeleteSelectedItem(
     e: React.MouseEvent<HTMLDivElement>,
     itemData: SelectedItemProps
-  ) {
+  ): void {
     selectedItemsDispatch({
       type: 'deleted',
       itemData,

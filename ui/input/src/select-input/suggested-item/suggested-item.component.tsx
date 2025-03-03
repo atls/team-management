@@ -1,3 +1,4 @@
+import type { ThemeType }                   from '@ui/theme'
 import type { FC }                          from 'react'
 
 import type { SuggestedItemProps }          from './suggested-item.interfaces.js'
@@ -28,7 +29,7 @@ const SuggestedItemBox = styled(Box)(
 export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   const { primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
 
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
   const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext)
@@ -37,7 +38,7 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   function handleAddSelectedItem(
     e: React.MouseEvent<HTMLDivElement>,
     itemData: SuggestedItemProps
-  ) {
+  ): void {
     selectedItemsDispatch({
       type: 'added',
       itemData,

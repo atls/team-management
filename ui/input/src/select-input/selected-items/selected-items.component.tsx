@@ -1,3 +1,5 @@
+import type { FC }                from 'react'
+
 import type { SelectedItemProps } from '../selected-item/index.js'
 
 import { useContext }             from 'react'
@@ -8,13 +10,15 @@ import { Condition }              from '@ui/condition'
 
 import { SelectedItem }           from '../selected-item/index.js'
 
-export const SelectedItems = () => {
+export const SelectedItems: FC = () => {
   const selectedItems: Array<SelectedItemProps> = useContext(SelectedItemsContext)
 
   return (
     <Condition match={!!selectedItems && !!selectedItems.length}>
       {!!selectedItems &&
-        selectedItems.map((selectedItemData) => <SelectedItem {...selectedItemData} />)}
+        selectedItems.map((selectedItemData) => (
+          <SelectedItem key={selectedItemData.primaryInfo} {...selectedItemData} />
+        ))}
     </Condition>
   )
 }

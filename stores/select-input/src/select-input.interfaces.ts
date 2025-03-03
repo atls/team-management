@@ -12,3 +12,7 @@ export type SuggestedItemsAction =
   | { type: 'clean' }
 
 export type InputValueAction = { type: 'set'; inputValue: string } | { type: 'clean' }
+
+export type SelectedItemsDispatch = (action: SelectedItemsAction) => void
+
+export type InputValueDispatch = (action: InputValueAction) => void

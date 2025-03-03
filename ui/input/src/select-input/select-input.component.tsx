@@ -1,3 +1,4 @@
+import type { ThemeType }                from '@ui/theme'
 import type { ForwardRefRenderFunction } from 'react'
 import type { ChangeEvent }              from 'react'
 
@@ -29,17 +30,16 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   parentHook,
   ...props
 }) => {
-  const theme: any = useTheme()
-  const inputRef = useRef(null) as any
+  const theme = useTheme() as ThemeType
+  const inputRef = useRef<HTMLInputElement | null>(null)
   const selectInput = useSelectInput()
 
   const { inputValue } = selectInput
   const { setInputValue } = selectInput
   const { suggestedItems } = selectInput
 
-  const handlerClickContainer = () => {
+  const handlerClickContainer = (): void => {
     if (inputRef?.current) inputRef.current.focus()
-    return undefined
   }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
@@ -50,7 +50,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
     triggerOffset: theme.spaces.zero,
   })
 
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
     const inputValueString = e.target.value
     setInputValue(inputValueString)
   }

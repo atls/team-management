@@ -1,4 +1,6 @@
-import { createContext } from 'react'
+import { createContext }      from 'react'
 
-export const InputValueContext = createContext<any>('')
-export const InputValueDispatchContext = createContext<any>(null)
+import { InputValueDispatch } from './select-input.interfaces.js'
+
+export const InputValueContext = createContext<string>('')
+export const InputValueDispatchContext = createContext<InputValueDispatch | null>(null)
