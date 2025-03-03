@@ -10,7 +10,7 @@ export const ToastNotificationHook = ({
   isHide,
   setHide,
   text,
-}: ToastNotificationHookProps) => {
+}: ToastNotificationHookProps): void => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       toastNotificationDispatch({

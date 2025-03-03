@@ -17,23 +17,20 @@ import { baseAbsoluteConteinerStyles }          from './toast-notification.style
 import { shapeAbsoluteContainerStyles }         from './toast-notification.styles.js'
 import { notificationContainerStyles }          from './toast-notification.styles.js'
 
-const AbsoluteContainer = styled<any>(Box)(
-  baseAbsoluteConteinerStyles,
-  shapeAbsoluteContainerStyles
-)
+const AbsoluteContainer = styled(Box)(baseAbsoluteConteinerStyles, shapeAbsoluteContainerStyles)
 
-const NotificationContainer = styled<any>(Box)(notificationContainerStyles)
+const NotificationContainer = styled(Box)(notificationContainerStyles)
 
 export const ToastNotification: FC<ToastNotificationComponentProps> = ({
   notificationData,
   toastNotificationDispatch,
 }) => {
   const theme = useTheme() as ThemeType
-  const [isHide, setHide] = useState<boolean>(false)
+  const [isHide, setIsHide] = useState<boolean>(false)
 
   const { type, text, code } = notificationData
 
-  ToastNotificationHook({ toastNotificationDispatch, isHide, setHide, text })
+  ToastNotificationHook({ toastNotificationDispatch, isHide, setHide: setIsHide, text })
 
   return (
     <Condition match={Boolean(text && !isHide)}>
