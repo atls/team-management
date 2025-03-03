@@ -1,17 +1,12 @@
-import { ReactNode } from 'react'
-import { ViewProps } from 'react-native'
+import type { ReactNode } from 'react'
+import type { ViewProps } from 'react-native'
 
 export interface BaseBoxProps extends ViewProps {
   children?: ReactNode
   flex?: number
   gap?: number
   justifyContent?:
-    | 'flex-start'
-    | 'flex-end'
-    | 'center'
-    | 'space-between'
-    | 'space-around'
-    | 'space-evenly'
-  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
-  overflow?: 'hidden' | 'auto'
+    'center' | 'flex-end' | 'flex-start' | 'space-around' | 'space-between' | 'space-evenly'
+  alignItems?: 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch'
+  overflow?: 'auto' | 'hidden'
 }

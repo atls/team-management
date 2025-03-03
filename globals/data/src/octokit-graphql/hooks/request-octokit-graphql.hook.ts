@@ -13,6 +13,6 @@ export const requestOctokitGraphqlData: RequestOctokitGraphqlDataType = async (
 ) => {
   const token = getTokenCookie(document)
   const graphqlClient = createOctokitGraphqlClient(token)
-  const response = (await graphqlClient(query, queryData)) as GraphQlQueryResponseData
+  const response = (await graphqlClient(query, queryData))
   return response
 }

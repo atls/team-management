@@ -1,7 +1,7 @@
-import { BaseBoxProps } from '../base-box.interfaces'
+import type { BaseBoxProps } from '../base-box.interfaces'
 
 export interface BoxProps extends BaseBoxProps {
-  flexDirection?: 'row' | 'column'
+  flexDirection?: 'column' | 'row'
   width?: number | string
   height?: number | string
   minWidth?: number | string

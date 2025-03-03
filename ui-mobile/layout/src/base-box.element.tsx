@@ -1,6 +1,6 @@
 import styled           from '@emotion/native'
 
-import { BaseBoxProps } from './base-box.interfaces'
+import type { BaseBoxProps } from './base-box.interfaces'
 
 export const BaseBox = styled.View<BaseBoxProps>`
   flex: ${(props) => props.flex ?? 1};

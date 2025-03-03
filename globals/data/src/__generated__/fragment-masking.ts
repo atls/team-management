@@ -1,4 +1,4 @@
-import { FragmentDefinitionNode } from 'graphql'
+import type { FragmentDefinitionNode } from 'graphql'
 
 /* eslint-disable */
 import { DocumentTypeDecoration } from '@graphql-typed-document-node/core'
