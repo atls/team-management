@@ -1,9 +1,11 @@
-import React      from 'react'
+import type { FC } from 'react'
 
-import { Global } from '@emotion/react'
-import { css }    from '@emotion/react'
+import React       from 'react'
 
-export const GlobalStyles = () => (
+import { Global }  from '@emotion/react'
+import { css }     from '@emotion/react'
+
+export const GlobalStyles: FC = () => (
   <Global
     styles={css`
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
