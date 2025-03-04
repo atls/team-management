@@ -1,6 +1,5 @@
 import type { GetMembersWithout2faType }                  from './get-members-withot-2fa.interfaces.js'
-
-import type { GithubResponse }  from './get-members-withot-2fa.interfaces.js'
+import type { GithubResponse }                            from './get-members-withot-2fa.interfaces.js'
 
 import { requestOctokitRestData }                         from '@globals/data'
 import { getGithubOrganizationMembersWithout2faGetQuery } from '@globals/data'
