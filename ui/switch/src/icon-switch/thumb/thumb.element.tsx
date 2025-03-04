@@ -1,6 +1,7 @@
+import type { ThumbElementProps }     from '@atls-ui-parts/switch'
 import type { FC }                    from 'react'
 
-import type { IconThumbElementProps } from './thumb.interfaces.js'
+import type { PropsWithChildren } from 'react'
 
 import { motion }                     from 'framer-motion'
 import React                          from 'react'
@@ -14,7 +15,11 @@ const thumbMotionVariants = {
   },
 }
 
-const ThumbElement: FC<IconThumbElementProps> = ({ checked, children, ...props }) => (
+const ThumbElement: FC<PropsWithChildren<ThumbElementProps>> = ({
+  checked,
+  children,
+  ...props
+}) => (
   <motion.span animate={checked ? 'checked' : 'visible'} variants={thumbMotionVariants} {...props}>
     {children}
   </motion.span>
