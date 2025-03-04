@@ -1,10 +1,9 @@
-import type { ThumbElementProps }     from '@atls-ui-parts/switch'
-import type { FC }                    from 'react'
-
+import type { ThumbElementProps } from '@atls-ui-parts/switch'
+import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import { motion }                     from 'framer-motion'
-import React                          from 'react'
+import { motion }                 from 'framer-motion'
+import React                      from 'react'
 
 const thumbMotionVariants = {
   visible: {

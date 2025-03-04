@@ -1,10 +1,8 @@
-import type { SentMessageInfo } from 'nodemailer'
+import type { SendMailType } from './send-mail.interface.js'
 
-import type { SendMailType }    from './send-mail.interface.js'
+import { transporter }       from './get-transporter.mail.js'
 
-import { transporter }          from './get-transporter.mail.js'
-
-export const sendMail: SendMailType = async (mailTemplate): Promise<SentMessageInfo> => {
+export const sendMail: SendMailType = async (mailTemplate) => {
   const info = await transporter.sendMail(mailTemplate)
   return info
 }

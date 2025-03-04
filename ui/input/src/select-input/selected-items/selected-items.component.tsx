@@ -11,7 +11,7 @@ import { Condition }              from '@ui/condition'
 import { SelectedItem }           from '../selected-item/index.js'
 
 export const SelectedItems: FC = () => {
-  const selectedItems: Array<SelectedItemProps> = useContext(SelectedItemsContext)
+  const selectedItems = useContext(SelectedItemsContext) as Array<SelectedItemProps>
 
   return (
     <Condition match={!!selectedItems && !!selectedItems.length}>

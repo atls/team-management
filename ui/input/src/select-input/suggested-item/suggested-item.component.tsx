@@ -39,14 +39,14 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
     e: React.MouseEvent<HTMLDivElement>,
     itemData: SuggestedItemProps
   ): void {
-    selectedItemsDispatch({
+    selectedItemsDispatch?.({
       type: 'added',
       itemData,
     })
-    suggestedItemsDispatch({
+    suggestedItemsDispatch?.({
       type: 'clean',
     })
-    inputValueDispatch({
+    inputValueDispatch?.({
       type: 'clean',
     })
   }

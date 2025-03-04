@@ -1,4 +1,4 @@
-export type SelectedItem = { nodeId: string }
+export type SelectedItem = { nodeId?: string }
 
 export type SuggestedItem = { id: string; name: string }
 

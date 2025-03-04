@@ -43,7 +43,7 @@ const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, SelectInputPro
   }
 
   const { renderLayer, triggerProps, layerProps } = useLayer({
-    isOpen: suggestedItems?.length,
+    isOpen: !!suggestedItems?.length,
     placement: 'bottom-start',
     overflowContainer: false,
     auto: true,

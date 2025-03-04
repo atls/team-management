@@ -33,7 +33,7 @@ export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
     e: React.MouseEvent<HTMLDivElement>,
     itemData: SelectedItemProps
   ): void {
-    selectedItemsDispatch({
+    selectedItemsDispatch?.({
       type: 'deleted',
       itemData,
     })
