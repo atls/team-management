@@ -1,11 +1,10 @@
-import type { FC }                    from 'react'
-
+import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                          from 'react'
+import React                      from 'react'
 
-import { BaseLayoutClient }           from './base-layout.client.js'
-import { BaseLayoutServer }           from './base-layout.server.js'
+import { BaseLayoutClient }       from './base-layout.client.js'
+import { BaseLayoutServer }       from './base-layout.server.js'
 
 export const BaseLayout: FC = async ({ children }: PropsWithChildren) => {
   const baseLayoutData = await BaseLayoutServer()
