@@ -1,3 +1,4 @@
+import type { SendMailResponse } from '../send-mail.interface.js'
 import type { MailTemplateType } from './template.interfaces.js'
 
 import { MAIL_TEXT }             from './send-invite.constants.js'
@@ -5,7 +6,6 @@ import { MAIL_SUBJECT }          from './send-invite.constants.js'
 import { MAIL_FROM }             from './send-invite.constants.js'
 import { sendMail }              from '../send-mail.mail.js'
 import { getHtml }               from './send-invite.layout-template.js'
-import type { SendMailResponse } from '../send-mail.interface.js'
 
 export const sendInviteMail = async ({
   emails,
@@ -13,7 +13,7 @@ export const sendInviteMail = async ({
 }: {
   emails: Array<string>
   selectedInvites: Array<string>
-}):  Promise<SendMailResponse> => {
+}): Promise<SendMailResponse> => {
   const emailsString = emails.join(', ')
   const html = getHtml(selectedInvites)
 
