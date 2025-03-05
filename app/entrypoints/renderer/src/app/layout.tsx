@@ -1,14 +1,10 @@
-import type { FC }                from 'react'
-import type { PropsWithChildren } from 'react'
+import React          from 'react'
 
-import React                      from 'react'
+import BaseRootLayout from '@app/root-layout'
 
-import BaseRootLayout             from '@app/root-layout'
+import messages       from '../../locales/ru.json'
 
-import messages                   from '../../locales/ru.json'
-
-const RootLayout: FC<PropsWithChildren> = ({ children }) => (
-  <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
-)
+// @ts-expect-error Async Server Component
+const RootLayout = ({ children }) => <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
 
 export default RootLayout

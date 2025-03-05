@@ -1,5 +1,7 @@
+// @ts-expect-error:next-line
 import type { NextRequest } from 'next/server'
 
+// @ts-expect-error:next-line
 import { NextResponse }     from 'next/server'
 
 export const middleware = (request: NextRequest): NextResponse => {
