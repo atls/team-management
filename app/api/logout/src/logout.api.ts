@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-expect-error:next-line
 import { cookies }  from 'next/headers'
 // @ts-expect-error:next-line

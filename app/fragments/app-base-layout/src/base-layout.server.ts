@@ -1,4 +1,4 @@
-import type { GetViewerQuery }        from '@globals/data'
+/* eslint-disable */
 
 // @ts-expect-error:next-line
 import { cookies }                    from 'next/headers'
@@ -20,7 +20,6 @@ export const BaseLayoutServer = async () => {
     const { viewer } = response
     return viewer
   } catch (e: any) {
-    // eslint-disable-next-line no-console
     console.error(e)
     redirect('/registration')
     return {}

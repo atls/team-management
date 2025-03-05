@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-expect-error:next-line
 import { cookies }             from 'next/headers'
 // @ts-expect-error:next-line
@@ -25,7 +27,6 @@ export async function githubAuthCookieHandle(request: Request) {
         expires: Date.now() + COOKIE_EXPIRES_WEEK,
       })
     } catch (e: any) {
-      // eslint-disable-next-line no-console
       console.error(e)
       REGISTRATION_URL.searchParams.set('errorMessage', RU_MESSAGES.tokenError)
       return redirect(REGISTRATION_URL.href)

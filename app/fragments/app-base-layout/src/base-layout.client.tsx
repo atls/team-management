@@ -1,6 +1,7 @@
 'use client'
 
 import type { GetViewerQuery }    from '@globals/data'
+import type { ThemeType }         from '@ui/theme'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
@@ -19,7 +20,7 @@ export const BaseLayoutClient: FC<PropsWithChildren<BaseLayoutProps>> = ({
   children,
   ...baseLayoutData
 }) => {
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
   const { name, avatarUrl, email, url } = baseLayoutData as GetViewerQuery['viewer']
 
   return (

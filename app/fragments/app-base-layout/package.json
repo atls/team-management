@@ -13,7 +13,8 @@
     "@app/users-title": "workspace:*",
     "@globals/data": "workspace:*",
     "@ui/layout": "workspace:*",
-    "@ui/sidebar": "workspace:*"
+    "@ui/sidebar": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.14.0",

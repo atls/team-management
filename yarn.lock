@@ -222,6 +222,7 @@ __metadata:
     "@types/react": "npm:18.3.18"
     "@ui/layout": "workspace:*"
     "@ui/sidebar": "workspace:*"
+    "@ui/theme": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
