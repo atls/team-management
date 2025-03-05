@@ -1,8 +1,10 @@
+import type { FC }   from 'react'
+
 import { Button }    from 'react-native'
 import { useRouter } from 'expo-router'
 import React         from 'react'
 
-const App = () => {
+const App: FC = () => {
   const { push } = useRouter()
   return (
     <>
