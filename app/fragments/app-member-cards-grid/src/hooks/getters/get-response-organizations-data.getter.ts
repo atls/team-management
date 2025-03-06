@@ -1,8 +1,8 @@
-import type { GetResponseOrganizationsDataType }                          from './get-response-organizations-data.interface.js'
+import type { GetResponseOrganizationsDataType }    from './get-response-organizations-data.interface.js'
 
-import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS }                       from '@globals/data'
-import { OrganizationDataType } from '@globals/data'
-import { requestOctokitGraphqlData }                                      from '@globals/data'
+import { GET_VIEWER_ALL_ORGANIZATIONS_ALL_MEMBERS } from '@globals/data'
+import { OrganizationDataType }                     from '@globals/data'
+import { requestOctokitGraphqlData }                from '@globals/data'
 
 export const getResponseOrganizationsData: GetResponseOrganizationsDataType = async ({
   organizationsLimit,
