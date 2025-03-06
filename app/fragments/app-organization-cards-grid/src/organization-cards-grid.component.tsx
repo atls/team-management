@@ -41,7 +41,7 @@ export const OrganizationCardsGrid: FC<OrganizationCardsGridProps> = memo(({
       maxColumnWidth={theme.spaces.hardcore}
     >
       {organizationsData.map((organizationData: OrganizationDataType) => (
-        <OrganizationCard organizationData={organizationData} />
+        <OrganizationCard key={organizationData.id} organizationData={organizationData} />
       ))}
     </GridAutoRows>
   )
