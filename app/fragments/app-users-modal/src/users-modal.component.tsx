@@ -1,8 +1,7 @@
 import type { OrganizationMemberDataType } from '@globals/data'
 import type { ThemeType }                  from '@ui/theme'
 import type { FC }                         from 'react'
-
-import type { JSX }                    from 'react'
+import type { JSX }                        from 'react'
 
 import type { UsersModalProps }            from './users-modal.interfaces.js'
 

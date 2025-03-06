@@ -14,10 +14,10 @@ import { useTheme }          from '@emotion/react'
 const UsersTitle: React.FC = () => {
   const theme = useTheme() as ThemeType
 
-  const [isInviteMemberModalOpen, setInviteMemberModalOpen] = useState(false)
+  const [isInviteMemberModalOpen, setIsInviteMemberModalOpen] = useState(false)
 
-  const handlerPlusButtonClick = () => {
-    setInviteMemberModalOpen(!isInviteMemberModalOpen)
+  const handlerPlusButtonClick = (): void => {
+    setIsInviteMemberModalOpen(!isInviteMemberModalOpen)
   }
 
   return (
