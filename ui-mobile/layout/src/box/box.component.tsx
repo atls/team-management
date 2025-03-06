@@ -1,9 +1,12 @@
-import type { BoxProps } from './box.interfaces'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import React             from 'react'
+import type { BoxProps }          from './box.interfaces'
 
-import { BoxElement }    from './box.element'
+import React                      from 'react'
 
-export const Box = ({ children, ...props }: BoxProps) => (
+import { BoxElement }             from './box.element'
+
+export const Box: FC<PropsWithChildren<BoxProps>> = ({ children, ...props }) => (
   <BoxElement {...props}>{children}</BoxElement>
 )

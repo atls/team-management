@@ -3,8 +3,7 @@ import type { OrganizationTeamType }              from '@globals/data'
 import type { OrganizationMemberDataType }        from '@globals/data'
 import type { ThemeType }                         from '@ui/theme'
 import type { ChangeEvent }                       from 'react'
-
-import type { FC }                   from 'react'
+import type { FC }                                from 'react'
 
 import type { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 

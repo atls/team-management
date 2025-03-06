@@ -4,7 +4,7 @@ import type { OrganizationMemberDataType } from '@globals/data'
 import type { OrganizationTeamType }       from '@globals/data'
 import type { ToastType }                  from '@stores/toast-notification'
 import type { ChangeEvent }                from 'react'
-import type { Dispatch }      from 'react'
+import type { Dispatch }                   from 'react'
 import type { SetStateAction }             from 'react'
 
 export interface AddMemberToOrganizationModalProps {
