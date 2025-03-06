@@ -53,6 +53,7 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
         </Text>
         {inputValues.map((_inputValue: string, index: number) => (
           <InviteMemberModalInput
+            key={_inputValue}
             inputIndex={index}
             inputValues={inputValues}
             setInputValues={setInputValues}
@@ -74,6 +75,7 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
         <Row justifyContent='space-between'>
           {SWITCH_DATA_LIST.map(({ icon, switchData }) => (
             <IconSwitch
+              key={icon.key}
               onChange={(e) => {
                 switchHandler(e, switchData)
               }}
@@ -85,7 +87,9 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
         <Row justifyContent='end'>
           <InviteButton
             inviteButtonState={inviteButtonState}
-            inviteButtonClickHandler={inviteButtonClickHandler}
+            inviteButtonClickHandler={() => {
+              inviteButtonClickHandler()
+            }}
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               <FormattedMessage id='add-member-modal.invite' />

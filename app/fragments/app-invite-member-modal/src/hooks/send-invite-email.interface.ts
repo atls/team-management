@@ -8,4 +8,4 @@ export type SendInviteEmailHookType = ({
   emails: Array<string>
   selectedInvites: Array<string>
   toast: ToastType
-}) => void
+}) => Promise<void>

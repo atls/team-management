@@ -1,3 +1,9 @@
+import type { Dispatch }                      from 'react'
+
+import type { SetStateAction }      from 'react'
+
+import type { JSX } from 'react'
+
 export interface InviteMemberModalProps {
   open: boolean
   onBackdropClick: VoidFunction
@@ -13,10 +19,21 @@ export type HandleAddInputClickType = () => void
 
 export type UseButtonActiveHookType = (
   checkedSwitches: CheckedSwitchesType,
-  setButtonActive: Function
+  setButtonActive: Dispatch<SetStateAction<boolean>>
 ) => void
 
 export type UseUpdateInputValuesHookType = (
   inputValues: InputValuesType,
-  setInputValues: Function
+  setInputValues: Dispatch<SetStateAction<InputValuesType>>
 ) => Function
+
+export interface InviteMemberModalOutput {
+  switchHandler: HandlerSwitchType
+  addInputClickHandler: HandleAddInputClickType
+  inviteButtonClickHandler: () => Promise<void>
+}
+
+export interface SwitchDataItem {
+  icon: JSX.Element
+  switchData: string
+}

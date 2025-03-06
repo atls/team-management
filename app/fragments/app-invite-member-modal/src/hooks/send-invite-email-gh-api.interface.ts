@@ -11,4 +11,4 @@ export type SendInviteEmailGhApiHookType = ({
   inputValues: Array<string>
   ghOrgName: string
   toast: ToastType
-}) => void
+}) => Promise<void>
