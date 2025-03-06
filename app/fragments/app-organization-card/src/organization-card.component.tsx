@@ -1,4 +1,3 @@
-import type { OrganizationDataType }    from '@globals/data'
 import type { ThemeType }               from '@ui/theme'
 import type { FC }                      from 'react'
 
@@ -32,18 +31,18 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
     viewerCanAdminister,
   } = organizationData
 
-  const [isAddMemberToOrganizationModalOpen, setAddMemberToOrganizationModalOpen] =
+  const [isAddMemberToOrganizationModalOpen, setIsAddMemberToOrganizationModalOpen] =
     useState<boolean>(false)
-  const [isUsersModalOpen, setUsersModalOpen] = useState<boolean>(false)
+  const [isUsersModalOpen, setIsUsersModalOpen] = useState<boolean>(false)
 
   const theme = useTheme() as ThemeType
 
-  const handlerAddOrganizationMemberClick = () => {
-    setAddMemberToOrganizationModalOpen(!isAddMemberToOrganizationModalOpen)
+  const handlerAddOrganizationMemberClick = (): void => {
+    setIsAddMemberToOrganizationModalOpen(!isAddMemberToOrganizationModalOpen)
   }
 
-  const handlerUsersModalClick = () => {
-    setUsersModalOpen(!isUsersModalOpen)
+  const handlerUsersModalClick = (): void => {
+    setIsUsersModalOpen(!isUsersModalOpen)
   }
 
   return (
