@@ -1,8 +1,8 @@
-import type { OrganizationElementHookOutput }                               from './organization-element.interfaces.js'
-import type { OrganizationElementHookProps } from './organization-element.interfaces.js'
-import type { OrganizationProps }                                           from './organization-element.interfaces.js'
+import type { OrganizationElementHookOutput } from './organization-element.interfaces.js'
+import type { OrganizationElementHookProps }  from './organization-element.interfaces.js'
+import type { OrganizationProps }             from './organization-element.interfaces.js'
 
-import { removeMemberFromOrganization }                                     from './hooks/index.js'
+import { removeMemberFromOrganization }       from './hooks/index.js'
 
 export const OrganizationElementHook = ({
   toast,

@@ -20,6 +20,7 @@ import { githubAuthRedirectHook } from './github-auth.hook.js'
 
 const RegistrationClient: React.FC = () => {
   const theme = useTheme() as ThemeType
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const router = useRouter()
 
   return (
