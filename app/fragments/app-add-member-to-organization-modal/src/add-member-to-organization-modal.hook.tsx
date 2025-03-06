@@ -1,6 +1,9 @@
 import type { ChangeEvent }                      from 'react'
 
-import type { AddMemberToOrganizationHookProps } from './add-member-to-organization-modal.interfaces.js'
+import type {
+  AddMemberToOrganizationHookProps,
+  AddMemberToOrganizationModalHookOutput,
+} from './add-member-to-organization-modal.interfaces.js'
 
 import { useEffect }                             from 'react'
 
@@ -20,7 +23,7 @@ export const AddMemberToOrganizationHook = ({
   setInviteButtonState,
   selectedTeams,
   setSelectedTeams,
-}: AddMemberToOrganizationHookProps) => {
+}: AddMemberToOrganizationHookProps): AddMemberToOrganizationModalHookOutput => {
   useEffect(() => {
     if (open && !teamsData.length) {
       getOrganizatoinTeamsHook({
@@ -35,7 +38,7 @@ export const AddMemberToOrganizationHook = ({
     setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState })
   }, [selectedUsers, inviteButtonState, setInviteButtonState])
 
-  const switchHandler = (e: ChangeEvent<HTMLInputElement>, teamId: number | null | undefined) => {
+  const switchHandler = (e: ChangeEvent<HTMLInputElement>, teamId: number | null | undefined): void => {
     if (selectedTeams.includes(teamId as never)) {
       setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
     } else {
@@ -43,7 +46,7 @@ export const AddMemberToOrganizationHook = ({
     }
   }
 
-  const inviteButtonClickHandler = () => {
+  const inviteButtonClickHandler = (): void => {
     inviteButtonClickHook({
       organizationLogin,
       selectedTeams,

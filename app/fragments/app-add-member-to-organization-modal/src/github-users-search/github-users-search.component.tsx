@@ -18,7 +18,7 @@ export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersPa
   const { formatMessage } = useIntl()
   const toast = useToast()
 
-  const [isClientTyping, setClientTyping] = useState<boolean>(false)
+  const [isClientTyping, setIsClientTyping] = useState<boolean>(false)
   const [activeSearchTimeoutId, setActiveSearchTimeoutId] = useState<number>(0)
 
   const selectInput = useSelectInput()
@@ -31,7 +31,7 @@ export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersPa
   useEffect(() => {
     inputChangeHook({
       isClientTyping,
-      setClientTyping,
+      setClientTyping: setIsClientTyping,
       activeSearchTimeoutId,
       setActiveSearchTimeoutId,
     })
@@ -39,7 +39,7 @@ export const GithubUsersSearch: FC<GithubUserSearchType> = ({ setSelectedUsersPa
 
   useEffect(() => {
     if (!isClientTyping && inputValue) {
-      const suggestUsers = async () => {
+      const suggestUsers = async (): Promise<void> => {
         const suggestedItems = await getSearchedUsers({ searchQuery: inputValue, toast })
         setSuggestedItems(suggestedItems)
       }

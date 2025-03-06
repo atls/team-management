@@ -2,7 +2,7 @@ import type { InviteButtonStateType }             from '@app/invite-button'
 import type { OrganizationTeamType }              from '@globals/data'
 import type { OrganizationMemberDataType }        from '@globals/data'
 import type { ThemeType }                         from '@ui/theme'
-import type { FC }                                from 'react'
+import type { ChangeEvent, FC } from 'react'
 
 import type { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 
@@ -74,8 +74,9 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
             </Text>
             {teamsData.map(({ databaseId: teamId, name: teamName }) => (
               <TeamSwitch
+                key={teamId}
                 teamName={teamName}
-                onChange={(e) => {
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
                   switchHandler(e, teamId)
                 }}
               />

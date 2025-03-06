@@ -30,7 +30,8 @@
   },
   "packageManager": "yarn@4.6.0",
   "linterIgnorePatterns": [
-    "**/next.config.js"
+    "**/next.config.js",
+    "prettier.config.js"
   ],
   "skipLibCheck": true,
   "typecheckIgnorePatterns": [
