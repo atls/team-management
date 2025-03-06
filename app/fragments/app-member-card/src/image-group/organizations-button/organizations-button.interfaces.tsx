@@ -1,7 +1,6 @@
-import type { OrganizationDataType }     from '@globals/data'
-import type { Dispatch }                 from 'react'
-
-import type { SetStateAction } from 'react'
+import type { OrganizationDataType } from '@globals/data'
+import type { Dispatch }             from 'react'
+import type { SetStateAction }       from 'react'
 
 export type OrganizationsButtonType = {
   memberOrganizationsDataState: [

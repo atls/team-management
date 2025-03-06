@@ -49,13 +49,18 @@ const MemberCardsGrid: FC<MemberCardsGridProps> = memo(({
     >
       {pendingMembersData.map((memberData) => (
         <MemberCard
+          key={memberData.id}
           memberData={memberData}
           organizationsData={organizationsData}
           timerMilliseconds={MOCK_PENDING_MEMBER_TIMER}
         />
       ))}
       {membersData.map((memberData) => (
-        <MemberCard memberData={memberData} organizationsData={organizationsData} />
+        <MemberCard
+          key={memberData.id}
+          memberData={memberData}
+          organizationsData={organizationsData}
+        />
       ))}
     </GridAutoRows>
   )

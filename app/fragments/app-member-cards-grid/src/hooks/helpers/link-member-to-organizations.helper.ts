@@ -1,9 +1,11 @@
-import type { LinkMemberToOrganizationsProps } from './get-unique-items.interfaces.js'
+import type { MemberWithOrganizationsDataType } from '@app/member-card'
+
+import type { LinkMemberToOrganizationsProps }  from './get-unique-items.interfaces.js'
 
 export const linkMemberToOrganizations = ({
   uniqueMembersData,
   memberOrganizations,
-}: LinkMemberToOrganizationsProps) => {
+}: LinkMemberToOrganizationsProps): Array<MemberWithOrganizationsDataType> => {
   const linkedMembersData = uniqueMembersData.map((memberData) => {
     const { id: memberId } = memberData
     return {

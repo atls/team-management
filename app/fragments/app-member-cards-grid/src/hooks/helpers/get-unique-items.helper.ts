@@ -5,5 +5,6 @@ export const getUniqueItems: GetUniqueItemsType = (allDataArray) => {
   const uniqueDataArray = [
     ...new Map(allDataArray.map((allDataItem) => [allDataItem[filterKey], allDataItem])).values(),
   ]
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
   return uniqueDataArray
 }
