@@ -1,4 +1,5 @@
-import type { InviteButtonStateType } from '@app/invite-button'
+import type { InviteButtonStateType }      from '@app/invite-button'
+import type { OrganizationMemberDataType } from '@globals/data'
 
 export type SetButtonActiveType = ({
   inviteButtonState,
@@ -6,6 +7,6 @@ export type SetButtonActiveType = ({
   setInviteButtonState,
 }: {
   inviteButtonState: InviteButtonStateType
-  selectedUsers: Array<any>
+  selectedUsers: Array<OrganizationMemberDataType>
   setInviteButtonState: (buttonState: InviteButtonStateType) => void
 }) => void

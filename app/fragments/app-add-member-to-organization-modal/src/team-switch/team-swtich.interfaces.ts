@@ -1,4 +1,6 @@
+import type { ChangeEvent } from 'react'
+
 export interface TeamSwitchProps {
   teamName: string
-  onChange: (e: any) => void
+  onChange: (e: ChangeEvent<HTMLInputElement> | boolean) => void
 }

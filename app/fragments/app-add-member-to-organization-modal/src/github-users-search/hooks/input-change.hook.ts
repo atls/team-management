@@ -7,13 +7,13 @@ export const inputChangeHook = ({
   setClientTyping,
   activeSearchTimeoutId,
   setActiveSearchTimeoutId,
-}: InputChangeProps) => {
+}: InputChangeProps): void => {
   if (!isClientTyping) {
     setClientTyping(true)
   }
 
   clearTimeout(activeSearchTimeoutId)
-  const timeoutId = setTimeout(async () => {
+  const timeoutId = setTimeout(() => {
     setClientTyping(false)
   }, SEARCH_DELAY_MS) as never
 

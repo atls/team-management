@@ -1,15 +1,14 @@
-import type { ChangeEvent }                      from 'react'
+import type { ChangeEvent }         from 'react'
 
-import type {
-  AddMemberToOrganizationHookProps,
-  AddMemberToOrganizationModalHookOutput,
-} from './add-member-to-organization-modal.interfaces.js'
+import type { AddMemberToOrganizationHookProps } from './add-member-to-organization-modal.interfaces.js'
 
-import { useEffect }                             from 'react'
+import type { AddMemberToOrganizationModalHookOutput } from './add-member-to-organization-modal.interfaces.js'
 
-import { inviteButtonClickHook }                 from './hooks/index.js'
-import { getOrganizatoinTeamsHook }              from './hooks/index.js'
-import { setButtonActiveHook }                   from './hooks/index.js'
+import { useEffect }                from 'react'
+
+import { inviteButtonClickHook }    from './hooks/index.js'
+import { getOrganizatoinTeamsHook } from './hooks/index.js'
+import { setButtonActiveHook }      from './hooks/index.js'
 
 export const AddMemberToOrganizationHook = ({
   open,
@@ -38,7 +37,10 @@ export const AddMemberToOrganizationHook = ({
     setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState })
   }, [selectedUsers, inviteButtonState, setInviteButtonState])
 
-  const switchHandler = (e: ChangeEvent<HTMLInputElement>, teamId: number | null | undefined): void => {
+  const switchHandler = (
+    e: ChangeEvent<HTMLInputElement> | boolean,
+    teamId: number | null | undefined
+  ): void => {
     if (selectedTeams.includes(teamId as never)) {
       setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
     } else {

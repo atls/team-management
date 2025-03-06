@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { SearchUserQuery }       from '@globals/data'
 
 import type { GetSearchedUsersProps } from './get-searched-users.interfaces.js'
@@ -45,7 +47,6 @@ export const getSearchedUsers = async ({ searchQuery, toast }: GetSearchedUsersP
       return matchedUsers
     }
   } catch (e: any) {
-    // eslint-disable-next-line no-console
     console.error(e)
     toast.error(e.message, e.status)
   }

@@ -9,4 +9,4 @@ export type GetOrganizationTeamsType = ({
   organizationId: string
   setTeamsData: (teamsData: Array<OrganizationTeamType>) => void
   toast: ToastType
-}) => void
+}) => Promise<void>

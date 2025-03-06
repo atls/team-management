@@ -17,4 +17,4 @@ export type InviteButtonClickType = ({
   toast: ToastType
   selectedUsers: Array<OrganizationMemberDataType>
   setInviteButtonState: Dispatch<SetStateAction<InviteButtonStateType>>
-}) => void
+}) => Promise<void>

@@ -3,10 +3,9 @@ import type { OrganizationDataType }       from '@globals/data'
 import type { OrganizationMemberDataType } from '@globals/data'
 import type { OrganizationTeamType }       from '@globals/data'
 import type { ToastType }                  from '@stores/toast-notification'
-import type { ChangeEvent, Dispatch } from 'react'
+import type { ChangeEvent }                from 'react'
+import type { Dispatch }      from 'react'
 import type { SetStateAction }             from 'react'
-
-import { AddMemberToOrganizationHook }     from './add-member-to-organization-modal.hook.js'
 
 export interface AddMemberToOrganizationModalProps {
   open: boolean
@@ -40,6 +39,6 @@ export interface AddMemberToOrganizationHookProps {
 }
 
 export interface AddMemberToOrganizationModalHookOutput {
-  switchHandler:(e: ChangeEvent<HTMLInputElement>, teamId: (number | null | undefined)) => void,
-  inviteButtonClickHandler: () => void,
+  switchHandler: (e: ChangeEvent<HTMLInputElement>, teamId: number | null | undefined) => void
+  inviteButtonClickHandler: () => void
 }
