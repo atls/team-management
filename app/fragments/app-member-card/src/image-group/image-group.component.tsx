@@ -31,7 +31,7 @@ export const ImageGroup: FC<ImageGroupProps> = ({
       <ImageBlock src={avatarUrl} alt='user-avatar' />
       <FrontLayerContainer>
         <Condition match={Boolean(name)}>
-          <TextGroup name={name!} bio={bio!} />
+          <TextGroup name={name ?? ''} bio={bio ?? ''} />
         </Condition>
         <Row justifyContent='space-between'>
           <OrganizationsButton
@@ -39,7 +39,7 @@ export const ImageGroup: FC<ImageGroupProps> = ({
             memberOrganizationsDataState={memberOrganizationsDataState}
           />
           <Condition match={Boolean(timerMilliseconds)}>
-            <Timer initialMilliseconds={timerMilliseconds!} />
+            <Timer initialMilliseconds={timerMilliseconds ?? 0} />
           </Condition>
         </Row>
       </FrontLayerContainer>

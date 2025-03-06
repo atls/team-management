@@ -1,6 +1,8 @@
-import type { ThemeType } from '@ui/theme'
+import type { ThemeType }          from '@ui/theme'
 
-export const getConstants = (theme: ThemeType) => {
+import type { GetConstantsOutput } from './timer.interfaces.js'
+
+export const getConstants = (theme: ThemeType): GetConstantsOutput => {
   const ICON_PROPS = {
     width: theme.spaces.medium,
     height: theme.spaces.medium,

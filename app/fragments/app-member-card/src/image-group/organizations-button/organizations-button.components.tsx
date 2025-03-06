@@ -21,12 +21,12 @@ export const OrganizationsButton: FC<OrganizationsButtonType> = ({
   const theme = useTheme() as ThemeType
 
   const [memberOrganizationsData, setMemberOrganizationsData] = memberOrganizationsDataState
-  const [isOrganizationsModalOpen, setOrganizationsModalOpen] = useState<boolean>(false)
+  const [isOrganizationsModalOpen, setIsOrganizationsModalOpen] = useState<boolean>(false)
 
   if (!memberOrganizationsData) throw new Error('member organizaions data')
 
-  const organizationsModalHandler = () => {
-    setOrganizationsModalOpen(!isOrganizationsModalOpen)
+  const organizationsModalHandler = (): void => {
+    setIsOrganizationsModalOpen(!isOrganizationsModalOpen)
   }
 
   const organizationsQuantity = memberOrganizationsData.length

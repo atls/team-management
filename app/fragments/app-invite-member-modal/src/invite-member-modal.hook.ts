@@ -1,17 +1,17 @@
-import type { InviteButtonStateType }                            from '@app/invite-button'
-import type { ToastType }                                        from '@stores/toast-notification'
-import type { Dispatch }                                         from 'react'
-import type { SetStateAction }                                   from 'react'
+import type { InviteButtonStateType }   from '@app/invite-button'
+import type { ToastType }               from '@stores/toast-notification'
+import type { Dispatch }                from 'react'
+import type { SetStateAction }          from 'react'
 
-import type { HandleAddInputClickType }                          from './invite-member-modal.interfaces.js'
+import type { HandleAddInputClickType } from './invite-member-modal.interfaces.js'
 import type { InviteMemberModalOutput } from './invite-member-modal.interfaces.js'
-import type { HandlerSwitchType }                                from './invite-member-modal.interfaces.js'
+import type { HandlerSwitchType }       from './invite-member-modal.interfaces.js'
 
-import { useEffect }                                             from 'react'
+import { useEffect }                    from 'react'
 
-import { sendInviteEmailGhApiHook }                              from './hooks/index.js'
-import { changeButtonHook }                                      from './hooks/index.js'
-import { sendInviteEmailHook }                                   from './hooks/index.js'
+import { sendInviteEmailGhApiHook }     from './hooks/index.js'
+import { changeButtonHook }             from './hooks/index.js'
+import { sendInviteEmailHook }          from './hooks/index.js'
 
 export const InviteMemberModalHook = ({
   toast,

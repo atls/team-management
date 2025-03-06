@@ -1,8 +1,6 @@
-import type { Dispatch }                      from 'react'
-
-import type { SetStateAction }      from 'react'
-
-import type { JSX } from 'react'
+import type { Dispatch }       from 'react'
+import type { SetStateAction } from 'react'
+import type { JSX }            from 'react'
 
 export interface InviteMemberModalProps {
   open: boolean

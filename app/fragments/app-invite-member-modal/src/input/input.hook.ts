@@ -1,11 +1,11 @@
-import type { HandleInputChangeType }                  from './input.interfaces.js'
-import type { InputHookOutput } from './input.interfaces.js'
-import type { HandleInputDeleteType }                  from './input.interfaces.js'
-import type { InputHookProps }                         from './input.interfaces.js'
+import type { HandleInputChangeType } from './input.interfaces.js'
+import type { InputHookOutput }       from './input.interfaces.js'
+import type { HandleInputDeleteType } from './input.interfaces.js'
+import type { InputHookProps }        from './input.interfaces.js'
 
-import { emailValidator }                              from '@ui/utils'
+import { emailValidator }             from '@ui/utils'
 
-import { changeButtonHook }                            from '../hooks/index.js'
+import { changeButtonHook }           from '../hooks/index.js'
 
 export const InputHook = ({
   setInviteButtonState,

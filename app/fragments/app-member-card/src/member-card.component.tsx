@@ -34,7 +34,7 @@ export const MemberCard: FC<MemberCardProps> = ({
   const { onbordingData } = memberData
 
   const memberOrganizationsInitData = getMemberOrganizationsData({ memberData, organizationsData })
-  const memberOrganizationsDataState = useState<Array<OrganizationDataType>>(
+  const [organizations, setOrganizations] = useState<Array<OrganizationDataType>>(
     memberOrganizationsInitData
   )
 
@@ -44,7 +44,7 @@ export const MemberCard: FC<MemberCardProps> = ({
     <MemberCardContainer>
       <ImageGroup
         memberData={memberData}
-        memberOrganizationsDataState={memberOrganizationsDataState}
+        memberOrganizationsDataState={[organizations, setOrganizations]}
         timerMilliseconds={timerMilliseconds}
       />
       <Progress percentage={progressPercent} />
@@ -59,6 +59,7 @@ export const MemberCard: FC<MemberCardProps> = ({
           conditionIndex: number
         ) => (
           <OnbordingConditionElement
+            key={onbordingConditionData.conditionName}
             conditionData={onbordingConditionData}
             divider={!(conditionIndex === onbordingData.length - 1)}
           />
