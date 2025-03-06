@@ -2,6 +2,8 @@ import type { OrganizationMemberDataType } from '@globals/data'
 import type { ThemeType }                  from '@ui/theme'
 import type { FC }                         from 'react'
 
+import type { JSX }                    from 'react'
+
 import type { UsersModalProps }            from './users-modal.interfaces.js'
 
 import { FormattedMessage }                from 'react-intl'
@@ -29,7 +31,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
   open,
   onBackdropClick,
   organizationData,
-}) => {
+}): JSX.Element => {
   const {
     id: organizationId,
     login: organizationLogin,
@@ -56,7 +58,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
     }
   }, [open, toast, initMembersCount, membersData, organizationId])
 
-  const handlerRemoveMemberClick = (removeMemberLogin: string) => {
+  const handlerRemoveMemberClick = (removeMemberLogin: string): void => {
     removeMemberHook({
       organizationLogin,
       membersData,
@@ -90,6 +92,7 @@ export const UsersModal: FC<UsersModalProps> = memo(({
         <Scroll maxHeight={theme.spaces.superExtraIncreasedDefault}>
           {membersData.map((memberData, memberIndex) => (
             <Member
+              key={memberData.id}
               memberData={memberData}
               viewerCanAdminister={viewerCanAdminister}
               devider={!(memberIndex === membersData.length - 1)}

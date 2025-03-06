@@ -1,5 +1,5 @@
 import type { ThemeType }     from '@ui/theme'
-import type { JSX }            from 'react'
+import type { JSX }           from 'react'
 
 import { useState }           from 'react'
 import React                  from 'react'
