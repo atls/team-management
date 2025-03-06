@@ -1,4 +1,3 @@
-import type { ToastType }                from '@stores/toast-notification'
 import type { ThemeType }                from '@ui/theme'
 import type { FC }                       from 'react'
 
@@ -31,7 +30,7 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
   const theme = useTheme() as ThemeType
   const toast = useToast()
 
-  const [isRemoveRequestOpen, setRemoveRequestOpen] = useState<boolean>(false)
+  const [isRemoveRequestOpen, setIsRemoveRequestOpen] = useState<boolean>(false)
 
   const { login: organizationLogin, avatarUrl, name, viewerCanAdminister } = organizationData
   const { ICON_PROPS } = getConstats(theme)
@@ -42,7 +41,7 @@ export const OrganizationElement: FC<OrganizationElementProps> = ({
     organizationsData,
     setOrganizationsData,
     isRemoveRequestOpen,
-    setRemoveRequestOpen,
+    setRemoveRequestOpen: setIsRemoveRequestOpen,
   })
 
   return (

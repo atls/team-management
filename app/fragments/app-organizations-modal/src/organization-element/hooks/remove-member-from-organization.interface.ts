@@ -13,4 +13,4 @@ export type RemoveMemberFromOrganizationType = ({
   organizationsData: Array<OrganizationDataType>
   setOrganizationsData: (organizatoinsData: Array<OrganizationDataType>) => void
   toast: ToastType
-}) => void
+}) => Promise<void>

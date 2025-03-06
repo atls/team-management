@@ -43,6 +43,7 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
         <Column flexDirection='column' gap={theme.spaces.semiRegular}>
           {organizationsData.map((organizationData) => (
             <OrganizationElement
+              key={organizationData.id}
               organizationsData={organizationsData}
               organizationData={organizationData}
               memberLogin={memberLogin}

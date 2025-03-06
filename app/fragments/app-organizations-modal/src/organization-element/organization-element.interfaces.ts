@@ -22,3 +22,12 @@ export interface OrganizationElementHookProps {
 export interface OrganizationProps {
   organizationLogin: string
 }
+
+export interface GetConstantsOutput {
+  ICON_PROPS: { color: string; width: number; height: number }
+}
+
+export interface OrganizationElementHookOutput {
+  changeRemoveRequestStateHandler: VoidFunction
+  removeOrganizationHandler: ({ organizationLogin }: OrganizationProps) => Promise<void>
+}

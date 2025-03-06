@@ -28,9 +28,11 @@ export const removeMemberFromOrganization: RemoveMemberFromOrganizationType = as
     )
 
     setOrganizationsData(newOrganizationsData)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     toast.error(e.message, e.code)
   }
 }
