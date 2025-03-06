@@ -2,6 +2,10 @@
   "compilerOptions": {
     "jsx": "preserve"
   },
+  "include": [
+    "../screens/**/*",
+    "../../ui-mobile/**/*",
+  ],
   "exclude": [".idea", "node_modules"],
   "extends": "expo/tsconfig.base"
 }
