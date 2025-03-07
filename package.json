@@ -31,7 +31,9 @@
   "packageManager": "yarn@4.6.0",
   "linterIgnorePatterns": [
     "**/next.config.js",
-    "prettier.config.js"
+    "prettier.config.js",
+    "**/babel.config.js",
+    "**/metro.config.js"
   ],
   "skipLibCheck": true,
   "typecheckIgnorePatterns": [
