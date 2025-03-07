@@ -1,14 +1,15 @@
-import styled                     from '@emotion/styled'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
+
+import type { IconSwitchProps }   from './icon-switch.interfaces.js'
+
 import { HandleElement }          from '@atls-ui-parts/switch'
 import { baseHandleStyles }       from '@atls-ui-parts/switch'
 import { useSwitch }              from '@atls-ui-parts/switch'
-
-import React                      from 'react'
-import { FC }                     from 'react'
-import { PropsWithChildren }      from 'react'
+import styled                     from '@emotion/styled'
 import { useRef }                 from 'react'
+import React                      from 'react'
 
-import { IconSwitchProps }        from './icon-switch.interfaces.js'
 import { ThumbComponent }         from './thumb/thumb.component.js'
 import { appearanceHandleStyles } from './icon-switch.styles.js'
 import { shapeHandleStyles }      from './icon-switch.styles.js'

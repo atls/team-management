@@ -1,10 +1,12 @@
-import { Text } from 'react-native'
-import { View } from 'react-native'
-import React    from 'react'
+import type { FC } from 'react'
 
-import { Box }  from '@ui-mobile/layout'
+import { Text }    from 'react-native'
+import { View }    from 'react-native'
+import React       from 'react'
 
-export const SignInScreen = () => (
+import { Box }     from '@ui-mobile/layout'
+
+export const SignInScreen: FC = () => (
   <View>
     <Box height={400} alignItems='center' justifyContent='center'>
       <Text>Sign In</Text>

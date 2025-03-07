@@ -1,4 +1,4 @@
-import { OrganizationMemberDataType } from '@globals/data'
+import type { OrganizationMemberDataType } from '@globals/data'
 
 export interface MemberProps {
   memberData: OrganizationMemberDataType

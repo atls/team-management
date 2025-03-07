@@ -1,11 +1,12 @@
 'use client'
 
-import { useTheme }               from '@emotion/react'
+import type { ThemeType }         from '@ui/theme'
 
-import React                      from 'react'
+import { useTheme }               from '@emotion/react'
 import { FormattedMessage }       from 'react-intl'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { useRouter }              from 'next/navigation'
+import React                      from 'react'
 
 import { MainLogo }               from '@app/main-logo'
 import { Background }             from '@ui/background'
@@ -14,12 +15,12 @@ import { GitHubIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
-import { ThemeType }              from '@ui/theme'
 
 import { githubAuthRedirectHook } from './github-auth.hook.js'
 
 const RegistrationClient: React.FC = () => {
   const theme = useTheme() as ThemeType
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
   const router = useRouter()
 
   return (
@@ -31,7 +32,9 @@ const RegistrationClient: React.FC = () => {
             variant='blackBackgroundButton'
             shape='rectangle'
             size='bigRoundedPadding'
-            onClick={() => githubAuthRedirectHook(router)}
+            onClick={() => {
+              githubAuthRedirectHook(router)
+            }}
           >
             <GitHubIcon width={theme.spaces.bigDecreased} height={theme.spaces.bigDecreased} />
             <Text

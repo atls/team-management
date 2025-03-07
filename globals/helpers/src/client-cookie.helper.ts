@@ -1,8 +1,8 @@
-export type DocumentType = typeof document
-type CookieObjType = Record<string, string>
+import type { CookieObjType } from './client-cookie.interfaces.js'
+import type { DocumentType }  from './client-cookie.interfaces.js'
 
 export const getAllCookieClient = (document: DocumentType): CookieObjType => {
-  const resultCookitObj = {}
+  const resultCookitObj: CookieObjType = {}
 
   const cookieString = document.cookie
   const cookieRecordArray = cookieString.split(';')
@@ -16,7 +16,7 @@ export const getAllCookieClient = (document: DocumentType): CookieObjType => {
 }
 
 export const getTokenCookie = (document: DocumentType): string => {
-  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME as string
+  const TOKEN_COOKIE_NAME = process.env.NEXT_PUBLIC_TOKEN_COOKIE_NAME ?? ''
   const { [TOKEN_COOKIE_NAME]: token } = getAllCookieClient(document)
   return token
 }

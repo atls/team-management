@@ -1,5 +1,6 @@
-import type { GetOrganizationsDataType } from './get-organizations-data.interface.js'
 import type { OrganizationDataType }     from '@globals/data'
+
+import type { GetOrganizationsDataType } from './get-organizations-data.interface.js'
 
 import { GET_VIEWER_ORGANIZATIONS }      from '@globals/data'
 import { requestOctokitGraphqlData }     from '@globals/data'
@@ -23,9 +24,11 @@ export const getOrganizationsData: GetOrganizationsDataType = async ({
     } = response
 
     setOrganizationsData(responseOrganizationsData as Array<OrganizationDataType>)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     toast.error(e.message, e.status)
   }
 }

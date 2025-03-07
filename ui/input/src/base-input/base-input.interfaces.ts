@@ -1,6 +1,5 @@
-import { InputProps } from '@atls-ui-parts/input'
-
-import { BoxProps }   from '@ui/layout'
+import type { InputProps } from '@atls-ui-parts/input'
+import type { BoxProps }   from '@ui/layout'
 
 export interface BaseInputProps extends InputProps {
   errorText?: string

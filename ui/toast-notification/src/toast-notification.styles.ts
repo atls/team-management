@@ -1,5 +1,7 @@
-import { styleFn }    from 'styled-system'
-import { switchProp } from 'styled-tools'
+import type { CSSObject } from '@emotion/react'
+import type { styleFn }   from 'styled-system'
+
+import { switchProp }     from 'styled-tools'
 
 export const baseAbsoluteConteinerStyles: styleFn = ({ theme }) => ({
   position: 'fixed',
@@ -18,12 +20,12 @@ const shapeNotificationContainerStyles: styleFn = ({ theme }) => ({
   borderRadius: theme.radii.f20,
 })
 
-const baseNotificationStyles: styleFn = ({ theme }) => ({
+const baseNotificationStyles: styleFn = ({ theme }): CSSObject => ({
   ...shapeNotificationContainerStyles({ theme }),
   backgroundColor: theme.colors.BLUE_700,
 })
 
-const errorNotificationStyles: styleFn = ({ theme }) => ({
+const errorNotificationStyles: styleFn = ({ theme }): CSSObject => ({
   ...shapeNotificationContainerStyles({ theme }),
   backgroundColor: theme.colors.RED_600,
 })

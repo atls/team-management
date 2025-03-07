@@ -1,11 +1,13 @@
-import React                   from 'react'
-import { FC }                  from 'react'
+import type { FC }                  from 'react'
 
-import { LightThemeIcon }      from '@ui/icons'
-import { DarkThemeIcon }       from '@ui/icons'
+import type { ThumbComponentProps } from './thumb.interfaces.js'
 
-import { ThumbElement }        from './thumb.element.js'
-import { ThumbComponentProps } from './thumb.interfaces.js'
+import React                        from 'react'
+
+import { LightThemeIcon }           from '@ui/icons'
+import { DarkThemeIcon }            from '@ui/icons'
+
+import { ThumbElement }             from './thumb.element.js'
 
 const ThumbComponent: FC<ThumbComponentProps> = ({ checked, hover }) => (
   <>

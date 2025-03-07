@@ -1,8 +1,15 @@
-import { createShapeStyles } from '@atls-ui-parts/avatar'
+import type { styleFn }           from 'styled-system'
 
-import { AvatarShapeStyles } from './shape.interfaces.js'
+import type { AvatarShapeStyles } from './shape.interfaces.js'
 
-export const getShapeStyles = ({ size, borderWidth, padding, borderRadius }: AvatarShapeStyles) =>
+import { createShapeStyles }      from '@atls-ui-parts/avatar'
+
+export const getShapeStyles = ({
+  size,
+  borderWidth,
+  padding,
+  borderRadius,
+}: AvatarShapeStyles): styleFn =>
   createShapeStyles({
     size: size ?? 0,
     borderWidth: borderWidth ?? 0,

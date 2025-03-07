@@ -1,20 +1,20 @@
 'use client'
 
-import type { MemberCardProps }            from './member-card.interfaces.js'
 import type { OnbordingConditionDataType } from '@globals/data'
 import type { OrganizationDataType }       from '@globals/data'
+import type { ThemeType }                  from '@ui/theme'
+import type { FC }                         from 'react'
 
-import styled                              from '@emotion/styled'
+import type { MemberCardProps }            from './member-card.interfaces.js'
+
 import { useTheme }                        from '@emotion/react'
-
-import React                               from 'react'
-import { FC }                              from 'react'
+import styled                              from '@emotion/styled'
 import { useState }                        from 'react'
+import React                               from 'react'
 
 import { OnbordingConditionElement }       from '@app/onbording-condition-element'
 import { Box }                             from '@ui/layout'
 import { Progress }                        from '@ui/progress'
-import { ThemeType }                       from '@ui/theme'
 
 import { ImageGroup }                      from './image-group/index.js'
 import { getProgressbarPercents }          from './getters/index.js'
@@ -34,7 +34,7 @@ export const MemberCard: FC<MemberCardProps> = ({
   const { onbordingData } = memberData
 
   const memberOrganizationsInitData = getMemberOrganizationsData({ memberData, organizationsData })
-  const memberOrganizationsDataState = useState<Array<OrganizationDataType>>(
+  const [organizations, setOrganizations] = useState<Array<OrganizationDataType>>(
     memberOrganizationsInitData
   )
 
@@ -44,7 +44,7 @@ export const MemberCard: FC<MemberCardProps> = ({
     <MemberCardContainer>
       <ImageGroup
         memberData={memberData}
-        memberOrganizationsDataState={memberOrganizationsDataState}
+        memberOrganizationsDataState={[organizations, setOrganizations]}
         timerMilliseconds={timerMilliseconds}
       />
       <Progress percentage={progressPercent} />
@@ -59,6 +59,7 @@ export const MemberCard: FC<MemberCardProps> = ({
           conditionIndex: number
         ) => (
           <OnbordingConditionElement
+            key={onbordingConditionData.conditionName}
             conditionData={onbordingConditionData}
             divider={!(conditionIndex === onbordingData.length - 1)}
           />

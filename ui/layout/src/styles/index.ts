@@ -1,6 +1,9 @@
-import { CSSProperties } from 'react'
-import { Config }        from 'styled-system'
-import { system }        from 'styled-system'
+import type { CSSProperties } from 'react'
+import type { Config }        from 'styled-system'
+
+import { system }             from 'styled-system'
+
+type TransformFunction = (value: number | string) => string
 
 export interface LayoutWithGap {
   gap?: CSSProperties['gap']
@@ -12,19 +15,23 @@ export interface LayoutWithGap {
 const gapConfig: Config = {
   gridTemplateColumns: {
     property: 'gridTemplateColumns',
-    transform: (value) => (typeof value === 'string' ? `${value}` : value),
+    transform: ((value): string =>
+      typeof value === 'string' ? `${value}` : String(value)) as TransformFunction,
   },
   gap: {
     property: 'gap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : String(value)) as TransformFunction,
   },
   rowGap: {
     property: 'rowGap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : String(value)) as TransformFunction,
   },
   columnGap: {
     property: 'columnGap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : String(value)) as TransformFunction,
   },
 }
 
@@ -35,7 +42,8 @@ export interface ColumnWithPosition {
 const positionConfig: Config = {
   position: {
     property: 'position',
-    transform: (value) => (typeof value === 'string' ? `${value}` : value),
+    transform: ((value): string =>
+      typeof value === 'string' ? `${value}` : String(value)) as TransformFunction,
   },
 }
 

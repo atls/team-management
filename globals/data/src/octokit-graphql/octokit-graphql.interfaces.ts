@@ -1,7 +1,6 @@
 import type { GraphQlQueryResponseData } from '@octokit/graphql'
 import type { RequestParameters }        from '@octokit/types'
-
-import { graphql }                       from '@octokit/graphql'
+import type { graphql }                  from '@octokit/graphql'
 
 type DocumentType = typeof document
 

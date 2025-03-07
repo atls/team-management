@@ -1,4 +1,6 @@
-type StatesType = {
+import type { JSX } from 'react'
+
+export type StatesType = {
   isSidebarOpened: boolean
   setSidebarOpened: (arg0: boolean) => void
   isSidebarVisible: boolean
@@ -6,7 +8,7 @@ type StatesType = {
 }
 
 export interface WrapperProps {
-  children: JSX.Element[]
+  children: Array<JSX.Element>
   states: StatesType
 }
 

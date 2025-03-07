@@ -1,16 +1,18 @@
-import styled                              from '@emotion/styled'
-import { useTheme }                        from '@emotion/react'
+import type { ThemeType }                  from '@ui/theme'
+import type { FC }                         from 'react'
 
-import React                               from 'react'
-import { FC }                              from 'react'
+import type { SelectedItemProps }          from './selected-item.interface.js'
+
+import { useTheme }                        from '@emotion/react'
+import styled                              from '@emotion/styled'
 import { useContext }                      from 'react'
+import React                               from 'react'
 
 import { SelectedItemsDispatchContext }    from '@stores/select-input'
 import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
 
-import { SelectedItemProps }               from './selected-item.interface.js'
 import { baseSelectedItemBoxStyles }       from './selected-item.styles.js'
 import { shapeSelectedItemBoxStyles }      from './selected-item.styles.js'
 import { appearanceSelectedItemBoxStyles } from './selected-item.styles.js'
@@ -24,18 +26,25 @@ const SelectedItemBox = styled(Box)(
 export const SelectedItem: FC<SelectedItemProps> = (selectedItemData) => {
   const { primaryInfo } = selectedItemData
 
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
   const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
 
-  function handleDeleteSelectedItem(e, itemData) {
-    selectedItemsDispatch({
+  function handleDeleteSelectedItem(
+    e: React.MouseEvent<HTMLDivElement>,
+    itemData: SelectedItemProps
+  ): void {
+    selectedItemsDispatch?.({
       type: 'deleted',
       itemData,
     })
   }
 
   return (
-    <SelectedItemBox onClick={(e) => handleDeleteSelectedItem(e, selectedItemData)}>
+    <SelectedItemBox
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+        handleDeleteSelectedItem(e, selectedItemData)
+      }}
+    >
       <RemoveIcon cursor='pointer' width={theme.spaces.micro} color={theme.colors.text.primary} />
       <Text fontSize='small.semiLarge' wordBreak='keep-all'>
         {primaryInfo}

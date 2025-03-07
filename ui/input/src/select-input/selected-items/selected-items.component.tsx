@@ -1,19 +1,24 @@
-import React                    from 'react'
-import { useContext }           from 'react'
+import type { FC }                from 'react'
 
-import { SelectedItemsContext } from '@stores/select-input'
-import { Condition }            from '@ui/condition'
+import type { SelectedItemProps } from '../selected-item/index.js'
 
-import { SelectedItem }         from '../selected-item/index.js'
-import { SelectedItemProps }    from '../selected-item/index.js'
+import { useContext }             from 'react'
+import React                      from 'react'
 
-export const SelectedItems = () => {
-  const selectedItems: Array<SelectedItemProps> = useContext(SelectedItemsContext) as any
+import { SelectedItemsContext }   from '@stores/select-input'
+import { Condition }              from '@ui/condition'
+
+import { SelectedItem }           from '../selected-item/index.js'
+
+export const SelectedItems: FC = () => {
+  const selectedItems = useContext(SelectedItemsContext) as Array<SelectedItemProps>
 
   return (
-    <Condition match={selectedItems && !!selectedItems.length}>
-      {selectedItems &&
-        selectedItems.map((selectedItemData) => <SelectedItem {...selectedItemData} />)}
+    <Condition match={!!selectedItems && !!selectedItems.length}>
+      {!!selectedItems &&
+        selectedItems.map((selectedItemData) => (
+          <SelectedItem key={selectedItemData.primaryInfo} {...selectedItemData} />
+        ))}
     </Condition>
   )
 }

@@ -1,4 +1,4 @@
-import { ThemeVariantType } from '@ui/theme'
+import type { ThemeVariantType } from '@ui/theme'
 
 type LogoVariants = 'base' | 'small'
 

@@ -1,15 +1,17 @@
-// @ts-ignore:next-line
-import Link                          from 'next/link'
-import React                         from 'react'
-import { FC }                        from 'react'
+import type { FC }                        from 'react'
 
-import { Condition }                 from '@ui/condition'
-import { SettingsIcon }              from '@ui/icons'
-import { Row }                       from '@ui/layout'
-import { Text }                      from '@ui/text'
+import type { OrganizationSettingsProps } from './organization-settings.interface.js'
 
-import { OAUTH_SETTINGS_URL }        from '../sidebar.constants.js'
-import { OrganizationSettingsProps } from './organization-settings.interface.js'
+// @ts-expect-error:next-line
+import Link                               from 'next/link'
+import React                              from 'react'
+
+import { Condition }                      from '@ui/condition'
+import { SettingsIcon }                   from '@ui/icons'
+import { Row }                            from '@ui/layout'
+import { Text }                           from '@ui/text'
+
+import { OAUTH_SETTINGS_URL }             from '../sidebar.constants.js'
 
 export const OrganizatoinSettings: FC<OrganizationSettingsProps> = ({ theme, isSidebarOpened }) => (
   <Link href={OAUTH_SETTINGS_URL} target='_blank' style={{ 'text-decoration': 'none' }}>

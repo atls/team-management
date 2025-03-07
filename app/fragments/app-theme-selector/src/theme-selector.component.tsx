@@ -1,19 +1,20 @@
-import { useTheme }           from '@emotion/react'
+import type { ThemeType }     from '@ui/theme'
+import type { JSX }           from 'react'
 
-import React                  from 'react'
+import { useTheme }           from '@emotion/react'
 import { useState }           from 'react'
+import React                  from 'react'
 
 import { NotificationsModal } from '@app/notifications-modal'
 import { Button }             from '@ui/button'
 import { NotificationsIcon }  from '@ui/icons'
 import { Row }                from '@ui/layout'
 import { ThemeSwitch }        from '@ui/switch'
-import { ThemeType }          from '@ui/theme'
 
-const ThemeSelector: React.FC = () => {
+const ThemeSelector: React.FC = (): JSX.Element => {
   const [isNotificationsModalOpen, setIsNotificationsModalOpen] = useState<boolean>(false)
   const theme = useTheme() as ThemeType
-  const handleNotificationsModal = () => {
+  const handleNotificationsModal = (): void => {
     setIsNotificationsModalOpen(!isNotificationsModalOpen)
   }
 
@@ -41,8 +42,8 @@ const ThemeSelector: React.FC = () => {
 
       <NotificationsModal
         open={isNotificationsModalOpen}
-        onBackdropClick={handleNotificationsModal}
         avatar='/profile.png'
+        onBackdropClick={handleNotificationsModal}
       />
     </Row>
   )

@@ -1,10 +1,11 @@
-import { Config } from 'styled-system'
-import { system } from 'styled-system'
+import type { Config } from 'styled-system'
+
+import { system }      from 'styled-system'
 
 const shadowConfig: Config = {
   boxShadow: {
     property: 'boxShadow',
-    transform: (value) => (typeof value === 'string' ? `${value}` : value),
+    transform: (value: number | string) => (typeof value === 'string' ? `${value}` : value),
   },
 }
 

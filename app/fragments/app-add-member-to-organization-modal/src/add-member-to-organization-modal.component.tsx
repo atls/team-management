@@ -1,28 +1,29 @@
-import type { OrganizationTeamType }         from '@globals/data'
-import type { OrganizationMemberDataType }   from '@globals/data'
+import type { InviteButtonStateType }             from '@app/invite-button'
+import type { OrganizationTeamType }              from '@globals/data'
+import type { OrganizationMemberDataType }        from '@globals/data'
+import type { ThemeType }                         from '@ui/theme'
+import type { ChangeEvent }                       from 'react'
+import type { FC }                                from 'react'
 
-import { useTheme }                          from '@emotion/react'
+import type { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 
-import React                                 from 'react'
-import { FC }                                from 'react'
-import { FormattedMessage }                  from 'react-intl'
-import { memo }                              from 'react'
-import { useState }                          from 'react'
+import { useTheme }                               from '@emotion/react'
+import { FormattedMessage }                       from 'react-intl'
+import { memo }                                   from 'react'
+import { useState }                               from 'react'
+import React                                      from 'react'
 
-import { InviteButtonStateType }             from '@app/invite-button'
-import { InviteButton }                      from '@app/invite-button'
-import { SelectInputProvider }               from '@stores/select-input'
-import { Row }                               from '@ui/layout'
-import { Column }                            from '@ui/layout'
-import { Modal }                             from '@ui/modal'
-import { Text }                              from '@ui/text'
-import { ThemeType }                         from '@ui/theme'
-import { useToast }                          from '@stores/toast-notification'
+import { InviteButton }                           from '@app/invite-button'
+import { SelectInputProvider }                    from '@stores/select-input'
+import { Row }                                    from '@ui/layout'
+import { Column }                                 from '@ui/layout'
+import { Modal }                                  from '@ui/modal'
+import { Text }                                   from '@ui/text'
+import { useToast }                               from '@stores/toast-notification'
 
-import { AddMemberToOrganizationHook }       from './add-member-to-organization-modal.hook.js'
-import { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
-import { GithubUsersSearch }                 from './github-users-search/index.js'
-import { TeamSwitch }                        from './team-switch/index.js'
+import { AddMemberToOrganizationHook }            from './add-member-to-organization-modal.hook.js'
+import { GithubUsersSearch }                      from './github-users-search/index.js'
+import { TeamSwitch }                             from './team-switch/index.js'
 
 export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps> = memo(({
   open,
@@ -73,7 +74,13 @@ export const AddMemberToOrganizationModal: FC<AddMemberToOrganizationModalProps>
               <FormattedMessage id='add-member-to-organization-modal.teams' />
             </Text>
             {teamsData.map(({ databaseId: teamId, name: teamName }) => (
-              <TeamSwitch teamName={teamName} onChange={(e) => switchHandler(e, teamId)} />
+              <TeamSwitch
+                key={teamId}
+                teamName={teamName}
+                onChange={(e) => {
+                  switchHandler(e as ChangeEvent<HTMLInputElement>, teamId)
+                }}
+              />
             ))}
           </Row>
           <Row justifyContent='end'>

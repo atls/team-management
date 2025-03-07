@@ -1,6 +1,8 @@
-import { emailValidator } from '@ui/utils'
+import type { ChangeButtonHookType } from './change-button.interface.js'
 
-const checkInputsIsValid = (inputValues: Array<string>) => {
+import { emailValidator }            from '@ui/utils'
+
+const checkInputsIsValid = (inputValues: Array<string>): boolean => {
   for (const inputValie of inputValues) {
     const isEmailValid = emailValidator(inputValie)
     if (!isEmailValid) {
@@ -10,7 +12,11 @@ const checkInputsIsValid = (inputValues: Array<string>) => {
   return true
 }
 
-export const changeButtonHook = ({ inputValues, checkedSwitches, setInviteButtonState }) => {
+export const changeButtonHook = ({
+  inputValues,
+  checkedSwitches,
+  setInviteButtonState,
+}: ChangeButtonHookType): void => {
   const isInputsValid = checkInputsIsValid(inputValues)
   if (checkedSwitches.length && isInputsValid) {
     setInviteButtonState('activated')

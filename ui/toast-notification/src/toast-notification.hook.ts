@@ -1,9 +1,16 @@
-import { useEffect }         from 'react'
+import type { ToastNotificationHookProps } from './toast-notification.interfaces.js'
 
-import { HIDE_DELAY_5SEC }   from './toast-notification.constants.js'
-import { checkUrlErrorHook } from './hooks/check-url-error.hook.js'
+import { useEffect }                       from 'react'
 
-export const ToastNotificationHook = ({ toastNotificationDispatch, isHide, setHide, text }) => {
+import { HIDE_DELAY_5SEC }                 from './toast-notification.constants.js'
+import { checkUrlErrorHook }               from './hooks/index.js'
+
+export const ToastNotificationHook = ({
+  toastNotificationDispatch,
+  isHide,
+  setHide,
+  text,
+}: ToastNotificationHookProps): void => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       toastNotificationDispatch({

@@ -1,2 +1,2 @@
 export * from './icon-attachment.component.js'
-export * from './icon-attachment.interface.js'
+export type * from './icon-attachment.interface.js'

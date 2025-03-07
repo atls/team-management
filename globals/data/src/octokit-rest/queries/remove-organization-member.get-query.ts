@@ -1,4 +1,4 @@
-import { GetRestQueryType } from '../index.js'
+import type { GetRestQueryType } from '../index.js'
 
 export const removeOrganizationMemberGetQuery: GetRestQueryType = ({
   organizationLogin,

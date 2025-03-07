@@ -1,9 +1,12 @@
-import styled                               from '@emotion/styled'
-import { useTheme }                         from '@emotion/react'
+import type { ThemeType }                   from '@ui/theme'
+import type { FC }                          from 'react'
 
-import React                                from 'react'
-import { FC }                               from 'react'
+import type { SuggestedItemProps }          from './suggested-item.interfaces.js'
+
+import { useTheme }                         from '@emotion/react'
+import styled                               from '@emotion/styled'
 import { useContext }                       from 'react'
+import React                                from 'react'
 
 import { InputValueDispatchContext }        from '@stores/select-input'
 import { SelectedItemsDispatchContext }     from '@stores/select-input'
@@ -13,7 +16,6 @@ import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
 
-import { SuggestedItemProps }               from './suggested-item.interfaces.js'
 import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
 import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles.js'
 import { appearanceSuggestedItemBoxStyles } from './suggested-item.styles.js'
@@ -27,28 +29,35 @@ const SuggestedItemBox = styled(Box)(
 export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
   const { primaryInfo, secondaryInfo, imageSrc } = suggestedItemData
 
-  const theme: any = useTheme()
+  const theme = useTheme() as ThemeType
 
-  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext) as any
-  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext) as any
-  const inputValueDispatch = useContext(InputValueDispatchContext) as any
+  const selectedItemsDispatch = useContext(SelectedItemsDispatchContext)
+  const suggestedItemsDispatch = useContext(SuggestedItemsDispatchContext)
+  const inputValueDispatch = useContext(InputValueDispatchContext)
 
-  function handleAddSelectedItem(e, itemData) {
-    selectedItemsDispatch({
+  function handleAddSelectedItem(
+    e: React.MouseEvent<HTMLDivElement>,
+    itemData: SuggestedItemProps
+  ): void {
+    selectedItemsDispatch?.({
       type: 'added',
       itemData,
     })
-    suggestedItemsDispatch({
+    suggestedItemsDispatch?.({
       type: 'clean',
     })
-    inputValueDispatch({
+    inputValueDispatch?.({
       type: 'clean',
     })
   }
 
   return (
-    <SuggestedItemBox onClick={(e) => handleAddSelectedItem(e, suggestedItemData)}>
-      {imageSrc && (
+    <SuggestedItemBox
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => {
+        handleAddSelectedItem(e, suggestedItemData)
+      }}
+    >
+      {!!imageSrc && (
         <Box
           width={theme.spaces.increased}
           height={theme.spaces.increased}
@@ -60,7 +69,7 @@ export const SuggestedItem: FC<SuggestedItemProps> = (suggestedItemData) => {
       )}
       <Column gap={theme.spaces.zero}>
         <Text fontSize='small.semiLarge'>{primaryInfo}</Text>
-        {secondaryInfo && (
+        {!!secondaryInfo && (
           <Text fontSize='small.default' color={theme.colors.text.secondary}>
             {secondaryInfo}
           </Text>

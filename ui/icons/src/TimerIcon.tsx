@@ -1,8 +1,8 @@
-import { useTheme }  from '@emotion/react'
+/* eslint-disable */
+import type { IconProps } from '../icons.interfaces.js'
 
-import React         from 'react'
-
-import { IconProps } from '../icons.interfaces.js'
+import { useTheme }       from '@emotion/react'
+import React              from 'react'
 
 export const TimerIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()

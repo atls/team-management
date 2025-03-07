@@ -1,17 +1,18 @@
-import styled                    from '@emotion/styled'
-import { Box }                   from '@atls-ui-parts/layout'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import React                     from 'react'
-import { FC }                    from 'react'
-import { PropsWithChildren }     from 'react'
+import type { ThumbElementProps } from './thumb.interfaces.js'
 
-import { ThumbElementProps }     from './thumb.interfaces.js'
-import { baseThumbStyles }       from './thumb.styles.js'
-import { sizeThumbStyles }       from './thumb.styles.js'
-import { shapeThumbStyles }      from './thumb.styles.js'
-import { appearanceThumbStyles } from './thumb.styles.js'
+import { Box }                    from '@atls-ui-parts/layout'
+import styled                     from '@emotion/styled'
+import React                      from 'react'
 
-const ThumbElementContainer = styled(Box)<any>(
+import { baseThumbStyles }        from './thumb.styles.js'
+import { sizeThumbStyles }        from './thumb.styles.js'
+import { shapeThumbStyles }       from './thumb.styles.js'
+import { appearanceThumbStyles }  from './thumb.styles.js'
+
+const ThumbElementContainer = styled(Box)<ThumbElementProps>(
   baseThumbStyles,
   sizeThumbStyles,
   shapeThumbStyles,

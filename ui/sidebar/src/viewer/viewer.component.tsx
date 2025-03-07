@@ -1,25 +1,27 @@
-import styled                  from '@emotion/styled'
-import { useTheme }            from '@emotion/react'
+import type { ThemeType }          from '@ui/theme'
+import type { FC }                 from 'react'
 
-// @ts-ignore:next-line
-import Link                    from 'next/link'
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useContext }          from 'react'
+import type { ViewerProps }        from './viewer.interfaces.js'
+import type { ViewerWrapperProps } from './viewer.interfaces.js'
 
-import { Avatar }              from '@ui/avatar'
-import { Condition }           from '@ui/condition'
-import { LogOutIcon }          from '@ui/icons'
-import { Column }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { ThemeType }           from '@ui/theme'
+import { useTheme }                from '@emotion/react'
+import styled                      from '@emotion/styled'
+import { useContext }              from 'react'
+// @ts-expect-error:next-line
+import Link                        from 'next/link'
+import React                       from 'react'
 
-import { SidebarStateContext } from '../sidebar.context.js'
-import { ViewerProps }         from './viewer.interfaces.js'
-import { shapeStyles }         from './viewer.styles.js'
+import { Avatar }                  from '@ui/avatar'
+import { Condition }               from '@ui/condition'
+import { LogOutIcon }              from '@ui/icons'
+import { Column }                  from '@ui/layout'
+import { Row }                     from '@ui/layout'
+import { Text }                    from '@ui/text'
 
-const ViewerWrapper = styled<any>(Row)(shapeStyles)
+import { SidebarStateContext }     from '../sidebar.context.js'
+import { shapeStyles }             from './viewer.styles.js'
+
+const ViewerWrapper = styled(Row)<ViewerWrapperProps>(shapeStyles)
 
 export const Viewer: FC<ViewerProps> = ({ name, email, avatarUrl, url }) => {
   const theme = useTheme() as ThemeType
@@ -29,7 +31,7 @@ export const Viewer: FC<ViewerProps> = ({ name, email, avatarUrl, url }) => {
     <ViewerWrapper isSidebarOpened={isSidebarOpened}>
       <Condition match={Boolean(avatarUrl)}>
         <Link href={url || '/'} target='_blank'>
-          <Avatar size={40} src={avatarUrl} image alt='authentificated user avatar' />
+          <Avatar image size={40} src={avatarUrl} alt='authentificated user avatar' />
         </Link>
       </Condition>
 

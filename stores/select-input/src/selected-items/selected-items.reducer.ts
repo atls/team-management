@@ -1,4 +1,10 @@
-export function selectedItemsReducer(selectedItems, action) {
+import type { SelectedItem }        from '../select-input.interfaces.js'
+import type { SelectedItemsAction } from '../select-input.interfaces.js'
+
+export function selectedItemsReducer(
+  selectedItems: Array<SelectedItem>,
+  action: SelectedItemsAction
+): Array<SelectedItem> {
   switch (action.type) {
     case 'added': {
       return [...selectedItems, action.itemData]
@@ -10,7 +16,7 @@ export function selectedItemsReducer(selectedItems, action) {
       return []
     }
     default: {
-      throw new Error(`Unknown action: ${action.type}`)
+      throw new Error('Unknown action')
     }
   }
 }

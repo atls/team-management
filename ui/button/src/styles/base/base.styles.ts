@@ -1,13 +1,13 @@
+import type { styleFn }     from 'styled-system'
+
+import type { BaseStyles }  from '../../button.interfaces.js'
+
 import { createBaseStyles } from '@atls-ui-parts/button'
 
-import { styleFn }          from 'styled-system'
+const baseStyles: () => BaseStyles = createBaseStyles as unknown as () => BaseStyles
 
-const getBaseStyles = (): styleFn => {
-  const baseStyles = createBaseStyles()
-
-  return () => ({
-    ...baseStyles(),
-  })
-}
+const getBaseStyles: styleFn = (): BaseStyles => ({
+  ...baseStyles(),
+})
 
 export { getBaseStyles }

@@ -1,5 +1,5 @@
-import { OrganizationDataType } from '@globals/data'
-import { ToastType }            from '@stores/toast-notification'
+import type { OrganizationDataType } from '@globals/data'
+import type { ToastType }            from '@stores/toast-notification'
 
 export type OrganizationCardsGridProps = {
   organizationsLimit: number

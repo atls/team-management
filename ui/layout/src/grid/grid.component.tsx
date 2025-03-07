@@ -1,14 +1,15 @@
-import styled                         from '@emotion/styled'
-import { Box }                        from '@atls-ui-parts/layout'
+import type { FC }                         from 'react'
+import type { PropsWithChildren }          from 'react'
 
-import React                          from 'react'
-import { FC }                         from 'react'
-import { PropsWithChildren }          from 'react'
+import type { GridAutoRowsProps }          from './grid.interfaces.js'
+import type { GridAutoRowsContainerProps } from './grid.interfaces.js'
 
-import { GridAutoRowsProps }          from './grid.interfaces.js'
-import { GridAutoRowsContainerProps } from './grid.interfaces.js'
-import { gridAutoRowsStyles }         from './grid.styles.js'
-import { baseGridAutoRowsStyles }     from './grid.styles.js'
+import { Box }                             from '@atls-ui-parts/layout'
+import styled                              from '@emotion/styled'
+import React                               from 'react'
+
+import { gridAutoRowsStyles }              from './grid.styles.js'
+import { baseGridAutoRowsStyles }          from './grid.styles.js'
 
 const GridAutoRowsContainer = styled(Box)<PropsWithChildren<GridAutoRowsContainerProps>>(
   gridAutoRowsStyles,
@@ -18,10 +19,10 @@ const GridAutoRowsContainer = styled(Box)<PropsWithChildren<GridAutoRowsContaine
 export const GridAutoRows: FC<PropsWithChildren<GridAutoRowsProps>> = (props) => {
   const { children, columns, maxColumnWidth, ...otherProps } = props
 
-  const getCssPropString = (columnsQuantity: number | Array<number>): string =>
+  const getCssPropString = (columnsQuantity: number): string =>
     `repeat(${columnsQuantity}, minmax(auto, ${maxColumnWidth}px))`
 
-  let gridTemplateColumns: string | Array<string> = ''
+  let gridTemplateColumns: Array<string> | string = ''
 
   if (columns && maxColumnWidth) {
     if (Array.isArray(columns)) {

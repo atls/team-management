@@ -1,8 +1,13 @@
-import { useEffect }                from 'react'
+import type { ChangeEvent }                            from 'react'
 
-import { inviteButtonClickHook }    from './hooks/index.js'
-import { getOrganizatoinTeamsHook } from './hooks/index.js'
-import { setButtonActiveHook }      from './hooks/index.js'
+import type { AddMemberToOrganizationHookProps }       from './add-member-to-organization-modal.interfaces.js'
+import type { AddMemberToOrganizationModalHookOutput } from './add-member-to-organization-modal.interfaces.js'
+
+import { useEffect }                                   from 'react'
+
+import { inviteButtonClickHook }                       from './hooks/index.js'
+import { getOrganizatoinTeamsHook }                    from './hooks/index.js'
+import { setButtonActiveHook }                         from './hooks/index.js'
 
 export const AddMemberToOrganizationHook = ({
   open,
@@ -16,7 +21,7 @@ export const AddMemberToOrganizationHook = ({
   setInviteButtonState,
   selectedTeams,
   setSelectedTeams,
-}) => {
+}: AddMemberToOrganizationHookProps): AddMemberToOrganizationModalHookOutput => {
   useEffect(() => {
     if (open && !teamsData.length) {
       getOrganizatoinTeamsHook({
@@ -27,12 +32,14 @@ export const AddMemberToOrganizationHook = ({
     }
   }, [open, toast, organizationId, teamsData, setTeamsData])
 
-  useEffect(
-    () => setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState }),
-    [selectedUsers, inviteButtonState, setInviteButtonState]
-  )
+  useEffect(() => {
+    setButtonActiveHook({ inviteButtonState, selectedUsers, setInviteButtonState })
+  }, [selectedUsers, inviteButtonState, setInviteButtonState])
 
-  const switchHandler = (e, teamId) => {
+  const switchHandler = (
+    e: ChangeEvent<HTMLInputElement> | boolean,
+    teamId: number | null | undefined
+  ): void => {
     if (selectedTeams.includes(teamId as never)) {
       setSelectedTeams(selectedTeams.filter((c) => c !== (teamId as never)))
     } else {
@@ -40,7 +47,7 @@ export const AddMemberToOrganizationHook = ({
     }
   }
 
-  const inviteButtonClickHandler = () =>
+  const inviteButtonClickHandler = (): void => {
     inviteButtonClickHook({
       organizationLogin,
       selectedTeams,
@@ -48,6 +55,7 @@ export const AddMemberToOrganizationHook = ({
       selectedUsers,
       setInviteButtonState,
     })
+  }
 
   return {
     switchHandler,

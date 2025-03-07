@@ -1,11 +1,12 @@
-import type { OrganizationDataType }    from '@globals/data'
+import type { ThemeType }               from '@ui/theme'
+import type { FC }                      from 'react'
+
+import type { OrganizationCardProps }   from './organization-card.interfaces.js'
 
 import { useTheme }                     from '@emotion/react'
-
-import React                            from 'react'
-import { FC }                           from 'react'
 import { memo }                         from 'react'
 import { useState }                     from 'react'
+import React                            from 'react'
 
 import { AddMemberToOrganizationModal } from '@app/add-member-to-organization-modal-fragment'
 import { UsersModal }                   from '@app/users-modal'
@@ -18,10 +19,8 @@ import { Row }                          from '@ui/layout'
 import { Column }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
 import { Text }                         from '@ui/text'
-import { ThemeType }                    from '@ui/theme'
 
 import { Members }                      from './members/index.js'
-import { OrganizationCardProps }        from './organization-card.interfaces.js'
 
 export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationData }) => {
   const {
@@ -32,18 +31,18 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
     viewerCanAdminister,
   } = organizationData
 
-  const [isAddMemberToOrganizationModalOpen, setAddMemberToOrganizationModalOpen] =
+  const [isAddMemberToOrganizationModalOpen, setIsAddMemberToOrganizationModalOpen] =
     useState<boolean>(false)
-  const [isUsersModalOpen, setUsersModalOpen] = useState<boolean>(false)
+  const [isUsersModalOpen, setIsUsersModalOpen] = useState<boolean>(false)
 
   const theme = useTheme() as ThemeType
 
-  const handlerAddOrganizationMemberClick = () => {
-    setAddMemberToOrganizationModalOpen(!isAddMemberToOrganizationModalOpen)
+  const handlerAddOrganizationMemberClick = (): void => {
+    setIsAddMemberToOrganizationModalOpen(!isAddMemberToOrganizationModalOpen)
   }
 
-  const handlerUsersModalClick = () => {
-    setUsersModalOpen(!isUsersModalOpen)
+  const handlerUsersModalClick = (): void => {
+    setIsUsersModalOpen(!isUsersModalOpen)
   }
 
   return (
@@ -95,7 +94,7 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <UsersModal
               open={isUsersModalOpen}
-              organizationData={organizationData as OrganizationDataType}
+              organizationData={organizationData}
               onBackdropClick={handlerUsersModalClick}
             />
 
@@ -103,8 +102,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
               shape='circle'
               size='middlingRoundedPadding'
               variant='blueBackgroundButton'
-              onClick={handlerAddOrganizationMemberClick}
               disabled={!viewerCanAdminister}
+              onClick={handlerAddOrganizationMemberClick}
             >
               <AddIcon
                 color='white'
@@ -115,8 +114,8 @@ export const OrganizationCard: FC<OrganizationCardProps> = memo(({ organizationD
 
             <AddMemberToOrganizationModal
               open={isAddMemberToOrganizationModalOpen}
+              organizationData={organizationData}
               onBackdropClick={handlerAddOrganizationMemberClick}
-              organizationData={organizationData as OrganizationDataType}
             />
           </Row>
         </Column>

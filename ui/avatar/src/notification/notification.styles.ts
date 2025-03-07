@@ -1,6 +1,6 @@
-import { CSSObject } from '@emotion/css'
+import type { CSSObject } from '@emotion/react'
 
-import { theme }     from '@ui/theme'
+import { theme }          from '@ui/theme'
 
 export const baseStyles: CSSObject = {
   position: 'absolute',

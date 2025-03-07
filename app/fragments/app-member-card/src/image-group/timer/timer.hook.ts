@@ -13,7 +13,9 @@ export const TimerHook: TimerHookType = ({
     const timer = setInterval(() => {
       setCurrentMilliseconds(currentMilliseconds + 1000)
     }, 1000)
-    return () => clearInterval(timer)
+    return (): void => {
+      clearInterval(timer)
+    }
   })
 
   useEffect(() => {

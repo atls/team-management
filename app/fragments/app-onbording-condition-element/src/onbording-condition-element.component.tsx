@@ -1,9 +1,10 @@
+import type { ThemeType }                      from '@ui/theme'
+import type { FC }                             from 'react'
+
 import type { OnbordingConditionElementProps } from './onbording-condition-element.interfaces.js'
 
 import { useTheme }                            from '@emotion/react'
-
 import React                                   from 'react'
-import { FC }                                  from 'react'
 
 import { Checkbox }                            from '@ui/checkbox'
 import { Condition }                           from '@ui/condition'
@@ -12,7 +13,6 @@ import { Row }                                 from '@ui/layout'
 import { Column }                              from '@ui/layout'
 import { Box }                                 from '@ui/layout'
 import { Text }                                from '@ui/text'
-import { ThemeType }                           from '@ui/theme'
 
 import { getOnbordingConditionIcon }           from './hooks/index.js'
 

@@ -1,5 +1,4 @@
 import type { RequestOctokitGraphqlDataType } from '../octokit-graphql.interfaces.js'
-import type { GraphQlQueryResponseData }      from '@octokit/graphql'
 
 import { getTokenCookie }                     from '@globals/helpers'
 
@@ -12,6 +11,5 @@ export const requestOctokitGraphqlData: RequestOctokitGraphqlDataType = async (
 ) => {
   const token = getTokenCookie(document)
   const graphqlClient = createOctokitGraphqlClient(token)
-  const response = (await graphqlClient(query, queryData)) as GraphQlQueryResponseData
-  return response
+  return graphqlClient(query, queryData)
 }

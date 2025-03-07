@@ -13,4 +13,4 @@ export type RemoveMemberType = ({
   membersData: Array<OrganizationMemberDataType>
   setMembersData: (newMembersData: Array<OrganizationMemberDataType>) => void
   toast: ToastType
-}) => void
+}) => Promise<void>

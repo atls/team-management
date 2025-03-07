@@ -1,5 +1,6 @@
-import type { MemberWithOrganizationsDataType } from '../member-card.interfaces.js'
 import type { OrganizationDataType }            from '@globals/data'
+
+import type { MemberWithOrganizationsDataType } from '../member-card.interfaces.js'
 
 export type GetMemberOrganizationsDataType = ({
   memberData,

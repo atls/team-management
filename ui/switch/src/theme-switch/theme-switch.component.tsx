@@ -1,16 +1,17 @@
-import styled                         from '@emotion/styled'
+import type { FC }                    from 'react'
+
+import type { ThemeSwitchProps }      from './theme-switch.interfaces.js'
+
 import { HandleElement }              from '@atls-ui-parts/switch'
 import { useSwitch }                  from '@atls-ui-parts/switch'
-
-import React                          from 'react'
-import { FC }                         from 'react'
+import styled                         from '@emotion/styled'
 import { useRef }                     from 'react'
 import { useContext }                 from 'react'
 import { useHover }                   from 'react-laag'
+import React                          from 'react'
 
 import { ActiveThemeDispatchContext } from '@ui/theme'
 
-import { ThemeSwitchProps }           from './theme-switch.interfaces.js'
 import { ThumbComponent }             from './thumb/thumb.component.js'
 import { baseHandleStyles }           from './theme-switch.styles.js'
 import { sizeHandleStyles }           from './theme-switch.styles.js'
@@ -29,17 +30,17 @@ const ThemeSwitch: FC<ThemeSwitchProps> = ({ disabled, checked: defaultValue, on
   const [hover, hoverProps] = useHover()
   const [checked, setChecked] = useSwitch(node, defaultValue, disabled, onChange)
 
-  const activeThemeDispatch = useContext(ActiveThemeDispatchContext) as any
+  const activeThemeDispatch = useContext(ActiveThemeDispatchContext)
 
-  const changeHandler = () => {
-    activeThemeDispatch({
+  const changeHandler = (): void => {
+    activeThemeDispatch?.({
       type: 'toggle',
     })
     setChecked()
   }
 
   return (
-    <ThemeSwitchContainer ref={node} onClick={changeHandler} hover={hover} {...hoverProps}>
+    <ThemeSwitchContainer ref={node} hover={hover} onClick={changeHandler} {...hoverProps}>
       <ThumbComponent hover={hover} checked={checked} />
     </ThemeSwitchContainer>
   )

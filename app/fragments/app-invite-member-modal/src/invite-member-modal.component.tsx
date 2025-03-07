@@ -1,29 +1,30 @@
-import { useTheme }               from '@emotion/react'
+import type { InviteButtonStateType }  from '@app/invite-button'
+import type { ThemeType }              from '@ui/theme'
+import type { FC }                     from 'react'
 
-import React                      from 'react'
-import { FC }                     from 'react'
-import { FormattedMessage }       from 'react-intl'
-import { memo }                   from 'react'
-import { useState }               from 'react'
+import type { InputValuesType }        from './invite-member-modal.interfaces.js'
+import type { InviteMemberModalProps } from './invite-member-modal.interfaces.js'
+import type { CheckedSwitchesType }    from './invite-member-modal.interfaces.js'
 
-import { InviteButton }           from '@app/invite-button'
-import { InviteButtonStateType }  from '@app/invite-button'
-import { Button }                 from '@ui/button'
-import { AddIcon }                from '@ui/icons'
-import { Row }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Modal }                  from '@ui/modal'
-import { IconSwitch }             from '@ui/switch'
-import { Text }                   from '@ui/text'
-import { ThemeType }              from '@ui/theme'
-import { useToast }               from '@stores/toast-notification'
+import { useTheme }                    from '@emotion/react'
+import { FormattedMessage }            from 'react-intl'
+import { memo }                        from 'react'
+import { useState }                    from 'react'
+import React                           from 'react'
 
-import { InviteMemberModalInput } from './input/index.js'
-import { InviteMemberModalHook }  from './invite-member-modal.hook.js'
-import { InputValuesType }        from './invite-member-modal.interfaces.js'
-import { InviteMemberModalProps } from './invite-member-modal.interfaces.js'
-import { CheckedSwitchesType }    from './invite-member-modal.interfaces.js'
-import { getSwitchList }          from './ivnite-member-modal.constants.js'
+import { InviteButton }                from '@app/invite-button'
+import { Button }                      from '@ui/button'
+import { AddIcon }                     from '@ui/icons'
+import { Row }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Modal }                       from '@ui/modal'
+import { IconSwitch }                  from '@ui/switch'
+import { Text }                        from '@ui/text'
+import { useToast }                    from '@stores/toast-notification'
+
+import { InviteMemberModalInput }      from './input/index.js'
+import { InviteMemberModalHook }       from './invite-member-modal.hook.js'
+import { getSwitchList }               from './ivnite-member-modal.constants.js'
 
 export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBackdropClick }) => {
   const toast = useToast()
@@ -52,6 +53,7 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
         </Text>
         {inputValues.map((_inputValue: string, index: number) => (
           <InviteMemberModalInput
+            key={_inputValue}
             inputIndex={index}
             inputValues={inputValues}
             setInputValues={setInputValues}
@@ -61,24 +63,33 @@ export const InviteMemberModal: FC<InviteMemberModalProps> = memo(({ open, onBac
         ))}
         <Row justifyContent='center'>
           <Button
-            onClick={addInputClickHandler}
             shape='circle'
             size='middlingRoundedPadding'
             style={{ boxShadow: theme.shadows.black }}
             variant='whiteBackgroundButton'
+            onClick={addInputClickHandler}
           >
             <AddIcon color={theme.colors.inviteMemberModal.addIcon} />
           </Button>
         </Row>
         <Row justifyContent='space-between'>
           {SWITCH_DATA_LIST.map(({ icon, switchData }) => (
-            <IconSwitch onChange={(e) => switchHandler(e, switchData)}>{icon}</IconSwitch>
+            <IconSwitch
+              key={icon.key}
+              onChange={(e) => {
+                switchHandler(e, switchData)
+              }}
+            >
+              {icon}
+            </IconSwitch>
           ))}
         </Row>
         <Row justifyContent='end'>
           <InviteButton
             inviteButtonState={inviteButtonState}
-            inviteButtonClickHandler={inviteButtonClickHandler}
+            inviteButtonClickHandler={() => {
+              inviteButtonClickHandler()
+            }}
           >
             <Text fontSize='normal.semiDefault' fontWeight='normal' color={theme.colors.white}>
               <FormattedMessage id='add-member-modal.invite' />

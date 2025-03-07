@@ -1,13 +1,13 @@
-import styled                  from '@emotion/styled'
-import { ConditionalRender }   from '@atls-ui-parts/conditional-render'
+import type { FC }                  from 'react'
 
-import React                   from 'react'
-import { FC }                  from 'react'
-import { useMemo }             from 'react'
+import type { IconAttachmentProps } from './icon-attachment.interface.js'
 
-import { Box }                 from '@ui/layout'
+import { ConditionalRender }        from '@atls-ui-parts/conditional-render'
+import styled                       from '@emotion/styled'
+import { useMemo }                  from 'react'
+import React                        from 'react'
 
-import { IconAttachmentProps } from './icon-attachment.interface.js'
+import { Box }                      from '@ui/layout'
 
 const IconAttachment: FC<IconAttachmentProps> = ({
   iconSvg,

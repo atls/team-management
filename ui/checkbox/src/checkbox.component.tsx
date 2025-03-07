@@ -1,20 +1,21 @@
-import { HiddenInput }       from '@atls-ui-parts/hidden-input'
-import { useTheme }          from '@emotion/react'
+import type { ThemeType }         from '@ui/theme'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import React                 from 'react'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
+import type CheckboxProps         from './checkbox.interface.js'
 
-import { Condition }         from '@ui/condition'
-import { CheckIcon }         from '@ui/icons'
-import { WrongSolidIcon }    from '@ui/icons'
-import { ThemeType }         from '@ui/theme'
+import { HiddenInput }            from '@atls-ui-parts/hidden-input'
+import { useTheme }               from '@emotion/react'
+import React                      from 'react'
 
-import CheckboxProps         from './checkbox.interface.js'
-import { Box }               from './box/index.js'
-import { Check }             from './check/index.js'
-import { Container }         from './container/index.js'
-import { Label }             from './label/index.js'
+import { Condition }              from '@ui/condition'
+import { CheckIcon }              from '@ui/icons'
+import { WrongSolidIcon }         from '@ui/icons'
+
+import { Box }                    from './box/index.js'
+import { Check }                  from './check/index.js'
+import { Container }              from './container/index.js'
+import { Label }                  from './label/index.js'
 
 const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
   children,
@@ -29,10 +30,10 @@ const Checkbox: FC<PropsWithChildren<CheckboxProps>> = ({
       <HiddenInput type='checkbox' defaultChecked={checked} />
       <Box>
         <Check checked={checked}>
-          <Condition match={checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
+          <Condition smooth match={checked} smoothDuration={0.3} smoothPattern='in-and-out'>
             <CheckIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
           </Condition>
-          <Condition match={!checked} smooth smoothDuration={0.3} smoothPattern='in-and-out'>
+          <Condition smooth match={!checked} smoothDuration={0.3} smoothPattern='in-and-out'>
             <WrongSolidIcon width={theme.spaces.semiMedium} height={theme.spaces.semiMedium} />
           </Condition>
         </Check>

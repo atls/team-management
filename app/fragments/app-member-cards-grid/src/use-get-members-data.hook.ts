@@ -1,7 +1,8 @@
-import { useEffect }                 from 'react'
+import type { UseGetMembersDataHookType } from './use-get-members-data.interfaces.js'
 
-import { UseGetMembersDataHookType } from './use-get-members-data.interfaces.js'
-import { getMembersData }            from './hooks/index.js'
+import { useEffect }                      from 'react'
+
+import { getMembersData }                 from './hooks/index.js'
 
 export const useGetMembersDataHook: UseGetMembersDataHookType = ({
   toast,

@@ -1,5 +1,6 @@
+import type { FC }                    from 'react'
+
 import React                          from 'react'
-import { FC }                         from 'react'
 
 import { OrganizationCardsGrid }      from '@app/organization-cards-grid'
 

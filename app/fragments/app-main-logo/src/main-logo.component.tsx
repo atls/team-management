@@ -1,12 +1,12 @@
-import { useTheme }         from '@emotion/react'
+import type { ThemeType }   from '@ui/theme'
 
-import React                from 'react'
+import { useTheme }         from '@emotion/react'
 import { FormattedMessage } from 'react-intl'
+import React                from 'react'
 
 import { AtlantisIcon }     from '@ui/icons'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
-import { ThemeType }        from '@ui/theme'
 
 const MainLogo: React.FC = () => {
   const theme = useTheme() as ThemeType

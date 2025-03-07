@@ -1,8 +1,15 @@
 import type { OrganizationDataType } from '@globals/data'
-
-import { useState }                  from 'react'
+import type { Dispatch }             from 'react'
+import type { SetStateAction }       from 'react'
 
 export type OrganizationsButtonType = {
-  memberOrganizationsDataState: ReturnType<typeof useState<Array<OrganizationDataType>>>
+  memberOrganizationsDataState: [
+    organizations: Array<OrganizationDataType>,
+    setOrganizations: Dispatch<SetStateAction<Array<OrganizationDataType>>>,
+  ]
   memberLogin: string
+}
+
+export interface GetConstantsOutput {
+  ICON_PROPS: { color: string; width: number; height: number }
 }

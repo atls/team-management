@@ -1,4 +1,12 @@
-export function suggestedItemsReducer(suggestedItems, action) {
+import type { Reducer }              from 'react'
+
+import type { SuggestedItem }        from '../select-input.interfaces.js'
+import type { SuggestedItemsAction } from '../select-input.interfaces.js'
+
+export const suggestedItemsReducer: Reducer<Array<SuggestedItem>, SuggestedItemsAction> = (
+  suggestedItems,
+  action
+) => {
   switch (action.type) {
     case 'change': {
       return action.suggestedItems
@@ -7,7 +15,7 @@ export function suggestedItemsReducer(suggestedItems, action) {
       return []
     }
     default: {
-      throw new Error(`Unknown action: ${action.type}`)
+      throw new Error('Unknown action')
     }
   }
 }

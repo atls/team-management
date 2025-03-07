@@ -1,20 +1,21 @@
 'use client'
 
-import { useTheme }                   from '@emotion/react'
+import type { OrganizationDataType }       from '@globals/data'
+import type { ThemeType }                  from '@ui/theme'
+import type { FC }                         from 'react'
 
-import React                          from 'react'
-import { FC }                         from 'react'
-import { memo }                       from 'react'
-import { useState }                   from 'react'
+import type { OrganizationCardsGridProps } from './organization-cards-grid.interfaces.js'
 
-import { OrganizationCard }           from '@app/organization-card'
-import { OrganizationDataType }       from '@globals/data'
-import { GridAutoRows }               from '@ui/layout'
-import { ThemeType }                  from '@ui/theme'
-import { useToast }                   from '@stores/toast-notification'
+import { useTheme }                        from '@emotion/react'
+import { memo }                            from 'react'
+import { useState }                        from 'react'
+import React                               from 'react'
 
-import { OrganizationCardsGridHook }  from './organization-cards-grid.hook.js'
-import { OrganizationCardsGridProps } from './organization-cards-grid.interfaces.js'
+import { OrganizationCard }                from '@app/organization-card'
+import { GridAutoRows }                    from '@ui/layout'
+import { useToast }                        from '@stores/toast-notification'
+
+import { OrganizationCardsGridHook }       from './organization-cards-grid.hook.js'
 
 export const OrganizationCardsGrid: FC<OrganizationCardsGridProps> = memo(({
   organizationsLimit,
@@ -40,7 +41,7 @@ export const OrganizationCardsGrid: FC<OrganizationCardsGridProps> = memo(({
       maxColumnWidth={theme.spaces.hardcore}
     >
       {organizationsData.map((organizationData: OrganizationDataType) => (
-        <OrganizationCard organizationData={organizationData} />
+        <OrganizationCard key={organizationData.id} organizationData={organizationData} />
       ))}
     </GridAutoRows>
   )

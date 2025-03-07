@@ -1,13 +1,13 @@
-import { useTheme }          from '@emotion/react'
+import type { ThemeType }         from '@ui/theme'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import React                 from 'react'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
+import type { BackgroundProps }   from './background.interfaces.js'
 
-import { Box }               from '@ui/layout'
-import { ThemeType }         from '@ui/theme'
+import { useTheme }               from '@emotion/react'
+import React                      from 'react'
 
-import { BackgroundProps }   from './background.interfaces.js'
+import { Box }                    from '@ui/layout'
 
 export const Background: FC<PropsWithChildren<BackgroundProps>> = ({
   children,

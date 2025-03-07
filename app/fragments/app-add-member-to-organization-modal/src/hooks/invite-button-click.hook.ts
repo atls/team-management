@@ -17,16 +17,18 @@ export const inviteButtonClickHook: InviteButtonClickType = async ({
       const query = inviteMemberToOrganizationGetQuery({
         organizationLogin,
         githubUserId,
-        teamIds: selectedTeams,
+        teamIds: selectedTeams as never,
       })
 
       await requestOctokitRestData(document, query)
     }
 
     setInviteButtonState('successed')
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     // eslint-disable-next-line no-console
     console.error(e)
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     toast.error(e.message, e.status)
   }
 }

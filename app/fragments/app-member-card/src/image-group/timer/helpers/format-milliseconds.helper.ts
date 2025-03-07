@@ -1,7 +1,7 @@
-export const formatMilliseconds = (milliseconds) => {
+export const formatMilliseconds = (milliseconds: number): string => {
   const date = new Date(milliseconds)
 
-  const checkTwoSymbols = (symbol: number) => {
+  const checkTwoSymbols = (symbol: number): number | string => {
     if (symbol <= 9) return `0${symbol}`
     return symbol
   }

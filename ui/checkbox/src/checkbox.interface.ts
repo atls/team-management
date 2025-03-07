@@ -1,5 +1,5 @@
 export default interface CheckboxProps {
-  labelPosition?: 'start' | 'center' | 'end'
+  labelPosition?: 'center' | 'end' | 'start'
   checked: boolean
   fill?: boolean
 }

@@ -1,17 +1,22 @@
-import { SEARCH_USER }               from '@globals/data'
-import { SearchUserQuery }           from '@globals/data'
-import { requestOctokitGraphqlData } from '@globals/data'
+/* eslint-disable */
 
-import { SEARCH_USERS_LIMIT }        from '../github-users-search.constants.js'
+import type { SearchUserQuery }       from '@globals/data'
 
-export const getSearchedUsers = async ({ searchQuery, toast }) => {
+import type { GetSearchedUsersProps } from './get-searched-users.interfaces.js'
+
+import { SEARCH_USER }                from '@globals/data'
+import { requestOctokitGraphqlData }  from '@globals/data'
+
+import { SEARCH_USERS_LIMIT }         from '../github-users-search.constants.js'
+
+export const getSearchedUsers = async ({ searchQuery, toast }: GetSearchedUsersProps) => {
   try {
     const response = (await requestOctokitGraphqlData(document, SEARCH_USER, {
       searchLimit: SEARCH_USERS_LIMIT,
       searchQuery,
     })) as SearchUserQuery
 
-    if (response && response.search && response.search.edges?.length) {
+    if (response?.search?.edges?.length) {
       const {
         search: {
           edges: [...nodes],
@@ -23,17 +28,17 @@ export const getSearchedUsers = async ({ searchQuery, toast }) => {
       const matchedUsers = filtredNodes.map((nodeParams: any) => {
         const { node } = nodeParams
         const {
-          id: nodeId,
+          id,
           databaseId: githubUserId,
-          name: primaryInfo,
+          name,
           email: secondaryInfo,
           avatarUrl: imageSrc,
         } = node
 
         return {
-          nodeId,
+          id,
           githubUserId,
-          primaryInfo,
+          name,
           secondaryInfo,
           imageSrc,
         }
@@ -42,7 +47,6 @@ export const getSearchedUsers = async ({ searchQuery, toast }) => {
       return matchedUsers
     }
   } catch (e: any) {
-    // eslint-disable-next-line no-console
     console.error(e)
     toast.error(e.message, e.status)
   }

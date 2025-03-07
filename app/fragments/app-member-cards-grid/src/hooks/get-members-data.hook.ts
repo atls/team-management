@@ -1,8 +1,9 @@
-import type { GetMembersDataType }              from './get-members-data.interfaces.js'
-/* eslint-disable no-continue */
+/* eslint-disable */
 import type { MemberWithOrganizationsDataType } from '@app/member-card'
 import type { OrganizationMemberDataType }      from '@globals/data'
 import type { OrganizationDataType }            from '@globals/data'
+
+import type { GetMembersDataType }              from './get-members-data.interfaces.js'
 
 import { getMembersWithout2fa }                 from '@globals/github-hooks'
 
@@ -20,7 +21,7 @@ export const getMembersData: GetMembersDataType = async ({
   organizationMembersLimit,
 }) => {
   try {
-    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME as string
+    const defaultOrganizationName = process.env.NEXT_PUBLIC_GITHUB_ORG_NAME ?? ''
 
     const responseOrganizationsData = await getResponseOrganizationsData({
       organizationsLimit,
@@ -84,7 +85,6 @@ export const getMembersData: GetMembersDataType = async ({
     setMembersData(withOnbordingDataMembersData)
     setOrganizationsData(uniqueOrganizationsData)
   } catch (e: any) {
-    // eslint-disable-next-line no-console
     console.error(e)
     toast.error(e.message, e.status)
   }

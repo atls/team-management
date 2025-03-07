@@ -1,2 +1,2 @@
 export * from './organization-card.component.js'
-export * from './organization-card.interfaces.js'
+export type * from './organization-card.interfaces.js'

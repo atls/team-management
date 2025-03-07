@@ -1,11 +1,13 @@
+import type { FC }          from 'react'
+
+import type { AvatarProps } from './avatar.interfaces.js'
+
 import React                from 'react'
-import { FC }               from 'react'
 
 import { Condition }        from '@ui/condition'
 import { NextImage }        from '@ui/image'
 import { Box }              from '@ui/layout'
 
-import { AvatarProps }      from './avatar.interfaces.js'
 import { ContainerWrapper } from './container/index.js'
 import { Notification }     from './notification/index.js'
 

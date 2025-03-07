@@ -2,7 +2,7 @@ import type { GetViewerOrganizationsQuery } from '../__generated__/index.js'
 import type { GetOrganizationTeamsQuery }   from '../__generated__/index.js'
 import type { GetOrganizationMembersQuery } from '../__generated__/index.js'
 
-export type ArrayElement<A> = A extends readonly (infer T)[] ? T : never
+export type ArrayElement<A> = A extends ReadonlyArray<infer T> ? T : never
 
 export type OrganizationDataType = Exclude<
   ArrayElement<GetViewerOrganizationsQuery['viewer']['organizations']['nodes']>,

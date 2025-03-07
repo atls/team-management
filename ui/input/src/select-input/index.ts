@@ -1,2 +1,2 @@
 export * from './select-input.component.js'
-export * from './select-input.interfaces.js'
+export type * from './select-input.interfaces.js'

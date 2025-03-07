@@ -1,18 +1,24 @@
-import { Config } from 'styled-system'
-import { system } from 'styled-system'
+import type { Config }            from 'styled-system'
+
+import type { TransformFunction } from './flex.interfaces.js'
+
+import { system }                 from 'styled-system'
 
 const flexConfig: Config = {
   gap: {
     property: 'gap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : value) as TransformFunction,
   },
   rowGap: {
     property: 'rowGap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : value) as TransformFunction,
   },
   columnGap: {
     property: 'columnGap',
-    transform: (value) => (typeof value === 'number' ? `${value}px` : value),
+    transform: ((value): string =>
+      typeof value === 'number' ? `${value}px` : value) as TransformFunction,
   },
   gridColumn: {
     property: 'gridColumn',

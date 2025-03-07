@@ -1,5 +1,7 @@
-import { styleFn } from 'styled-system'
-import { ifProp }  from 'styled-tools'
+import type { CSSObject } from '@emotion/react'
+import type { styleFn }   from 'styled-system'
+
+import { ifProp }         from 'styled-tools'
 
 export const baseSidebarItemStyles: styleFn = ({ theme }) => ({
   textDecoration: 'none',
@@ -30,17 +32,17 @@ const baseAppearanceStyles: styleFn = ({ theme }) => ({
   borderLeftWidth: theme.spaces.semiTiny,
 })
 
-const defaultAppearanceStyles: styleFn = ({ theme }) => ({
+const defaultAppearanceStyles: styleFn = ({ theme }): CSSObject => ({
   ...baseAppearanceStyles({ theme }),
   borderLeftColor: theme.colors.sidebar.background,
 })
 
-const hoverAppearanceStyles: styleFn = ({ theme }) => ({
+const hoverAppearanceStyles: styleFn = ({ theme }): CSSObject => ({
   ...baseAppearanceStyles({ theme }),
   borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,
 })
 
-const activeAppearanceStyles: styleFn = ({ theme }) => ({
+const activeAppearanceStyles: styleFn = ({ theme }): CSSObject => ({
   ...baseAppearanceStyles({ theme }),
   backgroundColor: theme.colors.sidebar.sidebarItem.backgroundSelected,
   borderLeftColor: theme.colors.sidebar.sidebarItem.borderActive,

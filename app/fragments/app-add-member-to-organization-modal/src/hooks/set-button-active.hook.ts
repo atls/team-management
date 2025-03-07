@@ -1,4 +1,4 @@
-import { SetButtonActiveType } from './set-button-active.interface.js'
+import type { SetButtonActiveType } from './set-button-active.interface.js'
 
 export const setButtonActiveHook: SetButtonActiveType = ({
   inviteButtonState,

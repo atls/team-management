@@ -1,9 +1,9 @@
+import type { FC }                   from 'react'
+
 import type { ImageGroupProps }      from './image-group.interfaces.js'
 
 import styled                        from '@emotion/styled'
-
 import React                         from 'react'
-import { FC }                        from 'react'
 
 import { Condition }                 from '@ui/condition'
 import { ImageBlock }                from '@ui/image'
@@ -31,7 +31,7 @@ export const ImageGroup: FC<ImageGroupProps> = ({
       <ImageBlock src={avatarUrl} alt='user-avatar' />
       <FrontLayerContainer>
         <Condition match={Boolean(name)}>
-          <TextGroup name={name as string} bio={bio as string} />
+          <TextGroup name={name ?? ''} bio={bio ?? ''} />
         </Condition>
         <Row justifyContent='space-between'>
           <OrganizationsButton
@@ -39,7 +39,7 @@ export const ImageGroup: FC<ImageGroupProps> = ({
             memberOrganizationsDataState={memberOrganizationsDataState}
           />
           <Condition match={Boolean(timerMilliseconds)}>
-            <Timer initialMilliseconds={timerMilliseconds as number} />
+            <Timer initialMilliseconds={timerMilliseconds ?? 0} />
           </Condition>
         </Row>
       </FrontLayerContainer>

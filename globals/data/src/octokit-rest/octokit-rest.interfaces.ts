@@ -16,4 +16,4 @@ export type RequestOctokitRestDataType = (
 
 export type GetRestQueryType = (queryValues: Record<string, string>) => QueryType
 
-export type CreateOctokitRestClientType = (token: string) => RequestInterface<object>
+export type CreateOctokitRestClientType = (token: string) => RequestInterface

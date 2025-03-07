@@ -1,17 +1,18 @@
-import { useTheme }                from '@emotion/react'
+import type { ThemeType }               from '@ui/theme'
+import type { FC }                      from 'react'
 
-import React                       from 'react'
-import { FC }                      from 'react'
-import { FormattedMessage }        from 'react-intl'
-import { memo }                    from 'react'
+import type { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
-import { Column }                  from '@ui/layout'
-import { Modal }                   from '@ui/modal'
-import { Text }                    from '@ui/text'
-import { ThemeType }               from '@ui/theme'
+import { useTheme }                     from '@emotion/react'
+import { FormattedMessage }             from 'react-intl'
+import { memo }                         from 'react'
+import React                            from 'react'
 
-import { OrganizationElement }     from './organization-element/index.js'
-import { OrganizationsModalProps } from './organizations-modal.interfaces.js'
+import { Column }                       from '@ui/layout'
+import { Modal }                        from '@ui/modal'
+import { Text }                         from '@ui/text'
+
+import { OrganizationElement }          from './organization-element/index.js'
 
 const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
   organizationsData,
@@ -42,6 +43,7 @@ const OrganizationsModal: FC<OrganizationsModalProps> = memo(({
         <Column flexDirection='column' gap={theme.spaces.semiRegular}>
           {organizationsData.map((organizationData) => (
             <OrganizationElement
+              key={organizationData.id}
               organizationsData={organizationsData}
               organizationData={organizationData}
               memberLogin={memberLogin}

@@ -1,20 +1,22 @@
-import { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
+import type { ButtonProps as BaseButtonProps } from '@atls-ui-parts/button'
+import type { ButtonHTMLAttributes }           from 'react'
+import type { Ref }                            from 'react'
 
 export type ButtonVariant =
-  | 'blackSolidBackgroundButton'
   | 'blackBackgroundButton'
-  | 'whiteBackgroundButton'
+  | 'blackSolidBackgroundButton'
   | 'blueBackgroundButton'
-  | 'transparentBackgroundButton'
   | 'lightBlueBackgroundButton'
+  | 'transparentBackgroundButton'
   | 'transparentBlueBackgroundButton'
+  | 'whiteBackgroundButton'
 
 export type ButtonSize =
+  | 'bigRoundedPadding'
+  | 'microIncreasedRoundedPadding'
+  | 'microRoundedPadding'
   | 'middlingRoundedPadding'
   | 'smallRoundedPadding'
-  | 'bigRoundedPadding'
-  | 'microRoundedPadding'
-  | 'microIncreasedRoundedPadding'
 
 export interface ButtonProps extends BaseButtonProps {
   variant?: ButtonVariant
@@ -22,11 +24,18 @@ export interface ButtonProps extends BaseButtonProps {
   size?: ButtonSize
   active?: boolean
   boxShadow?: string
-  ref?: any
+  ref?: Ref<HTMLButtonElement>
   iconSvg?: React.ReactNode
-  valueRadius?: string | Record<string, string>
-  valueWidth?: string | Record<string, string>
-  valueHeight?: string | Record<string, string>
-  valueBackground?: string | Record<string, string>
+  valueRadius?: Record<string, string> | string
+  valueWidth?: Record<string, string> | string
+  valueHeight?: Record<string, string> | string
+  valueBackground?: Record<string, string> | string
   horizontalLocation?: 'left' | 'right'
+}
+
+export type BaseStyles = Record<string, number | string>
+
+export interface ButtonElementProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  hover?: boolean
+  pressed?: boolean
 }

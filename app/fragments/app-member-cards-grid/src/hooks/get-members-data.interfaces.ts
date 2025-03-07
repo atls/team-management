@@ -14,4 +14,4 @@ export type GetMembersDataType = ({
   setOrganizationsData: (organizationsData: Array<OrganizationDataType>) => void
   organizationsLimit: number
   organizationMembersLimit: number
-}) => void
+}) => Promise<void>

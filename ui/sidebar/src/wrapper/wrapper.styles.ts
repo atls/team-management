@@ -1,5 +1,7 @@
-import { styleFn } from 'styled-system'
-import { ifProp }  from 'styled-tools'
+import type { CSSObject } from '@emotion/react'
+import type { styleFn }   from 'styled-system'
+
+import { ifProp }         from 'styled-tools'
 
 export const baseSidebarStyles: styleFn = ({ theme }) => ({
   position: 'sticky',
@@ -13,12 +15,12 @@ const baseShapeStyles: styleFn = ({ theme }) => ({
   gap: theme.spaces.moderate,
 })
 
-const closedShapeStyles: styleFn = ({ theme }) => ({
+const closedShapeStyles: styleFn = ({ theme }): CSSObject => ({
   ...baseShapeStyles({ theme }),
   width: theme.spaces.huge,
 })
 
-const openedShapeStyles: styleFn = ({ theme }) => ({
+const openedShapeStyles: styleFn = ({ theme }): CSSObject => ({
   ...baseShapeStyles({ theme }),
   width: theme.spaces.largeSemiDecreased,
 })

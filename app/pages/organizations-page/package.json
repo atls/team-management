@@ -12,6 +12,7 @@
     "@app/organization-cards-grid": "workspace:*"
   },
   "devDependencies": {
+    "@types/react": "^18.3.18",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "styled-system": "5.1.5"

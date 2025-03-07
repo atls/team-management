@@ -1,13 +1,14 @@
-import styled                             from '@emotion/styled'
+import type { BoxProps }                  from '@atls-ui-parts/layout'
+import type { FC }                        from 'react'
+import type { PropsWithChildren }         from 'react'
+import type { MouseEventHandler }         from 'react'
+
+import type { ChildContainerProps }       from './child-container.interfaces.js'
+
 import { Box }                            from '@atls-ui-parts/layout'
-import { BoxProps }                       from '@atls-ui-parts/layout'
-
+import styled                             from '@emotion/styled'
 import React                              from 'react'
-import { FC }                             from 'react'
-import { PropsWithChildren }              from 'react'
-import { MouseEventHandler }              from 'react'
 
-import { ChildContainerProps }            from './child-container.interfaces.js'
 import { baseChildContainerStyles }       from './child-container.styles.js'
 import { shapeChildContainerStyles }      from './child-container.styles.js'
 import { appearanceChildContainerStyles } from './child-container.styles.js'

@@ -1,3 +1,5 @@
+import type { JSX }                           from 'react'
+
 import type { GetOnbordingConditionIconType } from './get-onbording-condition-icon.interfaces.js'
 
 import React                                  from 'react'

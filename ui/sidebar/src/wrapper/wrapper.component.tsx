@@ -1,19 +1,20 @@
-import styled                        from '@emotion/styled'
+import type { FC }                        from 'react'
+import type { PropsWithChildren }         from 'react'
 
-import React                         from 'react'
-import { FC }                        from 'react'
-import { PropsWithChildren }         from 'react'
-import { motion }                    from 'framer-motion'
+import type { WrapperProps }              from './wrapper.interfaces.js'
+import type { MotionWrapperElementProps } from './wrapper.interfaces.js'
 
-import { Column }                    from '@ui/layout'
+import styled                             from '@emotion/styled'
+import { motion }                         from 'framer-motion'
+import React                              from 'react'
 
-import { WrapperProps }              from './wrapper.interfaces.js'
-import { MotionWrapperElementProps } from './wrapper.interfaces.js'
-import { motionVariants }            from '../sidebar.constants.js'
-import { animationCompleteHook }     from './wrapper.hooks.js'
-import { baseSidebarStyles }         from './wrapper.styles.js'
-import { shapeSidebarStyles }        from './wrapper.styles.js'
-import { appearanceSidebarStyles }   from './wrapper.styles.js'
+import { Column }                         from '@ui/layout'
+
+import { motionVariants }                 from '../sidebar.constants.js'
+import { animationCompleteHook }          from './wrapper.hooks.js'
+import { baseSidebarStyles }              from './wrapper.styles.js'
+import { shapeSidebarStyles }             from './wrapper.styles.js'
+import { appearanceSidebarStyles }        from './wrapper.styles.js'
 
 const WrapperElement = styled(Column)(
   baseSidebarStyles,
@@ -29,16 +30,16 @@ export const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({ children, states 
   return (
     <MotionSidebarWrapper
       isSidebarOpened={isSidebarOpened}
-      onAnimationComplete={() =>
+      animate={isSidebarVisible ? 'visible' : 'invisible'}
+      variants={motionVariants}
+      onAnimationComplete={() => {
         animationCompleteHook({
           isSidebarOpened,
           setSidebarOpened,
           isSidebarVisible,
           setSidebarVisible,
         })
-      }
-      animate={isSidebarVisible ? 'visible' : 'invisible'}
-      variants={motionVariants}
+      }}
     >
       {children}
     </MotionSidebarWrapper>
