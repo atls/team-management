@@ -1,9 +1,8 @@
 /* eslint-disable */
 import type { IconProps } from '../icons.interfaces.js'
 
-import React              from 'react'
-
 import { useTheme }       from '@emotion/react'
+import React              from 'react'
 
 export const OrganizationsIcon = React.memo((props: IconProps) => {
   const theme: any = useTheme()

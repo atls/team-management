@@ -3,11 +3,11 @@ import type { FC }           from 'react'
 
 import type { LogoProps }    from './logo.interfaces.js'
 
+import { useTheme }          from '@emotion/react'
 import React                 from 'react'
 
 import { AtlantisIcon }      from '@ui/icons'
 import { AtlantisSmallIcon } from '@ui/icons'
-import { useTheme }          from '@emotion/react'
 
 const Logo: FC<LogoProps> = ({ variant, activeTheme }) => {
   const theme = useTheme() as ThemeType

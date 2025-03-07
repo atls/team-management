@@ -3,6 +3,7 @@ import type { FC }                      from 'react'
 
 import type { OrganizationsButtonType } from './organizations-button.interfaces.js'
 
+import { useTheme }                     from '@emotion/react'
 import { useState }                     from 'react'
 import React                            from 'react'
 
@@ -10,7 +11,6 @@ import { OrganizationsModal }           from '@app/organizations-modal'
 import { Button }                       from '@ui/button'
 import { OrganizationsIcon }            from '@ui/icons'
 import { Text }                         from '@ui/text'
-import { useTheme }                     from '@emotion/react'
 
 import { getConstants }                 from './organizations-button.constants.js'
 

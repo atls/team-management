@@ -4,13 +4,13 @@ import type { FC }                  from 'react'
 
 import type { SidebarProps }        from './sidebar.interfaces.js'
 
+import { useTheme }                 from '@emotion/react'
 // @ts-expect-error:next-line
 import { usePathname }              from 'next/navigation'
 import { useState }                 from 'react'
 import React                        from 'react'
 
 import { Box }                      from '@ui/layout'
-import { useTheme }                 from '@emotion/react'
 
 import { AtlantisLogo }             from './atlantis-logo/index.js'
 import { SidebarItem }              from './item/index.js'

@@ -3,6 +3,7 @@ import type { FC }                      from 'react'
 
 import type { NotificationsModalProps } from './notifications-modal.interfaces.js'
 
+import { useTheme }                     from '@emotion/react'
 import { FormattedMessage }             from 'react-intl'
 import React                            from 'react'
 
@@ -14,7 +15,6 @@ import { Modal }                        from '@ui/modal'
 import { Scroll }                       from '@ui/scroll'
 import { Text }                         from '@ui/text'
 import { Space }                        from '@ui/text'
-import { useTheme }                     from '@emotion/react'
 
 const NotificationsModal: FC<NotificationsModalProps> = ({
   avatar,

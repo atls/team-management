@@ -1,6 +1,7 @@
 import type { ThemeType }     from '@ui/theme'
 import type { JSX }           from 'react'
 
+import { useTheme }           from '@emotion/react'
 import { useState }           from 'react'
 import React                  from 'react'
 
@@ -9,7 +10,6 @@ import { Button }             from '@ui/button'
 import { NotificationsIcon }  from '@ui/icons'
 import { Row }                from '@ui/layout'
 import { ThemeSwitch }        from '@ui/switch'
-import { useTheme }           from '@emotion/react'
 
 const ThemeSelector: React.FC = (): JSX.Element => {
   const [isNotificationsModalOpen, setIsNotificationsModalOpen] = useState<boolean>(false)

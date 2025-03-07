@@ -3,6 +3,7 @@ import type { FC }             from 'react'
 
 import type { PinProps }       from './pin.interfaces.js'
 
+import { useTheme }            from '@emotion/react'
 import styled                  from '@emotion/styled'
 import { useContext }          from 'react'
 import React                   from 'react'
@@ -10,7 +11,6 @@ import React                   from 'react'
 import { ChevroneLeftIcon }    from '@ui/icons'
 import { ChevroneRightIcon }   from '@ui/icons'
 import { Box }                 from '@ui/layout'
-import { useTheme }            from '@emotion/react'
 
 import { SidebarStateContext } from '../sidebar.context.js'
 import { baseStyles }          from './pin.styles.js'

@@ -3,6 +3,7 @@ import type { FC }                     from 'react'
 
 import type { SidebarItemProps }       from './item.interfaces.js'
 
+import { useTheme }                    from '@emotion/react'
 import styled                          from '@emotion/styled'
 import { useContext }                  from 'react'
 import { useHover }                    from 'react-laag'
@@ -14,7 +15,6 @@ import { Condition }                   from '@ui/condition'
 import { DashboardIcon }               from '@ui/icons'
 import { Row }                         from '@ui/layout'
 import { Text }                        from '@ui/text'
-import { useTheme }                    from '@emotion/react'
 
 import { SidebarStateContext }         from '../sidebar.context.js'
 import { baseSidebarItemStyles }       from './item.styles.js'

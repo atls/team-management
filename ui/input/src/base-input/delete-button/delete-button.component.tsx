@@ -4,13 +4,13 @@ import type { FC }                from 'react'
 
 import type { DeleteButtonProps } from './delete-button.interfaces.js'
 
+import { useTheme }               from '@emotion/react'
 import styled                     from '@emotion/styled'
 import React                      from 'react'
 
 import { Condition }              from '@ui/condition'
 import { RemoveIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
-import { useTheme }               from '@emotion/react'
 
 import { baseDeleteButtonStyles } from './delete-button.styles.js'
 

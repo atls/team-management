@@ -7,13 +7,13 @@ import type { FC }                              from 'react'
 
 import type { MemberCardsGridProps }            from './use-get-members-data.interfaces.js'
 
+import { useTheme }                             from '@emotion/react'
 import { memo }                                 from 'react'
 import { useState }                             from 'react'
 import React                                    from 'react'
 
 import { MemberCard }                           from '@app/member-card'
 import { GridAutoRows }                         from '@ui/layout'
-import { useTheme }                             from '@emotion/react'
 import { useToast }                             from '@stores/toast-notification'
 
 import { MOCK_PENDING_MEMBER_TIMER }            from './member-cards-grid.constants.js'

@@ -7,6 +7,7 @@ import type { FC }                         from 'react'
 
 import type { MemberCardProps }            from './member-card.interfaces.js'
 
+import { useTheme }                        from '@emotion/react'
 import styled                              from '@emotion/styled'
 import { useState }                        from 'react'
 import React                               from 'react'
@@ -14,7 +15,6 @@ import React                               from 'react'
 import { OnbordingConditionElement }       from '@app/onbording-condition-element'
 import { Box }                             from '@ui/layout'
 import { Progress }                        from '@ui/progress'
-import { useTheme }                        from '@emotion/react'
 
 import { ImageGroup }                      from './image-group/index.js'
 import { getProgressbarPercents }          from './getters/index.js'

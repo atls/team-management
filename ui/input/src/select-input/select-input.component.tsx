@@ -5,6 +5,7 @@ import type { ChangeEvent }              from 'react'
 import type { SelectInputProps }         from './select-input.interfaces.js'
 
 import { RawInput }                      from '@atls-ui-parts/input'
+import { useTheme }                      from '@emotion/react'
 import styled                            from '@emotion/styled'
 import { forwardRef }                    from 'react'
 import { useRef }                        from 'react'
@@ -12,7 +13,6 @@ import { useLayer }                      from 'react-laag'
 import React                             from 'react'
 
 import { Box }                           from '@ui/layout'
-import { useTheme }                      from '@emotion/react'
 import { useSelectInput }                from '@stores/select-input'
 
 import { SelectedItems }                 from './selected-items/index.js'

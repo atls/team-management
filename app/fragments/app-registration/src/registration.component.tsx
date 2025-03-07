@@ -2,6 +2,7 @@
 
 import type { ThemeType }         from '@ui/theme'
 
+import { useTheme }               from '@emotion/react'
 import { FormattedMessage }       from 'react-intl'
 // @ts-expect-error:next-line
 import { useRouter }              from 'next/navigation'
@@ -14,7 +15,6 @@ import { GitHubIcon }             from '@ui/icons'
 import { Box }                    from '@ui/layout'
 import { Column }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
-import { useTheme }               from '@emotion/react'
 
 import { githubAuthRedirectHook } from './github-auth.hook.js'
 

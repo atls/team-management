@@ -7,9 +7,8 @@ import type { ModalProps }        from './modal.interfaces.js'
 
 import { Condition }              from '@atls-ui-parts/condition'
 import { Portal }                 from '@atls-ui-parts/portal'
-import React                      from 'react'
-
 import { useTheme }               from '@emotion/react'
+import React                      from 'react'
 
 import { Backdrop }               from './backdrop/index.js'
 import { ChildContainer }         from './child-container/index.js'

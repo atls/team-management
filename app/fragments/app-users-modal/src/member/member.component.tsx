@@ -3,6 +3,7 @@ import type { FC }          from 'react'
 
 import type { MemberProps } from './member.interfaces.js'
 
+import { useTheme }         from '@emotion/react'
 import { memo }             from 'react'
 // @ts-expect-error:next-line
 import Link                 from 'next/link'
@@ -15,7 +16,6 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Text }             from '@ui/text'
-import { useTheme }         from '@emotion/react'
 
 import { MemberDorpdown }   from './member-dropdown/member-dropdown.component.js'
 

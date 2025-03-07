@@ -6,13 +6,13 @@ import type { FC }                         from 'react'
 
 import type { OrganizationCardsGridProps } from './organization-cards-grid.interfaces.js'
 
+import { useTheme }                        from '@emotion/react'
 import { memo }                            from 'react'
 import { useState }                        from 'react'
 import React                               from 'react'
 
 import { OrganizationCard }                from '@app/organization-card'
 import { GridAutoRows }                    from '@ui/layout'
-import { useTheme }                        from '@emotion/react'
 import { useToast }                        from '@stores/toast-notification'
 
 import { OrganizationCardsGridHook }       from './organization-cards-grid.hook.js'

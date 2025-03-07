@@ -3,6 +3,7 @@ import type { FC }                          from 'react'
 
 import type { SuggestedItemProps }          from './suggested-item.interfaces.js'
 
+import { useTheme }                         from '@emotion/react'
 import styled                               from '@emotion/styled'
 import { useContext }                       from 'react'
 import React                                from 'react'
@@ -14,7 +15,6 @@ import { ImageBlock }                       from '@ui/image'
 import { Box }                              from '@ui/layout'
 import { Column }                           from '@ui/layout'
 import { Text }                             from '@ui/text'
-import { useTheme }                         from '@emotion/react'
 
 import { baseSuggestedItemBoxStyles }       from './suggested-item.styles.js'
 import { shapeSuggestedItemBoxStyles }      from './suggested-item.styles.js'

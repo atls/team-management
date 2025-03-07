@@ -3,6 +3,7 @@ import type { FC }                              from 'react'
 
 import type { ToastNotificationComponentProps } from './toast-notification.interfaces.js'
 
+import { useTheme }                             from '@emotion/react'
 import styled                                   from '@emotion/styled'
 import { useState }                             from 'react'
 import React                                    from 'react'
@@ -10,7 +11,6 @@ import React                                    from 'react'
 import { Condition }                            from '@ui/condition'
 import { Box }                                  from '@ui/layout'
 import { Text }                                 from '@ui/text'
-import { useTheme }                             from '@emotion/react'
 
 import { ToastNotificationHook }                from './toast-notification.hook.js'
 import { baseAbsoluteConteinerStyles }          from './toast-notification.styles.js'

@@ -5,13 +5,13 @@ import type { FC }                  from 'react'
 
 import type { InviteButtonProps }   from './invite-button.interfaces.js'
 
+import { useTheme }                 from '@emotion/react'
 import { FormattedMessage }         from 'react-intl'
 import React                        from 'react'
 
 import { Button }                   from '@ui/button'
 import { SuccessIcon }              from '@ui/icons'
 import { Text }                     from '@ui/text'
-import { useTheme }                 from '@emotion/react'
 
 import { getInviteButtonConstants } from './invite-button.constants.js'
 

@@ -5,6 +5,7 @@ import type { JSX }                        from 'react'
 
 import type { UsersModalProps }            from './users-modal.interfaces.js'
 
+import { useTheme }                        from '@emotion/react'
 import { FormattedMessage }                from 'react-intl'
 import { memo }                            from 'react'
 import { useState }                        from 'react'
@@ -19,7 +20,6 @@ import { Modal }                           from '@ui/modal'
 import { Scroll }                          from '@ui/scroll'
 import { Text }                            from '@ui/text'
 import { Space }                           from '@ui/text'
-import { useTheme }                        from '@emotion/react'
 import { useToast }                        from '@stores/toast-notification'
 
 import { Member }                          from './member/index.js'

@@ -3,13 +3,13 @@ import type { FC }                      from 'react'
 
 import type { RemoveRequestGroupProps } from './remove-request-group.interfaces.js'
 
+import { useTheme }                     from '@emotion/react'
 import { FormattedMessage }             from 'react-intl'
 import React                            from 'react'
 
 import { Button }                       from '@ui/button'
 import { Row }                          from '@ui/layout'
 import { Text }                         from '@ui/text'
-import { useTheme }                     from '@emotion/react'
 
 import { BUTTON_PROPS }                 from './remove-request-group.constants.js'
 

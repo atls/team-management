@@ -3,6 +3,7 @@ import type { FC }                      from 'react'
 
 import type { OrganizationsModalProps } from './organizations-modal.interfaces.js'
 
+import { useTheme }                     from '@emotion/react'
 import { FormattedMessage }             from 'react-intl'
 import { memo }                         from 'react'
 import React                            from 'react'
@@ -10,7 +11,6 @@ import React                            from 'react'
 import { Column }                       from '@ui/layout'
 import { Modal }                        from '@ui/modal'
 import { Text }                         from '@ui/text'
-import { useTheme }                     from '@emotion/react'
 
 import { OrganizationElement }          from './organization-element/index.js'
 

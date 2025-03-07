@@ -4,12 +4,12 @@ import type { PropsWithChildren } from 'react'
 
 import type { TeamSwitchProps }   from './team-swtich.interfaces.js'
 
+import { useTheme }               from '@emotion/react'
 import React                      from 'react'
 
 import { Row }                    from '@ui/layout'
 import { BaseSwitch }             from '@ui/switch'
 import { Text }                   from '@ui/text'
-import { useTheme }               from '@emotion/react'
 
 export const TeamSwitch: FC<PropsWithChildren<TeamSwitchProps>> = ({ teamName, onChange }) => {
   const theme = useTheme() as ThemeType

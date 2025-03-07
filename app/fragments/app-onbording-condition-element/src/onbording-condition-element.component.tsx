@@ -3,6 +3,7 @@ import type { FC }                             from 'react'
 
 import type { OnbordingConditionElementProps } from './onbording-condition-element.interfaces.js'
 
+import { useTheme }                            from '@emotion/react'
 import React                                   from 'react'
 
 import { Checkbox }                            from '@ui/checkbox'
@@ -12,7 +13,6 @@ import { Row }                                 from '@ui/layout'
 import { Column }                              from '@ui/layout'
 import { Box }                                 from '@ui/layout'
 import { Text }                                from '@ui/text'
-import { useTheme }                            from '@emotion/react'
 
 import { getOnbordingConditionIcon }           from './hooks/index.js'
 

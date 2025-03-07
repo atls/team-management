@@ -5,12 +5,12 @@ import type { FC }                from 'react'
 import type CheckboxProps         from './checkbox.interface.js'
 
 import { HiddenInput }            from '@atls-ui-parts/hidden-input'
+import { useTheme }               from '@emotion/react'
 import React                      from 'react'
 
 import { Condition }              from '@ui/condition'
 import { CheckIcon }              from '@ui/icons'
 import { WrongSolidIcon }         from '@ui/icons'
-import { useTheme }               from '@emotion/react'
 
 import { Box }                    from './box/index.js'
 import { Check }                  from './check/index.js'

@@ -3,13 +3,13 @@ import type { FC }                  from 'react'
 
 import type { MemberDorpdownProps } from './member-dropdown.interfaces.js'
 
+import { useTheme }                 from '@emotion/react'
 import React                        from 'react'
 
 import { Dropdown }                 from '@ui/dropdown'
 import { WrongOutlineIcon }         from '@ui/icons'
 import { Box }                      from '@ui/layout'
 import { Text }                     from '@ui/text'
-import { useTheme }                 from '@emotion/react'
 
 export const MemberDorpdown: FC<MemberDorpdownProps> = ({ memberLogin, onDeleteMemberClick }) => {
   const theme = useTheme() as ThemeType

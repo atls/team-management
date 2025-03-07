@@ -6,6 +6,7 @@ import type { InputValuesType }        from './invite-member-modal.interfaces.js
 import type { InviteMemberModalProps } from './invite-member-modal.interfaces.js'
 import type { CheckedSwitchesType }    from './invite-member-modal.interfaces.js'
 
+import { useTheme }                    from '@emotion/react'
 import { FormattedMessage }            from 'react-intl'
 import { memo }                        from 'react'
 import { useState }                    from 'react'
@@ -19,7 +20,6 @@ import { Column }                      from '@ui/layout'
 import { Modal }                       from '@ui/modal'
 import { IconSwitch }                  from '@ui/switch'
 import { Text }                        from '@ui/text'
-import { useTheme }                    from '@emotion/react'
 import { useToast }                    from '@stores/toast-notification'
 
 import { InviteMemberModalInput }      from './input/index.js'

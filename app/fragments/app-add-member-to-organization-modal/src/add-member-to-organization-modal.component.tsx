@@ -7,6 +7,7 @@ import type { FC }                                from 'react'
 
 import type { AddMemberToOrganizationModalProps } from './add-member-to-organization-modal.interfaces.js'
 
+import { useTheme }                               from '@emotion/react'
 import { FormattedMessage }                       from 'react-intl'
 import { memo }                                   from 'react'
 import { useState }                               from 'react'
@@ -18,7 +19,6 @@ import { Row }                                    from '@ui/layout'
 import { Column }                                 from '@ui/layout'
 import { Modal }                                  from '@ui/modal'
 import { Text }                                   from '@ui/text'
-import { useTheme }                               from '@emotion/react'
 import { useToast }                               from '@stores/toast-notification'
 
 import { AddMemberToOrganizationHook }            from './add-member-to-organization-modal.hook.js'

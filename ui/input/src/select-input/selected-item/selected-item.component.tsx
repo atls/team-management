@@ -3,6 +3,7 @@ import type { FC }                         from 'react'
 
 import type { SelectedItemProps }          from './selected-item.interface.js'
 
+import { useTheme }                        from '@emotion/react'
 import styled                              from '@emotion/styled'
 import { useContext }                      from 'react'
 import React                               from 'react'
@@ -11,7 +12,6 @@ import { SelectedItemsDispatchContext }    from '@stores/select-input'
 import { RemoveIcon }                      from '@ui/icons'
 import { Box }                             from '@ui/layout'
 import { Text }                            from '@ui/text'
-import { useTheme }                        from '@emotion/react'
 
 import { baseSelectedItemBoxStyles }       from './selected-item.styles.js'
 import { shapeSelectedItemBoxStyles }      from './selected-item.styles.js'

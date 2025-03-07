@@ -5,10 +5,9 @@ import type { Reducer }                          from 'react'
 import type { ActionType }                       from './theme.interfaces.js'
 import type { ThemeType }                        from './theme.interfaces.js'
 
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 import { useReducer }                            from 'react'
 import React                                     from 'react'
-
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react'
 
 import { GlobalStyles }                          from './global.styles.js'
 import { ActiveThemeContext }                    from './theme.context.js'

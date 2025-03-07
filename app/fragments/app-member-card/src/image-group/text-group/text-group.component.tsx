@@ -3,11 +3,11 @@ import type { FC }            from 'react'
 
 import type { TextGroupType } from './text-group.interfaces.ts'
 
+import { useTheme }           from '@emotion/react'
 import React                  from 'react'
 
 import { Column }             from '@ui/layout'
 import { Text }               from '@ui/text'
-import { useTheme }           from '@emotion/react'
 
 export const TextGroup: FC<TextGroupType> = ({ name, bio }) => {
   const theme = useTheme() as ThemeType

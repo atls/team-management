@@ -6,11 +6,10 @@ import type { DropdownButtonContainerProps } from './button.interfaces.js'
 import type { DotTheme }                     from './button.interfaces.js'
 
 import { Box }                               from '@atls-ui-parts/layout'
+import { useTheme }                          from '@emotion/react'
 import styled                                from '@emotion/styled'
 import { useHover }                          from 'react-laag'
 import React                                 from 'react'
-
-import { useTheme }                          from '@emotion/react'
 
 import { DotComponent }                      from './dot/index.js'
 import { baseButtonStyles }                  from './button.styles.js'

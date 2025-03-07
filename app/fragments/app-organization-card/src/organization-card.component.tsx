@@ -3,6 +3,7 @@ import type { FC }                      from 'react'
 
 import type { OrganizationCardProps }   from './organization-card.interfaces.js'
 
+import { useTheme }                     from '@emotion/react'
 import { memo }                         from 'react'
 import { useState }                     from 'react'
 import React                            from 'react'
@@ -18,7 +19,6 @@ import { Row }                          from '@ui/layout'
 import { Column }                       from '@ui/layout'
 import { Box }                          from '@ui/layout'
 import { Text }                         from '@ui/text'
-import { useTheme }                     from '@emotion/react'
 
 import { Members }                      from './members/index.js'
 
