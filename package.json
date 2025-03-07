@@ -12,6 +12,9 @@
     "api/**/*",
     "mobile/**/*"
   ],
+  "scripts": {
+    "postinstall": "cd mobile/app && yarn install"
+  },
   "devDependencies": {
     "@atls/code-runtime": "latest",
     "@atls/code-service": "0.1.4",
