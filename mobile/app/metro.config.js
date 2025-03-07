@@ -1,5 +1,5 @@
-import { getDefaultConfig } from 'expo/metro-config'
-import path from 'path'
+const { getDefaultConfig } = require('expo/metro-config')
+const path = require('path')
 
 const config = getDefaultConfig(__dirname)
 

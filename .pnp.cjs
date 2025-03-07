@@ -256,7 +256,7 @@ const RAW_RUNTIME_STATE =
     }\
   ],\
   "enableTopLevelFallback": true,\
-  "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
+  "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)|(^(?:mobile\\\\/app(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@app/add-member-to-organization-modal-fragment", ["virtual:e71c030bcbb1738e68954b07d6046404e0d81f404fd073dcb1fe990671ddd25b6c8a1ac09100c5f91e2b9392064c0ea590f93acc3a21dbed43918dfa5f2b36bc#workspace:app/fragments/app-add-member-to-organization-modal", "virtual:e948276caa94ac175a046b53782143cb7519da337ec2db23c858040f116a0c51a5dd1c8ce7ee15cacd322fa864d18438212733062aad2695e34e0dc8686f8c78#workspace:app/fragments/app-add-member-to-organization-modal", "workspace:app/fragments/app-add-member-to-organization-modal"]],\
     ["@app/base-layout", ["virtual:fee6c1f0594ab860e4bbda8b4dbda491733172a08fa8fa833d21b1572a3cf87ff1efae9a52bd53cf3783f541672cc9079855ad6bffd48158cd735854265dbc9e#workspace:app/fragments/app-base-layout", "workspace:app/fragments/app-base-layout"]],\
